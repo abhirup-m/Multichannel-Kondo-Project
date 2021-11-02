@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{braket,amsmath,amssymb,graphicx,float,hyperref}
+\usepackage[margin=0.5in]{geometry}
+\begin{document}
+\title{Multi-channel Kondo model URG}
+\author{Abhirup Mukherjee}
+\date{\today}
+\maketitle
+\section{Introduction}
+
+\begin{equation}\begin{aligned}
+	H = \sum_{k,\sigma,\gamma}\epsilon_{k}^\gamma \hat n^\gamma_{k\sigma} + J\sum_{kk^\prime,\gamma} \vec{S_d}\cdot\vec{s}_{\alpha\alpha^\prime}{c^\gamma_{k\alpha}}^\dagger c^\gamma_{k^\prime\alpha^\prime}
+\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}
+	\Delta H = c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c + T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T
+\end{aligned}\end{equation}
+
+\section{Leading order renormalization}
+Second term.
+\begin{equation}\begin{aligned}
+	&T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T \\
+	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime} c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} \vec{S_d}\cdot\vec{s}_{\alpha^\prime \beta } \frac{1}{\omega - \epsilon_q\tau_{q\beta} - J S_d^z s_q^z}c^\dagger_{q\beta} c_{k\alpha} \vec{S_d}\cdot\vec{s}_{ \beta\alpha}\\
+	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} S_d^a s^a_{\alpha^\prime \beta} \frac{1}{\omega - \frac{1}{2}D - J S_d^z s_q^z}c^\dagger_{q\beta} c_{k\alpha} S_d^b s^b_{\beta \alpha} & \left[\tau = \frac{1}{2}, \epsilon_q = D\right] \\
+	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} S_d^a s^a_{\alpha^\prime \beta} \frac{\omega - \frac{1}{2}D + J S_d^z s_q^z}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}c^\dagger_{q\beta} c_{k\alpha} S_d^b s^b_{\beta \alpha} \\
+	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} S_d^a s^a_{\alpha^\prime \beta} \frac{\left(\omega - \frac{1}{2}D\right) \left(1 - \hat n_{q\beta}\right) +  J S_d^z c_{q\beta} s_q^z c^\dagger_{q\beta}}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b s^b_{\beta \alpha} \\
+	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} S_d^a s^a_{\alpha^\prime \beta} \frac{\left(\omega - \frac{1}{2}D\right) \left(1 - \hat n_{q\beta}\right) +  J S_d^z \left(s_q^z + \beta\right) \left(1- \hat n_{q\beta}\right)}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b s^b_{\beta \alpha} & \left[\left[c_{q\beta}, s_q^z\right] = \beta c_{q\beta}\right] \\
+	&= J^2 |\delta D|\sum_{q\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} S_d^a s^a_{\alpha^\prime \beta}s^b_{\beta \alpha} \frac{\left(\omega - \frac{1}{2}D\right) + J S_d^z \left(s_q^z + \beta\right)}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b  \\
+	&= \frac{J^2\left(\omega - \frac{1}{2}D\right)}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}|\delta D| \sum_{\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} S_d^a  S_d^b \left(s^a s^b\right)_{\alpha^\prime \alpha} & \left[\text{term 1}\right]\\
+	&+ \frac{J^3}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} |\delta D|\sum_{\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} S_d^a s^a_{\alpha^\prime \beta} S_d^z S_d^b s^b_{\beta \alpha} \left(s_q^z + \beta\right) & \left[\text{term 2}\right] \\
+\end{aligned}\end{equation}
+First term.
+\begin{equation}\begin{aligned}
+	&c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c \\
+	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime} c^\dagger_{q\beta} c_{k\alpha} \vec{S_d}\cdot\vec{s}_{\beta \alpha} \frac{1}{\omega^\prime - \epsilon_q\tau_{q\beta} - J S_d^z s_q^z}c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} \vec{S_d}\cdot\vec{s}_{\alpha^\prime \beta}\\
+	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{1}{\omega^\prime - \frac{1}{2}D - J S_d^z s_q^z}c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} S_d^b s^b_{\alpha^\prime \beta} & \left[\tau = -\frac{1}{2},\epsilon_q = -D\right] \\
+	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{1}{-\omega + \frac{1}{2}D - J S_d^z s_q^z}c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} S_d^b s^b_{\alpha^\prime \beta} & \left[\omega + \omega^\prime = D\right] \\
+							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{\left(-\omega + \frac{1}{2}D\right) + J S_d^z s_q^z}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} S_d^b s^b_{\alpha^\prime \beta}\\
+							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{\left(\omega - \frac{1}{2}D\right) - J S_d^z s_q^z}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} c_{q\beta} S_d^b s^b_{\alpha^\prime \beta} & \left[c_k c^\dagger_{k^\prime} \sim - c^\dagger_{k^\prime}c_k\right] \\
+							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{\left(\omega - \frac{1}{2}D\right) \hat n_{q\beta} - J S_d^z  c^\dagger_{q\beta}s_q^z c_{q\beta}}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b s^b_{\alpha^\prime \beta} \\
+							   &= \frac{J^2\left(\omega - \frac{1}{2}D\right)}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a s^a_{\beta \alpha} S_d^b s^b_{\alpha^\prime \beta}\hat n_{q\beta} & \left[\text{term 3}\right] \\
+							   &- \frac{J^3}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a s^a_{\beta \alpha} S_d^z S_d^b s^b_{\alpha^\prime \beta} c^\dagger_{q\beta}s_q^z c_{q\beta} & \left[\text{term 4}\right] \\
+\end{aligned}\end{equation}
+Adding the two terms gives
+\begin{equation}\begin{aligned}
+	\Delta H = \text{term 1} + \text{term 2} + \text{term 3} + \text{term 4}
+\end{aligned}\end{equation}
+The odd terms together give
+\begin{equation}\begin{aligned}
+	\text{term 1} + \text{term 3} =
+\end{aligned}\end{equation}
+
+
+
+
+\end{document}
