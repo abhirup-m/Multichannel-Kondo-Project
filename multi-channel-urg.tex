@@ -12,44 +12,67 @@
 	H = \sum_{k,\sigma,\gamma}\epsilon_{k}^\gamma \hat n^\gamma_{k\sigma} + J\sum_{kk^\prime,\gamma} \vec{S_d}\cdot\vec{s}_{\alpha\alpha^\prime}{c^\gamma_{k\alpha}}^\dagger c^\gamma_{k^\prime\alpha^\prime}
 \end{aligned}\end{equation}
 \begin{equation}\begin{aligned}
-	\Delta H = c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c + T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T
+	\Delta H = \tau\left(c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c + T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T\right)
 \end{aligned}\end{equation}
 
 \section{Leading order renormalization}
-Second term.
+\subsection{Second term}
 \begin{equation}\begin{aligned}
 	&T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T \\
 	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime} c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} \vec{S_d}\cdot\vec{s}_{\alpha^\prime \beta } \frac{1}{\omega - \epsilon_q\tau_{q\beta} - J S_d^z s_q^z}c^\dagger_{q\beta} c_{k\alpha} \vec{S_d}\cdot\vec{s}_{ \beta\alpha}\\
 	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} S_d^a s^a_{\alpha^\prime \beta} \frac{1}{\omega - \frac{1}{2}D - J S_d^z s_q^z}c^\dagger_{q\beta} c_{k\alpha} S_d^b s^b_{\beta \alpha} & \left[\tau = \frac{1}{2}, \epsilon_q = D\right] \\
 	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} S_d^a s^a_{\alpha^\prime \beta} \frac{\omega - \frac{1}{2}D + J S_d^z s_q^z}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}c^\dagger_{q\beta} c_{k\alpha} S_d^b s^b_{\beta \alpha} \\
 	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} S_d^a s^a_{\alpha^\prime \beta} \frac{\left(\omega - \frac{1}{2}D\right) \left(1 - \hat n_{q\beta}\right) +  J S_d^z c_{q\beta} s_q^z c^\dagger_{q\beta}}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b s^b_{\beta \alpha} \\
-	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} S_d^a s^a_{\alpha^\prime \beta} \frac{\left(\omega - \frac{1}{2}D\right) \left(1 - \hat n_{q\beta}\right) +  J S_d^z \left(s_q^z + \beta\right) \left(1- \hat n_{q\beta}\right)}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b s^b_{\beta \alpha} & \left[\left[c_{q\beta}, s_q^z\right] = \beta c_{q\beta}\right] \\
-	&= J^2 |\delta D|\sum_{q\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} S_d^a s^a_{\alpha^\prime \beta}s^b_{\beta \alpha} \frac{\left(\omega - \frac{1}{2}D\right) + J S_d^z \left(s_q^z + \beta\right)}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b  \\
-	&= \frac{J^2\left(\omega - \frac{1}{2}D\right)}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}|\delta D| \sum_{\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} S_d^a  S_d^b \left(s^a s^b\right)_{\alpha^\prime \alpha} & \left[\text{term 1}\right]\\
-	&+ \frac{J^3}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} |\delta D|\sum_{\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} S_d^a s^a_{\alpha^\prime \beta} S_d^z S_d^b s^b_{\beta \alpha} \left(s_q^z + \beta\right) & \left[\text{term 2}\right] \\
+	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} S_d^a s^a_{\alpha^\prime \beta} \frac{\left(\omega - \frac{1}{2}D\right) \left(1 - \hat n_{q\beta}\right) +  J S_d^z \left(s_q^z + \frac{\beta}{2}\right) \left(1- \hat n_{q\beta}\right)}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b s^b_{\beta \alpha} & \left[\left[c_{q\beta}, s_q^z\right] = \frac{\beta}{2} c_{q\beta}\right] \\
+	&= J^2 |\delta D|\sum_{q\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} S_d^a s^a_{\alpha^\prime \beta}s^b_{\beta \alpha} \frac{\left(\omega - \frac{1}{2}D\right) + J S_d^z \beta}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b & \left[s_q^z = \frac{\beta}{2}\right]  \\
+	&= \frac{J^2\left(\omega - \frac{1}{2}D\right)|\delta D|}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \sum_{k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} S_d^a  S_d^b \left(s^a s^b\right)_{\alpha^\prime \alpha} & \left[\text{term 1}\right]\\
+	&+ \frac{J^3}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} |\delta D|\sum_{\beta k k^\prime \alpha \alpha^\prime,a,b} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} S_d^a S_d^z S_d^b s^a_{\alpha^\prime \beta} s^b_{\beta \alpha} \beta & \left[\text{term 2}\right] \\
 \end{aligned}\end{equation}
-First term.
+We will now simplify the terms individually. In term 1, only the configurations \(a \neq b\) can lead to a non-trivial impurity spin operator and hence contribute to renormalization. For \(a \neq b\), we have \(S_d^a S_d^b = \frac{i}{2} \sum_c \epsilon^{abc}S_d^c \). Therefore,
+\begin{equation}\begin{aligned}
+\sum_{a,b}S_d^a S_d^b\left(s^a s^b\right)_{\alpha^\prime \alpha} = - \frac{1}{4}\sum_{c,e} S_d^c \left(s^e\right)_{\alpha^\prime \alpha}\sum_{a,b}\epsilon^{abc}\epsilon^{abe} = - \frac{1}{4}\sum_{c,e} S_d^c \left(s^e\right)_{\alpha^\prime \alpha} 2 \delta_{ce} = -\frac{1}{2}\vec{S_d}\cdot\vec{s}_{\alpha^\prime \alpha}
+\end{aligned}\end{equation}
+Term 1 therefore simplifies to
+\begin{equation}\begin{aligned}
+	-\frac{1}{2}\frac{J^2\left(\omega - \frac{1}{2}D\right)|\delta D|}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \sum_{k k^\prime \alpha \alpha^\prime,c} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \vec{S_d}\cdot\vec{s}_{\alpha^\prime \alpha} && \left[\text{term 1}\right]\\
+\end{aligned}\end{equation}
+In term 2, we use the identity:
+\begin{equation}\begin{aligned}
+S^a S^z S^b = \frac{1}{4}\sum_c \left(\delta_{ac}\delta_{zb} - \delta_{ab}\delta_{zc}\right) S^c
+\end{aligned}\end{equation}
+Substituting this gives
+\begin{equation}\begin{aligned}
+	\sum_{\beta,a,b} S_d^a S_d^z S_d^b s^a_{\alpha^\prime \beta} s^b_{\beta \alpha} \beta &= \frac{1}{4}\sum_{\beta,c}\beta \left(S_d^c s^c_{\alpha^\prime\beta}s^z_{\beta\alpha} - S_d^z s^c_{\alpha^\prime\beta} s^c_{\beta\alpha}\right) \\
+	\implies \text{term 2} &= \frac{J^3|\delta D|}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \frac{1}{4}\sum_{\beta k k^\prime \alpha \alpha^\prime,c} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \beta s^c_{\alpha^\prime\beta}\left(S_d^c s^z_{\beta\alpha} - S_d^z s^c_{\beta\alpha}\right)\\
+			       &= \frac{J^3|\delta D|}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \frac{1}{4}\sum_{\beta k k^\prime \alpha \alpha^\prime,c} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \left(\frac{1}{2}S_d^c s^c_{\alpha^\prime\alpha}\ - \beta S_d^z s^c_{\beta\alpha}s^c_{\alpha^\prime\beta}\right)
+\end{aligned}\end{equation}
+
+\subsection{First term}
 \begin{equation}\begin{aligned}
 	&c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c \\
 	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime} c^\dagger_{q\beta} c_{k\alpha} \vec{S_d}\cdot\vec{s}_{\beta \alpha} \frac{1}{\omega^\prime - \epsilon_q\tau_{q\beta} - J S_d^z s_q^z}c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} \vec{S_d}\cdot\vec{s}_{\alpha^\prime \beta}\\
 	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{1}{\omega^\prime - \frac{1}{2}D - J S_d^z s_q^z}c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} S_d^b s^b_{\alpha^\prime \beta} & \left[\tau = -\frac{1}{2},\epsilon_q = -D\right] \\
-	&= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{1}{-\omega + \frac{1}{2}D - J S_d^z s_q^z}c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} S_d^b s^b_{\alpha^\prime \beta} & \left[\omega + \omega^\prime = D\right] \\
-							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{\left(-\omega + \frac{1}{2}D\right) + J S_d^z s_q^z}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} S_d^b s^b_{\alpha^\prime \beta}\\
-							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{\left(\omega - \frac{1}{2}D\right) - J S_d^z s_q^z}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} c_{q\beta} S_d^b s^b_{\alpha^\prime \beta} & \left[c_k c^\dagger_{k^\prime} \sim - c^\dagger_{k^\prime}c_k\right] \\
-							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{\left(\omega - \frac{1}{2}D\right) \hat n_{q\beta} - J S_d^z  c^\dagger_{q\beta}s_q^z c_{q\beta}}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b s^b_{\alpha^\prime \beta} \\
-							   &= \frac{J^2\left(\omega - \frac{1}{2}D\right)}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a s^a_{\beta \alpha} S_d^b s^b_{\alpha^\prime \beta}\hat n_{q\beta} & \left[\text{term 3}\right] \\
-							   &- \frac{J^3}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a s^a_{\beta \alpha} S_d^z S_d^b s^b_{\alpha^\prime \beta} c^\dagger_{q\beta}s_q^z c_{q\beta} & \left[\text{term 4}\right] \\
+							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{\left(\omega^\prime - \frac{1}{2}D\right) + J S_d^z s_q^z}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} S_d^b s^b_{\alpha^\prime \beta}\\
+							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{-\left(\omega^\prime - \frac{1}{2}D\right) - J S_d^z s_q^z}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} c_{q\beta} S_d^b s^b_{\alpha^\prime \beta} & \left[c_k c^\dagger_{k^\prime} \sim - c^\dagger_{k^\prime}c_k\right] \\
+							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{-\left(\omega^\prime - \frac{1}{2}D\right) \hat n_{q\beta} - J S_d^z  c^\dagger_{q\beta}s_q^z c_{q\beta}}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b s^b_{\alpha^\prime \beta} \\
+							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{-\left(\omega^\prime - \frac{1}{2}D\right) \hat n_{q\beta} - J S_d^z \left(s_q^z - \frac{\beta}{2}\right) \hat n_{q\beta}}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b s^b_{\alpha^\prime \beta} & \left[\left[c^\dagger_{q\beta}, s_q^z\right] = -\frac{\beta}{2} c^\dagger_{q\beta}\right] \\
+							   &= J^2 |\delta D|\sum_{\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{-\left(\omega^\prime - \frac{1}{2}D\right) + J S_d^z \beta}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b s^b_{\alpha^\prime \beta} & \left[s_q^z = -\frac{1}{2}\beta\right] \\
+							   &= -\frac{J^2\left(\omega^\prime - \frac{1}{2}D\right)|\delta D|}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}\sum_{k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a  S_d^b \left(s^b s^a\right)_{\alpha^\prime \alpha} & \left[\text{term 3}\right] \\
+							   &\quad+ \frac{J^3|\delta D|}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a S_d^z S_d^b s^a_{\beta \alpha} s^b_{\alpha^\prime \beta} \beta & \left[\text{term 4}\right] \\
 \end{aligned}\end{equation}
-Adding the two terms gives
+term 3 can be made identical to term 1 using the relation: \(s^b s^a = -s^b s^a \text{ for } a \neq b\). With this change, term 3 becomes
 \begin{equation}\begin{aligned}
-	\Delta H = \text{term 1} + \text{term 2} + \text{term 3} + \text{term 4}
+	\text{term 3} = \frac{J^2\left(\omega^\prime - \frac{1}{2}D\right)|\delta D|}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}\sum_{k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a  S_d^b \left(s^a s^b\right)_{\alpha^\prime \alpha} = \text{term 1}
 \end{aligned}\end{equation}
-The odd terms together give
+For term 4, we get
 \begin{equation}\begin{aligned}
-	\text{term 1} + \text{term 3} =
+	\sum_{\beta,a,b} S_d^a S_d^z S_d^b s^b_{\alpha^\prime \beta} s^a_{\beta \alpha} \beta &= \frac{1}{4}\sum_{\beta,a,b,c}\beta\left(\delta_{ac}\delta_{zb} - \delta_{ab}\delta_{zc}\right) S^cs^b_{\alpha^\prime \beta} s^a_{\beta \alpha} \\
+																&= \frac{1}{4}\sum_{\beta,c}\beta s^c_{\beta\alpha}\left(S^c_d s^z_{\alpha^\prime\beta} - S^z_d s^c_{\alpha^\prime\beta}\right)
 \end{aligned}\end{equation}
-
-
+which gives
+\begin{equation}\begin{aligned}
+	\text{term 4} = \frac{J^3|\delta D|}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \frac{1}{4}\sum_{\beta k k^\prime \alpha \alpha^\prime,c} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \left(\frac{1}{2}S_d^c s^c_{\alpha^\prime\alpha}\ - \beta S_d^z s^c_{\beta\alpha}s^c_{\alpha^\prime\beta}\right)
+\end{aligned}\end{equation}
 
 
 \end{document}
