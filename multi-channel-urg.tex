@@ -12,7 +12,7 @@
 	H = \sum_{k,\sigma,\gamma}\epsilon_{k}^\gamma \hat n^\gamma_{k\sigma} + J\sum_{kk^\prime,\gamma} \vec{S_d}\cdot\vec{s}_{\alpha\alpha^\prime}{c^\gamma_{k\alpha}}^\dagger c^\gamma_{k^\prime\alpha^\prime}
 \end{aligned}\end{equation}
 \begin{equation}\begin{aligned}
-	\Delta H = \tau\left(c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c + T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T\right)
+	\Delta H = \left[c^\dagger T, \eta \right] = \left(c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c - T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T\right)
 \end{aligned}\end{equation}
 
 \section{Leading order renormalization}
@@ -62,7 +62,7 @@ Substituting this gives
 \end{aligned}\end{equation}
 term 3 can be made identical to term 1 using the relation: \(s^b s^a = -s^b s^a \text{ for } a \neq b\). With this change, term 3 becomes
 \begin{equation}\begin{aligned}
-	\text{term 3} = \frac{J^2\left(\omega^\prime - \frac{1}{2}D\right)|\delta D|}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}\sum_{k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a  S_d^b \left(s^a s^b\right)_{\alpha^\prime \alpha} = \text{term 1}
+	\text{term 3} = \frac{J^2\left(\omega^\prime - \frac{1}{2}D\right)|\delta D|}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}\sum_{k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a  S_d^b \left(s^a s^b\right)_{\alpha^\prime \alpha} = \frac{1}{2}\frac{J^2\left(\omega^\prime - \frac{1}{2}D\right)|\delta D|}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \sum_{k k^\prime \alpha \alpha^\prime,c} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \vec{S_d}\cdot\vec{s}_{\alpha^\prime \alpha}
 \end{aligned}\end{equation}
 For term 4, we get
 \begin{equation}\begin{aligned}
@@ -73,6 +73,25 @@ which gives
 \begin{equation}\begin{aligned}
 	\text{term 4} = \frac{J^3|\delta D|}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \frac{1}{4}\sum_{\beta k k^\prime \alpha \alpha^\prime,c} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \left(\frac{1}{2}S_d^c s^c_{\alpha^\prime\alpha}\ - \beta S_d^z s^c_{\beta\alpha}s^c_{\alpha^\prime\beta}\right)
 \end{aligned}\end{equation}
+
+\subsection{Total renormalization}
+From the formula for the renormalization \(\Delta H\), we write
+\begin{equation}\begin{aligned}
+	\Delta H = \frac{1}{2}\left(\text{term 3} + \text{term 4} - \text{term 1} - \text{term 2}\right)
+\end{aligned}\end{equation}
+From the constraints of URG and particle-hole symmetry, we have the constraint \(\omega + \omega^\prime = H_d^0 + H_d^1\). \(H_d^0\) is the diagonal part when the current node is unoccupied and \(H_d^1\) is when its occupied. For our case, \(H_d^0 + H_d^1 = \sum \epsilon_q \tau_q = D\), because both the hole and particle states have energy of \(\frac{D}{2}\) (\(\epsilon_q\) and \(\tau\) flip sign together). We therefore have \((\omega - D/2) = -(\omega^\prime - D/2)\). term 2 and term 4 cancel each other and term 3 becomes equal to term 1. The total renormalization at second order is therefore (relabelling \(\omega^\prime\) as \(\omega\))
+\begin{equation}\begin{aligned}
+	\Delta H = \text{term 3} = \frac{1}{2}\frac{J^2\left(\omega - \frac{1}{2}D\right)|\delta D|}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \sum_{k k^\prime \alpha \alpha^\prime,c} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \vec{S_d}\cdot\vec{s}_{\alpha^\prime \alpha}
+\end{aligned}\end{equation}
+which gives
+\begin{equation}\begin{aligned}
+	\Delta J = \frac{1}{2}\frac{J^2\left(\omega - \frac{1}{2}D\right)|\delta D|}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}
+\end{aligned}\end{equation}
+The choice of \(\omega = D\) gives
+\begin{equation}\begin{aligned}
+	\Delta J = \frac{J^2 D |\delta D|}{D^2 - \frac{1}{4}J^2}
+\end{aligned}\end{equation}
+For \(J \ll D\), we get the one-loop PMS form.
 
 
 \end{document}
