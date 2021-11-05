@@ -1,4 +1,4 @@
-\documentclass[12pt]{revtex4-2}
+\documentclass{revtex4-2}
 \usepackage{braket,amsmath,amssymb,graphicx,float,hyperref,paralist}
 \numberwithin{equation}{section}
 \allowdisplaybreaks
@@ -14,7 +14,7 @@ The multi-channel Kondo model is described by the Hamiltonian
 \end{aligned}\end{equation}
 It is mostly identical to the single-channel Kondo model: \(k,k^\prime\) sum over the momentum states, \(\alpha,\alpha^\prime\) sum over the spin indices and \(\gamma\) sums over the various channels. \(\vec S_d, \vec s\) are the impurity and conduction bath spin vectors. The renormalization at step \(j\) is given by
 \begin{equation}\begin{aligned}
-	\Delta H_j = \left[c^\dagger T, \eta \right] = \left(c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c - T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T\right)
+	\Delta H_j = \left\{c^\dagger T, \eta \right\} = \left(c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c + T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T\right)
 \end{aligned}\end{equation}
 \begin{equation}\begin{aligned}
 	c^\dagger T = J \sum_{k < \Lambda_j, \alpha}\vec{S_d}\cdot\vec{s}_{\beta \alpha}c^\dagger_{q\beta}c_{k\alpha}, &&&H_D = \epsilon_q \tau_{q\beta} + J S_d^z s_q^z
@@ -30,10 +30,10 @@ The expansion we are talking about is
 where \(H_X = J \sum_{k,k^\prime < \Lambda_j, \alpha,\alpha^\prime}\vec{S_d}\cdot\vec{s}_{\alpha \alpha^\prime}c^\dagger_{k\alpha}c_{k^\prime\alpha^\prime}\) is scattering between the entangled electrons.
 With this change, the second and third order renormalizations will take the form
 \begin{equation}\begin{aligned}
-	\Delta H^{(2)}_j = c^\dagger T \frac{1}{\omega^\prime - H_D}T^\dagger c - T^\dagger c \frac{1}{\omega - H_D}c^\dagger T
+	\Delta H^{(2)}_j = c^\dagger T \frac{1}{\omega^\prime - H_D}T^\dagger c + T^\dagger c \frac{1}{\omega - H_D}c^\dagger T
 \end{aligned}\end{equation}
 \begin{equation}\begin{aligned}
-	\Delta H^{(3)}_j = c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c - T^\dagger c \frac{1}{\omega - H_D} H_X \frac{1}{\omega - H_D} c^\dagger T
+	\Delta H^{(3)}_j = c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c + T^\dagger c \frac{1}{\omega - H_D} H_X \frac{1}{\omega - H_D} c^\dagger T
 \end{aligned}\end{equation}
 
 \section{Leading order renormalization}
@@ -65,8 +65,7 @@ The final sum can be performed using the following trick. In order to renormaliz
 The double \(\epsilon\) can be evaluated easily: \(\sum_{ab}\epsilon^{abc_1}\epsilon^{abc_2} = \sum_b\left(\delta_{c_1 c_2} - \delta_{b c_2}\delta_{b c_1}\right) = 2 \delta_{c_1 c_2}\). Substituting this gives
 \begin{equation}\begin{aligned}
 	\label{term1}
-	\text{term 3} &= \frac{J^2 n_j \left(\omega - \frac{1}{2}D\right)}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}\sum_{k k^\prime \alpha \alpha^\prime} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \sum_{c} \left(-\frac{1}{2}\right)S_d^c s^c_{\alpha^\prime \alpha} \\
-		      &= \left(-\frac{1}{2}\right)\frac{J^2 n_j \left(\omega - \frac{1}{2}D\right)}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}\sum_{k k^\prime \alpha \alpha^\prime} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha}  \vec{S_d}\cdot\vec{s}_{\alpha^\prime \alpha}
+	\text{term 3} &= \frac{J^2 n_j \left(\omega - \frac{1}{2}D\right)}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}\sum_{k k^\prime \alpha \alpha^\prime} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \sum_{c} \left(-\frac{1}{2}\right)S_d^c s^c_{\alpha^\prime \alpha} = \left(-\frac{1}{2}\right)\frac{J^2 n_j \left(\omega - \frac{1}{2}D\right)}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}\sum_{k k^\prime \alpha \alpha^\prime} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha}  \vec{S_d}\cdot\vec{s}_{\alpha^\prime \alpha}
 \end{aligned}\end{equation}
 The second term takes a bit more work:
 \begin{equation}\begin{aligned}
@@ -75,8 +74,7 @@ The second term takes a bit more work:
 Here we will use the identity:
 \begin{equation}\begin{aligned}
 	\label{identity_SSS}
-	S_d^a S_d^z S_d^b = \left(\frac{1}{4}\delta^{az} + \frac{i}{2}\sum_c \epsilon^{azc}S_d^c\right)S_d^b = \left(\frac{1}{4}\delta^{az}S_d^b + \frac{i}{8} \epsilon^{azb}  - \frac{1}{4}\sum_{c_1,c} \epsilon^{azc_1} \epsilon^{c_1 b c} S_d^c\right)\\
-	= \frac{1}{4}\left(\delta^{az}S_d^b - \delta^{ab}S_d^z + \delta^{bz}S_d^a\right) + \frac{i}{8}\epsilon^{azb}
+	S_d^a S_d^z S_d^b = \left(\frac{1}{4}\delta^{az} + \frac{i}{2}\sum_c \epsilon^{azc}S_d^c\right)S_d^b = \left(\frac{1}{4}\delta^{az}S_d^b + \frac{i}{8} \epsilon^{azb}  - \frac{1}{4}\sum_{c_1,c} \epsilon^{azc_1} \epsilon^{c_1 b c} S_d^c\right) = \frac{1}{4}\left(\delta^{az}S_d^b - \delta^{ab}S_d^z + \delta^{bz}S_d^a\right) + \frac{i}{8}\epsilon^{azb}
 \end{aligned}\end{equation}
 We will drop the last numerical term because such a term cannot renormalize the Hamiltonian. Substituting this gives
 \begin{equation}\begin{aligned}
@@ -99,8 +97,7 @@ Here the intermediate state is unoccupied, so we put \(\tau = -\frac{1}{2}, s_q^
 We again simplify the terms individually, calling them term 1 and term 2. Term 1 can be made identical in form to term 1 using the relation: \(s^b s^a = -s^b s^a \text{ for } a \neq b\). With this change, term 3 becomes
 \begin{equation}\begin{aligned}
 	\label{term3}
-	\text{term 1} = \frac{J^2 n_j \left(\omega^\prime - \frac{1}{2}D\right)}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}\sum_{k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a  S_d^b \left(s^a s^b\right)_{\alpha^\prime \alpha} \\
-	= \frac{1}{2}\frac{J^2 n_j \left(\omega^\prime - \frac{1}{2}D\right)}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \sum_{k k^\prime \alpha \alpha^\prime,c} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \vec{S_d}\cdot\vec{s}_{\alpha^\prime \alpha}
+	\text{term 1} = \frac{J^2 n_j \left(\omega^\prime - \frac{1}{2}D\right)}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}\sum_{k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a  S_d^b \left(s^a s^b\right)_{\alpha^\prime \alpha} = \frac{1}{2}\frac{J^2 n_j \left(\omega^\prime - \frac{1}{2}D\right)}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \sum_{k k^\prime \alpha \alpha^\prime,c} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \vec{S_d}\cdot\vec{s}_{\alpha^\prime \alpha}
 \end{aligned}\end{equation}
 For term 2, we will use eq.~\ref{identity_SSS} to get
 \begin{equation}\begin{aligned}
@@ -111,7 +108,7 @@ For term 2, we will use eq.~\ref{identity_SSS} to get
 \subsection{Total renormalization \(\Delta H^{(2)}\)}
 From the formula for the renormalization \(\Delta H^{(2)}\), we write
 \begin{equation}\begin{aligned}
-	\Delta H^{(2)} = \text{term 1} + \text{term 2} - \text{term 3} - \text{term 4}
+	\Delta H^{(2)} = \text{term 1} + \text{term 2} + \text{term 3} + \text{term 4}
 \end{aligned}\end{equation}
 These four terms are given by eqs.~\ref{term1}, \ref{term2}, \ref{term3} and \ref{term4}.
 From the constraints of URG and particle-hole symmetry, we have the constraint \(\omega + \omega^\prime = H_d^0 + H_d^1\). \(H_d^0\) is the diagonal part when the current node is unoccupied and \(H_d^1\) is when its occupied. For our case, \(H_d^0 + H_d^1 = \sum \epsilon_q \tau_q = D\), because both the hole and particle states have energy of \(\frac{D}{2}\) (\(\epsilon_q\) and \(\tau\) flip sign together). We therefore have \((\omega - D/2) = -(\omega^\prime - D/2)\). With this relation, we have \(\text{term 2} = \text{term 4}\) and \( \text{term 3} = -\text{term 1}\). The total renormalization at second order is therefore
@@ -128,14 +125,13 @@ For \(\omega < D/2\), we get the flow towards the strong-coupling fixed point. T
 \end{aligned}\end{equation}
 \section{Next-to-leading order renormalization}
 \begin{equation}\begin{aligned}
-	\Delta H^{(3)}_j = \underbrace{c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c}_\text{first term} ~-~ \underbrace{T^\dagger c \frac{1}{\omega - H_D} H_X \frac{1}{\omega - H_D} c^\dagger T}_\text{second term}
+	\Delta H^{(3)}_j = \underbrace{c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c}_\text{first term} ~+~ \underbrace{T^\dagger c \frac{1}{\omega - H_D} H_X \frac{1}{\omega - H_D} c^\dagger T}_\text{second term}
 \end{aligned}\end{equation}
 
 \subsection{First term}
 \begin{equation}\begin{aligned}
 	&c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c\\
-	&= \sum_{q, k, k^\prime, k_1,k_2,\atop{\beta, \alpha, \alpha^\prime, \alpha_1,\alpha_2,\atop{l_1,l_2,a,b,c}}} c^\dagger_{q\beta,l_1} c_{k\alpha,l_1} S_d^a s^a_{\beta \alpha} \frac{J^2}{\omega^\prime - \epsilon_q\tau_{q\beta} - J S_d^z s_q^z} S_d^b s^b_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \frac{J}{\omega^\prime - \epsilon_q\tau_{q\beta} - J S_d^z s_q^z}\\
-	&\quad\times c^\dagger_{k^\prime\alpha^\prime, l_1} c_{q\beta, l_1} S_d^c s^c_{\alpha^\prime \beta}
+	&= \sum_{q, k, k^\prime, k_1,k_2,\atop{\beta, \alpha, \alpha^\prime, \alpha_1,\alpha_2,\atop{l_1,l_2,a,b,c}}} c^\dagger_{q\beta,l_1} c_{k\alpha,l_1} S_d^a s^a_{\beta \alpha} \frac{J^2}{\omega^\prime - \epsilon_q\tau_{q\beta} - J S_d^z s_q^z} S_d^b s^b_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \frac{J}{\omega^\prime - \epsilon_q\tau_{q\beta} - J S_d^z s_q^z} c^\dagger_{k^\prime\alpha^\prime, l_1} c_{q\beta, l_1} S_d^c s^c_{\alpha^\prime \beta}
 \end{aligned}\end{equation}
 \(q\) sums over the momenta being decoupled. \(k, k^\prime, k_1,k_2\) sum over the momenta not being decoupled. \(\beta, \alpha, \alpha^\prime, \alpha_1,\alpha_2\) sum over the spin indices. \(l_1,l_2\) sum over the channels. We substitute \(s_q^z = -\frac{\beta}{2}\) and \(\epsilon_q \tau_{q\beta} = \frac{D}{2}\). The term inside the summation becomes
 \begin{equation}\begin{aligned}
@@ -151,12 +147,11 @@ The next simplification involves identifying how to contract the operators. The 
 	\sum_{k_1\alpha_1,b}S_d^b s^b_{\alpha_1 \alpha_1} c^\dagger_{k_1\alpha_1,l_2}c_{k_1 \alpha_1,l_2} = \sum_{b,k_1\alpha_1}S_d^b s^b_{\alpha_1 \alpha_1}\hat n_{k_1\alpha_1,l_2} &= \sum_{b}S_d^b \left(\sum_{\alpha_1}s^b_{\alpha_1 \alpha_1}\right) \int_{-D + |\delta D|}^0 d\epsilon \rho(\epsilon)\\
 																						      &= \sum_b S_d^b \text{ Trace }(s^b)\int_{-D + |\delta D|}^0 d\epsilon \rho(\epsilon)= 0
 \end{aligned}\end{equation}
-The other way to contract the indices is by selecting \(k\alpha = k^\prime \alpha^\prime\). Those two operators can again be brought together without any change of sign because there will be an even number of flips. Summing over \(k=k^\prime\) and the channel index \(l_1\) then gives \(\sum_{l_1}\sum_k \left(1 - \hat n_{k\alpha}\right) = \sum_{l_1}\int_{-D + |\delta D|}^ 0 n_j = K n_j N_j\), where \(n_j = \rho |\delta D|\) and \(N_j = \rho D\). \(K = \sum_{l_1}\) is the total number of conduction bath channels. The entire expression is now
+The other way to contract the indices is by selecting \(k\alpha = k^\prime \alpha^\prime\). Those two operators can again be brought together without any change of sign because there will be an even number of flips. Summing over \(k=k^\prime\) and the channel index \(l_1\) then gives \(\sum_{l_1}\sum_k \left(1 - \hat n_{k\alpha}\right) = \sum_{l_1}\int_{-D + |\delta D|}^ 0 n_j = \frac{1}{2}K n_j N_j\), where \(n_j = \rho |\delta D|\) and \(N_j = \rho D\). \(K = \sum_{l_1}\) is the total number of conduction bath channels. The factor of half is inserted to model the probability of transition appropriately; not all values of \(\epsilon_k\) will contribute equally to the renormalization. The entire expression is now
 \begin{equation}\begin{aligned}
 	\label{first_term}
-	\sum_{k_1,k_2,\beta,\alpha, \atop{\alpha^\prime, \alpha_1,\alpha_2,\atop{l_2,a,b,c}}}\frac{J^3 K N_j n_j  S_d^a s^a_{\beta \alpha} \left(\omega^\prime - \frac{D}{2} - J \frac{\beta}{2}S_d^z\right)S_d^b s^b_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \left(\omega^\prime - \frac{D}{2} - J \frac{\beta}{2}S_d^z\right) S_d^c s^c_{\alpha^\prime \beta}}{\left[\left(\omega^\prime - \frac{D}{2}\right)^2 - \frac{1}{16}J^2\right]^2} \\
-	= \frac{J^3 K N_j n_j }{\left[\left(\omega^\prime - \frac{D}{2}\right)^2 - \frac{1}{16}J^2\right]^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}}c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \sum_{\beta,\alpha, \atop{a,b,c}}S_d^a s^a_{\beta \alpha} s^b_{\alpha_1 \alpha_2}s^c_{\alpha \beta} \left(\omega^\prime - \frac{D}{2} - J \frac{\beta}{2}S_d^z\right)S_d^b \\
-	\times \left(\omega^\prime - \frac{D}{2} - J \frac{\beta}{2}S_d^z\right) S_d^c 
+	&\sum_{k_1,k_2,\beta,\alpha, \atop{\alpha^\prime, \alpha_1,\alpha_2,\atop{l_2,a,b,c}}}\frac{J^3 K N_j n_j  S_d^a s^a_{\beta \alpha} \left(\omega^\prime - \frac{D}{2} - J \frac{\beta}{2}S_d^z\right)S_d^b s^b_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \left(\omega^\prime - \frac{D}{2} - J \frac{\beta}{2}S_d^z\right) S_d^c s^c_{\alpha^\prime \beta}}{2\left[\left(\omega^\prime - \frac{D}{2}\right)^2 - \frac{1}{16}J^2\right]^2} \\
+	&= \frac{J^3 K N_j n_j }{2\left[\left(\omega^\prime - \frac{D}{2}\right)^2 - \frac{1}{16}J^2\right]^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}}c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \sum_{\beta,\alpha, \atop{a,b,c}}S_d^a s^a_{\beta \alpha} s^b_{\alpha_1 \alpha_2}s^c_{\alpha \beta} \left(\omega^\prime - \frac{D}{2} - J \frac{\beta}{2}S_d^z\right)S_d^b \left(\omega^\prime - \frac{D}{2} - J \frac{\beta}{2}S_d^z\right) S_d^c 
 \end{aligned}\end{equation}
 We now need to simplify the final summation.
 \begin{equation}\begin{aligned}
@@ -166,12 +161,11 @@ We now need to simplify the final summation.
 The internal product can be evaluated as follows:
 \begin{equation}\begin{aligned}
 	\label{internal_sum}
-	\left(\omega^\prime - \frac{D}{2} - J \frac{\beta}{2}S_d^z\right)S_d^b\left(\omega^\prime - \frac{D}{2} - J \frac{\beta}{2}S_d^z\right) = \left(\omega^\prime - \frac{D}{2}\right)^2 S_d^b - \frac{\beta J}{2}\left(\omega^\prime - \frac{D}{2}\right)\left\{S_d^z, S_d^b\right\} \\
-	+ \frac{J^2}{4}S_d^z S_d^b S_d^z
+	\left(\omega^\prime - \frac{D}{2} - J \frac{\beta}{2}S_d^z\right)S_d^b\left(\omega^\prime - \frac{D}{2} - J \frac{\beta}{2}S_d^z\right) = \left(\omega^\prime - \frac{D}{2}\right)^2 S_d^b - \frac{\beta J}{2}\left(\omega^\prime - \frac{D}{2}\right)\left\{S_d^z, S_d^b\right\} + \frac{J^2}{4}S_d^z S_d^b S_d^z
 \end{aligned}\end{equation}
-The anticommutator is \(\left\{S_d^z, S_d^b\right\} = \frac{\delta^{bz}}{4}\). The triple operator product is given by eq.~\ref{identity_SSS}: \(S_d^z S_d^b S_d^z = \frac{1}{4}S_d^b\left(2\delta^{bz} - 1\right)\). The right-hand side of eq.~\ref{internal_sum} becomes
+The anticommutator is \(\left\{S_d^z, S_d^b\right\} = \frac{\delta^{bz}}{2}\). The triple operator product is given by eq.~\ref{identity_SSS}: \(S_d^z S_d^b S_d^z = \frac{1}{4}S_d^b\left(2\delta^{bz} - 1\right)\). The right-hand side of eq.~\ref{internal_sum} becomes
 \begin{equation}\begin{aligned}
-	\left[\left(\omega^\prime - \frac{D}{2}\right)^2 + \frac{J^2}{16} \left(2\delta^{bz} - 1\right)\right]S_d^b - \frac{\beta J}{8}\delta^{bz}\left(\omega^\prime - \frac{D}{2}\right) \equiv \mathcal{C}_1^b S_d^b + \mathcal{C}_2^b
+	\left[\left(\omega^\prime - \frac{D}{2}\right)^2 + \frac{J^2}{16} \left(2\delta^{bz} - 1\right)\right]S_d^b - \frac{\beta J}{4}\delta^{bz}\left(\omega^\prime - \frac{D}{2}\right) \equiv \mathcal{C}_1^b S_d^b + \mathcal{C}_2^b
 \end{aligned}\end{equation}
 Eq.~\ref{final_sum} takes the form
 \begin{equation}\begin{aligned}
@@ -189,31 +183,29 @@ We have dropped constant terms in both equations because such terms cannot renor
 We take the first term. Define \(\mathcal{C}^b_1 = \mathcal{C}_{11} + \mathcal{C}_{12}\delta^{bz}\). Also note that the indices \(\alpha,\beta\) can be easily summed over: \(\sum_{\alpha\beta}s^a_{\beta\alpha}c^c_{\alpha\beta} = \text{Trace}\left(s^a s^c\right) = \frac{1}{2}\delta^{ac}\). The term in product with \(\mathcal{C}^b_1\) becomes
 \begin{equation}\begin{aligned}
 	\label{Cb1}
-	\frac{1}{2}\sum_{a,b}s^b_{\alpha_1 \alpha_2}\frac{1}{4}\left(\mathcal{C}_{11} + \mathcal{C}_{12}\delta^{bz}\right) \left(2\delta^{ab}S_d^a - S_d^b\right) &= -\frac{1}{8}\sum_{b}s^b_{\alpha_1 \alpha_2}\left(\mathcal{C}_{11} + \mathcal{C}_{12}\delta^{bz}\right)S_d^b\\
-																				  &= -\frac{1}{8}\left(\mathcal{C}_{11} \vec{S_d}\cdot\vec{s}_{\alpha_1\alpha_2} + \mathcal{C}_{12}s^z_{\alpha_1\alpha_2}S_d^z\right)
+	\frac{1}{2}\sum_{a,b}s^b_{\alpha_1 \alpha_2}\frac{1}{4}\left(\mathcal{C}_{11} + \mathcal{C}_{12}\delta^{bz}\right) \left(2\delta^{ab}S_d^a - S_d^b\right) &= -\frac{1}{8}\sum_{b}s^b_{\alpha_1 \alpha_2}\left(\mathcal{C}_{11} + \mathcal{C}_{12}\delta^{bz}\right)S_d^b = -\frac{1}{8}\left(\mathcal{C}_{11} \vec{S_d}\cdot\vec{s}_{\alpha_1\alpha_2} + \mathcal{C}_{12}s^z_{\alpha_1\alpha_2}S_d^z\right)
 \end{aligned}\end{equation}
 The term in product with \(\mathcal{C}^b_2\) can be written as
 \begin{equation}\begin{aligned}
-	- \frac{i J\left(\omega^\prime - \frac{D}{2}\right)}{16}\sum_{\beta,\alpha, \atop{a,b,c}} \delta^{bz}\beta s^a_{\beta \alpha} s^b_{\alpha_1 \alpha_2}s^c_{\alpha \beta}\sum_{e}\epsilon^{ace}S_d^e &= - \frac{i J\left(\omega^\prime - \frac{D}{2}\right)}{16}\sum_{\beta,\alpha, \atop{a,c}} \beta s^a_{\beta \alpha} s^z_{\alpha_1 \alpha_2}s^c_{\alpha \beta}\sum_{e}\epsilon^{ace}S_d^e\\
-																									   &=\frac{-iJ\left(\omega^\prime - \frac{D}{2}\right)}{32}\sum_{\beta,a,c,e} \beta \left(s^c s^a\right)_{\beta \beta} \alpha_1\delta^{\alpha_1 \alpha_2}\epsilon^{ace}S_d^e\\
+	- \frac{i J\left(\omega^\prime - \frac{D}{2}\right)}{8}\sum_{\beta,\alpha, \atop{a,b,c}} \delta^{bz}\beta s^a_{\beta \alpha} s^b_{\alpha_1 \alpha_2}s^c_{\alpha \beta}\sum_{e}\epsilon^{ace}S_d^e &= - \frac{i J\left(\omega^\prime - \frac{D}{2}\right)}{8}\sum_{\beta,\alpha, \atop{a,c}} \beta s^a_{\beta \alpha} s^z_{\alpha_1 \alpha_2}s^c_{\alpha \beta}\sum_{e}\epsilon^{ace}S_d^e\\
+																									   &=\frac{-iJ\left(\omega^\prime - \frac{D}{2}\right)}{8}\sum_{\beta,a,c,e} \beta \left(s^c s^a\right)_{\beta \beta} s^z_{\alpha_1 \alpha_2}\epsilon^{ace}S_d^e\\
 \end{aligned}\end{equation}
 Since \(a \neq c\) (\(a=c\) would make \(\epsilon^{ace} = 0\)), we can use \(\left(s^c s^a\right)_{\beta \beta} = \frac{i}{2}\sum_f \epsilon^{caf}s^f_{\beta\beta} = \frac{i\beta}{4}\epsilon^{caz}\). Substituting this gives
 \begin{equation}\begin{aligned}
 	\label{Cb2}
-	\frac{J\left(\omega^\prime - \frac{D}{2}\right)}{64}\sum_{a,c,e} \alpha_1\delta^{\alpha_1 \alpha_2}\epsilon^{ace}\epsilon^{caz}S_d^e = \frac{J\left(\omega^\prime - \frac{D}{2}\right)}{32} \alpha_1\delta^{\alpha_1 \alpha_2}S_d^z
+	\frac{J\left(\omega^\prime - \frac{D}{2}\right)}{32}\sum_{a,c,e} s^z_{\alpha_1 \alpha_2}\epsilon^{ace}\epsilon^{caz}S_d^e = \frac{J\left(\omega^\prime - \frac{D}{2}\right)}{16} s^z_{\alpha_1 \alpha_2}S_d^z
 \end{aligned}\end{equation}
 
 Once we note that \(\mathcal{C}_{11} = \left(\omega^\prime - \frac{D}{2}\right)^2 - \frac{1}{16}J^2\) and \(\omega^\prime - D/2 - 2\mathcal{C}_{12}/J = \omega^\prime - D/2 - J/4\) and when we substitute eqs.~\ref{Cb1} and \ref{Cb2} into eq.~\ref{first_term}, we get
 \begin{equation}\begin{aligned}
-	&-\frac{1}{8}\frac{J^3 K N_j n_j }{\left(\omega^\prime - \frac{D}{2}\right)^2 - \frac{1}{16}J^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}}c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \vec{S_d}\cdot\vec{s}_{\alpha_1\alpha_2} \\
-	&+ \frac{J^4 K N_j n_j \left( \omega^\prime - D/2 - J/4 \right) }{16\left[\left(\omega^\prime - \frac{D}{2}\right)^2 - \frac{1}{16}J^2\right]^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}} c^\dagger_{k_1 \alpha_1,l_2}c_{k_2 \alpha_2,l_2}S_d^z s^z_{\alpha_1\alpha_2}
+	\label{third_term_1}
+	&-\frac{1}{16}\frac{J^3 K N_j n_j }{\left(\omega^\prime - \frac{D}{2}\right)^2 - \frac{1}{16}J^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}}c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \vec{S_d}\cdot\vec{s}_{\alpha_1\alpha_2} + \frac{J^4 K N_j n_j \left( \omega^\prime - D/2 - J/4 \right) }{32\left[\left(\omega^\prime - \frac{D}{2}\right)^2 - \frac{1}{16}J^2\right]^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}} c^\dagger_{k_1 \alpha_1,l_2}c_{k_2 \alpha_2,l_2}S_d^z s^z_{\alpha_1\alpha_2}
 \end{aligned}\end{equation}
 
 \subsection{Second term}
 \begin{equation}\begin{aligned}
 	&T^\dagger c \frac{1}{\omega - H_D} H_X \frac{1}{\omega - H_D} c^\dagger T\\
-	&= \sum_{q, k, k^\prime, k_1,k_2,\atop{\beta, \alpha, \alpha^\prime, \alpha_1,\alpha_2,\atop{l_1,l_2,a,b,c}}}c^\dagger_{k^\prime\alpha^\prime, l_1} c_{q\beta, l_1}  S_d^c s^c_{\alpha^\prime \beta} \frac{J^2}{\omega - \epsilon_q\tau_{q\beta} - J S_d^z s_q^z} S_d^b s^b_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \frac{J}{\omega - \epsilon_q\tau_{q\beta} - J S_d^z s_q^z}\\
-	&\quad\times c^\dagger_{q\beta,l_1} c_{k\alpha,l_1} S_d^a s^a_{\beta \alpha}
+	&= \sum_{q, k, k^\prime, k_1,k_2,\atop{\beta, \alpha, \alpha^\prime, \alpha_1,\alpha_2,\atop{l_1,l_2,a,b,c}}}c^\dagger_{k^\prime\alpha^\prime, l_1} c_{q\beta, l_1}  S_d^c s^c_{\alpha^\prime \beta} \frac{J^2}{\omega - \epsilon_q\tau_{q\beta} - J S_d^z s_q^z} S_d^b s^b_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \frac{J}{\omega - \epsilon_q\tau_{q\beta} - J S_d^z s_q^z} c^\dagger_{q\beta,l_1} c_{k\alpha,l_1} S_d^a s^a_{\beta \alpha}
 \end{aligned}\end{equation}
 We take similar steps as before:
 \begin{inparaenum}
@@ -226,7 +218,7 @@ We take similar steps as before:
 The expression at this point is
 \begin{equation}\begin{aligned}
 	\label{Cb1Cb2_2}
-	\frac{J^3 K N_j n_j }{\left[\left(\omega - \frac{D}{2}\right)^2 - \frac{1}{16}J^2\right]^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}}c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \sum_{\beta,\alpha, \atop{a,b,c}}s^a_{\beta \alpha} s^b_{\alpha_1 \alpha_2}s^c_{\alpha \beta} S_d^c \left(\mathcal{C}_1^b S_d^b - \mathcal{C}_2^b\right) S_d^a
+	\frac{J^3 K N_j n_j }{2\left[\left(\omega - \frac{D}{2}\right)^2 - \frac{1}{16}J^2\right]^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}}c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \sum_{\beta,\alpha, \atop{a,b,c}}s^a_{\beta \alpha} s^b_{\alpha_1 \alpha_2}s^c_{\alpha \beta} S_d^c \left(\mathcal{C}_1^b S_d^b - \mathcal{C}_2^b\right) S_d^a
 \end{aligned}\end{equation}
 \(\mathcal{C}^b_1\) is exactly the same as before, the only difference being \(\omega\) replaces \(\omega^\prime\). The sign of \(\mathcal{C}^b_2\) has also flipped, because \(\beta \to -\beta\). The other difference is that \(S_d^a\) and \(S_d^c\) have switched places. Eq.~\ref{Cb1Cb2} is replaced by
 \begin{equation}\begin{aligned}
@@ -235,9 +227,14 @@ The expression at this point is
 \end{aligned}\end{equation}
 Note that even though \(\mathcal{C}^b_2\) came with a minus sign in eq.~\ref{Cb1Cb2_2}, that minus sign has been canceled by a second minus sign that arises from the exchange of \(a \leftrightarrow c\) in \(\epsilon^{cae}\). Since eq.~\ref{Cb1Cb2_3} is identical to eq.~\ref{Cb1Cb2}, we can dirctly write down the renormalization in this case:
 \begin{equation}\begin{aligned}
-	&-\frac{1}{8}\frac{J^3 K N_j n_j }{\left(\omega - \frac{D}{2}\right)^2 - \frac{1}{16}J^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}}c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \vec{S_d}\cdot\vec{s}_{\alpha_1\alpha_2} \\
-	&+ \frac{J^4 K N_j n_j \left( \omega - D/2 - J/4 \right) }{16\left[\left(\omega - \frac{D}{2}\right)^2 - \frac{1}{16}J^2\right]^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}} c^\dagger_{k_1 \alpha_1,l_2}c_{k_2 \alpha_2,l_2}S_d^z s^z_{\alpha_1\alpha_2}
+	\label{third_term_2}
+	-\frac{1}{16}\frac{J^3 K N_j n_j }{\left(\omega - \frac{D}{2}\right)^2 - \frac{1}{16}J^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}}c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \vec{S_d}\cdot\vec{s}_{\alpha_1\alpha_2} + \frac{J^4 K N_j n_j \left( \omega - D/2 - J/4 \right) }{32\left[\left(\omega - \frac{D}{2}\right)^2 - \frac{1}{16}J^2\right]^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}} c^\dagger_{k_1 \alpha_1,l_2}c_{k_2 \alpha_2,l_2}S_d^z s^z_{\alpha_1\alpha_2}
 \end{aligned}\end{equation}
 
+\subsection{Total renormalization \(\Delta H^{(3)}\)}
+We will again use the relation \(\omega - D/2 = -(\omega^\prime - D/2)\). The total renormalization at this order is obtained by adding eqs.~\ref{third_term_1} and \ref{third_term_2}.
+\begin{equation}\begin{aligned}
+	\Delta H^{(3)} = -\frac{J^3 K N_j n_j / 8}{\left(\omega - \frac{D}{2}\right)^2 - \frac{1}{16}J^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}}c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \vec{S_d}\cdot\vec{s}_{\alpha_1\alpha_2} - \frac{J^5 K N_j n_j / 64}{\left[\left(\omega - \frac{D}{2}\right)^2 - \frac{1}{16}J^2\right]^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}} c^\dagger_{k_1 \alpha_1,l_2}c_{k_2 \alpha_2,l_2}S_d^z s^z_{\alpha_1\alpha_2}
+\end{aligned}\end{equation}
 
 \end{document}
