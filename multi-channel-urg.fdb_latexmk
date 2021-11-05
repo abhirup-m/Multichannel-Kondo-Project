@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex multi-channel-urg"] 1636094029 "multi-channel-urg.aux" "multi-channel-urg.bbl" "multi-channel-urg" 1636096527
+["bibtex multi-channel-urg"] 1636106361 "multi-channel-urg.aux" "multi-channel-urg.bbl" "multi-channel-urg" 1636115858
   "/usr/share/texmf-dist/bibtex/bst/revtex/apsrev4-2.bst" 1617738001 69609 e9dea59f0e753ccda3ddc8f5806d846d ""
-  "multi-channel-urg.aux" 1636096527 2846 6c6a6cb7fa207457e1cef453e25fc16b "pdflatex"
-  "multi-channel-urgNotes.bib" 1636096527 104 4d8bb863c86f3d7b03a471e9d4707f34 "pdflatex"
+  "multi-channel-urg.aux" 1636115858 2896 333920ed43181eae4bd1ccc18ac58cee "pdflatex"
+  "multi-channel-urgNotes.bib" 1636115858 104 4d8bb863c86f3d7b03a471e9d4707f34 "pdflatex"
   (generated)
   "multi-channel-urg.bbl"
   "multi-channel-urg.blg"
-["pdflatex"] 1636096526 "multi-channel-urg.tex" "multi-channel-urg.pdf" "multi-channel-urg" 1636096527
+["pdflatex"] 1636115857 "multi-channel-urg.tex" "multi-channel-urg.pdf" "multi-channel-urg" 1636115858
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1617738065 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1617738065 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1617738065 996 a18840b13b499c08ac2de96a99eda4bc ""
@@ -102,13 +102,13 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1617738065 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1627447406 5065252 bcee0692f299aea3b1d13d4b7b7296ae ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1627447394 2812685 c5960af1705249fd1e77e94896ab4041 ""
-  "multi-channel-urg.aux" 1636096527 2846 6c6a6cb7fa207457e1cef453e25fc16b "pdflatex"
-  "multi-channel-urg.bbl" 1636094030 1982 35453d3875d823f0ec9445e740a573d9 "bibtex multi-channel-urg"
-  "multi-channel-urg.out" 1636096527 1594 516271be70d243cec18f3366687227d0 "pdflatex"
-  "multi-channel-urg.tex" 1636096526 29460 ebd56f8e65bea0ff1cd53de0e6e6e200 ""
+  "multi-channel-urg.aux" 1636115858 2896 333920ed43181eae4bd1ccc18ac58cee "pdflatex"
+  "multi-channel-urg.bbl" 1636106361 1982 35453d3875d823f0ec9445e740a573d9 "bibtex multi-channel-urg"
+  "multi-channel-urg.out" 1636115858 1594 516271be70d243cec18f3366687227d0 "pdflatex"
+  "multi-channel-urg.tex" 1636115857 30286 68fcda7546eae4f0f9c5f1781a0bda87 ""
   (generated)
+  "multi-channel-urg.log"
   "multi-channel-urgNotes.bib"
   "multi-channel-urg.pdf"
-  "multi-channel-urg.log"
   "multi-channel-urg.out"
   "multi-channel-urg.aux"

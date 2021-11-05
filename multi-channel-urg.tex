@@ -14,7 +14,7 @@ The multi-channel Kondo model is described by the Hamiltonian
 \end{aligned}\end{equation}
 It is mostly identical to the single-channel Kondo model: \(k,k^\prime\) sum over the momentum states, \(\alpha,\alpha^\prime\) sum over the spin indices and \(\gamma\) sums over the various channels. \(\vec S_d, \vec s\) are the impurity and conduction bath spin vectors. The renormalization at step \(j\) is given by
 \begin{equation}\begin{aligned}
-	\Delta H_j = \left\{c^\dagger T, \eta \right\} = \left(c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c + T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T\right)
+	\Delta H_j = \left(c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c - T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T\right)
 \end{aligned}\end{equation}
 \begin{equation}\begin{aligned}
 	c^\dagger T = J \sum_{k < \Lambda_j, \alpha}\vec{S_d}\cdot\vec{s}_{\beta \alpha}c^\dagger_{q\beta}c_{k\alpha}, &&&H_D = \epsilon_q \tau_{q\beta} + J S_d^z s_q^z
@@ -38,7 +38,7 @@ With this change, the second and third order renormalizations will take the form
 
 \section{Leading order renormalization}
 \begin{equation}\begin{aligned}
-	\Delta H^{(2)}_j = \underbrace{c^\dagger T \frac{1}{\omega^\prime - H_D}T^\dagger c}_\text{first term}~ -~ \underbrace{T^\dagger c \frac{1}{\omega - H_D}c^\dagger T}_\text{second term}
+	\Delta H^{(2)}_j = \underbrace{c^\dagger T \frac{1}{\omega^\prime - H_D}T^\dagger c}_\text{first term}~+~\underbrace{T^\dagger c \frac{1}{\omega - H_D}c^\dagger T}_\text{second term}
 \end{aligned}\end{equation}
 \subsection{Second term}
 \begin{align}
@@ -54,8 +54,9 @@ We can perform the sum over the states being decoupled: \(\sum_q \hat n_{q\beta}
 \begin{align}
 	T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T &= J^2 n_j \sum_{k k^\prime \alpha \alpha^\prime} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \sum_{\beta,a,b}S_d^a s^a_{\alpha^\prime \beta}s^b_{\beta \alpha} \frac{\left(\omega - \frac{1}{2}D\right) + J S_d^z \frac{\beta}{2}}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b
 \end{align}
-We will now simplify the terms individually. The first term is simpler:
+We will now simplify the terms individually. The first term, labelled term 3, is simpler:
 \begin{equation}\begin{aligned}
+	\label{term3_def}
 	\text{term 3} = \frac{J^2 n_j \left(\omega - \frac{1}{2}D\right)}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}\sum_{k k^\prime \alpha \alpha^\prime} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \sum_{\beta,a,b}S_d^a S_d^b s^a_{\alpha^\prime \beta}s^b_{\beta \alpha}
 \end{aligned}\end{equation}
 The final sum can be performed using the following trick. In order to renormalize the Hamiltonian, the two impurity spin operators \(S_d^a\) and \(S_d^b\) have to multiply to produce another spin operator \(S_d^c\) and that will happen only for \(a\neq b\). For \(a \neq b\), we have the relation \(S_d^a S_d^b = \frac{i}{2}\sum_c \epsilon^{abc}S_d^c\).
@@ -74,9 +75,9 @@ The second term takes a bit more work:
 Here we will use the identity:
 \begin{equation}\begin{aligned}
 	\label{identity_SSS}
-	S_d^a S_d^z S_d^b = \left(\frac{1}{4}\delta^{az} + \frac{i}{2}\sum_c \epsilon^{azc}S_d^c\right)S_d^b = \left(\frac{1}{4}\delta^{az}S_d^b + \frac{i}{8} \epsilon^{azb}  - \frac{1}{4}\sum_{c_1,c} \epsilon^{azc_1} \epsilon^{c_1 b c} S_d^c\right) = \frac{1}{4}\left(\delta^{az}S_d^b - \delta^{ab}S_d^z + \delta^{bz}S_d^a\right) + \frac{i}{8}\epsilon^{azb}
+	S_d^a S_d^z S_d^b = \left(\frac{1}{4}\delta^{az} + \frac{i}{2}\sum_c \epsilon^{azc}S_d^c\right)S_d^b = \left(\frac{1}{4}\delta^{az}S_d^b + \frac{i}{8} \epsilon^{azb}  - \frac{1}{4}\sum_{c_1,c} \epsilon^{azc_1} \epsilon^{c_1 b c} S_d^c\right) = \frac{1}{4}\left(\delta^{az}S_d^b - \delta^{ab}S_d^z + \delta^{bz}S_d^a\right)
 \end{aligned}\end{equation}
-We will drop the last numerical term because such a term cannot renormalize the Hamiltonian. Substituting this gives
+We have dropped a numerical term because such a term cannot renormalize the Hamiltonian. Substituting this gives
 \begin{equation}\begin{aligned}
 	\label{term2}
 	\text{term 4} &= \frac{J^3 n_j}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \frac{1}{4}\sum_{k k^\prime \alpha \alpha^\prime,c} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \left(\vec{S_d}\cdot\vec{s}_{\alpha^\prime\alpha} -S_d^z \sum_\beta \beta s^a_{\alpha^\prime\beta} s^a_{\beta\alpha} \right)
@@ -88,21 +89,33 @@ We will drop the last numerical term because such a term cannot renormalize the 
 \end{align}
 Here the intermediate state is unoccupied, so we put \(\tau = -\frac{1}{2}, s_q^z = -\frac{\beta}{2}\) and since the initial state was occupied, we put \(\epsilon_q = D\).
 \begin{align}
-	c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c &= \sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{J^2}{\omega^\prime - \frac{1}{2}D + J \frac{\beta}{2}S_d^z }c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} S_d^b s^b_{\alpha^\prime \beta} \\
-							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{\left(\omega^\prime - \frac{1}{2}D\right) - J \frac{\beta}{2}S_d^z }{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} S_d^b s^b_{\alpha^\prime \beta}\\
-							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{-\left(\omega^\prime - \frac{1}{2}D\right) + J \frac{\beta}{2}S_d^z}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} c_{q\beta} S_d^b s^b_{\alpha^\prime \beta} & \left[c_k c^\dagger_{k^\prime} \sim - c^\dagger_{k^\prime}c_k\right] \\
-							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{-\left(\omega^\prime - \frac{1}{2}D\right) + J \frac{\beta}{2}S_d^z}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b s^b_{\alpha^\prime \beta} \hat n_{q\beta} \\
-							   &= J^2 n_j \sum_{\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a s^a_{\beta \alpha} \frac{-\left(\omega^\prime - \frac{1}{2}D\right) + J S_d^z \frac{1}{2}\beta}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^b s^b_{\alpha^\prime \beta}
+	c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c &= \sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c_{k\alpha} S_d^b s^b_{\beta \alpha} \frac{J^2}{\omega^\prime - \frac{1}{2}D + J \frac{\beta}{2}S_d^z }c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} S_d^a s^a_{\alpha^\prime \beta} \\
+							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c_{k\alpha} S_d^b s^b_{\beta \alpha} \frac{\left(\omega^\prime - \frac{1}{2}D\right) - J \frac{\beta}{2}S_d^z }{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}c^\dagger_{k^\prime\alpha^\prime} c_{q\beta} S_d^a s^a_{\alpha^\prime \beta}\\
+							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{q\beta} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^b s^b_{\beta \alpha} \frac{-\left(\omega^\prime - \frac{1}{2}D\right) + J \frac{\beta}{2}S_d^z}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} c_{q\beta} S_d^a s^a_{\alpha^\prime \beta} & \left[c_k c^\dagger_{k^\prime} \sim - c^\dagger_{k^\prime}c_k\right] \\
+							   &= J^2\sum_{q\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^b s^b_{\beta \alpha} \frac{-\left(\omega^\prime - \frac{1}{2}D\right) + J \frac{\beta}{2}S_d^z}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^a s^a_{\alpha^\prime \beta} \hat n_{q\beta} \\
+							   &= J^2 n_j \sum_{\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} s^a_{\alpha^\prime \beta}s^b_{\beta \alpha} S_d^b \frac{-\left(\omega^\prime - \frac{1}{2}D\right) + J S_d^z \frac{1}{2}\beta}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} S_d^a 
 \end{align}
-We again simplify the terms individually, calling them term 1 and term 2. Term 1 can be made identical in form to term 1 using the relation: \(s^b s^a = -s^b s^a \text{ for } a \neq b\). With this change, term 3 becomes
+We again simplify the terms individually, calling them term 1 and term 2. 
+\begin{equation}\begin{aligned}
+	\text{term 1} = \frac{-\left(\omega^\prime - \frac{1}{2}D\right)J^2 n_j} {\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \sum_{\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} s^a_{\alpha^\prime \beta}s^b_{\beta \alpha} S_d^b S_d^a
+\end{aligned}\end{equation}
+Since this term will renormalize only for \(a \neq b\), we can use \(S_d^b S_d^a = -S_d^a S_d^b\). This gives
+\begin{equation}\begin{aligned}
+	\text{term 1} = \frac{\left(\omega^\prime - \frac{1}{2}D\right)J^2 n_j} {\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \sum_{\beta k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} s^a_{\alpha^\prime \beta}s^b_{\beta \alpha} S_d^a S_d^b
+\end{aligned}\end{equation}
+This is identical to term 3 (eq.~\ref{term3_def}) except for the change \(\omega^\prime \to \omega\). Copying the result from term 3, we get
 \begin{equation}\begin{aligned}
 	\label{term3}
-	\text{term 1} = \frac{J^2 n_j \left(\omega^\prime - \frac{1}{2}D\right)}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2}\sum_{k k^\prime \alpha \alpha^\prime a b} c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} S_d^a  S_d^b \left(s^a s^b\right)_{\alpha^\prime \alpha} = \frac{1}{2}\frac{J^2 n_j \left(\omega^\prime - \frac{1}{2}D\right)}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \sum_{k k^\prime \alpha \alpha^\prime,c} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \vec{S_d}\cdot\vec{s}_{\alpha^\prime \alpha}
+	\text{term 1} = -\frac{1}{2}\frac{J^2 n_j \left(\omega^\prime - \frac{1}{2}D\right)}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \sum_{k k^\prime \alpha \alpha^\prime,c} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \vec{S_d}\cdot\vec{s}_{\alpha^\prime \alpha}
 \end{aligned}\end{equation}
-For term 2, we will use eq.~\ref{identity_SSS} to get
+The other term is
+\begin{equation}\begin{aligned}
+	\text{term 2} = \frac{1}{2}\frac{J^3 n_j}{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \sum_{\beta k k^\prime \alpha \alpha^\prime a b} \beta c^\dagger_{k^\prime\alpha^\prime}c_{k\alpha} s^a_{\alpha^\prime \beta}s^b_{\beta \alpha} S_d^b S_d^z S_d^a 
+\end{aligned}\end{equation}
+From eq.~\ref{identity_SSS}, we know that \(S_d^b S_d^z S_d^a =  S_d^a S_d^z S_d^b\), which means this term is again identical to its counterpart, term 4.
 \begin{equation}\begin{aligned}
 	\label{term4}
-	\text{term 2} = \frac{J^3 n_j }{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \frac{1}{4}\sum_{k k^\prime \alpha \alpha^\prime,c} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \left(\vec{S_d}\cdot\vec{s}_{\alpha^\prime\alpha} -S_d^z \sum_\beta \beta s^a_{\alpha^\prime\beta} s^a_{\beta\alpha} \right)
+	\text{term 2} = \frac{J^3 n_j }{\left(\omega^\prime - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \frac{1}{4}\sum_{k k^\prime \alpha \alpha^\prime,c} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \left(\vec{S_d}\cdot\vec{s}_{\alpha^\prime\alpha} -S_d^z \sum_{a \beta} \beta s^a_{\alpha^\prime\beta} s^a_{\beta\alpha} \right)
 \end{aligned}\end{equation}
 
 \subsection{Total renormalization \(\Delta H^{(2)}\)}
@@ -110,8 +123,7 @@ From the formula for the renormalization \(\Delta H^{(2)}\), we write
 \begin{equation}\begin{aligned}
 	\Delta H^{(2)} = \text{term 1} + \text{term 2} + \text{term 3} + \text{term 4}
 \end{aligned}\end{equation}
-These four terms are given by eqs.~\ref{term1}, \ref{term2}, \ref{term3} and \ref{term4}.
-From the constraints of URG and particle-hole symmetry, we have the constraint \(\omega + \omega^\prime = H_d^0 + H_d^1\). \(H_d^0\) is the diagonal part when the current node is unoccupied and \(H_d^1\) is when its occupied. For our case, \(H_d^0 + H_d^1 = \sum \epsilon_q \tau_q = D\), because both the hole and particle states have energy of \(\frac{D}{2}\) (\(\epsilon_q\) and \(\tau\) flip sign together). We therefore have \((\omega - D/2) = -(\omega^\prime - D/2)\). With this relation, we have \(\text{term 2} = \text{term 4}\) and \( \text{term 3} = -\text{term 1}\). The total renormalization at second order is therefore
+These four terms are given by eqs.~\ref{term1}, \ref{term2}, \ref{term3} and \ref{term4}. Since the Hamiltonian has particle-hole and \(\mathrm{SU}(2)\) symmetry, we will impose these symmetries by choosing the relation between \(\omega\) and \(\omega^\prime\) such that \(\text{term 2} = \text{term 4}\) and \( \text{term 3} = -\text{term 1}\). The total renormalization at second order is therefore
 \begin{equation}\begin{aligned}
 	\Delta H^{(2)} = -2 \times \text{term 3} = -\frac{J^2 n_j \left(\omega - \frac{1}{2}D\right)}{\left(\omega - \frac{1}{2}D\right)^2 - \frac{1}{16}J^2} \sum_{k k^\prime \alpha \alpha^\prime,c} c^\dagger_{k^\prime\alpha^\prime} c_{k\alpha} \vec{S_d}\cdot\vec{s}_{\alpha^\prime \alpha}
 \end{aligned}\end{equation}
@@ -125,7 +137,7 @@ For \(\omega < D/2\), we get the flow towards the strong-coupling fixed point. T
 \end{aligned}\end{equation}
 \section{Next-to-leading order renormalization}
 \begin{equation}\begin{aligned}
-	\Delta H^{(3)}_j = \underbrace{c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c}_\text{first term} ~+~ \underbrace{T^\dagger c \frac{1}{\omega - H_D} H_X \frac{1}{\omega - H_D} c^\dagger T}_\text{second term}
+	\Delta H^{(3)}_j = \underbrace{c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c}_\text{first term} ~-~ \underbrace{T^\dagger c \frac{1}{\omega - H_D} H_X \frac{1}{\omega - H_D} c^\dagger T}_\text{second term}
 \end{aligned}\end{equation}
 
 \subsection{First term}
@@ -212,7 +224,7 @@ We take similar steps as before:
 	\item \(\epsilon_q \tau_{q\beta} = \frac{D}{2}\)
 	\item \(s^z_q = \frac{\beta}{2}\)
 	\item Sum over \(q\) to get \(n_j\)
-	\item Contract \(k\alpha,k^\prime\alpha^\prime\) to get \(K N_j n_j\)
+	\item Contract \(k\alpha,k^\prime\alpha^\prime\) to get \(K N_j n_j / 2\)
 	\item Compute the internal product to obtain \(\mathcal{C}_1^b S_d^b - \mathcal{C}_2^b\)
 \end{inparaenum}.
 The expression at this point is
@@ -232,9 +244,13 @@ Note that even though \(\mathcal{C}^b_2\) came with a minus sign in eq.~\ref{Cb1
 \end{aligned}\end{equation}
 
 \subsection{Total renormalization \(\Delta H^{(3)}\)}
-We will again use the relation \(\omega - D/2 = -(\omega^\prime - D/2)\). The total renormalization at this order is obtained by adding eqs.~\ref{third_term_1} and \ref{third_term_2}.
+Similar to the one-loop case, we will choose the require \(\omega\) and \(\omega^\prime\) to be related such that the  RG equations are \(\mathrm{Su}(2)\) symmetric; that is, we will require the terms that renormalize only \(S_d^z s^z\) vanish. The total renormalization at this order is obtained by adding eqs.~\ref{third_term_1} and \ref{third_term_2}.
 \begin{equation}\begin{aligned}
-	\Delta H^{(3)} = -\frac{J^3 K N_j n_j / 8}{\left(\omega - \frac{D}{2}\right)^2 - \frac{1}{16}J^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}}c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \vec{S_d}\cdot\vec{s}_{\alpha_1\alpha_2} - \frac{J^5 K N_j n_j / 64}{\left[\left(\omega - \frac{D}{2}\right)^2 - \frac{1}{16}J^2\right]^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}} c^\dagger_{k_1 \alpha_1,l_2}c_{k_2 \alpha_2,l_2}S_d^z s^z_{\alpha_1\alpha_2}
+	\Delta H^{(3)} = -\frac{J^3 K N_j n_j / 8}{\left(\omega - \frac{D}{2}\right)^2 - \frac{1}{16}J^2}\sum_{k_1,k_2,\atop{\alpha_1,\alpha_2,l_2}}c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \vec{S_d}\cdot\vec{s}_{\alpha_1\alpha_2}
+\end{aligned}\end{equation}
+Combining with \(\Delta H^{(2)}\), we get
+\begin{equation}\begin{aligned}
+	\Delta J = \frac{J^2 n_j \left[2 \left(D - 2\omega\right) - \frac{1}{4}J K N_j\right]}{\left(D - 2\omega\right)^2 - \frac{1}{4}J^2}
 \end{aligned}\end{equation}
 
 \end{document}
