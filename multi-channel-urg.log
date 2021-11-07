@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.7.28)  5 NOV 2021 18:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.10.8)  7 NOV 2021 22:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -297,6 +297,30 @@ Package: paralist 2017/01/22 v2.7 Extended list environments
 \plitemsep=\skip58
 \plparsep=\skip59
 \pl@lab=\toks25
+) (/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+ (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen153
+\captionmargin@=\dimen154
+\captionwidth=\dimen155
+\caption@tempdima=\dimen156
+\caption@indent=\dimen157
+\caption@parindent=\dimen158
+\caption@hangindent=\dimen159
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\par \vskip \abovecaptionskip \begingroup \small \rmfamily \sbox \@tempboxa {\let \\\heading@cr \@make@capt@title {#1}{#2}}\@ifdim {\wd \@tempboxa >\hsize }{\begingroup \samepage \flushing \let \footnote \@footnotemark@gobble \@make@capt@title {#1}{#2}\par \endgroup }{\global \@minipagefalse \hb@xt@ \hsize {\hfil \unhbox \@tempboxa \hfil }}\endgroup \vskip \belowcaptionskip  on input line 1139.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count284
+\c@continuedfloat=\count285
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
 )
 Class revtex4-2 Info: Unrecognized LaTeX tabular. Please update this document class! (Proceeding with fingers crossed.) on input line 5.
 
@@ -308,7 +332,7 @@ Class revtex4-2 Info: mcite was not loaded (OK!) on input line 5.
 Class revtex4-2 Info: multicol was not loaded (OK!) on input line 5.
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count284
+\l__color_backend_stack_int=\count286
 \l__pdf_internal_box=\box66
 ) (./multi-channel-urg.aux)
 \openout1 = `multi-channel-urg.aux'.
@@ -333,16 +357,16 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count285
-\scratchdimen=\dimen153
+\scratchcounter=\count287
+\scratchdimen=\dimen160
 \scratchbox=\box67
-\nofMPsegments=\count286
-\nofMParguments=\count287
+\nofMPsegments=\count288
+\nofMParguments=\count289
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count288
-\MPscratchDim=\dimen154
-\MPnumerator=\count289
-\makeMPintoPDFobject=\count290
+\MPscratchCnt=\count290
+\MPscratchDim=\dimen161
+\MPnumerator=\count291
+\makeMPintoPDFobject=\count292
 \everyMPtoPDFconversion=\toks27
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -358,7 +382,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count291
+\c@section@level=\count293
 )
 LaTeX Info: Redefining \ref on input line 5.
 LaTeX Info: Redefining \pageref on input line 5.
@@ -367,6 +391,8 @@ LaTeX Info: Redefining \nameref on input line 5.
 \@outlinefile=\write4
 \openout4 = `multi-channel-urg.out'.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 5.
 \openout3 = `multi-channel-urgNotes.bib'.
 
@@ -417,23 +443,61 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `superscript' on input line 246.
 
-[6] (./multi-channel-urg.bbl) [7] (./multi-channel-urg.aux)
+[6]
+<rg_flow_pms.pdf, id=162, 361.35004pt x 103.77826pt>
+File: rg_flow_pms.pdf Graphic file (type pdf)
+<use rg_flow_pms.pdf>
+Package pdftex.def Info: rg_flow_pms.pdf  used on input line 270.
+(pdftex.def)             Requested size: 229.49844pt x 65.91112pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 271.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--273
+
+ []
+
+<./rg_flow.pdf, id=163, 494.93538pt x 104.00146pt>
+File: ./rg_flow.pdf Graphic file (type pdf)
+<use ./rg_flow.pdf>
+Package pdftex.def Info: ./rg_flow.pdf  used on input line 277.
+(pdftex.def)             Requested size: 255.0pt x 53.58435pt.
+<./K=2,rel_and_irr.pdf, id=164, 1827.16673pt x 711.13954pt>
+File: ./K=2,rel_and_irr.pdf Graphic file (type pdf)
+<use ./K=2,rel_and_irr.pdf>
+Package pdftex.def Info: ./K=2,rel_and_irr.pdf  used on input line 282.
+(pdftex.def)             Requested size: 408.00156pt x 158.79501pt.
+<./Jfp_vs_D.pdf, id=165, 959.61232pt x 711.13954pt>
+File: ./Jfp_vs_D.pdf Graphic file (type pdf)
+<use ./Jfp_vs_D.pdf>
+Package pdftex.def Info: ./Jfp_vs_D.pdf  used on input line 287.
+(pdftex.def)             Requested size: 203.99689pt x 151.16669pt.
+(./multi-channel-urg.bbl) [7 <./rg_flow_pms.pdf> <./rg_flow.pdf
+
+pdfTeX warning: pdflatex (file ./rg_flow.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [8 <./K=2,rel_and_irr.pdf> <./Jfp_vs_D.pdf
+
+pdfTeX warning: pdflatex (file ./Jfp_vs_D.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] (./multi-channel-urg.aux)
 Package rerunfilecheck Info: File `multi-channel-urg.out' has not changed.
 (rerunfilecheck)             Checksum: 516271BE70D243CEC18F3366687227D0;1594.
  ) 
 Here is how much of TeX's memory you used:
- 11038 strings out of 478994
- 154653 string characters out of 5864751
- 508764 words of memory out of 5000000
- 28305 multiletter control sequences out of 15000+600000
+ 12268 strings out of 478994
+ 178681 string characters out of 5864751
+ 530839 words of memory out of 5000000
+ 29518 multiletter control sequences out of 15000+600000
  409489 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,14n,74p,967b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on multi-channel-urg.pdf (7 pages, 199104 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on multi-channel-urg.pdf (8 pages, 319316 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 210 compressed objects within 3 object streams
- 78 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 294 PDF objects out of 1000 (max. 8388607)
+ 255 compressed objects within 3 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

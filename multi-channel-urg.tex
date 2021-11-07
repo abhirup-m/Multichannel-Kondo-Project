@@ -1,5 +1,5 @@
 \documentclass{revtex4-2}
-\usepackage{braket,amsmath,amssymb,graphicx,float,hyperref,paralist}
+\usepackage{braket,amsmath,amssymb,graphicx,float,hyperref,paralist,caption}
 \numberwithin{equation}{section}
 \allowdisplaybreaks
 \begin{document}
@@ -250,7 +250,42 @@ Similar to the one-loop case, we will choose the require \(\omega\) and \(\omega
 \end{aligned}\end{equation}
 Combining with \(\Delta H^{(2)}\), we get
 \begin{equation}\begin{aligned}
-	\Delta J = \frac{J^2 n_j \left[2 \left(D - 2\omega\right) - \frac{1}{4}J K N_j\right]}{\left(D - 2\omega\right)^2 - \frac{1}{4}J^2}
+	\Delta J = \frac{J^2 n_j \left[2 \left(D - 2\omega\right) - \frac{1}{2}J K N_j\right]}{\left(D - 2\omega\right)^2 - \frac{1}{4}J^2}
 \end{aligned}\end{equation}
+We choose \(\omega = -D/2\) to get a clearer idea of what the equations say. We also set \(N_j = \rho D\) and \(n_j = \rho |\delta D|\). Quantities with zero in the subscript will denote their values in the bare Hamiltonian. Using \(\delta D = -|\delta D|\), we can write the continuum form of the equation:
+\begin{equation}\begin{aligned}
+	\frac{\:\mathrm{d}J}{\:\mathrm{d}t} = \frac{J^2 \rho D^2 \left(1 - \frac{1}{8}JK\rho\right)}{D^2 - \frac{1}{16}J^2}
+\end{aligned}\end{equation}
+where \(dt = \frac{dD}{D}\).
+\\\\
+\begin{minipage}{0.45\textwidth}
+For \(D \gg J\), we can ignore the \(J\) in the denominator, and the equation reduces to the one-loop poor man's scaling form
+\begin{equation}\begin{aligned}
+	\frac{\:\mathrm{d}J}{\:\mathrm{d}t} \simeq \frac{J^2 \rho D^2 \left(1 - \frac{1}{8}JK\rho\right)}{D^2} = J^2 \rho \left(1 - \frac{1}{8}JK\rho\right)
+\end{aligned}\end{equation}
+This equation has a stable fixed point at \(J^* = \frac{8}{\rho K}\).
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+	\includegraphics[width=\textwidth]{rg_flow_pms.pdf}
+	\captionof{figure}{Attractive finite \(J\) fixed point of poor man scaling RG equation}
+\end{minipage}
+
+\(J_1^*,J_2^*\) are two critical points of the equation where either the numerator or the denominator changes sign: \(J_1^* = \frac{32 D_0}{K}, J_2^* = 4D\). In the thermodynamic limit, \(J_1^* \gg J\), so the numerator is always positive, and the flow of \(J\) is determined by the denominator. For \(J_0 < J_2^*\), \(J\) is relevant and flows up towards \(J_2^*\). On the other hand, if \(J_0 > J_2^*\), then we have an irrelevant coupling which again flows down towards \(J_2^*\)
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.5\textwidth]{./rg_flow.pdf}
+	\caption{Attractive RG flows towards the stable intermediate coupling fixed point at \(J_1^*\).}
+\end{figure}
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./K=2,rel_and_irr.pdf}
+	\caption{Attractive RG flows towards the stable intermediate coupling fixed point at \(J_1^*\).}
+\end{figure}
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.4\textwidth]{./Jfp_vs_D.pdf}
+	\caption{Variation of the fixed point value \(J^*\) against increasing bandwidth \(D_0\). The single-channel curve (red) keeps rising while the two-channel curve (blue) saturates to a finite value.}
+\end{figure}
 
 \end{document}
