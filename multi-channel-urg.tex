@@ -1,5 +1,5 @@
 \documentclass{revtex4-2}
-\usepackage{braket,amsmath,amssymb,graphicx,float,hyperref,paralist,caption}
+\usepackage{braket,amsmath,amssymb,graphicx,float,hyperref,paralist}
 \numberwithin{equation}{section}
 \allowdisplaybreaks
 \begin{document}
@@ -257,35 +257,50 @@ We choose \(\omega = -D/2\) to get a clearer idea of what the equations say. We 
 	\frac{\:\mathrm{d}J}{\:\mathrm{d}t} = \frac{J^2 \rho D^2 \left(1 - \frac{1}{8}JK\rho\right)}{D^2 - \frac{1}{16}J^2}
 \end{aligned}\end{equation}
 where \(dt = \frac{dD}{D}\).
-\\\\
-\begin{minipage}{0.45\textwidth}
+
 For \(D \gg J\), we can ignore the \(J\) in the denominator, and the equation reduces to the one-loop poor man's scaling form
 \begin{equation}\begin{aligned}
+	\label{pms_mchannel}
 	\frac{\:\mathrm{d}J}{\:\mathrm{d}t} \simeq \frac{J^2 \rho D^2 \left(1 - \frac{1}{8}JK\rho\right)}{D^2} = J^2 \rho \left(1 - \frac{1}{8}JK\rho\right)
 \end{aligned}\end{equation}
 This equation has a stable fixed point at \(J^* = \frac{8}{\rho K}\).
-\end{minipage}
-\hfill
-\begin{minipage}{0.45\textwidth}
-	\includegraphics[width=\textwidth]{rg_flow_pms.pdf}
-	\captionof{figure}{Attractive finite \(J\) fixed point of poor man scaling RG equation}
-\end{minipage}
 
-\(J_1^*,J_2^*\) are two critical points of the equation where either the numerator or the denominator changes sign: \(J_1^* = \frac{32 D_0}{K}, J_2^* = 4D\). In the thermodynamic limit, \(J_1^* \gg J\), so the numerator is always positive, and the flow of \(J\) is determined by the denominator. For \(J_0 < J_2^*\), \(J\) is relevant and flows up towards \(J_2^*\). On the other hand, if \(J_0 > J_2^*\), then we have an irrelevant coupling which again flows down towards \(J_2^*\)
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=0.5\textwidth]{./rg_flow.pdf}
-	\caption{Attractive RG flows towards the stable intermediate coupling fixed point at \(J_1^*\).}
+	\includegraphics[width=0.4\textwidth]{rg_flow_pms.pdf}
+	\caption{Attractive finite \(J\) fixed point of poor man scaling RG equation}
 \end{figure}
+For \(D\) not so large, the denominator also comes into play, and we get the possibility of two fixed points, one from the numerator and the other from the numerator.
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=0.8\textwidth]{./K=2,rel_and_irr.pdf}
-	\caption{Attractive RG flows towards the stable intermediate coupling fixed point at \(J_1^*\).}
+	\includegraphics[width=0.7\textwidth]{./rg_flow.pdf}
+	\caption{}
+	\label{rg_flow_general}
 \end{figure}
+
+The numerator fixed point is given by
+\begin{equation}\begin{aligned}
+	J_1^* = \frac{8}{K \rho}
+\end{aligned}\end{equation}
+while the denominator fixed point is defined by the condition
+\begin{equation}\begin{aligned}
+	D^* = \frac{J_2^*}{4}
+\end{aligned}\end{equation}
+For a given \(K\), the position of \(J_1^*\) will be governed by \(\rho\). In general, for each bare bandwidth \(D_0\), there exists a minimal \(\rho\), $\rho_\text{min}(D_0)$, above which the the lower fixed point is the one from the numerator. That is, for \(\rho > \rho_\text{min}\), if we start scaling from small \(J_0\), it grows until it hits \(J_1^*\) which acts as the attractive fixed point, and \(J_2^*\) lies at a higher value and acts as the repulsive fixed point. For \(\rho < \rho_\text{min}\), \(J\) will grow and hit \(J_2^*\) instead, and \(J_1^* > J_2^*\) now becomes the repulsive fixed point.
+\begin{equation}\begin{aligned}
+	\rho_\text{min} = \text{minimum }\left\{\rho, \text{ such that } \frac{8}{K \rho} < 4 D^*(\rho)\right\}
+\end{aligned}\end{equation}
+This behaviour is shown schematically in fig.~\ref{rg_flow_general}. 
+In fig.~\ref{rhomin_vs_D}, we plot \(\rho_\text{min}\) against the bare bandwidth. For large \(D_0\), it essentially shrinks to zero, and the numerator becomes the first fixed point for essentially all \(\rho\).
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=0.4\textwidth]{./Jfp_vs_D.pdf}
-	\caption{Variation of the fixed point value \(J^*\) against increasing bandwidth \(D_0\). The single-channel curve (red) keeps rising while the two-channel curve (blue) saturates to a finite value.}
+	\includegraphics[width=0.7\textwidth]{./rhomin_D.pdf}
+	\caption{Red curve shows variation of \(\rho_\text{min}\) against \(D_0\). It vanishes at large \(D_0\). Blue curve shows variation of the ratio \(J_1^* / D_0\) with \(D_0\). That shrinks as well, showing that the fixed point \(J_1^*\) remains finite in the thermodynamic limit, and the distance between \(J_1^*\) and \(J_2^*\) keeps growing.}
+	\label{rhomin_vs_D}
 \end{figure}
+
+If we assume we are at a sufficiently large \(D_0\) and \(\rho > \rho_\text{min}\), the lower fixed point is \(J_1^*\). As shown in fig.~\ref{rhomin_vs_D}, we have \(J_1^* \ll D_0\). If we start with \(J_0\) in the neighborhood of \(J_1^*\), we can use \(J_1^* \ll D_0\) to ignore \(J\) in the denominator and the RG equation reduces to the poor man's scaling form eq.~\ref{pms_mchannel}. The denominator fixed point has effectively moved off to infinite.
+
+\textbf{\textit{The part of the problem that I have not yet figured out is the following: How do we argue for the same when \(J_0\) is not in the neighborhood of \(J_1^*\)? That is, if \(J_0\) is sufficiently large so that we cannot simpify the denominator. It is true that in order to compete with a thermodynamically large \(D_0\), the bare \(J_0\) will have to be extremely large, and it's possible that this does not even fall in the class of models we are studying.}}
 
 \end{document}
