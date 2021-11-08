@@ -254,14 +254,14 @@ Combining with \(\Delta H^{(2)}\), we get
 \end{aligned}\end{equation}
 We choose \(\omega = -D/2\) to get a clearer idea of what the equations say. We also set \(N_j = \rho D\) and \(n_j = \rho |\delta D|\). Quantities with zero in the subscript will denote their values in the bare Hamiltonian. Using \(\delta D = -|\delta D|\), we can write the continuum form of the equation:
 \begin{equation}\begin{aligned}
-	\frac{\:\mathrm{d}J}{\:\mathrm{d}t} = \frac{J^2 \rho D^2 \left(1 - \frac{1}{8}JK\rho\right)}{D^2 - \frac{1}{16}J^2}
+	\frac{\:\mathrm{d}J}{\:\mathrm{d}t} = -\frac{J^2 \rho D^2 \left(1 - \frac{1}{8}JK\rho\right)}{D^2 - \frac{1}{16}J^2}
 \end{aligned}\end{equation}
 where \(dt = \frac{dD}{D}\).
 
 For \(D \gg J\), we can ignore the \(J\) in the denominator, and the equation reduces to the one-loop poor man's scaling form
 \begin{equation}\begin{aligned}
 	\label{pms_mchannel}
-	\frac{\:\mathrm{d}J}{\:\mathrm{d}t} \simeq \frac{J^2 \rho D^2 \left(1 - \frac{1}{8}JK\rho\right)}{D^2} = J^2 \rho \left(1 - \frac{1}{8}JK\rho\right)
+	\frac{\:\mathrm{d}J}{\:\mathrm{d}t} \simeq -\frac{J^2 \rho D^2 \left(1 - \frac{1}{8}JK\rho\right)}{D^2} = -J^2 \rho \left(1 - \frac{1}{8}JK\rho\right)
 \end{aligned}\end{equation}
 This equation has a stable fixed point at \(J^* = \frac{8}{\rho K}\).
 
@@ -301,6 +301,6 @@ In fig.~\ref{rhomin_vs_D}, we plot \(\rho_\text{min}\) against the bare bandwidt
 
 If we assume we are at a sufficiently large \(D_0\) and \(\rho > \rho_\text{min}\), the lower fixed point is \(J_1^*\). As shown in fig.~\ref{rhomin_vs_D}, we have \(J_1^* \ll D_0\). If we start with \(J_0\) in the neighborhood of \(J_1^*\), we can use \(J_1^* \ll D_0\) to ignore \(J\) in the denominator and the RG equation reduces to the poor man's scaling form eq.~\ref{pms_mchannel}. The denominator fixed point has effectively moved off to infinite.
 
-[\textit{The part of the problem that is not yet competely clear is the following: How do we argue for the same when \(J_0\) is not in the neighborhood of \(J_1^*\)? That is, if \(J_0\) is sufficiently large so that we cannot simpify the denominator. It is true that in order to compete with a thermodynamically large \(D_0\), the bare \(J_0\) will have to be extremely large, and it's possible that this does not even fall in the class of models we are studying. Also, if the Hamiltonian is to be extensive, \(J_0\) must scale as \(1/N\), because the conduction bath spin has two momentum space sums in product and each sum scales as \(N\). \(N\) is the number of particles. Hence, taking the limit of \(N \to \infty\) would mean \(J\) becoming smaller as compared to larger, so very large \(J_0\) seem unreasonable.}]
+[\textit{The part of the problem that is not yet competely clear is the following: How do we argue for the same when \(J_0\) is not in the neighborhood of \(J_1^*\)? That is, if \(J_0\) is sufficiently large so that we cannot simpify the denominator. It is true that in order to compete with a thermodynamically large \(D_0\), the bare \(J_0\) will have to be extremely large, and it's possible that this does not even fall in the class of models we are studying. Also, if the Hamiltonian is to be extensive, \(J_0\) must scale as \(1/N\), because the conduction bath spin has two momentum space sums in product and each sum scales as \(N\). \(N\) is the number of particles. Hence, taking the limit of \(N \to \infty\) would mean \(J\) becoming smaller as compared to larger, so a very large \(J_0\) seems unreasonable.}]
 
 \end{document}
