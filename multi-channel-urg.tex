@@ -14,7 +14,7 @@ The multi-channel Kondo model is described by the Hamiltonian
 \end{aligned}\end{equation}
 It is mostly identical to the single-channel Kondo model: \(k,k^\prime\) sum over the momentum states, \(\alpha,\alpha^\prime\) sum over the spin indices and \(\gamma\) sums over the various channels. \(\vec S_d, \vec s\) are the impurity and conduction bath spin vectors. The renormalization at step \(j\) is given by
 \begin{equation}\begin{aligned}
-	\Delta H_j = \left(c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c - T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T\right)
+	\Delta H_j = \left(c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c + T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T\right)
 \end{aligned}\end{equation}
 \begin{equation}\begin{aligned}
 	c^\dagger T = J \sum_{k < \Lambda_j, \alpha}\vec{S_d}\cdot\vec{s}_{\beta \alpha}c^\dagger_{q\beta}c_{k\alpha}, &&&H_D = \epsilon_q \tau_{q\beta} + J S_d^z s_q^z
@@ -137,7 +137,7 @@ For \(\omega < D/2\), we get the flow towards the strong-coupling fixed point. T
 \end{aligned}\end{equation}
 \section{Next-to-leading order renormalization}
 \begin{equation}\begin{aligned}
-	\Delta H^{(3)}_j = \underbrace{c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c}_\text{first term} ~-~ \underbrace{T^\dagger c \frac{1}{\omega - H_D} H_X \frac{1}{\omega - H_D} c^\dagger T}_\text{second term}
+	\Delta H^{(3)}_j = \underbrace{c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c}_\text{first term} ~+~ \underbrace{T^\dagger c \frac{1}{\omega - H_D} H_X \frac{1}{\omega - H_D} c^\dagger T}_\text{second term}
 \end{aligned}\end{equation}
 
 \subsection{First term}
