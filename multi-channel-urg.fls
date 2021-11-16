@@ -758,13 +758,15 @@ INPUT ./rhomin_D.pdf
 INPUT ./rhomin_D.pdf
 INPUT ./rhomin_D.pdf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/ebgaramond/EBGaramond-Regular-osf-t1.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/ebgaramond/EBGaramond-Bold-osf-t1.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/ebgaramond/EBGaramond-Bold-osf-t1.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/ebgaramond/EBGaramond-Regular-osf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/ebgaramond/EBGaramond-Regular-osf-t1--base.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/ebgaramond/EBGaramond-Regular-osf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/ebgaramond/EBGaramond-Regular-osf-t1--base.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/ebgaramond/EBGaramond-Italic-osf-t1.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/ebgaramond/EBGaramond-Italic-osf-t1.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/ebgaramond/EBGaramond-Italic-osf-t1.tfm
+INPUT /usr/share/texmf-dist/fonts/vf/public/ebgaramond/EBGaramond-Italic-osf-t1.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/public/ebgaramond/EBGaramond-Italic-osf-t1--base.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/ebgaramond/EBGaramond-Italic-osf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/ebgaramond/EBGaramond-Italic-osf-t1--base.tfm
 INPUT ./multi-channel-urg.bbl

@@ -150,38 +150,78 @@ For a given \(K\), the position of \(J_1^*\) will be governed by \(\rho\). In ge
 	\rho_\text{min} = \text{minimum }\left\{\rho, \text{ such that } \frac{8}{K \rho} < 4 D^*(\rho)\right\}
 \end{aligned}\end{equation}
 This behaviour is shown schematically in fig.~\ref{rg_flow_general}. 
-In fig.~\ref{rhomin_vs_D}, we plot \(\rho_\text{min}\) against the bare bandwidth. For large \(D_0\), it essentially shrinks to zero, and the numerator becomes the first fixed point for essentially all \(\rho\).
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=0.7\textwidth]{./rhomin_D.pdf}
+	\includegraphics[width=0.5\textwidth]{./rhomin_D.pdf}
 	\caption{Red curve shows variation of \(\rho_\text{min}\) against \(D_0\). It vanishes at large \(D_0\). Blue curve shows variation of the ratio \(J_1^* / D_0\) with \(D_0\). That shrinks as well, showing that the fixed point \(J_1^*\) remains finite in the thermodynamic limit, and the distance between \(J_1^*\) and \(J_2^*\) keeps growing.}
 	\label{rhomin_vs_D}
 \end{figure}
+In fig.~\ref{rhomin_vs_D}, we plot \(\rho_\text{min}\) against the bare bandwidth. For large \(D_0\), it essentially shrinks to zero, and the numerator becomes the first fixed point for essentially all \(\rho\).
 
 If we assume we are at a sufficiently large \(D_0\) and \(\rho > \rho_\text{min}\), the lower fixed point is \(J_1^*\). As shown in fig.~\ref{rhomin_vs_D}, we have \(J_1^* \ll D_0\). If we start with \(J_0\) in the neighborhood of \(J_1^*\), we can use \(J_1^* \ll D_0\) to ignore \(J\) in the denominator and the RG equation reduces to the poor man's scaling form eq.~\ref{pms_mchannel}. The denominator fixed point has effectively moved off to infinity. That this is true can also be argued from the single-channel Kondo model URG results. There, we saw that when the bandwidth is scaled to larger values, the strong-coupling fixed point was stable at successively larger values of \(J^*\). Since the denominator fixed point is identical in structure in both problems, its reasonable that the same thing will happen here.
 
-\section{Derivation of low energy effective Hamiltonian \((k-\text{space})\)}
-Fixed point Hamiltonian is
+\section{Derivation of low energy effective \(k-\)space Hamiltonian }
+The fixed point Hamiltonian is
 \begin{equation}\begin{aligned}
 	H^* = H_0 + J^*\sum_{l} \vec{S_d}\cdot\vec{s_\text{tot}}
 \end{aligned}\end{equation}
 where \(H_0 = \sum_{k,l,\sigma}\epsilon_{k,l}\hat n_{k\sigma,l}\) and \(\vec s_\text{tot} = \sum_l \vec s_l = \sum_{kk^\prime\alpha\alpha^\prime,l} \vec \sigma_{\alpha\alpha^\prime}c^\dagger_{k\alpha,l}c_{k^\prime\alpha^\prime,l}\). \(l\) sums over the channels. Henceforth we will drop the \(*\). Obtaining the effective Hamiltonian involves obtaining the low energy excitations on top of this fixed point Hamiltonian. The large-energy excitations are ones that involve spin flips. This guides the separation of the Hamiltonian into a diagonal and an off-diagonal piece:
 \begin{equation}\begin{aligned}
-	H = H_d + V = \underbrace{H_0 + J S_d^z s_\text{tot}^z}_{H_d} + \underbrace{\frac{J}{2}S_d^+ s_\text{tot}^- + \text{h.c.}}_V
+	H = H_d + V = \underbrace{H_0 + J S_d^z s_\text{tot}^z}_{H_d} + \underbrace{\frac{J}{2}S_d^+ s_\text{tot}^- + \text{h.c.}}_{V + V^\dagger}
 \end{aligned}\end{equation}
-The effective Hamiltonian that has the states \(\ket{S_d^z, s_\text{tot}, s_\text{tot}^z}\) as eigenstates are
+We define \(V\) as the interaction term that decreases \(s_\text{tot}^z\) by 1: \(V \ket{s_\text{tot}^z} \to \ket{s_\text{tot}^z - 1}\). Similarly, we define \(V^\dagger \ket{s_\text{tot}^z} \to \ket{s_\text{tot}^z + 1}\). The effective Hamiltonian that has the states \(\ket{S_d^z, s_\text{tot}, s_\text{tot}^z}\) as eigenstates are
 \begin{equation}\begin{aligned}
 	H_\text{eff} = H_d + V \frac{1}{E_\text{gs} - H_d}V = \sum_{k,l,\sigma}\epsilon_{k,l}\hat n_{k\sigma,l} + J S_d^z s_\text{tot}^z + \frac{J}{2}S_d^+ s_\text{tot}^- \frac{1}{E_\text{gs} - J S_d^z s_\text{tot}^z - H_0}\frac{J}{2}S_d^- s_\text{tot}^+\\
 	+\frac{J}{2}S_d^- s_\text{tot}^+ \frac{1}{E_\text{gs} - J S_d^z s_\text{tot}^z - H_0}\frac{J}{2}S_d^+ s_\text{tot}^-
 \end{aligned}\end{equation}
-We can easily simplify the \(S_d^z\) in the denominator, because \(S_d^\pm \frac{1}{A + B S_d^z} = S_d^\pm \frac{1}{A \mp \frac{1}{2}B}\).
+This is obtained from the Schrodinger equation for the ground state. If we expand the ground state in terms of \(\ket{S_d^z, s_\text{tot}, s_\text{tot}^z}\), we have 
 \begin{equation}\begin{aligned}
-	H_\text{eff} = \sum_{k,l,\sigma}\epsilon_{k,l}\hat n_{k\sigma,l} + J S_d^z s_\text{tot}^z + \frac{J^2}{4} s_\text{tot}^- \frac{\frac{1}{2} + S_d^z}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z - H_0} s_\text{tot}^+ + \frac{J^2}{4} s_\text{tot}^+ \frac{\frac{1}{2} - S_d^z}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z - H_0} s_\text{tot}^-
+	\label{gstate_Expand}
+\ket{\Psi_\text{gs}} = \sum_{S_d^z, s_\text{tot},s_\text{tot}^z}C_{S_d^z, s_\text{tot},s_\text{tot}^z}\ket{S_d^z, s_\text{tot}, s_\text{tot}^z}
+\end{aligned}\end{equation}
+The Schrodinger equation for the ground state can be written as
+\begin{equation}\begin{aligned}
+	E_\text{gs}\ket{\Psi_\text{gs}} = H \ket{\Psi_\text{gs}} = \left(H_d + V\right)\ket{\Psi_\text{gs}} \implies \left(E_\text{gs} - H_d\right)\sum C_{S_d^z, s_\text{tot},s_\text{tot}^z}\ket{S_d^z, s_\text{tot}, s_\text{tot}^z} = V\sum C_{S_d^z, s_\text{tot},s_\text{tot}^z}\ket{S_d^z, s_\text{tot}, s_\text{tot}^z}
+\end{aligned}\end{equation}
+Since \(V\) only changes \(S_d^z \to -S_d^z\) and \(s^z_\text{tot} \to s^z_\text{tot} \pm 1\), we can simplify the equation into individual smaller equations. Let us take the case of two-channel, where the possible states are \(s_\text{tot},s^z_\text{tot} = (0,0), (1,-1), (1,0), (1,1)\). The individual equations for this model are
+\begin{gather}
+	\left(E_\text{gs} - H_d\right) \ket{S_d^z, 0, 0} = \left(E_\text{gs} - H_d\right) \ket{-\frac{1}{2}, 1, -1} = \left(E_\text{gs} - H_d\right) \ket{\frac{1}{2}, 1, 1}  = 0 \label{no_V}\\
+	\left(E_\text{gs} - H_d\right) C_{\frac{1}{2}, 1, -1}\ket{\frac{1}{2}, 1, -1} = V C_{-\frac{1}{2}, 1, 0}\ket{-\frac{1}{2}, 1, 0}\label{eq2}\\
+	\left(E_\text{gs} - H_d\right) C_{-\frac{1}{2}, 1, 0}\ket{-\frac{1}{2}, 1, 0} = V^\dagger C_{\frac{1}{2}, 1, -1}\ket{\frac{1}{2}, 1, -1}\label{eq3.2}\\
+	\left(E_\text{gs} - H_d\right) C_{\frac{1}{2}, 1, 0}\ket{\frac{1}{2}, 1, 0} = V C_{-\frac{1}{2}, 1, 1}\ket{-\frac{1}{2}, 1, 1} \label{eq3.1}\\
+	\left(E_\text{gs} - H_d\right) C_{-\frac{1}{2}, 1, 1}\ket{-\frac{1}{2}, 1, 1} = V^\dagger C_{\frac{1}{2}, 1, 0}\ket{\frac{1}{2}, 1, 0}\label{eq4}
+\end{gather}
+From eqs.~\ref{eq2} and \ref{eq4}, we can write
+\begin{equation}\begin{aligned}
+	C_{\frac{1}{2}, 1, -1}\ket{\frac{1}{2}, 1, -1} &= C_{-\frac{1}{2}, 1, 0}\frac{1}{E_\text{gs} - H_d}V \ket{-\frac{1}{2}, 1, 0}, &&C_{-\frac{1}{2}, 1, 1}\ket{-\frac{1}{2}, 1, 1} = C_{\frac{1}{2}, 1, 0}\frac{1}{E_\text{gs} - H_d}V^\dagger \ket{\frac{1}{2}, 1, 0}
+\end{aligned}\end{equation}
+Substituting these into eqs.~\ref{eq3.1} and \ref{eq3.2} gives 
+\begin{equation}\begin{aligned}
+	\label{eff_ham_Sdz_10}
+	E_\text{gs} \ket{\frac{1}{2}, 1, 0} &= \left(H_d + V \frac{1}{E_\text{gs} - H_d}V^\dagger\right) \ket{\frac{1}{2}, 1, 0}\\
+	E_\text{gs} \ket{-\frac{1}{2}, 1, 0} &= \left(H_d + V^\dagger \frac{1}{E_\text{gs} - H_d} V\right) \ket{-\frac{1}{2}, 1, 0}\\
+\end{aligned}\end{equation}
+These equations represent the Schrodinger equation for the states \(\ket{S_d^z, 1, 0}\), and the right hand sides therefore give the effective Hamiltonians for those states. If we combine the states into a single subspace \(\ket{1,0}= \left\{\ket{\frac{1}{2}, 1, 0}, \ket{-\frac{1}{2}, 1, 0}\right\}\), the effective Hamiltonian for this composite subspace becomes the sum of the two parts:
+\begin{equation}\begin{aligned}
+	\label{eff_ham_10}
+	H_\text{eff}\ket{1, 0}\bra{1, 0} = \left(H_d + V G_0 V^\dagger + V^\dagger G_0  V\right) \ket{1, 0}
+\end{aligned}\end{equation}
+where \(G_0 = \left(E_\text{gs} - H_d\right)^{-1}\). If we expand the subspace as \(\ket{1,0} = \ket{\frac{1}{2}, 1, 0} + \ket{-\frac{1}{2}, 1, 0}\), we recover eqs.~\ref{eff_ham_Sdz_10}. Solving similarly for the other states gives
+\begin{equation}\begin{aligned}
+	H_\text{eff}\ket{1,  1}\bra{1,  1} &= \left(H_d + V^\dagger G_0  V\right) \ket{1,  1}\\
+	H_\text{eff}\ket{1, - 1}\bra{1, - 1} &= \left(H_d + V G_0 V^\dagger\right) \ket{1, - 1}
+\end{aligned}\end{equation}
+\textit{One important conclusion that comes out of these calculations is that if the ground state is degenerate, the effective Hamiltonians is independent of which ground state we choose to start from in eq.~\ref{gstate_Expand}. This is because the only difference in the various degenerate ground states is in the coefficients \(C_{S_d^z, s_\text{tot},s_\text{tot}^z}\). Since the final effective Hamiltonians are independent of these coefficients, they will be the same irrespective of which ground state we start with.}
+
+To calculate these effective Hamiltonians, we will calculate the individual terms. We can easily simplify the \(S_d^z\) in the denominator of \(G_0\), because \(S_d^\pm \frac{1}{A + B S_d^z} = S_d^\pm \frac{1}{A \mp \frac{1}{2}B}\):
+\begin{equation}\begin{aligned}
+	V G_0 V^\dagger = \frac{J^2}{4} s_\text{tot}^- \frac{\frac{1}{2} + S_d^z}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z - H_0} s_\text{tot}^+ \\
+	V^\dagger G_0 V = \frac{J^2}{4} s_\text{tot}^+ \frac{\frac{1}{2} - S_d^z}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z - H_0} s_\text{tot}^-
 \end{aligned}\end{equation}
 Since \(H_0\) does not commute with the spin operators, we will need to expand the denominator to make sense of this Hamiltonian.
 \begin{equation}\begin{aligned}
-	 s_\text{tot}^- \frac{1}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z - H_0} s_\text{tot}^+ =  s_\text{tot}^- \frac{1}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z}\left[1 + \frac{1}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z}H_0 + \frac{1}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z}H_0\frac{1}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z}H_0\right] s_\text{tot}^+\\
-	 s_\text{tot}^+ \frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z - H_0} s_\text{tot}^- =  s_\text{tot}^+ \frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z}\left[1 + \frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z}H_0 + \frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z}H_0\frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z}H_0\right] s_\text{tot}^-
+	 V G_0 V^\dagger =  s_\text{tot}^- \frac{1}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z}\left[1 + \frac{1}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z}H_0 + \frac{1}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z}H_0\frac{1}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z}H_0 + \ldots\right] s_\text{tot}^+\\
+	 V^\dagger G_0 V =  s_\text{tot}^+ \frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z}\left[1 + \frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z}H_0 + \frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z}H_0\frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z}H_0 + \ldots\right] s_\text{tot}^-
 \end{aligned}\end{equation}
 This is an expansion in \(H_0^n/J^{n+1}, n=0,1,2,\ldots\). The \(n=0\) terms give
 \begin{equation}\begin{aligned}
@@ -208,14 +248,14 @@ The other \(n=1\) term gives
 	s_\text{tot}^+ \frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z}\frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z}H_0 s_\text{tot}^- =  \left(\frac{1}{E_\text{gs} - \frac{J}{2} \left(s_\text{tot}^z - 1\right)}\right)^2 \left(s_\text{tot}^+ s_\text{tot}^- H_0 + s_\text{tot}^+ X_{1,\text{tot}}\right)
 \end{aligned}\end{equation}
 One of the \(n=2\) terms gives
-\begin{equation}\begin{aligned}
+\begin{align}
 	&s_\text{tot}^- \frac{1}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z}\frac{1}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z}H_0 \frac{1}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z}H_0 s_\text{tot}^+\\
 	&= \left(\frac{1}{E_\text{gs} + \frac{J}{2} \left(s_\text{tot}^z + 1\right)}\right)^2 s_\text{tot}^- H_0 \frac{1}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z}H_0 s_\text{tot}^+ \\
 	&= \left(\frac{1}{E_\text{gs} + \frac{J}{2} \left(s_\text{tot}^z + 1\right)}\right)^2 s_\text{tot}^- H_0 \frac{1}{E_\text{gs} + \frac{J}{2} s_\text{tot}^z}\left(s_\text{tot}^+ H_0 - X^\dagger_\text{1,tot}\right) \\
 	&= \left(\frac{1}{E_\text{gs} + \frac{J}{2} \left(s_\text{tot}^z + 1\right)}\right)^2 \left[s_\text{tot}^- H_0 s_\text{tot}^+\frac{1}{E_\text{gs} + \frac{J}{2} \left(s_\text{tot}^z+1\right)} H_0 - s_\text{tot}^- H_0\frac{1}{E_\text{gs} + \frac{J}{2}s_\text{tot}^z}X^\dagger_\text{1,tot}\right] \\
 	&= \left(\frac{1}{E_\text{gs} + \frac{J}{2} \left(s_\text{tot}^z + 1\right)}\right)^2 \left[s_\text{tot}^- \left(s_\text{tot}^+H_0 - X^\dagger_{1,\text{tot}}\right)\frac{1}{E_\text{gs} + \frac{J}{2} \left(s_\text{tot}^z+1\right)} H_0 - s_\text{tot}^- H_0\frac{1}{E_\text{gs} + \frac{J}{2}s_\text{tot}^z}X^\dagger_\text{1,tot}\right] \\
 	&= \left(\frac{1}{E_\text{gs} + \frac{J}{2} \left(s_\text{tot}^z + 1\right)}\right)^2 \left[s_\text{tot}^- s_\text{tot}^+H_0\frac{1}{E_\text{gs} + \frac{J}{2} \left(s_\text{tot}^z+1\right)} H_0 - s_\text{tot}^-\left(X^\dagger_{1,\text{tot}}\frac{1}{E_\text{gs} + \frac{J}{2} \left(s_\text{tot}^z+1\right)} H_0 + H_0\frac{1}{E_\text{gs} + \frac{J}{2}s_\text{tot}^z}X^\dagger_\text{1,tot}\right)\right] \\
-\end{aligned}\end{equation}
+\end{align}
 At this point, we need the commutator between \(H_0\) and \(s_\text{tot}^z\):
 \begin{equation}\begin{aligned}
 	\left[H_0, s_\text{tot}^z\right] = Z_{1,\text{tot}} = \sum_l Z_{1, l} = \sum_{k,k^\prime,l}\left( \epsilon_k - \epsilon_{k^\prime} \right) \frac{1}{2}\left(c^\dagger_{k \uparrow,l}c_{k^\prime \uparrow,l} - c^\dagger_{k \downarrow,l}c_{k^\prime \downarrow,l}\right)
@@ -234,7 +274,7 @@ Using this, we get
 At the last step, we dropped the three-particle scattering terms. 
 
 The other \(n=2\) term gives
-\begin{equation}\begin{aligned}
+\begin{align}
 	&s_\text{tot}^+ \frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z}\frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z}H_0 \frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z}H_0 s_\text{tot}^-\\
 	&= \left(\frac{1}{E_\text{gs} - \frac{J}{2} \left(s_\text{tot}^z - 1\right)}\right)^2 s_\text{tot}^+ H_0 \frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z}H_0 s_\text{tot}^- \\
 	&= \left(\frac{1}{E_\text{gs} - \frac{J}{2} \left(s_\text{tot}^z - 1\right)}\right)^2 s_\text{tot}^+ H_0 \frac{1}{E_\text{gs} - \frac{J}{2} s_\text{tot}^z}\left(s_\text{tot}^- H_0 + X_\text{1,tot}\right) \\
@@ -243,26 +283,19 @@ The other \(n=2\) term gives
 	&= \left(\frac{1}{E_\text{gs} - \frac{J}{2} \left(s_\text{tot}^z - 1\right)}\right)^2 \left[s_\text{tot}^+s_\text{tot}^- H_0 \frac{1}{E_\text{gs} - \frac{J}{2} \left(s_\text{tot}^z - 1\right)} H_0\right] \\
 	&= \left(\frac{1}{E_\text{gs} - \frac{J}{2} \left(s_\text{tot}^z - 1\right)}\right)^2 s_\text{tot}^+s_\text{tot}^- \left[\frac{1}{E_\text{gs} - \frac{J}{2} \left(s_\text{tot}^z - 1\right)} H_0^2 - \frac{1}{E_\text{gs} - \frac{J}{2} \left(s_\text{tot}^z - 1\right)} Z_{1,\text{tot}} \frac{1}{E_\text{gs} - \frac{J}{2} \left(s_\text{tot}^z - 1\right)} H_0 \right] \\
 	&= \left(\frac{1}{E_\text{gs} - \frac{J}{2} \left(s_\text{tot}^z - 1\right)}\right)^2 s_\text{tot}^+s_\text{tot}^- \left[H_0^2 \frac{1}{E_\text{gs} - \frac{J}{2} \left(s_\text{tot}^z - 1\right)} - \frac{1}{E_\text{gs} - \frac{J}{2} \left(s_\text{tot}^z - 1\right)} Z_{1,\text{tot}} H_0 \frac{1}{E_\text{gs} - \frac{J}{2} \left(s_\text{tot}^z - 1\right)} \right]
-\end{aligned}\end{equation}
+\end{align}
 
-
-If we look at the effective Hamiltonian for a state \(\ket{S_d^z=\frac{1}{2}, s_\text{tot}, s^z_\text{tot}}\), we can replace the following operators with scalars:
+If we look at the effective Hamiltonian for a subspace \(\ket{s_\text{tot}, s^z_\text{tot}}\), we can replace the following operators with scalars:
 \begin{gather}
-	\frac{1}{E_\text{gs} + \frac{J}{2} \left(s_\text{tot}^z + 1\right)} = \gamma_{s_\text{tot}}^{s_\text{tot}^z},\\
-	\frac{1}{E_\text{gs} - \frac{J}{2} \left(s_\text{tot}^z - 1\right)} = \gamma_{s_\text{tot}}^{-s_\text{tot}^z}\\
+	\frac{1}{E_\text{gs} + \frac{J}{2} \left(s_\text{tot}^z + 1\right)} = \gamma_{s_\text{tot}}^{s_\text{tot}^z}\\
+	\frac{1}{E_\text{gs} - \frac{J}{2} \left(s_\text{tot}^z - 1\right)} = \gamma_{s_\text{tot}}^{-s_\text{tot}^z},\\
 	s_\text{tot}^- s_\text{tot}^+ = s_\text{tot}\left(s_\text{tot} + 1\right) - s^z_\text{tot}\left(s^z_\text{tot} + 1\right) = \chi_{s_\text{tot}}^{s_\text{tot}^z}\\
 	s_\text{tot}^+ s_\text{tot}^- = s_\text{tot}\left(s_\text{tot} + 1\right) - s^z_\text{tot}\left(s^z_\text{tot} - 1\right) = \chi_{s_\text{tot}}^{-s_\text{tot}^z}
 \end{gather}
 They are not all independent: \(\left(\gamma_{s_\text{tot}}^{s_\text{tot}^z}\right)^{-1} + \left(\gamma_{s_\text{tot}}^{-s_\text{tot}^z}\right)^{-1} =  E_\text{gs} + J, \chi_{s_\text{tot}}^{s_\text{tot}^z} - \chi_{s_\text{tot}}^{-s_\text{tot}^z} = -2 s^z_\text{tot}\). 
-
-The effective Hamiltonian for this state becomes
+For the two-channel problem, we have four possible states in total: \(\left( s_\text{tot}, s_\text{tot}^z \right) = \left\{ (0,0), (1,-1), (1,0), (1,1) \right\} \). The states in the eq.~\ref{no_V} cannot be acted on by \(V\) or \(V^\dagger\), so the effective Hamiltonian for these states will consist of only the diagonal part:
 \begin{equation}\begin{aligned}
-	H_\text{eff}^{\frac{1}{2}, s_\text{tot}, s^z_\text{tot}} = H_0 + \frac{J}{2}s^z_\text{tot} + \frac{J^2}{4}\left( \frac{1}{2} + S_d^z \right) \gamma_{s_\text{tot}}^{s_\text{tot}^z}\chi_{s_\text{tot}}^{s_\text{tot}^z}\left[1 + {\gamma_{s_\text{tot}}^{s_\text{tot}^z}} H_0 - \frac{\gamma_{s_\text{tot}}^{s_\text{tot}^z}}{\chi_{s_\text{tot}}^{s_\text{tot}^z}} s^-_\text{tot}X^\dagger_{1,\text{tot}} + {\gamma_{s_\text{tot}}^{s_\text{tot}^z}}^2 H_0^2 - {\gamma_{s_\text{tot}}^{s_\text{tot}^z}}^3 Z_{1,\text{tot}} H_0\right] \\
-+ \frac{J^2}{4}\left( \frac{1}{2} - S_d^z \right)\gamma_{s_\text{tot}}^{-s_\text{tot}^z}\chi_{s_\text{tot}}^{-s_\text{tot}^z}\left[1 + {\gamma_{s_\text{tot}}^{-s_\text{tot}^z}} H_0 + \frac{\gamma_{s_\text{tot}}^{-s_\text{tot}^z}}{\chi_{s_\text{tot}}^{-s_\text{tot}^z}} s^+_\text{tot}X_{1,\text{tot}} + {\gamma_{s_\text{tot}}^{-s_\text{tot}^z}}^2 H_0^2 - {\gamma_{s_\text{tot}}^{-s_\text{tot}^z}}^3 Z_{1,\text{tot}} H_0\right]
-\end{aligned}\end{equation}
-For the two channel, we have four possible states in total: \(\left( s_\text{tot}, s_\text{tot}^z \right) = \left\{ (0,0), (1,-1), (1,0), (1,1) \right\} \). The state with \(s_\text{tot}=0\) cannot be acted on by \(s_\text{tot}^\pm\), so the effective Hamiltonian for this step will consist of only the diagonal part:
-\begin{equation}\begin{aligned}
-	H_\text{eff}^{\frac{1}{2}, 0, 0} = H_0 + \frac{J}{2}s^z_\text{tot} = H_0
+	H_\text{eff} = H_0 + \frac{J}{2}s^z_\text{tot}
 \end{aligned}\end{equation}
 The factors \(\gamma\) and \(\chi\) for the other states are
 \begin{equation}\begin{aligned}
@@ -272,15 +305,12 @@ The factors \(\gamma\) and \(\chi\) for the other states are
 	\gamma_{s_\text{tot}}^{-s_\text{tot}^z} = && --, && \frac{1}{E_\text{gs} + J/2}, && \frac{1}{E_\text{gs}}\\
 	\chi_{s_\text{tot}}^{-s_\text{tot}^z} = && --, && 2, && 2\\
 \end{aligned}\end{equation}
-The complete set of effective Hamiltonians for the two-channel Kondo model can now be written down:
-\begin{equation}\begin{aligned}
-	H_\text{eff}^{\pm\frac{1}{2}, 0, 0} &= H_0\\
-	H_\text{eff}^{\pm\frac{1}{2}, 1, \pm 1} &= H_0 + \frac{J}{2}\\
-	H_\text{eff}^{-\frac{1}{2}, 1, 1} &= H_0 + \frac{J}{2} + \frac{J^2}{4}\frac{2}{E_\text{gs}}\left[1 + \frac{H_0}{E_\text{gs}} + \frac{s^+_\text{tot}X_{1,\text{tot}}}{2 E_\text{gs}} + \frac{H_0^2 }{E_\text{gs}^2} - \frac{Z_{1,\text{tot}} H_0}{E_\text{gs}^3}\right] \\
-	H_\text{eff}^{\frac{1}{2}, 1, -1} &= H_0 - \frac{J}{2} + \frac{J^2}{4}\frac{2}{E_\text{gs}}\left[1 + \frac{H_0}{E_\text{gs}}  - \frac{s^-_\text{tot}X^\dagger_{1,\text{tot}}}{2 E_\text{gs}}  + \frac{H_0^2}{E_\text{gs}^2}  - \frac{ Z_{1,\text{tot}} H_0}{E_\text{gs}^3}\right] \\
-	H_\text{eff}^{-\frac{1}{2}, 1, 0} &= H_0 + \frac{J^2}{4}\frac{2}{E_\text{gs} + J/2}\left[1 + \frac{ H_0}{E_\text{gs} + J/2} + \frac{ s^+_\text{tot}X_{1,\text{tot}}}{2 E_\text{gs} + J} + \frac{H_0^2}{\left(E_\text{gs} + J/2\right)^2} - \frac{Z_{1,\text{tot}} H_0}{\left(E_\text{gs} + J/2\right)^3} \right] \\
-	H_\text{eff}^{\frac{1}{2}, 1, 0} &= H_0 + \frac{J^2}{4}\frac{2}{E_\text{gs} + J/2}\left[1 + \frac{ H_0}{E_\text{gs} + J/2} - \frac{ s^-_\text{tot}X^\dagger_{1,\text{tot}}}{2 E_\text{gs} + J} + \frac{H_0^2}{\left(E_\text{gs} + J/2\right)^2} - \frac{Z_{1,\text{tot}} H_0}{\left(E_\text{gs} + J/2\right)^3} \right] \\
-\end{aligned}\end{equation}
+The effective Hamiltonians for these states are:
+\begin{align}
+	H_\text{eff}^{1, 1} &= H_0 + J S_d^z + \frac{J^2}{4}\frac{2}{E_\text{gs}}\left[1 + \frac{H_0}{E_\text{gs}} + \frac{s^+_\text{tot}X_{1,\text{tot}}}{2 E_\text{gs}} + \frac{H_0^2 }{E_\text{gs}^2} - \frac{Z_{1,\text{tot}} H_0}{E_\text{gs}^3}\right] \left(\frac{1}{2} - S_d^z\right) \\
+	H_\text{eff}^{1, -1} &= H_0 - J S_d^z + \frac{J^2}{4}\frac{2}{E_\text{gs}}\left[1 + \frac{H_0}{E_\text{gs}}  - \frac{s^-_\text{tot}X^\dagger_{1,\text{tot}}}{2 E_\text{gs}}  + \frac{H_0^2}{E_\text{gs}^2}  - \frac{ Z_{1,\text{tot}} H_0}{E_\text{gs}^3}\right] \left(\frac{1}{2} + S_d^z\right) \\
+	H_\text{eff}^{1, 0} &= H_0 + \frac{J^2}{2\left(E_\text{gs} + J/2\right)}\left[1 + \frac{ H_0 + \left(1/2 + S_d^z\right) s^+_\text{tot}X_{1,\text{tot}} - \left(1/2 - S_d^z\right) s^-_\text{tot}X^\dagger_{1,\text{tot}}}{2 \left(E_\text{gs} + J/2\right)} + \frac{H_0^2}{\left(E_\text{gs} + J/2\right)^2} - \frac{Z_{1,\text{tot}} H_0}{\left(E_\text{gs} + J/2\right)^3} \right] \\
+\end{align}
 The terms have the following meanings:
 \begin{equation}\begin{aligned}
 	H_0 &= \sum_{k,\sigma,l}\epsilon_k^l \hat n_{k,\sigma,l}\\
