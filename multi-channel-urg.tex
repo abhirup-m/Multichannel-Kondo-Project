@@ -1,4 +1,4 @@
-\documentclass[12pt]{revtex4-2}
+\documentclass{revtex4-2}
 \usepackage{braket,amsmath,amssymb,graphicx,float,hyperref,paralist}
 \numberwithin{equation}{section}
 \allowdisplaybreaks
@@ -257,8 +257,8 @@ They are not all independent: \(\left(\gamma_{s_\text{tot}}^{s_\text{tot}^z}\rig
 
 The effective Hamiltonian for this state becomes
 \begin{equation}\begin{aligned}
-	H_\text{eff}^{\frac{1}{2}, s_\text{tot}, s^z_\text{tot}} = H_0 + \frac{J}{2}s^z_\text{tot} + \frac{J^2}{4}\gamma_{s_\text{tot}}^{s_\text{tot}^z}\chi_{s_\text{tot}}^{s_\text{tot}^z}\left[1 + {\gamma_{s_\text{tot}}^{s_\text{tot}^z}} H_0 - \frac{\gamma_{s_\text{tot}}^{s_\text{tot}^z}}{\chi_{s_\text{tot}}^{s_\text{tot}^z}} s^-_\text{tot}X^\dagger_{1,\text{tot}} + {\gamma_{s_\text{tot}}^{s_\text{tot}^z}}^2 H_0^2 - {\gamma_{s_\text{tot}}^{s_\text{tot}^z}}^3 Z_{1,\text{tot}} H_0\right] \\
-+ \frac{J^2}{4}\gamma_{s_\text{tot}}^{-s_\text{tot}^z}\chi_{s_\text{tot}}^{-s_\text{tot}^z}\left[1 + {\gamma_{s_\text{tot}}^{-s_\text{tot}^z}} H_0 + \frac{\gamma_{s_\text{tot}}^{-s_\text{tot}^z}}{\chi_{s_\text{tot}}^{-s_\text{tot}^z}} s^+_\text{tot}X_{1,\text{tot}} + {\gamma_{s_\text{tot}}^{-s_\text{tot}^z}}^2 H_0^2 - {\gamma_{s_\text{tot}}^{-s_\text{tot}^z}}^3 Z_{1,\text{tot}} H_0\right]
+	H_\text{eff}^{\frac{1}{2}, s_\text{tot}, s^z_\text{tot}} = H_0 + \frac{J}{2}s^z_\text{tot} + \frac{J^2}{4}\left( \frac{1}{2} + S_d^z \right) \gamma_{s_\text{tot}}^{s_\text{tot}^z}\chi_{s_\text{tot}}^{s_\text{tot}^z}\left[1 + {\gamma_{s_\text{tot}}^{s_\text{tot}^z}} H_0 - \frac{\gamma_{s_\text{tot}}^{s_\text{tot}^z}}{\chi_{s_\text{tot}}^{s_\text{tot}^z}} s^-_\text{tot}X^\dagger_{1,\text{tot}} + {\gamma_{s_\text{tot}}^{s_\text{tot}^z}}^2 H_0^2 - {\gamma_{s_\text{tot}}^{s_\text{tot}^z}}^3 Z_{1,\text{tot}} H_0\right] \\
++ \frac{J^2}{4}\left( \frac{1}{2} - S_d^z \right)\gamma_{s_\text{tot}}^{-s_\text{tot}^z}\chi_{s_\text{tot}}^{-s_\text{tot}^z}\left[1 + {\gamma_{s_\text{tot}}^{-s_\text{tot}^z}} H_0 + \frac{\gamma_{s_\text{tot}}^{-s_\text{tot}^z}}{\chi_{s_\text{tot}}^{-s_\text{tot}^z}} s^+_\text{tot}X_{1,\text{tot}} + {\gamma_{s_\text{tot}}^{-s_\text{tot}^z}}^2 H_0^2 - {\gamma_{s_\text{tot}}^{-s_\text{tot}^z}}^3 Z_{1,\text{tot}} H_0\right]
 \end{aligned}\end{equation}
 For the two channel, we have four possible states in total: \(\left( s_\text{tot}, s_\text{tot}^z \right) = \left\{ (0,0), (1,-1), (1,0), (1,1) \right\} \). The state with \(s_\text{tot}=0\) cannot be acted on by \(s_\text{tot}^\pm\), so the effective Hamiltonian for this step will consist of only the diagonal part:
 \begin{equation}\begin{aligned}
@@ -274,19 +274,20 @@ The factors \(\gamma\) and \(\chi\) for the other states are
 \end{aligned}\end{equation}
 The complete set of effective Hamiltonians for the two-channel Kondo model can now be written down:
 \begin{equation}\begin{aligned}
-	H_\text{eff}^{\frac{1}{2}, 0, 0} &= H_0\\
-	H_\text{eff}^{\frac{1}{2}, 1, 1} &= H_0 + \frac{J}{2} + \frac{J^2}{4}\frac{2}{E_\text{gs}}\left[1 + \frac{1}{E_\text{gs}} H_0 + \frac{1}{2 E_\text{gs}} s^+_\text{tot}X_{1,\text{tot}} + \frac{1}{E_\text{gs}^2} H_0^2 - \frac{1}{E_\text{gs}^3} Z_{1,\text{tot}} H_0\right] \\
-	H_\text{eff}^{\frac{1}{2}, 1, -1} &= H_0 - \frac{J}{2} + \frac{J^2}{4}\frac{2}{E_\text{gs}}\left[1 + \frac{1}{E_\text{gs}} H_0 - \frac{1}{2 E_\text{gs}} s^-_\text{tot}X^\dagger_{1,\text{tot}} + \frac{1}{E_\text{gs}^2} H_0^2 - \frac{1}{E_\text{gs}^3} Z_{1,\text{tot}} H_0\right] \\
-	H_\text{eff}^{\frac{1}{2}, 1, 0} &= H_0 + \frac{J^2}{4}\frac{2}{E_\text{gs} + J/2}\left[1 + \frac{1}{E_\text{gs} + J/2} H_0 + \frac{1}{2 E_\text{gs} + J} \left(s^+_\text{tot}X_{1,\text{tot}} - s^-_\text{tot}X^\dagger_{1,\text{tot}}\right) \right.\\
-					 &\left.+ \frac{2}{\left(E_\text{gs} + J/2\right)^2} H_0^2 - \frac{2}{\left(E_\text{gs} + J/2\right)^3} Z_{1,\text{tot}} H_0\right] \\
+	H_\text{eff}^{\pm\frac{1}{2}, 0, 0} &= H_0\\
+	H_\text{eff}^{\pm\frac{1}{2}, 1, \pm 1} &= H_0 + \frac{J}{2}\\
+	H_\text{eff}^{-\frac{1}{2}, 1, 1} &= H_0 + \frac{J}{2} + \frac{J^2}{4}\frac{2}{E_\text{gs}}\left[1 + \frac{H_0}{E_\text{gs}} + \frac{s^+_\text{tot}X_{1,\text{tot}}}{2 E_\text{gs}} + \frac{H_0^2 }{E_\text{gs}^2} - \frac{Z_{1,\text{tot}} H_0}{E_\text{gs}^3}\right] \\
+	H_\text{eff}^{\frac{1}{2}, 1, -1} &= H_0 - \frac{J}{2} + \frac{J^2}{4}\frac{2}{E_\text{gs}}\left[1 + \frac{H_0}{E_\text{gs}}  - \frac{s^-_\text{tot}X^\dagger_{1,\text{tot}}}{2 E_\text{gs}}  + \frac{H_0^2}{E_\text{gs}^2}  - \frac{ Z_{1,\text{tot}} H_0}{E_\text{gs}^3}\right] \\
+	H_\text{eff}^{-\frac{1}{2}, 1, 0} &= H_0 + \frac{J^2}{4}\frac{2}{E_\text{gs} + J/2}\left[1 + \frac{ H_0}{E_\text{gs} + J/2} + \frac{ s^+_\text{tot}X_{1,\text{tot}}}{2 E_\text{gs} + J} + \frac{H_0^2}{\left(E_\text{gs} + J/2\right)^2} - \frac{Z_{1,\text{tot}} H_0}{\left(E_\text{gs} + J/2\right)^3} \right] \\
+	H_\text{eff}^{\frac{1}{2}, 1, 0} &= H_0 + \frac{J^2}{4}\frac{2}{E_\text{gs} + J/2}\left[1 + \frac{ H_0}{E_\text{gs} + J/2} - \frac{ s^-_\text{tot}X^\dagger_{1,\text{tot}}}{2 E_\text{gs} + J} + \frac{H_0^2}{\left(E_\text{gs} + J/2\right)^2} - \frac{Z_{1,\text{tot}} H_0}{\left(E_\text{gs} + J/2\right)^3} \right] \\
 \end{aligned}\end{equation}
 The terms have the following meanings:
 \begin{equation}\begin{aligned}
 	H_0 &= \sum_{k,\sigma,l}\epsilon_k^l \hat n_{k,\sigma,l}\\
 	H_0^2 &= \sum_{k_1,k_2,l_1,l_2,\sigma_1,\sigma_2}\epsilon_k^{l_1}\epsilon_{k_2}^{l_2} \hat n_{k_1,\sigma_1,l_1}\hat n_{k_2,\sigma_2,l_2}\\
-	s^+_\text{tot}X_{1,\text{tot}} &= \sum_{k_1,q_1,k_2,q_2,l_1,l_2}c^\dagger_{k_1, \uparrow, l_1}c^\dagger_{q_1, \downarrow, l_1} \left(\epsilon_{k_2}^{l_2} - \epsilon_{q_2}^{l_2}\right) c^\dagger_{k_2, \downarrow, l_2}c_{q_2, \uparrow, l_2}\\
-	s^-_\text{tot}X^\dagger_{1,\text{tot}} &= \sum_{k_1,q_1,k_2,q_2,l_1,l_2}c^\dagger_{k_1, \downarrow, l_1}c^\dagger_{q_1, \uparrow, l_1} \left(\epsilon_{k_2}^{l_2} - \epsilon_{q_2}^{l_2}\right) c^\dagger_{q_2, \uparrow, l_2}c_{k_2, \downarrow, l_2}\\
-	Z_{1,\text{tot}} H_0 &= \sum_{k_1,q_1,k_2,\sigma_2,l_1,l_2}\left(\epsilon_{k_1}^{l_1} - \epsilon_{q_1}^{l_1}\right) \epsilon_{k_2}^{l_2} \left(c^\dagger_{k_1, \uparrow, l_1}c^\dagger_{q_1, \uparrow, l_1} - c^\dagger_{k_1, \downarrow, l_1}c^\dagger_{q_1, \downarrow, l_1}\right) \hat n_{k_2,\sigma_2,l_2}\\
+	s^+_\text{tot}X_{1,\text{tot}} &= \sum_{k_1,q_1,k_2,q_2,l_1,l_2}c^\dagger_{k_1, \uparrow, l_1}c_{q_1, \downarrow, l_1} \left(\epsilon_{k_2}^{l_2} - \epsilon_{q_2}^{l_2}\right) c^\dagger_{k_2, \downarrow, l_2}c_{q_2, \uparrow, l_2}\\
+	s^-_\text{tot}X^\dagger_{1,\text{tot}} &= \sum_{k_1,q_1,k_2,q_2,l_1,l_2}c^\dagger_{k_1, \downarrow, l_1}c_{q_1, \uparrow, l_1} \left(\epsilon_{k_2}^{l_2} - \epsilon_{q_2}^{l_2}\right) c^\dagger_{q_2, \uparrow, l_2}c_{k_2, \downarrow, l_2}\\
+	Z_{1,\text{tot}} H_0 &= \sum_{k_1,q_1,k_2,\sigma_2,l_1,l_2}\left(\epsilon_{k_1}^{l_1} - \epsilon_{q_1}^{l_1}\right) \epsilon_{k_2}^{l_2} \left(c^\dagger_{k_1, \uparrow, l_1}c_{q_1, \uparrow, l_1} - c^\dagger_{k_1, \downarrow, l_1}c_{q_1, \downarrow, l_1}\right) \hat n_{k_2,\sigma_2,l_2}\\
 \end{aligned}\end{equation}
 
 \appendix
