@@ -163,7 +163,7 @@ If we assume we are at a sufficiently large \(D_0\) and \(\rho > \rho_\text{min}
 \section{Derivation of low energy effective \(k-\)space Hamiltonian }
 The fixed point Hamiltonian is
 \begin{equation}\begin{aligned}
-	H^* = H_0 + J^*\sum_{l} \vec{S_d}\cdot\vec{s_\text{tot}}
+	H^* = H_0 + J^* \vec{S_d}\cdot\vec{s_\text{tot}}
 \end{aligned}\end{equation}
 where \(H_0 = \sum_{k,l,\sigma}\epsilon_{k,l}\hat n_{k\sigma,l}\) and \(\vec s_\text{tot} = \sum_l \vec s_l = \sum_{kk^\prime\alpha\alpha^\prime,l} \vec \sigma_{\alpha\alpha^\prime}c^\dagger_{k\alpha,l}c_{k^\prime\alpha^\prime,l}\). \(l\) sums over the channels. Henceforth we will drop the \(*\). Obtaining the effective Hamiltonian involves obtaining the low energy excitations on top of this fixed point Hamiltonian. The large-energy excitations are ones that involve spin flips. This guides the separation of the Hamiltonian into a diagonal and an off-diagonal piece:
 \begin{equation}\begin{aligned}
@@ -319,6 +319,36 @@ The terms have the following meanings:
 	s^-_\text{tot}X^\dagger_{1,\text{tot}} &= \sum_{k_1,q_1,k_2,q_2,l_1,l_2}c^\dagger_{k_1, \downarrow, l_1}c_{q_1, \uparrow, l_1} \left(\epsilon_{k_2}^{l_2} - \epsilon_{q_2}^{l_2}\right) c^\dagger_{q_2, \uparrow, l_2}c_{k_2, \downarrow, l_2}\\
 	Z_{1,\text{tot}} H_0 &= \sum_{k_1,q_1,k_2,\sigma_2,l_1,l_2}\left(\epsilon_{k_1}^{l_1} - \epsilon_{q_1}^{l_1}\right) \epsilon_{k_2}^{l_2} \left(c^\dagger_{k_1, \uparrow, l_1}c_{q_1, \uparrow, l_1} - c^\dagger_{k_1, \downarrow, l_1}c_{q_1, \downarrow, l_1}\right) \hat n_{k_2,\sigma_2,l_2}\\
 \end{aligned}\end{equation}
+
+\section{Susceptibility from zero-mode fixed-point Hamiltonian}
+The zero-mode approximation of the fixed-point Hamiltonian is a star graph Hamiltonian:
+\begin{equation}\begin{aligned}
+	H = J^* \vec{S_d}\cdot\vec{s}_\text{tot}
+\end{aligned}\end{equation}
+where \(\vec s_\text{tot} = \sum_l \vec s_l\) is the total spin operator for all the channels. We insert a magnetic field that acts only on the impurity and then attempt to diagonalize the Hamiltonian.
+\begin{equation}\begin{aligned}
+	H(h) = J^* \vec{S_d}\cdot\vec{s}_\text{tot} + h S_d^z
+\end{aligned}\end{equation}
+The Hamiltonian commutes with \(s_\text{tot}^2\):
+\begin{equation}\begin{aligned}
+\left[s_\text{tot}^2, H(h)\right] = \left[\sum_{i=x,y,z}{s^i_\text{tot}}^2, J^* \sum_{i=x,y,z} S_d^i s^i_\text{tot}\right] = \sum_{i,j}J^* S_d^i \left\{s_\text{tot}^i, \left[s_\text{tot}^i,s_\text{tot}^j\right]\right\} = \sum_{i,j}J^* S_d^i \left\{s_\text{tot}^i, i \epsilon^{ijk}s^k_\text{tot}\right\} = 0
+\end{aligned}\end{equation}
+This means the Hamiltonian is already block-diagonal in the quantum number \(s_\text{tot}\). Let us represent the quantum number of \(s_\text{tot}^z\) by \(m\). For a particular \(s_\text{tot}\), \(m\) can take values from the set \(\left[-s_\text{tot}, s_\text{tot}\right] \). The spin \(S_d^z\) can also take values \(\pm \frac{1}{2}\). From now on, we will assume we are in the subspace of a particular \(s_\text{tot} = M\), so we will ignore that quantum number and write the kets simply as \(\ket{S_d^z, m}\). So, the notation \(\ket{\uparrow,-1}\) means the state with \(S_d^z = \frac{1}{2}\) and \(m = -1\). We will now show that even inside the block of \(2\times s_\text{tot}\) (or \(2\times s_\text{tot} + 1\), depending on where it is odd or even) defined by a particular value of \(s_\text{tot}\), the Hamiltonian actually separates into decoupled \(2\times 2\) blocks. To see why, first note that the terminal states \(\ket{\downarrow, -M}\) and \(\ket{\uparrow, M}\) are already eigenstates, because they cannot scatter (the impurity can only flip down, and this would require the bath to flip up, but \(s^z_\text{tot}\) is already at its maximum value \(M\)). The other \(2M - 2\) states can be organized into \(2\times 2\) blocks formed by the states \(\ket{\uparrow, m}\) and \(\ket{\downarrow, m+1}\) for \(m \in \left[-M+1, M-2\right] \). The fact that this block does not interact with the other blocks can be observation: if there was some other state which when acted upon by the Hamiltonian gave a non-zero projection on \(\ket{\uparrow, m}\), it would have to come from \(S_d^z = \downarrow\), and this would mean the bath spin would have had to flip down. This means the bath spin in that state would have to be \(m+1\), and that is precisely the other state in the block. 
+
+Defining \(\epsilon^h_m = \frac{1}{2}\left(Jm + h\right) \), the \(2\times 2\) blocks can be written as
+\begin{equation}\begin{aligned}
+	H_m = \begin{pmatrix} \epsilon^h_m & J/2 \\ J/2 & -\left( \epsilon^h_m + J \right)   \end{pmatrix} 
+\end{aligned}\end{equation}
+The eigenvalues are 
+\begin{equation}\begin{aligned}
+	\lambda_{m, \pm}^M(h) = \frac{1}{2}\left[-J \pm \sqrt{2J^2 + 4\epsilon^h_m\left(\epsilon^h_m + J\right) }\right] 
+\end{aligned}\end{equation}
+The eigenvalues of the terminal states are \(\pm\epsilon^h_{\pm M}\). The partition function is
+\begin{equation}\begin{aligned}
+	Z(h) = \sum_{M}\left[\sum_{m=-M+1}^{M-1}e^{-\beta \lambda_{m, \pm}^M(h)} + e^{-\beta \epsilon^h_{M}} + e^{\beta \epsilon^h_{- M}}\right] 
+\end{aligned}\end{equation}
+
+
 
 \appendix
 

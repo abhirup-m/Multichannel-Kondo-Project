@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.7.28)  17 NOV 2021 13:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.7.28)  17 NOV 2021 19:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -479,18 +479,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `superscript' on input line 105.
 
-<rg_flow_pms.pdf, id=93, 379.91098pt x 103.77826pt>
+<rg_flow_pms.pdf, id=97, 379.91098pt x 103.77826pt>
 File: rg_flow_pms.pdf Graphic file (type pdf)
 <use rg_flow_pms.pdf>
 Package pdftex.def Info: rg_flow_pms.pdf  used on input line 133.
 (pdftex.def)             Requested size: 203.99689pt x 55.72429pt.
-<./rg_flow.pdf, id=95, 763.4733pt x 129.39258pt>
+<./rg_flow.pdf, id=99, 763.4733pt x 129.39258pt>
 File: ./rg_flow.pdf Graphic file (type pdf)
 <use ./rg_flow.pdf>
 Package pdftex.def Info: ./rg_flow.pdf  used on input line 139.
 (pdftex.def)             Requested size: 356.99844pt x 60.50255pt.
 [3]
-<./rhomin_D.pdf, id=112, 1045.97293pt x 660.47093pt>
+<./rhomin_D.pdf, id=116, 1045.97293pt x 660.47093pt>
 File: ./rhomin_D.pdf Graphic file (type pdf)
 <use ./rhomin_D.pdf>
 Package pdftex.def Info: ./rhomin_D.pdf  used on input line 155.
@@ -525,21 +525,21 @@ LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/it' will be
 (Font)              scaled to size 5.0pt on input line 214.
  [6] [7] [8] [9] [10] (./multi-channel-urg.bbl) [11] (./multi-channel-urg.aux)
 Package rerunfilecheck Info: File `multi-channel-urg.out' has not changed.
-(rerunfilecheck)             Checksum: 955EA87DB232C8E66903AB5017EB0336;2771.
+(rerunfilecheck)             Checksum: 1F830549E785D5B33BD7B35024DBB311;3104.
  ) 
 Here is how much of TeX's memory you used:
- 11993 strings out of 478994
- 172419 string characters out of 5864751
- 532071 words of memory out of 5000000
- 29168 multiletter control sequences out of 15000+600000
+ 12001 strings out of 478994
+ 172515 string characters out of 5864751
+ 532073 words of memory out of 5000000
+ 29169 multiletter control sequences out of 15000+600000
  481895 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,16n,74p,1064b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,16n,74p,1846b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_ljow5q.enc}{/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_tcdnmr.enc}</usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Bold.pfb></usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Italic.pfb></usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on multi-channel-urg.pdf (11 pages, 589944 bytes).
+Output written on multi-channel-urg.pdf (11 pages, 600043 bytes).
 PDF statistics:
- 343 PDF objects out of 1000 (max. 8388607)
- 301 compressed objects within 4 object streams
- 120 named destinations out of 1000 (max. 500000)
- 120 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 313 compressed objects within 4 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 128 words of extra memory for PDF output out of 10000 (max. 10000000)
 
