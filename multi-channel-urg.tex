@@ -341,11 +341,27 @@ Defining \(\epsilon^h_m = \frac{1}{2}\left(Jm + h\right) \), the \(2\times 2\) b
 \end{aligned}\end{equation}
 The eigenvalues are 
 \begin{equation}\begin{aligned}
-	\lambda_{m, \pm}^M(h) = \frac{1}{2}\left[-J \pm \sqrt{2J^2 + 4\epsilon^h_m\left(\epsilon^h_m + J\right) }\right] 
+	\lambda_{m, \pm}^{M, h} = \frac{1}{2}\left[-J \pm \sqrt{2J^2 + 4\epsilon^h_m\left(\epsilon^h_m + J\right) }\right] = \frac{1}{2}\left[-J \pm \sqrt{J^2 + 4\left(\epsilon^h_m + J/2\right)^2 }\right]= \frac{1}{2}\left[-J \pm \sqrt{J^2 + 4\alpha^2 }\right]
 \end{aligned}\end{equation}
+where \(\alpha = \epsilon^h_m + J/2\).
 The eigenvalues of the terminal states are \(\pm\epsilon^h_{\pm M}\). The partition function is
 \begin{equation}\begin{aligned}
-	Z(h) = \sum_{M}\left[\sum_{m=-M+1}^{M-1}e^{-\beta \lambda_{m, \pm}^M(h)} + e^{-\beta \epsilon^h_{M}} + e^{\beta \epsilon^h_{- M}}\right] 
+	Z(h) = \sum_{M}\left[\sum_{m=-M+1}^{M-1}\left(e^{-\beta \lambda_{m, +}^{M, h}} + e^{-\beta \lambda_{m, -}^{M, h}}\right) + e^{-\beta \epsilon^h_{M}} + e^{\beta \epsilon^h_{- M}}\right] 
+\end{aligned}\end{equation}
+
+To calculate the impurity magnetic susceptibility, we will use the expression
+\begin{equation}\begin{aligned}
+	\chi = \frac{1}{\beta}\lim_{h \to 0}\left[\frac{Z(h)^{\prime\prime}}{Z(h)} - \left(\frac{Z(h)^{\prime}}{Z(h)}\right)^2 \right] 
+\end{aligned}\end{equation}
+where the \(\prime\) indicates derivative with respect to \(h\). We will now calculate these derivatives. For that we will need
+\begin{gather}
+	\frac{\:\mathrm{d}\epsilon_m^h}{\:\mathrm{d}h} = \frac{1}{2} = \frac{\:\mathrm{d}\alpha}{\:\mathrm{d}h}\\
+	\frac{\:\mathrm{d}\lambda_{m,\pm}^{M, h}}{\:\mathrm{d}h} = \pm\frac{\alpha}{\sqrt{J^2 + 4\alpha^2}}
+\end{gather}
+We are now ready to compute the derivatives of \(Z\):
+\begin{equation}\begin{aligned}
+	Z(h)^\prime &= -\beta\sum_{M}\left[\sum_{m=-M+1}^{M-1}\frac{\left(e^{-\beta \lambda_{m, +}^{M,h}} - e^{-\beta \lambda_{m, -}^{M,h}}\right)\left(\epsilon^h_m + J/2\right)}{\sqrt{2J^2 + 4\epsilon^h_m\left(\epsilon^h_m + J\right) }} + \frac{1}{2}\left(e^{-\beta \epsilon^h_{M}} - e^{\beta \epsilon^h_{- M}}\right)\right] \\
+		    &= \beta\sum_{M}\left[\sum_{m=-M+1}^{M-1}2e^{\beta J/2}\frac{\alpha\sinh \sqrt{J^2 + 4\alpha^2} }{\sqrt{J^2 + 4\alpha^2}} + e^{-\beta JM/2}\sinh \left(\beta h/2\right)\right] \\
 \end{aligned}\end{equation}
 
 
