@@ -369,7 +369,7 @@ We will now take the limit of \(h \to 0\). Note that \(\alpha(h\to 0)=\frac{J}{2
 \begin{equation}\begin{aligned}
 	\lim_{h \to 0}Z(h) &= \sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta \frac{J}{2}\sqrt{1 + (m+1/2)^2} + 2e^{-\beta JM/2}\right] \\
 	\lim_{h \to 0}\frac{\:\mathrm{d}Z(h)}{\:\mathrm{d}h} &=  \beta\sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}e^{\beta J/4}(m+1/2)\frac{\sinh \beta\frac{J}{2}\sqrt{1 + (m+1/2)^2} }{\sqrt{1 + (m+1/2)^2}}\right] \\
-	\lim_{h \to 0}\frac{\:\mathrm{d}^2Z(h)}{\:\mathrm{d}h^2} &= \beta\sum_{M=M_\text{min}}^{M_\text{max}}\left[\frac{1}{2}\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\frac{e^{\beta J/4}}{\frac{J}{2}\sqrt{1 + (m+1/2)^2}}\left(\sinh \beta\frac{J}{2}\sqrt{1 + (m+1/2)^2} + \beta \frac{J}{2}(m+1/2)^2 \frac{\cosh\beta\frac{J}{2}\sqrt{1 + (m+1/2)^2}}{\sqrt{1 + (m+1/2)^2}} \right.\right.\\
+	\lim_{h \to 0}\frac{\:\mathrm{d}^2Z(h)}{\:\mathrm{d}h^2} &= \beta\sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\frac{e^{\beta J/4}}{J\sqrt{1 + (m+1/2)^2}}\left(\sinh \beta\frac{J}{2}\sqrt{1 + (m+1/2)^2} + \beta \frac{J}{2}(m+1/2)^2 \frac{\cosh\beta\frac{J}{2}\sqrt{1 + (m+1/2)^2}}{\sqrt{1 + (m+1/2)^2}} \right.\right.\\
 						   &\quad \quad\quad \quad\left.\left. - \frac{(m+1/2)^2 \sinh \beta\frac{J}{2}\sqrt{1 + (m+1/2)^2}}{1 + (m+1/2)^2}\right)+ e^{-\beta JM/2}\frac{\beta}{2}\right]
 \end{aligned}\end{equation}
 Since the final expressions are formidable, we write down the expressions specifically for the single-channel and two-channel models. For single-channel, we have \(M=\frac{1}{2}\) and \(m = \pm \frac{1}{2}\). The terminal states are \(S_d^z=-1/2, m=-1/2\) and \(S_d^z=1/2, m=1/2\). There is therefore just one \(2\times 2\) block, and that is at \(m=-1/2\).
@@ -389,7 +389,10 @@ For \(K=2\), we have \(M = 0,1\). For \(M=0\) there is no scattering and the onl
 	\chi &= \frac{\frac{\beta}{2}+ \frac{1}{J}\frac{e^{\beta J/4}}{5\left(1 + e^{-\beta J/2}\right)}\left(\frac{16}{\sqrt 5}\sinh \beta\frac{J\sqrt 5}{4} + \beta J \cosh\beta\frac{J\sqrt 5}{4}\right)}{2 + 4\frac{e^{\beta J/4}}{\left(1 + e^{-\beta J/2}\right)}\cosh \frac{\beta J\sqrt 5}{4}}
 \end{aligned}\end{equation}
 
-The low temperature behaviour is \(\chi(T\to 0) \sim 1/T\).
+The low temperature behaviour in general is
+\begin{equation}\begin{aligned}
+	\chi(T \to 0) = \frac{\beta}{4}\frac{(K-1)^2}{4 + (K-1)^2}
+\end{aligned}\end{equation}
 
 \appendix
 
