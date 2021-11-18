@@ -333,38 +333,63 @@ The Hamiltonian commutes with \(s_\text{tot}^2\):
 \begin{equation}\begin{aligned}
 \left[s_\text{tot}^2, H(h)\right] = \left[\sum_{i=x,y,z}{s^i_\text{tot}}^2, J^* \sum_{i=x,y,z} S_d^i s^i_\text{tot}\right] = \sum_{i,j}J^* S_d^i \left\{s_\text{tot}^i, \left[s_\text{tot}^i,s_\text{tot}^j\right]\right\} = \sum_{i,j}J^* S_d^i \left\{s_\text{tot}^i, i \epsilon^{ijk}s^k_\text{tot}\right\} = 0
 \end{aligned}\end{equation}
-This means the Hamiltonian is already block-diagonal in the quantum number \(s_\text{tot}\). Let us represent the quantum number of \(s_\text{tot}^z\) by \(m\). For a particular \(s_\text{tot}\), \(m\) can take values from the set \(\left[-s_\text{tot}, s_\text{tot}\right] \). The spin \(S_d^z\) can also take values \(\pm \frac{1}{2}\). From now on, we will assume we are in the subspace of a particular \(s_\text{tot} = M\), so we will ignore that quantum number and write the kets simply as \(\ket{S_d^z, m}\). So, the notation \(\ket{\uparrow,-1}\) means the state with \(S_d^z = \frac{1}{2}\) and \(m = -1\). We will now show that even inside the block of \(2\times s_\text{tot}\) (or \(2\times s_\text{tot} + 1\), depending on where it is odd or even) defined by a particular value of \(s_\text{tot}\), the Hamiltonian actually separates into decoupled \(2\times 2\) blocks. To see why, first note that the terminal states \(\ket{\downarrow, -M}\) and \(\ket{\uparrow, M}\) are already eigenstates, because they cannot scatter (the impurity can only flip down, and this would require the bath to flip up, but \(s^z_\text{tot}\) is already at its maximum value \(M\)). The other \(2M - 2\) states can be organized into \(2\times 2\) blocks formed by the states \(\ket{\uparrow, m}\) and \(\ket{\downarrow, m+1}\) for \(m \in \left[-M+1, M-2\right] \). The fact that this block does not interact with the other blocks can be observation: if there was some other state which when acted upon by the Hamiltonian gave a non-zero projection on \(\ket{\uparrow, m}\), it would have to come from \(S_d^z = \downarrow\), and this would mean the bath spin would have had to flip down. This means the bath spin in that state would have to be \(m+1\), and that is precisely the other state in the block. 
+This means the Hamiltonian is already block-diagonal in the quantum number \(s_\text{tot}\). Let us represent the quantum number of \(s_\text{tot}^z\) by \(m\). For a particular \(s_\text{tot}\), \(m\) can take values from the set \(\left[-s_\text{tot}, s_\text{tot}\right] \). The spin \(S_d^z\) can also take values \(\pm \frac{1}{2}\). From now on, we will assume we are in the subspace of a particular \(s_\text{tot} = M\), so we will ignore that quantum number and write the kets simply as \(\ket{S_d^z, m}\). So, the notation \(\ket{\uparrow,-1}\) means the state with \(S_d^z = \frac{1}{2}\) and \(m = -1\). We will now show that even inside the block of \(2\times s_\text{tot}\) (or \(2\times s_\text{tot} + 1\), depending on where it is odd or even) defined by a particular value of \(s_\text{tot}\), the Hamiltonian actually separates into decoupled \(2\times 2\) blocks. To see why, first note that the terminal states \(\ket{\downarrow, -M}\) and \(\ket{\uparrow, M}\) are already eigenstates, because they cannot scatter (the impurity can only flip down, and this would require the bath to flip up, but \(s^z_\text{tot}\) is already at its maximum value \(M\)). The other \(2M - 2\) states can be organized into \(2\times 2\) blocks formed by the states \(\ket{\uparrow, m}\) and \(\ket{\downarrow, m+1}\) for \(m \in \left[-M, M-1\right] \). The fact that this block does not interact with the other blocks can be observation: if there was some other state which when acted upon by the Hamiltonian gave a non-zero projection on \(\ket{\uparrow, m}\), it would have to come from \(S_d^z = \downarrow\), and this would mean the bath spin would have had to flip down. This means the bath spin in that state would have to be \(m+1\), and that is precisely the other state in the block. 
 
 Defining \(\epsilon^h_m = \frac{1}{2}\left(Jm + h\right) \), the \(2\times 2\) blocks can be written as
 \begin{equation}\begin{aligned}
-	H_m = \begin{pmatrix} \epsilon^h_m & J/2 \\ J/2 & -\left( \epsilon^h_m + J \right)   \end{pmatrix} 
+	H_m = \begin{pmatrix} \epsilon^h_m & J/2 \\ J/2 & -\left( \epsilon^h_m + J/2 \right)   \end{pmatrix} 
 \end{aligned}\end{equation}
 The eigenvalues are 
 \begin{equation}\begin{aligned}
-	\lambda_{m, \pm}^{M, h} = \frac{1}{2}\left[-J \pm \sqrt{2J^2 + 4\epsilon^h_m\left(\epsilon^h_m + J\right) }\right] = \frac{1}{2}\left[-J \pm \sqrt{J^2 + 4\left(\epsilon^h_m + J/2\right)^2 }\right]= \frac{1}{2}\left[-J \pm \sqrt{J^2 + 4\alpha^2 }\right]
+	\lambda_{m, \pm}^{M, h} = \frac{1}{2}\left[-J/2 \pm \sqrt{5J^2/4 + 4\epsilon^h_m\left(\epsilon^h_m + J/2\right) }\right] = \frac{1}{2}\left[-J/2 \pm \sqrt{J^2 + 4\left(\epsilon^h_m + J/4\right)^2 }\right]= -J/4 \pm \sqrt{J^2/4 + \alpha^2}
 \end{aligned}\end{equation}
-where \(\alpha = \epsilon^h_m + J/2\).
+where \(\alpha = \epsilon^h_m + J/4\).
 The eigenvalues of the terminal states are \(\pm\epsilon^h_{\pm M}\). The partition function is
 \begin{equation}\begin{aligned}
-	Z(h) = \sum_{M}\left[\sum_{m=-M+1}^{M-1}\left(e^{-\beta \lambda_{m, +}^{M, h}} + e^{-\beta \lambda_{m, -}^{M, h}}\right) + e^{-\beta \epsilon^h_{M}} + e^{\beta \epsilon^h_{- M}}\right] 
+	Z(h) &= \sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\left(e^{-\beta \lambda_{m, +}^{M, h}} + e^{-\beta \lambda_{m, -}^{M, h}}\right) + e^{-\beta \epsilon^h_{M}} + e^{\beta \epsilon^h_{- M}}\right] \\
+	&=\sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\sqrt{J^2/4 + \alpha^2} + 2e^{-\beta JM/2}\cosh \beta h/2\right]
 \end{aligned}\end{equation}
-
+where \(M_\text{max} = K/2\) for a \(K-\)channel Kondo model, and \(M_\text{min} = 0\)  if \(K\) is even, otherwise \(1/2\).
 To calculate the impurity magnetic susceptibility, we will use the expression
 \begin{equation}\begin{aligned}
 	\chi = \frac{1}{\beta}\lim_{h \to 0}\left[\frac{Z(h)^{\prime\prime}}{Z(h)} - \left(\frac{Z(h)^{\prime}}{Z(h)}\right)^2 \right] 
 \end{aligned}\end{equation}
-where the \(\prime\) indicates derivative with respect to \(h\). We will now calculate these derivatives. For that we will need
+where the \(\prime\) indicates derivative with respect to \(h\). We will now calculate these derivatives. For that we w11ill need
 \begin{gather}
 	\frac{\:\mathrm{d}\epsilon_m^h}{\:\mathrm{d}h} = \frac{1}{2} = \frac{\:\mathrm{d}\alpha}{\:\mathrm{d}h}\\
 	\frac{\:\mathrm{d}\lambda_{m,\pm}^{M, h}}{\:\mathrm{d}h} = \pm\frac{\alpha}{\sqrt{J^2 + 4\alpha^2}}
 \end{gather}
 We are now ready to compute the derivatives of \(Z\):
 \begin{equation}\begin{aligned}
-	Z(h)^\prime &= -\beta\sum_{M}\left[\sum_{m=-M+1}^{M-1}\frac{\left(e^{-\beta \lambda_{m, +}^{M,h}} - e^{-\beta \lambda_{m, -}^{M,h}}\right)\left(\epsilon^h_m + J/2\right)}{\sqrt{2J^2 + 4\epsilon^h_m\left(\epsilon^h_m + J\right) }} + \frac{1}{2}\left(e^{-\beta \epsilon^h_{M}} - e^{\beta \epsilon^h_{- M}}\right)\right] \\
-		    &= \beta\sum_{M}\left[\sum_{m=-M+1}^{M-1}2e^{\beta J/2}\frac{\alpha\sinh \sqrt{J^2 + 4\alpha^2} }{\sqrt{J^2 + 4\alpha^2}} + e^{-\beta JM/2}\sinh \left(\beta h/2\right)\right] \\
+	\frac{\:\mathrm{d}Z(h)}{\:\mathrm{d}h} &= \beta\sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}e^{\beta J/4}\frac{\alpha\sinh \beta\sqrt{J^2/4 + \alpha^2} }{\sqrt{J^2/4 + \alpha^2}} + e^{-\beta JM/2}\sinh \left(\beta h/2\right)\right] \\
+	\frac{\:\mathrm{d}^2Z(h)}{\:\mathrm{d}h^2} &= \beta\sum_{M=M_\text{min}}^{M_\text{max}}\left[\frac{1}{2}\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\frac{e^{\beta J/4}}{\sqrt{J^2/4 + \alpha^2}}\left(\sinh \beta\sqrt{J^2/4 + \alpha^2} + \beta\alpha^2 \frac{\cosh\beta\sqrt{J^2/4 + \alpha^2}}{\sqrt{J^2/4 + \alpha^2}} - \frac{\alpha^2 \sinh \beta\sqrt{J^2/4 + \alpha^2}}{J^2/4 + \alpha^2}\right)\right.\\
+						   &\quad \quad\quad \quad\left.+ e^{-\beta JM/2}\frac{\beta}{2}\cosh \left(\beta h/2\right)\right] \\
+\end{aligned}\end{equation}
+We will now take the limit of \(h \to 0\). Note that \(\alpha(h\to 0)=\frac{J}{2}(m+1/2)\) and hence \((J^2/4 + \alpha^2)(h \to 0) = \frac{J^2}{4}\left[1 + (m+1/2)^2\right] \).
+\begin{equation}\begin{aligned}
+	\lim_{h \to 0}Z(h) &= \sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta \frac{J}{2}\sqrt{1 + (m+1/2)^2} + 2e^{-\beta JM/2}\right] \\
+	\lim_{h \to 0}\frac{\:\mathrm{d}Z(h)}{\:\mathrm{d}h} &=  \beta\sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}e^{\beta J/4}(m+1/2)\frac{\sinh \beta\frac{J}{2}\sqrt{1 + (m+1/2)^2} }{\sqrt{1 + (m+1/2)^2}}\right] \\
+	\lim_{h \to 0}\frac{\:\mathrm{d}^2Z(h)}{\:\mathrm{d}h^2} &= \beta\sum_{M=M_\text{min}}^{M_\text{max}}\left[\frac{1}{2}\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\frac{e^{\beta J/4}}{\frac{J}{2}\sqrt{1 + (m+1/2)^2}}\left(\sinh \beta\frac{J}{2}\sqrt{1 + (m+1/2)^2} + \beta \frac{J}{2}(m+1/2)^2 \frac{\cosh\beta\frac{J}{2}\sqrt{1 + (m+1/2)^2}}{\sqrt{1 + (m+1/2)^2}} \right.\right.\\
+						   &\quad \quad\quad \quad\left.\left. - \frac{(m+1/2)^2 \sinh \beta\frac{J}{2}\sqrt{1 + (m+1/2)^2}}{1 + (m+1/2)^2}\right)+ e^{-\beta JM/2}\frac{\beta}{2}\right]
+\end{aligned}\end{equation}
+Since the final expressions are formidable, we write down the expressions specifically for the single-channel and two-channel models. For single-channel, we have \(M=\frac{1}{2}\) and \(m = \pm \frac{1}{2}\). The terminal states are \(S_d^z=-1/2, m=-1/2\) and \(S_d^z=1/2, m=1/2\). There is therefore just one \(2\times 2\) block, and that is at \(m=-1/2\).
+\begin{gather}
+	\lim_{h \to 0}Z(h) = 2e^{\beta J/4}\cosh \beta \frac{J}{2} + 2e^{-\beta J/4} \\
+	\lim_{h \to 0}\frac{\:\mathrm{d}Z(h)}{\:\mathrm{d}h} = 0 \\
+	\lim_{h \to 0}\frac{\:\mathrm{d}^2Z(h)}{\:\mathrm{d}h^2} = \frac{\beta}{J}\left(e^{\beta J/4}\sinh \beta\frac{J}{2} + e^{-\beta J/4}\frac{J \beta}{2}\right)\\
+	\chi = \frac{1}{\beta}\lim_{h \to 0}\left[\frac{Z(h)^{\prime\prime}}{Z(h)} - \left(\frac{Z(h)^{\prime}}{Z(h)}\right)^2 \right] = \frac{1}{J}\frac{\left(2e^{\beta J/2}\sinh \beta\frac{J}{2} + J \beta\right)}{4e^{\beta J/2}\cosh \beta \frac{J}{2} + 4}
+\end{gather}
+This expression matches with the direct calculation of the susceptibility of the single-channel Kondo model.
+
+For \(K=2\), we have \(M = 0,1\). For \(M=0\) there is no scattering and the only eigenvalue is 0. For \(M=1\), we have \(m=-1,0,1\). The terminal states are \(m=-1, S_d^z=-\frac{1}{2}\) and \(m=1, S_d^z=+\frac{1}{2}\). The scattering blocks are \(m=-\frac{1}{2}\) and \(m=0\). This means that \((m+1/2)^2 = 1/4\) for all relevant \(m\). Substituting all this in the expressions gives
+\begin{equation}\begin{aligned}
+	\lim_{h \to 0}Z(h) &= 2 + 2e^{-\beta J/2} + 2e^{\beta J/4}\sum_{m=-1,0}\cosh \beta \frac{J}{2}\sqrt{1 + (m+1/2)^2} = 2\left(1 + e^{-\beta J/2}\right) + 4e^{\beta J/4}\cosh \frac{\beta J\sqrt 5}{4}\\
+	\lim_{h \to 0}\frac{\:\mathrm{d}Z(h)}{\:\mathrm{d}h} &= \beta\sum_{m=-1,0}e^{\beta J/4}(m+1/2)\frac{\sinh \beta\frac{J}{2}\sqrt{1 + (m+1/2)^2} }{\sqrt{1 + (m+1/2)^2}} = 0\\
+	\lim_{h \to 0}\frac{\:\mathrm{d}^2Z(h)}{\:\mathrm{d}h^2} &= \frac{\beta^2}{2}\left(1 + e^{-\beta J/2}\right)+ \frac{\beta}{J}\frac{e^{\beta J/4}}{5}\left(\frac{16}{\sqrt 5}\sinh \beta\frac{J\sqrt 5}{4} + \beta J \cosh\beta\frac{J\sqrt 5}{4}\right)\\
+	\chi &= \frac{\frac{\beta}{2}+ \frac{1}{J}\frac{e^{\beta J/4}}{5\left(1 + e^{-\beta J/2}\right)}\left(\frac{16}{\sqrt 5}\sinh \beta\frac{J\sqrt 5}{4} + \beta J \cosh\beta\frac{J\sqrt 5}{4}\right)}{2 + 4\frac{e^{\beta J/4}}{\left(1 + e^{-\beta J/2}\right)}\cosh \frac{\beta J\sqrt 5}{4}}
 \end{aligned}\end{equation}
 
-
+The low temperature behaviour is \(\chi(T\to 0) \sim 1/T\).
 
 \appendix
 
