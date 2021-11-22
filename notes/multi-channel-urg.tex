@@ -1,4 +1,4 @@
-\documentclass{revtex4-2}
+\documentclass[12pt]{revtex4-2}
 \usepackage{braket,amsmath,amssymb,graphicx,float,hyperref,paralist}
 \usepackage[margin=0.2in]{geometry}
 \numberwithin{equation}{section}
@@ -415,25 +415,66 @@ We insert a magnetic field that acts only on the bath and then attempt to diagon
 
 Defining \(x^M_m = M(M+1) - m(m+1)\), the \(2\times 2\) blocks can be written as
 \begin{equation}\begin{aligned}
-	H_m = mh + \begin{pmatrix} Jm/2 & \frac{J}{2}\sqrt{x^M_m} \\ \frac{J}{2}\sqrt{x^M_m} & h - J(m+1)/2 \end{pmatrix} 
+	H_m = \begin{pmatrix} m(J/2 + h) & J\sqrt{x^M_m}/2 \\ J\sqrt{x^M_m}/2 & (m+1)(h - J/2) \end{pmatrix} 
 \end{aligned}\end{equation}
 The eigenvalues are 
 \begin{equation}\begin{aligned}
-	\lambda_{m, \pm}^{M, h} = -J/4 + mh \pm \sqrt{J^2x^M_m/4 + J^2/16 - Jmh/2}
+	\lambda_{m, \pm}^{M, h} = -J/4 + (2m+1)h/2 \pm \frac{1}{2}\sqrt{J^2x^M_m + \left[(2m+1)h - J/2\right]^2 - 4m(m+1)(h^2 - J^2/4)} \\
+	= -J/4 + (2m+1)h/2 \pm \phi^M_m
 \end{aligned}\end{equation}
-The eigenvalues of the terminal states are \(JM/2 \pm hm\). The partition function is
+The eigenvalues of the terminal states are \(JM/2 \pm hM\). The partition function is
 \begin{equation}\begin{aligned}
-	Z(h) &= \sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\left(e^{-\beta \lambda_{m, +}^{M, h}} + e^{-\beta \lambda_{m, -}^{M, h}}\right) + e^{-\beta \epsilon^h_{M}} + e^{\beta \epsilon^h_{- M}}\right] \\
-	&=\sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + 2e^{-\beta JM/2}\cosh \beta h/2\right]
+	Z(h) &= \sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\left(e^{-\beta \lambda_{m, +}^{M, h}} + e^{-\beta \lambda_{m, -}^{M, h}}\right) + e^{-\beta JM/2}\left(e^{\beta hM} + e^{-\beta hM}\right)\right] \\
+	     &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta \left(J/4 - (m+1/2)h\right)}\cosh \beta\phi^M_m + 2e^{-\beta JM/2}\cosh \beta Mh\right]
 \end{aligned}\end{equation}
-where \(M_\text{max} = K/2\) for a \(K-\)channel Kondo model, and \(M_\text{min} = 0\)  if \(K\) is even, otherwise \(1/2\). This is yet not the complete partition function, because we have not accounted for the possibility that there multiple subspaces of \(M\). For example, the \(K=3\) case states can be obtained by adding the third spin-half onto the states \(S=0,1\). \(S=0\) gives \(s_\text{tot}=1/2\) and \(S=1\) gives \(s_\text{tot} = 1/2, 3/2\). So, \(s_\text{tot} = 1/2\) appears twice. These two subspaces are actually orthogonal, because the quantum numbers for the individual channels are different. We need to count the number of instances of a particular subspace \(s_\text{tot}=M\). It turns out that this number is given by
+We will now take the derivatives.
 \begin{equation}\begin{aligned}
-	r^K_M = {}^{K-1}C_{K/2 - M}
+	Z^\prime(h) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta \left(J/4 - (m+1/2)h\right)}\left(-\beta (m+1/2) \cosh \beta\phi^M_m + \beta\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\sinh \beta\phi^M_m\right)+ 2\beta Me^{-\beta JM/2}\sinh \beta Mh\right]\\
+	Z^{\prime\prime}(h) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2 e^{\beta \left(J/4 - (m+1/2)h\right)}\left(\beta^2 (m+1/2)^2 \cosh \beta\phi^M_m - 2\beta^2 (m+1/2)\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\sinh \beta\phi^M_m\right.\right.\\
+			    &\quad\quad\quad\quad\quad\quad\left.\left. + \beta\frac{\:\mathrm{d^2}\phi^M_m}{\:\mathrm{d}h^2}\sinh \beta\phi^M_m + \beta^2\left(\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\right)^2 \cosh \beta\phi^M_m\right) + 2\beta^2 M^2 e^{-\beta JM/2}\cosh \beta Mh\right]\\
 \end{aligned}\end{equation}
-which means the correct partition function is
+In the limit of \(h \to 0\), we  have
 \begin{equation}\begin{aligned}
-	Z(h) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + 2e^{-\beta JM/2}\cosh \beta h/2\right]
+	     Z(h \to 0) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\phi^M_m + 2e^{-\beta JM/2}\right]\\
+	Z^\prime(h \to 0) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\left(-\beta (m+1/2) \cosh \beta\phi^M_m + \beta\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\sinh \beta\phi^M_m\right)\right]\\
+	Z^{\prime\prime}(h \to 0) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2 e^{\beta J/4}\left(\beta^2 (m+1/2)^2 \cosh \beta\phi^M_m - 2\beta^2 (m+1/2)\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\sinh \beta\phi^M_m\right.\right.\\
+			    &\quad\quad\quad\quad\quad\quad\left.\left. + \beta\frac{\:\mathrm{d^2}\phi^M_m}{\:\mathrm{d}h^2}\sinh \beta\phi^M_m + \beta^2\left(\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\right)^2 \cosh \beta\phi^M_m\right) + 2\beta^2 M^2 e^{-\beta JM/2}\right]\\
 \end{aligned}\end{equation}
+The \(\phi\) and the derivatives are actually at \(h\to 0\). We are interested in the low temperature behaviour. In the limit of \(h \to 0\), \(\phi_m^M \to \phi^M = J(M+1/2)/2\). We can also look at the behaviour of the derivative:
+\begin{equation}\begin{aligned}
+	\frac{\:\mathrm{d}\phi_m^M}{\:\mathrm{d}h} &= -\frac{J(m+1/2)/2 + h(4m - 1)/2}{\phi_m^M} \rightarrow \lim_{h \to 0}\rightarrow -\frac{J(m+1/2)/2}{\phi^M}\\
+	\lim_{h \to 0}\frac{\:\mathrm{d}^2\phi_m^M}{\:\mathrm{d}h^2} &= \frac{1/2 -2m}{\phi^M} - \frac{J^2}{4}\frac{(m + 1/2)^2}{\left(\phi^M\right)^3}\\
+\end{aligned}\end{equation}
+Substituting these give
+\begin{equation}\begin{aligned}
+	     Z(h \to 0) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\phi^M + 2e^{-\beta JM/2}\right]\\
+	Z^\prime(h \to 0) &=-\beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M2e^{\beta J/4} \left(\cosh \beta\phi^M + \frac{J}{2\phi^M}\sinh \beta\phi^M\right)\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\left( m + 1/2 \right)\\
+	Z^{\prime\prime}(h \to 0) &=\beta^2\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[2 e^{\beta J/4}\left(\left(1 + \frac{J^2}{4{\phi^M}^2}\right)  \cosh \beta\phi^M + \frac{J}{\phi^M}\left( 1 - \frac{J}{4\beta{\phi^M}^2}\right)\sinh \beta\phi^M\right)\Sigma_M + 2\beta^2 M^2 e^{-\beta JM/2}\right]\\
+\end{aligned}\end{equation}
+
+If we take the limit of \(\beta \to \infty\), the term with \(\beta\) in \(Z^{\prime\prime}\) drops out because the terms with \(\beta^2\) will grow faster. All negative exponentials will also drop out. We get
+\begin{equation}\begin{aligned}
+	     Z(\beta\to\infty, h \to 0) &=e^{\beta J/4}\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}e^{\beta\phi^M_m}\right]\\
+	Z^\prime(\beta\to\infty, h \to 0) &=e^{\beta J/4}\beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}e^{\beta\phi^M_m}\left(- (m+1/2) + \frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\right)\right]\\
+	Z^{\prime\prime}(\beta\to\infty, h \to 0) &=e^{\beta J/4}\beta^2\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1} e^{\beta\phi^M_m}\left( (m+1/2)^2  - 2 (m+1/2)\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h} + \left(\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\right)^2\right)\right]\\
+\end{aligned}\end{equation}
+ In the entire nested summation, only the largest exponential out of all the \(e^{\beta\phi^M_m}\) will survive. In the limit of \(h \to 0\), we have \(\phi_m^M(h\to 0) = \frac{J}{2}(M + 1/2)\), which means that the largest exponential \(\Phi_K\) occurs for \(M = M_\text{max}\). 
+\begin{equation}\begin{aligned}
+	     Z(\beta\to\infty, h \to 0) &=e^{\beta J/4} e^{\beta \Phi_K}r^K_{M_\text{max}}(2M_\text{max}+1)\\
+	Z^\prime(\beta\to\infty, h \to 0) &=e^{\beta J/4}\beta e^{\beta \Phi_K}r^K_{M_\text{max}}\sum_{m=-M_\text{max}, \atop{m\in \mathbb{Z}}}^{M_\text{max}-1}\left(- (m+1/2) + \frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\right) \\
+	Z^{\prime\prime}(\beta\to\infty, h \to 0) &=e^{\beta J/4}\beta^2 e^{\beta\Phi_K}r^K_{M_\text{max}}\sum_{m=-M_\text{max}, \atop{m\in \mathbb{Z}}}^{M_\text{max}-1} \left( (m+1/2)^2  - 2 (m+1/2)\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h} + \left(\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\right)^2\right)\\
+\end{aligned}\end{equation}
+Substituting this gives
+\begin{equation}\begin{aligned}
+	     Z(\beta\to\infty, h \to 0) &=e^{\beta J/4} e^{\beta \Phi_K}r^K_{M_\text{max}}2M_\text{max}\\
+	Z^\prime(\beta\to\infty, h \to 0) & -e^{\beta J/4}\beta e^{\beta \Phi_K}r^K_{M_\text{max}}\left(1 + \frac{J}{2\Phi_K}\right) \sum_{m=-M_\text{max}, \atop{m\in \mathbb{Z}}}^{M_\text{max}-1}\left( m + 1/2 \right) = 0\\
+Z^{\prime\prime}(\beta\to\infty, h \to 0) &=e^{\beta J/4}\beta^2 e^{\beta\Phi_K}r^K_{M_\text{max}}\left(1 + \frac{J}{2\Phi_K}\right)^2 \sum_{m=-M_\text{max}, \atop{m\in \mathbb{Z}}}^{M_\text{max}-1} \left(m+1/2\right)^2\\
+\end{aligned}\end{equation}
+
+\begin{equation}\begin{aligned}
+	\chi(T \to 0) = \frac{\beta\left(K+3\right)^2\Sigma_\text{max}}{K(K+1)^2} 
+\end{aligned}\end{equation}
+
 \appendix
 
 \section{URG analysis of the single-channel Kondo model}
