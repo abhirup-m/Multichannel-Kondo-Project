@@ -407,6 +407,33 @@ At high temperatures \(\beta \to 0\), we get
 	\chi &\to 1/4
 \end{aligned}\end{equation}
 
+\section{Bath contribution to Susceptibility from zero-mode fixed-point Hamiltonian}
+We insert a magnetic field that acts only on the bath and then attempt to diagonalize the Hamiltonian.
+\begin{equation}\begin{aligned}
+	H(h) = J^* \vec{S_d}\cdot\vec{s}_\text{tot} + h s^z_\text{tot}
+\end{aligned}\end{equation}
+
+Defining \(x^M_m = M(M+1) - m(m+1)\), the \(2\times 2\) blocks can be written as
+\begin{equation}\begin{aligned}
+	H_m = mh + \begin{pmatrix} Jm/2 & \frac{J}{2}\sqrt{x^M_m} \\ \frac{J}{2}\sqrt{x^M_m} & h - J(m+1)/2 \end{pmatrix} 
+\end{aligned}\end{equation}
+The eigenvalues are 
+\begin{equation}\begin{aligned}
+	\lambda_{m, \pm}^{M, h} = -J/4 + mh \pm \sqrt{J^2x^M_m/4 + J^2/16 - Jmh/2}
+\end{aligned}\end{equation}
+The eigenvalues of the terminal states are \(JM/2 \pm hm\). The partition function is
+\begin{equation}\begin{aligned}
+	Z(h) &= \sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\left(e^{-\beta \lambda_{m, +}^{M, h}} + e^{-\beta \lambda_{m, -}^{M, h}}\right) + e^{-\beta \epsilon^h_{M}} + e^{\beta \epsilon^h_{- M}}\right] \\
+	&=\sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + 2e^{-\beta JM/2}\cosh \beta h/2\right]
+\end{aligned}\end{equation}
+where \(M_\text{max} = K/2\) for a \(K-\)channel Kondo model, and \(M_\text{min} = 0\)  if \(K\) is even, otherwise \(1/2\). This is yet not the complete partition function, because we have not accounted for the possibility that there multiple subspaces of \(M\). For example, the \(K=3\) case states can be obtained by adding the third spin-half onto the states \(S=0,1\). \(S=0\) gives \(s_\text{tot}=1/2\) and \(S=1\) gives \(s_\text{tot} = 1/2, 3/2\). So, \(s_\text{tot} = 1/2\) appears twice. These two subspaces are actually orthogonal, because the quantum numbers for the individual channels are different. We need to count the number of instances of a particular subspace \(s_\text{tot}=M\). It turns out that this number is given by
+\begin{equation}\begin{aligned}
+	r^K_M = {}^{K-1}C_{K/2 - M}
+\end{aligned}\end{equation}
+which means the correct partition function is
+\begin{equation}\begin{aligned}
+	Z(h) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + 2e^{-\beta JM/2}\cosh \beta h/2\right]
+\end{aligned}\end{equation}
 \appendix
 
 \section{URG analysis of the single-channel Kondo model}
