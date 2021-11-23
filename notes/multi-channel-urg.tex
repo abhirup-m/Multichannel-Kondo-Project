@@ -321,7 +321,7 @@ The terms have the following meanings:
 	Z_{1,\text{tot}} H_0 &= \sum_{k_1,q_1,k_2,\sigma_2,l_1,l_2}\left(\epsilon_{k_1}^{l_1} - \epsilon_{q_1}^{l_1}\right) \epsilon_{k_2}^{l_2} \left(c^\dagger_{k_1, \uparrow, l_1}c_{q_1, \uparrow, l_1} - c^\dagger_{k_1, \downarrow, l_1}c_{q_1, \downarrow, l_1}\right) \hat n_{k_2,\sigma_2,l_2}\\
 \end{aligned}\end{equation}
 
-\section{Susceptibility from zero-mode fixed-point Hamiltonian}
+\section{Impurity Susceptibility from zero-mode fixed-point Hamiltonian}
 The zero-mode approximation of the fixed-point Hamiltonian is a star graph Hamiltonian:
 \begin{equation}\begin{aligned}
 	H = J^* \vec{S_d}\cdot\vec{s}_\text{tot}
@@ -379,7 +379,7 @@ We will now take the limit of \(h \to 0\). Note that \(\alpha(h\to 0)=\frac{J}{2
 \begin{equation}\begin{aligned}
 	(J^2x^M_m/4 + \alpha^2)(h \to 0) = \frac{J^2}{4}\left[M(M+1) - m(m+1) + (m+1/2)^2\right] = \frac{J^2}{4}\left( M + 1/2 \right)^2
 \end{aligned}\end{equation}
-For brevity, we define \(\theta_M = \beta J (M+1/2)/2\) and \(\Sigma_M = \sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}(m+1/2)^2\).
+For brevity, we define \(\theta_M = \beta J (M+1/2)/2\) and \(\Sigma_M = \sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}(m+1/2)^2\). It can be shown that this summation, for \(M=M_\text{max}=K/2\), evaluates to \(\Sigma_\text{max} = K(K+1)(K-1)/12\).
 \begin{equation}\begin{aligned}
 	\lim_{h \to 0}Z(h) &= \sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta \frac{J}{2}\left( M + 1/2 \right) + 2e^{-\beta JM/2}\right] = \sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[4Me^{\beta J/4}\cosh \theta_M + 2e^{-\beta JM/2}\right]\\
 	\lim_{h \to 0}\frac{\:\mathrm{d}Z(h)}{\:\mathrm{d}h} &=  \beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}e^{\beta J/4}(m+1/2)\frac{\sinh \beta\frac{J}{2}\left( M + 1/2 \right) }{\left( M + 1/2 \right)}\right] = 0\\
@@ -398,7 +398,7 @@ At low temperature \(\beta \to \infty\), only the highest value \(M_\text{max}\)
 \begin{equation}\begin{aligned}
 	Z &\to 2 r^K_{M_\text{max}} M_\text{max} e^{\beta \frac{J}{2}(M_\text{max} + 1)}\\
 	Z^{\prime \prime} &\to r^K_{M_\text{max}}\left(\frac{\beta }{2(M_\text{max} + 1/2)}\right)^2 e^{\beta \frac{J}{2}(M_\text{max} + 1)}\Sigma_\text{max}\\
-	\chi &\to \frac{\beta\Sigma_\text{max}}{2M_\text{max}\left(2M_\text{max}+1\right)^2} = \frac{\beta\Sigma_\text{max}}{K(K+1)^2}
+	\chi &\to \frac{\beta\Sigma_\text{max}}{2M_\text{max}\left(2M_\text{max}+1\right)^2} = \frac{\beta K(K+1)(K-1)/12}{K(K+1)^2} = \frac{\beta(K-1)}{12(K+1)}
 \end{aligned}\end{equation}
 
 At high temperatures \(\beta \to 0\), we get
@@ -408,7 +408,7 @@ At high temperatures \(\beta \to 0\), we get
 	\chi &\to 1/4
 \end{aligned}\end{equation}
 
-\section{Bath contribution to Susceptibility from zero-mode fixed-point Hamiltonian}
+\section{Bath Susceptibility from zero-mode fixed-point Hamiltonian}
 We insert a magnetic field that acts only on the bath and then attempt to diagonalize the Hamiltonian.
 \begin{equation}\begin{aligned}
 	H(h) = J^* \vec{S_d}\cdot\vec{s}_\text{tot} + h s^z_\text{tot}
@@ -463,9 +463,11 @@ If we take the limit of \(\beta \to \infty\), the hyperbolic functions can be re
 \end{aligned}\end{equation}
 The susceptibility at low temperatures becomes
 \begin{equation}\begin{aligned}
-	\chi(T \to 0) = \frac{2\beta\left(1 + \frac{J}{4\Phi}\right)^2\Sigma_M}{4M} = \frac{\beta \Sigma_\text{max}(K+2)^2}{K(K+1)^2}
+	\chi(T \to 0) = \frac{2\beta\left(1 + \frac{J}{4\Phi}\right)^2\Sigma_M}{4M} = \frac{\beta (K-1)(K+2)^2}{12(K+1)}
 \end{aligned}\end{equation}
 
+\subsection{Non-analyticity in the free energy}
+For \(K>1\), the Gibbs free energy at \(T=0\) becomes non-analytic under insertion of a magnetic field on the impurity. This was checked numerically.
 \appendix
 
 \section{URG analysis of the single-channel Kondo model}
