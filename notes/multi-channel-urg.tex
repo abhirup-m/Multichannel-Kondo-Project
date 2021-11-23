@@ -419,8 +419,8 @@ Defining \(x^M_m = M(M+1) - m(m+1)\), the \(2\times 2\) blocks can be written as
 \end{aligned}\end{equation}
 The eigenvalues are 
 \begin{equation}\begin{aligned}
-	\lambda_{m, \pm}^{M, h} = -J/4 + (2m+1)h/2 \pm \frac{1}{2}\sqrt{J^2x^M_m + \left[(2m+1)h - J/2\right]^2 - 4m(m+1)(h^2 - J^2/4)} \\
-	= -J/4 + (2m+1)h/2 \pm \phi^M_m
+	\lambda_{m, \pm}^{M, h} &= -J/4 + (2m+1)h/2 \pm \frac{1}{2}\sqrt{J^2x^M_m + \left[(2m+1)h - J/2\right]^2 - 4m(m+1)(h^2 - J^2/4)} \\
+				&= -J/4 + (2m+1)h/2 \pm \frac{1}{2}\sqrt{J^2(M + 1/2)^2 + h^2 - (2m+1)Jh}	= -J/4 + (2m+1)h/2 \pm \phi^M_m
 \end{aligned}\end{equation}
 The eigenvalues of the terminal states are \(JM/2 \pm hM\). The partition function is
 \begin{equation}\begin{aligned}
@@ -442,15 +442,17 @@ In the limit of \(h \to 0\), we  have
 \end{aligned}\end{equation}
 The \(\phi\) and the derivatives are actually at \(h\to 0\). We are interested in the low temperature behaviour. In the limit of \(h \to 0\), \(\phi_m^M \to \phi^M = J(M+1/2)/2\). We can also look at the behaviour of the derivative:
 \begin{equation}\begin{aligned}
-	\frac{\:\mathrm{d}\phi_m^M}{\:\mathrm{d}h} &= -\frac{J(m+1/2)/2 + h(4m - 1)/2}{\phi_m^M} \rightarrow \lim_{h \to 0}\rightarrow -\frac{J(m+1/2)/2}{\phi^M}\\
-	\lim_{h \to 0}\frac{\:\mathrm{d}^2\phi_m^M}{\:\mathrm{d}h^2} &= \frac{1/2 -2m}{\phi^M} - \frac{J^2}{4}\frac{(m + 1/2)^2}{\left(\phi^M\right)^3}\\
+	\lim_{h \to 0}\frac{\:\mathrm{d}\phi_m^M}{\:\mathrm{d}h} &= -\frac{J(m+1/2)}{4\phi^M}\\
+	\lim_{h \to 0}\frac{\:\mathrm{d}^2\phi_m^M}{\:\mathrm{d}h^2} &= \frac{1}{4\phi^M} - \frac{J^2(m + 1/2)^2}{16\left(\phi^M\right)^3}\\
 \end{aligned}\end{equation}
-Substituting these give
+Substituting these gives
 \begin{equation}\begin{aligned}
-	     Z(h \to 0) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\phi^M + 2e^{-\beta JM/2}\right]\\
-	Z^\prime(h \to 0) &=-\beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M2e^{\beta J/4} \left(\cosh \beta\phi^M + \frac{J}{2\phi^M}\sinh \beta\phi^M\right)\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\left( m + 1/2 \right)\\
-	Z^{\prime\prime}(h \to 0) &=\beta^2\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[2 e^{\beta J/4}\left(\left(1 + \frac{J^2}{4{\phi^M}^2}\right)  \cosh \beta\phi^M + \frac{J}{\phi^M}\left( 1 - \frac{J}{4\beta{\phi^M}^2}\right)\sinh \beta\phi^M\right)\Sigma_M + 2\beta^2 M^2 e^{-\beta JM/2}\right]\\
+	     Z(h \to 0) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\phi^M + 2e^{-\beta JM/2}\right] = \sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[4Me^{\beta J/4}\cosh \beta\phi^M + 2e^{-\beta JM/2}\right]\\
+	Z^\prime(h \to 0) &=-\beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M2e^{\beta J/4} \left(\cosh \beta\phi^M + \frac{J}{4\phi^M}\sinh \beta\phi^M\right)\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\left( m + 1/2 \right) = 0\\
+Z^{\prime\prime}(h \to 0) &=\beta^2\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[2 e^{\beta J/4}\left\{\left(1 + \frac{J^2}{16{\phi^M}^2}\right) \Sigma_M \cosh \beta\phi^M + \left(\frac{2M}{4\beta\phi^M} + \frac{J}{2\phi^M}\left(1 - \frac{J}{16\beta{\phi^M}^2}\right)\Sigma_M \right) \sinh \beta\phi^M\right\} \right.\\
+			  &\quad\quad\quad\quad\quad\quad\quad\left.+ 2 M^2 e^{-\beta JM/2}\right]\\
 \end{aligned}\end{equation}
+where \(\Sigma_M = \sum_m (m+1/2)^2\).
 
 If we take the limit of \(\beta \to \infty\), the term with \(\beta\) in \(Z^{\prime\prime}\) drops out because the terms with \(\beta^2\) will grow faster. All negative exponentials will also drop out. We get
 \begin{equation}\begin{aligned}

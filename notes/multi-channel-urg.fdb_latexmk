@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex multi-channel-urg"] 1637594906 "multi-channel-urg.aux" "multi-channel-urg.bbl" "multi-channel-urg" 1637595513
+["bibtex multi-channel-urg"] 1637594906 "multi-channel-urg.aux" "multi-channel-urg.bbl" "multi-channel-urg" 1637651369
   "/usr/share/texmf-dist/bibtex/bst/revtex/apsrev4-2.bst" 1617738001 69609 e9dea59f0e753ccda3ddc8f5806d846d ""
-  "multi-channel-urg.aux" 1637595512 4899 973a764b37f5af82e026d91b42eeecbe "pdflatex"
-  "multi-channel-urgNotes.bib" 1637595512 104 4d8bb863c86f3d7b03a471e9d4707f34 "pdflatex"
+  "multi-channel-urg.aux" 1637651369 4899 973a764b37f5af82e026d91b42eeecbe "pdflatex"
+  "multi-channel-urgNotes.bib" 1637651369 104 4d8bb863c86f3d7b03a471e9d4707f34 "pdflatex"
   (generated)
   "multi-channel-urg.blg"
   "multi-channel-urg.bbl"
-["pdflatex"] 1637595512 "multi-channel-urg.tex" "multi-channel-urg.pdf" "multi-channel-urg" 1637595513
+["pdflatex"] 1637651368 "multi-channel-urg.tex" "multi-channel-urg.pdf" "multi-channel-urg" 1637651369
   "/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_ljow5q.enc" 1617690507 3091 3883b26aed3242dcea4d1b2dc17d939b ""
   "/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_tcdnmr.enc" 1617690507 3067 22afe353d2248cced69e25efe7cf48e5 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1617738065 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -130,16 +130,16 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1617738065 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1627447406 5065252 bcee0692f299aea3b1d13d4b7b7296ae ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1627447394 2812685 c5960af1705249fd1e77e94896ab4041 ""
-  "multi-channel-urg.aux" 1637595512 4899 973a764b37f5af82e026d91b42eeecbe "pdflatex"
+  "multi-channel-urg.aux" 1637651369 4899 973a764b37f5af82e026d91b42eeecbe "pdflatex"
   "multi-channel-urg.bbl" 1637594906 1982 35453d3875d823f0ec9445e740a573d9 "bibtex multi-channel-urg"
-  "multi-channel-urg.out" 1637595512 3551 4412fd3bc4d123c0280ec67b9e8f4a03 "pdflatex"
-  "multi-channel-urg.tex" 1637595512 60754 60c1d57afd61be0623e326f4568d8338 ""
+  "multi-channel-urg.out" 1637651369 3551 4412fd3bc4d123c0280ec67b9e8f4a03 "pdflatex"
+  "multi-channel-urg.tex" 1637651368 61005 3098adfc9d8a2fd830838927731ef0b5 ""
   "rg_flow.pdf" 1637556212 8457 3bb063edc82743ebc99745c4660d4230 ""
   "rg_flow_pms.pdf" 1637556212 3437 db1a76c3e17bfdedce88395e45351e54 ""
   "rhomin_D.pdf" 1637556212 100357 dab06c106550d1cd15cf90319787aa50 ""
   (generated)
-  "multi-channel-urgNotes.bib"
-  "multi-channel-urg.log"
-  "multi-channel-urg.aux"
   "multi-channel-urg.out"
   "multi-channel-urg.pdf"
+  "multi-channel-urg.aux"
+  "multi-channel-urg.log"
+  "multi-channel-urgNotes.bib"
