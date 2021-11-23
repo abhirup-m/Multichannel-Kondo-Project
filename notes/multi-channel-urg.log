@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.7.28)  23 NOV 2021 20:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.10.8)  24 NOV 2021 00:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -73,12 +73,9 @@ Class revtex4-2 Info: RevTeX society APS selected on input line 40.
 Class revtex4-2 Warning: No journal specified, using default pra.
 
 Class revtex4-2 Info: APS journal PRA selected on input line 7661.
-
-Class revtex4-2 Warning: No type size specified, using default 10.
-
-(/usr/share/texmf-dist/tex/latex/revtex/aps10pt4-2.rtx
-File: aps10pt4-2 2020/10/03 4.2e (https://journals.aps.org/revtex/ for documentation)
-Class revtex4-2 Info: RevTeX pointsize 10pt selected on input line 39.
+(/usr/share/texmf-dist/tex/latex/revtex/aps12pt4-2.rtx
+File: aps12pt4-2 2020/10/03 4.2e (https://journals.aps.org/revtex/ for documentation)
+Class revtex4-2 Info: RevTeX pointsize 12pt selected on input line 39.
 ) (/usr/share/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
 ) (/usr/share/texmf-dist/tex/latex/url/url.sty
@@ -367,10 +364,10 @@ LaTeX Font Info:    Trying to load font information for T1+EBGaramond-OsF on inp
 (/usr/share/texmf-dist/tex/latex/ebgaramond/T1EBGaramond-OsF.fd
 File: T1EBGaramond-OsF.fd 2019/10/22 (autoinst) Font definitions for T1/EBGaramond-OsF.
 )
-LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <10> not available
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <12> not available
 (Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 10.0pt on input line 9.
+(Font)              scaled to size 12.0pt on input line 9.
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count288
@@ -449,15 +446,15 @@ LaTeX Info: Redefining \nameref on input line 9.
 * \textheight=722.7pt
 * \oddsidemargin=-57.81622pt
 * \evensidemargin=-57.81622pt
-* \topmargin=-77.135pt
-* \headheight=25.0pt
-* \headsep=16.0pt
+* \topmargin=-73.135pt
+* \headheight=12.0pt
+* \headsep=25.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=30.0pt
-* \marginparsep=6.0pt
-* \columnsep=18.0pt
-* \skip\footins=39.0pt plus 4.0pt minus 12.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=25.25pt plus 4.0pt minus 12.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -475,26 +472,26 @@ Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 9.
 
 Class revtex4-2 Warning: Assuming \noaffiliation for authors.
 
-LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <12> not available
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <14.4> not available
 (Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on input line 13.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 12.0pt on input line 13.
-LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/b/n' in size <12> not available
+(Font)              scaled to size 14.4pt on input line 13.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/b/n' in size <14.4> not available
 (Font)              Font shape `T1/EBGaramond-OsF/bold/n' tried instead on input line 13.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/bold/n' will be
-(Font)              scaled to size 12.0pt on input line 13.
-LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <9> not available
+(Font)              scaled to size 14.4pt on input line 13.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <10.95> not available
 (Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on input line 13.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 9.0pt on input line 13.
-LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/it' in size <9> not available
+(Font)              scaled to size 10.95pt on input line 13.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/it' in size <10.95> not available
 (Font)              Font shape `T1/EBGaramond-OsF/regular/it' tried instead on input line 13.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/it' will be
-(Font)              scaled to size 9.0pt on input line 13.
-LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/b/n' in size <9> not available
+(Font)              scaled to size 10.95pt on input line 13.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/b/n' in size <10.95> not available
 (Font)              Font shape `T1/EBGaramond-OsF/bold/n' tried instead on input line 14.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/bold/n' will be
-(Font)              scaled to size 9.0pt on input line 14.
+(Font)              scaled to size 10.95pt on input line 14.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -502,22 +499,22 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <7> not available
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <8> not available
 (Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 7.0pt on input line 49.
-LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <5> not available
+(Font)              scaled to size 8.0pt on input line 49.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <6> not available
 (Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 5.0pt on input line 49.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(Font)              scaled to size 6.0pt on input line 49.
+
 
 Package amsmath Warning: Foreign command \atop;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 69.
 
-[2]
+[2] [3]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 106.
@@ -530,67 +527,91 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `superscript' on input line 106.
 
-<rg_flow_pms.pdf, id=106, 379.91098pt x 103.77826pt>
+<rg_flow_pms.pdf, id=113, 379.91098pt x 103.77826pt>
 File: rg_flow_pms.pdf Graphic file (type pdf)
 <use rg_flow_pms.pdf>
 Package pdftex.def Info: rg_flow_pms.pdf  used on input line 134.
 (pdftex.def)             Requested size: 234.15141pt x 63.96179pt.
-<./rg_flow.pdf, id=108, 763.4733pt x 129.39258pt>
+<./rg_flow.pdf, id=115, 763.4733pt x 129.39258pt>
 File: ./rg_flow.pdf Graphic file (type pdf)
 <use ./rg_flow.pdf>
 Package pdftex.def Info: ./rg_flow.pdf  used on input line 140.
 (pdftex.def)             Requested size: 409.76944pt x 69.44644pt.
-[3]
-<./rhomin_D.pdf, id=126, 1045.97293pt x 660.47093pt>
+[4 <./rg_flow_pms.pdf>]
+<./rhomin_D.pdf, id=132, 1045.97293pt x 660.47093pt>
 File: ./rhomin_D.pdf Graphic file (type pdf)
 <use ./rhomin_D.pdf>
 Package pdftex.def Info: ./rhomin_D.pdf  used on input line 156.
 (pdftex.def)             Requested size: 292.69373pt x 184.80966pt.
-LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <6> not available
-(Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on input line 157.
-LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 6.0pt on input line 157.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 164.
 
-[4 <./rg_flow_pms.pdf> <./rg_flow.pdf
-
-pdfTeX warning: pdflatex (file ./rg_flow.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./rhomin_D.pdf
+[5 <./rg_flow.pdf> <./rhomin_D.pdf
 
 pdfTeX warning: pdflatex (file ./rhomin_D.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/it' in size <10> not available
+>] [6]
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/it' in size <12> not available
 (Font)              Font shape `T1/EBGaramond-OsF/regular/it' tried instead on input line 215.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/it' will be
-(Font)              scaled to size 10.0pt on input line 215.
-LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/it' in size <7> not available
+(Font)              scaled to size 12.0pt on input line 215.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/it' in size <8> not available
 (Font)              Font shape `T1/EBGaramond-OsF/regular/it' tried instead on input line 215.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/it' will be
-(Font)              scaled to size 7.0pt on input line 215.
-LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/it' in size <5> not available
+(Font)              scaled to size 8.0pt on input line 215.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/it' in size <6> not available
 (Font)              Font shape `T1/EBGaramond-OsF/regular/it' tried instead on input line 215.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/it' will be
-(Font)              scaled to size 5.0pt on input line 215.
- [5] [6] [7] [8] [9] [10] [11] [12] [13] (./multi-channel-urg.bbl) [14] (./multi-channel-urg.aux)
+(Font)              scaled to size 6.0pt on input line 215.
+ [7] [8] [9] [10] [11]
+Overfull \hbox (84.18524pt too wide) detected at line 387
+[][][]
+ []
+
+[12]
+Overfull \hbox (4.87526pt too wide) detected at line 397
+[][][]
+ []
+
+[13]
+Overfull \hbox (11.10854pt too wide) detected at line 446
+[][][]
+ []
+
+[14]
+Overfull \hbox (7.69867pt too wide) detected at line 465
+[][][]
+ []
+
+[15]
+<../numerics/free_energy_nonanaliticity.pdf, id=301, 1010.65335pt x 624.4709pt>
+File: ../numerics/free_energy_nonanaliticity.pdf Graphic file (type pdf)
+<use ../numerics/free_energy_nonanaliticity.pdf>
+Package pdftex.def Info: ../numerics/free_energy_nonanaliticity.pdf  used on input line 515.
+(pdftex.def)             Requested size: 468.31175pt x 289.36592pt.
+
+Overfull \hbox (50.19858pt too wide) in paragraph at lines 519--520
+\T1/EBGaramond-OsF/regular/n/12 states in ques-tion are $[]$. For $\OML/cmm/m/it/12 h > \OT1/cmr/m/n/12 0$\T1/EBGaramond-OsF/regular/n/12 , the ground state oc-curs in the sub-space $[] \OML/cmm/m/it/12 ; []$\T1/EBGaramond-OsF/regular/n/12 .
+ []
+
+[16] [17 <../numerics/free_energy_nonanaliticity.pdf>] [18] (./multi-channel-urg.bbl) [19] (./multi-channel-urg.aux)
 Package rerunfilecheck Info: File `multi-channel-urg.out' has not changed.
 (rerunfilecheck)             Checksum: D22413D9F2B70873CD35006615628A6F;3752.
  ) 
 Here is how much of TeX's memory you used:
- 12495 strings out of 478994
- 179643 string characters out of 5864751
- 545524 words of memory out of 5000000
- 29628 multiletter control sequences out of 15000+600000
- 481895 words of font info for 70 fonts, out of 8000000 for 9000
+ 12520 strings out of 478994
+ 180184 string characters out of 5864751
+ 534729 words of memory out of 5000000
+ 29638 multiletter control sequences out of 15000+600000
+ 478083 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,16n,74p,1844b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_ljow5q.enc}{/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_tcdnmr.enc}</usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Bold.pfb></usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Italic.pfb></usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb>
-Output written on multi-channel-urg.pdf (14 pages, 622785 bytes).
+{/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_ljow5q.enc}{/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_tcdnmr.enc}</usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Bold.pfb></usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Italic.pfb></usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on multi-channel-urg.pdf (19 pages, 682026 bytes).
 PDF statistics:
- 410 PDF objects out of 1000 (max. 8388607)
- 364 compressed objects within 4 object streams
- 156 named destinations out of 1000 (max. 500000)
- 144 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 451 PDF objects out of 1000 (max. 8388607)
+ 401 compressed objects within 5 object streams
+ 170 named destinations out of 1000 (max. 500000)
+ 149 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-\documentclass{revtex4-2}
+\documentclass[12pt]{revtex4-2}
 \usepackage{braket,amsmath,amssymb,graphicx,float,hyperref,paralist}
 \usepackage[margin=0.2in,top=0.5in,bottom=0.5in]{geometry}
 \numberwithin{equation}{section}
@@ -328,6 +328,7 @@ The zero-mode approximation of the fixed-point Hamiltonian is a star graph Hamil
 \end{aligned}\end{equation}
 where \(\vec s_\text{tot} = \sum_l \vec s_l\) is the total spin operator for all the channels. We insert a magnetic field that acts only on the impurity and then attempt to diagonalize the Hamiltonian.
 \begin{equation}\begin{aligned}
+	\label{stargraph_field_hamiltonian}
 	H(h) = J^* \vec{S_d}\cdot\vec{s}_\text{tot} + h S_d^z
 \end{aligned}\end{equation}
 The Hamiltonian commutes with \(s_\text{tot}^2\):
@@ -346,7 +347,16 @@ The eigenvalues are
 	\lambda_{m, \pm}^{M, h} = \frac{1}{2}\left[-J/2 \pm \sqrt{J^2/4 + J^2 x_m^M + 4\epsilon^h_m\left(\epsilon^h_m + J/2\right) }\right] = -J/4 \pm \sqrt{J^2x^M_m/4 + \alpha^2}
 \end{aligned}\end{equation}
 where \(\alpha = \epsilon^h_m + J/4\).
-The eigenvalues of the terminal states are \(\pm\epsilon^h_{\pm M}\). For \(h = 0\), the ground state subspace is \(K-\)fold degenerate and is formed by the negative solutions of eq.~\ref{eigenvalue}. This common \(K-\)fold degenerate eigenvalue is \(-J(M+1)/2\). The partition function is
+The eigenvalues of the terminal states are \(\pm\epsilon^h_{\pm M}\). For \(h = 0\), the ground state subspace is \(K-\)fold degenerate and is formed by the negative solutions of eq.~\ref{eigenvalue}. This common \(K-\)fold degenerate eigenvalue is \(-J(M+1)/2\).
+The full list of energy eigenvalues at a particular value of \(M\) is
+\begin{equation}\begin{aligned}
+\label{stargraph_spectrum}
+&		JM/2 - h/2, &&\ket{\downarrow, M, -M}, && m = -M\\
+&-J/4 \pm \sqrt{J^2x^M_m/4 + \alpha^2}, &&\left\{\ket{\uparrow, M, m}, \ket{\downarrow, M, m+1}\right\}, &&m=-M,\ldots,M-1\\
+&JM/2 + h/2, &&\ket{\uparrow, M, M},&& m = M\\
+\end{aligned}\end{equation}
+
+The partition function is
 \begin{equation}\begin{aligned}
 	Z(h) &= \sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\left(e^{-\beta \lambda_{m, +}^{M, h}} + e^{-\beta \lambda_{m, -}^{M, h}}\right) + e^{-\beta \epsilon^h_{M}} + e^{\beta \epsilon^h_{- M}}\right] \\
 	&=\sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + 2e^{-\beta JM/2}\cosh \beta h/2\right]
@@ -467,7 +477,50 @@ The susceptibility at low temperatures becomes
 \end{aligned}\end{equation}
 
 \subsection{Non-analyticity in the free energy}
-For \(K>1\), the Gibbs free energy at \(T=0\) becomes non-analytic under insertion of a magnetic field on the impurity. This was checked numerically.
+For \(K>1\), the Gibbs free energy at \(T=0\) becomes non-analytic under insertion of a magnetic field on the impurity. The thermal free energy is given by
+\begin{equation}\begin{aligned}
+	F(h) = -\frac{1}{\beta}\ln Z(h) = -\frac{1}{\beta}\ln\sum_{E_n}e^{-\beta E_n}
+\end{aligned}\end{equation}
+At \(T \to 0\), only the most negative energy \(E_\text{min}\) survives. Assuming a non-degenerate ground state for \(h \neq 0\), the zero temperature free energy becomes
+\begin{equation}\begin{aligned}
+	F(h\neq 0, T\to 0) = -\frac{1}{\beta}\ln e^{-\beta E_\text{min}} = E_\text{min}
+\end{aligned}\end{equation}
+In the star graph Hamiltonian with \(K-\)channels and in the presence of a field on the impurity (eq.~\ref{stargraph_field_hamiltonian}), the energy eigenvalues for a particular value of \(s_\text{tot}\) are given in eq.~\ref{stargraph_spectrum}. Within a particular subspace \(M\), the ground state energy will be one of the negative eigenvalues:
+\begin{equation}\begin{aligned}
+	\lambda^{M,h}_{m, -}= -J/4 - \frac{1}{2}\sqrt{J^2x^M_{m}/4 + \alpha^2} = -J/4 - \frac{1}{2}\sqrt{J^2(M+1/2)^2 + h^2 + 2hJ(m+1/2)}
+\end{aligned}\end{equation}
+The minimum eigenvalue is obtained by maximizing \(h(m+1/2)\). For \(h>0\), the ground state is renormalized for the most positive value of \(m\), \(M-1\). On the other hand, for \(h<0\), it occurs for \(m=-M\), because that is the most negative value it can take. Among all the values of \(M\), the global ground state is at the largest value of \(M\), \(K/2\). Therefore, the minimal energy eigenvalue is
+\begin{equation}\begin{aligned}
+	E_\text{min}(h) = \begin{cases}
+		-J/4 - \frac{1}{2}\sqrt{J^2(K+1)^2/4 + h^2 + hJ(K-1)}, & h>0\\
+		-J/4 - \frac{1}{2}\sqrt{J^2(K+1)^2/4 + h^2 - hJ(K-1)}, & h<0\\
+	\end{cases}
+\end{aligned}\end{equation}
+The free energy for a non-zero field is therefore
+\begin{equation}\begin{aligned}
+	F(h\neq 0, T\to 0) = -J/4 - \frac{1}{2}\sqrt{J^2(K+1)^2/4 + h^2 + |h|J(K-1)}
+\end{aligned}\end{equation}
+The first derivative of the free energy with respect to the field gives
+\begin{equation}\begin{aligned}
+	F^\prime(h\neq 0, T\to 0) =- \frac{1}{2}\frac{2h + J(K-1)\text{sign}(h)}{2\sqrt{J^2(K+1)^2/4 + h^2 + |h|J(K-1)}}
+\end{aligned}\end{equation}
+There we used the result that the derivative of \(|x|\) is \(\text{sign}(x)\). If we now take \(h\) to zero from both directions, we get
+\begin{equation}\begin{aligned}
+	F^\prime(h \to 0^\pm, T\to 0) = \mp \frac{1}{2}\frac{(K-1)}{(K+1)}
+\end{aligned}\end{equation}
+
+The first derivative of the impurity free energy is therefore discontinuous as \(h\to 0\); it goes to different values depending on the direction in which we take the limit. The only case where it is not analytic is when \(K=1\); then the derivative goes to zero from both directions. This non-analyticity has also been verified numerically.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../numerics/free_energy_nonanaliticity.pdf}
+	\caption{Non-analytic free energy for \(K>1\) and analytic free energy for \(K=1\).}
+\end{figure}
+
+The non-analyticity for \(K>1\) occurs because the magnetic field is able to flip the ground state. For example, for \(K=2\), the states in question are \(\ket{M=1, m=-1,0}\). For \(h>0\), the ground state occurs in the subspace \(\ket{S_d^z=1/2, m=-1},\ket{S_d^z=-1/2,m=0}\). If we now flip the magnetic field, the ground state subspace flips to \(\ket{S_d^z=1/2, m=0},\ket{S_d^z=-1/2,m=1}\). Instead, if we look at the case of \(K=1\), the ground state is in the subspace of \(\ket{S_d^z=1/2,m=-1/2},\ket{S_d^z=-1/2, m=1/2}\), and since there is only this one subspace, the ground state is independent of the field. From this discussion, it is clear that the non-analyticity appears because there are multiple values of \(m \in [-M, M-1]\) in the ground state manifold, which means that it is the ground state degeneracy that causes the non-analyticity.
+
+
+
+
 \appendix
 
 \section{URG analysis of the single-channel Kondo model}
