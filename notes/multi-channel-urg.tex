@@ -363,6 +363,10 @@ The full list of energy eigenvalues at a particular value of \(M\) is
 &-J/4 \pm \sqrt{J^2x^M_m/4 + \alpha^2}, &&\left\{\ket{\uparrow, M, m}, \ket{\downarrow, M, m+1}\right\}, &&m=-M,\ldots,M-1\\
 &JM/2 + h/2, &&\ket{\uparrow, M, M},&& m = M\\
 \end{aligned}\end{equation}
+The eigenstates for each value of \(M,m\) are given by
+\begin{equation}\begin{aligned}
+	\left(\pm\frac{1}{2}\sqrt{J^2 {x_m^M}^2 + 4\alpha^2} - \frac{J}{2}\sqrt{x_m^M}\right)\ket{\uparrow, M, m} + \left(\frac{J}{2}(m+\frac{1}{2}) + \frac{h}{2}\right) \ket{\downarrow, M, m+1}
+\end{aligned}\end{equation}
 
 The partition function is
 \begin{equation}\begin{aligned}
@@ -484,7 +488,6 @@ where \(\Sigma_M = \sum_m (m+1/2)^2\).
 If we take the limit of \(\beta \to \infty\), the hyperbolic functions can be replaced by exponentials. The terms with \(1/\beta\) in \(Z^{\prime\prime}\) drop out. All negative exponentials will also drop out. Moreover, out of all the positve exponentials, only the largest exponent will survive. The largest value \(\Phi\) of \(\phi^M\) occurs at \(M = M_\text{max} = K/2\). This maximum value is \(\Phi = J(K+1)/4\). We therefore have
 \begin{equation}\begin{aligned}
 	     Z(h \to 0) &= r^K_{K/2} 4Me^{\beta J/4}\frac{1}{2}e^{\beta\Phi}\\
-	     Z^\prime(h \to 0) &= 0\\
 	     Z^{\prime\prime}(h \to 0) &=\beta^2 r^K_{K/2}2 e^{\beta J/4}\frac{1}{2}e^{\beta \Phi}\left(1 + \frac{J}{4\Phi}\right)^2\Sigma_\text{max}\\
 \end{aligned}\end{equation}
 The susceptibility at low temperatures becomes

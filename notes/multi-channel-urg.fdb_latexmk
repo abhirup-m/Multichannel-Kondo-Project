@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex multi-channel-urg"] 1637736096 "multi-channel-urg.aux" "multi-channel-urg.bbl" "multi-channel-urg" 1637736097
+["bibtex multi-channel-urg"] 1637744641 "multi-channel-urg.aux" "multi-channel-urg.bbl" "multi-channel-urg" 1637765779
   "/usr/share/texmf-dist/bibtex/bst/revtex/apsrev4-2.bst" 1617738001 69609 e9dea59f0e753ccda3ddc8f5806d846d ""
-  "multi-channel-urg.aux" 1637736096 5998 b33bb90b010c059082cdb915f131c6ef "pdflatex"
-  "multi-channel-urgNotes.bib" 1637736096 104 4d8bb863c86f3d7b03a471e9d4707f34 "pdflatex"
+  "multi-channel-urg.aux" 1637764153 5998 b33bb90b010c059082cdb915f131c6ef "pdflatex"
+  "multi-channel-urgNotes.bib" 1637764153 104 4d8bb863c86f3d7b03a471e9d4707f34 "pdflatex"
   (generated)
-  "multi-channel-urg.blg"
   "multi-channel-urg.bbl"
-["pdflatex"] 1637736096 "multi-channel-urg.tex" "multi-channel-urg.pdf" "multi-channel-urg" 1637736097
-  "../numerics/chi_mchannel.pdf" 1637735934 127078 b968f6b9c55b8ffd954dd38c83a5bdb6 ""
-  "../numerics/free_energy_nonanaliticity.pdf" 1637732918 140098 afa2f830d4ea49f5f50e4d40b2064247 ""
+  "multi-channel-urg.blg"
+["pdflatex"] 1637764152 "multi-channel-urg.tex" "multi-channel-urg.pdf" "multi-channel-urg" 1637765779
+  "../numerics/chi_mchannel.pdf" 1637763707 127078 2010844392d5b68e9dcc5aaf73953859 ""
+  "../numerics/free_energy_nonanaliticity.pdf" 1637764018 255947 cc5fd47c58faf58fc25335500e3940d4 ""
   "../numerics/rg_flow_K=2.pdf" 1637735594 152345 fb1f14810d50fcac2b10955cd9817d28 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1617738065 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1617738065 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -131,16 +131,16 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1617738065 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1627447406 5065252 bcee0692f299aea3b1d13d4b7b7296ae ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1627447394 2812685 c5960af1705249fd1e77e94896ab4041 ""
-  "multi-channel-urg.aux" 1637736096 5998 b33bb90b010c059082cdb915f131c6ef "pdflatex"
-  "multi-channel-urg.bbl" 1637736096 1982 35453d3875d823f0ec9445e740a573d9 "bibtex multi-channel-urg"
-  "multi-channel-urg.out" 1637736096 3751 fa12ccd1be2c4c6294fe0efa4a81ef54 "pdflatex"
-  "multi-channel-urg.tex" 1637736095 64689 81e56d1d0fd0ee0aa70750bca135dbac ""
+  "multi-channel-urg.aux" 1637764153 5998 b33bb90b010c059082cdb915f131c6ef "pdflatex"
+  "multi-channel-urg.bbl" 1637744641 1982 35453d3875d823f0ec9445e740a573d9 "bibtex multi-channel-urg"
+  "multi-channel-urg.out" 1637764153 3751 fa12ccd1be2c4c6294fe0efa4a81ef54 "pdflatex"
+  "multi-channel-urg.tex" 1637765778 64961 1bafb8caf562b1ae2eb0aabb90eb9cfe ""
   "rg_flow.pdf" 1637556212 8457 3bb063edc82743ebc99745c4660d4230 ""
   "rg_flow_pms.pdf" 1637556212 3437 db1a76c3e17bfdedce88395e45351e54 ""
   "rhomin_D.pdf" 1637556212 100357 dab06c106550d1cd15cf90319787aa50 ""
   (generated)
+  "multi-channel-urg.log"
+  "multi-channel-urg.aux"
   "multi-channel-urgNotes.bib"
   "multi-channel-urg.pdf"
   "multi-channel-urg.out"
-  "multi-channel-urg.log"
-  "multi-channel-urg.aux"
