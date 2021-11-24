@@ -1,11 +1,11 @@
-\documentclass[12pt]{revtex4-2}
+\documentclass{revtex4-2}
 \usepackage{braket,amsmath,amssymb,graphicx,float,hyperref,paralist}
-\usepackage[margin=0.2in,top=0.5in,bottom=0.5in]{geometry}
+% \usepackage[margin=0.2in,top=0.5in,bottom=0.5in]{geometry}
 \numberwithin{equation}{section}
 \allowdisplaybreaks
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{ebgaramond}
+% \usepackage{ebgaramond}
 \begin{document}
 \title{Multi-channel Kondo model URG}
 \author{Abhirup Mukherjee}
@@ -150,6 +150,14 @@ For a given \(K\), the position of \(J_1^*\) will be governed by \(\rho\). In ge
 \begin{equation}\begin{aligned}
 	\rho_\text{min} = \text{minimum }\left\{\rho, \text{ such that } \frac{8}{K \rho} < 4 D^*(\rho)\right\}
 \end{aligned}\end{equation}
+The RG flows towards the attractive fixed point \(J_1^*\) is shown  in fig.~\ref{rg_flow_K-2}.
+\begin{figure}[!htpb]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../numerics/rg_flow_K=2.pdf}
+	\caption{Attractive flows towards \(J_1^*\)}
+	\label{rg_flow_K-2}
+\end{figure}
+
 This behaviour is shown schematically in fig.~\ref{rg_flow_general}. 
 \begin{figure}[!htb]
 	\centering
@@ -382,8 +390,8 @@ where the \(\prime\) indicates derivative with respect to \(h\). We will now cal
 We are now ready to compute the derivatives of \(Z\):
 \begin{equation}\begin{aligned}
 	\frac{\:\mathrm{d}Z(h)}{\:\mathrm{d}h} &= \beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}e^{\beta J/4}\alpha\frac{\sinh \beta\sqrt{J^2x^M_m/4 + \alpha^2} }{\sqrt{J^2x^M_m/4 + \alpha^2}} + e^{-\beta JM/2}\sinh \left(\beta h/2\right)\right] \\
-	\frac{\:\mathrm{d}^2Z(h)}{\:\mathrm{d}h^2} &= \beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\frac{1}{2}\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\frac{e^{\beta J/4}}{\sqrt{J^2x^M_m/4 + \alpha^2}}\left(\sinh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + \beta\alpha^2 \frac{\cosh\beta\sqrt{J^2x^M_m/4 + \alpha^2}}{\sqrt{J^2x^M_m/4 + \alpha^2}} - \frac{\alpha^2 \sinh \beta\sqrt{J^2x^M_m/4 + \alpha^2}}{J^2x^M_m/4 + \alpha^2}\right)\right.\\
-						   &\quad \quad\quad \quad\left.+ e^{-\beta JM/2}\frac{\beta}{2}\cosh \left(\beta h/2\right)\right] \\
+	\frac{\:\mathrm{d}^2Z(h)}{\:\mathrm{d}h^2} &= \beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\frac{1}{2}\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\frac{e^{\beta J/4}}{\sqrt{J^2x^M_m/4 + \alpha^2}}\left(\sinh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + \beta\alpha^2 \frac{\cosh\beta\sqrt{J^2x^M_m/4 + \alpha^2}}{\sqrt{J^2x^M_m/4 + \alpha^2}}\right.\right.\\
+						   &\quad \quad\quad \quad\left.\left. - \frac{\alpha^2 \sinh \beta\sqrt{J^2x^M_m/4 + \alpha^2}}{J^2x^M_m/4 + \alpha^2}\right) + e^{-\beta JM/2}\frac{\beta}{2}\cosh \left(\beta h/2\right)\right] \\
 \end{aligned}\end{equation}
 We will now take the limit of \(h \to 0\). Note that \(\alpha(h\to 0)=\frac{J}{2}(m+1/2)\) and hence 
 \begin{equation}\begin{aligned}
@@ -395,6 +403,14 @@ For brevity, we define \(\theta_M = \beta J (M+1/2)/2\) and \(\Sigma_M = \sum_{m
 	\lim_{h \to 0}\frac{\:\mathrm{d}Z(h)}{\:\mathrm{d}h} &=  \beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}e^{\beta J/4}(m+1/2)\frac{\sinh \beta\frac{J}{2}\left( M + 1/2 \right) }{\left( M + 1/2 \right)}\right] = 0\\
 	\lim_{h \to 0}\frac{\:\mathrm{d}^2Z(h)}{\:\mathrm{d}h^2} &= \frac{\beta^2}{2}\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\frac{e^{\beta J/4}}{\theta_M}\left(2M\sinh \theta_M + \frac{\beta^2 J^2}{4}\left[\frac{\cosh\theta_M}{\theta_M} - \frac{\sinh \theta_M}{\theta_M^2}\right]\Sigma_M\right)+ e^{-\beta JM/2}\right]\\
 \end{aligned}\end{equation}
+These expressions have been used to compute the impurity susceptibility for various values of \(K\) in fig.~\ref{chi_mchannel}.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../numerics/chi_mchannel.pdf}
+	\caption{Impurity susceptibility for \(K=1,2,4,6\), calculated numerically as well as using the analytical expressions.}
+	\label{chi_mchannel}
+\end{figure}
+
 Since the final expressions are formidable, we write down the expressions specifically for the single-channel and two-channel models. For single-channel, we have \(M=\frac{1}{2}\) and \(m = \pm \frac{1}{2}\). The terminal states are \(S_d^z=-1/2, m=-1/2\) and \(S_d^z=1/2, m=1/2\). There is therefore just one \(2\times 2\) block, and that is at \(m=-1/2\).
 \begin{gather}
 	\lim_{h \to 0}Z(h) = 2e^{\beta J/4}\cosh \beta \frac{J}{2} + 2e^{-\beta J/4} \\
@@ -476,7 +492,7 @@ The susceptibility at low temperatures becomes
 	\chi(T \to 0) = \frac{2\beta\left(1 + \frac{J}{4\Phi}\right)^2\Sigma_M}{4M} = \frac{\beta (K-1)(K+2)^2}{12(K+1)}
 \end{aligned}\end{equation}
 
-\subsection{Non-analyticity in the free energy}
+\section{Non-analyticity in the free energy}
 For \(K>1\), the Gibbs free energy at \(T=0\) becomes non-analytic under insertion of a magnetic field on the impurity. The thermal free energy is given by
 \begin{equation}\begin{aligned}
 	F(h) = -\frac{1}{\beta}\ln Z(h) = -\frac{1}{\beta}\ln\sum_{E_n}e^{-\beta E_n}
@@ -512,7 +528,7 @@ There we used the result that the derivative of \(|x|\) is \(\text{sign}(x)\). I
 The first derivative of the impurity free energy is therefore discontinuous as \(h\to 0\); it goes to different values depending on the direction in which we take the limit. The only case where it is not analytic is when \(K=1\); then the derivative goes to zero from both directions. This non-analyticity has also been verified numerically.
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=0.8\textwidth]{../numerics/free_energy_nonanaliticity.pdf}
+	\includegraphics[width=0.6\textwidth]{../numerics/free_energy_nonanaliticity.pdf}
 	\caption{Non-analytic free energy for \(K>1\) and analytic free energy for \(K=1\).}
 \end{figure}
 
@@ -521,8 +537,10 @@ The non-analyticity for \(K>1\) occurs because the magnetic field is able to fli
 
 
 
-\appendix
 
+
+\appendix
+\clearpage
 \section{URG analysis of the single-channel Kondo model}
 \label{1KondoURG}
 \begin{equation}\begin{aligned}
