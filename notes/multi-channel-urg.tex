@@ -504,28 +504,34 @@ At \(T \to 0\), only the most negative energy \(E_\text{min}\) survives. Assumin
 \begin{equation}\begin{aligned}
 	F(h\neq 0, T\to 0) = -\frac{1}{\beta}\ln e^{-\beta E_\text{min}} = E_\text{min}
 \end{aligned}\end{equation}
-In the star graph Hamiltonian with \(K-\)channels and in the presence of a field on the impurity (eq.~\ref{stargraph_field_hamiltonian}), the energy eigenvalues for a particular value of \(s_\text{tot}\) are given in eq.~\ref{stargraph_spectrum}. Within a particular subspace \(M\), the ground state energy will be one of the negative eigenvalues:
+In the star graph Hamiltonian with \(K-\)channels and a global magnetic field on the impurity
 \begin{equation}\begin{aligned}
-	\lambda^{M,h}_{m, -}= -J/4 - \frac{1}{2}\sqrt{J^2x^M_{m}/4 + \alpha^2} = -J/4 - \frac{1}{2}\sqrt{J^2(M+1/2)^2 + h^2 + 2hJ(m+1/2)}
+	H = J \vec{S_d}\cdot\vec{s}_\text{tot} + h\left(S_d^z + s^z_\text{tot}\right) ~,
 \end{aligned}\end{equation}
-The minimum eigenvalue is obtained by maximizing \(h(m+1/2)\). For \(h>0\), the ground state is renormalized for the most positive value of \(m\), \(M-1\). On the other hand, for \(h<0\), it occurs for \(m=-M\), because that is the most negative value it can take. Among all the values of \(M\), the global ground state is at the largest value of \(M\), \(K/2\). Therefore, the minimal energy eigenvalue is
+the energy eigenvalues for a particular value of \(s_\text{tot}=M\) are given by
 \begin{equation}\begin{aligned}
-	E_\text{min}(h) = \begin{cases}
-		-J/4 - \frac{1}{2}\sqrt{J^2(K+1)^2/4 + h^2 + hJ(K-1)}, & h>0\\
-		-J/4 - \frac{1}{2}\sqrt{J^2(K+1)^2/4 + h^2 - hJ(K-1)}, & h<0\\
+	&\frac{J}{2}M \pm h\left(M + \frac{1}{2}\right),\\
+	&-\frac{J}{4}\pm \frac{J}{2}\left(M + \frac{1}{2}\right) + h\left( m + \frac{1}{2} \right), m \in \left[-M, M-1\right] 
+\end{aligned}\end{equation}
+For small \(h\), the ground state will be \(-\frac{J}{4}- \frac{J}{2}\left(M + \frac{1}{2}\right) + h\left(m_\text{min} + \frac{1}{2} \right)\) for a particular value \(m_\text{min}\) that minimizes this energy. This specific value will depend on the sign of \(h\):
+\begin{equation}\begin{aligned}
+	m_\text{min} = \begin{cases}
+		-M, & h >0\\
+		M-1,& h< 0
 	\end{cases}
 \end{aligned}\end{equation}
 The free energy for a non-zero field is therefore
 \begin{equation}\begin{aligned}
-	F(h\neq 0, T\to 0) = -J/4 - \frac{1}{2}\sqrt{J^2(K+1)^2/4 + h^2 + |h|J(K-1)}
+	F(h\neq 0, T\to 0) = -\frac{J}{2}\left( M + 1 \right) - |h|\left(M - \frac{1}{2}\right)
 \end{aligned}\end{equation}
+
 The first derivative of the free energy with respect to the field gives
 \begin{equation}\begin{aligned}
-	F^\prime(h\neq 0, T\to 0) =- \frac{1}{2}\frac{2h + J(K-1)\text{sign}(h)}{2\sqrt{J^2(K+1)^2/4 + h^2 + |h|J(K-1)}}
+	F^\prime(h\neq 0, T\to 0) = -\text{sign}(h)\left(M - \frac{1}{2}\right)
 \end{aligned}\end{equation}
 There we used the result that the derivative of \(|x|\) is \(\text{sign}(x)\). If we now take \(h\) to zero from both directions, we get
 \begin{equation}\begin{aligned}
-	F^\prime(h \to 0^\pm, T\to 0) = \mp \frac{1}{2}\frac{(K-1)}{(K+1)}
+	F^\prime(h \to 0^\pm, T\to 0) = \mp\left(M - \frac{1}{2}\right) = \mp \frac{1}{2}\left( K - 1 \right) 
 \end{aligned}\end{equation}
 
 The first derivative of the impurity free energy is therefore discontinuous as \(h\to 0\); it goes to different values depending on the direction in which we take the limit. The only case where it is not analytic is when \(K=1\); then the derivative goes to zero from both directions. This non-analyticity has also been verified numerically.

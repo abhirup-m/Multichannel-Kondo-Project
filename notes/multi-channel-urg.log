@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.7.28)  24 NOV 2021 19:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.24)  24 NOV 2021 22:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -472,28 +472,28 @@ Overfull \hbox (9.97339pt too wide) detected at line 485
  []
 
 [14]
-<../numerics/free_energy_nonanaliticity.pdf, id=347, 1002.49371pt x 627.75024pt>
+<../numerics/free_energy_nonanaliticity.pdf, id=345, 1010.65335pt x 627.75024pt>
 File: ../numerics/free_energy_nonanaliticity.pdf Graphic file (type pdf)
 <use ../numerics/free_energy_nonanaliticity.pdf>
-Package pdftex.def Info: ../numerics/free_energy_nonanaliticity.pdf  used on input line 534.
-(pdftex.def)             Requested size: 306.00311pt x 191.61201pt.
+Package pdftex.def Info: ../numerics/free_energy_nonanaliticity.pdf  used on input line 540.
+(pdftex.def)             Requested size: 306.00311pt x 190.06984pt.
  [15] [16 <../numerics/free_energy_nonanaliticity.pdf>] [17] (./multi-channel-urg.bbl) [18] (./multi-channel-urg.aux)
 Package rerunfilecheck Info: File `multi-channel-urg.out' has not changed.
 (rerunfilecheck)             Checksum: FA12CCD1BE2C4C6294FE0EFA4A81EF54;3751.
  ) 
 Here is how much of TeX's memory you used:
- 11448 strings out of 478994
- 159751 string characters out of 5864751
+ 11449 strings out of 478994
+ 159763 string characters out of 5864750
  524571 words of memory out of 5000000
  28596 multiletter control sequences out of 15000+600000
  417121 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,16n,74p,1833b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0500.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on multi-channel-urg.pdf (18 pages, 741296 bytes).
+Output written on multi-channel-urg.pdf (18 pages, 687614 bytes).
 PDF statistics:
- 520 PDF objects out of 1000 (max. 8388607)
- 454 compressed objects within 5 object streams
- 172 named destinations out of 1000 (max. 500000)
+ 519 PDF objects out of 1000 (max. 8388607)
+ 453 compressed objects within 5 object streams
+ 173 named destinations out of 1000 (max. 500000)
  159 words of extra memory for PDF output out of 10000 (max. 10000000)
 
