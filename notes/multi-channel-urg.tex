@@ -329,41 +329,6 @@ The terms have the following meanings:
 	Z_{1,\text{tot}} H_0 &= \sum_{k_1,q_1,k_2,\sigma_2,l_1,l_2}\left(\epsilon_{k_1}^{l_1} - \epsilon_{q_1}^{l_1}\right) \epsilon_{k_2}^{l_2} \left(c^\dagger_{k_1, \uparrow, l_1}c_{q_1, \uparrow, l_1} - c^\dagger_{k_1, \downarrow, l_1}c_{q_1, \downarrow, l_1}\right) \hat n_{k_2,\sigma_2,l_2}\\
 \end{aligned}\end{equation}
 
-\section{Effective Hamiltonian for low-energy excitations: real space}
-We will obtain the theory for the low-energy excitations of the two-channel Kondo model by treating the hopping between the zeroth site and the first site as a perturbation. The zeroth site is just the spin-exchange part of the Hamiltonian:
-\begin{equation}\begin{aligned}
-	H_0 = J \vec{S_d}\cdot\vec{s}_\text{tot}, V = -t \sum_{\sigma,l}c^\dagger_{0\sigma,l}c_{1\sigma,l} + \text{h.c.}
-\end{aligned}\end{equation}
-We will remove this single-particle interaction through a Schrieffer-Wolf transformation and generate higher order interactions in the process. The renormalization due to to this process, up to second order, is given by
-\begin{equation}\begin{aligned}
-	\Delta H = V \frac{1}{E_\text{gs} - H_0}V
-\end{aligned}\end{equation}
-The two degenerate ground states are
-\begin{equation}\begin{aligned}
-	\ket{\Psi_\sigma} = \frac{1}{\sqrt 6} \left[\ket{\sigma, \overline \sigma,\overline \sigma} - \ket{\overline \sigma,\sigma,\sigma} - \ket{\overline \sigma,\overline \sigma,\sigma}\right], && \sigma=\pm 1
-\end{aligned}\end{equation}
-where \(\ket{\pm 1} = \ket{\uparrow},\ket{\downarrow}\) and the notation is as follows: the first label is for the impurity spin and the second and third labels are for the zeroth sites of channels 1 and channel 2 respectively. We will calculate the effective Hamiltonian in the subspace of a single ground state:
-\begin{equation}\begin{aligned}
-	\Delta H_\sigma = \ket{\Psi_\sigma}\bra{\Psi_\sigma}V \frac{1}{E_\text{gs} - H_0}V\ket{\Psi_\sigma}\bra{\Psi_\sigma}
-\end{aligned}\end{equation}
-Since the perturbation also acts on the first site (the site nearest to the zeroth site), we will need to expand the basis:
-\begin{equation}\begin{aligned}
-	\ket{\Psi_\sigma} = \frac{1}{\sqrt 6} \left[\ket{\sigma, \overline \sigma,\overline \sigma} - \ket{\overline \sigma,\sigma,\sigma} - \ket{\overline \sigma,\overline \sigma,\sigma}\right]\otimes\prod_{\alpha=\pm 1, l=1,2} \sum_{n^1_{\alpha,l}=0,1}\ket{n^1_{\alpha,l}}, && \sigma=\pm 1
-\end{aligned}\end{equation}
-Here, \(n^1_{\alpha,l}\) denotes the number of electrons of spin \(\alpha\) and channel index \(l\) on the first site.
-
-The action of the perturbation on the state is given by
-\begin{equation}\begin{aligned}
-	V\ket{\Psi_\sigma} = \left(-t \sum_{\beta,l}c^\dagger_{0\beta,l}c_{1\beta,l} + \text{h.c.}\right) \frac{1}{\sqrt 6} \left[\ket{\sigma, \overline \sigma,\overline \sigma} - \ket{\overline \sigma,\sigma,\sigma} - \ket{\overline \sigma,\overline \sigma,\sigma}\right]\otimes\prod_{\alpha=\pm 1, l=1,2} \sum_{n^1_{\alpha,l}=0,1}\ket{n^1_{\alpha,l}}
-\end{aligned}\end{equation}
-We will split the perturbation into parts: \(V = \sum_\sigma \left(v_\sigma + v_\sigma^\dagger\right) \), where \(v\) is the part that annihilates an electron on the first site.
-
-
-
-
-
-
-
 \section{Impurity Susceptibility from zero-mode fixed-point Hamiltonian}
 The zero-mode approximation of the fixed-point Hamiltonian is a star graph Hamiltonian:
 \begin{equation}\begin{aligned}
