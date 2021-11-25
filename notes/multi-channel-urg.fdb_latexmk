@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex multi-channel-urg"] 1637772994 "multi-channel-urg.aux" "multi-channel-urg.bbl" "multi-channel-urg" 1637774479
+["bibtex multi-channel-urg"] 1637811925 "multi-channel-urg.aux" "multi-channel-urg.bbl" "multi-channel-urg" 1637813064
   "/usr/share/texmf-dist/bibtex/bst/revtex/apsrev4-2.bst" 1617738001 69609 e9dea59f0e753ccda3ddc8f5806d846d ""
-  "multi-channel-urg.aux" 1637774479 5998 b33bb90b010c059082cdb915f131c6ef "pdflatex"
-  "multi-channel-urgNotes.bib" 1637774479 104 4d8bb863c86f3d7b03a471e9d4707f34 "pdflatex"
+  "multi-channel-urg.aux" 1637813063 6158 e02caf20345d3fbae0e4a2b5bd11d8ce "pdflatex"
+  "multi-channel-urgNotes.bib" 1637813063 104 4d8bb863c86f3d7b03a471e9d4707f34 "pdflatex"
   (generated)
   "multi-channel-urg.blg"
   "multi-channel-urg.bbl"
-["pdflatex"] 1637774477 "multi-channel-urg.tex" "multi-channel-urg.pdf" "multi-channel-urg" 1637774479
+["pdflatex"] 1637813063 "multi-channel-urg.tex" "multi-channel-urg.pdf" "multi-channel-urg" 1637813064
   "../numerics/chi_mchannel.pdf" 1637771747 127078 2010844392d5b68e9dcc5aaf73953859 ""
   "../numerics/free_energy_nonanaliticity.pdf" 1637774468 202711 3c557a9e2c94c78f25aeb24d212c20fd ""
   "../numerics/rg_flow_K=2.pdf" 1637771748 152345 fb1f14810d50fcac2b10955cd9817d28 ""
@@ -131,16 +131,16 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1617738065 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1637773748 5042091 e5b6f96046b6255cde6f56d334402ceb ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1637773708 2812684 55c1f4e9f4653bac9ae8a5c42eb4e2c3 ""
-  "multi-channel-urg.aux" 1637774479 5998 b33bb90b010c059082cdb915f131c6ef "pdflatex"
-  "multi-channel-urg.bbl" 1637772994 1982 35453d3875d823f0ec9445e740a573d9 "bibtex multi-channel-urg"
-  "multi-channel-urg.out" 1637774479 3751 fa12ccd1be2c4c6294fe0efa4a81ef54 "pdflatex"
-  "multi-channel-urg.tex" 1637774476 64733 c88403f75d5d851829ff29790616e77e ""
+  "multi-channel-urg.aux" 1637813063 6158 e02caf20345d3fbae0e4a2b5bd11d8ce "pdflatex"
+  "multi-channel-urg.bbl" 1637811925 1982 35453d3875d823f0ec9445e740a573d9 "bibtex multi-channel-urg"
+  "multi-channel-urg.out" 1637813063 4129 b8f60586348c4d942586e3ab358f157b "pdflatex"
+  "multi-channel-urg.tex" 1637813062 67574 20f675a3f97e22f1689c93f9f804ebd8 ""
   "rg_flow.pdf" 1637205701 8457 3bb063edc82743ebc99745c4660d4230 ""
   "rg_flow_pms.pdf" 1637205701 3437 db1a76c3e17bfdedce88395e45351e54 ""
   "rhomin_D.pdf" 1637205701 100357 dab06c106550d1cd15cf90319787aa50 ""
   (generated)
-  "multi-channel-urg.pdf"
-  "multi-channel-urg.out"
-  "multi-channel-urg.log"
   "multi-channel-urg.aux"
   "multi-channel-urgNotes.bib"
+  "multi-channel-urg.log"
+  "multi-channel-urg.pdf"
+  "multi-channel-urg.out"
