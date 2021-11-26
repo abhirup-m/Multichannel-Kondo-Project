@@ -1,13 +1,14 @@
 # Fdb version 3
-["bibtex multi-channel-urg"] 1637846876 "multi-channel-urg.aux" "multi-channel-urg.bbl" "multi-channel-urg" 1637846877
+["bibtex multi-channel-urg"] 1637940810 "multi-channel-urg.aux" "multi-channel-urg.bbl" "multi-channel-urg" 1637940933
   "/usr/share/texmf-dist/bibtex/bst/revtex/apsrev4-2.bst" 1617738001 69609 e9dea59f0e753ccda3ddc8f5806d846d ""
-  "multi-channel-urg.aux" 1637846877 6000 e578c74d833cb83492c8fc9062a052b9 "pdflatex"
-  "multi-channel-urgNotes.bib" 1637846877 104 4d8bb863c86f3d7b03a471e9d4707f34 "pdflatex"
+  "multi-channel-urg.aux" 1637940933 6318 3d75cd129befef6d8a3543b5965c6301 "pdflatex"
+  "multi-channel-urgNotes.bib" 1637940933 104 4d8bb863c86f3d7b03a471e9d4707f34 "pdflatex"
   (generated)
-  "multi-channel-urg.bbl"
   "multi-channel-urg.blg"
-["pdflatex"] 1637846876 "multi-channel-urg.tex" "multi-channel-urg.pdf" "multi-channel-urg" 1637846877
+  "multi-channel-urg.bbl"
+["pdflatex"] 1637940932 "multi-channel-urg.tex" "multi-channel-urg.pdf" "multi-channel-urg" 1637940933
   "../numerics/chi_mchannel.pdf" 1637763707 127078 2010844392d5b68e9dcc5aaf73953859 ""
+  "../numerics/entropy_comparison.pdf" 1637940925 124111 d6ccf8bea78776d0d81118190ac6da82 ""
   "../numerics/free_energy_nonanaliticity.pdf" 1637816138 202711 3c557a9e2c94c78f25aeb24d212c20fd ""
   "../numerics/rg_flow_K=2.pdf" 1637735594 152345 fb1f14810d50fcac2b10955cd9817d28 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1617738065 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -45,6 +46,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1617738065 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb" 1617738065 36094 798f80770b3b148ceedd006d487db67c ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1617738065 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1617738065 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1617738065 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1617738065 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1617738065 32734 69e00a6b65cedb993666e42eedb3d48f ""
@@ -131,16 +133,16 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1617738065 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1627447406 5065252 bcee0692f299aea3b1d13d4b7b7296ae ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1627447394 2812685 c5960af1705249fd1e77e94896ab4041 ""
-  "multi-channel-urg.aux" 1637846877 6000 e578c74d833cb83492c8fc9062a052b9 "pdflatex"
-  "multi-channel-urg.bbl" 1637846876 1982 35453d3875d823f0ec9445e740a573d9 "bibtex multi-channel-urg"
-  "multi-channel-urg.out" 1637846877 3755 c2d631df06e213933771df824fc655a3 "pdflatex"
-  "multi-channel-urg.tex" 1637846875 64735 babb4ad21fecdbbe8c8e10f771663fe2 ""
+  "multi-channel-urg.aux" 1637940933 6318 3d75cd129befef6d8a3543b5965c6301 "pdflatex"
+  "multi-channel-urg.bbl" 1637940810 1982 35453d3875d823f0ec9445e740a573d9 "bibtex multi-channel-urg"
+  "multi-channel-urg.out" 1637940933 3930 3503d66793481251638f980b58f8b4a3 "pdflatex"
+  "multi-channel-urg.tex" 1637940932 66041 262fd1c32fc28e106d77bdeda5e19682 ""
   "rg_flow.pdf" 1637556212 8457 3bb063edc82743ebc99745c4660d4230 ""
   "rg_flow_pms.pdf" 1637556212 3437 db1a76c3e17bfdedce88395e45351e54 ""
   "rhomin_D.pdf" 1637556212 100357 dab06c106550d1cd15cf90319787aa50 ""
   (generated)
   "multi-channel-urg.log"
-  "multi-channel-urg.out"
   "multi-channel-urg.aux"
+  "multi-channel-urg.out"
   "multi-channel-urgNotes.bib"
   "multi-channel-urg.pdf"

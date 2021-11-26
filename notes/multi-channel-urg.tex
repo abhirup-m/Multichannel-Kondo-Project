@@ -76,7 +76,7 @@ The operators \(c^\dagger_{k\alpha}\) and its conjugate can be brought together 
 \begin{equation}\begin{aligned}
 	\sum_k \frac{1 - \hat n_{k\alpha l_1}}{\left(\omega - D/2 -\epsilon_k/2 + J/4\right)^2} =  \rho\int \frac{d\epsilon\left[1 - \hat n(\epsilon)_{\alpha l_1}\right] }{\left(\omega - D/2 -\epsilon/2 + J/4\right)^2} = \rho\int_0^{D-2\left( \omega + J/4 \right) } \frac{d\epsilon}{\left(\omega - D/2 -\epsilon/2 + J/4\right)^2}
 \end{aligned}\end{equation}
-The integration goes over positive energies only because of the \(1 - \hat n\) operator; the upper limit of the integration is chosen so as to make the denominator double, because this preserves the symmetry of the denominator and this is what happens in poor man's scaling. Performing the integration gives
+The integration limits include only the positive energies, because of the \(1 - \hat n\) operator; the upper limit of the integration is chosen so as to make the denominator double, because this preserves the symmetry of the denominator. Performing the integration gives
 \begin{equation}\begin{aligned}
 	\sum_k \frac{1 - \hat n_{k\alpha l_1}}{\left(\omega - D/2 -\epsilon_k/2 + J/4\right)^2} = -\frac{1}{2}\frac{\rho}{\omega - D/2 + J/4}
 \end{aligned}\end{equation}
@@ -96,8 +96,8 @@ The spin product can now be carried out:
 \end{aligned}\end{equation}
 The renormalization becomes
 \begin{equation}\begin{aligned}
-	\Delta H_1 = c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c = -\frac{1}{2}\frac{J^3 n(D) \rho K}{\omega - D/2 + J/4}\frac{1}{2}\left( -\frac{1}{4} \right) \sum_{k_1,k_2,\alpha_1,\alpha_2,b} S_d^b s^b_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}\\
-=\frac{1}{16}\frac{J^3 n(D) \rho K}{\omega - D/2 + J/4} \sum_{k_1,k_2,\alpha_1,\alpha_2} \vec{S_d}\cdot\vec{s}_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}
+	\Delta H_1 = c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c = -\frac{1}{2}\frac{J^3 n(D) \rho K}{\omega - D/2 + J/4}\frac{1}{2}\left( -\frac{1}{4} \right) \sum_{k_1,k_2,\alpha_1,\alpha_2,b,l_2} S_d^b s^b_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}\\
+=\frac{1}{16}\frac{J^3 n(D) \rho K}{\omega - D/2 + J/4} \sum_{k_1,k_2,\alpha_1,\alpha_2,l_2} \vec{S_d}\cdot\vec{s}_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}
 \end{aligned}\end{equation}
 
 \subsubsection{Calculation of second term}
@@ -543,10 +543,28 @@ The first derivative of the impurity free energy is therefore discontinuous as \
 
 The non-analyticity for \(K>1\) occurs because the magnetic field is able to flip the ground state. For example, for \(K=2\), the states in question are \(\ket{M=1, m=-1,0}\). For \(h>0\), the ground state occurs in the subspace \(\ket{S_d^z=1/2, m=-1},\ket{S_d^z=-1/2,m=0}\). If we now flip the magnetic field, the ground state subspace flips to \(\ket{S_d^z=1/2, m=0},\ket{S_d^z=-1/2,m=1}\). Instead, if we look at the case of \(K=1\), the ground state is in the subspace of \(\ket{S_d^z=1/2,m=-1/2},\ket{S_d^z=-1/2, m=1/2}\), and since there is only this one subspace, the ground state is independent of the field. From this discussion, it is clear that the non-analyticity appears because there are multiple values of \(m \in [-M, M-1]\) in the ground state manifold, which means that it is the ground state degeneracy that causes the non-analyticity.
 
-
-
-
-
+\section{Thermal entropy at \(T=0\)}
+The thermal entropy at temperature \(T\) is given by
+\begin{equation}\begin{aligned}
+	S(T) = -k_B \sum_{n}P_n \ln P_n
+\end{aligned}\end{equation}
+where \(n\) sums over all eigenstates of the system. The state \(n\) is understood to have an energy \(E_n\). \(P_n\) is the probability to find the system in the state \(n\) from a canonical ensemble at temperature \(T\). This probability is given by
+\begin{equation}\begin{aligned}
+	P_n = \frac{e^{-\beta E_n}}{Z}
+\end{aligned}\end{equation}
+where \(Z = \sum_n d_n e^{-\beta E_n}\) and \(d_n\) is the degeneracy of the state \(E_n\). Substituting this gives for the entropy:
+\begin{equation}\begin{aligned}
+	S(T) = -k_B \sum_{n}\frac{e^{-\beta E_n}}{Z} \ln \frac{e^{-\beta E_n}}{Z}
+\end{aligned}\end{equation}
+Taking the limit of \(\beta \to \infty\) gives \(Z \to d_\text{gs}e^{-\beta E_\text{gs}}\):
+\begin{equation}\begin{aligned}
+	S(T) = -k_B \frac{d_\text{gs} e^{-\beta E_\text{gs}}}{d_\text{gs}e^{-\beta E_\text{gs}}} \ln \frac{e^{-\beta E_\text{gs}}}{d_\text{gs}e^{-\beta E_\text{gs}}} = k_B \ln d_\text{gs}
+\end{aligned}\end{equation}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../numerics/entropy_comparison.pdf}
+	\caption{Comparison of star graph zero temperature entropy with CFT/Bethe ansatz formula}
+\end{figure}
 
 \appendix
 \clearpage
