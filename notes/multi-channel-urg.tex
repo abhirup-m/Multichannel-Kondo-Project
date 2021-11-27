@@ -544,30 +544,29 @@ The first derivative of the impurity free energy is therefore discontinuous as \
 The non-analyticity for \(K>1\) occurs because the magnetic field is able to flip the ground state. For example, for \(K=2\), the states in question are \(\ket{M=1, m=-1,0}\). For \(h>0\), the ground state occurs in the subspace \(\ket{S_d^z=1/2, m=-1},\ket{S_d^z=-1/2,m=0}\). If we now flip the magnetic field, the ground state subspace flips to \(\ket{S_d^z=1/2, m=0},\ket{S_d^z=-1/2,m=1}\). Instead, if we look at the case of \(K=1\), the ground state is in the subspace of \(\ket{S_d^z=1/2,m=-1/2},\ket{S_d^z=-1/2, m=1/2}\), and since there is only this one subspace, the ground state is independent of the field. From this discussion, it is clear that the non-analyticity appears because there are multiple values of \(m \in [-M, M-1]\) in the ground state manifold, which means that it is the ground state degeneracy that causes the non-analyticity.
 
 \section{Thermal entropy at \(T=0\)}
-The thermal entropy at temperature \(T\) is given by
+Given the Helmholtz free energy \(F = -k_B T \ln Z = - \frac{1}{\beta} \ln\sum_n e^{-\beta E_n}\), the thermal entropy at temperature \(T\) is given by
 \begin{equation}\begin{aligned}
-	S(T) = -k_B \sum_{n}P_n \ln P_n
+	S(T) = - \frac{\partial{F}}{\partial{T}} = k_B \ln\sum_n e^{-\beta E_n} + \frac{\sum_n E_n e^{-\beta E_n}}{T \sum_n e^{-\beta E_n}}
 \end{aligned}\end{equation}
-where \(n\) sums over all eigenstates of the system. The state \(n\) is understood to have an energy \(E_n\). \(P_n\) is the probability to find the system in the state \(n\) from a canonical ensemble at temperature \(T\). This probability is given by
+In the limit of \(T \to 0\), only the lowest energy state \(E_\text{gs}\) will survive. Assuming this state has a degeneracy \(d_\text{gs}\), we have
 \begin{equation}\begin{aligned}
-	P_n = \frac{e^{-\beta E_n}}{Z}
+	S(T \to 0) = k_B \ln\left(d_\text{gs} e^{-\beta E_\text{gs}}\right) + \frac{d_\text{gs} E_\text{gs}e^{-\beta E_\text{gs}}}{T d_\text{gs} e^{-\beta E_\text{gs}}} = k_B \ln d_\text{gs} - \frac{1}{T}E_\text{gs} + \frac{1}{T}E_\text{gs} = k_B \ln d_\text{gs}
 \end{aligned}\end{equation}
-where \(Z = \sum_n d_n e^{-\beta E_n}\) and \(d_n\) is the degeneracy of the state \(E_n\). Substituting this gives for the entropy:
+This is a general result that holds for any system with a \(d_\text{gs}\)-fold degenerate ground state. For the star graph problem, we have a \(K-\)fold degenerate ground state, so the \(T=0\) entropy of the star graph Hamiltonian with \(K\) outer spins is
 \begin{equation}\begin{aligned}
-	S(T) = -k_B \sum_{n}\frac{e^{-\beta E_n}}{Z} \ln \frac{e^{-\beta E_n}}{Z}
+	S(T\to 0) = k_B \ln K
 \end{aligned}\end{equation}
-Taking the limit of \(\beta \to \infty\) gives \(Z \to d_\text{gs}e^{-\beta E_\text{gs}}\):
-\begin{equation}\begin{aligned}
-	S(T) = -k_B \frac{d_\text{gs} e^{-\beta E_\text{gs}}}{d_\text{gs}e^{-\beta E_\text{gs}}} \ln \frac{e^{-\beta E_\text{gs}}}{d_\text{gs}e^{-\beta E_\text{gs}}} = k_B \ln d_\text{gs}
-\end{aligned}\end{equation}
+
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.6\textwidth]{../numerics/entropy_comparison.pdf}
+	\includegraphics[width=0.5\textwidth]{../numerics/entropy_comparison.pdf}
 	\caption{Comparison of star graph zero temperature entropy with CFT/Bethe ansatz formula}
 \end{figure}
 
-\appendix
+Another related problem for which this result holds is the Ising model on a 1D chain. The partition function for that problem is \(Z = \lambda_1^N + \lambda_2^N\), where \(\lambda_{1,2} = e^{\beta J} \pm e^{-\beta J} \) are the eigenvalues of the \(T-\)matrix and \(N\) is the number of particles. As we come to \(T \to 0\), we have \(\lambda_{1,2} \simeq e^{\beta J}\) and \(Z \simeq 2 e^{\beta N J}\), so \(F = -k_B T \ln 2 - N J\) and the entropy becomes \(S = - \partial_T F = k_B \ln 2\). Note that the factor of 2 in \(Z\) is the degeneracy \(d_\text{gs}\) described above.
+
 \clearpage
+\appendix
 \section{URG analysis of the single-channel Kondo model}
 \label{1KondoURG}
 \begin{equation}\begin{aligned}
