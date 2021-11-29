@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.24)  27 NOV 2021 15:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.7.28)  29 NOV 2021 16:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -413,98 +413,109 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `superscript' on input line 106.
 
 [3]
-<rg_flow_pms.pdf, id=126, 379.91098pt x 103.77826pt>
+<rg_flow_pms.pdf, id=130, 379.91098pt x 103.77826pt>
 File: rg_flow_pms.pdf Graphic file (type pdf)
 <use rg_flow_pms.pdf>
 Package pdftex.def Info: rg_flow_pms.pdf  used on input line 134.
 (pdftex.def)             Requested size: 203.99689pt x 55.72429pt.
-<./rg_flow.pdf, id=128, 763.4733pt x 129.39258pt>
+<./rg_flow.pdf, id=132, 763.4733pt x 129.39258pt>
 File: ./rg_flow.pdf Graphic file (type pdf)
 <use ./rg_flow.pdf>
 Package pdftex.def Info: ./rg_flow.pdf  used on input line 140.
 (pdftex.def)             Requested size: 356.99844pt x 60.50255pt.
-<../numerics/rg_flow_K=2.pdf, id=130, 1186.10744pt x 557.45404pt>
+<../numerics/rg_flow_K=2.pdf, id=134, 1186.10744pt x 557.45404pt>
 File: ../numerics/rg_flow_K=2.pdf Graphic file (type pdf)
 <use ../numerics/rg_flow_K=2.pdf>
 Package pdftex.def Info: ../numerics/rg_flow_K=2.pdf  used on input line 156.
 (pdftex.def)             Requested size: 408.00156pt x 191.75194pt.
-<./rhomin_D.pdf, id=132, 1045.97293pt x 660.47093pt>
+<./rhomin_D.pdf, id=136, 1045.97293pt x 660.47093pt>
 File: ./rhomin_D.pdf Graphic file (type pdf)
 <use ./rhomin_D.pdf>
 Package pdftex.def Info: ./rhomin_D.pdf  used on input line 164.
 (pdftex.def)             Requested size: 255.0pt x 161.0156pt.
+ [4 <./rg_flow_pms.pdf> <./rg_flow.pdf
+
+pdfTeX warning: pdflatex (file ./rg_flow.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [5 <../numerics/rg_flow_K=2.pdf> <./rhomin_D.pdf>]
+<../numerics/irr_Jp_K=3.pdf, id=199, 617.24945pt x 484.65962pt>
+File: ../numerics/irr_Jp_K=3.pdf Graphic file (type pdf)
+<use ../numerics/irr_Jp_K=3.pdf>
+Package pdftex.def Info: ../numerics/irr_Jp_K=3.pdf  used on input line 225.
+(pdftex.def)             Requested size: 229.49844pt x 180.2013pt.
+<../numerics/irr_Jp_K=50.pdf, id=200, 644.76657pt x 484.65962pt>
+File: ../numerics/irr_Jp_K=50.pdf Graphic file (type pdf)
+<use ../numerics/irr_Jp_K=50.pdf>
+Package pdftex.def Info: ../numerics/irr_Jp_K=50.pdf  used on input line 226.
+(pdftex.def)             Requested size: 229.49844pt x 172.51018pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 172.
+(hyperref)                removing `math shift' on input line 234.
 
-[4 <./rg_flow_pms.pdf> <./rg_flow.pdf
-
-pdfTeX warning: pdflatex (file ./rg_flow.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [5 <../numerics/rg_flow_K=2.pdf> <./rhomin_D.pdf>] [6]
-Overfull \hbox (17.2835pt too wide) detected at line 267
-[]
- []
-
-[7] [8]
-Overfull \hbox (2.58131pt too wide) detected at line 322
+[6] [7 <../numerics/irr_Jp_K=3.pdf> <../numerics/irr_Jp_K=50.pdf>] [8]
+Overfull \hbox (17.2835pt too wide) detected at line 329
 []
  []
 
 [9] [10]
-Overfull \hbox (20.70331pt too wide) detected at line 409
+Overfull \hbox (2.58131pt too wide) detected at line 384
+[]
+ []
+
+[11] [12]
+Overfull \hbox (20.70331pt too wide) detected at line 471
 [][][]
  []
 
-<../numerics/chi_mchannel.pdf, id=289, 985.45987pt x 660.47093pt>
+<../numerics/chi_mchannel.pdf, id=329, 985.45987pt x 660.47093pt>
 File: ../numerics/chi_mchannel.pdf Graphic file (type pdf)
 <use ../numerics/chi_mchannel.pdf>
-Package pdftex.def Info: ../numerics/chi_mchannel.pdf  used on input line 413.
+Package pdftex.def Info: ../numerics/chi_mchannel.pdf  used on input line 475.
 (pdftex.def)             Requested size: 408.00156pt x 273.44533pt.
-[11] [12 <../numerics/chi_mchannel.pdf>]
-Overfull \hbox (18.21228pt too wide) detected at line 466
+[13] [14 <../numerics/chi_mchannel.pdf>]
+Overfull \hbox (18.21228pt too wide) detected at line 528
 [][][]
  []
 
-[13]
-Overfull \hbox (9.97339pt too wide) detected at line 485
+
+Overfull \hbox (9.97339pt too wide) detected at line 547
 [][][]
  []
 
-[14]
-<../numerics/free_energy_nonanaliticity.pdf, id=349, 1010.65335pt x 627.75024pt>
+[15] [16]
+<../numerics/free_energy_nonanaliticity.pdf, id=392, 1010.65335pt x 627.75024pt>
 File: ../numerics/free_energy_nonanaliticity.pdf Graphic file (type pdf)
 <use ../numerics/free_energy_nonanaliticity.pdf>
-Package pdftex.def Info: ../numerics/free_energy_nonanaliticity.pdf  used on input line 540.
+Package pdftex.def Info: ../numerics/free_energy_nonanaliticity.pdf  used on input line 602.
 (pdftex.def)             Requested size: 306.00311pt x 190.06984pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 546.
+(hyperref)                removing `math shift' on input line 608.
 
-[15]
-<../numerics/entropy_comparison.pdf, id=362, 652.68365pt x 515.34323pt>
+[17 <../numerics/free_energy_nonanaliticity.pdf>]
+<../numerics/entropy_comparison.pdf, id=414, 652.68365pt x 515.34323pt>
 File: ../numerics/entropy_comparison.pdf Graphic file (type pdf)
 <use ../numerics/entropy_comparison.pdf>
-Package pdftex.def Info: ../numerics/entropy_comparison.pdf  used on input line 562.
+Package pdftex.def Info: ../numerics/entropy_comparison.pdf  used on input line 624.
 (pdftex.def)             Requested size: 255.0pt x 201.34477pt.
- [16 <../numerics/free_energy_nonanaliticity.pdf>] [17 <../numerics/entropy_comparison.pdf>] [18] (./multi-channel-urg.bbl) [19] (./multi-channel-urg.aux)
+ [18 <../numerics/entropy_comparison.pdf>] [19] (./multi-channel-urg.bbl) [20] (./multi-channel-urg.aux)
 Package rerunfilecheck Info: File `multi-channel-urg.out' has not changed.
-(rerunfilecheck)             Checksum: 3503D66793481251638F980B58F8B4A3;3930.
+(rerunfilecheck)             Checksum: A77DC31707A3DE776A8AB2AB275F99B9;4092.
  ) 
 Here is how much of TeX's memory you used:
- 11463 strings out of 478994
- 160084 string characters out of 5864750
- 525571 words of memory out of 5000000
- 28603 multiletter control sequences out of 15000+600000
+ 11489 strings out of 478994
+ 160634 string characters out of 5864751
+ 517600 words of memory out of 5000000
+ 28616 multiletter control sequences out of 15000+600000
  417121 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,16n,74p,1833b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0500.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on multi-channel-urg.pdf (19 pages, 725847 bytes).
+Output written on multi-channel-urg.pdf (20 pages, 781664 bytes).
 PDF statistics:
- 550 PDF objects out of 1000 (max. 8388607)
- 481 compressed objects within 5 object streams
- 179 named destinations out of 1000 (max. 500000)
- 172 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 588 PDF objects out of 1000 (max. 8388607)
+ 515 compressed objects within 6 object streams
+ 190 named destinations out of 1000 (max. 500000)
+ 190 words of extra memory for PDF output out of 10000 (max. 10000000)
 

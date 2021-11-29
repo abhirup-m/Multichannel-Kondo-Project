@@ -1,4 +1,4 @@
-PWD /home/kirito/storage/work/Multi-channel-Kondo-URG/notes
+PWD /home/abhirup/work/Multi-channel Kondo URG/notes
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT multi-channel-urg.tex
@@ -679,6 +679,16 @@ INPUT ./rhomin_D.pdf
 INPUT ./rhomin_D.pdf
 INPUT ./rhomin_D.pdf
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
+INPUT ../numerics/irr_Jp_K=3.pdf
+INPUT ../numerics/irr_Jp_K=3.pdf
+INPUT ../numerics/irr_Jp_K=3.pdf
+INPUT ../numerics/irr_Jp_K=3.pdf
+INPUT ../numerics/irr_Jp_K=3.pdf
+INPUT ../numerics/irr_Jp_K=50.pdf
+INPUT ../numerics/irr_Jp_K=50.pdf
+INPUT ../numerics/irr_Jp_K=50.pdf
+INPUT ../numerics/irr_Jp_K=50.pdf
+INPUT ../numerics/irr_Jp_K=50.pdf
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecti0700.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecti0500.tfm
