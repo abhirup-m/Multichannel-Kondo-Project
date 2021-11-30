@@ -6,16 +6,63 @@
 \author{Abhirup Mukherjee}
 \date{\today}
 \maketitle
-\section{Derivation of URG equations for the multi-channel Kondo model}
-
-\subsection{Introduction}
-The multi-channel Kondo model \cite{Noz_blandin_1980,Gan_Andrei_Coleman_1993,emery_kivelson,Gan_mchannel_1994,Tsvelick_Weigmann_mchannel_1984,Tsvelick_weigmann_mchannel_1985,parcollet_olivier_large_N,kimura_taro_Su_N_kondo,PhysRevB.73.224445,cox_jarrell_two_channel_rev,affleck_1991_overscreen,Coleman_tsvelik} is described by the Hamiltonian
+\section{Introduction of the Hamiltonian and symmetries of the zero mode}
+The isotropic multi-channel Kondo model \cite{Noz_blandin_1980,Gan_Andrei_Coleman_1993,emery_kivelson,Gan_mchannel_1994,Tsvelick_Weigmann_mchannel_1984,Tsvelick_weigmann_mchannel_1985,parcollet_olivier_large_N,kimura_taro_Su_N_kondo,PhysRevB.73.224445,cox_jarrell_two_channel_rev,affleck_1991_overscreen,Coleman_tsvelik} is described by the Hamiltonian
 \begin{equation}\begin{aligned}
 	H = \sum_{k,\alpha,\gamma}\epsilon_{k}^\gamma \hat n^\gamma_{k\alpha} + J\sum_{kk^\prime,\gamma} \vec{S_d}\cdot\vec{s}_{\alpha\alpha^\prime}{c^\gamma_{k\alpha}}^\dagger c^\gamma_{k^\prime\alpha^\prime}~.
 \end{aligned}\end{equation}
-It is mostly identical to the single-channel Kondo model: \(k,k^\prime\) sum over the momentum states, \(\alpha,\alpha^\prime\) sum over the spin indices and \(\gamma\) sums over the various channels. \(\vec S_d, \vec s\) are the impurity and conduction bath spin vectors. The renormalization at step \(j\) \cite{anirbanurg1,anirbanurg2,anirbanmott1,anirbanmott2,siddharthacpi,santanukagome} is given by
+In the above equation, \(k,k^\prime\) sum over the momentum states, \(\alpha,\alpha^\prime\) sum over the spin indices and \(\gamma\) sums over the various channels. \(\vec S_d, \vec s\) are the impurity and conduction bath spin vectors. The presence of a common spin-exchange coupling \(J\) for all the channels is what makes the problem isotropic with respect to the channels.
+
+The zero mode of this Hamiltonian is obtained by keeping only the central component of the Fourier transform of the kinetic energy part:
 \begin{equation}\begin{aligned}
-	\Delta H_j = \left(c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c + T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T\right), && c^\dagger T = J \sum_{k < \Lambda_j, \alpha}\vec{S_d}\cdot\vec{s}_{\beta \alpha}c^\dagger_{q\beta}c_{k\alpha}, &H_D = \epsilon_q \tau_{q\beta} + J S_d^z s_q^z
+	\epsilon(\vec r) \simeq \delta_{\vec r,0}\epsilon(\vec r = 0) \implies \epsilon_{\vec k} = \sum_{\vec r}\epsilon(\vec r) e^{i \vec{k}\cdot\vec{r}} = \epsilon(\vec r=0) = \sum_q \epsilon_{\vec q}
+\end{aligned}\end{equation}
+Assuming the dispersion already includes the chemical potential \(\mu\), we have 
+\begin{equation}\begin{aligned}
+\sum_q \epsilon_{\vec q} = \rho \Delta \epsilon\sum_{\epsilon=\epsilon_F-D}^{\epsilon_F + D} \left(\epsilon - \mu\right) = \rho\Delta \epsilon\left(\epsilon_F - \mu\right)
+\end{aligned}\end{equation}
+If we set the chemical potential at the Fermi surface, this summation vanishes.
+\begin{equation}\begin{aligned}
+	\epsilon_{\vec k} =  \rho\Delta \epsilon\left(\epsilon_F - \mu\right) = 0
+\end{aligned}\end{equation}
+and the zero mode Hamiltonian is then just the spin-exchange part of the Hamiltonian:
+\begin{equation}\begin{aligned}
+	H_\text{zero mode} = J\sum_{kk^\prime,\gamma} \vec{S_d}\cdot\vec{s}_{\alpha\alpha^\prime}{c^\gamma_{k\alpha}}^\dagger c^\gamma_{k^\prime\alpha^\prime}~.
+\end{aligned}\end{equation}
+We can make one more identification: the sum over the spins in momentum space amount to a local interaction at the zeroth sites of the indicates channels: \(\sum_k {c^\gamma_{k\alpha}}^\dagger = {c^\gamma_{\vec r=0, \alpha}}^\dagger\), This suggests we shoud define spin operators for the zeroth sites of the channels:
+\begin{equation}\begin{aligned}
+	\sum_{kk^\prime} {s}^a_{\alpha\alpha^\prime}{c^\gamma_{k\alpha}}^\dagger c^\gamma_{k^\prime\alpha^\prime} = {s}^a_{\alpha\alpha^\prime}{c^\gamma_{0\alpha}}^\dagger c^\gamma_{0\alpha^\prime} = s_\gamma^a
+\end{aligned}\end{equation}
+In the terms of the local spin operators \(\vec s_\gamma = (s_\gamma^x,s_\gamma^y,s_\gamma^z)\), we can define the total spin of the zero mode of the bath: \(\vec s_\text{tot} = \sum_\gamma \vec s_\gamma\) and the zero mode Hamiltonian then takes the simpler form
+\begin{equation}\begin{aligned}
+	H_\text{zero mode} = J \vec{S_d}\cdot\vec{s}_\text{tot}
+\end{aligned}\end{equation}
+
+This zero mode Hamiltonian commutes with a number of operators, revealing various symmetries of the problem. The first such operators is \(s_\text{tot}^2\). Henceforth we will drop the label \(\text{zero mode}\). To see the commuation, note that \(s_\text{tot}^2\) can be written as \(s_\text{tot}^2 = \sum_{i=x,y,z}\left(s_\text{tot}^i\right)^2\). This then gives
+\begin{equation}\begin{aligned}
+\left[s_\text{tot}^2, H\right] = \left[\sum_{i=x,y,z}{s^i_\text{tot}}^2, J \sum_{i=x,y,z} S_d^i s^i_\text{tot}\right] = \sum_{i,j}J S_d^i \left\{s_\text{tot}^i, \left[s_\text{tot}^i,s_\text{tot}^j\right]\right\} = \sum_{i,j}J S_d^i \left\{s_\text{tot}^i, i \epsilon^{ijk}s^k_\text{tot}\right\} = 0
+\end{aligned}\end{equation}
+The total spin angular  momentum operator \(S^2 = \left(\vec S_d + \vec s_\text{tot}\right)^2 \) also commutes with the Hamiltonian. To see this, note that we can rewrite the operator as
+\begin{equation}\begin{aligned}
+	S^2 = \left(\vec S_d + \vec s_\text{tot}\right)^2 = \frac{3}{4} + s_\text{tot}\left(s_\text{tot} + 1\right) + \frac{2}{J} H
+\end{aligned}\end{equation}
+Since we already know that \(s_\text{tot}\) commutes with \(H\), we have that \(\left[S^2, H\right] = 0\).
+
+One final operator that we will look at is the spin parity operator \(\pi^a = S_d^a \otimes_{i=1}^K s_i^a\).
+\begin{equation}\begin{aligned}
+	\left[H, \pi^a\right] = J\sum_{b,j} \left[S_d^b s_j^b, S_d^a \otimes_{i=1}^K s_i^a\right] = \sum_{bj}\left(S_d^b S_d^a s^b_j s^a_j - S_d^a S_d^b s^a_j s^b_j\right) \otimes_{i<j}s_i^a \otimes_{i>j}s^a_i = 0
+\end{aligned}\end{equation}
+
+\section{Derivation of URG equations for the multi-channel Kondo model}
+
+\subsection{URG procedure}
+The URG method \cite{anirbanurg1,anirbanurg2,anirbanmott1,anirbanmott2,siddharthacpi,santanukagome} involves applying unitary transformations to decouple high energy degrees of freedom. The renormalization at step \(j\) is given by
+\begin{equation}\begin{aligned}
+	\Delta H_j = \left(c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c + T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T\right)~,
+\end{aligned}\end{equation}
+where \(c^\dagger T\) represents the off-diagonal part of the Hamiltonian with respect to the fluctuations of the electron we are decoupling and \(H_D\) is the diagonal part with respect to the same electron. Assuming we are decoupling a particular electron \(q\beta\), we have
+\begin{equation}\begin{aligned}
+	c^\dagger T = J \sum_{k < \Lambda_j, \alpha}\vec{S_d}\cdot\vec{s}_{\beta \alpha}c^\dagger_{q\beta}c_{k\alpha}, && H_D = \epsilon_q \tau_{q\beta} + J S_d^z s_q^z
 \end{aligned}\end{equation}
 Usually we treat the \(\hat \omega\) as number(s) and study the renormalization in the couplings as functions of the quantum fluctuation scales. Each value of the fluctuation scale defines an eigendirection of \(\hat \omega\). We have then essentially traded off the complexity in the non-commutation of the diagonal and off-diagonal terms for all the directions in the manifold of \(\hat \omega\).
 
