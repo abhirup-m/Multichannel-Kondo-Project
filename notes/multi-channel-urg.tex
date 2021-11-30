@@ -1,11 +1,6 @@
 \documentclass{revtex4-2}
 \usepackage{braket,amsmath,amssymb,graphicx,float,hyperref,paralist}
-% \usepackage[margin=0.2in,top=0.5in,bottom=0.5in]{geometry}
-\numberwithin{equation}{section}
 \allowdisplaybreaks
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-% \usepackage{ebgaramond}
 \begin{document}
 \title{Multi-channel Kondo model URG}
 \author{Abhirup Mukherjee}
@@ -14,11 +9,11 @@
 \section{Derivation of URG equations for the multi-channel Kondo model}
 
 \subsection{Introduction}
-The multi-channel Kondo model is described by the Hamiltonian
+The multi-channel Kondo model \cite{Noz_blandin_1980,Gan_Andrei_Coleman_1993,emery_kivelson,Gan_mchannel_1994,Tsvelick_Weigmann_mchannel_1984,Tsvelick_weigmann_mchannel_1985,parcollet_olivier_large_N,kimura_taro_Su_N_kondo,PhysRevB.73.224445,cox_jarrell_two_channel_rev,affleck_1991_overscreen,Coleman_tsvelik} is described by the Hamiltonian
 \begin{equation}\begin{aligned}
 	H = \sum_{k,\alpha,\gamma}\epsilon_{k}^\gamma \hat n^\gamma_{k\alpha} + J\sum_{kk^\prime,\gamma} \vec{S_d}\cdot\vec{s}_{\alpha\alpha^\prime}{c^\gamma_{k\alpha}}^\dagger c^\gamma_{k^\prime\alpha^\prime}~.
 \end{aligned}\end{equation}
-It is mostly identical to the single-channel Kondo model: \(k,k^\prime\) sum over the momentum states, \(\alpha,\alpha^\prime\) sum over the spin indices and \(\gamma\) sums over the various channels. \(\vec S_d, \vec s\) are the impurity and conduction bath spin vectors. The renormalization at step \(j\) is given by
+It is mostly identical to the single-channel Kondo model: \(k,k^\prime\) sum over the momentum states, \(\alpha,\alpha^\prime\) sum over the spin indices and \(\gamma\) sums over the various channels. \(\vec S_d, \vec s\) are the impurity and conduction bath spin vectors. The renormalization at step \(j\) \cite{anirbanurg1,anirbanurg2,anirbanmott1,anirbanmott2,siddharthacpi,santanukagome} is given by
 \begin{equation}\begin{aligned}
 	\Delta H_j = \left(c^\dagger T \frac{1}{\hat \omega - H_D}T^\dagger c + T^\dagger c \frac{1}{\hat \omega - H_D}c^\dagger T\right), && c^\dagger T = J \sum_{k < \Lambda_j, \alpha}\vec{S_d}\cdot\vec{s}_{\beta \alpha}c^\dagger_{q\beta}c_{k\alpha}, &H_D = \epsilon_q \tau_{q\beta} + J S_d^z s_q^z
 \end{aligned}\end{equation}
@@ -127,7 +122,7 @@ For \(D \gg J\), we can ignore the \(J\) in the denominator, and the equation re
 	\label{pms_mchannel}
 	\frac{\:\mathrm{d}J}{\:\mathrm{d}D} \simeq  \frac{J^2 \rho}{D}\left(\frac{1}{8}J\rho K - 1\right)
 \end{aligned}\end{equation}
-This equation has a stable fixed point at \(J^* = \frac{8}{\rho K}\).
+This equation has a stable fixed point at \(J^* = \frac{8}{\rho K}\). The value of the fixed point agrees with the poor man's scaling calculation in \cite{tripathi2018landau}, but differs from the value of \(\frac{2}{\rho K}\) obtained in other references \cite{Kuramoto1998,Kogan_2018} \textbf{[MOST PROBABLY THERE ARE OTHER REFERENCES]}.
 
 \begin{figure}[!htb]
 	\centering
@@ -195,7 +190,7 @@ We will first look at the special case of \(K=2\), the two channel Kondo model. 
 \begin{equation}\begin{aligned}
 	\frac{\Delta j_\pm}{|\Delta D|} = \frac{J_\pm \rho}{K J_*\left(D - J_*/4\right)}\left[- \left(j_+^2 + j_-^2\right) - 2J_* j_\mp\right]\\
 \end{aligned}\end{equation}
-For \(j_- < 0, j_+ > 0\), we have \(\Delta j_- < 0\). The coupling \(J_-\) therefore becomes irrelevant, and the problem reduces to the single-channel Kondo problem. We already know the URG equation for the single-channel Kondo problem:
+For \(j_- < 0, j_+ > 0\), we have \(\Delta j_- < 0\). The coupling \(J_-\) therefore becomes irrelevant. For small \(j_+\), we have \(j_+^2 < 2J_* |j_-|\)  and \(\Delta j_+ > 0\). This means that the isotropic fixed-point is repulsive under anisotropy \cite{Noz_blandin_1980}. The coupling \(j_+\) being relevant means we have a single-channel Kondo problem. We already know the non-perturbative URG equation for the single-channel Kondo problem:
 \begin{equation}\begin{aligned}
 	\frac{\Delta j_+}{|\Delta D|} = \frac{J_+^2 \rho}{D - J_+/4}~,
 \end{aligned}\end{equation}
@@ -434,6 +429,7 @@ The partition function is
 \end{aligned}\end{equation}
 where \(M_\text{max} = K/2\) for a \(K-\)channel Kondo model, and \(M_\text{min} = 0\)  if \(K\) is even, otherwise \(1/2\). This is yet not the complete partition function, because we have not accounted for the possibility that there multiple subspaces of \(M\). For example, the \(K=3\) case states can be obtained by adding the third spin-half onto the states \(S=0,1\). \(S=0\) gives \(s_\text{tot}=1/2\) and \(S=1\) gives \(s_\text{tot} = 1/2, 3/2\). So, \(s_\text{tot} = 1/2\) appears twice. These two subspaces are actually orthogonal, because the quantum numbers for the individual channels are different. We need to count the number of instances of a particular subspace \(s_\text{tot}=M\). It turns out that this number is given by
 \begin{equation}\begin{aligned}
+	\label{extra_degen}
 	r^K_M = {}^{K-1}C_{K/2 - M}
 \end{aligned}\end{equation}
 which means the correct partition function is
@@ -559,9 +555,9 @@ For \(K>1\), the Gibbs free energy at \(T=0\) becomes non-analytic under inserti
 \begin{equation}\begin{aligned}
 	F(h) = -\frac{1}{\beta}\ln Z(h) = -\frac{1}{\beta}\ln\sum_{E_n}e^{-\beta E_n}
 \end{aligned}\end{equation}
-At \(T \to 0\), only the most negative energy \(E_\text{min}\) survives. Assuming a non-degenerate ground state for \(h \neq 0\), the zero temperature free energy becomes
+At \(T \to 0\), only the most negative energy \(E_\text{min}\) survives. Assuming a \(d^\prime_\text{gs}-\)fold degenerate ground state for \(h \neq 0\), the zero temperature free energy becomes
 \begin{equation}\begin{aligned}
-	F(h\neq 0, T\to 0) = -\frac{1}{\beta}\ln e^{-\beta E_\text{min}} = E_\text{min}
+	F(h\neq 0, T\to 0) = -\frac{1}{\beta}\ln d^\prime_\text{gs}e^{-\beta E_\text{min}} = E_\text{min}- k_B T\ln d^\prime_\text{gs}
 \end{aligned}\end{equation}
 In the star graph Hamiltonian with \(K-\)channels and a global magnetic field on the impurity
 \begin{equation}\begin{aligned}
@@ -569,8 +565,8 @@ In the star graph Hamiltonian with \(K-\)channels and a global magnetic field on
 \end{aligned}\end{equation}
 the energy eigenvalues for a particular value of \(s_\text{tot}=M\) are given by
 \begin{equation}\begin{aligned}
-	&\frac{J}{2}M \pm h\left(M + \frac{1}{2}\right),\\
-	&-\frac{J}{4}\pm \frac{J}{2}\left(M + \frac{1}{2}\right) + h\left( m + \frac{1}{2} \right), m \in \left[-M, M-1\right] 
+	(a) \quad&\frac{J}{2}M \pm h\left(M + \frac{1}{2}\right)\\
+	(b) \quad&-\frac{J}{4}\pm \frac{J}{2}\left(M + \frac{1}{2}\right) + h\left( m + \frac{1}{2} \right), m \in \left[-M, M-1\right] 
 \end{aligned}\end{equation}
 For small \(h\), the ground state will be \(-\frac{J}{4}- \frac{J}{2}\left(M + \frac{1}{2}\right) + h\left(m_\text{min} + \frac{1}{2} \right)\) for a particular value \(m_\text{min}\) that minimizes this energy. This specific value will depend on the sign of \(h\):
 \begin{equation}\begin{aligned}
@@ -579,6 +575,7 @@ For small \(h\), the ground state will be \(-\frac{J}{4}- \frac{J}{2}\left(M + \
 		M-1,& h< 0
 	\end{cases}
 \end{aligned}\end{equation}
+which means \(E_\text{min} = -\frac{J}{2}\left( M + 1 \right) - |h|\left(M - \frac{1}{2}\right)\). We also know, from eq.~\ref{extra_degen}, that \(d^\prime_\text{gs} = {}^{K-1}C_{K/2 - K/2} = 1\).
 The free energy for a non-zero field is therefore
 \begin{equation}\begin{aligned}
 	F(h\neq 0, T\to 0) = -\frac{J}{2}\left( M + 1 \right) - |h|\left(M - \frac{1}{2}\right)
@@ -611,20 +608,29 @@ In the limit of \(T \to 0\), only the lowest energy state \(E_\text{gs}\) will s
 \begin{equation}\begin{aligned}
 	S(T \to 0) = k_B \ln\left(d_\text{gs} e^{-\beta E_\text{gs}}\right) + \frac{d_\text{gs} E_\text{gs}e^{-\beta E_\text{gs}}}{T d_\text{gs} e^{-\beta E_\text{gs}}} = k_B \ln d_\text{gs} - \frac{1}{T}E_\text{gs} + \frac{1}{T}E_\text{gs} = k_B \ln d_\text{gs}
 \end{aligned}\end{equation}
-This is a general result that holds for any system with a \(d_\text{gs}\)-fold degenerate ground state. For the star graph problem, we have a \(K-\)fold degenerate ground state, so the \(T=0\) entropy of the star graph Hamiltonian with \(K\) outer spins is
+This is a general result that holds for any system with a \(d_\text{gs}\)-fold degenerate ground state. For the star graph problem, we have a \(K-\)fold degenerate ground state, so the \(T=0\) entropy of the star graph Hamiltonian with \(K\) outer spins is \(S(T\to 0) = k_B \ln K\). The impurity contribution to the total entropy is obtained by subtracting the entropy of the non-interacting bath. But we know that the entropy of a free Fermi gas vanishes at low temperatures. The impurity contribution is therefore
 \begin{equation}\begin{aligned}
-	S(T\to 0) = k_B \ln K
+	\label{res_entropy}
+	S_\text{imp}(T\to 0) = k_B \ln K
 \end{aligned}\end{equation}
+
+We wish to point out that this value is different from the "standard" result 
+\begin{equation}\begin{aligned}
+\label{cft_entropy}
+S = \ln 2\cos \frac{\pi}{K+2}
+\end{aligned}\end{equation}
+obtained from other methods like the Bethe ansatz (BA) and conformal field theory (CFT) calculations \cite{Gan_Andrei_Coleman_1993,andrei_destri_1984,Tsvelick_weigmann_mchannel_1985,sacramento1989,emery_kivelson,affleck_1991_overscreen}. The difference is not only in the value but also in the origin. Eq.~\ref{res_entropy} indicates the thermal entropy coming purely from the quantum mechanical degeneracy of the star graph problem (which is the zero mode of the full multi-channel Kondo problem), while the result eq.~\ref{cft_entropy} presumably arises from the lowest-lying excitations on top of the zero mode arising from the conduction bath \(k-\)states. Another difference lies in the fact that while eq.~\ref{res_entropy} holds true independent of system size, eq.~\ref{cft_entropy} is correct only in the thermodynamic limit and only if the limit of system \(N \to \infty\) is taken prior to taking the limit of temperature \(T \to 0\) \cite{Gan_Andrei_Coleman_1993,rozhkov_1998,vondelft_prl_1998}. We note however that the entropy coming from the degeneracy is larger than that coming from the excitations (fig.~\ref{entropy_comparison}, and consequently plays a very important role in the physics of the multi-channel Kondo problem, being responsible for the non-Fermi liquid physics and the critical behaviour near the fixed point.
 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.5\textwidth]{../numerics/entropy_comparison.pdf}
 	\caption{Comparison of star graph zero temperature entropy with CFT/Bethe ansatz formula}
+	\label{entropy_comparison}
 \end{figure}
+
 
 Another related problem for which this result holds is the Ising model on a 1D chain. The partition function for that problem is \(Z = \lambda_1^N + \lambda_2^N\), where \(\lambda_{1,2} = e^{\beta J} \pm e^{-\beta J} \) are the eigenvalues of the \(T-\)matrix and \(N\) is the number of particles. As we come to \(T \to 0\), we have \(\lambda_{1,2} \simeq e^{\beta J}\) and \(Z \simeq 2 e^{\beta N J}\), so \(F = -k_B T \ln 2 - N J\) and the entropy becomes \(S = - \partial_T F = k_B \ln 2\). Note that the factor of 2 in \(Z\) is the degeneracy \(d_\text{gs}\) described above.
 
-\clearpage
 \appendix
 \section{URG analysis of the single-channel Kondo model}
 \label{1KondoURG}
@@ -699,4 +705,7 @@ For \(\omega < D/2\), we get the flow towards the strong-coupling fixed point. T
 \begin{equation}\begin{aligned}
 	\Delta J^{(2)} = \frac{J^2 n(D)}{D - J/4} \simeq \frac{J^2 n(D)}{D}
 \end{aligned}\end{equation}
+
+\bibliographystyle{apsrev4-1}
+\bibliography{multi-channel-urg}
 \end{document}
