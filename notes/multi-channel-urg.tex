@@ -70,21 +70,21 @@ The eigenstates for each value of \(M,m\) for the \(2\times 2\) blocks are given
 	\ket{\Psi^M_{m,-}} &= -\sqrt{x_m^M}\ket{\uparrow, M, m} + \left(M + m + 1\right)\ket{\downarrow,M,m+1},& m \in \left[-M, M-1\right] \\
 	\ket{\Psi^M_{m,+}} &= \sqrt{x_m^M}\ket{\uparrow, M, m} + \left(M - m\right)\ket{\downarrow,M,m+1},& m \in \left[-M, M-1\right]
 \end{aligned}\end{equation}
-Note that we are using the index \(m\) simplify to indicate the subsapce from which these eigenstates arise; \(m\) is not a quantum number for that eigenstate. The eigenvalue of \(\pi^z\) is, however, a quantum number. We have the eigenvalue relation \(\pi^z \ket{S_d^z} = (-1)^{2\left(S_d^z + m\right)}\). Applying \(\pi^z\) on these eigenstates gives
+Note that we are using the index \(m\) to indicate the subspace from which these eigenstates arise; \(m\) is not a quantum number for that eigenstate. The eigenvalue of \(\pi^z\) is, however, a quantum number. We have the eigenvalue relation \(\pi^z \ket{S_d^z} = (-1)^{\frac{1}{2}\left(\sigma^z_d + 2m - 1\right)}\). Applying \(\pi^z\) on these eigenstates gives
 \begin{equation}\begin{aligned}
-	\pi^z\ket{\Psi^M_{m,-}} = -\left( -1 \right)^{2(1/2 + m)}\sqrt{x_m^M}\ket{\uparrow, M, m} + \left( -1 \right)^{2(-1/2 + m + 1)}\left(M + m + 1\right)\ket{\downarrow,M,m+1} = \left( -1 \right) ^{2m+1}\ket{\Psi^M_{m,-}}
+	\pi^z\ket{\Psi^M_{m,-}} = -\left(-1\right)^{\frac{1 + 2m - 1}{2}}\sqrt{x_m^M}\ket{\uparrow, M, m} + \left( -1 \right)^{\frac{-1 + 2m + 2 - 1}{2}}\left(M + m + 1\right)\ket{\downarrow,M,m+1} = \left( -1 \right) ^{m}\ket{\Psi^M_{m,-}}
 \end{aligned}\end{equation}
-This shows that the operator \(\pi^z\) splits the \(K-\)fold degenerate ground state manifold into two sub-manifolds of \(\pi^z\) parity \(\pm 1\).
+This shows that the operator \(\pi^z\) splits the \(K-\)fold degenerate ground state manifold into two sub-manifolds of \(\pi^z\) parity \(\pm 1\). The odd values of \(m\) form the negative parity sector \(\pi^z = -1\) while the even values form the positive parity sector \(\pi^z = 1\).
 
 It is interesting to calculate the action of the parity operator \(\pi^x\) on these eigenstates. We can write that operator as
 \begin{equation}\begin{aligned}
 	\pi^x = (S_d^+ + S_d^-)\otimes_{i=1}^K \left(s_i^+ + s_i^-\right) 
 \end{aligned}\end{equation}
-We can write the eigenstates of \(s_\text{tot}^z\) in terms of the eigenstates of \(s_i^z\) using their Clebsh-Gordon coefficients:
+We can write the eigenstates of \(s_\text{tot}^z\) in terms of the eigenstates of \(s_i^z\) using their Clebsch-Gordon coefficients:
 \begin{equation}\begin{aligned}
 	\ket{M,m} = \sum_{\left\{m_i\right\}\atop{\sum_i m_i = m}}\ket{m_1,m_2,...,m_K} C_{\left\{m_i\right\},m,M}
 \end{aligned}\end{equation}
-where \(C_{\left\{m_i\right\},m,M} = \braket{m_1,m_2,...,m_K|m,M}\) are the Clebsh-Gordon coefficients. Applying the parity operator on the state gives
+where \(C_{\left\{m_i\right\},m,M} = \braket{m_1,m_2,...,m_K|m,M}\) are the Clebsch-Gordon coefficients. Applying the parity operator on the state gives
 \begin{equation}\begin{aligned}
 	\pi^x \ket{S_d^z, M,m} = \sum_{\left\{m_i\right\}\atop{\sum_i m_i = m}}C_{\left\{m_i\right\},m,M}(S_d^+ + S_d^-)\ket{S_d^z}\otimes_{i=1}^K \left(s_i^+ + s_i^-\right)\ket{m_i} = \sum_{\left\{m_i\right\}\atop{\sum_i m_i = m}}C_{\left\{m_i\right\},m,M}\ket{-S_d^z}\otimes_{i=1}^K\ket{-m_i}\\
 	=\sum_{\left\{m_i\right\}\atop{\sum_i m_i = -m}}C_{\left\{-m_i\right\},m,M}\ket{-S_d^z}\otimes_{i=1}^K\ket{m_i}
@@ -97,7 +97,11 @@ The action of \(\pi^x\) on the eigenstates can now be determined:
 \begin{equation}\begin{aligned}
 	\pi^x \ket{\Psi^M_{m,-}} &=-\sqrt{x_m^M}\ket{\downarrow, M, -m} + \left(M + m + 1\right)\ket{\uparrow,M,-m-1} = \ket{\Psi^M_{-m-1,-}}
 \end{aligned}\end{equation}
-The last equality holds up to a minus sign. It can be seen that the action of the operator \(\pi^x\) is to interpolate between two ground states of opposite \(\pi^z\) eigenvalues. In other words, \(\pi^x\) connects the two sectors of opposite \(\pi^z\) parity.
+The last equality holds up to a minus sign. It can be seen that the action of the operator \(\pi^x\) is to interpolate between two ground states of opposite \(\pi^z\) eigenvalues. In other words, \(\pi^x\) connects the two sectors of opposite \(\pi^z\) parity:
+\begin{equation}\begin{aligned}
+	\pi^x \ket{(-1)^m} = \ket{(-1)^{-1-m}} = \ket{-(-1)^m}
+\end{aligned}\end{equation}
+
 
 
 
