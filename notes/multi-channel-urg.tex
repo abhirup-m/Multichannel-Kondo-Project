@@ -65,14 +65,16 @@ The eigenvalues are
 	\lambda_{\pm}^{M} = - \frac{J}{4} \pm \frac{J}{2}\left(M + \frac{1}{2}\right) 
 \end{aligned}\end{equation}
 The eigenvalues of the terminal states are \(\frac{JM}{2}\). The set of eigenvalues \(\lambda^{M_\text{max}}_-\) form the ground state subspace \(\left\{ \ket{\Psi^M_{m,-}} \right\} \) of degeneracy \(2M_\text{max} = K\). This common \(K-\)fold degenerate eigenvalue is \(-\frac{J}{2}(M+1)\).
-The eigenstates for each value of \(M,m\) for the \(2\times 2\) blocks are given by
+The normalized eigenstates of the \(2\times 2\) blocks for each value of \(m\) are given by
 \begin{equation}\begin{aligned}
-	\ket{\Psi^M_{m,-}} &= -\sqrt{x_m^M}\ket{\uparrow, M, m} + \left(M + m + 1\right)\ket{\downarrow,M,m+1},& m \in \left[-M, M-1\right] \\
-	\ket{\Psi^M_{m,+}} &= \sqrt{x_m^M}\ket{\uparrow, M, m} + \left(M - m\right)\ket{\downarrow,M,m+1},& m \in \left[-M, M-1\right]
+	\ket{\Psi^M_{m,-}} &= \frac{1}{\sqrt{(M+m+1)(1+2M)}}\left[-\sqrt{x_m^M}\ket{\uparrow, M, m} + \left(M + m + 1\right)\ket{\downarrow,M,m+1}\right],& m \in \left[-M, M-1\right] \\
+	\ket{\Psi^M_{m,+}} &= \frac{1}{\sqrt{(M -m)(M - m + 1)}}\left[\sqrt{x_m^M}\ket{\uparrow, M, m} + \left(M - m\right)\ket{\downarrow,M,m+1}\right],& m \in \left[-M, M-1\right]
 \end{aligned}\end{equation}
-Note that we are using the index \(m\) to indicate the subspace from which these eigenstates arise; \(m\) is not a quantum number for that eigenstate. The eigenvalue of \(\pi^z\) is, however, a quantum number. We have the eigenvalue relation \(\pi^z \ket{S_d^z} = (-1)^{\frac{1}{2}\left(\sigma^z_d + 2m - 1\right)}\). Applying \(\pi^z\) on these eigenstates gives
+Note that the index \(m\) that we are using to label tje eigenvalues is actually related to a conserved quantity; the total spin operator along \(z\), \(S^z\). That is, the eigenstates \(\ket{\Psi^M_{m,\pm}}\) have \(S^z = S_d^z + s_\text{tot}^z = m + \frac{1}{2}\).
+
+We can also use the eigenvalues of \(\pi^z\) to label the eigenstates. We have the eigenvalue relation \(\pi^z \ket{S^z} = (-1)^{S^z - \frac{1}{2}}\ket{S^z}\). Applying \(\pi^z\) on these eigenstates gives
 \begin{equation}\begin{aligned}
-	\pi^z\ket{\Psi^M_{m,-}} = -\left(-1\right)^{\frac{1 + 2m - 1}{2}}\sqrt{x_m^M}\ket{\uparrow, M, m} + \left( -1 \right)^{\frac{-1 + 2m + 2 - 1}{2}}\left(M + m + 1\right)\ket{\downarrow,M,m+1} = \left( -1 \right) ^{m}\ket{\Psi^M_{m,-}}
+	\pi^z\ket{\Psi^M_{m,-}} = \left( -1 \right) ^{m}\ket{\Psi^M_{m,-}}
 \end{aligned}\end{equation}
 This shows that the operator \(\pi^z\) splits the \(K-\)fold degenerate ground state manifold into two sub-manifolds of \(\pi^z\) parity \(\pm 1\). The odd values of \(m\) form the negative parity sector \(\pi^z = -1\) while the even values form the positive parity sector \(\pi^z = 1\).
 
@@ -95,17 +97,52 @@ Using the identity \(\braket{M_1m_1,M_2m_2,\ldots|m,M} = \left( -1 \right)^{\sum
 \end{aligned}\end{equation}
 The action of \(\pi^x\) on the eigenstates can now be determined:
 \begin{equation}\begin{aligned}
-	\pi^x \ket{\Psi^M_{m,-}} &=-\sqrt{x_m^M}\ket{\downarrow, M, -m} + \left(M + m + 1\right)\ket{\uparrow,M,-m-1} = \ket{\Psi^M_{-m-1,-}}
+	\pi^x \ket{\Psi^M_{m,-}} &=-\sqrt{x_m^M}\ket{\downarrow, M, -m} + \left(M + m + 1\right)\ket{\uparrow,M,-m-1} = -\ket{\Psi^M_{-m-1,-}}
 \end{aligned}\end{equation}
-The last equality holds up to a minus sign. It can be seen that the action of the operator \(\pi^x\) is to interpolate between two ground states of opposite \(\pi^z\) eigenvalues. In other words, \(\pi^x\) connects the two sectors of opposite \(\pi^z\) parity:
+It can be seen that the action of the operator \(\pi^x\) is to interpolate between two ground states of opposite \(\pi^z\) eigenvaluesand, more specifically, opposite \(S^z\) values
 \begin{equation}\begin{aligned}
-	\pi^x \ket{(-1)^m} = \ket{(-1)^{-1-m}} = \ket{-(-1)^m}
+	\pi^x \ket{S^z} \to \ket{-S^z}
 \end{aligned}\end{equation}
 
+We can show that the impurity magnetization along the \(x-\)direction in some specific ground states can be related to matrix elements of the string operator \(\pi^x\). The most general ground state is obtained by taking a general linear combination of all the normalized ground states:
+\begin{equation}\begin{aligned}
+	\ket{g^n_m} = \frac{1}{\sqrt 2}\left[\ket{\Psi^M_{m,-}} + e^{i\theta}\ket{\Psi^M_{m+n,-1}}\right], m \in \left[-M, M-2\right] , n \in \left[1, M - m - 1\right] 
+\end{aligned}\end{equation}
+The expectation value of the impurity spin along \(x\) in this state is given by
+\begin{equation}\begin{aligned}
+	\left(m_d^x\right)_m^n = \braket{g^n_m | \sigma_d^x | g^n_m}
+\end{aligned}\end{equation}
+The action of \(\sigma_d^x\) is as follows:
+\begin{equation}\begin{aligned}
+	\sigma_d^x \ket{\Psi^M_{m,-}} = \frac{1}{\sqrt{(M+m+1)(1+2M)}}\left[-\sqrt{x_m^M}\ket{\downarrow, M, m} + \left(M + m + 1\right)\ket{\uparrow,M,m+1}\right]
+\end{aligned}\end{equation}
+which means that the only \(\ket{\Psi^M_{m+n,-}}\) with \(n > 0\) that give a non-zero inner product with \(\sigma_d^x \ket{\Psi^M_{m,-}}\) is \(n=1\). This observation then gives
+\begin{equation}\begin{aligned}
+	\left(m_d^x\right)_m^n = \delta_{n,1}\braket{g^1_m | \sigma_d^x | g^1_m} = \delta_{n,1}\left[e^{i\theta}\braket{\Psi^M_{m+1,-}|\sigma_d^x| \Psi^M_{m,-}} + \text{h.c.}\right] = \delta_{n,1}\left[e^{i\theta}\braket{\Psi^M_{m+1,-}|\sigma_d^x \pi^x | \Psi^M_{-m-1,-}} + \text{h.c.}\right]
+\end{aligned}\end{equation}
+\textit{We thus see that the impurity magnetization \(\left(m_d^x\right)_m^n\) along \(x\) for the state \(\ket{g^n_m}\) is determined by the matrix element of the string operator \(\sigma^x_d \pi^x\)}.
 
+For \(m = -M\), we get
+\begin{equation}\begin{aligned}
+	\braket{\Psi^M_{-M+1,-}|\sigma_d^x \pi^x | \Psi^M_{M - 1,-}} = \frac{\sqrt{2M-1}}{2M + 1}
+\end{aligned}\end{equation}
+The ground state manifold is defined by \(M = K/2\). Using this, we can write
+\begin{equation}\begin{aligned}
+	\left(m_d^x\right)_{-M}^1 = \left[\braket{\Psi^M_{1-M,-}|\sigma_d^x \pi^x | \Psi^M_{M - 1,-}} + \text{h.c.}\right] = \frac{2\sqrt{2M-1}}{2M + 1} = \frac{2\sqrt{K-1}}{K+1}
+\end{aligned}\end{equation}
 
-
-
+We can similarly calculate the magnetization along the \(z-\)direction. The most general ground state is
+\begin{equation}\begin{aligned}
+	\ket{g} = \sum_{m=-M}^{M-1} C_m \ket{\Psi^M_{m,-}}, &&& m \in \left[-M, M-1\right], &&& \sum_m |C_m|^2 = 1
+\end{aligned}\end{equation}
+The expectation value of \(\sigma^d_z\) will be non-zero only in the diagonal terms: \(\braket{\Psi^M_m | \sigma^z_d | \Psi^M_{m^\prime}} = \delta_{mm^\prime}\braket{\Psi^M_m | \sigma^z_d | \Psi^M_{m}}\). Using this, we get
+\begin{equation}\begin{aligned}
+	\braket{g|\sigma^z_d|g} = \sum_{m=-M}^{M-1} |C_m|^2 \frac{\left[x_m^M - \left(M + m + 1\right)^2\right]}{{(M+m+1)(1+2M)}}
+\end{aligned}\end{equation}
+For the simpler case when \(C_m = \delta_{m,\pm (M - \frac{1}{2}) - \frac{1}{2}}\), we get
+\begin{equation}\begin{aligned}
+	\braket{g_\pm|\sigma^z_d|g_\pm} = \pm \frac{2M-1}{2M+1} = \pm \frac{K-1}{K+1}
+\end{aligned}\end{equation}
 
 \section{Derivation of URG equations for the multi-channel Kondo model}
 
@@ -720,7 +757,7 @@ We wish to point out that this value is different from the "standard" result
 \label{cft_entropy}
 S = \ln 2\cos \frac{\pi}{K+2}
 \end{aligned}\end{equation}
-obtained from other methods like the Bethe ansatz (BA) and conformal field theory (CFT) calculations \cite{Gan_Andrei_Coleman_1993,andrei_destri_1984,Tsvelick_weigmann_mchannel_1985,sacramento1989,emery_kivelson,affleck_1991_overscreen}. The difference is not only in the value but also in the origin. Eq.~\ref{res_entropy} indicates the thermal entropy coming purely from the quantum mechanical degeneracy of the star graph problem (which is the zero mode of the full multi-channel Kondo problem), while the result eq.~\ref{cft_entropy} presumably arises from the lowest-lying excitations on top of the zero mode arising from the conduction bath \(k-\)states. Another difference lies in the fact that while eq.~\ref{res_entropy} holds true independent of system size, eq.~\ref{cft_entropy} is correct only in the thermodynamic limit and only if the limit of system \(N \to \infty\) is taken prior to taking the limit of temperature \(T \to 0\) \cite{Gan_Andrei_Coleman_1993,rozhkov_1998,vondelft_prl_1998}. We note however that the entropy coming from the degeneracy is larger than that coming from the excitations (fig.~\ref{entropy_comparison}, and consequently plays a very important role in the physics of the multi-channel Kondo problem, being responsible for the non-Fermi liquid physics and the critical behaviour near the fixed point.
+obtained from other methods like the Bethe ansatz (BA) and conformal field theory (CFT) calculations \cite{Gan_Andrei_Coleman_1993,andrei_destri_1984,Tsvelick_weigmann_mchannel_1985,sacramento1989,emery_kivelson,affleck_1991_overscreen}. The difference is not only in the value but also in the origin. Eq.~\ref{res_entropy} describes the thermal entropy coming purely from the quantum mechanical degeneracy of the star graph problem (which is the zero mode of the full multi-channel Kondo problem), while the result eq.~\ref{cft_entropy} presumably arises from the lowest-lying excitations on top of the zero mode arising from the conduction bath \(k-\)states. Another difference lies in the fact that while eq.~\ref{res_entropy} holds true independent of system size, eq.~\ref{cft_entropy} is correct only in the thermodynamic limit and only if the limit of system size \(L \to \infty\) is taken prior to taking the limit of temperature \(T \to 0\) \cite{Gan_Andrei_Coleman_1993,rozhkov_1998,vondelft_prl_1998}. We note however that the entropy coming from the degeneracy is larger than that coming from the excitations (fig.~\ref{entropy_comparison}), and consequently plays a very important role in the physics of the multi-channel Kondo problem, being responsible for the non-Fermi liquid physics and the critical behaviour near the fixed point.
 
 \begin{figure}[!ht]
 	\centering
