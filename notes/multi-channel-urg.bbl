@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{25}%
+\begin{thebibliography}{26}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -227,6 +227,14 @@
   {\bibinfo  {journal} {Journal of Physics Communications}\ }\textbf {\bibinfo
   {volume} {2}},\ \bibinfo {pages} {085001} (\bibinfo {year}
   {2018})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kolf}\ and\ \citenamefont
+  {Kroha}(2007)}]{kroha_kolf_2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Kolf}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Kroha}},\
+  }\href {\doibase 10.1103/PhysRevB.75.045129} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {75}},\ \bibinfo
+  {pages} {045129} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Andrei}\ and\ \citenamefont
   {Destri}(1984)}]{andrei_destri_1984}%
   \BibitemOpen
