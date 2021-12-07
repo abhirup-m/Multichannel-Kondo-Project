@@ -9,7 +9,7 @@
 \maketitle
 \tableofcontents
 \section{Introduction of the Hamiltonian and its zero mode}
-The isotropic multi-channel Kondo model \cite{Noz_blandin_1980,Gan_Andrei_Coleman_1993,emery_kivelson,Gan_mchannel_1994,Tsvelick_Weigmann_mchannel_1984,Tsvelick_weigmann_mchannel_1985,parcollet_olivier_large_N,kimura_taro_Su_N_kondo,PhysRevB.73.224445,cox_jarrell_two_channel_rev,affleck_1991_overscreen,Coleman_tsvelik} is described by the Hamiltonian
+The isotropic multi-channel Kondo model \cite{Noz_blandin_1980,Gan_Andrei_Coleman_1993,emery_kivelson,Gan_mchannel_1994,Tsvelick_Weigmann_mchannel_1984,Tsvelick_weigmann_mchannel_1985,parcollet_olivier_large_N,kimura_taro_Su_N_kondo,PhysRevB.73.224445,cox_jarrell_two_channel_rev,affleck_1991_overscreen,Coleman_tsvelik,affleck1993exact} is described by the Hamiltonian
 \begin{align}
 	\label{mc_ham}
 	H = \sum_{k,\alpha,\gamma}\epsilon_{k}^\gamma \hat n^\gamma_{k\alpha} + J\sum_{kk^\prime,\gamma} \vec{S_d}\cdot\vec{s}_{\alpha\alpha^\prime}{c^\gamma_{k\alpha}}^\dagger c^\gamma_{k^\prime\alpha^\prime}~.
@@ -42,7 +42,7 @@ In the terms of the local spin operators \(\vec s_\gamma = (s_\gamma^x,s_\gamma^
 	H_\text{zero mode} = J \vec{S_d}\cdot\vec{s}_\text{tot}
 \end{align}
 
-\section{SYmmetries of the Hamiltonian}
+\section{Symmetries of the Hamiltonian}
 This zero mode Hamiltonian commutes with a number of operators, revealing various symmetries of the problem. The first such operators is \(s_\text{tot}^2\). Henceforth we will drop the label \(\text{zero mode}\). To see the commuation, note that \(s_\text{tot}^2\) can be written as \(s_\text{tot}^2 = \sum_{i=x,y,z}\left(s_\text{tot}^i\right)^2\). This then gives
 \begin{align}
 \left[s_\text{tot}^2, H\right] = \left[\sum_{i=x,y,z}{s^i_\text{tot}}^2, J \sum_{i=x,y,z} S_d^i s^i_\text{tot}\right] = \sum_{i,j}J S_d^i \left\{s_\text{tot}^i, \left[s_\text{tot}^i,s_\text{tot}^j\right]\right\} = \sum_{i,j}J S_d^i \left\{s_\text{tot}^i, i \epsilon^{ijk}s^k_\text{tot}\right\} = 0
@@ -323,7 +323,7 @@ Let us consider the specific case where \(K-1\) channels have the same coupling 
 	\frac{\Delta J_+}{|\Delta D|} = \frac{J_+^2 \rho}{D - J_+/4} - \frac{\rho^2 J_+}{8}\left[\frac{(K-1)J_+^2}{D - J_+/4} + \frac{J_-^2}{D - J_-/4}\right]\\
 	\frac{\Delta J_-}{|\Delta D|} = \frac{J_-^2 \rho}{D - J_-/4} - \frac{\rho^2 J_-}{8}\left[\frac{(K-1)J_+^2}{D - J_+/4} + \frac{J_-^2}{D - J_-/4}\right]
 \end{align}
-Setting \(J_+ = J_-\) leads to the critical fixed point at \(J_+^* = J_-^* = J_* = \frac{8}{K \rho}\). We now perturb around this fixed-point by defining new variables \(j_\pm = J_\pm - J_*\). We also assume that \(D - J_\pm / 4 \simeq D - J_*/4\). The RG equations then take the form
+Setting \(J_+ = J_-\) leads to the critical fixed point at \(J_+^* = J_-^* = J_* = \frac{8}{K \rho}\). We now perturb around this fixed point by defining new variables \(j_\pm = J_\pm - J_*\). We also assume that \(D - J_\pm / 4 \simeq D - J_*/4\). The RG equations then take the form
 \begin{align}
 	\frac{\Delta j_+}{|\Delta D|} &= \frac{\rho J_+}{D - J_*/4}\left[J_+ - \frac{\rho}{8}\left[(K-1)J_+^2 + J_-^2\right]\right]\\
 				      &= \frac{\rho J_+}{D - J_*/4}\left[j_+ + J_*- \frac{1}{K J_*}\left[(K-1)\left(J_* + j_+\right)^2 + \left(J_* + j_-\right)^2\right]\right]\\
@@ -339,7 +339,7 @@ We will first look at the special case of \(K=2\), the two channel Kondo model. 
 \begin{align}
 	\frac{\Delta j_\pm}{|\Delta D|} = \frac{J_\pm \rho}{K J_*\left(D - J_*/4\right)}\left[- \left(j_+^2 + j_-^2\right) - 2J_* j_\mp\right]\\
 \end{align}
-For \(j_- < 0, j_+ > 0\), we have \(\Delta j_- < 0\). The coupling \(J_-\) therefore becomes irrelevant. For small \(j_+\), we have \(j_+^2 < 2J_* |j_-|\)  and \(\Delta j_+ > 0\). This means that the isotropic fixed-point is repulsive under anisotropy \cite{Noz_blandin_1980}. The coupling \(j_+\) being relevant means we have a single-channel Kondo problem. We already know the non-perturbative URG equation for the single-channel Kondo problem:
+For \(j_- < 0, j_+ > 0\), we have \(\Delta j_- < 0\). The coupling \(J_-\) therefore becomes irrelevant. For small \(j_+\), we have \(j_+^2 < 2J_* |j_-|\)  and \(\Delta j_+ > 0\). This means that the isotropic fixed point is repulsive under anisotropy \cite{Noz_blandin_1980}. The coupling \(j_+\) being relevant means we have a single-channel Kondo problem. We already know the non-perturbative URG equation for the single-channel Kondo problem:
 \begin{align}
 	\frac{\Delta j_+}{|\Delta D|} = \frac{J_+^2 \rho}{D - J_+/4}~,
 \end{align}
@@ -357,13 +357,13 @@ Solving for \(j_+\) gives
 \begin{align}
 	j_{+,*} = \frac{-J_*(K-2) \pm \sqrt{(K-2)^2 J_*^2 + 4(K-1)J_*^2}}{2(K-1)} = \frac{J_*}{2(K-1)}\left[-(K-2) \pm K\right] = \frac{J_*}{K-1}
 \end{align}
-At the final step, we chose the positive solution, because \(j_+\) is relevant in this regime. The new fixed-point value of \(J_+\) is therefore
+At the final step, we chose the positive solution, because \(j_+\) is relevant in this regime. The new fixed point value of \(J_+\) is therefore
 \begin{align}
 	J_+ = J_* + \frac{J_*}{K-1} = \frac{\frac{8}{K \rho} K}{K - 1} = \frac{8}{(K-1)\rho}
 \end{align}
-In other words, the \(K\) channel fixed-point flows to the \(K-1\) channel fixed-point.
+In other words, the \(K\) channel fixed point flows to the \(K-1\) channel fixed point.
 
-In the opposite regime \(j_- > 0, j_+ < 0\), \(\Delta j_+\) is negative. It has been checked numerically that \(J_+\) ultimately flows to zero in this regime (fig. \ref{irrel_Jplus}), and \(J_-\) remains relevant. Since there is no numerator fixed-point in the relevant coupling \(J_-\) and because all other couplings are irrelevant, the equation for \(J_-\) is replaced by the single-channel Kondo coupling URG equation, and the low-energy physics is then of strong-coupling..
+In the opposite regime \(j_- > 0, j_+ < 0\), \(\Delta j_+\) is negative. It has been checked numerically that \(J_+\) ultimately flows to zero in this regime (fig. \ref{irrel_Jplus}), and \(J_-\) remains relevant. Since there is no numerator fixed point in the relevant coupling \(J_-\) and because all other couplings are irrelevant, the equation for \(J_-\) is replaced by the single-channel Kondo coupling URG equation, and the low-energy physics is then of strong-coupling..
 \begin{figure}[htpb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{../numerics/irr_Jp_K=3.pdf}
@@ -388,6 +388,33 @@ where \(\beta\) represents the RG beta function. From URG calculations, we know 
 	J_>^* = \frac{8}{K \rho} = J_<^* \implies \frac{\gamma 16 t^2}{J_<^*} = J_<^* \implies \gamma = \left(\frac{J^*_<}{4t}\right) ^2 = \left( \frac{2}{K \rho t}\right) ^2
 \end{aligned}\end{equation}
 This, then, is the transformation that makes the critical fixed point self-dual.
+
+\section{MFL and orthogonality catastrophe in low-energy excitations of 2-CKM}
+At the stable fixed point \(J ^* = J_1^* = \frac{8}{K \rho}\), the ground states of the Hamiltonian are those of the star graph model, with a degeneracy of \(K\). We now specialise to the two-channel Kondo model. To find the low-energy excitations on top of this ground state manifold, one can insert a tight-binding nearest-neighbour hopping between the zeroth site (the one that holds the impurity) and the first site (site that's nearest to the zeroth site) as a perturbation and calculate the diagonal and off-diagonal terms generated by this perturbation. It is found that when we trace out the impurity, we are left only with real space off-diagonal terms:
+\begin{equation}\begin{aligned}
+	\label{nfl_terms}
+	V_\text{eff} = \frac{2t^2}{J^*}\left[\left(\sigma^z_{0,1}\right)^2 s^+_{0,2} + \left(\sigma^z_{0,2}\right)^2 s^+_{0,1}\right] \left(s^-_{1,1} + s^-_{1,2}\right) + \text{h.c.}
+\end{aligned}\end{equation}
+where \(\sigma^z_{0,l} = \hat n_{0\uparrow,l} - \hat n_{0\downarrow,l}, s^+ = c^\dagger_{0 \uparrow,l}c_{0 \downarrow,l}\) and \(s^- = \left(s^+\right)^\dagger\). The notation \(0\sigma,l\) has the site index \(i=0,1,2,\ldots\) as the first label, the spin index \(\sigma=\uparrow,\downarrow\) as the second label and the channel index \(l=1,2\) as the third index.
+
+These are the terms that are generated because of the presence of the impurity. Such a non-Fermi liquid contribution to the effective Hamiltonian and the absence of any Fermi-liquid term should be contrasted with the local Fermi liquid excitations induced by the singlet ground state of the single-channel Kondo model at fourth order. We wish to point out that such non-Fermi liquid terms were also obtained by Coleman, et al.~\cite{Coleman_tsvelik} in terms of Majorana fermions at the zeroth site and the first site. They then went on to compute a single-particle self-energy renormalization coming from this non-Fermi liquid term that matches the phenomenological \cite{varma2002singular} and microscopic forms of the marginal Fermi liquid self-energy \cite{anirbanmott1,anirbanurg1}. We take a different route in order to calculate the self-energy contribution coming from eq.~\ref{nfl_terms}, one that involves \cite{anirbanmott1}.
+
+In \cite{anirbanurg1}, it was found that the normal phase of the Mott insulator was a marginal Fermi liquid in momentum space, defined by the interaction term 
+\begin{equation}\begin{aligned}
+	\label{mfl_urg}
+	H_\text{MFL} = \sum_{k,k^\prime,k^{\prime\prime},\sigma}R \hat n_{k} \hat n_{k^\prime \overline\sigma}\left(1 - \hat n_{k^{\prime\prime}\sigma}\right) 
+\end{aligned}\end{equation}
+We wish to look for such a term in the effective Hamiltonian. For this, we will perform a perturbative treatment of the hopping at strong-coupling \(J \to \infty\) where the perturbative coupling \(t^2/J\) is arbitrarily small and again obtain eq.~\ref{nfl_terms}. Sicne we are looking for a 2 particle-1 hole term in \(k-\)space, we will keep only those terms that can produce such a term:
+\begin{equation}\begin{aligned}
+	V_\text{eff} = \frac{2t^2}{J}\sum_{l=1,2}\left(\sum_\sigma \hat n_{0\sigma,l}\right) s^+_{0,\bar l}s^-_{1,\bar l} + \text{h.c.}
+\end{aligned}\end{equation}
+where \(\bar l = 3 - l\). To compare with eq.~\ref{mfl_urg}, we will fourier transform this effective Hamiltonian (after inserting the kinetic energy of the bath) into \(k-\)space.
+\begin{equation}\begin{aligned}
+	\label{k_space_od}
+	H_\text{eff} = \sum_{k\sigma,l}\epsilon_{k,l} \hat n_{k\sigma,l} + \sum_{\sigma, \left\{k_i,k_i^\prime\right\},l} \frac{2t^2}{J}e^{i\left(k_1 - k_1^\prime\right)a}c^\dagger_{k\sigma,l}c_{k^\prime\sigma,l}c^\dagger_{k_2 \uparrow, \bar l}c_{k_2^\prime \downarrow,\bar l}c^\dagger_{k_1 \downarrow,\bar l}c_{k_1^\prime \uparrow, \bar l} + \text{h.c.} 
+\end{aligned}\end{equation}
+This form of the Hamiltonian is very similar to the three-particle interaction term in Appendix B of \cite{anirbanmott1}. The channel indices in eq.~\ref{k_space_od} can be mapped to the normal directions in \cite{anirbanmott1}. Eq.~\ref{k_space_od} has a diagonal component.
+
 
 
 \section{Effective Hamiltonian for low-energy excitations: \(k-\)space}
@@ -550,8 +577,8 @@ The terms have the following meanings:
 	Z_{1,\text{tot}} H_0 &= \sum_{k_1,q_1,k_2,\sigma_2,l_1,l_2}\left(\epsilon_{k_1}^{l_1} - \epsilon_{q_1}^{l_1}\right) \epsilon_{k_2}^{l_2} \left(c^\dagger_{k_1, \uparrow, l_1}c_{q_1, \uparrow, l_1} - c^\dagger_{k_1, \downarrow, l_1}c_{q_1, \downarrow, l_1}\right) \hat n_{k_2,\sigma_2,l_2}\\
 \end{align}
 
-\section{Impurity Susceptibility from zero-mode fixed-point Hamiltonian}
-The zero-mode approximation of the fixed-point Hamiltonian is a star graph Hamiltonian:
+\section{Impurity susceptibility from zero-mode fixed point Hamiltonian}
+The zero-mode approximation of the fixed point Hamiltonian is a star graph Hamiltonian:
 \begin{align}
 	H = J^* \vec{S_d}\cdot\vec{s}_\text{tot}
 \end{align}
@@ -660,7 +687,7 @@ At high temperatures \(\beta \to 0\), we get
 	\chi &\to 1/4
 \end{align}
 
-\section{Bath Susceptibility from zero-mode fixed-point Hamiltonian}
+\section{Bath Susceptibility from zero-mode fixed point Hamiltonian}
 We insert a magnetic field that acts only on the bath and then attempt to diagonalize the Hamiltonian.
 \begin{align}
 	H(h) = J^* \vec{S_d}\cdot\vec{s}_\text{tot} + h s^z_\text{tot}
@@ -875,4 +902,5 @@ For \(\omega < D/2\), we get the flow towards the strong-coupling fixed point. T
 
 \bibliographystyle{apsrev4-1}
 \bibliography{multi-channel-urg}
+
 \end{document}
