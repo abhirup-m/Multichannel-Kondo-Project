@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{29}%
+\begin{thebibliography}{30}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -165,6 +165,31 @@
   {Ludwig}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
   {Physical Review B}\ }\textbf {\bibinfo {volume} {48}},\ \bibinfo {pages}
   {7297} (\bibinfo {year} {1993})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pang}\ and\ \citenamefont
+  {Cox}(1991)}]{pang_cox_1991}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~B.}\ \bibnamefont
+  {Pang}}\ and\ \bibinfo {author} {\bibfnamefont {D.~L.}\ \bibnamefont {Cox}},\
+  }\href {\doibase 10.1103/PhysRevB.44.9454} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {44}},\ \bibinfo
+  {pages} {9454} (\bibinfo {year} {1991})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kolf}\ and\ \citenamefont
+  {Kroha}(2007)}]{kroha_kolf_2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Kolf}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Kroha}},\
+  }\href {\doibase 10.1103/PhysRevB.75.045129} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {75}},\ \bibinfo
+  {pages} {045129} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {\ifmmode~\check{Z}\else \v{Z}\fi{}itko}\ and\
+  \citenamefont {Fabrizio}(2017)}]{zitko_fabrizio_2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {\ifmmode~\check{Z}\else \v{Z}\fi{}itko}}\ and\ \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Fabrizio}},\ }\href {\doibase
+  10.1103/PhysRevB.95.085121} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {95}},\ \bibinfo {pages} {085121}
+  (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Mukherjee}\ and\ \citenamefont
   {Lal}(2020{\natexlab{a}})}]{anirbanurg1}%
   \BibitemOpen
@@ -245,23 +270,6 @@
   }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Physics Reports}\
   }\textbf {\bibinfo {volume} {361}},\ \bibinfo {pages} {267} (\bibinfo {year}
   {2002})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Kolf}\ and\ \citenamefont
-  {Kroha}(2007)}]{kroha_kolf_2007}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {Kolf}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Kroha}},\
-  }\href {\doibase 10.1103/PhysRevB.75.045129} {\bibfield  {journal} {\bibinfo
-  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {75}},\ \bibinfo
-  {pages} {045129} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {\ifmmode~\check{Z}\else \v{Z}\fi{}itko}\ and\
-  \citenamefont {Fabrizio}(2017)}]{zitko_fabrozio_2017}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {\ifmmode~\check{Z}\else \v{Z}\fi{}itko}}\ and\ \bibinfo {author}
-  {\bibfnamefont {M.}~\bibnamefont {Fabrizio}},\ }\href {\doibase
-  10.1103/PhysRevB.95.085121} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
-  Rev. B}\ }\textbf {\bibinfo {volume} {95}},\ \bibinfo {pages} {085121}
-  (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Andrei}\ and\ \citenamefont
   {Destri}(1984)}]{andrei_destri_1984}%
   \BibitemOpen

@@ -39,17 +39,25 @@ We can make one more identification: the sum over the spins in momentum space am
 In the terms of the local spin operators \(\vec s_\gamma = (s_\gamma^x,s_\gamma^y,s_\gamma^z)\), we can define the total spin of the zero mode of the bath: \(\vec s_\text{tot} = \sum_\gamma \vec s_\gamma\) and the zero mode Hamiltonian then takes the simpler form
 \begin{align}
 	\label{zeromode_ham}
-	H_\text{zero mode} = J \vec{S_d}\cdot\vec{s}_\text{tot}
+	H_\text{zero mode} = J \vec{S_d}\cdot\vec{s}_\text{tot}~.
 \end{align}
+This Hamiltonian is shown schematically in fig.~\ref{stargraph}.
 
-\section{Symmetries of the Hamiltonian}
-This zero mode Hamiltonian commutes with a number of operators, revealing various symmetries of the problem. The first such operators is \(s_\text{tot}^2\). Henceforth we will drop the label \(\text{zero mode}\). To see the commuation, note that \(s_\text{tot}^2\) can be written as \(s_\text{tot}^2 = \sum_{i=x,y,z}\left(s_\text{tot}^i\right)^2\). This then gives
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.3\textwidth]{./stargraph.pdf}
+	\caption{Zero mode of the \(K-\)channel Kondo model, represented as a "star graph". The central red node denotes the impurity spin \(\vec S_d\), while the outer nodes denote the spins \(\vec s_\gamma\) of the zeroth sites of the channels \(\gamma=1,2,\ldots,K\). The straight lines represent the spin-exchange interaction between the central node and the outer nodes mediated by the coupling \(J\).}
+	\label{stargraph}
+\end{figure}
+
+\section{Symmetries of the zero mode Hamiltonian}
+This zero mode Hamiltonian commutes with a number of operators, revealing various symmetries of the problem. The first of such operators is \(s_\text{tot}^2\). Henceforth we will drop the label \(\text{zero mode}\). To see the commuation, note that \(s_\text{tot}^2\) can be written as \(s_\text{tot}^2 = \sum_{i=x,y,z}\left(s_\text{tot}^i\right)^2\). This then gives
 \begin{align}
 \left[s_\text{tot}^2, H\right] = \left[\sum_{i=x,y,z}{s^i_\text{tot}}^2, J \sum_{i=x,y,z} S_d^i s^i_\text{tot}\right] = \sum_{i,j}J S_d^i \left\{s_\text{tot}^i, \left[s_\text{tot}^i,s_\text{tot}^j\right]\right\} = \sum_{i,j}J S_d^i \left\{s_\text{tot}^i, i \epsilon^{ijk}s^k_\text{tot}\right\} = 0
 \end{align}
 The total spin angular  momentum operator \(S^2 = \left(\vec S_d + \vec s_\text{tot}\right)^2 \) also commutes with the Hamiltonian. To see this, note that we can rewrite the operator as
 \begin{align}
-	S^2 = \left(\vec S_d + \vec s_\text{tot}\right)^2 = \frac{3}{4} + s_\text{tot}\left(s_\text{tot} + 1\right) + \frac{2}{J} H
+	S^2 = \left(\vec S_d + \vec s_\text{tot}\right)^2 = \frac{3}{4} + s^2_\text{tot} + \frac{2}{J} H
 \end{align}
 Since we already know that \(s_\text{tot}\) commutes with \(H\), we have that \(\left[S^2, H\right] = 0\). The \(z-\)component of this total spin operator also commutes with the Hamiltonian:
 \begin{align}
@@ -60,6 +68,10 @@ One final operator that we will look at is the spin parity operator \(\pi^a = \s
 \begin{align}
 	\left[H, \pi^a\right] = J\sum_{b,j} \left[S_d^b s_j^b, \sigma_d^a \otimes_{i=1}^K \sigma_i^a\right] = \sum_{bj}\left(S_d^b \sigma_d^a s^b_j \sigma^a_j - \sigma_d^a S_d^b \sigma^a_j s^b_j\right) \otimes_{i<j}\sigma_i^a \otimes_{i>j}\sigma^a_i = 0
 \end{align}
+
+\section{Importance of the zero mode Hamiltonian}
+Methods like CFT, Bethe ansatz and NRG \cite{affleck_1991_overscreen,Tsvelick_Weigmann_mchannel_1984,Gan_mchannel_1994,pang_cox_1991} have shown that neither the weak coupling nor the strong coupling Hamiltonians are stable fixed points of the multi-channel Kondo models. Instead, the RG flows converge to an intermediate coupling fixed point. The RG flows were found to preserve the degeneracy of the ground state \cite{pang_cox_1991,kroha_kolf_2007,zitko_fabrizio_2017}. For example, the two-channel and the three-channel Kondo models are found to be have ground state degeneracies of 2 and 3 respectively, throughout the RG flow. It was also revealed that the two and three-channel models enjoy a weak-strong duality: the model at strong coupling can also be thought of as a Kondo model but at weak coupling, possibly with a modified central complex. For example, in the two channel Kondo model, the model at strong coupling can be mapped onto the same model with a coupling parameter, but with the central Kondo spin-half impurity replaced by a new, composite spin-half object formed by the doubly-degenerate ground state of the strong coupling model \cite{kroha_kolf_2007}. The case of the three-channel model is different: there, the central impurity gets replaced by a new spin-1 impurity formed by the triply-degenerate ground state. In the former case, the strong and weak coupling models are formally identical and the model is self-dual. We will now show that these qualitative features can be captured very simply by the zero mode Hamiltonian.
+
 
 \section{Eigenvalues and eigenstates}
 The zero mode Hamiltonian can be diagonalized. Since the Hamiltonian commutes with \(s_\text{tot}^2\), it is already block-diagonal in the quantum number \(s_\text{tot}\). Let us represent the quantum number of \(s_\text{tot}^z\) by \(m\). For a particular \(s_\text{tot}\), \(m\) can take values from the set \(\left[-s_\text{tot}, s_\text{tot}\right] \). The spin \(S_d^z\) can also take values \(\pm \frac{1}{2}\). From now on, we will assume we are in the subspace of a particular \(s_\text{tot} = M\), so we will ignore that quantum number and write the kets simply as \(\ket{S_d^z, m}\). So, the notation \(\ket{\uparrow,-1}\) means the state with \(S_d^z = \frac{1}{2}\) and \(m = -1\). We will now show that even inside the block of \(2\times s_\text{tot}\) (or \(2\times s_\text{tot} + 1\), depending on whether it is odd or even) defined by a particular value of \(s_\text{tot}\), the Hamiltonian actually separates into decoupled \(2\times 2\) blocks. To see why, first note that the terminal states \(\ket{\downarrow, -M}\) and \(\ket{\uparrow, M}\) are already eigenstates, because they cannot scatter (the impurity can only flip down, and this would require the bath to flip up, but \(s^z_\text{tot}\) is already at its maximum value \(M\)). The other \(2M - 2\) states can be organized into \(2\times 2\) blocks formed by the states \(\ket{\uparrow, m}\) and \(\ket{\downarrow, m+1}\) for \(m \in \left[-M, M-1\right] \). The fact that this block does not interact with the other blocks can be easily verified: if there was some other state which when acted upon by the Hamiltonian gave a non-zero projection on \(\ket{\uparrow, m}\), it would have to come from \(S_d^z = \downarrow\), and this would mean the bath spin would have had to flip down. This means the bath spin in that state would have to be \(m+1\), and that is precisely the other state in the block. 
@@ -387,7 +399,7 @@ In \cite{anirbanurg1}, it was found that the normal phase of the Mott insulator 
 	\label{mfl_urg}
 	H_\text{MFL} = \sum_{k,k^\prime,k^{\prime\prime},\sigma}R \hat n_{k} \hat n_{k^\prime \overline\sigma}\left(1 - \hat n_{k^{\prime\prime}\sigma}\right) 
 \end{aligned}\end{equation}
-We wish to look for such a term in the effective Hamiltonian. For this, we will perform a perturbative treatment of the hopping at strong-coupling \(J \to \infty\) where the perturbative coupling \(t^2/J\) is arbitrarily small and again obtain Eq.~\ref{nfl_terms}. Such a change from the strong-coupling model with parameter \(J\) to a weak-coupling model with parameter \(t^2/J\) amounts to a duality transformation \cite{kroha_kolf_2007,zitko_fabrozio_2017}. It can be shown that the duality transformation leads to an identical multi-channel Kondo model \cite{kroha_kolf_2007} (self-duality), which implies we can have identical RG flows, and our transformation simply extracts the NFL piece from the dual model. The self-duality also implies that the critical intermediate-coupling fixed point is unique and can be reached from either of the models.
+We wish to look for such a term in the effective Hamiltonian. For this, we will perform a perturbative treatment of the hopping at strong-coupling \(J \to \infty\) where the perturbative coupling \(t^2/J\) is arbitrarily small and again obtain Eq.~\ref{nfl_terms}. Such a change from the strong-coupling model with parameter \(J\) to a weak-coupling model with parameter \(t^2/J\) amounts to a duality transformation \cite{kroha_kolf_2007,zitko_fabrizio_2017}. It can be shown that the duality transformation leads to an identical multi-channel Kondo model \cite{kroha_kolf_2007} (self-duality), which implies we can have identical RG flows, and our transformation simply extracts the NFL piece from the dual model. The self-duality also implies that the critical intermediate-coupling fixed point is unique and can be reached from either of the models.
 
 Since we are looking for a 2 particle-1 hole term in \(k-\)space, we will keep only those terms that can produce such a term:
 \begin{equation}\begin{aligned}

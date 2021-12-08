@@ -23,45 +23,45 @@ Control: production of eprint (0) enabled
 Warning--missing journal in Gan_mchannel_1994
 Warning--missing journal in cox_jarrell_two_channel_rev
 Warning--missing journal in santanukagome
-You've used 29 entries,
+You've used 30 entries,
             5847 wiz_defined-function locations,
-            1840 strings with 20985 characters,
-and the built_in function-call counts, 26149 in all, are:
-= -- 1840
-> -- 551
-< -- 170
-+ -- 185
-- -- 118
-* -- 3829
-:= -- 2675
-add.period$ -- 29
-call.type$ -- 29
-change.case$ -- 116
-chr.to.int$ -- 26
-cite$ -- 32
-duplicate$ -- 2421
-empty$ -- 1966
-format.name$ -- 349
-if$ -- 5191
+            1847 strings with 21174 characters,
+and the built_in function-call counts, 27043 in all, are:
+= -- 1905
+> -- 570
+< -- 176
++ -- 191
+- -- 122
+* -- 3959
+:= -- 2766
+add.period$ -- 30
+call.type$ -- 30
+change.case$ -- 120
+chr.to.int$ -- 27
+cite$ -- 33
+duplicate$ -- 2504
+empty$ -- 2033
+format.name$ -- 362
+if$ -- 5370
 int.to.chr$ -- 4
-int.to.str$ -- 37
-missing$ -- 317
-newline$ -- 139
-num.names$ -- 87
-pop$ -- 1050
+int.to.str$ -- 38
+missing$ -- 328
+newline$ -- 142
+num.names$ -- 90
+pop$ -- 1086
 preamble$ -- 1
-purify$ -- 145
+purify$ -- 150
 quote$ -- 0
-skip$ -- 1020
+skip$ -- 1055
 stack$ -- 0
-substring$ -- 784
-swap$ -- 2225
-text.length$ -- 57
+substring$ -- 810
+swap$ -- 2302
+text.length$ -- 59
 text.prefix$ -- 0
 top$ -- 8
-type$ -- 377
+type$ -- 390
 warning$ -- 3
-while$ -- 86
+while$ -- 89
 width$ -- 0
-write$ -- 282
+write$ -- 290
 (There were 3 warnings)
