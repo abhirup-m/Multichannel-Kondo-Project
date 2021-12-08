@@ -1,5 +1,5 @@
 \documentclass{revtex4-2}
-\usepackage{braket,amsmath,amssymb,graphicx,float,paralist}
+\usepackage{braket,amsmath,amssymb,graphicx,float,paralist,color}
 \usepackage[hidelinks]{hyperref}
 \allowdisplaybreaks
 \begin{document}
@@ -163,7 +163,7 @@ The URG method \cite{anirbanurg1,anirbanurg2,anirbanmott1,anirbanmott2,siddharth
 \end{align}
 where \(c^\dagger T\) represents the off-diagonal part of the Hamiltonian with respect to the fluctuations of the electron we are decoupling and \(H_D\) is the diagonal part with respect to the same electron. Assuming we are decoupling a particular electron \(q\beta\), we have
 \begin{align}
-	c^\dagger T = J \sum_{k < \Lambda_j, \alpha}\vec{S_d}\cdot\vec{s}_{\beta \alpha}c^\dagger_{q\beta}c_{k\alpha}, && H_D = \epsilon_q \tau_{q\beta} + J S_d^z s_q^z
+	c^\dagger T = J \sum_{|k| < \Lambda_j, \atop{\alpha=\uparrow,\downarrow}}\vec{S_d}\cdot\vec{s}_{\beta \alpha}c^\dagger_{q\beta}c_{k\alpha}, ~H_D = \epsilon_q \tau_{q\beta} + J S_d^z s_q^z
 \end{align}
 Usually we treat the \(\hat \omega\) as number(s) and study the renormalization in the couplings as functions of the quantum fluctuation scales. Each value of the fluctuation scale defines an eigendirection of \(\hat \omega\). We have then essentially traded off the complexity in the non-commutation of the diagonal and off-diagonal terms for all the directions in the manifold of \(\hat \omega\).
 
@@ -271,14 +271,14 @@ For \(D \gg J\), we can ignore the \(J\) in the denominator, and the equation re
 	\label{pms_mchannel}
 	\frac{\:\mathrm{d}J}{\:\mathrm{d}D} \simeq  \frac{J^2 \rho}{D}\left(\frac{1}{8}J\rho K - 1\right)
 \end{align}
-This equation has a stable fixed point at \(J^* = \frac{8}{\rho K}\). The value of the fixed point agrees with the poor man's scaling calculation in \cite{tripathi2018landau}, but differs from the value of \(\frac{2}{\rho K}\) obtained in other references \cite{Kuramoto1998,Kogan_2018} \textbf{[MOST PROBABLY THERE ARE OTHER REFERENCES]}.
+This equation has a stable fixed point at \(J^* = \frac{8}{\rho K}\). The value of the fixed point agrees with the poor man's scaling calculation in \cite{tripathi2018landau}, but differs from the value of \(\frac{2}{\rho K}\) obtained in other references \cite{Kuramoto1998,Kogan_2018}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.4\textwidth]{rg_flow_pms.pdf}
 	\caption{Attractive finite \(J\) fixed point of poor man scaling RG equation}
 \end{figure}
-For \(D\) not so large, the denominator also comes into play, and eq.\ref{mchannel} holds. We get the possibility of two fixed points - one from the numerator and the other from the numerator.
+For \(D\) not so large, the denominator also comes into play, and Eq.~\ref{mchannel} holds. We get the possibility of two fixed points - one from the numerator and the other from the numerator.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.7\textwidth]{./rg_flow.pdf}
@@ -311,7 +311,7 @@ This behaviour is shown schematically in fig.~\ref{rg_flow_general}.
 \end{figure}
 In fig.~\ref{rhomin_vs_D}, we plot \(\rho_\text{min}\) against the bare bandwidth. For large \(D_0\), it essentially shrinks to zero, and the numerator becomes the first fixed point for essentially all \(\rho\).
 
-If we assume we are at a sufficiently large \(D_0\) and \(\rho > \rho_\text{min}\), the lower fixed point is \(J_1^*\). As shown in fig.~\ref{rhomin_vs_D}, we have \(J_1^* \ll D_0\). If we start with \(J_0\) in the neighborhood of \(J_1^*\), we can use \(J_1^* \ll D_0\) to ignore \(J\) in the denominator and the RG equation reduces to the poor man's scaling form eq.~\ref{pms_mchannel}. The denominator fixed point has effectively moved off to infinity. That this is true can also be argued from the single-channel Kondo model URG results. There, we saw that when the bandwidth is scaled to larger values, the strong-coupling fixed point was stable at successively larger values of \(J^*\). Since the denominator fixed point is identical in structure in both problems, its reasonable that the same thing will happen here.
+If we assume we are at a sufficiently large \(D_0\) and \(\rho > \rho_\text{min}\), the lower fixed point is \(J_1^*\). As shown in fig.~\ref{rhomin_vs_D}, we have \(J_1^* \ll D_0\). If we start with \(J_0\) in the neighborhood of \(J_1^*\), we can use \(J_1^* \ll D_0\) to ignore \(J\) in the denominator and the RG equation reduces to the poor man's scaling form Eq.~\ref{pms_mchannel}. The denominator fixed point has effectively moved off to infinity. That this is true can also be argued from the single-channel Kondo model URG results. There, we saw that when the bandwidth is scaled to larger values, the strong-coupling fixed point was stable at successively larger values of \(J^*\). Since the denominator fixed point is identical in structure in both problems, its reasonable that the same thing will happen here.
 
 \section{Effect of anisotropy on RG flows}
 For a general anisotropic multi-channel Kondo, the Hamiltonian is
@@ -380,25 +380,25 @@ At the stable fixed point \(J ^* = J_1^* = \frac{8}{K \rho}\), the ground states
 \end{aligned}\end{equation}
 where \(\sigma^z_{0,l} = \hat n_{0\uparrow,l} - \hat n_{0\downarrow,l}, s^+ = c^\dagger_{0 \uparrow,l}c_{0 \downarrow,l}\) and \(s^- = \left(s^+\right)^\dagger\). The notation \(0\sigma,l\) has the site index \(i=0,1,2,\ldots\) as the first label, the spin index \(\sigma=\uparrow,\downarrow\) as the second label and the channel index \(l=1,2\) as the third index.
 
-These are the terms that are generated because of the presence of the impurity. Such a non-Fermi liquid contribution to the effective Hamiltonian and the absence of any Fermi-liquid term should be contrasted with the local Fermi liquid excitations induced by the singlet ground state of the single-channel Kondo model at fourth order. We wish to point out that such non-Fermi liquid terms were also obtained by Coleman, et al.~\cite{Coleman_tsvelik} in terms of Majorana fermions at the zeroth site and the first site. They then went on to compute a single-particle self-energy renormalization coming from this non-Fermi liquid term that matches the phenomenological \cite{varma2002singular} and microscopic forms of the marginal Fermi liquid self-energy \cite{anirbanmott1,anirbanurg1}. We take a different route in order to calculate the self-energy contribution coming from eq.~\ref{nfl_terms}, one that involves \cite{anirbanmott1}.
+These are the terms that are generated because of the presence of the impurity. Such a non-Fermi liquid (NFL) contribution to the effective Hamiltonian and the absence of any Fermi-liquid term should be contrasted with the local Fermi liquid excitations induced by the singlet ground state of the single-channel Kondo model at fourth order. We wish to point out that such NFL terms were also obtained by Coleman, et al.~\cite{Coleman_tsvelik} in terms of Majorana fermions at the zeroth site and the first site. They then went on to compute a single-particle self-energy renormalization coming from this NFL term that matches the phenomenological \cite{varma2002singular} and microscopic forms of the marginal Fermi liquid self-energy \cite{anirbanmott1,anirbanurg1}. We take a different route in order to calculate the self-energy contribution coming from Eq.~\ref{nfl_terms}, one that involves \cite{anirbanmott1}.
 
 In \cite{anirbanurg1}, it was found that the normal phase of the Mott insulator was a marginal Fermi liquid in momentum space, defined by the interaction term 
 \begin{equation}\begin{aligned}
 	\label{mfl_urg}
 	H_\text{MFL} = \sum_{k,k^\prime,k^{\prime\prime},\sigma}R \hat n_{k} \hat n_{k^\prime \overline\sigma}\left(1 - \hat n_{k^{\prime\prime}\sigma}\right) 
 \end{aligned}\end{equation}
-We wish to look for such a term in the effective Hamiltonian. For this, we will perform a perturbative treatment of the hopping at strong-coupling \(J \to \infty\) where the perturbative coupling \(t^2/J\) is arbitrarily small and again obtain eq.~\ref{nfl_terms}. Such a change from the strong-coupling model with parameter \(J\) to a weak-coupling model with parameter \(t^2/J\) amounts to a duality transformation \cite{kroha_kolf_2007,zitko_fabrozio_2017}. It can be shown that the duality transformation leads to an identical multi-channel Kondo model \cite{kroha_kolf_2007} (self-duality), which implies we can have identical RG flows, and our transformation simply extracts the non-Fermi liquid piece from the dual model. The self-duality also implies that the critical intermediate-coupling fixed point is unique and can be reached from either of the models.
+We wish to look for such a term in the effective Hamiltonian. For this, we will perform a perturbative treatment of the hopping at strong-coupling \(J \to \infty\) where the perturbative coupling \(t^2/J\) is arbitrarily small and again obtain Eq.~\ref{nfl_terms}. Such a change from the strong-coupling model with parameter \(J\) to a weak-coupling model with parameter \(t^2/J\) amounts to a duality transformation \cite{kroha_kolf_2007,zitko_fabrozio_2017}. It can be shown that the duality transformation leads to an identical multi-channel Kondo model \cite{kroha_kolf_2007} (self-duality), which implies we can have identical RG flows, and our transformation simply extracts the NFL piece from the dual model. The self-duality also implies that the critical intermediate-coupling fixed point is unique and can be reached from either of the models.
 
 Since we are looking for a 2 particle-1 hole term in \(k-\)space, we will keep only those terms that can produce such a term:
 \begin{equation}\begin{aligned}
 	V_\text{eff} = \frac{2t^2}{J}\sum_{l=1,2}\left(\sum_\sigma \hat n_{0\sigma,l}\right) s^+_{0,\bar l}s^-_{1,\bar l} + \text{h.c.}
 \end{aligned}\end{equation}
-where \(\bar l = 3 - l\) is the channel index complementary to \(l\). To compare with eq.~\ref{mfl_urg}, we will fourier transform this effective Hamiltonian (after inserting the kinetic energy of the bath) into \(k-\)space.
+where \(\bar l = 3 - l\) is the channel index complementary to \(l\). To compare with Eq.~\ref{mfl_urg}, we will fourier transform this effective Hamiltonian (after inserting the kinetic energy of the bath) into \(k-\)space.
 \begin{equation}\begin{aligned}
 	\label{k_space_od}
 	H_\text{eff} = \sum_{k\sigma,l}\epsilon_{k,l} \hat n_{k\sigma,l} + \sum_{\sigma, \left\{k_i,k_i^\prime\right\},l} \frac{2t^2}{J}e^{i\left(k_1 - k_1^\prime\right)a}c^\dagger_{k\sigma,l}c_{k^\prime\sigma,l}c^\dagger_{k_2 \uparrow, \bar l}c_{k_2^\prime \downarrow,\bar l}c^\dagger_{k_1 \downarrow,\bar l}c_{k_1^\prime \uparrow, \bar l} + \text{h.c.} 
 \end{aligned}\end{equation}
-This form of the Hamiltonian is very similar to the three-particle interaction term in Appendix B of \cite{anirbanmott1}. The channel indices in eq.~\ref{k_space_od} can be mapped to the normal directions in \cite{anirbanmott1}. As specualted eariler, the three-particle interaction in eq.~\ref{k_space_od} has a diagonal component which can be obtained by setting \(k=k^\prime, k_1 = k_2^\prime\) and \(k_2 = k_1^\prime\):
+This form of the Hamiltonian is very similar to the three-particle interaction term in Appendix B of \cite{anirbanmott1}. The channel indices in Eq.~\ref{k_space_od} can be mapped to the normal directions in \cite{anirbanmott1}. As specualted eariler, the three-particle interaction in Eq.~\ref{k_space_od} has a diagonal component which can be obtained by setting \(k=k^\prime, k_1 = k_2^\prime\) and \(k_2 = k_1^\prime\):
 \begin{equation}\begin{aligned}
 	H_\text{eff,MFL} = \sum_{\sigma, k, k_1, k_2, l} \frac{2t^2}{J}e^{i\left(k_1 - k_2\right)a} \hat n_{k\sigma,l} \hat n_{k_2 \uparrow, \bar l}\left(1 - \hat n_{k_1 \downarrow,\bar l}\right) + \text{h.c.} = \sum_{\sigma, k, k_1, k_2, l} \frac{4t^2}{J} \cos a\left(k_1 - k_2\right)  \hat n_{k\sigma,l} \hat n_{k_2 \uparrow, \bar l}\left(1 - \hat n_{k_1 \downarrow,\bar l}\right)
 \end{aligned}\end{equation}
@@ -407,16 +407,28 @@ The largest term is obtained by choosing \(k_1 = k_2 = k^\prime\):
 	\label{mfl_large}
 	H^*_\text{eff,MFL} = \frac{4t^2}{J} \sum_{\sigma, k, k^\prime, l} \hat n_{k\sigma,l} \hat n_{k^\prime \uparrow, \bar l}\left(1 - \hat n_{k^\prime \downarrow,\bar l}\right)
 \end{aligned}\end{equation}
-Following \cite{anirbanmott1}, one can follow the RG evolution of the dual coupling \(J^\prime = \frac{4t^2}{J}\), leading to a \(k-\)space-averaged self-energy for each channel (eq. 33 of \cite{anirbanmott1})
+Following \cite{anirbanmott1}, one can follow the RG evolution of the dual coupling \(R_j = \frac{4t^2}{J_j}\) at the \(j^\text{rh}\) RG step, in the form of the URG equation
 \begin{equation}\begin{aligned}
+	\Delta R_j = \frac{R_j^2}{\bar\omega - \epsilon_{j}/2 + R_j/8}
+\end{aligned}\end{equation}
+In the RG equation, \(\epsilon_{j}\) represents the energy of the \(j^\text{th}\) isoenergetic shell. It is seen from the RG equation that \(R\) is relevant in the range of \(\bar\omega = \epsilon_j -\omega\) that has been used throughout \((\omega < \epsilon_j/2)\), \textcolor{red}{leading to a fixed-point at \(R_*/8 = \bar\omega - \epsilon_*/2)\)}. The relevance of \(R\) is expected because the strong-coupling \(J\) is irrelevant and \(R \sim 1/J\).
+
+The renormalization in \(R\) leads to a renormalization in the single-particle self-energy \cite{anirbanmott1}. The \(k-\)space-averaged self-energy renormalization is
+\begin{equation}\begin{aligned}
+	\Delta \Sigma_l(\omega) = \rho R_*^2\int_0^{\epsilon_*} \frac{d\epsilon}{\bar\omega - \epsilon_j/2 + R_*/8}
+\end{aligned}\end{equation}
+leading to a \(k-\)space-averaged self-energy for each channel (eq. 33 of \cite{anirbanmott1})
+\begin{equation}\begin{aligned}
+	\label{self_energy}
 	\Sigma_l(\omega_l) \sim \omega_l \ln |\omega_l|\\
 \end{aligned}\end{equation}
 where \(\omega_l\) is the fluctuation scale for a particular channel. The self-energy also provides the quasiparticle residue for each channel\cite{anirbanmott1}:
 \begin{equation}\begin{aligned}
 	Z_l(\omega_l) = \left(2 - \ln \omega_l\right) ^{-1}
 \end{aligned}\end{equation}
-As the energy scales \(\omega_l \to 0\), the \(Z_l\) vanishes, implying that the ground state and lowest-lying excitations, in the presence of the non-Fermi liquid terms, are not adiabatically connected to the Fermi gas. This is the orthogonality catastrophe in the two-channel Kondo problem, and it is brought about by the presence of the terms in eq.~\ref{mfl_large}. Such terms were absent in the similar perturbative expansion of the single-channel Kondo model, because there was no multiply-degenerate ground state manifold that allowed scattering. This line of argument shows that the extra degeneracy of the ground state subspace that comes about when one upgrades from the single-channel Kondo model to the multi-channel Kondo models is at the heart of the non-Fermi liquid behaviour, and the orthogonality catastrophe should be a general feature of all multi-channel Kondo models, even though we have demonstrated this only for the two-channel case.
+As the energy scales \(\omega_l \to 0\), the \(Z_l\) vanishes, implying that the ground state and lowest-lying excitations, in the presence of the NFL terms, are not adiabatically connected to the Fermi gas. This is the orthogonality catastrophe in the two-channel Kondo problem, and it is brought about by the presence of the terms in Eq.~\ref{mfl_large}. Such terms were absent in the similar perturbative expansion of the single-channel Kondo model, because there was no multiply-degenerate ground state manifold that allowed scattering. This line of argument shows that the extra degeneracy of the ground state subspace that comes about when one upgrades from the single-channel Kondo model to the multi-channel Kondo models is at the heart of the NFL behaviour, and the orthogonality catastrophe should be a general feature of all multi-channel Kondo models, even though we have demonstrated this only for the two-channel case.
 
+The fact that the marginal Fermi liquid term in eq.~\ref{mfl_large} involves all momenta means it is localised in real space. This can also be understood from the fact that the parent NFL term in eq.~\ref{nfl_terms} is also local. A local NFL term with a self-energy of the form in eq.~\ref{self_energy} was also obtained in the \(\sigma-\tau\) model by Coleman et al. \cite{Coleman_tsvelik}. The common features show the universality between the two-channel Kondo and the \(\sigma-\tau\) models.
 \section{Effective Hamiltonian for low-energy excitations: \(k-\)space}
 The fixed point Hamiltonian is
 \begin{align}
@@ -468,7 +480,7 @@ where \(G_0 = \left(E_\text{gs} - H_d\right)^{-1}\). If we expand the subspace a
 	H_\text{eff}\ket{1,  1}\bra{1,  1} &= \left(H_d + V^\dagger G_0  V\right) \ket{1,  1}\\
 	H_\text{eff}\ket{1, - 1}\bra{1, - 1} &= \left(H_d + V G_0 V^\dagger\right) \ket{1, - 1}
 \end{align}
-\textit{One important conclusion that comes out of these calculations is that if the ground state is degenerate, the effective Hamiltonians is independent of which ground state we choose to start from in eq.~\ref{gstate_Expand}. This is because the only difference in the various degenerate ground states is in the coefficients \(C_{S_d^z, s_\text{tot},s_\text{tot}^z}\). Since the final effective Hamiltonians are independent of these coefficients, they will be the same irrespective of which ground state we start with.}
+\textit{One important conclusion that comes out of these calculations is that if the ground state is degenerate, the effective Hamiltonians is independent of which ground state we choose to start from in Eq.~\ref{gstate_Expand}. This is because the only difference in the various degenerate ground states is in the coefficients \(C_{S_d^z, s_\text{tot},s_\text{tot}^z}\). Since the final effective Hamiltonians are independent of these coefficients, they will be the same irrespective of which ground state we start with.}
 
 To calculate these effective Hamiltonians, we will calculate the individual terms. We can easily simplify the \(S_d^z\) in the denominator of \(G_0\), because \(S_d^\pm \frac{1}{A + B S_d^z} = S_d^\pm \frac{1}{A \mp \frac{1}{2}B}\):
 \begin{align}
@@ -550,7 +562,7 @@ If we look at the effective Hamiltonian for a subspace \(\ket{s_\text{tot}, s^z_
 	s_\text{tot}^+ s_\text{tot}^- = s_\text{tot}\left(s_\text{tot} + 1\right) - s^z_\text{tot}\left(s^z_\text{tot} - 1\right) = \chi_{s_\text{tot}}^{-s_\text{tot}^z}
 \end{gather}
 They are not all independent: \(\left(\gamma_{s_\text{tot}}^{s_\text{tot}^z}\right)^{-1} + \left(\gamma_{s_\text{tot}}^{-s_\text{tot}^z}\right)^{-1} =  E_\text{gs} + J, \chi_{s_\text{tot}}^{s_\text{tot}^z} - \chi_{s_\text{tot}}^{-s_\text{tot}^z} = -2 s^z_\text{tot}\). 
-For the two-channel problem, we have four possible states in total: \(\left( s_\text{tot}, s_\text{tot}^z \right) = \left\{ (0,0), (1,-1), (1,0), (1,1) \right\} \). The states in the eq.~\ref{no_V} cannot be acted on by \(V\) or \(V^\dagger\), so the effective Hamiltonian for these states will consist of only the diagonal part:
+For the two-channel problem, we have four possible states in total: \(\left( s_\text{tot}, s_\text{tot}^z \right) = \left\{ (0,0), (1,-1), (1,0), (1,1) \right\} \). The states in the Eq.~\ref{no_V} cannot be acted on by \(V\) or \(V^\dagger\), so the effective Hamiltonian for these states will consist of only the diagonal part:
 \begin{align}
 	H_\text{eff} = H_0 + \frac{J}{2}s^z_\text{tot}
 \end{align}
@@ -603,7 +615,7 @@ The eigenvalues are
 	\lambda_{m, \pm}^{M, h} = \frac{1}{2}\left[-J/2 \pm \sqrt{J^2/4 + J^2 x_m^M + 4\epsilon^h_m\left(\epsilon^h_m + J/2\right) }\right] = -J/4 \pm \sqrt{J^2x^M_m/4 + \alpha^2}
 \end{align}
 where \(\alpha = \epsilon^h_m + J/4\).
-The eigenvalues of the terminal states are \(\pm\epsilon^h_{\pm M}\). For \(h = 0\), the ground state subspace is \(K-\)fold degenerate and is formed by the negative solutions of eq.~\ref{eigenvalue}. This common \(K-\)fold degenerate eigenvalue is \(-J(M+1)/2\).
+The eigenvalues of the terminal states are \(\pm\epsilon^h_{\pm M}\). For \(h = 0\), the ground state subspace is \(K-\)fold degenerate and is formed by the negative solutions of Eq.~\ref{eigenvalue}. This common \(K-\)fold degenerate eigenvalue is \(-J(M+1)/2\).
 The full list of energy eigenvalues at a particular value of \(M\) is
 \begin{align}
 \label{stargraph_spectrum}
@@ -769,7 +781,7 @@ For small \(h\), the ground state will be \(-\frac{J}{4}- \frac{J}{2}\left(M + \
 		M-1,& h< 0
 	\end{cases}
 \end{align}
-which means \(E_\text{min} = -\frac{J}{2}\left( M + 1 \right) - |h|\left(M - \frac{1}{2}\right)\). We also know, from eq.~\ref{extra_degen}, that \(d^\prime_\text{gs} = {}^{K-1}C_{K/2 - K/2} = 1\).
+which means \(E_\text{min} = -\frac{J}{2}\left( M + 1 \right) - |h|\left(M - \frac{1}{2}\right)\). We also know, from Eq.~\ref{extra_degen}, that \(d^\prime_\text{gs} = {}^{K-1}C_{K/2 - K/2} = 1\).
 The free energy for a non-zero field is therefore
 \begin{align}
 	F(h\neq 0, T\to 0) = -\frac{J}{2}\left( M + 1 \right) - |h|\left(M - \frac{1}{2}\right)
@@ -813,11 +825,11 @@ We wish to point out that this value is different from the "standard" result
 \label{cft_entropy}
 S = \ln 2\cos \frac{\pi}{K+2}
 \end{align}
-obtained from other methods like the Bethe ansatz (BA) and conformal field theory (CFT) calculations \cite{Gan_Andrei_Coleman_1993,andrei_destri_1984,Tsvelick_weigmann_mchannel_1985,sacramento1989,emery_kivelson,affleck_1991_overscreen}. The difference is not only in the value but also in the origin. Eq.~\ref{res_entropy} describes the thermal entropy coming purely from the quantum mechanical degeneracy of the star graph problem (which is the zero mode of the full multi-channel Kondo problem), while the result eq.~\ref{cft_entropy} presumably arises from the lowest-lying excitations on top of the zero mode arising from the conduction bath \(k-\)states. Another difference lies in the fact that while eq.~\ref{res_entropy} holds true independent of system size, eq.~\ref{cft_entropy} is correct only in the thermodynamic limit and only if the limit of system size \(L \to \infty\) is taken prior to taking the limit of temperature \(T \to 0\) \cite{Gan_Andrei_Coleman_1993,rozhkov_1998,vondelft_prl_1998}. We note however that the entropy coming from the degeneracy is larger than that coming from the excitations (fig.~\ref{entropy_comparison}), and consequently plays a very important role in the physics of the multi-channel Kondo problem, being responsible for the non-Fermi liquid physics and the critical behaviour near the fixed point.
+obtained from other methods like the Bethe ansatz (BA) and conformal field theory (CFT) calculations \cite{Gan_Andrei_Coleman_1993,andrei_destri_1984,Tsvelick_weigmann_mchannel_1985,sacramento1989,emery_kivelson,affleck_1991_overscreen}. The difference is not only in the value but also in the origin. Eq.~\ref{res_entropy} describes the thermal entropy coming purely from the quantum mechanical degeneracy of the star graph problem (which is the zero mode of the full multi-channel Kondo problem), while the result Eq.~\ref{cft_entropy} presumably arises from the lowest-lying excitations on top of the zero mode arising from the conduction bath \(k-\)states. Another difference lies in the fact that while Eq.~\ref{res_entropy} holds true independent of system size, Eq.~\ref{cft_entropy} is correct only in the thermodynamic limit and only if the limit of system size \(L \to \infty\) is taken prior to taking the limit of temperature \(T \to 0\) \cite{Gan_Andrei_Coleman_1993,rozhkov_1998,vondelft_prl_1998}. We note however that the entropy coming from the degeneracy is larger than that coming from the excitations (fig.~\ref{entropy_comparison}), and consequently plays a very important role in the physics of the multi-channel Kondo problem, being responsible for the NFL physics and the critical behaviour near the fixed point.
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.5\textwidth]{../numerics/entropy_comparison.pdf}
+	\includegraphics[width=0.4\textwidth]{../numerics/entropy_comparison.pdf}
 	\caption{Comparison of star graph zero temperature entropy with CFT/Bethe ansatz formula}
 	\label{entropy_comparison}
 \end{figure}
@@ -825,13 +837,15 @@ obtained from other methods like the Bethe ansatz (BA) and conformal field theor
 
 Another related problem for which this result holds is the Ising model on a 1D chain. The partition function for that problem is \(Z = \lambda_1^N + \lambda_2^N\), where \(\lambda_{1,2} = e^{\beta J} \pm e^{-\beta J} \) are the eigenvalues of the \(T-\)matrix and \(N\) is the number of particles. As we come to \(T \to 0\), we have \(\lambda_{1,2} \simeq e^{\beta J}\) and \(Z \simeq 2 e^{\beta N J}\), so \(F = -k_B T \ln 2 - N J\) and the entropy becomes \(S = - \partial_T F = k_B \ln 2\). Note that the factor of 2 in \(Z\) is the degeneracy \(d_\text{gs}\) described above.
 
+\clearpage
 \appendix
 \section{URG analysis of the single-channel Kondo model}
+The single-channel SU(2) Kondo model consists of a spin-half impurity interacting with a band of itinerant conduction electrons through a spin-exchange coupling:
 \label{1KondoURG}
 \begin{align}
 	\mathcal{H} = \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{k,l} J^z S_d^z s^z_{kl} + \frac{1}{2}\sum_{k,l} J^t \left(S_d^+ s^-_{kl}  + S_d^- s^+_{kl}\right)
 \end{align}
-where \(s^z_{kl} = \frac{1}{2}\left(c^\dagger_{k\uparrow}c_{l \uparrow} - c^\dagger_{k\downarrow}c_{l \downarrow}\right)\), \(s^-_{kl} = c^\dagger_{k \downarrow}c_{l \uparrow}\) and \(s^+_{kl} = {s^-_{lk}}^\dagger\). Also, \(\tau = \hat n - \frac{1}{2}\). \(k,l\) sum over the momentum states. \(\vec S_d\) is the impurity spin operator.
+Here, \(s^z_{kl} = \frac{1}{2}\left(c^\dagger_{k\uparrow}c_{l \uparrow} - c^\dagger_{k\downarrow}c_{l \downarrow}\right)\), \(s^-_{kl} = c^\dagger_{k \downarrow}c_{l \uparrow}\) and \(s^+_{kl} = {s^-_{lk}}^\dagger\). Also, \(\tau = \hat n - \frac{1}{2}\). The indices \(k,l\) sum over the momentum states. \(\vec S_d\) is the impurity spin operator with \(S_d^z = \pm 1/2\).
 
 The scheme is that we will disentangle an electron \(q\beta\) from the Hamiltonian, \(q\) being the momentum and \(\beta\) the spin. The diagonal part of the Hamiltonian under this scheme is
 \begin{align}

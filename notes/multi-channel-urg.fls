@@ -232,6 +232,21 @@ INPUT /usr/share/texmf-dist/tex/latex/paralist/paralist.sty
 INPUT /usr/share/texmf-dist/tex/latex/paralist/paralist.sty
 INPUT /usr/share/texmf-dist/tex/latex/paralist/paralist.sty
 INPUT /usr/share/texmf-dist/tex/latex/paralist/paralist.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
 INPUT /usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -621,7 +636,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT ./rg_flow_pms.pdf
 INPUT ./rg_flow_pms.pdf
 INPUT rg_flow_pms.pdf
@@ -676,7 +690,6 @@ INPUT multi-channel-urg.bbl
 INPUT multi-channel-urg.aux
 INPUT ./multi-channel-urg.out
 INPUT ./multi-channel-urg.out
-INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb

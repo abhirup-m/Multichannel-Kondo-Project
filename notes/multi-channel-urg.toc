@@ -17,12 +17,12 @@
 \contentsline {section}{\numberline {VII}MFL and orthogonality catastrophe in low-energy excitations of 2-CKM}{11}{section*.15}%
 \contentsline {section}{\numberline {VIII}Effective Hamiltonian for low-energy excitations: \(k-\)space}{13}{section*.16}%
 \contentsline {section}{\numberline {IX}Impurity susceptibility from zero-mode fixed point Hamiltonian}{17}{section*.17}%
-\contentsline {section}{\numberline {X}Bath Susceptibility from zero-mode fixed point Hamiltonian}{20}{section*.18}%
-\contentsline {section}{\numberline {XI}Non-analyticity in the free energy}{22}{section*.19}%
+\contentsline {section}{\numberline {X}Bath Susceptibility from zero-mode fixed point Hamiltonian}{21}{section*.18}%
+\contentsline {section}{\numberline {XI}Non-analyticity in the free energy}{23}{section*.19}%
 \contentsline {section}{\numberline {XII}Thermal entropy at \(T=0\)}{24}{section*.20}%
 \appendix 
-\contentsline {section}{\numberline {A}URG analysis of the single-channel Kondo model}{24}{section*.21}%
-\contentsline {subsection}{\numberline {1}Particle sector}{25}{section*.22}%
-\contentsline {subsection}{\numberline {2}Hole sector}{26}{section*.23}%
-\contentsline {subsection}{\numberline {3}Scaling equations}{26}{section*.24}%
-\contentsline {section}{\numberline {}References}{26}{section*.25}%
+\contentsline {section}{\numberline {A}URG analysis of the single-channel Kondo model}{26}{section*.21}%
+\contentsline {subsection}{\numberline {1}Particle sector}{26}{section*.22}%
+\contentsline {subsection}{\numberline {2}Hole sector}{27}{section*.23}%
+\contentsline {subsection}{\numberline {3}Scaling equations}{27}{section*.24}%
+\contentsline {section}{\numberline {}References}{27}{section*.25}%
