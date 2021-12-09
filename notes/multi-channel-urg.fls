@@ -641,6 +641,11 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT ./duality.pdf
+INPUT ./duality.pdf
+INPUT ./duality.pdf
+INPUT ./duality.pdf
+INPUT ./duality.pdf
 INPUT ./rg_flow_pms.pdf
 INPUT ./rg_flow_pms.pdf
 INPUT rg_flow_pms.pdf
