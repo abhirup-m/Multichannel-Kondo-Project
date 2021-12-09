@@ -173,6 +173,16 @@
   }\href {\doibase 10.1103/PhysRevB.44.9454} {\bibfield  {journal} {\bibinfo
   {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {44}},\ \bibinfo
   {pages} {9454} (\bibinfo {year} {1991})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {von Delft}\ \emph {et~al.}(1998)\citenamefont {von
+  Delft}, \citenamefont {Zar\'and},\ and\ \citenamefont
+  {Fabrizio}}]{vondelft_prl_1998}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {von
+  Delft}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Zar\'and}}, \
+  and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Fabrizio}},\ }\href
+  {\doibase 10.1103/PhysRevLett.81.196} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {81}},\ \bibinfo
+  {pages} {196} (\bibinfo {year} {1998})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Kolf}\ and\ \citenamefont
   {Kroha}(2007)}]{kroha_kolf_2007}%
   \BibitemOpen
@@ -297,14 +307,4 @@
   {1998})},\ \Eprint
   {http://arxiv.org/abs/https://doi.org/10.1142/S0217979298002805}
   {https://doi.org/10.1142/S0217979298002805} \BibitemShut {NoStop}%
-\bibitem [{\citenamefont {von Delft}\ \emph {et~al.}(1998)\citenamefont {von
-  Delft}, \citenamefont {Zar\'and},\ and\ \citenamefont
-  {Fabrizio}}]{vondelft_prl_1998}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {von
-  Delft}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Zar\'and}}, \
-  and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Fabrizio}},\ }\href
-  {\doibase 10.1103/PhysRevLett.81.196} {\bibfield  {journal} {\bibinfo
-  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {81}},\ \bibinfo
-  {pages} {196} (\bibinfo {year} {1998})}\BibitemShut {NoStop}%
 \end{thebibliography}%

@@ -3,10 +3,10 @@
 \contentsline {section}{\numberline {}Contents}{1}{section*.2}%
 \tocdepth@restore 
 \contentsline {section}{\numberline {I}Introduction of the Hamiltonian and its zero mode}{1}{section*.3}%
-\contentsline {section}{\numberline {II}Symmetries of the zero mode Hamiltonian}{2}{section*.4}%
+\contentsline {section}{\numberline {II}Symmetries of the star graph}{2}{section*.4}%
 \contentsline {section}{\numberline {III}Eigenvalues and eigenstates}{3}{section*.5}%
-\contentsline {section}{\numberline {IV}Importance of the zero mode Hamiltonian}{4}{section*.6}%
-\contentsline {section}{\numberline {V}Parity operators and the impurity magnetization}{5}{section*.7}%
+\contentsline {section}{\numberline {IV}Importance of the star graph}{4}{section*.6}%
+\contentsline {section}{\numberline {V}Parity operators and the impurity magnetization}{4}{section*.7}%
 \contentsline {section}{\numberline {VI}Derivation of URG equations for the multi-channel Kondo model}{6}{section*.8}%
 \contentsline {subsection}{\numberline {A}URG procedure}{6}{section*.9}%
 \contentsline {subsection}{\numberline {B}Leading order renormalization}{7}{section*.10}%
