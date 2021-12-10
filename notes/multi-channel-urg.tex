@@ -1,4 +1,4 @@
-\documentclass{revtex4-2}
+\documentclass[12pt]{revtex4-2}
 \usepackage{braket,amsmath,amssymb,graphicx,float,paralist,color}
 \usepackage[hidelinks]{hyperref}
 \allowdisplaybreaks
@@ -69,7 +69,7 @@ One final operator that we will look at is the spin parity operator \(\pi^a = \s
 	\left[H, \pi^a\right] = J\sum_{b,j} \left[S_d^b s_j^b, \sigma_d^a \otimes_{i=1}^K \sigma_i^a\right] = \sum_{bj}\left(S_d^b \sigma_d^a s^b_j \sigma^a_j - \sigma_d^a S_d^b \sigma^a_j s^b_j\right) \otimes_{i<j}\sigma_i^a \otimes_{i>j}\sigma^a_i = 0
 \end{align}
 
-\section{Eigenvalues and eigenstates}
+\section{Eigenvalues and eigenstates of the star graph}
 The star graph can be diagonalized. Since the Hamiltonian commutes with \(s_\text{tot}^2\), it is already block-diagonal in the quantum number \(s_\text{tot}\). Let us represent the quantum number of \(s_\text{tot}^z\) by \(m\). For a particular \(s_\text{tot}\), \(m\) can take values from the set \(\left[-s_\text{tot}, s_\text{tot}\right] \). The spin \(S_d^z\) can also take values \(\pm \frac{1}{2}\). From now on, we will assume we are in the subspace of a particular \(s_\text{tot} = M\), so we will ignore that quantum number and write the kets simply as \(\ket{S_d^z, m}\). So, the notation \(\ket{\uparrow,-1}\) means the state with \(S_d^z = \frac{1}{2}\) and \(m = -1\). We will now show that even inside the block of \(2\times s_\text{tot}\) (or \(2\times s_\text{tot} + 1\), depending on whether it is odd or even) defined by a particular value of \(s_\text{tot}\), the Hamiltonian actually separates into decoupled \(2\times 2\) blocks. To see why, first note that the terminal states \(\ket{\downarrow, -M}\) and \(\ket{\uparrow, M}\) are already eigenstates, because they cannot scatter (the impurity can only flip down, and this would require the bath to flip up, but \(s^z_\text{tot}\) is already at its maximum value \(M\)). The other \(2M - 2\) states can be organized into \(2\times 2\) blocks formed by the states \(\ket{\uparrow, m}\) and \(\ket{\downarrow, m+1}\) for \(m \in \left[-M, M-1\right] \). The fact that this block does not interact with the other blocks can be easily verified: if there was some other state which when acted upon by the Hamiltonian gave a non-zero projection on \(\ket{\uparrow, m}\), it would have to come from \(S_d^z = \downarrow\), and this would mean the bath spin would have had to flip down. This means the bath spin in that state would have to be \(m+1\), and that is precisely the other state in the block. 
 
 Defining \(x^M_m = M(M+1) - m(m+1)\), the \(2\times 2\) blocks can be written as
@@ -89,7 +89,7 @@ The normalized eigenstates of the \(2\times 2\) blocks for each value of \(m\) a
 \end{align}
 Note that the index \(m\) that we are using to label the eigenvalues is actually related to a conserved quantity; the total spin operator along \(z\), \(S^z\). That is, the eigenstates \(\ket{\Psi^M_{m,\pm}}\) have \(S^z = S_d^z + s_\text{tot}^z = m + \frac{1}{2}\).
 
-\section{Importance of the star graph}
+\section{Importance of the star graph in determining the physics of the problem}
 Methods like CFT, Bethe ansatz, bosonization and NRG~\cite{affleck_1991_overscreen,Tsvelick_Weigmann_mchannel_1984,Gan_mchannel_1994,pang_cox_1991,emery_kivelson,vondelft_prl_1998} have shown that \textit{neither the weak coupling nor the strong coupling Hamiltonians are stable fixed points of the multi-channel Kondo models}. Instead, the RG flows converge to an intermediate coupling fixed point. The RG flows \textit{preserve the degeneracy of the ground state}~\cite{pang_cox_1991,kroha_kolf_2007,zitko_fabrizio_2017}, because the Hamiltonian commutes with the total magnetization operator \(S^z = S_d^z + s_\text{tot}^z\)~\cite{vondelft_prl_1998}. For example, the two-channel and the three-channel Kondo models have ground state degeneracies of 2 and 3 respectively, throughout the RG flow. Analytic and numerical studies also showed that \textit{the two and three-channel models enjoy a weak-strong duality}~\cite{kroha_kolf_2007,zitko_fabrizio_2017}: the model at strong coupling, when projected onto the ground state basis, can also be thought of as a Kondo model at weak coupling, but possibly with a modified central spin. For example, in the two channel Kondo model, the model at strong coupling can be mapped onto the same model with a small coupling parameter, but with the central Kondo spin-half impurity replaced by a new, composite spin-half object formed by the doubly-degenerate ground state of the strong coupling model~\cite{kroha_kolf_2007}. The strong and weak coupling models are formally identical and the model is self-dual. The case of the three-channel model is different~\cite{zitko_fabrizio_2017} because there, the central impurity gets replaced by a new \textit{spin-1} impurity formed by the triply-degenerate ground state. Compared to the self-duality of the two-channel model, this case corresponds to a cross duality between a spin-1/2 and a spin-1 model. We will now show that these qualitative features can be captured very simply by the star graph.
 
 At weak coupling \(J \to 0^+\), the central spin is weakly coupled to the outer spins and can freely flip like a local moment. \textit{This makes it prone to screening because of the \(s^\pm\) terms in the star graph}. At strong coupling \(J \to \infty^-\), the outer spin-half objects tightly bind with the central spin-half object to form a single spin. The remaining states in the conduction bath channels form new zero modes and create a new outer ring of spins that interact with the new central spin, \textit{leading to another multi-channel Kondo problem with a new and small exchange coupling which is RG relevant, so the strong coupling fixed point \(J \to \infty^-\) is unstable}. This shows that it can be argued, even from the zero mode, that the two limits of the model cannot be stable fixed points, and the actual fixed point has to lie somewhere in between.
@@ -863,11 +863,11 @@ Another related problem for which this result holds is the Ising model on a 1D c
 
 \clearpage
 \appendix
-\section{URG analysis of the single-channel Kondo model}
+\section{URG equations for the single-channel Kondo model}
 The single-channel SU(2) Kondo model consists of a spin-half impurity interacting with a band of itinerant conduction electrons through a spin-exchange coupling:
-\label{1KondoURG}
 \begin{align}
-	\mathcal{H} = \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{k,l} J^z S_d^z s^z_{kl} + \frac{1}{2}\sum_{k,l} J^t \left(S_d^+ s^-_{kl}  + S_d^- s^+_{kl}\right)
+\label{1KondoURG}
+	\mathcal{H} = \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{kl} J^z S_d^z s^z_{kl} + \frac{1}{2}\sum_{kl} J^t \left(S_d^+ s^-_{kl}  + S_d^- s^+_{kl}\right)
 \end{align}
 Here, \(s^z_{kl} = \frac{1}{2}\left(c^\dagger_{k\uparrow}c_{l \uparrow} - c^\dagger_{k\downarrow}c_{l \downarrow}\right)\), \(s^-_{kl} = c^\dagger_{k \downarrow}c_{l \uparrow}\) and \(s^+_{kl} = {s^-_{lk}}^\dagger\). Also, \(\tau = \hat n - \frac{1}{2}\). The indices \(k,l\) sum over the momentum states. \(\vec S_d\) is the impurity spin operator with \(S_d^z = \pm 1/2\).
 
@@ -937,6 +937,71 @@ For \(\omega < D/2\), we get the flow towards the strong coupling fixed point. T
 \begin{align}
 	\Delta J^{(2)} = \frac{J^2 n(D)}{D - J/4} \simeq \frac{J^2 n(D)}{D}
 \end{align}
+
+\section{URG equations for the single-channel Kondo model with spin-\(S\) impurity}
+The Hamiltonian is the same as eq.~\ref{1KondoURG}, but the impurity is now a spin-\(S\) object, such that \(S_d^z \in \left[-S, -S+1,\ldots,S-1,S\right] \). We will also choose different couplings \(J_m\) for each of the eigenvalues of \(S_d^z\):
+\begin{equation}\begin{aligned}
+	\mathcal{H} = \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{k}\sum_{m=-S}^S J^z_m S_d^z s^z_{k}\ket{m}\bra{m} + \frac{1}{2}\sum_{k}\sum_{m=-S}^S J^t_m \left(S_d^+ s^-_{k} \ket{m}\bra{m} + \text{h.c.}\right)
+\end{aligned}\end{equation}
+The states \(\ket{m}\) act purely on the Hilbert space of the impurity spin and are defined as \(S_d^z\ket{m} = m\ket{m}\). We will use the relations:
+\begin{equation}\begin{aligned}
+	S_d^\pm S_d^z &= S_d^z S_d^\pm \mp S_d^\pm\\
+	S_d^z S_d^\pm &= S_d^\pm S_d^z \pm S_d^\pm\\
+	S_d^\pm S_d^\mp &= \vec S_d^2 - {S_d^z}^2 \pm S_d^z
+\end{aligned}\end{equation}
+The various terms that renormalize the Hamiltonian can be described in terms of the impurity spin operators that come into them. For example, the term that has \(S_d^z\) on both sides of the intervening Greens function can be represented as \(z-z\). There are 7 such terms: \(z|z, \pm|\mp, z|\pm, \pm|z\). Each of these terms occur both in the particle and the hole sectors.
+\subsection{Particle sector}
+We will now calculate each of these terms for the particle sector. The particle sector consists of those processes that start from an occupied state \(\hat n_{q\beta} = 1\).
+\paragraph{\(z|z: \beta=\uparrow\)}
+\begin{equation}\begin{aligned}
+	\sum_{kk^\prime,m}\frac{1}{4}{J^z_m}^2 c^\dagger_{q \uparrow} c_{k^\prime \uparrow} S_d^z \ket{m}\bra{m} \frac{1}{\omega_{m, \uparrow} - D/2 + \frac{J}{2}S_d^z} \ket{m}\bra{m} S_d^z c^\dagger_{k \uparrow}c_{q \uparrow} = -\frac{1}{4}n_{q \uparrow}\sum_{kk^\prime,m}\frac{{J^z_m}^2{S_d^z}^2 c^\dagger_{k \uparrow}c_{k^\prime\uparrow} \ket{m}\bra{m}}{\omega_{m, \uparrow} - D/2 + \frac{Jm}{2}}
+\end{aligned}\end{equation}
+
+\paragraph{\(z|z: \beta=\downarrow\)}
+\begin{equation}\begin{aligned}
+	\sum_{kk^\prime,m}\frac{1}{4}{J^z_m}^2 c^\dagger_{q \downarrow} c_{k^\prime \downarrow} S_d^z \ket{m}\bra{m} \frac{1}{\omega_{m, \downarrow} - D/2 - \frac{J}{2}S_d^z} \ket{m}\bra{m} S_d^z c^\dagger_{k \downarrow}c_{q \downarrow} = -\frac{1}{4}n_{q \downarrow}\sum_{kk^\prime,m}\frac{{J^z_m}^2{S_d^z}^2 c^\dagger_{k \downarrow}c_{k^\prime\downarrow} \ket{m}\bra{m}}{\omega_{m, \downarrow} - D/2 - \frac{Jm}{2}}
+\end{aligned}\end{equation}
+
+\paragraph{\(+|-\)}
+\begin{equation}\begin{aligned}
+	\sum_{kk^\prime,m}\frac{1}{4}{J^t_m}^2 c^\dagger_{q \downarrow} c_{k^\prime \uparrow} S_d^+ \ket{m}\bra{m} \frac{1}{\omega_{m, \downarrow} - D/2 - \frac{J}{2}S_d^z} \ket{m}\bra{m} S_d^- c^\dagger_{k \uparrow}c_{q \downarrow} = -\frac{1}{4}n_{q \downarrow}\sum_{kk^\prime,m}\frac{{J^t_m}^2S_d^+ \ket{m}\bra{m} S_d^- c^\dagger_{k \uparrow}c_{k^\prime\uparrow} }{\omega_{m, \downarrow} - D/2 - \frac{Jm}{2}}
+\end{aligned}\end{equation}
+
+\paragraph{\(-|+\)}
+\begin{equation}\begin{aligned}
+	\sum_{kk^\prime,m}\frac{1}{4}{J^t_m}^2 c^\dagger_{q \uparrow} c_{k^\prime \downarrow} S_d^- \ket{m}\bra{m} \frac{1}{\omega_{m, \uparrow} - D/2 + \frac{J}{2}S_d^z} \ket{m}\bra{m} S_d^+ c^\dagger_{k \downarrow}c_{q \uparrow} = -\frac{1}{4}n_{q \uparrow}\sum_{kk^\prime,m}\frac{{J^t_m}^2S_d^- \ket{m}\bra{m} S_d^+ c^\dagger_{k \downarrow}c_{k^\prime\downarrow} }{\omega_{m, \uparrow} - D/2 + \frac{Jm}{2}}
+\end{aligned}\end{equation}
+
+\paragraph{\(z|+\)}
+\begin{equation}\begin{aligned}
+	\sum_{kk^\prime,m}\frac{1}{4}{J^z_m} J^t_m c^\dagger_{q \uparrow} c_{k^\prime \uparrow} S_d^z \ket{m}\bra{m} \frac{1}{\omega_{m, \uparrow} - D/2 + \frac{J}{2}S_d^z} \ket{m}\bra{m} S_d^+ c^\dagger_{k \downarrow}c_{q \uparrow} = -\frac{1}{4}n_{q \uparrow}\sum_{kk^\prime,m}\frac{{J^z_m} J^t_m \ket{m}\bra{m} S_d^z S_d^+ c^\dagger_{k \downarrow}c_{k^\prime\uparrow}}{\omega_{m, \uparrow} - D/2 + \frac{Jm}{2}}
+\end{aligned}\end{equation}
+
+\paragraph{\(-|z\)}
+This is equal to the h.c. of the renormalization coming from \(z|+\), because \(-|z = \left(z|+\right)^\dagger \).
+
+\paragraph{\(z|-\)}
+\begin{equation}\begin{aligned}
+	-\sum_{kk^\prime,m}\frac{1}{4}{J^t_m} J^z_m c^\dagger_{q \downarrow} c_{k^\prime \downarrow} S_d^z \ket{m}\bra{m} \frac{1}{\omega_{m, \downarrow} - D/2 - \frac{J}{2}S_d^z} \ket{m}\bra{m} S_d^- c^\dagger_{k \uparrow}c_{q \downarrow} = \frac{1}{4}n_{q \downarrow}\sum_{kk^\prime,m}\frac{{J^t_m} J^z_m \ket{m}\bra{m} S_d^z S_d^- c^\dagger_{k \uparrow}c_{k^\prime\downarrow}}{\omega_{m, \downarrow} - D/2 - \frac{Jm}{2}}
+\end{aligned}\end{equation}
+
+\paragraph{\(+|z\)}
+This is equal to the h.c. of the renormalization coming from \(z|-\), because \(+|z = \left(z|-\right)^\dagger \).
+
+The first four terms generate and renormalize a new three-particle term in the Hamiltonian, of the form \(J^{zz}{S_d^z}^2\sum_{kk^\prime\sigma}c^\dagger_{k\sigma}c_{k^\prime\sigma}\). The third and fourth terms also renormalize the \(J^z_m\) coupling. The terms e through h renormalize \(J^t_m\). To compare with the spin-\(\frac{1}{2}\) Kondo URG, we redefine the \(\omega_{m\sigma} \to \omega + \frac{J}{2}\left(-\sigma m + \frac{1}{2}\right) \). We also use \(\sum_\sigma \hat n_{q\sigma}= n(D)\). The total renormalization from the first four terms is
+\begin{equation}\begin{aligned}
+	-\frac{1}{4}\sum_{kk^\prime\sigma}\frac{n(D)\left({J^z}^2 - {J^t}^2\right) {S_d^z}^2 c^\dagger_{k \sigma}c_{k^\prime\sigma}}{\omega - D/2 + \frac{J}{4}} - \frac{1}{2}\sum_{kk^\prime}\frac{n(D){J_m^t}^2 {S_d^z} s^z_{kk^\prime}}{\omega - D/2 + \frac{J}{4}}
+\end{aligned}\end{equation}
+The renormalization from the last four terms is
+\begin{equation}\begin{aligned}
+	-\frac{1}{2}\sum_{kk^\prime, m}\frac{n(D)J^z_m J^t_m \left(S_d^+ s^-_{kk^\prime} + \text{h.c.}\right) m\ket{m}\bra{m}}{\omega - D/2 + \frac{J}{4}}
+\end{aligned}\end{equation}
+
+
+
+
+
+
 
 \bibliographystyle{apsrev4-1}
 \bibliography{multi-channel-urg}

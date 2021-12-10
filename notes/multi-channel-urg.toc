@@ -2,28 +2,38 @@
 \tocdepth@munge 
 \contentsline {section}{\numberline {}Contents}{1}{section*.2}%
 \tocdepth@restore 
-\contentsline {section}{\numberline {I}Introduction of the Hamiltonian and its zero mode}{1}{section*.3}%
-\contentsline {section}{\numberline {II}Symmetries of the star graph}{2}{section*.4}%
-\contentsline {section}{\numberline {III}Eigenvalues and eigenstates}{3}{section*.5}%
-\contentsline {section}{\numberline {IV}Importance of the star graph}{4}{section*.6}%
-\contentsline {section}{\numberline {V}Parity operators and the impurity magnetization}{4}{section*.7}%
-\contentsline {section}{\numberline {VI}Derivation of URG equations for the multi-channel Kondo model}{6}{section*.8}%
-\contentsline {subsection}{\numberline {A}URG procedure}{6}{section*.9}%
-\contentsline {subsection}{\numberline {B}Leading order renormalization}{7}{section*.10}%
-\contentsline {subsection}{\numberline {C}Next-to-leading order renormalization}{7}{section*.11}%
-\contentsline {subsubsection}{\numberline {1}Calculation of first term}{8}{section*.12}%
-\contentsline {subsubsection}{\numberline {2}Calculation of second term}{9}{section*.13}%
-\contentsline {subsection}{\numberline {D}Total renormalization \(\Delta H^{(3)}\)}{9}{section*.14}%
-\contentsline {section}{\numberline {VII}Effect of anisotropy on RG flows}{11}{section*.15}%
-\contentsline {section}{\numberline {VIII}MFL and orthogonality catastrophe in low-energy excitations of 2-CKM}{12}{section*.16}%
-\contentsline {section}{\numberline {IX}Effective Hamiltonian for low-energy excitations: \(k-\)space}{14}{section*.17}%
-\contentsline {section}{\numberline {X}Impurity susceptibility from zero-mode fixed point Hamiltonian}{19}{section*.18}%
-\contentsline {section}{\numberline {XI}Bath Susceptibility from zero-mode fixed point Hamiltonian}{22}{section*.19}%
-\contentsline {section}{\numberline {XII}Non-analyticity in the free energy}{24}{section*.20}%
-\contentsline {section}{\numberline {XIII}Thermal entropy at \(T=0\)}{25}{section*.21}%
+\contentsline {section}{\numberline {I}Introduction of the Hamiltonian and its zero mode}{2}{section*.3}%
+\contentsline {section}{\numberline {II}Symmetries of the star graph}{3}{section*.4}%
+\contentsline {section}{\numberline {III}Eigenvalues and eigenstates of the star graph}{4}{section*.5}%
+\contentsline {section}{\numberline {IV}Importance of the star graph in determining the physics of the problem}{5}{section*.6}%
+\contentsline {section}{\numberline {V}Parity operators and the impurity magnetization}{7}{section*.7}%
+\contentsline {section}{\numberline {VI}Derivation of URG equations for the multi-channel Kondo model}{10}{section*.8}%
+\contentsline {subsection}{\numberline {A}URG procedure}{10}{section*.9}%
+\contentsline {subsection}{\numberline {B}Leading order renormalization}{11}{section*.10}%
+\contentsline {subsection}{\numberline {C}Next-to-leading order renormalization}{11}{section*.11}%
+\contentsline {subsubsection}{\numberline {1}Calculation of first term}{12}{section*.12}%
+\contentsline {subsubsection}{\numberline {2}Calculation of second term}{14}{section*.13}%
+\contentsline {subsection}{\numberline {D}Total renormalization \(\Delta H^{(3)}\)}{14}{section*.14}%
+\contentsline {section}{\numberline {VII}Effect of anisotropy on RG flows}{17}{section*.15}%
+\contentsline {section}{\numberline {VIII}MFL and orthogonality catastrophe in low-energy excitations of 2-CKM}{19}{section*.16}%
+\contentsline {section}{\numberline {IX}Effective Hamiltonian for low-energy excitations: \(k-\)space}{22}{section*.17}%
+\contentsline {section}{\numberline {X}Impurity susceptibility from zero-mode fixed point Hamiltonian}{29}{section*.18}%
+\contentsline {section}{\numberline {XI}Bath Susceptibility from zero-mode fixed point Hamiltonian}{33}{section*.19}%
+\contentsline {section}{\numberline {XII}Non-analyticity in the free energy}{36}{section*.20}%
+\contentsline {section}{\numberline {XIII}Thermal entropy at \(T=0\)}{38}{section*.21}%
 \appendix 
-\contentsline {section}{\numberline {A}URG analysis of the single-channel Kondo model}{27}{section*.22}%
-\contentsline {subsection}{\numberline {1}Particle sector}{27}{section*.23}%
-\contentsline {subsection}{\numberline {2}Hole sector}{28}{section*.24}%
-\contentsline {subsection}{\numberline {3}Scaling equations}{28}{section*.25}%
-\contentsline {section}{\numberline {}References}{28}{section*.26}%
+\contentsline {section}{\numberline {A}URG equations for the single-channel Kondo model}{40}{section*.22}%
+\contentsline {subsection}{\numberline {1}Particle sector}{40}{section*.23}%
+\contentsline {subsection}{\numberline {2}Hole sector}{41}{section*.24}%
+\contentsline {subsection}{\numberline {3}Scaling equations}{42}{section*.25}%
+\contentsline {section}{\numberline {B}URG equations for the single-channel Kondo model with spin-\(S\) impurity}{42}{section*.26}%
+\contentsline {subsection}{\numberline {1}Particle sector}{43}{section*.27}%
+\contentsline {paragraph}{\numberline {a}\(z|z: \beta =\uparrow \)}{43}{section*.28}%
+\contentsline {paragraph}{\numberline {b}\(z|z: \beta =\downarrow \)}{43}{section*.29}%
+\contentsline {paragraph}{\numberline {c}\(+|-\)}{43}{section*.30}%
+\contentsline {paragraph}{\numberline {d}\(-|+\)}{43}{section*.31}%
+\contentsline {paragraph}{\numberline {e}\(z|+\)}{44}{section*.32}%
+\contentsline {paragraph}{\numberline {f}\(-|z\)}{44}{section*.33}%
+\contentsline {paragraph}{\numberline {g}\(z|-\)}{44}{section*.34}%
+\contentsline {paragraph}{\numberline {h}\(+|z\)}{44}{section*.35}%
+\contentsline {section}{\numberline {}References}{44}{section*.36}%
