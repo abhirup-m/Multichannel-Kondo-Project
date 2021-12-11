@@ -28,12 +28,12 @@
 \contentsline {subsection}{\numberline {3}Scaling equations}{42}{section*.25}%
 \contentsline {section}{\numberline {B}URG equations for the single-channel Kondo model with spin-\(S\) impurity}{42}{section*.26}%
 \contentsline {subsection}{\numberline {1}Particle sector}{43}{section*.27}%
-\contentsline {paragraph}{\numberline {a}\(z|z: \beta =\uparrow \)}{43}{section*.28}%
-\contentsline {paragraph}{\numberline {b}\(z|z: \beta =\downarrow \)}{43}{section*.29}%
-\contentsline {paragraph}{\numberline {c}\(+|-\)}{43}{section*.30}%
-\contentsline {paragraph}{\numberline {d}\(-|+\)}{43}{section*.31}%
-\contentsline {paragraph}{\numberline {e}\(z|+\)}{44}{section*.32}%
-\contentsline {paragraph}{\numberline {f}\(-|z\)}{44}{section*.33}%
-\contentsline {paragraph}{\numberline {g}\(z|-\)}{44}{section*.34}%
-\contentsline {paragraph}{\numberline {h}\(+|z\)}{44}{section*.35}%
-\contentsline {section}{\numberline {}References}{44}{section*.36}%
+\contentsline {paragraph}{\numberline {a}\(z|z\)}{43}{section*.28}%
+\contentsline {paragraph}{\numberline {b}\(+|-\)}{43}{section*.29}%
+\contentsline {paragraph}{\numberline {c}\(-|+\)}{43}{section*.30}%
+\contentsline {paragraph}{\numberline {d}\(z|+\)}{43}{section*.31}%
+\contentsline {paragraph}{\numberline {e}\(+|z\)}{44}{section*.32}%
+\contentsline {paragraph}{\numberline {f}\(z|-\)}{44}{section*.33}%
+\contentsline {paragraph}{\numberline {g}\(-|z\)}{44}{section*.34}%
+\contentsline {subsection}{\numberline {2}Hole sector}{45}{section*.35}%
+\contentsline {section}{\numberline {}References}{45}{section*.36}%

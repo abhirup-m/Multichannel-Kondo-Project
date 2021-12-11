@@ -939,69 +939,97 @@ For \(\omega < D/2\), we get the flow towards the strong coupling fixed point. T
 \end{align}
 
 \section{URG equations for the single-channel Kondo model with spin-\(S\) impurity}
-The Hamiltonian is the same as eq.~\ref{1KondoURG}, but the impurity is now a spin-\(S\) object, such that \(S_d^z \in \left[-S, -S+1,\ldots,S-1,S\right] \). We will also choose different couplings \(J_m\) for each of the eigenvalues of \(S_d^z\):
+The Hamiltonian is the same as eq.~\ref{1KondoURG}, but the impurity is now a spin-\(S\) object, such that \(S_d^z \in \left[-S, -S+1,\ldots,S-1,S\right] \).
 \begin{equation}\begin{aligned}
-	\mathcal{H} = \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{k}\sum_{m=-S}^S J^z_m S_d^z s^z_{k}\ket{m}\bra{m} + \frac{1}{2}\sum_{k}\sum_{m=-S}^S J^t_m \left(S_d^+ s^-_{k} \ket{m}\bra{m} + \text{h.c.}\right)
+	\mathcal{H} = \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{kl} J S_d^z s^z_{kl} + \frac{1}{2}\sum_{kl} J \left(S_d^+ s^-_{kl}  + \text{h.c.}\right)
 \end{aligned}\end{equation}
-The states \(\ket{m}\) act purely on the Hilbert space of the impurity spin and are defined as \(S_d^z\ket{m} = m\ket{m}\). We will use the relations:
+It is easier to see the RG flow of the couplings if we write the Hamiltonian in terms of the eigenstates of \(S_d^z\). These eigenstates are defined by \(S_d^z\ket{m} = m\ket{m}, m \in \left[-S, S\right]\). In terms of these eigenstates, the Hamiltonian becomes
 \begin{equation}\begin{aligned}
-	S_d^\pm S_d^z &= S_d^z S_d^\pm \mp S_d^\pm\\
-	S_d^z S_d^\pm &= S_d^\pm S_d^z \pm S_d^\pm\\
-	S_d^\pm S_d^\mp &= \vec S_d^2 - {S_d^z}^2 \pm S_d^z
+	\mathcal{H} &= \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{kl} J S_d^z\sum_m \ket{m}\bra{m} s^z_{kl} + \frac{1}{2}\sum_{kl} J \left(S_d^+ s^-_{kl}  + \text{h.c.}\right)\sum_m \ket{m}\bra{m} \\
+		    &= \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{m=-S}^S \sum_{kl,\atop{\sigma=\uparrow,\downarrow}} J^\sigma_m \ket{m}\bra{m} c^\dagger_{k \sigma}c_{l \sigma} + \sum_{kl} \sum_{m=-S}^{S-1} J^t_{m} \left(\ket{m+1}\bra{m} s^-_{kl}  + \text{h.c.}\right)
 \end{aligned}\end{equation}
-The various terms that renormalize the Hamiltonian can be described in terms of the impurity spin operators that come into them. For example, the term that has \(S_d^z\) on both sides of the intervening Greens function can be represented as \(z-z\). There are 7 such terms: \(z|z, \pm|\mp, z|\pm, \pm|z\). Each of these terms occur both in the particle and the hole sectors.
-\subsection{Particle sector}
-We will now calculate each of these terms for the particle sector. The particle sector consists of those processes that start from an occupied state \(\hat n_{q\beta} = 1\).
-\paragraph{\(z|z: \beta=\uparrow\)}
-\begin{equation}\begin{aligned}
-	\sum_{kk^\prime,m}\frac{1}{4}{J^z_m}^2 c^\dagger_{q \uparrow} c_{k^\prime \uparrow} S_d^z \ket{m}\bra{m} \frac{1}{\omega_{m, \uparrow} - D/2 + \frac{J}{2}S_d^z} \ket{m}\bra{m} S_d^z c^\dagger_{k \uparrow}c_{q \uparrow} = -\frac{1}{4}n_{q \uparrow}\sum_{kk^\prime,m}\frac{{J^z_m}^2{S_d^z}^2 c^\dagger_{k \uparrow}c_{k^\prime\uparrow} \ket{m}\bra{m}}{\omega_{m, \uparrow} - D/2 + \frac{Jm}{2}}
-\end{aligned}\end{equation}
+where \(J^\sigma_m = \frac{1}{2} \sigma m J\) in the UV Hamiltonian, and \(J^t_{m} = J\frac{1}{2}\sqrt{S(S+1) - m(m+1)}\) is the coupling that connects \(\ket{m}\) and \(\ket{m+1}\).
 
-\paragraph{\(z|z: \beta=\downarrow\)}
+% We will use the relations:
+% \begin{equation}\begin{aligned}
+% 	S_d^\pm S_d^z &= S_d^z S_d^\pm \mp S_d^\pm\\
+% 	S_d^z S_d^\pm &= S_d^\pm S_d^z \pm S_d^\pm\\
+% 	S_d^\pm S_d^\mp &= \vec S_d^2 - {S_d^z}^2 \pm S_d^z
+% \end{aligned}\end{equation}
+The various terms that renormalize the Hamiltonian can be described in terms of the bath spin operators that come into them. For example, the term that has \(s^z\) on both sides of the intervening Greens function can be represented as \(z|z\). There are 7 such terms: \(z|z, \pm|\mp, z|\pm, \pm|z\). Each of these terms occur both in the particle and the hole sectors.
+
+\subsection{Particle sector}
+We will now calculate each of these terms for the particle sector. The particle sector consists of those processes that start from an occupied state \(\left(\hat n_{q\beta} = 1\right)\).
+\paragraph{\(z|z\)}
 \begin{equation}\begin{aligned}
-	\sum_{kk^\prime,m}\frac{1}{4}{J^z_m}^2 c^\dagger_{q \downarrow} c_{k^\prime \downarrow} S_d^z \ket{m}\bra{m} \frac{1}{\omega_{m, \downarrow} - D/2 - \frac{J}{2}S_d^z} \ket{m}\bra{m} S_d^z c^\dagger_{k \downarrow}c_{q \downarrow} = -\frac{1}{4}n_{q \downarrow}\sum_{kk^\prime,m}\frac{{J^z_m}^2{S_d^z}^2 c^\dagger_{k \downarrow}c_{k^\prime\downarrow} \ket{m}\bra{m}}{\omega_{m, \downarrow} - D/2 - \frac{Jm}{2}}
+	\sum_{kk^\prime,m,\sigma} c^\dagger_{q \sigma} c_{k^\prime \sigma} \ket{m}\bra{m}\frac{{J^\sigma_m}^2}{\omega - D/2 + \frac{J}{2}\sigma S_d^z}\ket{m}\bra{m} c^\dagger_{k \sigma}c_{q \sigma} = -\sum_{kk^\prime,m,\sigma}n_{q \sigma}\frac{{J^\sigma_m}^2 c^\dagger_{k \sigma}c_{k^\prime\sigma} \ket{m}\bra{m}}{\omega_{m, \sigma} - D/2 + \frac{J}{2}\sigma m}
 \end{aligned}\end{equation}
 
 \paragraph{\(+|-\)}
 \begin{equation}\begin{aligned}
-	\sum_{kk^\prime,m}\frac{1}{4}{J^t_m}^2 c^\dagger_{q \downarrow} c_{k^\prime \uparrow} S_d^+ \ket{m}\bra{m} \frac{1}{\omega_{m, \downarrow} - D/2 - \frac{J}{2}S_d^z} \ket{m}\bra{m} S_d^- c^\dagger_{k \uparrow}c_{q \downarrow} = -\frac{1}{4}n_{q \downarrow}\sum_{kk^\prime,m}\frac{{J^t_m}^2S_d^+ \ket{m}\bra{m} S_d^- c^\dagger_{k \uparrow}c_{k^\prime\uparrow} }{\omega_{m, \downarrow} - D/2 - \frac{Jm}{2}}
+	\sum_{kk^\prime,m} c^\dagger_{q \uparrow} c_{k^\prime \downarrow} \ket{m}\bra{m+1}\frac{{J^t_m}^2}{\omega - D/2 + \frac{J}{2}S_d^z}\ket{m+1}\bra{m} c^\dagger_{k \downarrow}c_{q \uparrow} = -n_{q \uparrow}\sum_{kk^\prime,m}\frac{{J^t_m}^2 c^\dagger_{k \downarrow}c_{k^\prime\downarrow} \ket{m}\bra{m}}{\omega_{m+1, \uparrow} - D/2 + \frac{J}{2}\left( m+1 \right) }
 \end{aligned}\end{equation}
 
 \paragraph{\(-|+\)}
 \begin{equation}\begin{aligned}
-	\sum_{kk^\prime,m}\frac{1}{4}{J^t_m}^2 c^\dagger_{q \uparrow} c_{k^\prime \downarrow} S_d^- \ket{m}\bra{m} \frac{1}{\omega_{m, \uparrow} - D/2 + \frac{J}{2}S_d^z} \ket{m}\bra{m} S_d^+ c^\dagger_{k \downarrow}c_{q \uparrow} = -\frac{1}{4}n_{q \uparrow}\sum_{kk^\prime,m}\frac{{J^t_m}^2S_d^- \ket{m}\bra{m} S_d^+ c^\dagger_{k \downarrow}c_{k^\prime\downarrow} }{\omega_{m, \uparrow} - D/2 + \frac{Jm}{2}}
+	\sum_{kk^\prime,m} c^\dagger_{q \downarrow} c_{k^\prime \uparrow} \ket{m+1}\bra{m}\frac{{J^t_m}^2}{\omega - D/2 - \frac{J}{2}S_d^z}\ket{m}\bra{m+1} c^\dagger_{k \uparrow}c_{q \downarrow} = -n_{q \downarrow}\sum_{kk^\prime,m}\frac{{J^t_m}^2 c^\dagger_{k \uparrow}c_{k^\prime\uparrow} \ket{m+1}\bra{m+1}}{\omega_{m, \downarrow} - D/2 - \frac{J}{2}m}
 \end{aligned}\end{equation}
 
 \paragraph{\(z|+\)}
 \begin{equation}\begin{aligned}
-	\sum_{kk^\prime,m}\frac{1}{4}{J^z_m} J^t_m c^\dagger_{q \uparrow} c_{k^\prime \uparrow} S_d^z \ket{m}\bra{m} \frac{1}{\omega_{m, \uparrow} - D/2 + \frac{J}{2}S_d^z} \ket{m}\bra{m} S_d^+ c^\dagger_{k \downarrow}c_{q \uparrow} = -\frac{1}{4}n_{q \uparrow}\sum_{kk^\prime,m}\frac{{J^z_m} J^t_m \ket{m}\bra{m} S_d^z S_d^+ c^\dagger_{k \downarrow}c_{k^\prime\uparrow}}{\omega_{m, \uparrow} - D/2 + \frac{Jm}{2}}
-\end{aligned}\end{equation}
-
-\paragraph{\(-|z\)}
-This is equal to the h.c. of the renormalization coming from \(z|+\), because \(-|z = \left(z|+\right)^\dagger \).
-
-\paragraph{\(z|-\)}
-\begin{equation}\begin{aligned}
-	-\sum_{kk^\prime,m}\frac{1}{4}{J^t_m} J^z_m c^\dagger_{q \downarrow} c_{k^\prime \downarrow} S_d^z \ket{m}\bra{m} \frac{1}{\omega_{m, \downarrow} - D/2 - \frac{J}{2}S_d^z} \ket{m}\bra{m} S_d^- c^\dagger_{k \uparrow}c_{q \downarrow} = \frac{1}{4}n_{q \downarrow}\sum_{kk^\prime,m}\frac{{J^t_m} J^z_m \ket{m}\bra{m} S_d^z S_d^- c^\dagger_{k \uparrow}c_{k^\prime\downarrow}}{\omega_{m, \downarrow} - D/2 - \frac{Jm}{2}}
+	\sum_{kk^\prime,m} c^\dagger_{q \downarrow} c_{k^\prime \downarrow} \ket{m}\bra{m}\frac{J^\downarrow_m{J^t_m}}{\omega - D/2 - \frac{J}{2}S_d^z}\ket{m}\bra{m+1} c^\dagger_{k \uparrow}c_{q \downarrow} = -n_{q \downarrow}\sum_{kk^\prime,m}\frac{J^\downarrow_m J^t_m c^\dagger_{k \uparrow}c_{k^\prime\downarrow} \ket{m}\bra{m+1}}{\omega_{m, \downarrow} - D/2 - \frac{J}{2}m}
 \end{aligned}\end{equation}
 
 \paragraph{\(+|z\)}
-This is equal to the h.c. of the renormalization coming from \(z|-\), because \(+|z = \left(z|-\right)^\dagger \).
-
-The first four terms generate and renormalize a new three-particle term in the Hamiltonian, of the form \(J^{zz}{S_d^z}^2\sum_{kk^\prime\sigma}c^\dagger_{k\sigma}c_{k^\prime\sigma}\). The third and fourth terms also renormalize the \(J^z_m\) coupling. The terms e through h renormalize \(J^t_m\). To compare with the spin-\(\frac{1}{2}\) Kondo URG, we redefine the \(\omega_{m\sigma} \to \omega + \frac{J}{2}\left(-\sigma m + \frac{1}{2}\right) \). We also use \(\sum_\sigma \hat n_{q\sigma}= n(D)\). The total renormalization from the first four terms is
 \begin{equation}\begin{aligned}
-	-\frac{1}{4}\sum_{kk^\prime\sigma}\frac{n(D)\left({J^z}^2 - {J^t}^2\right) {S_d^z}^2 c^\dagger_{k \sigma}c_{k^\prime\sigma}}{\omega - D/2 + \frac{J}{4}} - \frac{1}{2}\sum_{kk^\prime}\frac{n(D){J_m^t}^2 {S_d^z} s^z_{kk^\prime}}{\omega - D/2 + \frac{J}{4}}
-\end{aligned}\end{equation}
-The renormalization from the last four terms is
-\begin{equation}\begin{aligned}
-	-\frac{1}{2}\sum_{kk^\prime, m}\frac{n(D)J^z_m J^t_m \left(S_d^+ s^-_{kk^\prime} + \text{h.c.}\right) m\ket{m}\bra{m}}{\omega - D/2 + \frac{J}{4}}
+	\sum_{kk^\prime,m} c^\dagger_{q \uparrow}c_{k^\prime \downarrow} \ket{m}\bra{m+1}\frac{{J^t_m}J^\uparrow_{m+1}}{\omega - D/2 + \frac{J}{2}S_d^z} \ket{m+1}\bra{m+1} c^\dagger_{k \uparrow} c_{q \uparrow} = -n_{q \uparrow}\sum_{kk^\prime,m}\frac{J^\uparrow_{m+1} J^t_m c^\dagger_{k \uparrow}c_{k^\prime\downarrow} \ket{m}\bra{m+1}}{\omega_{m+1, \downarrow} - D/2 + \frac{J}{2}\left(m+1\right) }
 \end{aligned}\end{equation}
 
+\paragraph{\(z|-\)}
+\begin{equation}\begin{aligned}
+	\sum_{kk^\prime,m} c^\dagger_{q \uparrow} c_{k^\prime \uparrow} \ket{m+1}\bra{m+1}\frac{J^\uparrow_{m+1}{J^t_m}}{\omega - D/2 + \frac{J}{2}S_d^z}\ket{m+1}\bra{m} c^\dagger_{k \downarrow}c_{q \uparrow} = -n_{q \uparrow}\sum_{kk^\prime,m}\frac{J^\uparrow_{m+1} J^t_m c^\dagger_{k \downarrow}c_{k^\prime\uparrow} \ket{m+1}\bra{m}}{\omega_{m+1, \uparrow} - D/2 + \frac{J}{2}(m+1)}
+\end{aligned}\end{equation}
 
+\paragraph{\(-|z\)}
+\begin{equation}\begin{aligned}
+	\sum_{kk^\prime,m} c^\dagger_{q \downarrow} c_{k^\prime \uparrow} \ket{m+1}\bra{m}\frac{J^\downarrow_{m}{J^t_m}}{\omega - D/2 - \frac{J}{2}S_d^z}\ket{m}\bra{m} c^\dagger_{k \downarrow}c_{q \downarrow} = -n_{q \downarrow}\sum_{kk^\prime,m}\frac{J^\downarrow_{m} J^t_m c^\dagger_{k \downarrow}c_{k^\prime\uparrow} \ket{m+1}\bra{m}}{\omega_{m, \uparrow} - D/2 - \frac{J}{2}(m)}
+\end{aligned}\end{equation}
+The first four terms renormalize \(J^\sigma_m\):
+\begin{equation}\begin{aligned}
+	\Delta J^\sigma_{m} = -\frac{\left( J^\sigma_m \right) ^2 + \left( J^t_{m-\frac{1+\sigma}{2}} \right) ^2}{\omega - D/2 + J/4}
+\end{aligned}\end{equation}
+Here, we have defined \(J^t_m = 0\) for \( |m| > S\). Two relations can be obtained from this RG equation, the RG equations for the sum and difference of the couplings. These sum and difference are defined by rewriting the Ising part of the Hamiltonian in the following fashion:
+\begin{equation}\begin{aligned}
+	\sum_{m=-S}^S \sum_{kl,\atop{\sigma=\uparrow,\downarrow}} J^\sigma_m \ket{m}\bra{m} c^\dagger_{k \sigma}c_{l \sigma} = \sum_{m=-S}^S \sum_{\sigma=\uparrow,\downarrow} J^+_m \ket{m}\bra{m} \sum_\sigma \hat n_{0\sigma}  + \sum_{m=-S}^S J^-_m \ket{m}\bra{m} 2s^z_0
+\end{aligned}\end{equation}
+where \(2J^\pm_m = J^\uparrow_m \pm J^\downarrow_m\).
+The RG equation for the sum of the couplings is
+\begin{equation}\begin{aligned}
+	\Delta J^+_m = -\frac{1}{2}\frac{\sum_\sigma \left( J^\sigma_m \right) ^2 + \sum_\sigma \left( J^t_{m-\frac{1+\sigma}{2}} \right) ^2}{\omega - D/2 + J/4} = -\frac{J^2}{4}\frac{S(S+1)}{\omega - D/2 + J/4}
+\end{aligned}\end{equation}
+This is an \(m-\)independent piece, so it can be summed over to produce an impurity-independent potential scattering term:
+\begin{equation}\begin{aligned}
+	\sum_{m=-S}^S \sum_{\sigma=\uparrow,\downarrow} J^+ \ket{m}\bra{m} \sum_\sigma \hat n_{0\sigma} = J^+ \mathbb{I}\sum_\sigma \hat n_{0\sigma}
+\end{aligned}\end{equation}
+Since this term does not have any Kondo physics, we drop this piece and say that \(\Delta J^+ = 0\) and so \(\Delta J^\uparrow_m = - \Delta J^\downarrow_m \implies J^\uparrow_m = -J^\downarrow_m\) throughout the RG flow.
 
+The second is the RG equation for the difference of the couplings:
+\begin{equation}\begin{aligned}
+	\Delta J^-_m = -\frac{1}{2}\frac{\left( J^t_{m-1} \right) ^2 - \left(J^t_{m}\right) ^2}{\omega - D/2 + J/4} = -\frac{1}{4}\frac{m J^2}{\omega - D/2 + J/4}
+\end{aligned}\end{equation}
+The usual \(J^z\) Kondo coupling is defined as \(J^z = 2J^-_m/m\). Substituting this gives 
+\begin{equation}\begin{aligned}
+	\Delta J^z = -\frac{1}{2}\frac{J^2}{\omega - D/2 + J/4}
+\end{aligned}\end{equation}
 
+The last four terms renormalize \(J^t_m\):
+\begin{equation}\begin{aligned}
+	\Delta J^t_m = - \frac{J^t_m \left( J^\downarrow_m + J^\uparrow_{m+1} \right) }{\omega - D/2 + J/4} = -\frac{1}{2}\frac{J^t_m J}{\omega - D/2 + J/4} \implies J^t = -\frac{1}{2}\frac{J^2}{\omega - D/2 + J/4}
+\end{aligned}\end{equation}
+\(J^t\) is the transverse coupling. Since we started from an isotropic model \(\left( J^z = J^t= J \right) \), we obtain \(\Delta J^z = \Delta J^t\).
 
-
+\subsection{Hole sector}
+The RG equation in this sector is identical to that in the hole sector, because the renormalization terms are Hermitian conjugate to this in the particle sector.
 
 \bibliographystyle{apsrev4-1}
 \bibliography{multi-channel-urg}
