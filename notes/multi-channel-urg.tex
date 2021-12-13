@@ -371,18 +371,18 @@ For a general anisotropic multi-channel Kondo, the Hamiltonian is
 \end{align}
 Let us consider the specific case where \(K-1\) channels have the same coupling \(J_1 = J_2 = ... = J_{K-1} = J_+\) and the remaining channel has a different coupling \(J_K = J_-\). The RG equations for such a model are
 \begin{align}
-	\frac{\Delta J_+}{|\Delta D|} = \frac{J_+^2 \rho}{D - J_+/4} - \frac{\rho^2 J_+}{8}\left[\frac{(K-1)J_+^2}{D - J_+/4} + \frac{J_-^2}{D - J_-/4}\right]\\
-	\frac{\Delta J_-}{|\Delta D|} = \frac{J_-^2 \rho}{D - J_-/4} - \frac{\rho^2 J_-}{8}\left[\frac{(K-1)J_+^2}{D - J_+/4} + \frac{J_-^2}{D - J_-/4}\right]
+	\frac{\Delta J_+}{|\Delta D|} = \frac{J_+^2 \rho}{D - J_+/4} - \frac{\rho^2 J_+}{2}\left[\frac{(K-1)J_+^2}{D - J_+/4} + \frac{J_-^2}{D - J_-/4}\right]\\
+	\frac{\Delta J_-}{|\Delta D|} = \frac{J_-^2 \rho}{D - J_-/4} - \frac{\rho^2 J_-}{2}\left[\frac{(K-1)J_+^2}{D - J_+/4} + \frac{J_-^2}{D - J_-/4}\right]
 \end{align}
-Setting \(J_+ = J_-\) leads to the critical fixed point at \(J_+^* = J_-^* = J_* = \frac{8}{K \rho}\). We now perturb around this fixed point by defining new variables \(j_\pm = J_\pm - J_*\). We also assume that \(D - J_\pm / 4 \simeq D - J_*/4\). The RG equations then take the form
+Setting \(J_+ = J_-\) leads to the critical fixed point at \(J_+^* = J_-^* = J_* = \frac{2}{K \rho}\). We now perturb around this fixed point by defining new variables \(j_\pm = J_\pm - J_*\). We also assume that \(D - J_\pm / 4 \simeq D - J_*/4\). The RG equations then take the form
 \begin{align}
-	\frac{\Delta j_+}{|\Delta D|} &= \frac{\rho J_+}{D - J_*/4}\left[J_+ - \frac{\rho}{8}\left[(K-1)J_+^2 + J_-^2\right]\right]\\
+	\frac{\Delta j_+}{|\Delta D|} &= \frac{\rho J_+}{D - J_*/4}\left[J_+ - \frac{\rho}{2}\left[(K-1)J_+^2 + J_-^2\right]\right]\\
 				      &= \frac{\rho J_+}{D - J_*/4}\left[j_+ + J_*- \frac{1}{K J_*}\left[(K-1)\left(J_* + j_+\right)^2 + \left(J_* + j_-\right)^2\right]\right]\\
 				      &= \frac{\rho J_+}{K J_*\left(D - J_*/4\right)}\left[KJ_*\left(j_+ + J_*\right) - (K-1)\left(J_* + j_+\right)^2 - \left(J_* + j_-\right)^2\right]\\
 				      &= \frac{\rho J_+}{K J_*\left(D - J_*/4\right)}\left[K\left(J_*j_+ + J_*^2\right) - (K-1)\left(J_*^2 + j_+^2 + 2J_* j_+\right) - \left(J_*^2 + j_-^2 + 2J_* j_-\right)\right]\\
 				      &= \frac{\rho J_+}{K J_*\left(D - J_*/4\right)}\left[KJ_*j_+ - (K-1)\left(j_+^2 + 2J_* j_+\right) - \left(j_-^2 + 2J_* j_-\right)\right]\\
 				      &= \frac{\rho J_+}{K J_*\left(D - J_*/4\right)}\left[-\left(K - 2\right)J_*j_+ - (K-1)j_+^2 - j_-^2 - 2J_* j_-\right]\\
-	\frac{\Delta j_-}{|\Delta D|} &= \frac{J_- \rho}{D - J_*/4}\left[J_- - \frac{\rho}{8}\left[(K-1)J_+^2 + J_-^2\right]\right]\\
+	\frac{\Delta j_-}{|\Delta D|} &= \frac{J_- \rho}{D - J_*/4}\left[J_- - \frac{\rho}{2}\left[(K-1)J_+^2 + J_-^2\right]\right]\\
 				      &= \frac{J_- \rho}{K J_*\left(D - J_*/4\right)}\left[K\left(J_*j_- + J_*^2\right) - (K-1)\left(J_*^2 + j_+^2 + 2J_* j_+\right) - \left(J_*^2 + j_-^2 + 2J_* j_-\right)\right]\\
 				      &= \frac{J_- \rho}{K J_*\left(D - J_*/4\right)}\left[\left(K - 2\right)J_*j_-  - j_-^2 - (K-1)j_+^2 - 2(K-1)J_* j_+\right]\\
 \end{align}
@@ -410,16 +410,23 @@ Solving for \(j_+\) gives
 \end{align}
 At the final step, we chose the positive solution, because \(j_+\) is relevant in this regime. The new fixed point value of \(J_+\) is therefore
 \begin{align}
-	J_+ = J_* + \frac{J_*}{K-1} = \frac{\frac{8}{K \rho} K}{K - 1} = \frac{8}{(K-1)\rho}
+	J_{+,*} = J_* + \frac{J_*}{K-1} = \frac{\frac{2}{K \rho} K}{K - 1} = \frac{2}{(K-1)\rho}
 \end{align}
-In other words, the \(K\) channel fixed point flows to the \(K-1\) channel fixed point.
+In other words, the \(K\) channel fixed point flows to the \(K-1\) channel fixed point. This is shown numerically in fig.~\ref{K_to_K-1}.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.4\textwidth]{../numerics/K to K-1.pdf}
+	\caption{Flow of \(J_-\) to zero when \(j_< 0\) and \(J_+\) to the fixed point of the \(K-1\) channel Kondo model.}
+	\label{K_to_K-1}
+\end{figure}
 
 In the opposite regime \(j_- > 0, j_+ < 0\), \(\Delta j_+\) is negative. It has been checked numerically that \(J_+\) ultimately flows to zero in this regime (fig. \ref{irrel_Jplus}), and \(J_-\) remains relevant. Since there is no numerator fixed point in the relevant coupling \(J_-\) and because all other couplings are irrelevant, the equation for \(J_-\) is replaced by the single-channel Kondo coupling URG equation, and the low-energy physics is then of strong coupling..
 \begin{figure}[htpb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{../numerics/irr_Jp_K=3.pdf}
 	\includegraphics[width=0.45\textwidth]{../numerics/irr_Jp_K=50.pdf}
-	\caption{Flow of the coupling \(J_+\) when \(j_+ < 0\) for two values of \(K\)}
+	\caption{Flow of the couplings \(J_+\) when \(j_+ < 0\) when \(j_- > 0, j_+ < 0\), for two values of \(K\).}
 	\label{irrel_Jplus}
 \end{figure}
 
