@@ -90,13 +90,13 @@ The normalized eigenstates of the \(2\times 2\) blocks for each value of \(m\) a
 Note that the index \(m\) that we are using to label the eigenvalues is actually related to a conserved quantity; the total spin operator along \(z\), \(S^z\). That is, the eigenstates \(\ket{\Psi^M_{m,\pm}}\) have \(S^z = S_d^z + s_\text{tot}^z = m + \frac{1}{2}\).
 
 \section{Importance of the star graph in determining the physics of the problem}
-Methods like CFT, Bethe ansatz, bosonization and NRG~\cite{affleck_1991_overscreen,Tsvelick_Weigmann_mchannel_1984,Gan_mchannel_1994,pang_cox_1991,emery_kivelson,vondelft_prl_1998} have shown that \textit{neither the weak coupling nor the strong coupling Hamiltonians are stable fixed points of the multi-channel Kondo models}. Instead, the RG flows converge to an intermediate coupling fixed point. The RG flows \textit{preserve the degeneracy of the ground state}~\cite{pang_cox_1991,kroha_kolf_2007,zitko_fabrizio_2017}, because the Hamiltonian commutes with the total magnetization operator \(S^z = S_d^z + s_\text{tot}^z\)~\cite{vondelft_prl_1998}. For example, the two-channel and the three-channel Kondo models have ground state degeneracies of 2 and 3 respectively, throughout the RG flow. Analytic and numerical studies also showed that \textit{the two and three-channel models enjoy a weak-strong duality}~\cite{kroha_kolf_2007,zitko_fabrizio_2017}: the model at strong coupling, when projected onto the ground state basis, can also be thought of as a Kondo model at weak coupling, but possibly with a modified central spin. For example, in the two channel Kondo model, the model at strong coupling can be mapped onto the same model with a small coupling parameter, but with the central Kondo spin-half impurity replaced by a new, composite spin-half object formed by the doubly-degenerate ground state of the strong coupling model~\cite{kroha_kolf_2007}. The strong and weak coupling models are formally identical and the model is self-dual. The case of the three-channel model is different~\cite{zitko_fabrizio_2017} because there, the central impurity gets replaced by a new \textit{spin-1} impurity formed by the triply-degenerate ground state. Compared to the self-duality of the two-channel model, this case corresponds to a cross duality between a spin-1/2 and a spin-1 model. We will now show that these qualitative features can be captured very simply by the star graph.
+Methods like CFT, Bethe ansatz, bosonization and NRG~\cite{affleck_1991_overscreen,Tsvelick_Weigmann_mchannel_1984,Gan_mchannel_1994,pang_cox_1991,emery_kivelson,vondelft_prl_1998} have shown that \textit{neither the weak coupling nor the strong coupling Hamiltonians are stable fixed points of the multi-channel Kondo models}. Instead, the RG flows converge to an intermediate coupling fixed point. The RG flows \textit{preserve the degeneracy of the ground state}~\cite{pang_cox_1991,kroha_kolf_2007,zitko_fabrizio_2017}, because the Hamiltonian commutes with the total magnetization operator \(S^z = S_d^z + s_\text{tot}^z\)~\cite{vondelft_prl_1998}. For example, the two-channel and the three-channel Kondo models have ground state degeneracies of 2 and 3 respectively, throughout the RG flow. Analytic and numerical studies also showed that \textit{the two and three-channel models enjoy a weak-strong duality}~\cite{kroha_kolf_2007,zitko_fabrizio_2017}: the model at strong coupling, when projected onto the ground state basis, can also be thought of as a Kondo model at weak coupling, but possibly with a modified central spin. For example, in the two channel Kondo model, the model at strong coupling can be mapped onto the same model with a small coupling parameter, but with the central Kondo spin-half impurity replaced by a new, composite spin-half object formed by the doubly-degenerate ground state of the strong coupling model~\cite{kroha_kolf_2007}. The strong and weak coupling models are formally identical and the model is self-dual. The case of the three-channel model is different~\cite{zitko_fabrizio_2017} because there, the central impurity gets replaced by a new \textit{spin-1} impurity formed by the triply-degenerate ground state. Compared to the self-duality of the two-channel model, this case corresponds to a cross duality between a spin-\(\frac{1}{2}\) and a spin-1 model. We will now show that these qualitative features can be captured very simply by the star graph.
 
 At weak coupling \(J \to 0^+\), the central spin is weakly coupled to the outer spins and can freely flip like a local moment. \textit{This makes it prone to screening because of the \(s^\pm\) terms in the star graph}. At strong coupling \(J \to \infty^-\), the outer spin-half objects tightly bind with the central spin-half object to form a single spin. The remaining states in the conduction bath channels form new zero modes and create a new outer ring of spins that interact with the new central spin, \textit{leading to another multi-channel Kondo problem with a new and small exchange coupling which is RG relevant, so the strong coupling fixed point \(J \to \infty^-\) is unstable}. This shows that it can be argued, even from the zero mode, that the two limits of the model cannot be stable fixed points, and the actual fixed point has to lie somewhere in between.
 
-Just like the full Hamiltonian, the star graph conserves the total spin \(S^z\), and this leads to a \(K-\)fold degeneracy in the ground state of the \(K-\)channel zero mode. Since \(S^z\) commutes with the star graph, the ground states are eigenstates of \(S^z\) with distinct eigenvalues \(\frac{K+1}{2}, \frac{K-1}{2},\ldots,\frac{-K-1}{2}\). \textit{This feature - the equality of energy eigenvalue for distinct values of \(S^z\) - persists for all values of \(J \in \left[0^+, \infty^-\right]\)}. This is because, the gap between the degenerate subspace and the next excited level is \(J\) or \(J/2\), depending on whether \(K\) is even or odd, and the gap is always non-zero as long as \(J\) lies in the regime of RG flow. In other words, as the exchange coupling grows(shrinks) from \(0^+\left(\infty^-\right)\) towards the fixed point value \(J^*\), the degeneracy remains protected at \(K\).
+Just like the full Hamiltonian, the star graph conserves the total spin \(S^z\), and this leads to a \(K-\)fold degeneracy in the ground state of the \(K-\)channel zero mode. Since \(S^z\) commutes with the star graph, the ground states are eigenstates of \(S^z\) with distinct eigenvalues \(\frac{K+1}{2}, \frac{K-1}{2},\ldots,\frac{-K-1}{2}\). \textit{This feature - the equality of energy eigenvalue for distinct values of \(S^z\) - persists for all values of \(J \in \left[0^+, \infty^-\right]\)}. This is because, the gap between the degenerate subspace and the next excited level is \(J\) or \(\frac{J}{2}\), depending on whether \(K\) is even or odd, and the gap is always non-zero as long as \(J\) lies in the regime of RG flow. In other words, as the exchange coupling grows(shrinks) from \(0^+\left(\infty^-\right)\) towards the fixed point value \(J^*\), the degeneracy remains protected at \(K\).
 
-The fact that the strong coupling fixed point can be seen as a new zero mode problem with a modifed central spin reveals the duality mentioned before. At strong coupling \(J \gg 1\), we can obtain a new star graph by defining a new spin-\(\left(\frac{K-1}{2}\right)\) object from the \(K-\)fold degenerate ground state manifold and letting this interact with the new outer spins formed by the remaining sites of the conduction channels. This new interaction is generated by the minimal hopping that exists between the zeroth site and the first sites of each of the conduction bath channels, and is characterised by the small superexchange coupling \(J^\prime \sim t^2/J\). \textit{The conclusion is that a large \(J\) model with a central spin-half object can be transformed into a small \(J^\prime\) model with a central spin-\(\left(\frac{K-1}{2}\right)\) object}. This is shown schematically in Fig.~\ref{duality_fig}. The former is RG irrelevant while the latter is relevant, both flowing towards the stable fixed point \(J = J^\prime = J^*\). For \(K=2\), the central spin for the \(J^\prime\)-problem is of size \(\frac{K-1}{2} = 1/2\), which is the same as the \(J\)-problem, so the models are self-dual, as mentioned previously.
+The fact that the strong coupling fixed point can be seen as a new zero mode problem with a modifed central spin reveals the duality mentioned before. At strong coupling \(J \gg 1\), we can obtain a new star graph by defining a new spin-\(\left(\frac{K-1}{2}\right)\) object from the \(K-\)fold degenerate ground state manifold and letting this interact with the new outer spins formed by the remaining sites of the conduction channels. This new interaction is generated by the minimal hopping that exists between the zeroth site and the first sites of each of the conduction bath channels, and is characterised by the small superexchange coupling \(J^\prime \sim t^2/J\). \textit{The conclusion is that a large \(J\) model with a central spin-half object can be transformed into a small \(J^\prime\) model with a central spin-\(\left(\frac{K-1}{2}\right)\) object}. This is shown schematically in Fig.~\ref{duality_fig}. The former is RG irrelevant while the latter is relevant, both flowing towards the stable fixed point \(J = J^\prime = J^*\). For \(K=2\), the central spin for the \(J^\prime\)-problem is of size \(\frac{K-1}{2} = \frac{1}{2}\), which is the same as the \(J\)-problem, so the models are self-dual, as mentioned previously.
 
 \begin{figure}[htpb]
 	\centering
@@ -178,7 +178,8 @@ For the simpler case when \(C_m = \delta_{m,\pm (M - \frac{1}{2}) - \frac{1}{2}}
 	\braket{g_\pm|\sigma^z_d|g_\pm} = \pm \frac{2M-1}{2M+1} = \pm \frac{K-1}{K+1}
 \end{align}
 
-\section{Derivation of URG equations for the multi-channel Kondo model}
+\clearpage
+\section{URG equations for the multi-channel Kondo model}
 
 \subsection{URG procedure}
 The URG method~\cite{anirbanurg1,anirbanurg2,anirbanmott1,anirbanmott2,siddharthacpi,santanukagome} involves applying unitary transformations to decouple high energy degrees of freedom. The renormalization at step \(j\) is given by
@@ -193,22 +194,20 @@ Usually we treat the \(\hat \omega\) as number(s) and study the renormalization 
 
 Here we will do something different. We will redefine the \(\hat \omega\) by pulling out the off-diagonal term from it: \(\hat \omega \to \hat \omega - H_X\), and then study the renormalization at various orders by expanding the denominator in powers of \(H_X\). Such a redefinition essentially amounts to a rotation of the eigendirections of \(\hat \omega\). This is done in order to extract some information out of \(\hat \omega\), specifically the dependence of the RG equations on the channel number \(K = \sum_\gamma\). This dependence is in principle present even if we do not do such a redefinition and expansion, in the various directions and values of \(\omega\), because those values encode the non-perturbative information regarding scattering at all loops. However, it is difficult to read off this information directly. This step of redefinition followed by expansion is being done with the sole aim of exposing such information. 
 
-The expansion we are talking about is
+We therefore need the generator of the unitary transformation that incorporates third order scattering scatterings explicitly. We should take account of all possible processes that render the set of states \(\left\{\ket{\hat n_{q\beta}=1},\ket{\hat n_{q\beta}=0}\right\}\) diagonal. The higher order generator itself has two scattering processes, such that the entire renormalization term \(c^\dagger_{q\beta} T \eta\) has in total three coherent processes. The way to make the state \(q\beta\) diagonal is to ensure that \(c^\dagger_{q\beta} T \eta\) does not change \(\hat n_{q\beta}\). This is done by letting exactly one of the scattering process in \(\eta\)  be \(T^\dagger c_{q\beta}\), while the other process in \(\eta\) has to be some internal scattering between the degrees of freedom other than \(q\beta\). This, however, does not fix the sequence in which the processes occur within \(\eta\). Kepeing this in mind, the complete generator upto third order can be written as
 \begin{align}
-	\eta = \frac{1}{\hat \omega - H_D}T^\dagger c = \frac{1}{\omega^\prime - H_D - H_X}T^\dagger c \simeq \frac{1}{\omega^\prime - H_D}T^\dagger c + \frac{1}{\omega^\prime - H_D}H_X \frac{1}{\omega^\prime - H_D} T^\dagger c
+	% \eta = \frac{1}{\hat \omega - H_D}T^\dagger c = \frac{1}{\omega^\prime - H_D - H_X}T^\dagger c \simeq \frac{1}{\omega^\prime - H_D}T^\dagger c + \frac{1}{\omega^\prime - H_D}H_X \frac{1}{\omega^\prime - H_D} T^\dagger c
+	\eta = \frac{1}{\hat \omega - H_D}T^\dagger c \simeq \frac{1}{\omega^\prime - H_D}T^\dagger c + \frac{1}{\omega^\prime - H_D}H_X \frac{1}{\omega^\prime - H_D} T^\dagger c + \frac{1}{\omega^\prime - H_D} T^\dagger c \frac{1}{\omega^\prime - H_D} H_X
 \end{align}
-where \(H_X = J \sum_{k,k^\prime < \Lambda_j, \alpha,\alpha^\prime}\vec{S_d}\cdot\vec{s}_{\alpha \alpha^\prime}c^\dagger_{k\alpha}c_{k^\prime\alpha^\prime}\) is scattering between the entangled electrons.
+where \(H_X = J \sum_{k,k^\prime < \Lambda_j, \alpha,\alpha^\prime}\vec{S_d}\cdot\vec{s}_{\alpha \alpha^\prime}c^\dagger_{k\alpha}c_{k^\prime\alpha^\prime}\) is scattering between the entangled electrons. There are two third order terms in the above equation corresponding to the two possible sequences in which the processes can occur while keeping the total renormalization \(c^\dagger_{q\beta}T \eta\) diagonal in \(q\beta\).
+
 With this change, the second and third order renormalizations will take the form
 \begin{align}
 	\Delta H^{(2)}_j = c^\dagger T \frac{1}{\omega^\prime - H_D}T^\dagger c + T^\dagger c \frac{1}{\omega - H_D}c^\dagger T
 \end{align}
 \begin{align}
-	\Delta H^{(3)}_j = c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c + T^\dagger c \frac{1}{\omega - H_D} H_X \frac{1}{\omega - H_D} c^\dagger T
-\end{align}
-We will use the identity
-\begin{align}
-	\label{identity_SSS}
-	S_d^a S_d^z S_d^b = \left(\frac{1}{4}\delta^{az} + \frac{i}{2}\sum_c \epsilon^{azc}S_d^c\right)S_d^b = \left(\frac{1}{4}\delta^{az}S_d^b + \frac{i}{8} \epsilon^{azb}  - \frac{1}{4}\sum_{c_1,c} \epsilon^{azc_1} \epsilon^{c_1 b c} S_d^c\right) = \frac{1}{4}\left(\delta^{az}S_d^b - \delta^{ab}S_d^z + \delta^{bz}S_d^a\right)
+	\Delta H^{(3)}_j = c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c + c^\dagger T \frac{1}{\omega^\prime - H_D} T^\dagger c \frac{1}{\omega^\prime - H_D} H_X + T^\dagger c \frac{1}{\omega - H_D} H_X \frac{1}{\omega - H_D} c^\dagger T + \nonumber\\
+	T^\dagger c \frac{1}{\omega - H_D} c^\dagger T \frac{1}{\omega - H_D} H_X
 \end{align}
 
 \subsection{Leading order renormalization}
@@ -218,84 +217,112 @@ We will use the identity
 This renormalization is identical to that in the single channel. There is no additional physics due to the presence of multiple channels at this order. It is shown in appendix \ref{1KondoURG}.
 
 \subsection{Next-to-leading order renormalization}
+\begin{align*}
+	\Delta H^{(3)}_j = \underbrace{c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c + c^\dagger T \frac{1}{\omega^\prime - H_D} T^\dagger c \frac{1}{\omega^\prime - H_D} H_X}_\text{particle sector}\\
+	+ \underbrace{T^\dagger c \frac{1}{\omega - H_D} H_X \frac{1}{\omega - H_D} c^\dagger T + T^\dagger c \frac{1}{\omega - H_D} c^\dagger T \frac{1}{\omega - H_D} H_X}_\text{hole sector}
+\end{align*}
+A general term of this expression has three sets of spin operators coming from \(c^\dagger T, H_X\) and \(T^\dagger c\). If we had expressed the spin operators in terms of \(S^z, S^\pm\), most of the terms would have atleast one \(S^+\) or \(S^-\), and by the same argument as in the single-channel case, the denominator of the first terms in the particle and hole sectors will have anti-parallel spins and the Ising term will be negative, leading to the form: \(\omega - \frac{D}{2} -  \frac{\epsilon_k}{2} + \frac{J}{4}\). \(\epsilon_k\) is the energy of the other electron that will be summed over. The only term that does not have even one \(S^\pm\) is the one with three \(S^z\). We can show that this term will also have the same denominator. An instance of this term (in shorthand) is
 \begin{align}
-	\Delta H^{(3)}_j = \underbrace{c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c}_\text{first term} ~+~ \underbrace{T^\dagger c \frac{1}{\omega - H_D} H_X \frac{1}{\omega - H_D} c^\dagger T}_\text{second term}
-\end{align}
-A general term of this summation has three sets of spin operators coming from \(c^\dagger T, H_X\) and \(T^\dagger c\). If we had expressed the spin operators in terms of \(S^z, S^\pm\), most of the terms would have atleast one \(S^+\) or \(S^-\), and by the same argument as in the single-channel case, the denominator will have anti-parallel spins and the Ising term will be negative, leading to the form: \(\omega - D/2 - \epsilon_k/2 + J/4\). \(\epsilon_k\) is the energy of the other electron that will be summed over. The only term that does not have even one \(S^\pm\) is the one with three \(S^z\). We can show that this term will also have the same denominator. An instance of this term (in shorthand) is
-\begin{align}
-	S_d^z c^\dagger_{q \uparrow} \frac{1}{\omega - D/2 -\epsilon_k/2 + J/2 S_d^z} S_d^z \frac{1}{\omega - D/2 -\epsilon_k/2 + J/2 S_d^z} S_d^z c_{q \uparrow}\\
+	S_d^z c^\dagger_{q \uparrow} \frac{1}{\omega - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{J}{2} S_d^z} S_d^z \frac{1}{\omega - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{J}{2} S_d^z} S_d^z c_{q \uparrow}\\
 \end{align}
 This can be split into up and down configurations of the impurity spin using the decomposition \(S_d^z = \frac{1}{2}\left(\frac{1}{2} + S_d^z\right) - \frac{1}{2}\left(\frac{1}{2} - S_d^z \right) \). These configurations will have different quantum fluctuation scales \(\omega, \omega^\prime\):
 \begin{align}
-	\frac{1}{2}S_d^z c^\dagger_{q \uparrow}\left[\frac{\left(\frac{1}{2} + S_d^z\right)}{\left(\omega - D/2 -\epsilon_k/2 + J/4\right)^2} - \frac{\left(\frac{1}{2} - S_d^z\right)}{\left(\omega^\prime - D/2 -\epsilon_k/2 - J/4\right)^2}\right]S_d^z c_{q \uparrow}
+	\frac{1}{2}S_d^z c^\dagger_{q \uparrow}\left[\frac{\left(\frac{1}{2} + S_d^z\right)}{\left(\omega - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{J}{4}\right)^2} - \frac{\left(\frac{1}{2} - S_d^z\right)}{\left(\omega^\prime - \frac{D}{2} - \frac{\epsilon_k}{2} - \frac{J}{4}\right)^2}\right]S_d^z c_{q \uparrow}
 \end{align}
-If we now use poor man's scaling values to relate the two \(\omega\)s, we get \(\omega^\prime - \omega = J/2\). Substituting this will make both the denominators identical: \(\omega - D/2 -\epsilon_k/2 + J/4\). This means that the denominator for all non-zero terms that renormalize the Hamiltonian is \(\omega - D/2 - \epsilon_k/2 + J/4\).
+If we now use poor man's scaling values to relate the two \(\omega\)s, we get \(\omega^\prime - \omega = \frac{J}{2}\). Substituting this will make both the denominators identical: \(\omega - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{J}{4}\). This means that the total denominator for all non-zero terms that renormalize the Hamiltonian is \(\left(\omega - \frac{D}{2} -  \frac{\epsilon_k}{2} + \frac{J}{4}\right)^2\).
 
-\subsubsection{Calculation of first term}
+For the second term in both the sectors, the first denominator will again be \(\omega - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{J}{4}\), but the second denominator will be different. This is because, in contrast to the other terms where the denominator was to the left of \(T^\dagger c\), the denominator here is positioned to the right of the operator, which means all the energy scales will be flipped (the particles tranform to holes). The total denominator in the second terms is therefore \(-\left(\omega - \frac{D}{2} -  \frac{\epsilon_k}{2} + \frac{J}{4}\right)^2\), which is the negative of the other terms.
+
+\subsubsection*{\textbf{Particle sector renormalization}}
+The two terms in the particle sector have the form
 \begin{align}
-	c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c = J^3\sum_{q, k, k_1,k_2,\atop{\beta, \alpha, \alpha_1,\alpha_2,\atop{l_1,l_2,a,b,c}}} \frac{c^\dagger_{q\beta,l_1} c_{k\alpha,l_1} S_d^a s^a_{\beta \alpha} S_d^b s^b_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} c^\dagger_{k\alpha, l_1} c_{q\beta, l_1} S_d^c s^c_{\alpha \beta}}{\left(\omega - D/2 -\epsilon_k/2 + J/4\right)^2}
+	c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c = J^3\sum_{q, k, k_1,k_2,\atop{\beta, \alpha, \alpha_1,\alpha_2,\atop{l_1,l_2,a,b,c}}} \frac{c^\dagger_{q\beta,l_1} c_{k\alpha,l_1} S_d^a s^a_{\beta \alpha} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} S_d^b s^b_{\alpha_1 \alpha_2} c^\dagger_{k\alpha, l_1} c_{q\beta, l_1} S_d^c s^c_{\alpha \beta}}{\left(\omega - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{J}{4}\right)^2}\\
+	c^\dagger T \frac{1}{\omega^\prime - H_D} T^\dagger c \frac{1}{\omega^\prime - H_D} H_X = J^3\sum_{q, k, k_1,k_2,\atop{\beta, \alpha, \alpha_1,\alpha_2,\atop{l_1,l_2,a,b,c}}} \frac{c^\dagger_{q\beta,l_1} c_{k\alpha,l_1} S_d^a s^a_{\beta \alpha} c^\dagger_{k\alpha, l_1} c_{q\beta, l_1} S_d^c s^c_{\alpha \beta} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} S_d^b s^b_{\alpha_1 \alpha_2}}{-\left(\omega - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{J}{4}\right)^2}
 \end{align}
 \(q\) sums over the momenta being decoupled. \(k, k_1,k_2\) sum over the momenta not being decoupled. \(\beta, \alpha, \alpha_1,\alpha_2\) sum over the spin indices. \(l_1,l_2\) sum over the channels. We will start simplifying this equation by summing over \(q\). \(c^\dagger_{q\beta}\) and \(c_{q\beta}\) can be easily combined to form \(\hat n_{q\beta}\), because they anti-commute with the other momenta. The sum gives \(\sum_q \hat n_{q\beta l_1} = n(D) \). This gives
 \begin{align}
-	c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c = J^3 n(D)\sum_{k, k_1,k_2,\atop{\beta, \alpha, \alpha_1,\alpha_2,\atop{l_1,l_2,a,b,c}}} \frac{c_{k\alpha,l_1} S_d^a s^a_{\beta \alpha} S_d^b s^b_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} c^\dagger_{k\alpha, l_1} S_d^c s^c_{\alpha \beta}}{\left(\omega - D/2 -\epsilon_k/2 + J/4\right)^2}
+	c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c = J^3 n(D)\sum_{k, k_1,k_2,\atop{\beta, \alpha, \alpha_1,\alpha_2,\atop{l_1,l_2,a,b,c}}} \frac{c_{k\alpha,l_1} S_d^a s^a_{\beta \alpha} S_d^b s^b_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} c^\dagger_{k\alpha, l_1} S_d^c s^c_{\alpha \beta}}{\left(\omega - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{J}{4}\right)^2}\\
+	c^\dagger T \frac{1}{\omega^\prime - H_D} T^\dagger c \frac{1}{\omega^\prime - H_D} H_X = J^3 n(D) \sum_{k, k_1,k_2,\atop{\beta, \alpha, \alpha_1,\alpha_2,\atop{l_1,l_2,a,b,c}}} \frac{c_{k\alpha,l_1} S_d^a s^a_{\beta \alpha} c^\dagger_{k\alpha, l_1} S_d^c s^c_{\alpha \beta} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} S_d^b s^b_{\alpha_1 \alpha_2}}{-\left(\omega - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{J}{4}\right)^2}
 \end{align}
-The operators \(c^\dagger_{k\alpha}\) and its conjugate can be brought together without any change of sign because there will be an even number of flips. The sum over \(k\) gives
+The operators \(c^\dagger_{k\alpha}\) and its conjugate can be brought together without any change of sign because there will be an even number of flips. The sum over \(k\) for the first term gives
 \begin{align}
-	\sum_k \frac{1 - \hat n_{k\alpha l_1}}{\left(\omega - D/2 -\epsilon_k/2 + J/4\right)^2} =  \rho\int \frac{d\epsilon\left[1 - \hat n(\epsilon)_{\alpha l_1}\right] }{\left(\omega - D/2 -\epsilon/2 + J/4\right)^2} = \rho\int_0^{D-2\left( \omega + J/4 \right) } \frac{d\epsilon}{\left(\omega - D/2 -\epsilon/2 + J/4\right)^2}
+	\sum_k \frac{1 - \hat n_{k\alpha l_1}}{\left(\omega - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{J}{4}\right)^2} =  \rho\int \frac{d\epsilon\left[1 - \hat n(\epsilon)_{\alpha l_1}\right] }{\left(\omega - \frac{D}{2} -\epsilon/2 + \frac{J}{4}\right)^2} = \rho\int_0^{D-2\left( \omega + \frac{J}{4} \right) } \frac{d\epsilon}{\left(\omega - \frac{D}{2} -\epsilon/2 + \frac{J}{4}\right)^2}
 \end{align}
 The integration limits include only the positive energies, because of the \(1 - \hat n\) operator; the upper limit of the integration is chosen so as to make the denominator double, because this preserves the symmetry of the denominator. Performing the integration gives
 \begin{align}
-	\sum_k \frac{1 - \hat n_{k\alpha l_1}}{\left(\omega - D/2 -\epsilon_k/2 + J/4\right)^2} = -\frac{1}{2}\frac{\rho}{\omega - D/2 + J/4}
+	\sum_k \frac{1 - \hat n_{k\alpha l_1}}{\left(\omega - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{J}{4}\right)^2} = -\frac{1}{2}\frac{\rho}{\omega - \frac{D}{2} + \frac{J}{4}}
 \end{align}
-The sum over the channel index \(l_1\) produces a factor of \(K\). \(K = \sum_{l_1}\) is the total number of conduction bath channels. The entire expression is now
+Similarly, the sum over \(k\) for the second term gives
+\begin{align}
+	-\sum_k \frac{1 - \hat n_{k\alpha l_1}}{\left(\omega - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{J}{4}\right)^2} = \frac{1}{2}\frac{\rho}{\omega - \frac{D}{2} + \frac{J}{4}}
+\end{align}
+
+The sum over the channel index \(l_1\) produces a factor of \(K\), where \(K = \sum_{l_1}\) is the total number of conduction bath channels. The entire expression is now
 \begin{align}
 	\label{first_term}
-	c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c = -\frac{1}{2}\frac{J^3 n(D) \rho K}{\omega - D/2 + J/4}\sum_{\beta, \alpha, \alpha_1,\alpha_2,\atop{a,b,c}} S_d^a s^a_{\beta \alpha} S_d^b s^b_{\alpha_1 \alpha_2} S_d^c s^c_{\alpha \beta} \sum_{k_1,k_2,l_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}
+	c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c = -\frac{1}{2}\frac{J^3 n(D) \rho K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{\beta, \alpha, \alpha_1,\alpha_2,\atop{a,b,c}} S_d^a S_d^b S_d^c s^a_{\beta \alpha} s^b_{\alpha_1 \alpha_2} s^c_{\alpha \beta} \sum_{k_1,k_2,l_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}\\
+	c^\dagger T \frac{1}{\omega^\prime - H_D} T^\dagger c \frac{1}{\omega^\prime - H_D} H_X = \frac{1}{2}\frac{J^3 n(D) \rho K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{\beta, \alpha, \alpha_1,\alpha_2,\atop{a,b,c}} S_d^a S_d^c S_d^b s^a_{\beta \alpha} s^c_{\alpha \beta} s^b_{\alpha_1 \alpha_2} \sum_{k_1,k_2,l_2}c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}
 \end{align}
 We now need to simplify the spin products. The sum over \(\alpha,\beta\) can be carried out immediately: \(\sum_{\alpha,\beta} s^a_{\beta \alpha} s^c_{\alpha \beta} = \text{Trace}\left(s^a s^c\right) = \frac{1}{2}\delta^{ac}\). Substituting this gives
 \begin{align}
-	c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c = -\frac{1}{2}\frac{J^3 n(D) \rho K}{\omega - D/2 + J/4}\frac{1}{2}\sum_{\alpha_1,\alpha_2,a,b} S_d^a S_d^b S_d^a \sum_{k_1,k_2,l_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}s^b_{\alpha_1 \alpha_2} 
-\end{align}
-The spin product can now be carried out:
-\begin{align}
-	\sum_a S_d^a S_d^b S_d^a = \sum_a S_d^a\left[\frac{1}{4}\delta^{ab} + \frac{i}{2}\sum_c \epsilon^{bac}S_d^c\right] = \frac{1}{4}S_d^b - \frac{1}{4}\sum_{ace}\epsilon^{bac}\epsilon^{ace}S_d^e = \frac{1}{4}S_d^b - \frac{1}{4}S_d^b \sum_{ac}\epsilon^{bac}\epsilon^{acb} \\
-	= -\frac{1}{4}S_d^b
-\end{align}
-The renormalization becomes
-\begin{align}
-	\Delta H_1 = c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c = -\frac{1}{2}\frac{J^3 n(D) \rho K}{\omega - D/2 + J/4}\frac{1}{2}\left( -\frac{1}{4} \right) \sum_{k_1,k_2,\alpha_1,\alpha_2,b,l_2} S_d^b s^b_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}\\
-=\frac{1}{16}\frac{J^3 n(D) \rho K}{\omega - D/2 + J/4} \sum_{k_1,k_2,\alpha_1,\alpha_2,l_2} \vec{S_d}\cdot\vec{s}_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}
+	c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c = -\frac{1}{2}\frac{J^3 n(D) \rho K}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}\sum_{\alpha_1,\alpha_2,a,b} S_d^a S_d^b S_d^a \sum_{k_1,k_2,l_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}s^b_{\alpha_1 \alpha_2} \\
+	c^\dagger T \frac{1}{\omega^\prime - H_D} T^\dagger c \frac{1}{\omega^\prime - H_D} H_X = \frac{1}{2}\frac{J^3 n(D) \rho K}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{2} \sum_{\alpha_1,\alpha_2,a,b} S_d^a S_d^a S_d^b \sum_{k_1,k_2,l_2}c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}s^b_{\alpha_1 \alpha_2} 
 \end{align}
 
-\subsubsection{Calculation of second term}
+Adding the two terms gives
+\begin{equation}\begin{aligned}
+	\Delta H_\text{p-sector} = -\frac{1}{4}\frac{J^3 n(D) \rho K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{\alpha_1,\alpha_2,a,b} S_d^a \left[S_d^b, S_d^a\right] \sum_{k_1,k_2,l_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}s^b_{\alpha_1 \alpha_2}
+\end{aligned}\end{equation}
+The spin part can be simplified as follows:
+\begin{equation}\begin{aligned}
+	\sum_a S_d^a \left[S_d^b, S_d^a\right] = \sum_{a,e}S_d^a i \epsilon^{bae}S_d^e = -\frac{1}{2}\sum_{aef}\epsilon^{bae}\epsilon^{aef}S_d^f = -S_d^b\frac{1}{2}\sum_{ae}\left(\epsilon^{bae}\right)^2 = -S_d^b\frac{1}{2}\sum_{a\neq b, e\neq b, e \neq a} = - S_d^b
+\end{aligned}\end{equation}
+Substituting this gives
+\begin{equation}\begin{aligned}
+	\Delta H_\text{p-sector} = \frac{1}{4}\frac{J^3 n(D) \rho K}{\omega - \frac{D}{2} + \frac{J}{4}} \sum_{k_1,k_2,l_2,\alpha_1,\alpha_2,b} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} S_d^b s^b_{\alpha_1 \alpha_2} = \frac{1}{4}\frac{J^3 n(D) \rho K}{\omega - \frac{D}{2} + \frac{J}{4}} \sum_{k_1,k_2,l_2,\alpha_1,\alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2} \vec{S_d}\cdot\vec{s}_{\alpha_1\alpha_2}
+\end{aligned}\end{equation}
+
+% The spin product can now be carried out:
+% \begin{align}
+% 	\sum_a S_d^a S_d^b S_d^a = \sum_a S_d^a\left[\frac{1}{4}\delta^{ab} + \frac{i}{2}\sum_c \epsilon^{bac}S_d^c\right] = \frac{1}{4}S_d^b - \frac{1}{4}\sum_{ace}\epsilon^{bac}\epsilon^{ace}S_d^e = \frac{1}{4}S_d^b - \frac{1}{4}S_d^b \sum_{ac}\epsilon^{bac}\epsilon^{acb} \\
+% 	= -\frac{1}{4}S_d^b
+% \end{align}
+% The renormalization becomes
+% \begin{align}
+% 	\Delta H_1 = c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c = -\frac{1}{2}\frac{J^3 n(D) \rho K}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}\left( -\frac{1}{4} \right) \sum_{k_1,k_2,\alpha_1,\alpha_2,b,l_2} S_d^b s^b_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}\\
+% =\frac{1}{16}\frac{J^3 n(D) \rho K}{\omega - \frac{D}{2} + \frac{J}{4}} \sum_{k_1,k_2,\alpha_1,\alpha_2,l_2} \vec{S_d}\cdot\vec{s}_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}
+% \end{align}
+
+\subsubsection*{\textbf{Hole sector renormalization}}
 Like the single-channel case, the renormalization coming from the hole excitations is exactly the Hermitian conjugate of that in the particle sector. And since the renormalization \(\Delta H_1\) is Hermitian, we have \(\Delta H_0 = \Delta H_1\)
 
 \subsection{Total renormalization \(\Delta H^{(3)}\)}
 The total renormalization is twice that in the particle sector.
 \begin{align}
-	\Delta H^{(3)} = \frac{1}{8}\frac{J^3 n(D) \rho K}{\omega - D/2 + J/4} \sum_{k_1,k_2,\alpha_1,\alpha_2} \vec{S_d}\cdot\vec{s}_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}
+	\Delta H^{(3)} = \frac{1}{2}\frac{J^3 n(D) \rho K}{\omega - \frac{D}{2} + \frac{J}{4}} \sum_{k_1,k_2,\alpha_1,\alpha_2} \vec{S_d}\cdot\vec{s}_{\alpha_1 \alpha_2} c^\dagger_{k_1\alpha_1,l_2}c_{k_2 \alpha_2,l_2}
 \end{align}
 Combining with \(\Delta H^{(2)}\) and replacing \(n(D) = \rho |\delta D|\), we get
 \begin{align}
-	\frac{\Delta J}{|\Delta D|} = -\frac{J^2 \rho}{\omega - D/2 + J/4} + \frac{1}{8}\frac{J^3 \rho^2 K}{\omega - D/2 + J/4} = -\frac{J^2 \rho}{\omega - D/2 + J/4}\left[1 - \frac{1}{8}J\rho K\right] 
+	\frac{\Delta J}{|\Delta D|} = -\frac{J^2 \rho}{\omega - \frac{D}{2} + \frac{J}{4}} + \frac{1}{2}\frac{J^3 \rho^2 K}{\omega - \frac{D}{2} + \frac{J}{4}} = -\frac{J^2 \rho}{\omega - \frac{D}{2} + \frac{J}{4}}\left[1 - \frac{1}{2}J\rho K\right] 
 \end{align}
-We choose \(\omega = -D/2\) to get a clearer idea of what the equations say. 
+We choose \(\omega = -\frac{D}{2}\) to get a clearer idea of what the equations say. 
 \begin{align}
 	\label{mchannel}
-	\frac{\Delta J}{|\Delta D|} = \frac{J^2 \rho}{D - J/4}\left[1 - \frac{1}{8}J\rho K\right] 
+	\frac{\Delta J}{|\Delta D|} = \frac{J^2 \rho}{D - \frac{J}{4}}\left[1 - \frac{1}{2}J\rho K\right] 
 \end{align}
 Quantities with zero in the subscript will denote their values in the bare Hamiltonian. Using \(\delta D = -|\delta D|\), we can write the continuum form of the equation:
 \begin{align}
 	\label{rg_beta}
-	\frac{\:\mathrm{d}J}{\:\mathrm{d}D} = \frac{J^2 \rho}{D - J/4}\left(\frac{1}{8}J\rho K - 1\right)
+	\frac{\:\mathrm{d}J}{\:\mathrm{d}D} = \frac{J^2 \rho}{D - \frac{J}{4}}\left(\frac{1}{2}J\rho K - 1\right)
 \end{align}
 
 For \(D \gg J\), we can ignore the \(J\) in the denominator, and the equation reduces to the one-loop poor man's scaling form
 \begin{align}
 	\label{pms_mchannel}
-	\frac{\:\mathrm{d}J}{\:\mathrm{d}D} \simeq  \frac{J^2 \rho}{D}\left(\frac{1}{8}J\rho K - 1\right)
+	\frac{\:\mathrm{d}J}{\:\mathrm{d}D} \simeq  \frac{J^2 \rho}{D}\left(\frac{1}{2}J\rho K - 1\right)
 \end{align}
-This equation has a stable fixed point at \(J^* = \frac{8}{\rho K}\). The value of the fixed point agrees with the poor man's scaling calculation in~\cite{tripathi2018landau}, but differs from the value of \(\frac{2}{\rho K}\) obtained in other references~\cite{Kuramoto1998,Kogan_2018}.
+This equation has a stable fixed point at \(J^* = \frac{2}{\rho K}\).
+% The value of the fixed point agrees with the poor man's scaling calculation in~\cite{tripathi2018landau}, but differs from the value of \(\frac{2}{\rho K}\) obtained in other references~\cite{Kuramoto1998,Kogan_2018}.
 
 \begin{figure}[!htb]
 	\centering
@@ -312,11 +339,11 @@ For \(D\) not so large, the denominator also comes into play, and Eq.~\ref{mchan
 
 The numerator and denominator fixed points, \(J_1^*\) and \(J_2^*\) respectively, are given by
 \begin{align}
-	J_1^* = \frac{8}{K \rho}, && D^* = \frac{J_2^*}{4}
+	J_1^* = \frac{2}{K \rho}, && D^* = \frac{J_2^*}{4}
 \end{align}
 For a given \(K\), the position of \(J_1^*\) will be governed by \(\rho\). In general, for each bare bandwidth \(D_0\), there exists a minimal \(\rho\), $\rho_\text{min}(D_0)$, above which the the lower fixed point is the one from the numerator. That is, for \(\rho > \rho_\text{min}\), if we start scaling from small \(J_0\), it grows until it hits \(J_1^*\) which acts as the attractive fixed point, and \(J_2^*\) lies at a higher value and acts as the repulsive fixed point. For \(\rho < \rho_\text{min}\), \(J\) will grow and hit \(J_2^*\) instead, and \(J_1^* > J_2^*\) now becomes the repulsive fixed point.
 \begin{align}
-	\rho_\text{min} = \text{minimum }\left\{\rho, \text{ such that } \frac{8}{K \rho} < 4 D^*(\rho)\right\}
+	\rho_\text{min} = \text{minimum }\left\{\rho, \text{ such that } \frac{2}{K \rho} < 4 D^*(\rho)\right\}
 \end{align}
 The RG flows towards the attractive fixed point \(J_1^*\) is shown  in fig.~\ref{rg_flow_K-2}.
 \begin{figure}[!htpb]
@@ -329,7 +356,7 @@ The RG flows towards the attractive fixed point \(J_1^*\) is shown  in fig.~\ref
 This behaviour is shown schematically in fig.~\ref{rg_flow_general}. 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=0.5\textwidth]{./rhomin_D.pdf}
+	\includegraphics[width=0.5\textwidth]{../numerics/rhomin_D.pdf}
 	\caption{Red curve shows variation of \(\rho_\text{min}\) against \(D_0\). It vanishes at large \(D_0\). Blue curve shows variation of the ratio \(J_1^* / D_0\) with \(D_0\). That shrinks as well, showing that the fixed point \(J_1^*\) remains finite in the thermodynamic limit, and the distance between \(J_1^*\) and \(J_2^*\) keeps growing.}
 	\label{rhomin_vs_D}
 \end{figure}
@@ -396,7 +423,7 @@ In the opposite regime \(j_- > 0, j_+ < 0\), \(\Delta j_+\) is negative. It has 
 	\label{irrel_Jplus}
 \end{figure}
 
-\section{Derivation of URG equations for the multi-channel spin-\(S\) impurity Kondo model}
+\section{URG equations for the multi-channel spin-\(S\) Kondo model}
 The leading order renormalization is the same as the single-channel model, and is shown in the appendix. Following that calculation, the Hamiltonian we will work with is 
 \begin{equation}\begin{aligned}
 		    H = \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{m=-S}^S \sum_{kl,\atop{\sigma=\uparrow,\downarrow}} J^\sigma_m \ket{m}\bra{m} c^\dagger_{k \sigma}c_{l \sigma} + \sum_{kl} \sum_{m=-S}^{S-1} J^t_{m} \left(\ket{m+1}\bra{m} s^-_{kl}  + \text{h.c.}\right)
@@ -444,6 +471,17 @@ The various terms in each sector can be represented as \(a|b|c\), where \(a,b,c 
 \begin{equation}\begin{aligned}
 	-\frac{1}{2}\frac{\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{m}\sum_{k_1,k_2,l_2,\sigma} \left( J^t_m \right) ^2 J^\sigma_{m+1} \ket{m}\bra{m}c^\dagger_{k_1 \sigma, l_2}c_{k_2 \sigma,l_2}
 \end{aligned}\end{equation}
+
+\paragraph{\(z|+|z\)}
+\begin{equation}\begin{aligned}
+	-\frac{1}{2}\frac{\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_\beta \sum_{m}\sum_{k_1,k_2,l_2}J^\beta_m J^t_m J^\beta_{m+1}\ket{m}\bra{m+1}c^\dagger_{k_1 \uparrow, l_2}c_{k_2 \downarrow,l_2}
+\end{aligned}\end{equation}
+
+\paragraph{\(z|-|z\)}
+\begin{equation}\begin{aligned}
+	-\frac{1}{2}\frac{\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_\beta \sum_{m}\sum_{k_1,k_2,l_2} J^\beta_{m+1} J^t_m J^\beta_m \ket{m+1}\bra{m}c^\dagger_{k_1 \downarrow, l_2}c_{k_2 \uparrow,l_2}
+\end{aligned}\end{equation}
+
 \paragraph{\(+|+|-\)}
 \begin{equation}\begin{aligned}
 	-\frac{1}{2}\frac{\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{m}\sum_{k_1,k_2,l_2} J^t_m \left( J^t_{m+1} \right)^2 \ket{m}\bra{m+1}c^\dagger_{k_1 \uparrow, l_2}c_{k_2 \downarrow,l_2}
@@ -659,16 +697,16 @@ For the two-channel problem, we have four possible states in total: \(\left( s_\
 The factors \(\gamma\) and \(\chi\) for the other states are
 \begin{align}
 	s_\text{tot}, s_\text{tot}^z = && (1,-1), && (1,0), && (1,1)\\
-	\gamma_{s_\text{tot}}^{s_\text{tot}^z} = && \frac{1}{E_\text{gs}}, && \frac{1}{E_\text{gs} + J/2}, && -- \\
+	\gamma_{s_\text{tot}}^{s_\text{tot}^z} = && \frac{1}{E_\text{gs}}, && \frac{1}{E_\text{gs} + \frac{J}{2}}, && -- \\
 	\chi_{s_\text{tot}}^{s_\text{tot}^z} = && 2, && 2, && --\\
-	\gamma_{s_\text{tot}}^{-s_\text{tot}^z} = && --, && \frac{1}{E_\text{gs} + J/2}, && \frac{1}{E_\text{gs}}\\
+	\gamma_{s_\text{tot}}^{-s_\text{tot}^z} = && --, && \frac{1}{E_\text{gs} + \frac{J}{2}}, && \frac{1}{E_\text{gs}}\\
 	\chi_{s_\text{tot}}^{-s_\text{tot}^z} = && --, && 2, && 2\\
 \end{align}
 The effective Hamiltonians for these states are:
 \begin{align}
 	H_\text{eff}^{1, 1} &= H_0 + J S_d^z + \frac{J^2}{4}\frac{2}{E_\text{gs}}\left[1 + \frac{H_0}{E_\text{gs}} + \frac{s^+_\text{tot}X_{1,\text{tot}}}{2 E_\text{gs}} + \frac{H_0^2 }{E_\text{gs}^2} - \frac{Z_{1,\text{tot}} H_0}{E_\text{gs}^3}\right] \left(\frac{1}{2} - S_d^z\right) \\
 	H_\text{eff}^{1, -1} &= H_0 - J S_d^z + \frac{J^2}{4}\frac{2}{E_\text{gs}}\left[1 + \frac{H_0}{E_\text{gs}}  - \frac{s^-_\text{tot}X^\dagger_{1,\text{tot}}}{2 E_\text{gs}}  + \frac{H_0^2}{E_\text{gs}^2}  - \frac{ Z_{1,\text{tot}} H_0}{E_\text{gs}^3}\right] \left(\frac{1}{2} + S_d^z\right) \\
-	H_\text{eff}^{1, 0} &= H_0 + \frac{J^2}{2\left(E_\text{gs} + J/2\right)}\left[1 + \frac{ H_0 + \left(1/2 + S_d^z\right) s^+_\text{tot}X_{1,\text{tot}} - \left(1/2 - S_d^z\right) s^-_\text{tot}X^\dagger_{1,\text{tot}}}{2 \left(E_\text{gs} + J/2\right)} + \frac{H_0^2}{\left(E_\text{gs} + J/2\right)^2} - \frac{Z_{1,\text{tot}} H_0}{\left(E_\text{gs} + J/2\right)^3} \right] \\
+	H_\text{eff}^{1, 0} &= H_0 + \frac{J^2}{2\left(E_\text{gs} + \frac{J}{2}\right)}\left[1 + \frac{ H_0 + \left(\frac{1}{2} + S_d^z\right) s^+_\text{tot}X_{1,\text{tot}} - \left(\frac{1}{2} - S_d^z\right) s^-_\text{tot}X^\dagger_{1,\text{tot}}}{2 \left(E_\text{gs} + \frac{J}{2}\right)} + \frac{H_0^2}{\left(E_\text{gs} + \frac{J}{2}\right)^2} - \frac{Z_{1,\text{tot}} H_0}{\left(E_\text{gs} + \frac{J}{2}\right)^3} \right] \\
 \end{align}
 The terms have the following meanings:
 \begin{align}
@@ -697,20 +735,20 @@ This means the Hamiltonian is already block-diagonal in the quantum number \(s_\
 
 Defining \(\epsilon^h_m = \frac{1}{2}\left(Jm + h\right) \) and \(x^M_m = M(M+1) - m(m+1)\), the \(2\times 2\) blocks can be written as
 \begin{align}
-	H_m = \begin{pmatrix} \epsilon^h_m & \frac{J}{2}\sqrt{x^M_m} \\ \frac{J}{2}\sqrt{x^M_m} & -\left( \epsilon^h_m + J/2 \right)   \end{pmatrix} 
+	H_m = \begin{pmatrix} \epsilon^h_m & \frac{J}{2}\sqrt{x^M_m} \\ \frac{J}{2}\sqrt{x^M_m} & -\left( \epsilon^h_m + \frac{J}{2} \right)   \end{pmatrix} 
 \end{align}
 The eigenvalues are 
 \begin{align}
 	\label{eigenvalue}
-	\lambda_{m, \pm}^{M, h} = \frac{1}{2}\left[-J/2 \pm \sqrt{J^2/4 + J^2 x_m^M + 4\epsilon^h_m\left(\epsilon^h_m + J/2\right) }\right] = -J/4 \pm \sqrt{J^2x^M_m/4 + \alpha^2}
+	\lambda_{m, \pm}^{M, h} = \frac{1}{2}\left[-\frac{J}{2} \pm \sqrt{J^2/4 + J^2 x_m^M + 4\epsilon^h_m\left(\epsilon^h_m + \frac{J}{2}\right) }\right] = -\frac{J}{4} \pm \sqrt{J^2x^M_m/4 + \alpha^2}
 \end{align}
-where \(\alpha = \epsilon^h_m + J/4\).
+where \(\alpha = \epsilon^h_m + \frac{J}{4}\).
 The eigenvalues of the terminal states are \(\pm\epsilon^h_{\pm M}\). For \(h = 0\), the ground state subspace is \(K-\)fold degenerate and is formed by the negative solutions of Eq.~\ref{eigenvalue}. This common \(K-\)fold degenerate eigenvalue is \(-J(M+1)/2\).
 The full list of energy eigenvalues at a particular value of \(M\) is
 \begin{align}
 \label{stargraph_spectrum}
 &		JM/2 - h/2, &&\ket{\downarrow, M, -M}, && m = -M\\
-&-J/4 \pm \sqrt{J^2x^M_m/4 + \alpha^2}, &&\left\{\ket{\uparrow, M, m}, \ket{\downarrow, M, m+1}\right\}, &&m=-M,\ldots,M-1\\
+&-\frac{J}{4} \pm \sqrt{J^2x^M_m/4 + \alpha^2}, &&\left\{\ket{\uparrow, M, m}, \ket{\downarrow, M, m+1}\right\}, &&m=-M,\ldots,M-1\\
 &JM/2 + h/2, &&\ket{\uparrow, M, M},&& m = M\\
 \end{align}
 The eigenstates for each value of \(M,m\) are given by
@@ -721,16 +759,16 @@ The eigenstates for each value of \(M,m\) are given by
 The partition function is
 \begin{align}
 	Z(h) &= \sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\left(e^{-\beta \lambda_{m, +}^{M, h}} + e^{-\beta \lambda_{m, -}^{M, h}}\right) + e^{-\beta \epsilon^h_{M}} + e^{\beta \epsilon^h_{- M}}\right] \\
-	&=\sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + 2e^{-\beta JM/2}\cosh \beta h/2\right]
+	&=\sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta \frac{J}{4}}\cosh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + 2e^{-\beta JM/2}\cosh \beta h/2\right]
 \end{align}
-where \(M_\text{max} = K/2\) for a \(K-\)channel Kondo model, and \(M_\text{min} = 0\)  if \(K\) is even, otherwise \(1/2\). This is yet not the complete partition function, because we have not accounted for the possibility that there multiple subspaces of \(M\). For example, the \(K=3\) case states can be obtained by adding the third spin-half onto the states \(S=0,1\). \(S=0\) gives \(s_\text{tot}=1/2\) and \(S=1\) gives \(s_\text{tot} = 1/2, 3/2\). So, \(s_\text{tot} = 1/2\) appears twice. These two subspaces are actually orthogonal, because the quantum numbers for the individual channels are different. We need to count the number of instances of a particular subspace \(s_\text{tot}=M\). It turns out that this number is given by
+where \(M_\text{max} = K/2\) for a \(K-\)channel Kondo model, and \(M_\text{min} = 0\)  if \(K\) is even, otherwise \(\frac{1}{2}\). This is yet not the complete partition function, because we have not accounted for the possibility that there multiple subspaces of \(M\). For example, the \(K=3\) case states can be obtained by adding the third spin-half onto the states \(S=0,1\). \(S=0\) gives \(s_\text{tot}=\frac{1}{2}\) and \(S=1\) gives \(s_\text{tot} = \frac{1}{2}, 3/2\). So, \(s_\text{tot} = \frac{1}{2}\) appears twice. These two subspaces are actually orthogonal, because the quantum numbers for the individual channels are different. We need to count the number of instances of a particular subspace \(s_\text{tot}=M\). It turns out that this number is given by
 \begin{align}
 	\label{extra_degen}
 	r^K_M = {}^{K-1}C_{K/2 - M}
 \end{align}
 which means the correct partition function is
 \begin{align}
-	Z(h) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + 2e^{-\beta JM/2}\cosh \beta h/2\right]
+	Z(h) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta \frac{J}{4}}\cosh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + 2e^{-\beta JM/2}\cosh \beta h/2\right]
 \end{align}
 
 To calculate the impurity magnetic susceptibility, we will use the expression
@@ -744,19 +782,19 @@ where the \(\prime\) indicates derivative with respect to \(h\). We will now cal
 \end{gather}
 We are now ready to compute the derivatives of \(Z\):
 \begin{align}
-	\frac{\:\mathrm{d}Z(h)}{\:\mathrm{d}h} &= \beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}e^{\beta J/4}\alpha\frac{\sinh \beta\sqrt{J^2x^M_m/4 + \alpha^2} }{\sqrt{J^2x^M_m/4 + \alpha^2}} + e^{-\beta JM/2}\sinh \left(\beta h/2\right)\right] \\
-	\frac{\:\mathrm{d}^2Z(h)}{\:\mathrm{d}h^2} &= \beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\frac{1}{2}\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\frac{e^{\beta J/4}}{\sqrt{J^2x^M_m/4 + \alpha^2}}\left(\sinh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + \beta\alpha^2 \frac{\cosh\beta\sqrt{J^2x^M_m/4 + \alpha^2}}{\sqrt{J^2x^M_m/4 + \alpha^2}}\right.\right.\\
+	\frac{\:\mathrm{d}Z(h)}{\:\mathrm{d}h} &= \beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}e^{\beta \frac{J}{4}}\alpha\frac{\sinh \beta\sqrt{J^2x^M_m/4 + \alpha^2} }{\sqrt{J^2x^M_m/4 + \alpha^2}} + e^{-\beta JM/2}\sinh \left(\beta h/2\right)\right] \\
+	\frac{\:\mathrm{d}^2Z(h)}{\:\mathrm{d}h^2} &= \beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\frac{1}{2}\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\frac{e^{\beta \frac{J}{4}}}{\sqrt{J^2x^M_m/4 + \alpha^2}}\left(\sinh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + \beta\alpha^2 \frac{\cosh\beta\sqrt{J^2x^M_m/4 + \alpha^2}}{\sqrt{J^2x^M_m/4 + \alpha^2}}\right.\right.\\
 						   &\quad \quad\quad \quad\left.\left. - \frac{\alpha^2 \sinh \beta\sqrt{J^2x^M_m/4 + \alpha^2}}{J^2x^M_m/4 + \alpha^2}\right) + e^{-\beta JM/2}\frac{\beta}{2}\cosh \left(\beta h/2\right)\right] \\
 \end{align}
-We will now take the limit of \(h \to 0\). Note that \(\alpha(h\to 0)=\frac{J}{2}(m+1/2)\) and hence 
+We will now take the limit of \(h \to 0\). Note that \(\alpha(h\to 0)=\frac{J}{2}(m+\frac{1}{2})\) and hence 
 \begin{align}
-	(J^2x^M_m/4 + \alpha^2)(h \to 0) = \frac{J^2}{4}\left[M(M+1) - m(m+1) + (m+1/2)^2\right] = \frac{J^2}{4}\left( M + 1/2 \right)^2
+	(J^2x^M_m/4 + \alpha^2)(h \to 0) = \frac{J^2}{4}\left[M(M+1) - m(m+1) + (m+\frac{1}{2})^2\right] = \frac{J^2}{4}\left( M + \frac{1}{2} \right)^2
 \end{align}
-For brevity, we define \(\theta_M = \beta J (M+1/2)/2\) and \(\Sigma_M = \sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}(m+1/2)^2\). It can be shown that this summation, for \(M=M_\text{max}=K/2\), evaluates to \(\Sigma_\text{max} = K(K+1)(K-1)/12\).
+For brevity, we define \(\theta_M = \beta J (M+\frac{1}{2})/2\) and \(\Sigma_M = \sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}(m+\frac{1}{2})^2\). It can be shown that this summation, for \(M=M_\text{max}=K/2\), evaluates to \(\Sigma_\text{max} = K(K+1)(K-1)/12\).
 \begin{align}
-	\lim_{h \to 0}Z(h) &= \sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta \frac{J}{2}\left( M + 1/2 \right) + 2e^{-\beta JM/2}\right] = \sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[4Me^{\beta J/4}\cosh \theta_M + 2e^{-\beta JM/2}\right]\\
-	\lim_{h \to 0}\frac{\:\mathrm{d}Z(h)}{\:\mathrm{d}h} &=  \beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}e^{\beta J/4}(m+1/2)\frac{\sinh \beta\frac{J}{2}\left( M + 1/2 \right) }{\left( M + 1/2 \right)}\right] = 0\\
-	\lim_{h \to 0}\frac{\:\mathrm{d}^2Z(h)}{\:\mathrm{d}h^2} &= \frac{\beta^2}{2}\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\frac{e^{\beta J/4}}{\theta_M}\left(2M\sinh \theta_M + \frac{\beta^2 J^2}{4}\left[\frac{\cosh\theta_M}{\theta_M} - \frac{\sinh \theta_M}{\theta_M^2}\right]\Sigma_M\right)+ e^{-\beta JM/2}\right]\\
+	\lim_{h \to 0}Z(h) &= \sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta \frac{J}{4}}\cosh \beta \frac{J}{2}\left( M + \frac{1}{2} \right) + 2e^{-\beta JM/2}\right] = \sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[4Me^{\beta \frac{J}{4}}\cosh \theta_M + 2e^{-\beta JM/2}\right]\\
+	\lim_{h \to 0}\frac{\:\mathrm{d}Z(h)}{\:\mathrm{d}h} &=  \beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}e^{\beta \frac{J}{4}}(m+\frac{1}{2})\frac{\sinh \beta\frac{J}{2}\left( M + \frac{1}{2} \right) }{\left( M + \frac{1}{2} \right)}\right] = 0\\
+	\lim_{h \to 0}\frac{\:\mathrm{d}^2Z(h)}{\:\mathrm{d}h^2} &= \frac{\beta^2}{2}\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\frac{e^{\beta \frac{J}{4}}}{\theta_M}\left(2M\sinh \theta_M + \frac{\beta^2 J^2}{4}\left[\frac{\cosh\theta_M}{\theta_M} - \frac{\sinh \theta_M}{\theta_M^2}\right]\Sigma_M\right)+ e^{-\beta JM/2}\right]\\
 \end{align}
 These expressions have been used to compute the impurity susceptibility for various values of \(K\) in fig.~\ref{chi_mchannel}.
 \begin{figure}[htpb]
@@ -766,19 +804,19 @@ These expressions have been used to compute the impurity susceptibility for vari
 	\label{chi_mchannel}
 \end{figure}
 
-Since the final expressions are formidable, we write down the expressions specifically for the single-channel and two-channel models. For single-channel, we have \(M=\frac{1}{2}\) and \(m = \pm \frac{1}{2}\). The terminal states are \(S_d^z=-1/2, m=-1/2\) and \(S_d^z=1/2, m=1/2\). There is therefore just one \(2\times 2\) block, and that is at \(m=-1/2\).
+Since the final expressions are formidable, we write down the expressions specifically for the single-channel and two-channel models. For single-channel, we have \(M=\frac{1}{2}\) and \(m = \pm \frac{1}{2}\). The terminal states are \(S_d^z=-\frac{1}{2}, m=-\frac{1}{2}\) and \(S_d^z=\frac{1}{2}, m=\frac{1}{2}\). There is therefore just one \(2\times 2\) block, and that is at \(m=-\frac{1}{2}\).
 \begin{gather}
-	\lim_{h \to 0}Z(h) = 2e^{\beta J/4}\cosh \beta \frac{J}{2} + 2e^{-\beta J/4} \\
+	\lim_{h \to 0}Z(h) = 2e^{\beta \frac{J}{4}}\cosh \beta \frac{J}{2} + 2e^{-\beta \frac{J}{4}} \\
 	\lim_{h \to 0}\frac{\:\mathrm{d}Z(h)}{\:\mathrm{d}h} = 0 \\
-	\lim_{h \to 0}\frac{\:\mathrm{d}^2Z(h)}{\:\mathrm{d}h^2} = \frac{\beta}{J}\left(e^{\beta J/4}\sinh \beta\frac{J}{2} + e^{-\beta J/4}\frac{J \beta}{2}\right)\\
-	\chi = \frac{1}{\beta}\lim_{h \to 0}\left[\frac{Z(h)^{\prime\prime}}{Z(h)} - \left(\frac{Z(h)^{\prime}}{Z(h)}\right)^2 \right] = \frac{1}{J}\frac{\left(2e^{\beta J/2}\sinh \beta\frac{J}{2} + J \beta\right)}{4e^{\beta J/2}\cosh \beta \frac{J}{2} + 4}
+	\lim_{h \to 0}\frac{\:\mathrm{d}^2Z(h)}{\:\mathrm{d}h^2} = \frac{\beta}{J}\left(e^{\beta \frac{J}{4}}\sinh \beta\frac{J}{2} + e^{-\beta \frac{J}{4}}\frac{J \beta}{2}\right)\\
+	\chi = \frac{1}{\beta}\lim_{h \to 0}\left[\frac{Z(h)^{\prime\prime}}{Z(h)} - \left(\frac{Z(h)^{\prime}}{Z(h)}\right)^2 \right] = \frac{1}{J}\frac{\left(2e^{\beta \frac{J}{2}}\sinh \beta\frac{J}{2} + J \beta\right)}{4e^{\beta \frac{J}{2}}\cosh \beta \frac{J}{2} + 4}
 \end{gather}
 This expression matches with the direct calculation of the susceptibility of the single-channel Kondo model.
 
 At low temperature \(\beta \to \infty\), only the highest value \(M_\text{max}\) will survive:
 \begin{align}
 	Z &\to 2 r^K_{M_\text{max}} M_\text{max} e^{\beta \frac{J}{2}(M_\text{max} + 1)}\\
-	Z^{\prime \prime} &\to r^K_{M_\text{max}}\left(\frac{\beta }{2(M_\text{max} + 1/2)}\right)^2 e^{\beta \frac{J}{2}(M_\text{max} + 1)}\Sigma_\text{max}\\
+	Z^{\prime \prime} &\to r^K_{M_\text{max}}\left(\frac{\beta }{2(M_\text{max} + \frac{1}{2})}\right)^2 e^{\beta \frac{J}{2}(M_\text{max} + 1)}\Sigma_\text{max}\\
 	\chi &\to \frac{\beta\Sigma_\text{max}}{2M_\text{max}\left(2M_\text{max}+1\right)^2} = \frac{\beta K(K+1)(K-1)/12}{K(K+1)^2} = \frac{\beta(K-1)}{12(K+1)}
 \end{align}
 
@@ -797,49 +835,49 @@ We insert a magnetic field that acts only on the bath and then attempt to diagon
 
 Defining \(x^M_m = M(M+1) - m(m+1)\), the \(2\times 2\) blocks can be written as
 \begin{align}
-	H_m = \begin{pmatrix} m(J/2 + h) & J\sqrt{x^M_m}/2 \\ J\sqrt{x^M_m}/2 & (m+1)(h - J/2) \end{pmatrix} 
+	H_m = \begin{pmatrix} m(\frac{J}{2} + h) & J\sqrt{x^M_m}/2 \\ J\sqrt{x^M_m}/2 & (m+1)(h - \frac{J}{2}) \end{pmatrix} 
 \end{align}
 The eigenvalues are 
 \begin{align}
-	\lambda_{m, \pm}^{M, h} &= -J/4 + (2m+1)h/2 \pm \frac{1}{2}\sqrt{J^2x^M_m + \left[(2m+1)h - J/2\right]^2 - 4m(m+1)(h^2 - J^2/4)} \\
-				&= -J/4 + (2m+1)h/2 \pm \frac{1}{2}\sqrt{J^2(M + 1/2)^2 + h^2 - (2m+1)Jh}	= -J/4 + (2m+1)h/2 \pm \phi^M_m
+	\lambda_{m, \pm}^{M, h} &= -\frac{J}{4} + (2m+1)h/2 \pm \frac{1}{2}\sqrt{J^2x^M_m + \left[(2m+1)h - \frac{J}{2}\right]^2 - 4m(m+1)(h^2 - J^2/4)} \\
+				&= -\frac{J}{4} + (2m+1)h/2 \pm \frac{1}{2}\sqrt{J^2(M + \frac{1}{2})^2 + h^2 - (2m+1)Jh}	= -\frac{J}{4} + (2m+1)h/2 \pm \phi^M_m
 \end{align}
 The eigenvalues of the terminal states are \(JM/2 \pm hM\). The partition function is
 \begin{align}
 	Z(h) &= \sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\left(e^{-\beta \lambda_{m, +}^{M, h}} + e^{-\beta \lambda_{m, -}^{M, h}}\right) + e^{-\beta JM/2}\left(e^{\beta hM} + e^{-\beta hM}\right)\right] \\
-	     &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta \left(J/4 - (m+1/2)h\right)}\cosh \beta\phi^M_m + 2e^{-\beta JM/2}\cosh \beta Mh\right]
+	     &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta \left(\frac{J}{4} - (m+\frac{1}{2})h\right)}\cosh \beta\phi^M_m + 2e^{-\beta JM/2}\cosh \beta Mh\right]
 \end{align}
 We will now take the derivatives.
 \begin{align}
-	Z^\prime(h) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta \left(J/4 - (m+1/2)h\right)}\left(-\beta (m+1/2) \cosh \beta\phi^M_m + \beta\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\sinh \beta\phi^M_m\right)+ 2\beta Me^{-\beta JM/2}\sinh \beta Mh\right]\\
-	Z^{\prime\prime}(h) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2 e^{\beta \left(J/4 - (m+1/2)h\right)}\left(\beta^2 (m+1/2)^2 \cosh \beta\phi^M_m - 2\beta^2 (m+1/2)\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\sinh \beta\phi^M_m\right.\right.\\
+	Z^\prime(h) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta \left(\frac{J}{4} - (m+\frac{1}{2})h\right)}\left(-\beta (m+\frac{1}{2}) \cosh \beta\phi^M_m + \beta\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\sinh \beta\phi^M_m\right)+ 2\beta Me^{-\beta JM/2}\sinh \beta Mh\right]\\
+	Z^{\prime\prime}(h) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2 e^{\beta \left(\frac{J}{4} - (m+\frac{1}{2})h\right)}\left(\beta^2 (m+\frac{1}{2})^2 \cosh \beta\phi^M_m - 2\beta^2 (m+\frac{1}{2})\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\sinh \beta\phi^M_m\right.\right.\\
 			    &\quad\quad\quad\quad\quad\quad\left.\left. + \beta\frac{\:\mathrm{d^2}\phi^M_m}{\:\mathrm{d}h^2}\sinh \beta\phi^M_m + \beta^2\left(\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\right)^2 \cosh \beta\phi^M_m\right) + 2\beta^2 M^2 e^{-\beta JM/2}\cosh \beta Mh\right]\\
 \end{align}
 In the limit of \(h \to 0\), we  have
 \begin{align}
-	     Z(h \to 0) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\phi^M_m + 2e^{-\beta JM/2}\right]\\
-	Z^\prime(h \to 0) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\left(-\beta (m+1/2) \cosh \beta\phi^M_m + \beta\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\sinh \beta\phi^M_m\right)\right]\\
-	Z^{\prime\prime}(h \to 0) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2 e^{\beta J/4}\left(\beta^2 (m+1/2)^2 \cosh \beta\phi^M_m - 2\beta^2 (m+1/2)\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\sinh \beta\phi^M_m\right.\right.\\
+	     Z(h \to 0) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta \frac{J}{4}}\cosh \beta\phi^M_m + 2e^{-\beta JM/2}\right]\\
+	Z^\prime(h \to 0) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta \frac{J}{4}}\left(-\beta (m+\frac{1}{2}) \cosh \beta\phi^M_m + \beta\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\sinh \beta\phi^M_m\right)\right]\\
+	Z^{\prime\prime}(h \to 0) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2 e^{\beta \frac{J}{4}}\left(\beta^2 (m+\frac{1}{2})^2 \cosh \beta\phi^M_m - 2\beta^2 (m+\frac{1}{2})\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\sinh \beta\phi^M_m\right.\right.\\
 			    &\quad\quad\quad\quad\quad\quad\left.\left. + \beta\frac{\:\mathrm{d^2}\phi^M_m}{\:\mathrm{d}h^2}\sinh \beta\phi^M_m + \beta^2\left(\frac{\:\mathrm{d}\phi^M_m}{\:\mathrm{d}h}\right)^2 \cosh \beta\phi^M_m\right) + 2\beta^2 M^2 e^{-\beta JM/2}\right]\\
 \end{align}
-The \(\phi\) and the derivatives are actually at \(h\to 0\). We are interested in the low temperature behaviour. In the limit of \(h \to 0\), \(\phi_m^M \to \phi^M = J(M+1/2)/2\). We can also look at the behaviour of the derivative:
+The \(\phi\) and the derivatives are actually at \(h\to 0\). We are interested in the low temperature behaviour. In the limit of \(h \to 0\), \(\phi_m^M \to \phi^M = J(M+\frac{1}{2})/2\). We can also look at the behaviour of the derivative:
 \begin{align}
-	\lim_{h \to 0}\frac{\:\mathrm{d}\phi_m^M}{\:\mathrm{d}h} &= -\frac{J(m+1/2)}{4\phi^M}\\
-	\lim_{h \to 0}\frac{\:\mathrm{d}^2\phi_m^M}{\:\mathrm{d}h^2} &= \frac{1}{4\phi^M} - \frac{J^2(m + 1/2)^2}{16\left(\phi^M\right)^3}\\
+	\lim_{h \to 0}\frac{\:\mathrm{d}\phi_m^M}{\:\mathrm{d}h} &= -\frac{J(m+\frac{1}{2})}{4\phi^M}\\
+	\lim_{h \to 0}\frac{\:\mathrm{d}^2\phi_m^M}{\:\mathrm{d}h^2} &= \frac{1}{4\phi^M} - \frac{J^2(m + \frac{1}{2})^2}{16\left(\phi^M\right)^3}\\
 \end{align}
 Substituting these gives
 \begin{align}
-	     Z(h \to 0) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\phi^M + 2e^{-\beta JM/2}\right] = \sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[4Me^{\beta J/4}\cosh \beta\phi^M + 2e^{-\beta JM/2}\right]\\
-	Z^\prime(h \to 0) &=-\beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M2e^{\beta J/4} \left(\cosh \beta\phi^M + \frac{J}{4\phi^M}\sinh \beta\phi^M\right)\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\left( m + 1/2 \right) = 0\\
-Z^{\prime\prime}(h \to 0) &=\beta^2\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[2 e^{\beta J/4}\left\{\left(1 + \frac{J^2}{16{\phi^M}^2}\right) \Sigma_M \cosh \beta\phi^M + \left(\frac{2M}{4\beta\phi^M} + \frac{J}{2\phi^M}\left(1 - \frac{J}{16\beta{\phi^M}^2}\right)\Sigma_M \right) \sinh \beta\phi^M\right\} \right.\\
+	     Z(h \to 0) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta \frac{J}{4}}\cosh \beta\phi^M + 2e^{-\beta JM/2}\right] = \sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[4Me^{\beta \frac{J}{4}}\cosh \beta\phi^M + 2e^{-\beta JM/2}\right]\\
+	Z^\prime(h \to 0) &=-\beta\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M2e^{\beta \frac{J}{4}} \left(\cosh \beta\phi^M + \frac{J}{4\phi^M}\sinh \beta\phi^M\right)\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\left( m + \frac{1}{2} \right) = 0\\
+Z^{\prime\prime}(h \to 0) &=\beta^2\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[2 e^{\beta \frac{J}{4}}\left\{\left(1 + \frac{J^2}{16{\phi^M}^2}\right) \Sigma_M \cosh \beta\phi^M + \left(\frac{2M}{4\beta\phi^M} + \frac{J}{2\phi^M}\left(1 - \frac{J}{16\beta{\phi^M}^2}\right)\Sigma_M \right) \sinh \beta\phi^M\right\} \right.\\
 			  &\quad\quad\quad\quad\quad\quad\quad\left.+ 2 M^2 e^{-\beta JM/2}\right]\\
 \end{align}
-where \(\Sigma_M = \sum_m (m+1/2)^2\).
+where \(\Sigma_M = \sum_m (m+\frac{1}{2})^2\).
 
 If we take the limit of \(\beta \to \infty\), the hyperbolic functions can be replaced by exponentials. The terms with \(1/\beta\) in \(Z^{\prime\prime}\) drop out. All negative exponentials will also drop out. Moreover, out of all the positve exponentials, only the largest exponent will survive. The largest value \(\Phi\) of \(\phi^M\) occurs at \(M = M_\text{max} = K/2\). This maximum value is \(\Phi = J(K+1)/4\). We therefore have
 \begin{align}
-	     Z(h \to 0) &= r^K_{K/2} 4Me^{\beta J/4}\frac{1}{2}e^{\beta\Phi}\\
-	     Z^{\prime\prime}(h \to 0) &=\beta^2 r^K_{K/2}2 e^{\beta J/4}\frac{1}{2}e^{\beta \Phi}\left(1 + \frac{J}{4\Phi}\right)^2\Sigma_\text{max}\\
+	     Z(h \to 0) &= r^K_{K/2} 4Me^{\beta \frac{J}{4}}\frac{1}{2}e^{\beta\Phi}\\
+	     Z^{\prime\prime}(h \to 0) &=\beta^2 r^K_{K/2}2 e^{\beta \frac{J}{4}}\frac{1}{2}e^{\beta \Phi}\left(1 + \frac{J}{4\Phi}\right)^2\Sigma_\text{max}\\
 \end{align}
 The susceptibility at low temperatures becomes
 \begin{align}
@@ -893,7 +931,7 @@ The first derivative of the impurity free energy is therefore discontinuous as \
 	\caption{Non-analytic free energy for \(K>1\) and analytic free energy for \(K=1\).}
 \end{figure}
 
-The non-analyticity for \(K>1\) occurs because the magnetic field is able to flip the ground state. For example, for \(K=2\), the states in question are \(\ket{M=1, m=-1,0}\). For \(h>0\), the ground state occurs in the subspace \(\ket{S_d^z=1/2, m=-1},\ket{S_d^z=-1/2,m=0}\). If we now flip the magnetic field, the ground state subspace flips to \(\ket{S_d^z=1/2, m=0},\ket{S_d^z=-1/2,m=1}\). Instead, if we look at the case of \(K=1\), the ground state is in the subspace of \(\ket{S_d^z=1/2,m=-1/2},\ket{S_d^z=-1/2, m=1/2}\), and since there is only this one subspace, the ground state is independent of the field. From this discussion, it is clear that the non-analyticity appears because there are multiple values of \(m \in [-M, M-1]\) in the ground state manifold, which means that it is the ground state degeneracy that causes the non-analyticity.
+The non-analyticity for \(K>1\) occurs because the magnetic field is able to flip the ground state. For example, for \(K=2\), the states in question are \(\ket{M=1, m=-1,0}\). For \(h>0\), the ground state occurs in the subspace \(\ket{S_d^z=\frac{1}{2}, m=-1},\ket{S_d^z=-\frac{1}{2},m=0}\). If we now flip the magnetic field, the ground state subspace flips to \(\ket{S_d^z=\frac{1}{2}, m=0},\ket{S_d^z=-\frac{1}{2},m=1}\). Instead, if we look at the case of \(K=1\), the ground state is in the subspace of \(\ket{S_d^z=\frac{1}{2},m=-\frac{1}{2}},\ket{S_d^z=-\frac{1}{2}, m=\frac{1}{2}}\), and since there is only this one subspace, the ground state is independent of the field. From this discussion, it is clear that the non-analyticity appears because there are multiple values of \(m \in [-M, M-1]\) in the ground state manifold, which means that it is the ground state degeneracy that causes the non-analyticity.
 
 \section{Thermal entropy at \(T=0\)}
 Given the Helmholtz free energy \(F = -k_B T \ln Z = - \frac{1}{\beta} \ln\sum_n e^{-\beta E_n}\), the thermal entropy at temperature \(T\) is given by
@@ -935,7 +973,7 @@ The single-channel SU(2) Kondo model consists of a spin-half impurity interactin
 \label{1KondoURG}
 	\mathcal{H} = \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{kl} J^z S_d^z s^z_{kl} + \frac{1}{2}\sum_{kl} J^t \left(S_d^+ s^-_{kl}  + S_d^- s^+_{kl}\right)
 \end{align}
-Here, \(s^z_{kl} = \frac{1}{2}\left(c^\dagger_{k\uparrow}c_{l \uparrow} - c^\dagger_{k\downarrow}c_{l \downarrow}\right)\), \(s^-_{kl} = c^\dagger_{k \downarrow}c_{l \uparrow}\) and \(s^+_{kl} = {s^-_{lk}}^\dagger\). Also, \(\tau = \hat n - \frac{1}{2}\). The indices \(k,l\) sum over the momentum states. \(\vec S_d\) is the impurity spin operator with \(S_d^z = \pm 1/2\).
+Here, \(s^z_{kl} = \frac{1}{2}\left(c^\dagger_{k\uparrow}c_{l \uparrow} - c^\dagger_{k\downarrow}c_{l \downarrow}\right)\), \(s^-_{kl} = c^\dagger_{k \downarrow}c_{l \uparrow}\) and \(s^+_{kl} = {s^-_{lk}}^\dagger\). Also, \(\tau = \hat n - \frac{1}{2}\). The indices \(k,l\) sum over the momentum states. \(\vec S_d\) is the impurity spin operator with \(S_d^z = \pm \frac{1}{2}\).
 
 The scheme is that we will disentangle an electron \(q\beta\) from the Hamiltonian, \(q\) being the momentum and \(\beta\) the spin. The diagonal part of the Hamiltonian under this scheme is
 \begin{align}
@@ -955,23 +993,23 @@ The particle sector involves integrating out those states which are occupied (\(
 	H^I_0 \frac{1}{\omega - H^D_{q\beta}} H^I_1
 \end{align}
 
-Both \(H^I_0\) and \(H^I_1\) have all three operators \(S_d^z, S_d^\pm\). We call \(S_d^z\) the spin-keep term and the others spin-flip terms. The entire product will thus have \(3\times 3 = 9\) terms. Not all terms however renormalize the Hamiltonian. Those terms that have identical operators on both sides can be ignored because \({S_d^z}^2 = \text{constant}\) and \({S^\pm}^2 = 0\). The other six terms will renormalize the Hamiltonian. This brings in one more simplification: all the six terms that \textit{will} renormalize the Hamiltonian have a spin flip operator on at least one side of the Greens function. This means that in the denominator of the Greens function, \(S_d^z\) and \(s^z_{qq}\) have to be anti-parallel in order to produce a non-zero result for that term. This means we can identically replace \(S_d^z s^z_{qq} = -\frac{1}{4}\). Also, in the particle sector, the Greens function always has \(c_{q\beta}\) in front of it, so \(\epsilon_q \tau_{q\beta} = D/2\). Substituting all this, we get
+Both \(H^I_0\) and \(H^I_1\) have all three operators \(S_d^z, S_d^\pm\). The entire product will thus have \(3\times 3 = 9\) terms. Not all terms however renormalize the Hamiltonian. Those terms that have identical operators on both sides can be ignored because \({S_d^z}^2 = \text{constant}\) and \({S^\pm}^2 = 0\). The other six terms will renormalize the Hamiltonian. This brings in one more simplification: all the six terms that \textit{will} renormalize the Hamiltonian have a spin flip operator on at least one side of the Greens function. This means that in the denominator of the Greens function, \(S_d^z\) and \(s^z_{qq}\) have to be anti-parallel in order to produce a non-zero result for that term. This means we can identically replace \(S_d^z s^z_{qq} = -\frac{1}{4}\). Also, in the particle sector, the Greens function always has \(c_{q\beta}\) in front of it, so \(\epsilon_q \tau_{q\beta} = \frac{D}{2}\). Substituting all this, we get
 \begin{align}
-	\frac{1}{\omega - D/2 + J/4}\sum_{|k,k^\prime|<\Lambda,q}\left[\frac{1}{2}J^z J^t \left(S_d^z S_d^+ s^z_{qk^\prime}s^-_{kq} + S_d^z S_d^- s^z_{qk^\prime}s^+_{kq}\right) + \frac{1}{2}J^t J^z \left(S_d^+ S_d^z s^-_{qk^\prime}s^z_{kq} + S_d^- S_d^z s^+_{qk^\prime}s^z_{kq}\right)\right.\\
+	\frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{|k,k^\prime|<\Lambda,q}\left[\frac{1}{2}J^z J^t \left(S_d^z S_d^+ s^z_{qk^\prime}s^-_{kq} + S_d^z S_d^- s^z_{qk^\prime}s^+_{kq}\right) + \frac{1}{2}J^t J^z \left(S_d^+ S_d^z s^-_{qk^\prime}s^z_{kq} + S_d^- S_d^z s^+_{qk^\prime}s^z_{kq}\right)\right.\\
 +\left.\frac{1}{4}{J^t}^2 \left(S_d^- S_d^+ s^+_{qk^\prime}s^-_{kq} + S_d^+ S_d^- s^-_{qk^\prime}s^+_{kq}\right)\right]
 \end{align}
 We now simplify the products and keep only terms diagonal in \(q\). For example: \(s^z_{qk^\prime}s^+_{kq} = \frac{1}{2}\hat n_{q \downarrow}s^+_{kk^\prime}\) and \(s^z_{qk^\prime}s^-_{kq} = -\frac{1}{2}\hat n_{q \uparrow}s^-_{kk^\prime}\). The renormalization becomes
 \begin{align}
-	\frac{1}{\omega - D/2 + J/4}\sum_{|k,k^\prime|<\Lambda,q}\left[\frac{1}{4}J^z J^t \left(-\frac{1}{2}S_d^+ \hat n_{q}s^-_{kk^\prime} - \frac{1}{4}S_d^- \hat n_{q} s^z_{kk^\prime}\right) - \frac{1}{4}{J^t}^2 S_d^z\left(-\hat n_{q \uparrow}c^\dagger_{k \downarrow}c_{k^\prime \downarrow} + \hat n_{q \downarrow}c^\dagger_{k \uparrow}c_{k^\prime \uparrow}\right)\right]
+	\frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{|k,k^\prime|<\Lambda,q}\left[\frac{1}{4}J^z J^t \left(-\frac{1}{2}S_d^+ \hat n_{q}s^-_{kk^\prime} - \frac{1}{4}S_d^- \hat n_{q} s^z_{kk^\prime}\right) - \frac{1}{4}{J^t}^2 S_d^z\left(-\hat n_{q \uparrow}c^\dagger_{k \downarrow}c_{k^\prime \downarrow} + \hat n_{q \downarrow}c^\dagger_{k \uparrow}c_{k^\prime \uparrow}\right)\right]
 \end{align}
 We now replace \(\sum_q \hat n_{q\sigma} = n(D)\). The renormalization due to excitations coming from the particle sector is
 \begin{align}
-	\Delta H_1 = -\frac{1}{2}\frac{n(D)}{\omega - D/2 + J/4}\sum_{|k,k^\prime|<\Lambda}\left[J^z J^t \frac{1}{2}\left(S_d^+ s^-_{kk^\prime} + S_d^- s^z_{kk^\prime}\right) + {J^t}^2 S_d^z s^z_{kk^\prime}\right]
+	\Delta H_1 = -\frac{1}{2}\frac{n(D)}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{|k,k^\prime|<\Lambda}\left[J^z J^t \frac{1}{2}\left(S_d^+ s^-_{kk^\prime} + S_d^- s^z_{kk^\prime}\right) + {J^t}^2 S_d^z s^z_{kk^\prime}\right]
 \end{align}
 The renormalization in the couplings coming from the particle sector is therefore,
 \begin{align}
 	\label{kondo_part}
-	\Delta J^z = -\frac{1}{2}\frac{{J^t}^2n(D)}{\omega - D/2 + J/4}, && \Delta J^t = -\frac{1}{2}\frac{J^z J^tn(D)}{\omega - D/2 + J/4}
+	\Delta J^z = -\frac{1}{2}\frac{{J^t}^2n(D)}{\omega - \frac{D}{2} + \frac{J}{4}}, && \Delta J^t = -\frac{1}{2}\frac{J^z J^tn(D)}{\omega - \frac{D}{2} + \frac{J}{4}}
 \end{align}
 
 
@@ -980,28 +1018,28 @@ The hole sector involves integrating out those states which are vacant (\(\hat n
 \begin{align}
 	H^I_1 \frac{1}{\omega - H^D_{q\beta}} H^I_0
 \end{align}
-The same considerations as those in the particle sector apply here, and the denominator becomes \(\omega - D/2 + J/4\), while the numerator is \(H^I_1 H^I_0\). Since this is just the Hermitian conjugate of the particle sector form, we do not need to calculate this separately, because the renormalization here will be \(\Delta H_0 = \Delta H_1^\dagger = \Delta H_1\).
+The same considerations as those in the particle sector apply here, and the denominator becomes \(\omega - \frac{D}{2} + \frac{J}{4}\), while the numerator is \(H^I_1 H^I_0\). Since this is just the Hermitian conjugate of the particle sector form, we do not need to calculate this separately, because the renormalization here will be \(\Delta H_0 = \Delta H_1^\dagger = \Delta H_1\).
 
 \subsection{Scaling equations}
 Since the renormalization in the hole sector is equal to that in the particle sector, the total renormalization is simply twice that in the particle sector (eqs.~\ref{kondo_part}):
 \begin{align}
-	\Delta J^z = -\frac{{J^t}^2n(D)}{\omega - D/2 + J/4}, && \Delta J^t = -\frac{J^z J^tn(D)}{\omega - D/2 + J/4}
+	\Delta J^z = -\frac{{J^t}^2n(D)}{\omega - \frac{D}{2} + \frac{J}{4}}, && \Delta J^t = -\frac{J^z J^tn(D)}{\omega - \frac{D}{2} + \frac{J}{4}}
 \end{align}
 If we set \(J_z = J_t = J\), we have an SU(2)-symmetric Kondo model \(J \vec{S_d}\cdot\vec{s}\).
 \begin{align}
 	\label{kondosym}
-	\Delta J = - \frac{J^2 n(D)}{\omega - D/2 + \frac{1}{4}J}
+	\Delta J = - \frac{J^2 n(D)}{\omega - \frac{D}{2} + \frac{1}{4}J}
 \end{align}
-To recover the one-loop form, we can replace \(\omega\) with the bare value \(-D/2\) and ignore the \(J\) in the denominator (small \(J\)).
+To recover the one-loop form, we can replace \(\omega\) with the bare value \(-\frac{D}{2}\) and ignore the \(J\) in the denominator (small \(J\)).
 \begin{align}
 	\Delta J \approx \frac{J^2 n(D)}{D}
 \end{align}
 \begin{align}
-	\Delta J^{(2)} = -\frac{J^2 n(D)}{\omega - D/2 + J/4}
+	\Delta J^{(2)} = -\frac{J^2 n(D)}{\omega - \frac{D}{2} + \frac{J}{4}}
 \end{align}
-For \(\omega < D/2\), we get the flow towards the strong coupling fixed point. That is, there appears a stable fixed point at \(J^* = 4|\omega - D/2|\) for all bare \(J > 0\). We also get a decay towards the local moment fixed point \(J^* = 0\) for \(J < 0\). For \(\omega = -D/2\) and \(J \ll D\), we get the one-loop PMS form. 
+For \(\omega < \frac{D}{2}\), we get the flow towards the strong coupling fixed point. That is, there appears a stable fixed point at \(J^* = 4|\omega - \frac{D}{2}|\) for all bare \(J > 0\). We also get a decay towards the local moment fixed point \(J^* = 0\) for \(J < 0\). For \(\omega = -\frac{D}{2}\) and \(J \ll D\), we get the one-loop PMS form. 
 \begin{align}
-	\Delta J^{(2)} = \frac{J^2 n(D)}{D - J/4} \simeq \frac{J^2 n(D)}{D}
+	\Delta J^{(2)} = \frac{J^2 n(D)}{D - \frac{J}{4}} \simeq \frac{J^2 n(D)}{D}
 \end{align}
 
 \section{URG equations for the single-channel Kondo model with spin-\(S\) impurity}
@@ -1022,42 +1060,42 @@ The various terms that renormalize the Hamiltonian can be described in terms of 
 We will now calculate each of these terms for the particle sector. The particle sector consists of those processes that start from an occupied state \(\left(\hat n_{q\beta} = 1\right)\).
 \paragraph{\(z|z\)}
 \begin{equation}\begin{aligned}
-	\sum_{kk^\prime,m,\sigma} c^\dagger_{q \sigma} c_{k^\prime \sigma} \ket{m}\bra{m}\frac{{J^\sigma_m}^2}{\omega - D/2 + \frac{J}{2}\sigma S_d^z}\ket{m}\bra{m} c^\dagger_{k \sigma}c_{q \sigma} = -\sum_{kk^\prime,m,\sigma}n_{q \sigma}\frac{{J^\sigma_m}^2 c^\dagger_{k \sigma}c_{k^\prime\sigma} \ket{m}\bra{m}}{\omega_{m, \sigma} - D/2 + \frac{J}{2}\sigma m}
+	\sum_{kk^\prime,m,\sigma} c^\dagger_{q \sigma} c_{k^\prime \sigma} \ket{m}\bra{m}\frac{{J^\sigma_m}^2}{\omega - \frac{D}{2} + \frac{J}{2}\sigma S_d^z}\ket{m}\bra{m} c^\dagger_{k \sigma}c_{q \sigma} = -\sum_{kk^\prime,m,\sigma}n_{q \sigma}\frac{{J^\sigma_m}^2 c^\dagger_{k \sigma}c_{k^\prime\sigma} \ket{m}\bra{m}}{\omega_{m, \sigma} - \frac{D}{2} + \frac{J}{2}\sigma m}
 \end{aligned}\end{equation}
 
 \paragraph{\(+|-\)}
 \begin{equation}\begin{aligned}
-	\sum_{kk^\prime,m} c^\dagger_{q \uparrow} c_{k^\prime \downarrow} \ket{m}\bra{m+1}\frac{{J^t_m}^2}{\omega - D/2 + \frac{J}{2}S_d^z}\ket{m+1}\bra{m} c^\dagger_{k \downarrow}c_{q \uparrow} = -n_{q \uparrow}\sum_{kk^\prime,m}\frac{{J^t_m}^2 c^\dagger_{k \downarrow}c_{k^\prime\downarrow} \ket{m}\bra{m}}{\omega_{m+1, \uparrow} - D/2 + \frac{J}{2}\left( m+1 \right) }
+	\sum_{kk^\prime,m} c^\dagger_{q \uparrow} c_{k^\prime \downarrow} \ket{m}\bra{m+1}\frac{{J^t_m}^2}{\omega - \frac{D}{2} + \frac{J}{2}S_d^z}\ket{m+1}\bra{m} c^\dagger_{k \downarrow}c_{q \uparrow} = -n_{q \uparrow}\sum_{kk^\prime,m}\frac{{J^t_m}^2 c^\dagger_{k \downarrow}c_{k^\prime\downarrow} \ket{m}\bra{m}}{\omega_{m+1, \uparrow} - \frac{D}{2} + \frac{J}{2}\left( m+1 \right) }
 \end{aligned}\end{equation}
 
 \paragraph{\(-|+\)}
 \begin{equation}\begin{aligned}
-	\sum_{kk^\prime,m} c^\dagger_{q \downarrow} c_{k^\prime \uparrow} \ket{m+1}\bra{m}\frac{{J^t_m}^2}{\omega - D/2 - \frac{J}{2}S_d^z}\ket{m}\bra{m+1} c^\dagger_{k \uparrow}c_{q \downarrow} = -n_{q \downarrow}\sum_{kk^\prime,m}\frac{{J^t_m}^2 c^\dagger_{k \uparrow}c_{k^\prime\uparrow} \ket{m+1}\bra{m+1}}{\omega_{m, \downarrow} - D/2 - \frac{J}{2}m}
+	\sum_{kk^\prime,m} c^\dagger_{q \downarrow} c_{k^\prime \uparrow} \ket{m+1}\bra{m}\frac{{J^t_m}^2}{\omega - \frac{D}{2} - \frac{J}{2}S_d^z}\ket{m}\bra{m+1} c^\dagger_{k \uparrow}c_{q \downarrow} = -n_{q \downarrow}\sum_{kk^\prime,m}\frac{{J^t_m}^2 c^\dagger_{k \uparrow}c_{k^\prime\uparrow} \ket{m+1}\bra{m+1}}{\omega_{m, \downarrow} - \frac{D}{2} - \frac{J}{2}m}
 \end{aligned}\end{equation}
 
 \paragraph{\(z|+\)}
 \begin{equation}\begin{aligned}
-	\sum_{kk^\prime,m} c^\dagger_{q \downarrow} c_{k^\prime \downarrow} \ket{m}\bra{m}\frac{J^\downarrow_m{J^t_m}}{\omega - D/2 - \frac{J}{2}S_d^z}\ket{m}\bra{m+1} c^\dagger_{k \uparrow}c_{q \downarrow} = -n_{q \downarrow}\sum_{kk^\prime,m}\frac{J^\downarrow_m J^t_m c^\dagger_{k \uparrow}c_{k^\prime\downarrow} \ket{m}\bra{m+1}}{\omega_{m, \downarrow} - D/2 - \frac{J}{2}m}
+	\sum_{kk^\prime,m} c^\dagger_{q \downarrow} c_{k^\prime \downarrow} \ket{m}\bra{m}\frac{J^\downarrow_m{J^t_m}}{\omega - \frac{D}{2} - \frac{J}{2}S_d^z}\ket{m}\bra{m+1} c^\dagger_{k \uparrow}c_{q \downarrow} = -n_{q \downarrow}\sum_{kk^\prime,m}\frac{J^\downarrow_m J^t_m c^\dagger_{k \uparrow}c_{k^\prime\downarrow} \ket{m}\bra{m+1}}{\omega_{m, \downarrow} - \frac{D}{2} - \frac{J}{2}m}
 \end{aligned}\end{equation}
 
 \paragraph{\(+|z\)}
 \begin{equation}\begin{aligned}
-	\sum_{kk^\prime,m} c^\dagger_{q \uparrow}c_{k^\prime \downarrow} \ket{m}\bra{m+1}\frac{{J^t_m}J^\uparrow_{m+1}}{\omega - D/2 + \frac{J}{2}S_d^z} \ket{m+1}\bra{m+1} c^\dagger_{k \uparrow} c_{q \uparrow} = -n_{q \uparrow}\sum_{kk^\prime,m}\frac{J^\uparrow_{m+1} J^t_m c^\dagger_{k \uparrow}c_{k^\prime\downarrow} \ket{m}\bra{m+1}}{\omega_{m+1, \downarrow} - D/2 + \frac{J}{2}\left(m+1\right) }
+	\sum_{kk^\prime,m} c^\dagger_{q \uparrow}c_{k^\prime \downarrow} \ket{m}\bra{m+1}\frac{{J^t_m}J^\uparrow_{m+1}}{\omega - \frac{D}{2} + \frac{J}{2}S_d^z} \ket{m+1}\bra{m+1} c^\dagger_{k \uparrow} c_{q \uparrow} = -n_{q \uparrow}\sum_{kk^\prime,m}\frac{J^\uparrow_{m+1} J^t_m c^\dagger_{k \uparrow}c_{k^\prime\downarrow} \ket{m}\bra{m+1}}{\omega_{m+1, \downarrow} - \frac{D}{2} + \frac{J}{2}\left(m+1\right) }
 \end{aligned}\end{equation}
 
 \paragraph{\(z|-\)}
 \begin{equation}\begin{aligned}
-	\sum_{kk^\prime,m} c^\dagger_{q \uparrow} c_{k^\prime \uparrow} \ket{m+1}\bra{m+1}\frac{J^\uparrow_{m+1}{J^t_m}}{\omega - D/2 + \frac{J}{2}S_d^z}\ket{m+1}\bra{m} c^\dagger_{k \downarrow}c_{q \uparrow} = -n_{q \uparrow}\sum_{kk^\prime,m}\frac{J^\uparrow_{m+1} J^t_m c^\dagger_{k \downarrow}c_{k^\prime\uparrow} \ket{m+1}\bra{m}}{\omega_{m+1, \uparrow} - D/2 + \frac{J}{2}(m+1)}
+	\sum_{kk^\prime,m} c^\dagger_{q \uparrow} c_{k^\prime \uparrow} \ket{m+1}\bra{m+1}\frac{J^\uparrow_{m+1}{J^t_m}}{\omega - \frac{D}{2} + \frac{J}{2}S_d^z}\ket{m+1}\bra{m} c^\dagger_{k \downarrow}c_{q \uparrow} = -n_{q \uparrow}\sum_{kk^\prime,m}\frac{J^\uparrow_{m+1} J^t_m c^\dagger_{k \downarrow}c_{k^\prime\uparrow} \ket{m+1}\bra{m}}{\omega_{m+1, \uparrow} - \frac{D}{2} + \frac{J}{2}(m+1)}
 \end{aligned}\end{equation}
 
 \paragraph{\(-|z\)}
 \begin{equation}\begin{aligned}
-	\sum_{kk^\prime,m} c^\dagger_{q \downarrow} c_{k^\prime \uparrow} \ket{m+1}\bra{m}\frac{J^\downarrow_{m}{J^t_m}}{\omega - D/2 - \frac{J}{2}S_d^z}\ket{m}\bra{m} c^\dagger_{k \downarrow}c_{q \downarrow} = -n_{q \downarrow}\sum_{kk^\prime,m}\frac{J^\downarrow_{m} J^t_m c^\dagger_{k \downarrow}c_{k^\prime\uparrow} \ket{m+1}\bra{m}}{\omega_{m, \downarrow} - D/2 - \frac{J}{2}(m)}
+	\sum_{kk^\prime,m} c^\dagger_{q \downarrow} c_{k^\prime \uparrow} \ket{m+1}\bra{m}\frac{J^\downarrow_{m}{J^t_m}}{\omega - \frac{D}{2} - \frac{J}{2}S_d^z}\ket{m}\bra{m} c^\dagger_{k \downarrow}c_{q \downarrow} = -n_{q \downarrow}\sum_{kk^\prime,m}\frac{J^\downarrow_{m} J^t_m c^\dagger_{k \downarrow}c_{k^\prime\uparrow} \ket{m+1}\bra{m}}{\omega_{m, \downarrow} - \frac{D}{2} - \frac{J}{2}(m)}
 \end{aligned}\end{equation}
 To compare with the spin-\(\frac{1}{2}\) RG equations, we will transform the general spin-\(S\) \(\omega\) to the spin-\(\frac{1}{2}\) \( \omega\), using \(\omega_{m,\sigma} \to \omega - \frac{J}{2}\left(m\sigma - \frac{1}{2}\right)\).
 The first four terms renormalize \(J^\sigma_m\):
 \begin{equation}\begin{aligned}
-	\Delta J^\sigma_{m} = -\frac{\left( J^\sigma_m \right) ^2 + \left( J^t_{m-\frac{1+\sigma}{2}} \right) ^2}{\omega - D/2 + J/4}
+	\Delta J^\sigma_{m} = -\frac{\left( J^\sigma_m \right) ^2 + \left( J^t_{m-\frac{1+\sigma}{2}} \right) ^2}{\omega - \frac{D}{2} + \frac{J}{4}}
 \end{aligned}\end{equation}
 Here, we have defined \(J^t_m = 0\) for \( |m| > S\). Two relations can be obtained from this RG equation, the RG equations for the sum and difference of the couplings. These sum and difference are defined by rewriting the Ising part of the Hamiltonian in the following fashion:
 \begin{equation}\begin{aligned}
@@ -1066,7 +1104,7 @@ Here, we have defined \(J^t_m = 0\) for \( |m| > S\). Two relations can be obtai
 where \(2J^\pm_m = J^\uparrow_m \pm J^\downarrow_m\).
 The RG equation for the sum of the couplings is
 \begin{equation}\begin{aligned}
-	\Delta J^+_m = -\frac{1}{2}\frac{\sum_\sigma \left( J^\sigma_m \right) ^2 + \sum_\sigma \left( J^t_{m-\frac{1+\sigma}{2}} \right) ^2}{\omega - D/2 + J/4} = -\frac{J^2}{4}\frac{S(S+1)}{\omega - D/2 + J/4}
+	\Delta J^+_m = -\frac{1}{2}\frac{\sum_\sigma \left( J^\sigma_m \right) ^2 + \sum_\sigma \left( J^t_{m-\frac{1+\sigma}{2}} \right) ^2}{\omega - \frac{D}{2} + \frac{J}{4}} = -\frac{J^2}{4}\frac{S(S+1)}{\omega - \frac{D}{2} + \frac{J}{4}}
 \end{aligned}\end{equation}
 This is an \(m-\)independent piece, so it can be summed over to produce an impurity-independent potential scattering term:
 \begin{equation}\begin{aligned}
@@ -1076,16 +1114,16 @@ Since this term does not have any Kondo physics, we drop this piece and say that
 
 The second is the RG equation for the difference of the couplings:
 \begin{equation}\begin{aligned}
-	\Delta J^-_m = -\frac{1}{2}\frac{\left( J^t_{m-1} \right) ^2 - \left(J^t_{m}\right) ^2}{\omega - D/2 + J/4} = -\frac{1}{4}\frac{m J^2}{\omega - D/2 + J/4}
+	\Delta J^-_m = -\frac{1}{2}\frac{\left( J^t_{m-1} \right) ^2 - \left(J^t_{m}\right) ^2}{\omega - \frac{D}{2} + \frac{J}{4}} = -\frac{1}{4}\frac{m J^2}{\omega - \frac{D}{2} + \frac{J}{4}}
 \end{aligned}\end{equation}
 The usual \(J^z\) Kondo coupling is defined as \(J^z = 2J^-_m/m\). Substituting this gives 
 \begin{equation}\begin{aligned}
-	\Delta J^z = -\frac{1}{2}\frac{J^2}{\omega - D/2 + J/4}
+	\Delta J^z = -\frac{1}{2}\frac{J^2}{\omega - \frac{D}{2} + \frac{J}{4}}
 \end{aligned}\end{equation}
 
 The last four terms renormalize \(J^t_m\):
 \begin{equation}\begin{aligned}
-	\Delta J^t_m = - \frac{J^t_m \left( J^\downarrow_m + J^\uparrow_{m+1} \right) }{\omega - D/2 + J/4} = -\frac{1}{2}\frac{J^t_m J}{\omega - D/2 + J/4} \implies J^t = -\frac{1}{2}\frac{J^2}{\omega - D/2 + J/4}
+	\Delta J^t_m = - \frac{J^t_m \left( J^\downarrow_m + J^\uparrow_{m+1} \right) }{\omega - \frac{D}{2} + \frac{J}{4}} = -\frac{1}{2}\frac{J^t_m J}{\omega - \frac{D}{2} + \frac{J}{4}} \implies J^t = -\frac{1}{2}\frac{J^2}{\omega - \frac{D}{2} + \frac{J}{4}}
 \end{aligned}\end{equation}
 \(J^t\) is the transverse coupling. Since we started from an isotropic model \(\left( J^z = J^t= J \right) \), we obtain \(\Delta J^z = \Delta J^t\).
 
