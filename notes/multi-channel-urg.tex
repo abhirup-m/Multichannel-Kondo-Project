@@ -1,4 +1,4 @@
-\documentclass[12pt]{revtex4-2}
+\documentclass{revtex4-2}
 \usepackage{braket,amsmath,amssymb,graphicx,float,paralist,color}
 \usepackage[hidelinks]{hyperref}
 \allowdisplaybreaks
@@ -395,6 +395,72 @@ In the opposite regime \(j_- > 0, j_+ < 0\), \(\Delta j_+\) is negative. It has 
 	\caption{Flow of the coupling \(J_+\) when \(j_+ < 0\) for two values of \(K\)}
 	\label{irrel_Jplus}
 \end{figure}
+
+\section{Derivation of URG equations for the multi-channel spin-\(S\) impurity Kondo model}
+The leading order renormalization is the same as the single-channel model, and is shown in the appendix. Following that calculation, the Hamiltonian we will work with is 
+\begin{equation}\begin{aligned}
+		    H = \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{m=-S}^S \sum_{kl,\atop{\sigma=\uparrow,\downarrow}} J^\sigma_m \ket{m}\bra{m} c^\dagger_{k \sigma}c_{l \sigma} + \sum_{kl} \sum_{m=-S}^{S-1} J^t_{m} \left(\ket{m+1}\bra{m} s^-_{kl}  + \text{h.c.}\right)
+\end{aligned}\end{equation}
+where \(\left\{\ket{m}\right\} \) are the eigenstates of \(S_d^z\), \(J^\sigma_m = \frac{1}{2} \sigma m J\) in the UV Hamiltonian, and \(J^t_{m} = J\frac{1}{2}\sqrt{S(S+1) - m(m+1)}\) is the coupling that connects \(\ket{m}\) and \(\ket{m+1}\). 
+
+The next order renormalization is of the form
+\begin{equation}\begin{aligned}
+	\Delta H^{(3)}_j = \underbrace{c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c}_\text{first term (particle sector)} ~+~ \underbrace{T^\dagger c \frac{1}{\omega - H_D} H_X \frac{1}{\omega - H_D} c^\dagger T}_\text{second term (hole sector)}
+\end{aligned}\end{equation}
+
+Before we start, we will make another simplification. A general term of \(\Delta H\) will be of the form
+\begin{equation}\begin{aligned}
+	\sum_{q,k,l_1} c^\dagger_{q\beta, l_1}c_{k \alpha, l_1}\ket{m_1}\bra{m_2} \frac{1}{\omega - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{\beta J}{4}S_d^z} \ket{m_2} c^\dagger_{k_1 \sigma_1, l_2}c_{k_2 \sigma_2,l_2} \bra{m_3}\frac{1}{\omega - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{\beta J}{4}S_d^z}\ket{m_3}\bra{m_4}c^\dagger_{k\alpha, l_1}c_{q\beta, l_1}
+\end{aligned}\end{equation}
+We have not bothered to write all the summations and the couplings correctly, because we will only simplify the denominator here. Evaluating the inner products gives
+\begin{equation}\begin{aligned}
+	\ket{m_1}\bra{m_4}\sum_k c^\dagger_{q\beta}c_{k \alpha} \frac{1}{\omega_{m_2,\beta} - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{\beta J m_2}{4}}  c^\dagger_{k_1 \sigma_1, l_2}c_{k_2 \sigma_2,l_2} \frac{1}{\omega_{m_3,\beta} - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{\beta J m_3}{4}}c^\dagger_{k\alpha}c_{q\beta}
+\end{aligned}\end{equation}
+To compare with the spin-\(\frac{1}{2}\) RG equations, we will transform the general spin-\(S\) \(\omega\) to the spin-\(\frac{1}{2}\) \( \omega\), using \(\omega_{m,\sigma} \to \omega - \frac{J}{2}\left(m\sigma - \frac{1}{2}\right)\).
+\begin{equation}\begin{aligned}
+	\hat n_{q\beta}\ket{m_1}\bra{m_4}c^\dagger_{k_1 \sigma_1, l_2}c_{k_2 \sigma_2,l_2}\sum_k \left( 1 - \hat n_{k\alpha} \right) \left(\frac{1}{\omega - \frac{D}{2} - \frac{\epsilon_k}{2} + \frac{J}{4}}\right)^2  
+\end{aligned}\end{equation}
+We can set \(\sum_q \hat n_{q\beta} = n(D)\). Performing the sums over \(k\) and \(l_1\) in the same fashion as previously gives
+\begin{equation}\begin{aligned}
+	-\frac{1}{2}\ket{m_1}\bra{m_4}c^\dagger_{k_1 \sigma_1, l_2}c_{k_2 \sigma_2,l_2} \frac{\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}
+\end{aligned}\end{equation}
+Reinstating the complete summation and the couplings gives
+\begin{equation}\begin{aligned}
+	-\frac{1}{2}\frac{\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{m_1,m_4}\sum_{k_1,k_2,l_2,\sigma_1\sigma_2}\lambda_{1}\lambda_{2}\lambda_{3}\ket{m_1}\bra{m_4}c^\dagger_{k_1 \sigma_1, l_2}c_{k_2 \sigma_2,l_2}
+\end{aligned}\end{equation}
+There is no sum over \(m_2\) and \(m_3\) because they are constrained by \(m_1\) and \(m_4\) respectively. \(\lambda_i\) represent the couplings present at the three interaction vertices.
+
+The various terms in each sector can be represented as \(a|b|c\), where \(a,b,c \in \left\{z,+,-\right\} \) and represent the operator for the conduction electrons in the three stages. We will only calculate the terms in the particle sector, the ones in hole sector will be equal to these because of particle-hole symmetry.
+\paragraph{\(z|z|z\)}
+\begin{equation}\begin{aligned}
+	- \frac{1}{2}\frac{\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_\beta \sum_{m}\sum_{k_1,k_2,l_2,\sigma} \left(J^\beta_m\right)^2 J^\sigma_m \ket{m}\bra{m}c^\dagger_{k_1 \sigma, l_2}c_{k_2 \sigma,l_2}
+\end{aligned}\end{equation}
+
+\paragraph{\(-|z|+\)}
+\begin{equation}\begin{aligned}
+	-\frac{1}{2}\frac{\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{m}\sum_{k_1,k_2,l_2,\sigma} \left( J^t_m \right) ^2 J^\sigma_m \ket{m+1}\bra{m+1}c^\dagger_{k_1 \sigma, l_2}c_{k_2 \sigma,l_2}
+\end{aligned}\end{equation}
+\paragraph{\(+|z|-\)}
+\begin{equation}\begin{aligned}
+	-\frac{1}{2}\frac{\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{m}\sum_{k_1,k_2,l_2,\sigma} \left( J^t_m \right) ^2 J^\sigma_{m+1} \ket{m}\bra{m}c^\dagger_{k_1 \sigma, l_2}c_{k_2 \sigma,l_2}
+\end{aligned}\end{equation}
+\paragraph{\(+|+|-\)}
+\begin{equation}\begin{aligned}
+	-\frac{1}{2}\frac{\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{m}\sum_{k_1,k_2,l_2} J^t_m \left( J^t_{m+1} \right)^2 \ket{m}\bra{m+1}c^\dagger_{k_1 \uparrow, l_2}c_{k_2 \downarrow,l_2}
+\end{aligned}\end{equation}
+\paragraph{\(+|-|-\)}
+\begin{equation}\begin{aligned}
+	-\frac{1}{2}\frac{\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{m}\sum_{k_1,k_2,l_2} J^t_m \left( J^t_{m+1} \right)^2 \ket{m+1}\bra{m}c^\dagger_{k_1 \downarrow, l_2}c_{k_2 \uparrow,l_2}
+\end{aligned}\end{equation}
+\paragraph{\(-|-|+\)}
+\begin{equation}\begin{aligned}
+	-\frac{1}{2}\frac{\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{m}\sum_{k_1,k_2,l_2} \left( J^t_{m} \right)^2 J^t_{m+1}\ket{m+2}\bra{m+1}c^\dagger_{k_1 \downarrow, l_2}c_{k_2 \uparrow,l_2}
+\end{aligned}\end{equation}
+\paragraph{\(-|+|+\)}
+\begin{equation}\begin{aligned}
+	-\frac{1}{2}\frac{\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{m}\sum_{k_1,k_2,l_2} \left( J^t_{m} \right)^2 J^t_{m+1}\ket{m+1}\bra{m+2}c^\dagger_{k_1 \uparrow, l_2}c_{k_2 \downarrow,l_2}
+\end{aligned}\end{equation}
+
 
 \section{MFL and orthogonality catastrophe in low-energy excitations of 2-CKM}
 At the stable fixed point \(J ^* = J_1^* = \frac{8}{K \rho}\), the ground states of the Hamiltonian are those of the star graph model, with a degeneracy of \(K\). We now specialise to the two-channel Kondo model. To find the low-energy excitations on top of this ground state manifold, one can insert a tight-binding nearest-neighbour hopping between the zeroth site (the one that holds the impurity) and the first site (site that's nearest to the zeroth site) as a perturbation and calculate the diagonal and off-diagonal terms generated by this perturbation. It is found that when we trace out the impurity, we are left only with real space off-diagonal terms:
@@ -950,12 +1016,6 @@ It is easier to see the RG flow of the couplings if we write the Hamiltonian in 
 \end{aligned}\end{equation}
 where \(J^\sigma_m = \frac{1}{2} \sigma m J\) in the UV Hamiltonian, and \(J^t_{m} = J\frac{1}{2}\sqrt{S(S+1) - m(m+1)}\) is the coupling that connects \(\ket{m}\) and \(\ket{m+1}\).
 
-% We will use the relations:
-% \begin{equation}\begin{aligned}
-% 	S_d^\pm S_d^z &= S_d^z S_d^\pm \mp S_d^\pm\\
-% 	S_d^z S_d^\pm &= S_d^\pm S_d^z \pm S_d^\pm\\
-% 	S_d^\pm S_d^\mp &= \vec S_d^2 - {S_d^z}^2 \pm S_d^z
-% \end{aligned}\end{equation}
 The various terms that renormalize the Hamiltonian can be described in terms of the bath spin operators that come into them. For example, the term that has \(s^z\) on both sides of the intervening Greens function can be represented as \(z|z\). There are 7 such terms: \(z|z, \pm|\mp, z|\pm, \pm|z\). Each of these terms occur both in the particle and the hole sectors.
 
 \subsection{Particle sector}
@@ -992,8 +1052,9 @@ We will now calculate each of these terms for the particle sector. The particle 
 
 \paragraph{\(-|z\)}
 \begin{equation}\begin{aligned}
-	\sum_{kk^\prime,m} c^\dagger_{q \downarrow} c_{k^\prime \uparrow} \ket{m+1}\bra{m}\frac{J^\downarrow_{m}{J^t_m}}{\omega - D/2 - \frac{J}{2}S_d^z}\ket{m}\bra{m} c^\dagger_{k \downarrow}c_{q \downarrow} = -n_{q \downarrow}\sum_{kk^\prime,m}\frac{J^\downarrow_{m} J^t_m c^\dagger_{k \downarrow}c_{k^\prime\uparrow} \ket{m+1}\bra{m}}{\omega_{m, \uparrow} - D/2 - \frac{J}{2}(m)}
+	\sum_{kk^\prime,m} c^\dagger_{q \downarrow} c_{k^\prime \uparrow} \ket{m+1}\bra{m}\frac{J^\downarrow_{m}{J^t_m}}{\omega - D/2 - \frac{J}{2}S_d^z}\ket{m}\bra{m} c^\dagger_{k \downarrow}c_{q \downarrow} = -n_{q \downarrow}\sum_{kk^\prime,m}\frac{J^\downarrow_{m} J^t_m c^\dagger_{k \downarrow}c_{k^\prime\uparrow} \ket{m+1}\bra{m}}{\omega_{m, \downarrow} - D/2 - \frac{J}{2}(m)}
 \end{aligned}\end{equation}
+To compare with the spin-\(\frac{1}{2}\) RG equations, we will transform the general spin-\(S\) \(\omega\) to the spin-\(\frac{1}{2}\) \( \omega\), using \(\omega_{m,\sigma} \to \omega - \frac{J}{2}\left(m\sigma - \frac{1}{2}\right)\).
 The first four terms renormalize \(J^\sigma_m\):
 \begin{equation}\begin{aligned}
 	\Delta J^\sigma_{m} = -\frac{\left( J^\sigma_m \right) ^2 + \left( J^t_{m-\frac{1+\sigma}{2}} \right) ^2}{\omega - D/2 + J/4}
