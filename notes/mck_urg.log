@@ -1,0 +1,562 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.13)  14 DEC 2021 10:49
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**mck_urg.tex
+(./mck_urg.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> (/usr/share/texmf-dist/tex/latex/revtex/revtex4-2.cls
+Document Class: revtex4-2 2020/10/03 4.2e (https://journals.aps.org/revtex/ for documentation)
+ Copyright (c) 2019 American Physical Society.
+ mailto:revtex@aps.org
+ Licensed under the LPPL:
+http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
+ Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>
+ Version (4.2d,4.2e): Modified by Mark Doyle and Phelype Oleinik
+ .
+ltxutil[2020/10/03 4.2e utilities package (portions licensed from W. E. Baxter web at superscript.com)]
+LaTeX Info: Redefining \@centercr on input line 356.
+Class revtex4-2 Info: Repairing broken LaTeX eqnarray on input line 406.
+\eqncolsep=\skip47
+Class revtex4-2 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfootnote on input line 481.
+Class revtex4-2 Info: Repairing broken LateX \@sect on input line 803.
+\intertabularlinepenalty=\count179
+\@tbpen=\count180
+\@arstrutbox@hline=\box47
+Class revtex4-2 Info: Repairing broken LaTeX \@xbitor on input line 1834.
+Class revtex4-2 Info: Making \typeout \long on input line 2099.
+ltxfront[2020/10/03 4.2e frontmatter package (AO,DPC,MD)]
+\c@affil=\count181
+\c@collab=\count182
+\absbox=\box48
+ltxgrid[2020/10/03 4.2e page grid package (portions licensed from W. E. Baxter web at superscript.com)]
+\c@linecount=\count183
+\output@latex=\toks15
+\box@size@1=\box49
+\box@size@2=\box50
+\@protection@box=\box51
+\@topmark@saved=\toks16
+\footins@saved=\box52
+\footins@recovered=\box53
+\column@recovered=\box54
+\pagesofar=\box55
+\footsofar=\box56
+\pagegrid@col=\count184
+Class revtex4-2 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and \\  on input line 5665.
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\c@figure=\count191
+\fbox@1=\box57
+\c@table=\count192
+\fbox@2=\box58
+\c@video=\count193
+\fbox@4=\box59
+\@bibdataout=\write3
+\widetext@top=\box60
+\widetext@bot=\box61
+
+Class revtex4-2 Warning: No Society specified, using default society aps.
+
+(/usr/share/texmf-dist/tex/latex/revtex/aps4-2.rtx
+File: aps4-2 2020/10/03 4.2e (https://journals.aps.org/revtex/ for documentation)
+Class revtex4-2 Info: RevTeX society APS selected on input line 40.
+)
+
+Class revtex4-2 Warning: No journal specified, using default pra.
+
+Class revtex4-2 Info: APS journal PRA selected on input line 7661.
+
+Class revtex4-2 Warning: No type size specified, using default 10.
+
+(/usr/share/texmf-dist/tex/latex/revtex/aps10pt4-2.rtx
+File: aps10pt4-2 2020/10/03 4.2e (https://journals.aps.org/revtex/ for documentation)
+Class revtex4-2 Info: RevTeX pointsize 10pt selected on input line 39.
+) (/usr/share/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
+) (/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (/usr/share/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip50
+\bibsep=\skip51
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count194
+)
+Class revtex4-2 Info: Repairing natbib's \BibitemShut on input line 7665.
+ (/usr/share/texmf-dist/tex/latex/revtex/revsymb4-2.sty
+Package: revsymb4-2 2020/10/03 4.2e (https://journals.aps.org/revtex/ for documentation)
+LaTeX Info: Redefining \REV@mathfrak on input line 128.
+)) (/usr/share/texmf-dist/tex/latex/braket/braket.sty) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen138
+)
+LaTeX Info: Redefining \text on input line 28.
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen139
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count195
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count196
+\leftroot@=\count197
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count198
+\DOTSCASE@=\count199
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box62
+\strutbox@=\box63
+\big@size=\dimen140
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count266
+\c@MaxMatrixCols=\count267
+\dotsspace@=\muskip17
+\c@parentequation=\count268
+\dspbrk@lvl=\count269
+\tag@help=\toks18
+\row@=\count270
+\column@=\count271
+\maxfields@=\count272
+\andhelp@=\toks19
+\eqnshift@=\dimen141
+\alignsep@=\dimen142
+\tagshift@=\dimen143
+\tagwidth@=\dimen144
+\totwidth@=\dimen145
+\lineht@=\dimen146
+\@envbody=\toks20
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+) (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+LaTeX Info: Redefining \frak on input line 111.
+LaTeX Info: Redefining \Bbb on input line 113.
+)) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+) (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen147
+\Gin@req@width=\dimen148
+) (/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count273
+\float@exts=\toks23
+\float@box=\box64
+\@float@everytoks=\toks24
+\@floatcapt=\box65
+) (/usr/share/texmf-dist/tex/latex/paralist/paralist.sty
+Package: paralist 2017/01/22 v2.7 Extended list environments
+\pltopsep=\skip55
+\plpartopsep=\skip56
+\plitemsep=\skip57
+\plparsep=\skip58
+\pl@lab=\toks25
+) (/usr/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+ (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+ (/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+) (/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/share/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/share/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen149
+\Hy@linkcounter=\count274
+\Hy@pagecounter=\count275
+ (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel languages
+) (/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count276
+ (/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+LaTeX Info: Redefining \href on input line 4715.
+\c@Hy@tempcnt=\count277
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen150
+ (/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count278
+\Field@Width=\dimen151
+\Fld@charsize=\dimen152
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring OFF on input line 6095.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+
+(/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi package
+with kernel methods
+)
+\Hy@abspage=\count279
+\c@Item=\count280
+\c@Hfootnote=\count281
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
+ (/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery package
+with kernel methods
+)
+\Fld@listcount=\count282
+\c@bookmark@seq@number=\count283
+ (/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+)
+\Hy@SectionHShift=\skip59
+)
+Class revtex4-2 Info: Unrecognized LaTeX tabular. Please update this document class! (Proceeding with fingers crossed.) on input line 5.
+
+
+Class revtex4-2 Warning: Repair the float package.
+
+Class revtex4-2 Info: cite was not loaded (OK!) on input line 5.
+Class revtex4-2 Info: mcite was not loaded (OK!) on input line 5.
+Class revtex4-2 Info: multicol was not loaded (OK!) on input line 5.
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count284
+\l__pdf_internal_box=\box66
+) (./mck_urg.aux)
+\openout1 = `mck_urg.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+ (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count285
+\scratchdimen=\dimen153
+\scratchbox=\box67
+\nofMPsegments=\count286
+\nofMParguments=\count287
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count288
+\MPscratchDim=\dimen154
+\MPnumerator=\count289
+\makeMPintoPDFobject=\count290
+\everyMPtoPDFconversion=\toks27
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package hyperref Info: Link coloring OFF on input line 5.
+ (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+ (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count291
+)
+LaTeX Info: Redefining \ref on input line 5.
+LaTeX Info: Redefining \pageref on input line 5.
+LaTeX Info: Redefining \nameref on input line 5.
+ (./mck_urg.out) (./mck_urg.out)
+\@outlinefile=\write4
+\openout4 = `mck_urg.out'.
+
+Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 5.
+\openout3 = `mck_urgNotes.bib'.
+
+
+
+Class revtex4-2 Warning: Assuming \noaffiliation for authors.
+
+(./mck_urg.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write5
+\openout5 = `mck_urg.toc'.
+
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<./stargraph.pdf, id=168, 799.33322pt x 444.86888pt>
+File: ./stargraph.pdf Graphic file (type pdf)
+<use ./stargraph.pdf>
+Package pdftex.def Info: ./stargraph.pdf  used on input line 48.
+(pdftex.def)             Requested size: 153.00156pt x 85.15047pt.
+ [2 <./stargraph.pdf>] [3]
+<./duality.pdf, id=220, 824.33594pt x 520.1323pt>
+File: ./duality.pdf Graphic file (type pdf)
+<use ./duality.pdf>
+Package pdftex.def Info: ./duality.pdf  used on input line 103.
+(pdftex.def)             Requested size: 229.49844pt x 144.8027pt.
+ [4]
+
+Package amsmath Warning: Foreign command \atop;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 122.
+
+
+Overfull \hbox (7.3373pt too wide) in paragraph at lines 127--129
+\OT1/cmr/m/n/10 Using the iden-tity $[] = [][] []$, we have $\OML/cmm/m/it/10 C[] \OT1/cmr/m/n/10 =
+ []
+
+[5 <./duality.pdf>] [6] [7] [8]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 300.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Delta' on input line 300.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 300.
+
+[9]
+<rg_flow_pms.pdf, id=310, 358.06793pt x 72.74786pt>
+File: rg_flow_pms.pdf Graphic file (type pdf)
+<use rg_flow_pms.pdf>
+Package pdftex.def Info: rg_flow_pms.pdf  used on input line 330.
+(pdftex.def)             Requested size: 203.99689pt x 41.4456pt.
+<./rg_flow.pdf, id=312, 763.4733pt x 129.39258pt>
+File: ./rg_flow.pdf Graphic file (type pdf)
+<use ./rg_flow.pdf>
+Package pdftex.def Info: ./rg_flow.pdf  used on input line 336.
+(pdftex.def)             Requested size: 356.99844pt x 60.50255pt.
+ [10 <./rg_flow_pms.pdf> <./rg_flow.pdf
+
+pdfTeX warning: pdflatex (file ./rg_flow.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<../numerics/rg_flow_K=2.pdf, id=329, 1209.59888pt x 557.45404pt>
+File: ../numerics/rg_flow_K=2.pdf Graphic file (type pdf)
+<use ../numerics/rg_flow_K=2.pdf>
+Package pdftex.def Info: ../numerics/rg_flow_K=2.pdf  used on input line 352.
+(pdftex.def)             Requested size: 408.00156pt x 188.02629pt.
+<../numerics/rhomin_D.pdf, id=331, 771.5256pt x 551.3432pt>
+File: ../numerics/rhomin_D.pdf Graphic file (type pdf)
+<use ../numerics/rhomin_D.pdf>
+Package pdftex.def Info: ../numerics/rhomin_D.pdf  used on input line 360.
+(pdftex.def)             Requested size: 255.0pt x 182.22144pt.
+ [11 <../numerics/rg_flow_K=2.pdf> <../numerics/rhomin_D.pdf>] [12]
+<../numerics/K to K-1.pdf, id=400, 639.85484pt x 547.34554pt>
+File: ../numerics/K to K-1.pdf Graphic file (type pdf)
+<use ../numerics/K to K-1.pdf>
+Package pdftex.def Info: ../numerics/K to K-1.pdf  used on input line 420.
+(pdftex.def)             Requested size: 203.99689pt x 174.5027pt.
+<../numerics/irr_Jp_K=3.pdf, id=402, 647.93306pt x 547.34554pt>
+File: ../numerics/irr_Jp_K=3.pdf Graphic file (type pdf)
+<use ../numerics/irr_Jp_K=3.pdf>
+Package pdftex.def Info: ../numerics/irr_Jp_K=3.pdf  used on input line 428.
+(pdftex.def)             Requested size: 229.49844pt x 193.87054pt.
+<../numerics/irr_Jp_K=50.pdf, id=403, 661.69162pt x 547.34554pt>
+File: ../numerics/irr_Jp_K=50.pdf Graphic file (type pdf)
+<use ../numerics/irr_Jp_K=50.pdf>
+Package pdftex.def Info: ../numerics/irr_Jp_K=50.pdf  used on input line 429.
+(pdftex.def)             Requested size: 229.49844pt x 189.83662pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 434.
+
+[13 <../numerics/K to K-1.pdf>] [14pdfTeX warning (ext4): destination with the same identifier (name{equation.8.85}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.473 \end{aligned}\end{equation}
+                                  <../numerics/irr_Jp_K=3.pdf> <../numerics/irr_Jp_K=50.pdf>] [15] [16] [17]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 645.
+
+[18]
+Overfull \hbox (0.11604pt too wide) detected at line 667
+[]
+ []
+
+[19] [20]
+Overfull \hbox (17.31512pt too wide) detected at line 740
+[]
+ []
+
+[21] [22] [23] [24]
+Overfull \hbox (8.05917pt too wide) detected at line 883
+[]
+ []
+
+<../numerics/chi_mchannel.pdf, id=689, 985.45987pt x 660.47093pt>
+File: ../numerics/chi_mchannel.pdf Graphic file (type pdf)
+<use ../numerics/chi_mchannel.pdf>
+Package pdftex.def Info: ../numerics/chi_mchannel.pdf  used on input line 887.
+(pdftex.def)             Requested size: 408.00156pt x 273.44533pt.
+[25] [26 <../numerics/chi_mchannel.pdf>]
+Overfull \hbox (3.9791pt too wide) detected at line 959
+[]
+ []
+
+[27] [28]
+<../numerics/free_energy_nonanaliticity.pdf, id=778, 1010.65335pt x 627.75024pt>
+File: ../numerics/free_energy_nonanaliticity.pdf Graphic file (type pdf)
+<use ../numerics/free_energy_nonanaliticity.pdf>
+Package pdftex.def Info: ../numerics/free_energy_nonanaliticity.pdf  used on input line 1015.
+(pdftex.def)             Requested size: 306.00311pt x 190.06984pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1021.
+
+[29 <../numerics/free_energy_nonanaliticity.pdf>]
+<../numerics/entropy_comparison.pdf, id=812, 652.68365pt x 624.4709pt>
+File: ../numerics/entropy_comparison.pdf Graphic file (type pdf)
+<use ../numerics/entropy_comparison.pdf>
+Package pdftex.def Info: ../numerics/entropy_comparison.pdf  used on input line 1045.
+(pdftex.def)             Requested size: 203.99689pt x 195.17526pt.
+ [30 <../numerics/entropy_comparison.pdf>] [31]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1130.
+
+
+Overfull \hbox (21.21884pt too wide) in paragraph at lines 1131--1132
+[]\OT1/cmr/m/n/10 The Hamil-to-nian is the same as eq. []A1[], but the im-pu-rity is now a spin-$\OML/cmm/m/it/10 S$ \OT1/cmr/m/n/10 ob-ject, such that $\OML/cmm/m/it/10 S[] \OMS/cmsy/m/n/10 2 []$\OT1/cmr/m/n/10 . 
+ []
+
+[32] [33] (./mck_urg.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 118--125
+[]\OT1/cmr/m/n/9 T. Kimura and S. Ozaki, []Jour-nal of the Phys-i-cal So-ci-ety of Japan \OT1/cmr/bx/n/9 86\OT1/cmr/m/n/9 , 084703 (2017)[],
+ []
+
+[34]) [35] (./mck_urg.aux)
+Package rerunfilecheck Info: File `mck_urg.out' has not changed.
+(rerunfilecheck)             Checksum: 71BA0C6D3E458B14D168499542913708;7399.
+ ) 
+Here is how much of TeX's memory you used:
+ 11687 strings out of 478994
+ 165539 string characters out of 5864750
+ 530251 words of memory out of 5000000
+ 28578 multiletter control sequences out of 15000+600000
+ 411200 words of font info for 56 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 71i,17n,74p,2049b,520s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb>
+Output written on mck_urg.pdf (35 pages, 768436 bytes).
+PDF statistics:
+ 1108 PDF objects out of 1200 (max. 8388607)
+ 1004 compressed objects within 11 object streams
+ 430 named destinations out of 1000 (max. 500000)
+ 301 words of extra memory for PDF output out of 10000 (max. 10000000)
+
