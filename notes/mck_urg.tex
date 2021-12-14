@@ -991,7 +991,52 @@ The susceptibility at low temperatures becomes
 	\chi(T \to 0) = \frac{2\beta\left(1 + \frac{J}{4\Phi}\right)^2\Sigma_M}{4M} = \frac{\beta (K-1)(K+2)^2}{12(K+1)}
 \end{align}
 
-\section{Non-analyticity in the free energy}
+\section{Non-analyticity in the free energy (Discontinuity in magnetization)}
+
+\subsection{Field coupled to impurity}
+For \(K>1\), the Gibbs free energy at \(T=0\) becomes non-analytic under insertion of a magnetic field on the impurity. The thermal free energy is given by
+\begin{equation}\begin{aligned}
+	F(h) = -\frac{1}{\beta}\ln Z(h) = -\frac{1}{\beta}\ln\sum_{E_n}e^{-\beta E_n}
+\end{aligned}\end{equation}
+At \(T \to 0\), only the most negative energy \(E_\text{min}\) survives. Assuming a non-degenerate ground state for \(h \neq 0\), the zero temperature free energy becomes
+\begin{equation}\begin{aligned}
+	F(h\neq 0, T\to 0) = -\frac{1}{\beta}\ln e^{-\beta E_\text{min}} = E_\text{min}
+\end{aligned}\end{equation}
+In the star graph Hamiltonian with \(K-\)channels and in the presence of a field on the impurity (eq.~\ref{stargraph_field_hamiltonian}), the energy eigenvalues for a particular value of \(s_\text{tot}\) are given in eq.~\ref{stargraph_spectrum}. Within a particular subspace \(M\), the ground state energy will be one of the negative eigenvalues:
+\begin{equation}\begin{aligned}
+	\lambda^{M,h}_{m, -}= -J/4 - \frac{1}{2}\sqrt{J^2x^M_{m}/4 + \alpha^2} = -J/4 - \frac{1}{2}\sqrt{J^2(M+1/2)^2 + h^2 + 2hJ(m+1/2)}
+\end{aligned}\end{equation}
+The minimum eigenvalue is obtained by maximizing \(h(m+1/2)\). For \(h>0\), the ground state is renormalized for the most positive value of \(m\), \(M-1\). On the other hand, for \(h<0\), it occurs for \(m=-M\), because that is the most negative value it can take. Among all the values of \(M\), the global ground state is at the largest value of \(M\), \(K/2\). Therefore, the minimal energy eigenvalue is
+\begin{equation}\begin{aligned}
+	E_\text{min}(h) = \begin{cases}
+		-J/4 - \frac{1}{2}\sqrt{J^2(K+1)^2/4 + h^2 + hJ(K-1)}, & h>0\\
+		-J/4 - \frac{1}{2}\sqrt{J^2(K+1)^2/4 + h^2 - hJ(K-1)}, & h<0\\
+	\end{cases}
+\end{aligned}\end{equation}
+The free energy for a non-zero field is therefore
+\begin{equation}\begin{aligned}
+	F(h\neq 0, T\to 0) = -J/4 - \frac{1}{2}\sqrt{J^2(K+1)^2/4 + h^2 + |h|J(K-1)}
+\end{aligned}\end{equation}
+The first derivative of the free energy with respect to the field gives
+\begin{equation}\begin{aligned}
+	F^\prime(h\neq 0, T\to 0) =- \frac{1}{2}\frac{2h + J(K-1)\text{sign}(h)}{2\sqrt{J^2(K+1)^2/4 + h^2 + |h|J(K-1)}}
+\end{aligned}\end{equation}
+There we used the result that the derivative of \(|x|\) is \(\text{sign}(x)\). If we now take \(h\) to zero from both directions, we get
+\begin{equation}\begin{aligned}
+	F^\prime(h \to 0^\pm, T\to 0) = \mp \frac{1}{2}\frac{(K-1)}{(K+1)}
+\end{aligned}\end{equation}
+
+The first derivative of the impurity free energy is therefore discontinuous as \(h\to 0\); it goes to different values depending on the direction in which we take the limit. The only case where it is not analytic is when \(K=1\); then the derivative goes to zero from both directions. This non-analyticity has also been verified numerically.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../numerics/disc_mag_imp.pdf}
+	\caption{Non-analytic free energy for \(K>1\) and analytic free energy for \(K=1\).}
+\end{figure}
+
+The non-analyticity for \(K>1\) occurs because the magnetic field is able to flip the ground state. For example, for \(K=2\), the states in question are \(\ket{M=1, m=-1,0}\). For \(h>0\), the ground state occurs in the subspace \(\ket{S_d^z=1/2, m=-1},\ket{S_d^z=-1/2,m=0}\). If we now flip the magnetic field, the ground state subspace flips to \(\ket{S_d^z=1/2, m=0},\ket{S_d^z=-1/2,m=1}\). Instead, if we look at the case of \(K=1\), the ground state is in the subspace of \(\ket{S_d^z=1/2,m=-1/2},\ket{S_d^z=-1/2, m=1/2}\), and since there is only this one subspace, the ground state is independent of the field. From this discussion, it is clear that the non-analyticity appears because there are multiple values of \(m \in [-M, M-1]\) in the ground state manifold, which means that it is the ground state degeneracy that causes the non-analyticity.
+
+
+\subsection{Global field}
 For \(K>1\), the Gibbs free energy at \(T=0\) becomes non-analytic under insertion of a magnetic field on the impurity. The thermal free energy is given by
 \begin{align}
 	F(h) = -\frac{1}{\beta}\ln Z(h) = -\frac{1}{\beta}\ln\sum_{E_n}e^{-\beta E_n}
@@ -1034,7 +1079,7 @@ There we used the result that the derivative of \(|x|\) is \(\text{sign}(x)\). I
 The first derivative of the impurity free energy is therefore discontinuous as \(h\to 0\); it goes to different values depending on the direction in which we take the limit. The only case where it is not analytic is when \(K=1\); then the derivative goes to zero from both directions. This non-analyticity has also been verified numerically.
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=0.6\textwidth]{../numerics/free_energy_nonanaliticity.pdf}
+	\includegraphics[width=0.6\textwidth]{../numerics/disc_mag_global.pdf}
 	\caption{Non-analytic free energy for \(K>1\) and analytic free energy for \(K=1\).}
 \end{figure}
 
