@@ -937,6 +937,7 @@ At high temperatures \(\beta \to 0\), we get
 \section{Bath Susceptibility from zero-mode fixed point Hamiltonian}
 We insert a magnetic field that acts only on the bath and then attempt to diagonalize the Hamiltonian.
 \begin{align}
+	\label{bath_field_ham}
 	H(h) = J^* \vec{S_d}\cdot\vec{s}_\text{tot} + h s^z_\text{tot}
 \end{align}
 
@@ -946,9 +947,11 @@ Defining \(x^M_m = M(M+1) - m(m+1)\), the \(2\times 2\) blocks can be written as
 \end{align}
 The eigenvalues are 
 \begin{align}
-	\lambda_{m, \pm}^{M, h} &= -\frac{J}{4} + (2m+1)h/2 \pm \frac{1}{2}\sqrt{J^2x^M_m + \left[(2m+1)h - \frac{J}{2}\right]^2 - 4m(m+1)(h^2 - J^2/4)} \\
-				&= -\frac{J}{4} + (2m+1)h/2 \pm \frac{1}{2}\sqrt{J^2(M + \frac{1}{2})^2 + h^2 - (2m+1)Jh}	= -\frac{J}{4} + (2m+1)h/2 \pm \phi^M_m
+	\lambda_{m, \pm}^{M, h} &= -\frac{J}{4} + (2m+1)h/2 \pm \frac{1}{2}\sqrt{J^2x^M_m + \left[(2m+1)h - \frac{J}{2}\right]^2 - 4m(m+1)(h^2 - J^2/4)} \nonumber\\
+				&= -\frac{J}{4} + (2m+1)h/2 \pm \frac{1}{2}\sqrt{J^2(M + \frac{1}{2})^2 + h^2 - (2m+1)Jh} \nonumber\\
+				&= -\frac{J}{4} + (2m+1)h/2 \pm \phi^M_m \label{bath_field_ens}
 \end{align}
+where \(\phi^M_m = \frac{1}{2}\sqrt{J^2(M + \frac{1}{2})^2 + h^2 - (2m+1)Jh}\).
 The eigenvalues of the terminal states are \(JM/2 \pm hM\). The partition function is
 \begin{align}
 	Z(h) &= \sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\left(e^{-\beta \lambda_{m, +}^{M, h}} + e^{-\beta \lambda_{m, -}^{M, h}}\right) + e^{-\beta JM/2}\left(e^{\beta hM} + e^{-\beta hM}\right)\right] \\
@@ -1035,6 +1038,40 @@ The first derivative of the impurity free energy is therefore discontinuous as \
 
 The non-analyticity for \(K>1\) occurs because the magnetic field is able to flip the ground state. For example, for \(K=2\), the states in question are \(\ket{M=1, m=-1,0}\). For \(h>0\), the ground state occurs in the subspace \(\ket{S_d^z=1/2, m=-1},\ket{S_d^z=-1/2,m=0}\). If we now flip the magnetic field, the ground state subspace flips to \(\ket{S_d^z=1/2, m=0},\ket{S_d^z=-1/2,m=1}\). Instead, if we look at the case of \(K=1\), the ground state is in the subspace of \(\ket{S_d^z=1/2,m=-1/2},\ket{S_d^z=-1/2, m=1/2}\), and since there is only this one subspace, the ground state is independent of the field. From this discussion, it is clear that the non-analyticity appears because there are multiple values of \(m \in [-M, M-1]\) in the ground state manifold, which means that it is the ground state degeneracy that causes the non-analyticity.
 
+\subsection{Field coupled to bath zero modes}
+Assuming a non-degenerate ground state for \(h \neq 0\), the zero temperature free energy becomes
+\begin{equation}\begin{aligned}
+	F(h\neq 0, T\to 0) = -\frac{1}{\beta}\ln e^{-\beta E_\text{min}} = E_\text{min}
+\end{aligned}\end{equation}
+In the star graph Hamiltonian with \(K-\)channels and in the presence of a field on the bath zero modes (eq.~\ref{bath_field_ham}), the energy eigenvalues for a particular value of \(s_\text{tot}\) are given in eq.~\ref{bath_field_ens}. For small field \(h\), the global ground state will lie in the subspace of \(s_\text{tot} = M_\text{max} = K/2\). The ground state energy will be one of the negative eigenvalues:
+\begin{equation}\begin{aligned}
+	\lambda^{M_\text{max},h}_{m, -} = -J/4 + \left( 2m+1 \right)\frac{h}{2} - \frac{1}{2}\sqrt{J^2(M_\text{max}+\frac{1}{2})^2 + h^2 - \left( 2m+1 \right) Jh}
+\end{aligned}\end{equation}
+The minimum eigenvalue is obtained by minimizing \(h(2m+1)\). For \(h>0\), the ground state is realized for the most negative value of \(m\), \(-M_\text{max}\). On the other hand, for \(h<0\), it occurs for \(m=M_\text{max}-1\), because that is the most positive value it can take. Therefore, the minimal energy eigenvalue is
+\begin{equation}\begin{aligned}
+	E_\text{min}(h) = \begin{cases}
+		-J/4 - \frac{h}{2}\left(K-1\right) - \frac{1}{2}\sqrt{\frac{1}{4}J^2(K+1)^2 + h^2 + \left(K-1\right) Jh}, & h>0\\
+		-J/4 + \frac{h}{2}\left(K-1\right) - \frac{1}{2}\sqrt{\frac{1}{4}J^2(K+1)^2 + h^2 - \left(K-1\right) Jh}, & h<0\\
+	\end{cases}
+\end{aligned}\end{equation}
+The free energy for a non-zero field is therefore
+\begin{equation}\begin{aligned}
+	F(h\neq 0, T\to 0) = -J/4 - \frac{|h|}{2}\left(K-1\right) - \frac{1}{4}\sqrt{J^2(K+1)^2 + 4h^2 + 4\left(K-1\right) J |h|}
+\end{aligned}\end{equation}
+The first derivative of the free energy with respect to the field gives
+\begin{equation}\begin{aligned}
+	F^\prime(h\neq 0, T\to 0) = - \frac{1}{2}(K-1)\text{sign}(h) - \frac{h + \frac{1}{2}J(K-1)\text{sign}(h)}{\sqrt{J^2(K+1)^2 + 4h^2 + 4\left(K-1\right) J |h|}}
+\end{aligned}\end{equation}
+There we used the result that the derivative of \(|x|\) is \(\text{sign}(x)\). If we now take \(h\) to zero from both directions, we get
+\begin{equation}\begin{aligned}
+	F^\prime(h \to 0^\pm, T\to 0) = \mp \frac{1}{2}\frac{(K-1)(K+2)}{K+1}
+\end{aligned}\end{equation}
+The first derivative of the free energy is therefore discontinuous as the field coupled to the bath \(h\to 0\); it goes to different values depending on the direction in which we take the limit. The only case where it is not analytic is when \(K=1\); then the derivative goes to zero from both directions. This non-analyticity has also been verified numerically.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../numerics/disc_mag_bath.pdf}
+	\caption{Non-analytic free energy for \(K>1\) and analytic free energy for \(K=1\).}
+\end{figure}
 
 \subsection{Global field}
 For \(K>1\), the Gibbs free energy at \(T=0\) becomes non-analytic under insertion of a magnetic field on the impurity. The thermal free energy is given by

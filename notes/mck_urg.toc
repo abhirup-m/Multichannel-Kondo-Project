@@ -41,21 +41,22 @@
 \contentsline {section}{\numberline {XIII}Bath Susceptibility from zero-mode fixed point Hamiltonian}{27}{section*.39}%
 \contentsline {section}{\numberline {XIV}Non-analyticity in the free energy (Discontinuity in magnetization)}{29}{section*.40}%
 \contentsline {subsection}{\numberline {A}Field coupled to impurity}{29}{section*.41}%
-\contentsline {subsection}{\numberline {B}Global field}{30}{section*.42}%
-\contentsline {section}{\numberline {XV}Thermal entropy at \(T=0\)}{31}{section*.43}%
+\contentsline {subsection}{\numberline {B}Field coupled to bath zero modes}{30}{section*.42}%
+\contentsline {subsection}{\numberline {C}Global field}{31}{section*.43}%
+\contentsline {section}{\numberline {XV}Thermal entropy at \(T=0\)}{32}{section*.44}%
 \appendix 
-\contentsline {section}{\numberline {A}URG equations for the single-channel Kondo model}{33}{section*.44}%
-\contentsline {subsection}{\numberline {1}Particle sector}{33}{section*.45}%
-\contentsline {subsection}{\numberline {2}Hole sector}{34}{section*.46}%
-\contentsline {subsection}{\numberline {3}Scaling equations}{34}{section*.47}%
-\contentsline {section}{\numberline {B}URG equations for the single-channel Kondo model with spin-\(S\) impurity}{34}{section*.48}%
-\contentsline {subsection}{\numberline {1}Particle sector}{35}{section*.49}%
-\contentsline {paragraph}{\numberline {a}\(z|z\)}{35}{section*.50}%
-\contentsline {paragraph}{\numberline {b}\(+|-\)}{35}{section*.51}%
-\contentsline {paragraph}{\numberline {c}\(-|+\)}{35}{section*.52}%
-\contentsline {paragraph}{\numberline {d}\(z|+\)}{35}{section*.53}%
-\contentsline {paragraph}{\numberline {e}\(+|z\)}{35}{section*.54}%
-\contentsline {paragraph}{\numberline {f}\(z|-\)}{35}{section*.55}%
-\contentsline {paragraph}{\numberline {g}\(-|z\)}{35}{section*.56}%
-\contentsline {subsection}{\numberline {2}Hole sector}{36}{section*.57}%
-\contentsline {section}{\numberline {}References}{36}{section*.58}%
+\contentsline {section}{\numberline {A}URG equations for the single-channel Kondo model}{34}{section*.45}%
+\contentsline {subsection}{\numberline {1}Particle sector}{34}{section*.46}%
+\contentsline {subsection}{\numberline {2}Hole sector}{35}{section*.47}%
+\contentsline {subsection}{\numberline {3}Scaling equations}{35}{section*.48}%
+\contentsline {section}{\numberline {B}URG equations for the single-channel Kondo model with spin-\(S\) impurity}{35}{section*.49}%
+\contentsline {subsection}{\numberline {1}Particle sector}{36}{section*.50}%
+\contentsline {paragraph}{\numberline {a}\(z|z\)}{36}{section*.51}%
+\contentsline {paragraph}{\numberline {b}\(+|-\)}{36}{section*.52}%
+\contentsline {paragraph}{\numberline {c}\(-|+\)}{36}{section*.53}%
+\contentsline {paragraph}{\numberline {d}\(z|+\)}{36}{section*.54}%
+\contentsline {paragraph}{\numberline {e}\(+|z\)}{36}{section*.55}%
+\contentsline {paragraph}{\numberline {f}\(z|-\)}{36}{section*.56}%
+\contentsline {paragraph}{\numberline {g}\(-|z\)}{36}{section*.57}%
+\contentsline {subsection}{\numberline {2}Hole sector}{37}{section*.58}%
+\contentsline {section}{\numberline {}References}{37}{section*.59}%
