@@ -34,25 +34,26 @@
 \contentsline {paragraph}{\numberline {p}\(+|-|-^\prime \)}{16}{section*.32}%
 \contentsline {paragraph}{\numberline {q}\(-|+|-^\prime \)}{16}{section*.33}%
 \contentsline {paragraph}{\numberline {r}\(-|+|+^\prime \)}{16}{section*.34}%
-\contentsline {section}{\numberline {IX}MFL and orthogonality catastrophe in low-energy excitations of 2-CKM}{17}{section*.35}%
-\contentsline {section}{\numberline {X}Effective Hamiltonian for low-energy excitations: \(k-\)space}{19}{section*.36}%
-\contentsline {section}{\numberline {XI}Impurity susceptibility from zero-mode fixed point Hamiltonian}{23}{section*.37}%
-\contentsline {section}{\numberline {XII}Bath Susceptibility from zero-mode fixed point Hamiltonian}{26}{section*.38}%
-\contentsline {section}{\numberline {XIII}Non-analyticity in the free energy}{28}{section*.39}%
-\contentsline {section}{\numberline {XIV}Thermal entropy at \(T=0\)}{29}{section*.40}%
+\contentsline {section}{\numberline {IX}Strong-weak duality of the multi-channel Kondo RG flows}{17}{section*.35}%
+\contentsline {section}{\numberline {X}MFL and orthogonality catastrophe in low-energy excitations of 2-CKM}{18}{section*.36}%
+\contentsline {section}{\numberline {XI}Effective Hamiltonian for low-energy excitations: \(k-\)space}{19}{section*.37}%
+\contentsline {section}{\numberline {XII}Impurity susceptibility from zero-mode fixed point Hamiltonian}{24}{section*.38}%
+\contentsline {section}{\numberline {XIII}Bath Susceptibility from zero-mode fixed point Hamiltonian}{27}{section*.39}%
+\contentsline {section}{\numberline {XIV}Non-analyticity in the free energy}{29}{section*.40}%
+\contentsline {section}{\numberline {XV}Thermal entropy at \(T=0\)}{30}{section*.41}%
 \appendix 
-\contentsline {section}{\numberline {A}URG equations for the single-channel Kondo model}{31}{section*.41}%
-\contentsline {subsection}{\numberline {1}Particle sector}{31}{section*.42}%
-\contentsline {subsection}{\numberline {2}Hole sector}{32}{section*.43}%
-\contentsline {subsection}{\numberline {3}Scaling equations}{32}{section*.44}%
-\contentsline {section}{\numberline {B}URG equations for the single-channel Kondo model with spin-\(S\) impurity}{32}{section*.45}%
-\contentsline {subsection}{\numberline {1}Particle sector}{33}{section*.46}%
-\contentsline {paragraph}{\numberline {a}\(z|z\)}{33}{section*.47}%
-\contentsline {paragraph}{\numberline {b}\(+|-\)}{33}{section*.48}%
-\contentsline {paragraph}{\numberline {c}\(-|+\)}{33}{section*.49}%
-\contentsline {paragraph}{\numberline {d}\(z|+\)}{33}{section*.50}%
-\contentsline {paragraph}{\numberline {e}\(+|z\)}{33}{section*.51}%
-\contentsline {paragraph}{\numberline {f}\(z|-\)}{33}{section*.52}%
-\contentsline {paragraph}{\numberline {g}\(-|z\)}{33}{section*.53}%
-\contentsline {subsection}{\numberline {2}Hole sector}{34}{section*.54}%
-\contentsline {section}{\numberline {}References}{34}{section*.55}%
+\contentsline {section}{\numberline {A}URG equations for the single-channel Kondo model}{32}{section*.42}%
+\contentsline {subsection}{\numberline {1}Particle sector}{32}{section*.43}%
+\contentsline {subsection}{\numberline {2}Hole sector}{33}{section*.44}%
+\contentsline {subsection}{\numberline {3}Scaling equations}{33}{section*.45}%
+\contentsline {section}{\numberline {B}URG equations for the single-channel Kondo model with spin-\(S\) impurity}{33}{section*.46}%
+\contentsline {subsection}{\numberline {1}Particle sector}{34}{section*.47}%
+\contentsline {paragraph}{\numberline {a}\(z|z\)}{34}{section*.48}%
+\contentsline {paragraph}{\numberline {b}\(+|-\)}{34}{section*.49}%
+\contentsline {paragraph}{\numberline {c}\(-|+\)}{34}{section*.50}%
+\contentsline {paragraph}{\numberline {d}\(z|+\)}{34}{section*.51}%
+\contentsline {paragraph}{\numberline {e}\(+|z\)}{34}{section*.52}%
+\contentsline {paragraph}{\numberline {f}\(z|-\)}{34}{section*.53}%
+\contentsline {paragraph}{\numberline {g}\(-|z\)}{34}{section*.54}%
+\contentsline {subsection}{\numberline {2}Hole sector}{35}{section*.55}%
+\contentsline {section}{\numberline {}References}{35}{section*.56}%

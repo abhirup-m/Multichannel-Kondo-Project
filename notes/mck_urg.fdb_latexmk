@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex mck_urg"] 1639458967 "mck_urg.aux" "mck_urg.bbl" "mck_urg" 1639459187
+["bibtex mck_urg"] 1639463200 "mck_urg.aux" "mck_urg.bbl" "mck_urg" 1639463206
   "/usr/share/texmf-dist/bibtex/bst/revtex4-1/apsrev4-1.bst" 1617738001 71515 e333383ed72bf24aa6de7e8cabb55f84 ""
-  "mck_urg.aux" 1639459187 18683 9db3ce2e639afc5b7d43ef95ca57cef3 "pdflatex"
+  "mck_urg.aux" 1639463206 18953 57f00bc4d0be021857f0c18e51e8fb3b "pdflatex"
   "mck_urg.bib" 1639042678 272297 d5770bf295be519f72ab6a09b8222949 ""
-  "mck_urgNotes.bib" 1639459186 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "mck_urgNotes.bib" 1639463206 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "mck_urg.blg"
   "mck_urg.bbl"
-["pdflatex"] 1639459186 "mck_urg.tex" "mck_urg.pdf" "mck_urg" 1639459187
+["pdflatex"] 1639463205 "mck_urg.tex" "mck_urg.pdf" "mck_urg" 1639463206
   "../numerics/K to K-1.pdf" 1639401359 123557 31c3e9457f6150334c8a857055afcba1 ""
   "../numerics/chi_mchannel.pdf" 1637763707 127078 2010844392d5b68e9dcc5aaf73953859 ""
   "../numerics/entropy_comparison.pdf" 1638251653 100178 ea6a87a4ab08ef06b2332a5c3ca52556 ""
@@ -132,18 +132,18 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1639377178 5065252 bcee0692f299aea3b1d13d4b7b7296ae ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1639377162 2812679 39858057e0fa650f1582b85c81c0cae8 ""
   "duality.pdf" 1639041112 13619 fbc5a21e09c0bc9731f189b16bcc540f ""
-  "mck_urg.aux" 1639459187 18683 9db3ce2e639afc5b7d43ef95ca57cef3 "pdflatex"
-  "mck_urg.bbl" 1639458967 16001 473636f9039bf738bef6a1c9bd4186fc "bibtex mck_urg"
-  "mck_urg.out" 1639459187 7399 71ba0c6d3e458b14d168499542913708 "pdflatex"
-  "mck_urg.tex" 1639459186 127839 123efebefc922990786c093126aa5c9c ""
-  "mck_urg.toc" 1639459187 4839 3b30a06a5ed3e665bb05348238ccd76b "pdflatex"
+  "mck_urg.aux" 1639463206 18953 57f00bc4d0be021857f0c18e51e8fb3b "pdflatex"
+  "mck_urg.bbl" 1639463200 16001 473636f9039bf738bef6a1c9bd4186fc "bibtex mck_urg"
+  "mck_urg.out" 1639463206 7751 cb9e9c5d6ec54b33b1489bc980794f8b "pdflatex"
+  "mck_urg.tex" 1639463205 131298 7510119c13b978bcccd56047b0979bc4 ""
+  "mck_urg.toc" 1639463206 4954 27ded4b45b636df96cd18a9952ac8302 "pdflatex"
   "rg_flow.pdf" 1637556212 8457 3bb063edc82743ebc99745c4660d4230 ""
   "rg_flow_pms.pdf" 1639393665 3341 62f709d268ba9ab6b94c6b4d33803a70 ""
   "stargraph.pdf" 1638964240 8432 78c2725b3724b55ab6a724cb07809104 ""
   (generated)
-  "mck_urg.out"
-  "mck_urg.log"
   "mck_urg.toc"
+  "mck_urg.aux"
+  "mck_urg.log"
+  "mck_urg.out"
   "mck_urgNotes.bib"
   "mck_urg.pdf"
-  "mck_urg.aux"
