@@ -105,7 +105,9 @@ The fact that the strong coupling fixed point can be seen as a new star graph pr
 	\label{duality_fig}
 \end{figure}
 
-\section{Parity operators and the impurity magnetization}
+\section{Parity operators and impurity magnetization}
+
+\subsection{Action of \(\pi^x\)}
 We can also use the eigenvalues of \(\pi^z\) to label the eigenstates. We have the eigenvalue relation \(\pi^z \ket{S^z} = (-1)^{S^z - \frac{1}{2}}\ket{S^z}\). Applying \(\pi^z\) on these eigenstates gives
 \begin{align}
 	\pi^z\ket{\Psi^M_{m,-}} = \left( -1 \right) ^{m}\ket{\Psi^M_{m,-}}
@@ -129,22 +131,30 @@ Using the identity \(\braket{M_1m_1,M_2m_2,\ldots|m,M} = \left( -1 \right)^{\sum
 \begin{align}
 	\pi^x \ket{S_d^z, M,m} = \sum_{\left\{m_i\right\}\atop{\sum_i m_i = -m}}C_{\left\{m_i\right\},-m,M}\ket{-S_d^z}\otimes_{i=1}^K\ket{m_i} = \ket{-S_d^z, M, -m}
 \end{align}
-The action of \(\pi^x\) on the eigenstates can now be determined:
+The action of \(\pi^x\) on the eigenstates \(\ket{\Psi^M_{m,-}}\) can now be determined:
 \begin{align}
-	\pi^x \ket{\Psi^M_{m,-}} &=-\sqrt{x_m^M}\ket{\downarrow, M, -m} + \left(M + m + 1\right)\ket{\uparrow,M,-m-1} = -\ket{\Psi^M_{-m-1,-}}
+	\pi^x \ket{\Psi^M_{m,-}} &=- \frac{1}{N^M_m}\left(-\sqrt{x^M_m}\ket{\downarrow,M,-m} + (M+m+1)\ket{\uparrow,M,-(m+1)}\right)
 \end{align}
-It can be seen that the action of the operator \(\pi^x\) is to interpolate between two ground states of opposite \(\pi^z\) eigenvaluesand, more specifically, opposite \(S^z\) values
+where \(N^M_m = \sqrt{(M+m+1)(1+2M)}\) is the normalization factor. We have the relation \(\frac{\sqrt{x^M_m}}{M+m+1} = \frac{M-m}{\sqrt{x^M_{-m-1}}}\). Using this, we can write
+\begin{equation}\begin{aligned}
+	\pi^x \ket{\Psi^M_{m,-}} &=-\frac{\sqrt{x^M_m}}{M-m}\frac{1}{N^M_m}\left((M-m)\ket{\downarrow,M,-m} + \sqrt{x^M_{-m-1}}\ket{\uparrow,M,-(m+1)}\right) \\
+				 &= -\frac{1}{N^M_{-m-1}}\left((M-m)\ket{\downarrow,M,-m} + \sqrt{x^M_{-m-1}}\ket{\uparrow,M,-(m+1)}\right) \\
+				 &= -\ket{\Psi^M_{-m-1,-}}
+\end{aligned}\end{equation}
+
+It can be seen that the action of the operator \(\pi^x\) is to interpolate between two ground states of opposite \(\pi^z\) eigenvalues and, more specifically, opposite \(S^z\) values
 \begin{align}
-	\pi^x \ket{S^z} \to \ket{-S^z}
+	\pi^x \ket{S^z} = -\ket{-S^z}
 \end{align}
 
-We can show that the impurity magnetization along the \(x-\)direction in some specific ground states can be related to matrix elements of the string operator \(\pi^x\). The most general ground state is obtained by taking a general linear combination of all the normalized ground states:
+\subsection{Impurity magnetization along \(x\) in terms of matrix elements of the string operator \(\pi^x\)}
+We can show that the impurity magnetization along the \(x-\)direction in some specific ground states can be related to matrix elements of the string operator \(\pi^x\). We take a linear combination of two \(S^z\) eigenstates as the ground state:
 \begin{align}
-	\ket{g^n_m} = \frac{1}{\sqrt 2}\left[\ket{\Psi^M_{m,-}} + e^{i\theta}\ket{\Psi^M_{m+n,-1}}\right], m \in \left[-M, M-2\right] , n \in \left[1, M - m - 1\right] 
+	\ket{g^n_m} = \frac{1}{\sqrt 2}\left[\ket{\Psi^M_{m,-}} + \ket{\Psi^M_{m+n,-1}}\right], m \in \left[-M, M-2\right] , n \in \left[1, M - m - 1\right] 
 \end{align}
 The expectation value of the impurity spin along \(x\) in this state is given by
 \begin{align}
-	\left(m_d^x\right)_m^n = \braket{g^n_m | \sigma_d^x | g^n_m}
+	\left<\sigma^x_d\right>_m^n = \braket{g^n_m | \sigma_d^x | g^n_m}
 \end{align}
 The action of \(\sigma_d^x\) is as follows:
 \begin{align}
@@ -152,31 +162,37 @@ The action of \(\sigma_d^x\) is as follows:
 \end{align}
 which means that the only \(\ket{\Psi^M_{m+n,-}}\) with \(n > 0\) that give a non-zero inner product with \(\sigma_d^x \ket{\Psi^M_{m,-}}\) is \(n=1\). This observation then gives
 \begin{align}
-	\left(m_d^x\right)_m^n = \delta_{n,1}\braket{g^1_m | \sigma_d^x | g^1_m} = \delta_{n,1}\left[e^{i\theta}\braket{\Psi^M_{m+1,-}|\sigma_d^x| \Psi^M_{m,-}} + \text{h.c.}\right] = \delta_{n,1}\left[e^{i\theta}\braket{\Psi^M_{m+1,-}|\sigma_d^x \pi^x | \Psi^M_{-m-1,-}} + \text{h.c.}\right]
+	\left<\sigma^x_d\right>_m^n =\frac{1}{2}\delta_{n,1}\braket{g^1_m | \sigma_d^x | g^1_m} = \frac{1}{2}\delta_{n,1}\left[\braket{\Psi^M_{m+1,-}|\sigma_d^x| \Psi^M_{m,-}} + \text{h.c.}\right] = -\frac{1}{2}\delta_{n,1}\left[\braket{\Psi^M_{m+1,-}|\sigma_d^x \pi^x | \Psi^M_{-m-1,-}} + \text{h.c.}\right]
 \end{align}
-\textit{We thus see that the impurity magnetization \(\left(m_d^x\right)_m^n\) along \(x\) for the state \(\ket{g^n_m}\) is determined by the matrix element of the string operator \(\sigma^x_d \pi^x\)}.
+\textit{We thus see that the impurity magnetization \(\left<\sigma^x_d\right>_m^n\) along \(x\) for the state \(\ket{g^n_m}\) is determined by the matrix element of the string operator \(\sigma^x_d \pi^x\)}. A general matrix element has the form
+\begin{equation}\begin{aligned}
+	\braket{\Psi^M_{m+1,-}|\sigma^x_d \pi^x | \Psi^M_{-(m+1),-}} = \frac{\sqrt{M + m +1}\sqrt{x^M_{m+1}}}{(1+2M)\sqrt{M+m+2}} = \frac{\sqrt{M^2 - \left(m+1\right)^2}}{\left(1+2M\right)}
+\end{aligned}\end{equation}
+The ground state manifold is defined by \(M = K/2\). Using this, we can write
+\begin{equation}\begin{aligned}
+	\left<\sigma^x_d\right>_m^1 = -\frac{1}{2}\left[\braket{\Psi^M_{m+1,-}|\sigma_d^x \pi^x | \Psi^M_{-m-1,-}} + \text{h.c.}\right] = -\frac{\sqrt{K^2 - \left(2m+2\right)^2}}{2\left(1+K\right)}\label{mag_x}
+\end{aligned}\end{equation}
 
 For \(m = -M\), we get
-\begin{align}
-	\braket{\Psi^M_{-M+1,-}|\sigma_d^x \pi^x | \Psi^M_{M - 1,-}} = \frac{\sqrt{2M-1}}{2M + 1}
-\end{align}
-The ground state manifold is defined by \(M = K/2\). Using this, we can write
-\begin{align}
-	\left(m_d^x\right)_{-M}^1 = \left[\braket{\Psi^M_{1-M,-}|\sigma_d^x \pi^x | \Psi^M_{M - 1,-}} + \text{h.c.}\right] = \frac{2\sqrt{2M-1}}{2M + 1} = \frac{2\sqrt{K-1}}{K+1}
-\end{align}
+\begin{gather}
+	\braket{\Psi^M_{-M+1,-}|\sigma_d^x \pi^x | \Psi^M_{M - 1,-}} = \frac{\sqrt{2M-1}}{2M + 1}\\
+	\left<\sigma^x_d\right>_{-M}^1 = -\frac{1}{2}\left[\braket{\Psi^M_{-M+1,-}|\sigma_d^x \pi^x | \Psi^M_{M - 1,-}} + \text{h.c.}\right] = -\frac{\sqrt{2M-1}}{2M + 1} = -\frac{\sqrt{K-1}}{K+1}
+\end{gather}
 
-We can similarly calculate the magnetization along the \(z-\)direction. The most general ground state is
-\begin{align}
-	\ket{g} = \sum_{m=-M}^{M-1} C_m \ket{\Psi^M_{m,-}}, &&& m \in \left[-M, M-1\right], &&& \sum_m |C_m|^2 = 1
-\end{align}
-The expectation value of \(\sigma^d_z\) will be non-zero only in the diagonal terms: \(\braket{\Psi^M_m | \sigma^z_d | \Psi^M_{m^\prime}} = \delta_{mm^\prime}\braket{\Psi^M_m | \sigma^z_d | \Psi^M_{m}}\). Using this, we get
-\begin{align}
-	\braket{g|\sigma^z_d|g} = \sum_{m=-M}^{M-1} |C_m|^2 \frac{\left[x_m^M - \left(M + m + 1\right)^2\right]}{{(M+m+1)(1+2M)}}
-\end{align}
-For the simpler case when \(C_m = \delta_{m,\pm (M - \frac{1}{2}) - \frac{1}{2}}\), we get
-\begin{align}
-	\braket{g_\pm|\sigma^z_d|g_\pm} = \pm \frac{2M-1}{2M+1} = \pm \frac{K-1}{K+1}
-\end{align}
+We can similarly calculate the magnetization along the \(z-\)direction in the state \(\ket{g^1_m}\). The expectation value of \(\sigma^d_z\) will be non-zero only in the diagonal terms: \(\braket{\Psi^M_m | \sigma^z_d | \Psi^M_{m^\prime}} = \delta_{mm^\prime}\braket{\Psi^M_m | \sigma^z_d | \Psi^M_{m}}\). Using this, we get
+\begin{equation}\begin{aligned}
+	\braket{g_m^1|\sigma^z_d|g_m^1} &= \frac{1}{2}\left[\braket{\Psi^M_{m,-}|\sigma_d^z | \Psi^M_{m,-}} + \braket{\Psi^M_{m+1,-}|\sigma_d^z | \Psi^M_{m+1,-}}\right]\\
+					&= \frac{1}{2}\left[\frac{x^M_m - \left( M+m+1 \right) ^2}{\left( N^M_m \right) ^2} + \frac{x^M_{m+1} - \left( M+m+2 \right) ^2}{\left( N^M_{m+1} \right) ^2}\right]\\
+					&= -\frac{1}{2}\left[\frac{2m+1}{2M+1} + \frac{2m+3}{2M+1}\right]\\
+					&= - \frac{2\left( m+1 \right) }{K+1}
+\end{aligned}\end{equation}
+
+Combining this with eq.~\ref{mag_x}, we get
+\begin{equation}\begin{aligned}
+	\left(\left<\sigma^x_d\right>_m^1\right)^2 + \left(\frac{1}{2}\left<\sigma^z_d\right>_m^1\right)^2 = \left[\frac{K}{2\left( 1+K \right) }\right] ^2
+\end{aligned}\end{equation}
+This relation constrains the magnetization along \(z\) in terms of the magnetization along \(x\) (which is related to the t'hooft loop \(\pi^x\)) and a function of \(K\) (the function is quantized because \(K\) can only take integer values).
+
 
 \section{URG equations for the multi-channel Kondo model}
 
