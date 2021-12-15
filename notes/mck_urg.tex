@@ -1,4 +1,4 @@
-\documentclass{revtex4-2}
+\documentclass[12pt]{revtex4-2}
 \usepackage{braket,amsmath,amssymb,graphicx,float,paralist,color}
 \usepackage[hidelinks]{hyperref}
 \allowdisplaybreaks
@@ -118,18 +118,18 @@ It is interesting to calculate the action of the parity operator \(\pi^x\) on th
 \begin{align}
 	\pi^x = (S_d^+ + S_d^-)\otimes_{i=1}^K \left(s_i^+ + s_i^-\right) 
 \end{align}
-We can write the eigenstates of \(s_\text{tot}^z\) in terms of the eigenstates of \(s_i^z\) using their Clebsch-Gordon coefficients:
+We can write the simultaneous eigenstates of \(s^2_\text{tot}\) and \(s_\text{tot}^z\) in terms of the eigenstates of \(s_i^z\) using their Clebsch-Gordon coefficients:
 \begin{align}
 	\ket{M,m} = \sum_{\left\{m_i\right\}\atop{\sum_i m_i = m}}\ket{m_1,m_2,...,m_K} C_{\left\{m_i\right\},m,M}
 \end{align}
-where \(C_{\left\{m_i\right\},m,M} = \braket{m_1,m_2,...,m_K|m,M}\) are the Clebsch-Gordon coefficients. Applying the parity operator on the state gives
+The state \(\ket{M,m}\) is defined by \(s_\text{tot}^2\ket{M,m} = M(M+1), s^z_\text{tot}\ket{M,m} = m\). The Clebsch-Gordon coefficients are defined as \(C_{\left\{m_i\right\},m,M} = \braket{m_1,m_2,...,m_K|m,M}\). We also define the simultaneous eigenstate \(\ket{m_d, M, m}\) of \(S_d^z,s_\text{tot}^z\) and \(s^2_\text{tot}\): \(S_d^z\ket{m_d, M, m} = m_d\ket{m_d, M, m}\). Applying \(\pi^x\) on this state gives
 \begin{align}
-	\pi^x \ket{S_d^z, M,m} = \sum_{\left\{m_i\right\}\atop{\sum_i m_i = m}}C_{\left\{m_i\right\},m,M}(S_d^+ + S_d^-)\ket{S_d^z}\otimes_{i=1}^K \left(s_i^+ + s_i^-\right)\ket{m_i} = \sum_{\left\{m_i\right\}\atop{\sum_i m_i = m}}C_{\left\{m_i\right\},m,M}\ket{-S_d^z}\otimes_{i=1}^K\ket{-m_i}\\
-	=\sum_{\left\{m_i\right\}\atop{\sum_i m_i = -m}}C_{\left\{-m_i\right\},m,M}\ket{-S_d^z}\otimes_{i=1}^K\ket{m_i}
+	\pi^x \ket{m_d, M,m} = \sum_{\left\{m_i\right\}\atop{\sum_i m_i = m}}C_{\left\{m_i\right\},m,M}(S_d^+ + S_d^-)\ket{m_d}\otimes_{i=1}^K \left(s_i^+ + s_i^-\right)\ket{m_i} = \sum_{\left\{m_i\right\}\atop{\sum_i m_i = m}}C_{\left\{m_i\right\},m,M}\ket{-m_d}\otimes_{i=1}^K\ket{-m_i}\\
+	=\sum_{\left\{m_i\right\}\atop{\sum_i m_i = -m}}C_{\left\{-m_i\right\},m,M}\ket{-m_d}\otimes_{i=1}^K\ket{m_i}
 \end{align}
-Using the identity \(\braket{M_1m_1,M_2m_2,\ldots|m,M} = \left( -1 \right)^{\sum_i M_i - M}\braket{M_1, -m_1; M_2 -m_2;\ldots|-m,M}\), we have \(C_{\left\{-m_i\right\},m,M} = C_{\left\{m_i\right\},-m,M}\). Substituting this, we get
+In the ground state subspace, we have \(M = \frac{K}{2}\), and we always have \(\sum_i M_i = \frac{K}{2}\). Using the identity \(\braket{M_1m_1,M_2m_2,\ldots|m,M} = \left( -1 \right)^{\sum_i M_i - M}\braket{M_1, -m_1; M_2 -m_2;\ldots|-m,M}\), we have \(C_{\left\{-m_i\right\},m,M} = C_{\left\{m_i\right\},-m,M}\). Substituting this, we get
 \begin{align}
-	\pi^x \ket{S_d^z, M,m} = \sum_{\left\{m_i\right\}\atop{\sum_i m_i = -m}}C_{\left\{m_i\right\},-m,M}\ket{-S_d^z}\otimes_{i=1}^K\ket{m_i} = \ket{-S_d^z, M, -m}
+	\pi^x \ket{m_d, M,m} = \sum_{\left\{m_i\right\}\atop{\sum_i m_i = -m}}C_{\left\{m_i\right\},-m,M}\ket{-m_d}\otimes_{i=1}^K\ket{m_i} = \ket{-m_d, M, -m}
 \end{align}
 The action of \(\pi^x\) on the eigenstates \(\ket{\Psi^M_{m,-}}\) can now be determined:
 \begin{align}
@@ -150,7 +150,7 @@ It can be seen that the action of the operator \(\pi^x\) is to interpolate betwe
 \subsection{Impurity magnetization along \(x\) in terms of matrix elements of the string operator \(\pi^x\)}
 We can show that the impurity magnetization along the \(x-\)direction in some specific ground states can be related to matrix elements of the string operator \(\pi^x\). We take a linear combination of two \(S^z\) eigenstates as the ground state:
 \begin{align}
-	\ket{g^n_m} = \frac{1}{\sqrt 2}\left[\ket{\Psi^M_{m,-}} + \ket{\Psi^M_{m+n,-1}}\right], m \in \left[-M, M-2\right] , n \in \left[1, M - m - 1\right] 
+	\ket{g^n_m} = \frac{1}{\sqrt 2}\left[\ket{\Psi^M_{m,-}} + e^{i\theta}\ket{\Psi^M_{m+n,-1}}\right], m \in \left[-M, M-2\right] , n \in \left[1, M - m - 1\right] 
 \end{align}
 The expectation value of the impurity spin along \(x\) in this state is given by
 \begin{align}
@@ -162,7 +162,7 @@ The action of \(\sigma_d^x\) is as follows:
 \end{align}
 which means that the only \(\ket{\Psi^M_{m+n,-}}\) with \(n > 0\) that give a non-zero inner product with \(\sigma_d^x \ket{\Psi^M_{m,-}}\) is \(n=1\). This observation then gives
 \begin{align}
-	\left<\sigma^x_d\right>_m^n =\frac{1}{2}\delta_{n,1}\braket{g^1_m | \sigma_d^x | g^1_m} = \frac{1}{2}\delta_{n,1}\left[\braket{\Psi^M_{m+1,-}|\sigma_d^x| \Psi^M_{m,-}} + \text{h.c.}\right] = -\frac{1}{2}\delta_{n,1}\left[\braket{\Psi^M_{m+1,-}|\sigma_d^x \pi^x | \Psi^M_{-m-1,-}} + \text{h.c.}\right]
+	\left<\sigma^x_d\right>_m^n =\frac{1}{2}\delta_{n,1}\braket{g^1_m | \sigma_d^x | g^1_m} = \frac{1}{2}\delta_{n,1}\left[\braket{\Psi^M_{m+1,-}|\sigma_d^x| \Psi^M_{m,-}}e^{-i\theta} + \text{h.c.}\right] = -\frac{1}{2}\delta_{n,1}\left[\braket{\Psi^M_{m+1,-}|\sigma_d^x \pi^x | \Psi^M_{-m-1,-}}e^{-i\theta} + \text{h.c.}\right]
 \end{align}
 \textit{We thus see that the impurity magnetization \(\left<\sigma^x_d\right>_m^n\) along \(x\) for the state \(\ket{g^n_m}\) is determined by the matrix element of the string operator \(\sigma^x_d \pi^x\)}. A general matrix element has the form
 \begin{equation}\begin{aligned}
@@ -170,16 +170,35 @@ which means that the only \(\ket{\Psi^M_{m+n,-}}\) with \(n > 0\) that give a no
 \end{aligned}\end{equation}
 The ground state manifold is defined by \(M = K/2\). Using this, we can write
 \begin{equation}\begin{aligned}
-	\left<\sigma^x_d\right>_m^1 = -\frac{1}{2}\left[\braket{\Psi^M_{m+1,-}|\sigma_d^x \pi^x | \Psi^M_{-m-1,-}} + \text{h.c.}\right] = -\frac{\sqrt{K^2 - \left(2m+2\right)^2}}{2\left(1+K\right)}\label{mag_x}
+	\left<\sigma^x_d\right>_m^1 = -\frac{1}{2}\left[\braket{\Psi^M_{m+1,-}|\sigma_d^x \pi^x | \Psi^M_{-m-1,-}}e^{-i\theta} + \text{h.c.}\right] = -\frac{\sqrt{K^2 - \left(2m+2\right)^2}}{2\left(1+K\right)}\cos\theta
+	\label{mag_x}
 \end{aligned}\end{equation}
-
 For \(m = -M\), we get
 \begin{gather}
 	\braket{\Psi^M_{-M+1,-}|\sigma_d^x \pi^x | \Psi^M_{M - 1,-}} = \frac{\sqrt{2M-1}}{2M + 1}\\
-	\left<\sigma^x_d\right>_{-M}^1 = -\frac{1}{2}\left[\braket{\Psi^M_{-M+1,-}|\sigma_d^x \pi^x | \Psi^M_{M - 1,-}} + \text{h.c.}\right] = -\frac{\sqrt{2M-1}}{2M + 1} = -\frac{\sqrt{K-1}}{K+1}
+	\left<\sigma^x_d\right>_{-M}^1 = -\frac{1}{2}\left[\braket{\Psi^M_{-M+1,-}|\sigma_d^x \pi^x | \Psi^M_{M - 1,-}}e^{-\theta} + \text{h.c.}\right] = -\frac{\sqrt{2M-1}}{2M + 1}\cos\theta = -\frac{\sqrt{K-1}}{K+1}\cos\theta
 \end{gather}
 
-We can similarly calculate the magnetization along the \(z-\)direction in the state \(\ket{g^1_m}\). The expectation value of \(\sigma^d_z\) will be non-zero only in the diagonal terms: \(\braket{\Psi^M_m | \sigma^z_d | \Psi^M_{m^\prime}} = \delta_{mm^\prime}\braket{\Psi^M_m | \sigma^z_d | \Psi^M_{m}}\). Using this, we get
+\subsection{Constraint on magnetization values}
+We can similarly calculate the magnetization along the \(y\) and \(z\) directions in the same state \(\ket{g^1_m}\). The magnetization along \(y\) can again be shown to depend on the matrix elements of the string parity operator \(\pi^y = \sigma_d^y \otimes_{i=1}^K \sigma^y_i\). The action of this operator on the eigenstates \(\ket{m_d, M, m}\) can be shown to be identical to that of \(\pi^x\) up to a phase factor:
+\begin{align}
+	\sigma_d^y \ket{m_d} &= \frac{1}{i}\left(S_d^+ - S_d^-\right) \ket{m_d} = \left(-1\right)^{m_d + \frac{1}{2}} \frac{1}{i}\ket{-m_d}\\
+	\pi^y \ket{m_d, M,m} &= \frac{1}{i^{K+1}}\sum_{\left\{m_i\right\}\atop{\sum_i m_i = m}}C_{\left\{m_i\right\},m,M}(S_d^+ - S_d^-)\ket{m_d}\otimes_{i=1}^K \left(s_i^+ - s_i^-\right)\ket{m_i}\\
+			     &= \frac{\left( -1 \right)^{S^z + \frac{K+1}{2} }}{i^{K+1}}\sum_{\left\{m_i\right\}\atop{\sum_i m_i = m}}C_{\left\{m_i\right\},m,M}\ket{-m_d}\otimes_{i=1}^K\ket{-m_i}\\
+			     &= \frac{\left( -1 \right)^{S^z + \frac{K+1}{2} }}{i^{K+1}}\pi^x \ket{m_d, M, m}\\
+			     &= \frac{\left( -1 \right)^{S^z + \frac{K+1}{2} }}{i^{K+1}} \ket{-m_d, M, -m}
+\end{align}
+Here, \(S^z = m_d + m\) is the total spin angular momentum along \(z\). Since the eigenstates \(\ket{\Psi^M_{m,-}}\) satisfy \(S^z = m + \frac{1}{2}\), we can write
+\begin{equation}\begin{aligned}
+	\pi^y \ket{\Psi^M_{m,-}} = \frac{\left( -1 \right)^{m + 1 + \frac{K}{2}}}{i^{K+1}} \pi^x\ket{\Psi^M_{m,-}} = \frac{\left( -1 \right)^{m + 2 + \frac{K}{2}}}{i^{K+1}} \ket{\Psi^M_{-m-1,-}}
+\end{aligned}\end{equation}
+The magnetization along \(y\) in the ground state \(\ket{g^1_m}\) can again be written in terms of matrix elements of the string operator \(\sigma_d^y \pi^y\):
+\begin{equation}\begin{aligned}
+	\label{mag_y}
+	\braket{g^1_m | \sigma^y_d | g^1_m} = \frac{1}{2}\left[\braket{\Psi^M_{m+1,-}|\sigma_d^y \pi^y|\Psi^M_{-m-1,-}} i^{K+1}\left( -1 \right)^{-m + 1 + \frac{K}{2}}e^{-i\theta} + \text{h.c.}\right] = -\frac{\sqrt{K^2 - \left( 2m+2 \right) ^2}}{2\left( 1+K \right) }\sin\theta
+\end{aligned}\end{equation}
+
+The expectation value of \(\sigma^d_z\) will be non-zero only in the diagonal terms: \(\braket{\Psi^M_m | \sigma^z_d | \Psi^M_{m^\prime}} = \delta_{mm^\prime}\braket{\Psi^M_m | \sigma^z_d | \Psi^M_{m}}\). Using this, we get
 \begin{equation}\begin{aligned}
 	\braket{g_m^1|\sigma^z_d|g_m^1} &= \frac{1}{2}\left[\braket{\Psi^M_{m,-}|\sigma_d^z | \Psi^M_{m,-}} + \braket{\Psi^M_{m+1,-}|\sigma_d^z | \Psi^M_{m+1,-}}\right]\\
 					&= \frac{1}{2}\left[\frac{x^M_m - \left( M+m+1 \right) ^2}{\left( N^M_m \right) ^2} + \frac{x^M_{m+1} - \left( M+m+2 \right) ^2}{\left( N^M_{m+1} \right) ^2}\right]\\
@@ -187,11 +206,15 @@ We can similarly calculate the magnetization along the \(z-\)direction in the st
 					&= - \frac{2\left( m+1 \right) }{K+1}
 \end{aligned}\end{equation}
 
-Combining this with eq.~\ref{mag_x}, we get
+Combining this with eqs.~\ref{mag_x} and ~\ref{mag_y}, we get
 \begin{equation}\begin{aligned}
-	\left(\left<\sigma^x_d\right>_m^1\right)^2 + \left(\frac{1}{2}\left<\sigma^z_d\right>_m^1\right)^2 = \left[\frac{K}{2\left( 1+K \right) }\right] ^2
+	\frac{1}{\cos^2\theta}\left(\left<\sigma^x_d\right>_m^1\right)^2 + \frac{1}{\sin^2\theta}\left(\left<\sigma^y_d\right>_m^1\right)^2 + \frac{1}{2}\left(\left<\sigma^z_d\right>_m^1\right)^2 = \frac{1}{2}\left(\frac{K}{1+K}\right)^2
 \end{aligned}\end{equation}
-This relation constrains the magnetization along \(z\) in terms of the magnetization along \(x\) (which is related to the t'hooft loop \(\pi^x\)) and a function of \(K\) (the function is quantized because \(K\) can only take integer values).
+This relation constrains the values of the magnetization along all the directions: the \(x\) and \(y\) magnetization values have already been shown to be related to the string operators \(\pi^x\) and \(\pi^y\) respectively (which are 't Hooft loops, and can be related to one another ), and the magnetization along \(z\) is therefore constrained in terms of the string operators on the left-hand side and the quantized fucntion on the right-hand side (the function is quantized because \(K\) can only take integer values). All the expectation values are calculated in the state \(\ket{g^1_m} = \ket{g^\theta_{S^z}} = \frac{1}{\sqrt 2}\left(\ket{S^z} + \ket{S^z+1}e^{i\theta}\right) \). For the specific value of \(\theta = \frac{\pi}{4}\), the constraint achieves global spin-rotation symmetry:
+\begin{equation}\begin{aligned}
+	\sum_{i=x,y,z}\left(\left<\sigma^i_d\right>_m^1\right)^2 = \left(\frac{K}{1+K}\right)^2
+\end{aligned}\end{equation}
+
 
 
 \section{URG equations for the multi-channel Kondo model}
