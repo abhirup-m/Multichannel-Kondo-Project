@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{27}%
+\begin{thebibliography}{37}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -165,6 +165,52 @@
   {Ludwig}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
   {Physical Review B}\ }\textbf {\bibinfo {volume} {48}},\ \bibinfo {pages}
   {7297} (\bibinfo {year} {1993})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Coleman}\ and\ \citenamefont
+  {P\'epin}(2003)}]{coleman_pepin_2003}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Coleman}}\ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {P\'epin}},\ }\href {\doibase 10.1103/PhysRevB.68.220405} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
+  {68}},\ \bibinfo {pages} {220405} (\bibinfo {year} {2003})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Roch}\ \emph {et~al.}(2009)\citenamefont {Roch},
+  \citenamefont {Florens}, \citenamefont {Costi}, \citenamefont {Wernsdorfer},\
+  and\ \citenamefont {Balestro}}]{roch_nicolas_costi_2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Roch}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Florens}},
+  \bibinfo {author} {\bibfnamefont {T.~A.}\ \bibnamefont {Costi}}, \bibinfo
+  {author} {\bibfnamefont {W.}~\bibnamefont {Wernsdorfer}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {F.}~\bibnamefont {Balestro}},\ }\href {\doibase
+  10.1103/PhysRevLett.103.197202} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {103}},\ \bibinfo {pages}
+  {197202} (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schiller}\ and\ \citenamefont
+  {De~Leo}(2008)}]{schiller_avraham_2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Schiller}}\ and\ \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {De~Leo}},\ }\href {\doibase 10.1103/PhysRevB.77.075114} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
+  {77}},\ \bibinfo {pages} {075114} (\bibinfo {year} {2008})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Durganandini}(2011)}]{Durganandini_2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Durganandini}},\ }\href {\doibase 10.1209/0295-5075/95/47003} {\bibfield
+  {journal} {\bibinfo  {journal} {{EPL} (Europhysics Letters)}\ }\textbf
+  {\bibinfo {volume} {95}},\ \bibinfo {pages} {47003} (\bibinfo {year}
+  {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {\ifmmode~\check{Z}\else \v{Z}\fi{}itko}\ and\
+  \citenamefont {Fabrizio}(2017)}]{zitko_fabrizio_2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {\ifmmode~\check{Z}\else \v{Z}\fi{}itko}}\ and\ \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Fabrizio}},\ }\href {\doibase
+  10.1103/PhysRevB.95.085121} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {95}},\ \bibinfo {pages} {085121}
+  (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Pang}\ and\ \citenamefont
   {Cox}(1991)}]{pang_cox_1991}%
   \BibitemOpen
@@ -191,15 +237,36 @@
   }\href {\doibase 10.1103/PhysRevB.75.045129} {\bibfield  {journal} {\bibinfo
   {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {75}},\ \bibinfo
   {pages} {045129} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {\ifmmode~\check{Z}\else \v{Z}\fi{}itko}\ and\
-  \citenamefont {Fabrizio}(2017)}]{zitko_fabrizio_2017}%
+\bibitem [{\citenamefont {Wilson}(1975)}]{wilson1975}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {\ifmmode~\check{Z}\else \v{Z}\fi{}itko}}\ and\ \bibinfo {author}
-  {\bibfnamefont {M.}~\bibnamefont {Fabrizio}},\ }\href {\doibase
-  10.1103/PhysRevB.95.085121} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
-  Rev. B}\ }\textbf {\bibinfo {volume} {95}},\ \bibinfo {pages} {085121}
-  (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.~G.}\ \bibnamefont
+  {Wilson}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Rev.
+  Mod. Phys.}\ }\textbf {\bibinfo {volume} {47}},\ \bibinfo {pages} {773}
+  (\bibinfo {year} {1975})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nozieres}(1974)}]{nozieres1974fermi}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Nozieres}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Journal of Low Temperature Physics}\ }\textbf {\bibinfo {volume} {17}},\
+  \bibinfo {pages} {31} (\bibinfo {year} {1974})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Andrei}\ \emph {et~al.}(1983)\citenamefont {Andrei},
+  \citenamefont {Furuya},\ and\ \citenamefont
+  {Lowenstein}}]{andreiKondoreview}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Andrei}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Furuya}}, \
+  and\ \bibinfo {author} {\bibfnamefont {J.~H.}\ \bibnamefont {Lowenstein}},\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Rev. Mod. Phys.}\
+  }\textbf {\bibinfo {volume} {55}},\ \bibinfo {pages} {331} (\bibinfo {year}
+  {1983})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tsvelick}\ and\ \citenamefont
+  {Wiegmann}(1983)}]{tsvelickKondoreview}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont
+  {Tsvelick}}\ and\ \bibinfo {author} {\bibfnamefont {P.~B.}\ \bibnamefont
+  {Wiegmann}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Adv.
+  in Phys.}\ }\textbf {\bibinfo {volume} {32}},\ \bibinfo {pages} {453}
+  (\bibinfo {year} {1983})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Mukherjee}\ and\ \citenamefont
   {Lal}(2020{\natexlab{a}})}]{anirbanurg1}%
   \BibitemOpen
@@ -250,6 +317,20 @@
   and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Lal}},\ }\href
   {\doibase 10.1088/1367-2630/ab05ff} {\ \textbf {\bibinfo {volume} {21}},\
   \bibinfo {pages} {023019} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kogan}(2018)}]{Kogan_2018}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Kogan}},\ }\href {\doibase 10.1088/2399-6528/aad484} {\bibfield  {journal}
+  {\bibinfo  {journal} {Journal of Physics Communications}\ }\textbf {\bibinfo
+  {volume} {2}},\ \bibinfo {pages} {085001} (\bibinfo {year}
+  {2018})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kuramoto}(1998)}]{Kuramoto1998}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Kuramoto}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {The
+  European Physical Journal B - Condensed Matter and Complex Systems}\ }\textbf
+  {\bibinfo {volume} {5}},\ \bibinfo {pages} {457} (\bibinfo {year}
+  {1998})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Varma}\ \emph {et~al.}(2002)\citenamefont {Varma},
   \citenamefont {Nussinov},\ and\ \citenamefont
   {Van~Saarloos}}]{varma2002singular}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.13)  15 DEC 2021 16:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.13)  16 DEC 2021 16:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -73,9 +73,12 @@ Class revtex4-2 Info: RevTeX society APS selected on input line 40.
 Class revtex4-2 Warning: No journal specified, using default pra.
 
 Class revtex4-2 Info: APS journal PRA selected on input line 7661.
-(/usr/share/texmf-dist/tex/latex/revtex/aps12pt4-2.rtx
-File: aps12pt4-2 2020/10/03 4.2e (https://journals.aps.org/revtex/ for documentation)
-Class revtex4-2 Info: RevTeX pointsize 12pt selected on input line 39.
+
+Class revtex4-2 Warning: No type size specified, using default 10.
+
+(/usr/share/texmf-dist/tex/latex/revtex/aps10pt4-2.rtx
+File: aps10pt4-2 2020/10/03 4.2e (https://journals.aps.org/revtex/ for documentation)
+Class revtex4-2 Info: RevTeX pointsize 10pt selected on input line 39.
 ) (/usr/share/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
 ) (/usr/share/texmf-dist/tex/latex/url/url.sty
@@ -385,108 +388,62 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+))
 \tf@toc=\write5
 \openout5 = `mck_urg.toc'.
 
- [2]
-<./stargraph.pdf, id=215, 799.33322pt x 444.86888pt>
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<./stargraph.pdf, id=195, 799.33322pt x 444.86888pt>
 File: ./stargraph.pdf Graphic file (type pdf)
 <use ./stargraph.pdf>
-Package pdftex.def Info: ./stargraph.pdf  used on input line 48.
-(pdftex.def)             Requested size: 140.40143pt x 78.13832pt.
-
-Overfull \hbox (24.04808pt too wide) detected at line 57
-[]
- []
-
-[3] [4 <./stargraph.pdf>]
-Overfull \hbox (67.71716pt too wide) detected at line 89
-[]
- []
-
-[5] [6]
-<./duality.pdf, id=274, 824.33594pt x 520.1323pt>
+Package pdftex.def Info: ./stargraph.pdf  used on input line 50.
+(pdftex.def)             Requested size: 153.00156pt x 85.15047pt.
+ [2] [3 <./stargraph.pdf>] [4]
+<./duality.pdf, id=266, 824.33594pt x 520.1323pt>
 File: ./duality.pdf Graphic file (type pdf)
 <use ./duality.pdf>
-Package pdftex.def Info: ./duality.pdf  used on input line 103.
-(pdftex.def)             Requested size: 210.59857pt x 132.88197pt.
+Package pdftex.def Info: ./duality.pdf  used on input line 107.
+(pdftex.def)             Requested size: 229.49844pt x 144.8027pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 110.
+(hyperref)                removing `math shift' on input line 114.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\pi' on input line 110.
+(hyperref)                removing `\pi' on input line 114.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 110.
+(hyperref)                removing `superscript' on input line 114.
 
-[7]
 
 Package amsmath Warning: Foreign command \atop;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 124.
+(amsmath)                 on input line 128.
 
-
-Overfull \hbox (85.15596pt too wide) detected at line 129
-[]
+[5 <./duality.pdf>]
+Overfull \hbox (36.2302pt too wide) in paragraph at lines 133--135
+\OT1/cmr/m/n/10 In the ground state sub-space, we have $\OML/cmm/m/it/10 M \OT1/cmr/m/n/10 = []$, and we al-ways have $[][] \OML/cmm/m/it/10 M[] \OT1/cmr/m/n/10 = []$. Us-ing the iden-tity $[] =
  []
-
-[8 <./duality.pdf>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 150.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 150.
+(hyperref)                removing `math shift' on input line 154.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\pi' on input line 150.
+(hyperref)                removing `math shift' on input line 154.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 150.
-
-[9]
-Overfull \hbox (99.10794pt too wide) detected at line 166
-[]
- []
-
-[10]
-Overfull \hbox (36.9301pt too wide) detected at line 199
-[][][]
- []
-
-[11] [12]
-Overfull \hbox (43.14983pt too wide) detected at line 249
-[]
- []
-
-[13] [14]
-Overfull \hbox (10.1397pt too wide) detected at line 280
-[]
- []
-
-[15]
-Overfull \hbox (3.9039pt too wide) detected at line 305
-[]
- []
+(hyperref)                removing `\pi' on input line 154.
 
 
-Overfull \hbox (25.94595pt too wide) detected at line 319
-[][][]
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 154.
 
-[16]
-Overfull \hbox (79.30621pt too wide) detected at line 323
-[][][]
- []
-
+[6] [7] [8] [9] [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 339.
@@ -499,251 +456,146 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `superscript' on input line 339.
 
-[17]
-<rg_flow_pms.pdf, id=391, 358.06793pt x 72.74786pt>
+<rg_flow_pms.pdf, id=355, 358.06793pt x 72.74786pt>
 File: rg_flow_pms.pdf Graphic file (type pdf)
 <use rg_flow_pms.pdf>
 Package pdftex.def Info: rg_flow_pms.pdf  used on input line 369.
-(pdftex.def)             Requested size: 187.19714pt x 38.03223pt.
-<./rg_flow.pdf, id=393, 763.4733pt x 129.39258pt>
+(pdftex.def)             Requested size: 203.99689pt x 41.4456pt.
+<./rg_flow.pdf, id=357, 763.4733pt x 129.39258pt>
 File: ./rg_flow.pdf Graphic file (type pdf)
 <use ./rg_flow.pdf>
 Package pdftex.def Info: ./rg_flow.pdf  used on input line 375.
-(pdftex.def)             Requested size: 327.59857pt x 55.51924pt.
-<../numerics/rg_flow_K=2.pdf, id=395, 1209.59888pt x 557.45404pt>
+(pdftex.def)             Requested size: 356.99844pt x 60.50255pt.
+[11]
+<../numerics/rg_flow_K=2.pdf, id=374, 1209.59888pt x 557.45404pt>
 File: ../numerics/rg_flow_K=2.pdf Graphic file (type pdf)
 <use ../numerics/rg_flow_K=2.pdf>
 Package pdftex.def Info: ../numerics/rg_flow_K=2.pdf  used on input line 391.
-(pdftex.def)             Requested size: 374.40143pt x 172.54527pt.
-<../numerics/rhomin_D.pdf, id=397, 771.5256pt x 551.3432pt>
+(pdftex.def)             Requested size: 408.00156pt x 188.02629pt.
+<../numerics/rhomin_D.pdf, id=376, 771.5256pt x 551.3432pt>
 File: ../numerics/rhomin_D.pdf Graphic file (type pdf)
 <use ../numerics/rhomin_D.pdf>
 Package pdftex.def Info: ../numerics/rhomin_D.pdf  used on input line 399.
-(pdftex.def)             Requested size: 234.0pt x 167.22139pt.
- [18 <./rg_flow_pms.pdf> <./rg_flow.pdf
+(pdftex.def)             Requested size: 255.0pt x 182.22144pt.
+ [12 <./rg_flow_pms.pdf> <./rg_flow.pdf
 
 pdfTeX warning: pdflatex (file ./rg_flow.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [19 <../numerics/rg_flow_K=2.pdf> <../numerics/rhomin_D.pdf>]
-Overfull \hbox (4.63226pt too wide) detected at line 428
-[]
- []
-
-[20]
-<../numerics/K to K-1.pdf, id=475, 639.85484pt x 547.34554pt>
+> <../numerics/rg_flow_K=2.pdf>] [13 <../numerics/rhomin_D.pdf>]
+<../numerics/K to K-1.pdf, id=446, 639.85484pt x 547.34554pt>
 File: ../numerics/K to K-1.pdf Graphic file (type pdf)
 <use ../numerics/K to K-1.pdf>
 Package pdftex.def Info: ../numerics/K to K-1.pdf  used on input line 459.
-(pdftex.def)             Requested size: 187.19714pt x 160.12924pt.
-<../numerics/irr_Jp_K=3.pdf, id=477, 647.93306pt x 547.34554pt>
+(pdftex.def)             Requested size: 203.99689pt x 174.5027pt.
+<../numerics/irr_Jp_K=3.pdf, id=448, 647.93306pt x 547.34554pt>
 File: ../numerics/irr_Jp_K=3.pdf Graphic file (type pdf)
 <use ../numerics/irr_Jp_K=3.pdf>
 Package pdftex.def Info: ../numerics/irr_Jp_K=3.pdf  used on input line 467.
-(pdftex.def)             Requested size: 210.59857pt x 177.90189pt.
-<../numerics/irr_Jp_K=50.pdf, id=478, 661.69162pt x 547.34554pt>
+(pdftex.def)             Requested size: 229.49844pt x 193.87054pt.
+<../numerics/irr_Jp_K=50.pdf, id=449, 661.69162pt x 547.34554pt>
 File: ../numerics/irr_Jp_K=50.pdf Graphic file (type pdf)
 <use ../numerics/irr_Jp_K=50.pdf>
 Package pdftex.def Info: ../numerics/irr_Jp_K=50.pdf  used on input line 468.
-(pdftex.def)             Requested size: 210.59857pt x 174.20204pt.
- [21]
+(pdftex.def)             Requested size: 229.49844pt x 189.83662pt.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 473.
 
-[22 <../numerics/K to K-1.pdf> <../numerics/irr_Jp_K=3.pdf> <../numerics/irr_Jp_K=50.pdf>]
-Overfull \hbox (73.3584pt too wide) detected at line 490
-[][][]
- []
-
-[23pdfTeX warning (ext4): destination with the same identifier (name{equation.8.95}) has been already used, duplicate ignored
+[14] [15pdfTeX warning (ext4): destination with the same identifier (name{equation.8.94}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.509 S
-       imilarly, using arguments identical to those used in the spin-\(\frac...] [24] [25]
-Overfull \hbox (35.2753pt too wide) detected at line 606
-[][][]
- []
-
-
-Overfull \hbox (14.99936pt too wide) detected at line 615
-[][][]
- []
-
-[26] [27] [28]
-Overfull \hbox (83.31851pt too wide) detected at line 678
-[][][]
- []
-
-[29]
+l.494 \end{aligned}\end{equation}
+                                  <../numerics/K to K-1.pdf> <../numerics/irr_Jp_K=3.pdf> <../numerics/irr_Jp_K=50.pdf>] [16] [17] [18] [19]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 706.
+(hyperref)                removing `math shift' on input line 708.
 
-[30]
-Overfull \hbox (112.7878pt too wide) detected at line 728
+[20]
+Overfull \hbox (0.11604pt too wide) detected at line 730
 []
  []
 
-[31]
-Overfull \hbox (21.8524pt too wide) detected at line 740
+[21] [22]
+Overfull \hbox (17.31512pt too wide) detected at line 803
 []
  []
 
-[32] [33]
-Overfull \hbox (129.682pt too wide) detected at line 801
+[23] [24] [25] [26]
+Overfull \hbox (8.05917pt too wide) detected at line 946
 []
  []
 
-
-Overfull \hbox (18.06598pt too wide) detected at line 809
-[]
- []
-
-
-Overfull \hbox (92.87271pt too wide) detected at line 816
-[]
- []
-
-[34]
-Overfull \hbox (54.87901pt too wide) detected at line 829
-[]
- []
-
-[35]
-Overfull \hbox (36.89967pt too wide) in paragraph at lines 837--840
-\OT1/cmr/m/n/12 two-channel prob-lem, we have four pos-si-ble states in to-tal: $[] = []$.
- []
-
-
-Overfull \hbox (74.7967pt too wide) detected at line 856
-[]
- []
-
-[36]
-Overfull \hbox (54.20088pt too wide) detected at line 879
-[]
- []
-
-[37] [38]
-Overfull \hbox (55.44424pt too wide) detected at line 934
-[]
- []
-
-[39]
-Overfull \hbox (115.76431pt too wide) detected at line 944
-[]
- []
-
-<../numerics/chi_mchannel.pdf, id=806, 985.45987pt x 660.47093pt>
+<../numerics/chi_mchannel.pdf, id=754, 985.45987pt x 660.47093pt>
 File: ../numerics/chi_mchannel.pdf Graphic file (type pdf)
 <use ../numerics/chi_mchannel.pdf>
-Package pdftex.def Info: ../numerics/chi_mchannel.pdf  used on input line 948.
-(pdftex.def)             Requested size: 374.40143pt x 250.93117pt.
-[40] [41 <../numerics/chi_mchannel.pdf>]
-Overfull \hbox (111.48521pt too wide) detected at line 1004
+Package pdftex.def Info: ../numerics/chi_mchannel.pdf  used on input line 950.
+(pdftex.def)             Requested size: 408.00156pt x 273.44533pt.
+[27] [28 <../numerics/chi_mchannel.pdf>]
+Overfull \hbox (3.9791pt too wide) detected at line 1025
 []
  []
 
-[42]
-Overfull \hbox (121.58122pt too wide) detected at line 1023
-[]
- []
-
-[43] [44] [45]
-<../numerics/disc_mag_imp.pdf, id=903, 1010.65335pt x 627.75024pt>
+[29] [30]
+<../numerics/disc_mag_imp.pdf, id=840, 1010.65335pt x 627.75024pt>
 File: ../numerics/disc_mag_imp.pdf Graphic file (type pdf)
 <use ../numerics/disc_mag_imp.pdf>
-Package pdftex.def Info: ../numerics/disc_mag_imp.pdf  used on input line 1074.
-(pdftex.def)             Requested size: 280.80286pt x 174.41827pt.
-
-Overfull \hbox (153.70235pt too wide) in paragraph at lines 1078--1079
-\OT1/cmr/m/n/12 In-stead, if we look at the case of $\OML/cmm/m/it/12 K \OT1/cmr/m/n/12 = 1$, the ground state is in the sub-space of $[] \OML/cmm/m/it/12 ; []$\OT1/cmr/m/n/12 ,
- []
-
-[46 <../numerics/disc_mag_imp.pdf>]
-<../numerics/disc_mag_bath.pdf, id=922, 988.73523pt x 627.75024pt>
+Package pdftex.def Info: ../numerics/disc_mag_imp.pdf  used on input line 1076.
+(pdftex.def)             Requested size: 306.00311pt x 190.06984pt.
+ [31 <../numerics/disc_mag_imp.pdf>]
+<../numerics/disc_mag_bath.pdf, id=864, 988.73523pt x 627.75024pt>
 File: ../numerics/disc_mag_bath.pdf Graphic file (type pdf)
 <use ../numerics/disc_mag_bath.pdf>
-Package pdftex.def Info: ../numerics/disc_mag_bath.pdf  used on input line 1111.
-(pdftex.def)             Requested size: 280.80286pt x 178.27849pt.
- [47] [48 <../numerics/disc_mag_bath.pdf>]
-<../numerics/disc_mag_global.pdf, id=955, 1010.65335pt x 627.75024pt>
+Package pdftex.def Info: ../numerics/disc_mag_bath.pdf  used on input line 1112.
+(pdftex.def)             Requested size: 306.00311pt x 194.28447pt.
+ [32 <../numerics/disc_mag_bath.pdf>]
+<../numerics/disc_mag_global.pdf, id=888, 1010.65335pt x 627.75024pt>
 File: ../numerics/disc_mag_global.pdf Graphic file (type pdf)
 <use ../numerics/disc_mag_global.pdf>
 Package pdftex.def Info: ../numerics/disc_mag_global.pdf  used on input line 1158.
-(pdftex.def)             Requested size: 280.80286pt x 174.41827pt.
+(pdftex.def)             Requested size: 306.00311pt x 190.06984pt.
 
-Overfull \hbox (99.03674pt too wide) in paragraph at lines 1162--1163
-\OT1/cmr/m/n/12 stead, if we look at the case of $\OML/cmm/m/it/12 K \OT1/cmr/m/n/12 = 1$, the ground state is in the sub-space of $[] \OML/cmm/m/it/12 ; []$\OT1/cmr/m/n/12 ,
- []
-
-[49 <../numerics/disc_mag_global.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1164.
+(hyperref)                removing `math shift' on input line 1162.
 
-[50]
-<../numerics/entropy_comparison.pdf, id=1002, 652.68365pt x 624.4709pt>
+[33 <../numerics/disc_mag_global.pdf>]
+<../numerics/entropy_comparison.pdf, id=923, 1033.4698pt x 769.15677pt>
 File: ../numerics/entropy_comparison.pdf Graphic file (type pdf)
 <use ../numerics/entropy_comparison.pdf>
-Package pdftex.def Info: ../numerics/entropy_comparison.pdf  used on input line 1188.
-(pdftex.def)             Requested size: 187.19714pt x 179.10043pt.
- [51 <../numerics/entropy_comparison.pdf>] [52]
-Overfull \hbox (11.17227pt too wide) detected at line 1228
-[]
- []
-
-
-Overfull \hbox (11.28894pt too wide) detected at line 1232
-[]
- []
-
-[53]
+Package pdftex.def Info: ../numerics/entropy_comparison.pdf  used on input line 1180.
+(pdftex.def)             Requested size: 255.0pt x 189.77713pt.
+ [34 <../numerics/entropy_comparison.pdf>] [35]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1273.
+(hyperref)                removing `math shift' on input line 1261.
 
-[54]
-Overfull \hbox (0.77745pt too wide) detected at line 1297
-[][][]
+
+Overfull \hbox (21.21884pt too wide) in paragraph at lines 1262--1263
+[]\OT1/cmr/m/n/10 The Hamil-to-nian is the same as eq. []A1[], but the im-pu-rity is now a spin-$\OML/cmm/m/it/10 S$ \OT1/cmr/m/n/10 ob-ject, such that $\OML/cmm/m/it/10 S[] \OMS/cmsy/m/n/10 2 []$\OT1/cmr/m/n/10 . 
  []
 
-
-Overfull \hbox (11.95682pt too wide) detected at line 1302
-[][][]
+[36] [37] (./mck_urg.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 118--125
+[]\OT1/cmr/m/n/9 T. Kimura and S. Ozaki, []Jour-nal of the Phys-i-cal So-ci-ety of Japan \OT1/cmr/bx/n/9 86\OT1/cmr/m/n/9 , 084703 (2017)[],
  []
 
-
-Overfull \hbox (32.38649pt too wide) detected at line 1312
-[][][]
- []
-
-[55]
-Overfull \hbox (32.38649pt too wide) detected at line 1317
-[][][]
- []
-
-[56] (./mck_urg.bbl [57]
-Underfull \hbox (badness 6300) in paragraph at lines 284--290
-[]\OT1/cmr/m/n/10.95 A. V. Rozhkov, []In-ter-na-tional Jour-nal of Mod-ern Physics B \OT1/cmr/bx/n/10.95 12\OT1/cmr/m/n/10.95 , 3457 (1998)[],
- []
-
-) [58] (./mck_urg.aux)
+[38]) [39] (./mck_urg.aux)
 Package rerunfilecheck Info: File `mck_urg.out' has not changed.
-(rerunfilecheck)             Checksum: A0279A07B093261FEF6A22C9C8D9E44C;9317.
+(rerunfilecheck)             Checksum: 31CA6F9E5CDD9415496FAC28CAA670EF;8861.
  ) 
 Here is how much of TeX's memory you used:
- 11775 strings out of 478994
- 166798 string characters out of 5864750
- 510757 words of memory out of 5000000
- 28607 multiletter control sequences out of 15000+600000
- 412596 words of font info for 60 fonts, out of 8000000 for 9000
+ 11780 strings out of 478994
+ 167346 string characters out of 5864750
+ 529429 words of memory out of 5000000
+ 28626 multiletter control sequences out of 15000+600000
+ 410533 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,17n,74p,2033b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on mck_urg.pdf (58 pages, 888543 bytes).
+ 71i,17n,74p,2050b,520s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb>
+Output written on mck_urg.pdf (39 pages, 902216 bytes).
 PDF statistics:
- 1297 PDF objects out of 1440 (max. 8388607)
- 1173 compressed objects within 12 object streams
- 488 named destinations out of 1000 (max. 500000)
- 367 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1230 PDF objects out of 1440 (max. 8388607)
+ 1122 compressed objects within 12 object streams
+ 475 named destinations out of 1000 (max. 500000)
+ 351 words of extra memory for PDF output out of 10000 (max. 10000000)
 
