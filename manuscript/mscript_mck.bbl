@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{39}%
+\begin{thebibliography}{41}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -191,6 +191,12 @@
   {Tripathi}},\ }\href {https://books.google.co.in/books?id=IHVUDwAAQBAJ}
   {\emph {\bibinfo {title} {Landau Fermi Liquids and Beyond}}}\ (\bibinfo
   {publisher} {CRC Press},\ \bibinfo {year} {2018})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fradkin}(2013)}]{fradkin2013field}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Fradkin}},\ }\href@noop {} {\emph {\bibinfo {title} {Field theories of
+  condensed matter physics}}}\ (\bibinfo  {publisher} {Cambridge University
+  Press},\ \bibinfo {year} {2013})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Varma}\ and\ \citenamefont
   {Yafet}(1976)}]{varma_yafet_1976}%
   \BibitemOpen
@@ -379,4 +385,15 @@
   {} {\bibfield  {journal} {\bibinfo  {journal} {Rev. Mod. Phys.}\ }\textbf
   {\bibinfo {volume} {80}},\ \bibinfo {pages} {395} (\bibinfo {year}
   {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mari{\'{c}}}\ \emph {et~al.}(2020)\citenamefont
+  {Mari{\'{c}}}, \citenamefont {Giampaolo},\ and\ \citenamefont
+  {Franchini}}]{Maric2020}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Mari{\'{c}}}}, \bibinfo {author} {\bibfnamefont {S.~M.}\ \bibnamefont
+  {Giampaolo}}, \ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Franchini}},\ }\href {\doibase 10.1038/s42005-020-00486-z} {\bibfield
+  {journal} {\bibinfo  {journal} {Communications Physics}\ }\textbf {\bibinfo
+  {volume} {3}},\ \bibinfo {pages} {220} (\bibinfo {year} {2020})}\BibitemShut
+  {NoStop}%
 \end{thebibliography}%

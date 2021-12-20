@@ -31,13 +31,14 @@
 \section{Fixed point theory of the overscreened multi-channel Kondo model}
 
 \subsection{RG flows towards intermediate coupling}
+\label{rg_flow_section}
 We start with the usual \(K\)-channel Kondo model Hamiltonian with isotropic couplings \cite{Noz_blandin_1980}:
 \begin{gather}
 	\label{mc_ham}
-	H = \sum_{l=1}^K H_l~,\\
+	H = \sum_{l=1}^K H_l~,\nonumber\\
 	H_l = \sum_{k}\sum_{\alpha=\uparrow,\downarrow}\epsilon_{k,l} \hat n_{k\alpha,l} + J\sum_{kk^\prime} \sum_{\alpha,\beta= \uparrow,\downarrow}\vec{S_d}\cdot\frac{1}{2}\vec{\sigma}_{\alpha\alpha^\prime}c_{k\alpha,l}^\dagger c_{k^\prime\alpha^\prime, l}~.
 \end{gather}
-Here, \(l\) sums over the \(K\) channels of the conduction bath, \(k,k^\prime\) sum over all the momentum states of the bath and \(\alpha,\beta\) sum over the two spin indices of a single electron. \(c_{k\alpha,l}\) is the fermionic field operator at momentum \(k\), spin \(\alpha\) and channel \(l\). \(\epsilon_{k,l}\) represents the dispersion of the \(l^\text{th}\) conduction channel. \(\vec S_d\) is the impurity spin operator and \(\vec \sigma\) is the vector of Pauli matrices.
+Here, \(l\) sums over the \(K\) channels of the conduction bath, \(k,k^\prime\) sum over all the momentum states of the bath and \(\alpha,\beta\) sum over the two spin indices of a single electron. \(c_{k\alpha,l}\) is the fermionic field operator at momentum \(k\), spin \(\alpha\) and channel \(l\). \(\epsilon_{k,l}\) represents the dispersion of the \(l^\text{th}\) conduction channel. \(\vec \sigma\) is the vector of Pauli matrices and \(\vec S_d = \frac{1}{2}\vec \sigma_d\) is the impurity spin operator.
 
 We have performed a renormalization group analysis of the Hamiltonian using the recently developed URG method \cite{anirbanmott2,anirbanmott2,anirbanurg1,anirbanurg2,siddharthacpi,santanukagome,1dhubjhep}. The RG proceeds by applying unitary transformations in order to block-diagonalize the Hamiltonian by removing number fluctuations of the high energy degrees of freedom. If the most energetic electronic state at the \(j^\text{th}\) RG step is \(\ket{j}\) defined by the energy \(D_{(j)}\), the Hamiltonian will in general not conserve the number of particles in this state: \(\left[H_{(j)}, \hat n_{j}\right] \neq 0\). The unitary transformation \(U_{(j)}\) will remove this number fluctuation at the next RG step:
 \begin{equation}\begin{aligned}
@@ -53,19 +54,19 @@ The generator is fermionic in nature:
 \end{aligned}\end{equation}
 and is given by the expression
 \begin{equation}\begin{aligned}
-	\eta^\dagger_{(j)} = \frac{1}{\hat \omega_j - \text{Tr}\left(H_{(j)} \hat n_{j}\right) } c^\dagger_{j} \text{Tr}\left(H_{(j)}c_{j}\right)
+	\eta^\dagger_{(j)} = \frac{1}{\hat \omega_{(j)} - \text{Tr}\left(H_{(j)} \hat n_{j}\right) } c^\dagger_{j} \text{Tr}\left(H_{(j)}c_{j}\right)
 \end{aligned}\end{equation}
-The operator \(\hat \omega_j\) encodes the quantum fluctuation scales arising from the interplay of the kinetic energy terms and the interaction terms of the Hamiltonian:
+The operator \(\hat \omega_{(j)}\) encodes the quantum fluctuation scales arising from the interplay of the kinetic energy terms and the interaction terms of the Hamiltonian:
 \begin{equation}\begin{aligned}
-	\hat \omega_j = H_{(j-1)} - H^i_{(j)}
+	\hat \omega_{(j)} = H_{(j-1)} - H^i_{(j)}
 \end{aligned}\end{equation}
 \(H^i_{(j)}\) is that part of \(H_{(j)}\) that commutes with \(\hat n_j\) but does not commute with at least one \(\hat n_l\) for \(l < j\). The RG continues up to energy \(D^*\) where a fixed point is reached from the vanishing of either the numerator or the denominator.
 
 The derivation of the RG equation for the overscreened regime \((2S < K)\) of the spin-\(S\)-impurity \(K\)-channel Kondo problem is shown in appendix \ref{appendix_urg}. On decoupling circular isoenergetic shells at energies \(D_{(j)}\), the change in the Kondo coupling at the \(j^\text{th}\) RG step, \(\Delta J_{(j)}\), is given by
 \begin{equation}\begin{aligned}
-	\Delta J_{(j)} = -\frac{J_{(j)}^2 \mathcal{N}_{(j)}}{\omega_j - \frac{D_{(j)}}{2} + \frac{J_{(j)}}{4}}\left( 1 - \frac{1}{2}\rho J_{(j)} K \right) 
+	\Delta J_{(j)} = -\frac{J_{(j)}^2 \mathcal{N}_{(j)}}{\omega_{(j)} - \frac{D_{(j)}}{2} + \frac{J_{(j)}}{4}}\left( 1 - \frac{1}{2}\rho J_{(j)} K \right) 
 \end{aligned}\end{equation}
-\(\mathcal{N}_{(j)}\) is the number of electronic states at the energy shell \(D_{(j)}\). We work in the low quantum fluctuation regime \(\omega_j < \frac{D_{(j)}}{2}\). There are three fixed points of the RG equation. One arises from the vanishing of the denominator, and was present in the single-channel Kondo RG equation as well \cite{kondo_urg}. As shown there, this fixed-point goes to \(J^* = \infty\) as the bare bandwidth of the conduction electrons is made large. The other trivial fixed point is the trivial one at \(J^* = 0\). The third fixed point is reached when the numerator vanishes: \(J^* = \frac{2}{K \rho}\) \cite{Kogan_2018,Kuramoto1998,Noz_blandin_1980}. Only the intermediate fixed point is stable~\cite{affleck_1991_overscreen,Tsvelick_Weigmann_mchannel_1984,Gan_mchannel_1994,pang_cox_1991,emery_kivelson,vondelft_prl_1998}.
+\(\mathcal{N}_{(j)}\) is the number of electronic states at the energy shell \(D_{(j)}\). We work in the low quantum fluctuation regime \(\omega_{(j)} < \frac{D_{(j)}}{2}\). There are three fixed points of the RG equation. One arises from the vanishing of the denominator, and was present in the single-channel Kondo RG equation as well \cite{kondo_urg}. As shown there, this fixed-point goes to \(J^* = \infty\) as the bare bandwidth of the conduction electrons is made large. The other trivial fixed point is the trivial one at \(J^* = 0\). The third fixed point is reached when the numerator vanishes: \(J^* = \frac{2}{K \rho}\) \cite{Kogan_2018,Kuramoto1998,Noz_blandin_1980}. Only the intermediate fixed point is stable~\cite{affleck_1991_overscreen,Tsvelick_Weigmann_mchannel_1984,Gan_mchannel_1994,pang_cox_1991,emery_kivelson,vondelft_prl_1998}.
 \begin{figure}[htpb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{./rg_flow.pdf}
@@ -73,7 +74,7 @@ The derivation of the RG equation for the overscreened regime \((2S < K)\) of th
 	\label{rg_flow}
 \end{figure}
 
-The RG equation reduces to the perturbative form \(\Delta J_{(j)} \simeq \frac{J_{(j)}^2 \mathcal{N}_{(j)}}{D_{(j)}}\left( 1 - \frac{1}{2}\rho J_{(j)} K \right)\)~\cite{Kogan_2018,Kuramoto1998,Noz_blandin_1980,tripathi2018landau} when one replaces \(\omega_j\) with the ground state energy \(-\frac{D_{(j)}}{2}\) and assumes \(J \ll D_{(j)}\).
+The RG equation reduces to the perturbative form \(\Delta J_{(j)} \simeq \frac{J_{(j)}^2 \mathcal{N}_{(j)}}{D_{(j)}}\left( 1 - \frac{1}{2}\rho J_{(j)} K \right)\)~\cite{Kogan_2018,Kuramoto1998,Noz_blandin_1980,tripathi2018landau} when one replaces \(\omega_{(j)}\) with the ground state energy \(-\frac{D_{(j)}}{2}\) and assumes \(J \ll D_{(j)}\).
 
 \subsection{Star graph as the effective fixed point Hamiltonian}
 The fixed point Hamiltonian takes the form
@@ -87,13 +88,24 @@ To study the low energy physics and universality of the problem, we will mostly 
 	\label{stargraph}
 	H^* = J\sum_l\sum_{kk^\prime}^* \vec{S_d}\cdot\frac{1}{2}\vec{\sigma}_{\alpha\alpha^\prime}c_{k\alpha,l}^\dagger c_{k^\prime\alpha^\prime, l} = J\vec{S_d}\cdot\sum_l \vec{s}_l~.
 \end{aligned}\end{equation}
-At the last step, we defined the local spin operator of each conduction channel \(\vec{s}_l = \frac{1}{2}\sum_{kk^\prime}^*\sum_{\alpha\beta}\vec{\sigma}_{\alpha\alpha^\prime}c_{k\alpha,l}^\dagger c_{k^\prime\alpha^\prime, l}\).
+At the last step, we defined the local spin operator \(\vec{s}_l = \frac{1}{2}\sigma_l = \frac{1}{2}\sum_{kk^\prime}^*\sum_{\alpha\beta}\vec{\sigma}_{\alpha\alpha^\prime}c_{k\alpha,l}^\dagger c_{k^\prime\alpha^\prime, l}\) of each conduction channel.
 \begin{figure}[htpb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{./stargraph.pdf}
 	\caption{Zero bandwidth limit of the fixed point Hamiltonian. The central yellow node is the impurity spin, which is talking withe the local spins of the channels represented as green nodes.}
 	\label{fig:-stargraph-pdf}
 \end{figure}
+The star graph commutes with several operators, including the total spin operator \(J^z = S_d^z + \sum_l s_l^z\) along \(z\), the total bath local spin operator \(s^2_\text{tot} = \left(\sum_l \vec s_l\right)^2\) and the string operators 
+\begin{equation}\begin{aligned}
+\pi^{x,y,z} = \sigma_d^{x,y,z} \otimes_{l=1}^K \sigma_l^{x,y,z}~.
+\end{aligned}\end{equation}
+The \(\pi^z\) acts on the eigenstates \(\ket{J^z}\) and reveals the odd/even parity of the eigenvalue \(J^z\), and is hence a parity operator. Interestingly, the modified string operator \(\sigma_d^z \pi^z\) is a Wilson loop that wraps around the outer nodes of the star graph:
+\begin{equation}\begin{aligned}
+	\label{w_loop}
+	\pi^z_c \equiv \sigma_d^z \pi^z = \exp\left[i \frac{\pi}{2} \left(\sum_{l=1}^K \sigma^z_l - K\right)\right] 
+\end{aligned}\end{equation}
+\(\pi^x\) and \(\pi^y\) mix states of opposite parity. For example, it can be shown that \(\pi^x \ket{J^z} = -\ket{J^z}\). The corresponding modified string operator \(\pi^x_c \equiv \sigma_d^x \pi^x\) is an 't Hooft operator \cite{fradkin2013field}.
+
 
 There are multiple reasons for working with specifically the star graph and zero mode Hamiltonians in general. In the URG analysis of the one dimensional Hubbard model \cite{1dhubjhep}, a study of the zero mode Hamiltonian (in that case, the Fermi surface itself) was sufficient to topologically characterize various phases of the Berezinskii-Kosterlitz-Thouless (BKT) RG phase diagram. In the single-channel Kondo model, the star graph is just the two spin Heisenberg, and they share the same ground state \cite{varma_yafet_1976,yosida_1966,wilson1975renormalization} along with thermodynamic properties \cite{varma_yafet_1976,kondo_urg}. Within the MCK model itself, the star graph is able to mimic the nature of the RG flows: At weak coupling \(J \to 0^+\), the central spin is weakly coupled to the outer spins and  prone to screening because of the \(s^\pm\) terms in the star graph, and at strong coupling \(J \to \infty^-\), the outer spin-half objects tightly bind with the central spin-half object to form a single spin object that interacts with the remaining states through an exchange coupling which is RG relevant, rendering both the terminal fixed points unstable. The true stable fixed point must then lie somewhere in between, and we recover the schematic phase diagram of fig.~\ref{rg_flow}. Our claim is that the non-Fermi liquid arises solely from the degeneracy of the ground state manifold of the underlying zero mode Hamiltonian, and the star graph captures the degeneracy in its entirety. The RG flows of the MCK model have been show to \textit{preserve the degeneracy of the ground state}~\cite{pang_cox_1991,kroha_kolf_2007,zitko_fabrizio_2017}\textcolor{red}. The star graph conserves the total spin \(S^z\), and this leads to a \(K-\)fold degeneracy in the ground state of the \(K-\)channel spin-half star graph which is preserved under the RG flow. This is qualitatively different from the case of the single-channel Kondo model where the \(2-\)fold degeneracy of the local moment fixed point crosses over into a stable and unique singlet ground state. The importance of the degeneracy can be shown in the following manner. The ground state degeneracy of the more general star graph with a spin-\(S\) impurity and \(K\) channels is given by \(|K - 2S|+1\). The cases of \(K=2S\), \(K<2S\) and \(K>2S\) correspond to exactly screened, underscreened and overscreened regimes respectively. The latter two cases correspond to a multiply-degenerate manifold, and simultaneous have non-Fermi liquid phases~\cite{Noz_blandin_1980,Gan_Andrei_Coleman_1993,emery_kivelson,Gan_mchannel_1994,Tsvelick_Weigmann_mchannel_1984,Tsvelick_weigmann_mchannel_1985,parcollet_olivier_large_N,kimura_taro_Su_N_kondo,PhysRevB.73.224445,cox_jarrell_two_channel_rev,affleck_1991_overscreen,Coleman_tsvelik,affleck1993exact,coleman_pepin_2003,roch_nicolas_costi_2009,schiller_avraham_2008,Durganandini_2011}, while the first regime has a unique ground state and is described by a local Fermi liquid phase \cite{wilson1975,nozieres1974fermi,Noz_blandin_1980,andreiKondoreview,tsvelickKondoreview}, thereby substantiating the claim that a degeneracy greater than unity leads to non-Fermi liquid physics.
 \section{Important Properties of the Star Graph}
@@ -177,6 +189,34 @@ The magnetization is therefore discontinuous as \(h\to 0\); it goes to different
 The non-analyticity for \(K>1\) occurs because the magnetic field is able to flip the ground state. For example, for \(K=2\), the states in question are \(\ket{M=1, m=-1,0}\). For \(h>0\), the ground state occurs in the subspace \(\ket{S_d^z=1/2, m=-1},\ket{S_d^z=-1/2,m=0}\). If we now flip the magnetic field, the ground state subspace flips to \(\ket{S_d^z=1/2, m=0},\ket{S_d^z=-1/2,m=1}\). Instead, if we look at the case of \(K=1\), the ground state is in the subspace of \(\ket{S_d^z=1/2,m=-1/2},\ket{S_d^z=-1/2, m=1/2}\), and since there is only this one subspace, the ground state is independent of the field. From this discussion, it is clear that the non-analyticity appears because there are multiple values of \(m \in [-M, M-1]\) in the ground state manifold, which means that it is the ground state degeneracy that causes the non-analyticity.
 
 \subsection{Impurity magnetization in terms of parity operators}
+The expectation value of the impurity magnetization along a particular direction and in specific ground states can be related to the 't Hooft operator defined under eq.~\ref{w_loop}. We will work in the state comprised of two adjacent eigenstates of \(J^z\):
+\begin{equation}\begin{aligned}
+	\ket{g^\theta_{J^z}} \equiv \frac{1}{\sqrt 2}\left( \ket{J^z} + e^{i\theta}\ket{J^z+1}\right), && J^z < \frac{1}{2}\left( K-1 \right)
+\end{aligned}\end{equation}
+The expectation value of the impurity magnetization operator \(\sigma_d^x\) can be expressed as
+\begin{equation}\begin{aligned}
+	\left<\sigma_d^x\right> \equiv \langle g^\theta_{J^z} \vert \sigma_d^x \vert g^\theta_{J^z}\rangle = - \langle J^z + 1 \vert \pi^x_c \vert -J^z \rangle + \text{h.c.}
+\end{aligned}\end{equation}
+This expression relates the observable impurity magnetization to the topological 't Hooft operator \cite{Maric2020}. Evaluating the matrix elements gives
+\begin{equation}\begin{aligned}
+	\label{sigmax}
+	\left<\sigma_d^x\right> = - \frac{\sqrt{K^2 - (2J^z + 1)^2}}{2(1+K)}\cos \theta
+\end{aligned}\end{equation}
+Performing a similar calculation reveals that the impurity magnetizations along \(y\) and \(z\) in the same state are given by
+\begin{equation}\begin{aligned}
+	\label{sigmayz}
+	\left<\sigma_d^y\right> = - \frac{\sqrt{K^2 - (2J^z + 1)^2}}{2(1+K)}\sin \theta, &&\left<\sigma_d^z\right> = - \frac{2J^z + 1}{(1+K)}
+\end{aligned}\end{equation}
+Combining eqs.~\ref{sigmax} and \ref{sigmayz}, we find
+\begin{equation}\begin{aligned}
+	\cos^2\theta\left(\left<\sigma^x_d\right>\right)^2 + \sin^2\theta\left(\left<\sigma^y_d\right>\right)^2 + \frac{1}{4}\left(\left<\sigma^z_d\right>\right)^2 = \frac{1}{4}\left(\frac{K}{1+K}\right)^2
+\end{aligned}\end{equation}
+This relation constrains the values of the magnetization along all the directions: the \(x\) and \(y\) magnetization values have already been shown to be related to the `t Hooft operators \(\pi^x\) and \(\pi^y\) and the magnetization along \(z\) is therefore constrained in terms of the `t Hooft operators and the quantized function on the right-hand side (the function is quantized because \(K\) can only take integer values).
+
+
+
+
+
 
 \section{Effect of conduction bath excitations on the fixed point theory}
 \subsection{Non-Fermi liquid effective Hamiltonian}
@@ -198,7 +238,7 @@ This is obtained from the Schrodinger equation for the ground state. If we expan
 	E_\text{gs}\ket{\Psi_\text{gs}} = H \ket{\Psi_\text{gs}} = \left(H_d + V\right)\ket{\Psi_\text{gs}} \implies \left(E_\text{gs} - H_d\right)\sum C_{S_d^z, s_\text{tot},s_\text{tot}^z}\ket{S_d^z, s_\text{tot}, s_\text{tot}^z} = V\sum C_{S_d^z, s_\text{tot},s_\text{tot}^z}\ket{S_d^z, s_\text{tot}, s_\text{tot}^z}
 \end{align}
 \end{widetext}
-\textcolor{red}{\(E_\text{gs}\) is the ground state energy, and can be replaced by the star graph ground state energy if we remove the kinetic energy cost via normal ordering: \(E_\text{gs} = \)}. Since \(V\) only changes \(S_d^z \to -S_d^z\) and \(s^z_\text{tot} \to s^z_\text{tot} \pm 1\), we can simplify the equation into individual smaller equations. For the two-channel model, the possible states are \(s_\text{tot},s^z_\text{tot} = (0,0), (1,-1), (1,0), (1,1)\). The individual equations for these states are
+\(E_\text{gs}\) is the ground state energy, and can be replaced by the star graph ground state energy if we remove the kinetic energy cost via normal ordering: \(E_\text{gs} = -\frac{J}{2}\left(\frac{K}{2}+1\right) \). Since the interaction part \(V\) only changes \(S_d^z \to -S_d^z\) and \(s^z_\text{tot} \to s^z_\text{tot} \pm 1\), we can simplify the equation into individual smaller equations. For the two-channel model, the possible states are \((s_\text{tot},s^z_\text{tot}) = (0,0), (1,-1), (1,0), (1,1)\). The individual equations for these states are
 \begin{align}
 	\label{eff_ham_Sdz_10}
 	E_\text{gs} \ket{\frac{1}{2}, 1, 0} &= \left(H_d + V \frac{1}{E_\text{gs} - H_d}V^\dagger\right) \ket{\frac{1}{2}, 1, 0}\\
@@ -255,20 +295,73 @@ The excited states of the star graph can be used to define bosons \cite{kroha_ko
 	H^\prime(J^\prime) = \sum_{k,\sigma,l}\epsilon_{k,l} \hat n_{k\sigma,l} + J^\prime \vec{\mathbb{S}_d}\cdot\vec{s^\prime}_\text{tot}
 \end{aligned}\end{equation}
 The prime on \(s_\text{tot}\) indicates that it is formed by the new zero modes. This Hamiltonian is very similar to the one in eq.~\ref{strong_ham}, and that is the essence of the strong-weak duality: One can go from the over-screened strong coupling spin-\(S\) MCK model to another over-screened weak coupling spin-\((K-2S+1)\) MCK model. For the case of \(K=4S\), we have \(S^\prime = S\), and both \(S_d\) and \(\mathbb{S}_d\) describe the same spin objects (at least formally). The two models are then said to be self-dual. For example, for the case of spin-half MCK model, two-channel model is self-dual.
+\begin{figure}[!htpb]
+	\centering
+	\includegraphics[width=0.45\textwidth]{./duality.pdf}
+	\caption{Duality of the RG flows as seen in the star graph Hamiltonian. The red and green circles represent the impurity and zeroth site spins respectively. At large \(J\), the red circle binds with the green circles to form an effective spin \(\frac{K-1}{2}\) object (yellow) that interacts with the remaining spin of the conduction bath (blue circles).}
+	\label{duality_fig}
+\end{figure}
 
 One important consequence of the duality relationship between the two overscreened models is that the RG equations are also dual; while the strong coupling model has an irrelevant coupling \(J\) that flows down to the intermediate fixed point \(J^*\), the weak coupling model has a relevant coupling \(J^\prime\) that flows up to the same fixed point \({J^\prime}^* = J^*\). From the RG equation for the general spin-\(S\) MCK model, we know that \({J^\prime}^* = \frac{2}{K \rho^\prime}\), where \(\rho^\prime\) is the DOS for the bath of the weak coupling Hamiltonian. This constrains the form of the scaling factor \(\gamma\):
 \begin{equation}\begin{aligned}
 	{J^\prime}^* = \frac{\gamma 4t^2}{J^*} = \frac{2}{K \rho^\prime} \implies \gamma = \frac{1}{4t^2} {J^*}^2 = \frac{1}{K^2 t^2 \rho \rho^\prime}
 \end{aligned}\end{equation}
-\begin{figure}[htpb]
-	\centering
-	\includegraphics[width=0.45\textwidth]{./duality.pdf}
-	\caption{Duality of the RG flows as seen in the star graph Hamiltonian. The red and green circles represent the impurity and zeroth site spins respectively. At large \(J\), the red circle binds with the green circles to form an effective spin \(\frac{K-1}{2}\) object (yellow) that interacts with the remaining spin of the conduction bath (blue circles). The fixed point consists of the red (purple) and green (yellow) circles binding to form a doubly degenerate ground state (orange) that interacts with the star graph of the remaining sites (brown) through the hopping.}
-	\label{duality_fig}
-\end{figure}
 
 
 \section{Impurity Quantum Phase transition in the multi-channel Kondo model under channel anisotropy}
+The isotropic MCK mode undergoes a phase transition when the symmetry of the channel interaction strengths is destroyed. It will be shown that if, in a \(K-\)channel model, one of the couplings becomes slightly larger than the other \(K-1\) couplings, the system goes into the singlet ground state characterized by local Fermi liquid excitations. On the other hand, if one of the couplings becomes slightly smaller than the rest, the system goes over to the \(K-1\) channel Kondo model.
+
+To see the transition, we need to start with the more general anisotropic MCK model:
+\begin{align}
+	H = \sum_{k,\alpha,l}\epsilon_{k,l} \hat n_{k\alpha,l} + \sum_{kk^\prime,\alpha,\beta,l}J_l \vec{S_d}\cdot\frac{1}{2}\vec{\sigma}_{\alpha\beta}c_{k\alpha,l}^\dagger c_{k^\prime\beta, l}~.
+\end{align}
+Let us consider the specific case where \(K-1\) channels have the same coupling \(J_1 = J_2 = ... = J_{K-1} = J_+\) and the remaining channel has a different coupling \(J_K = J_-\). The RG equations for such a model are
+\begin{align}
+	\frac{\Delta J_\pm}{|\Delta D|} = -\frac{J_\pm^2 \rho}{\mathcal{D}_\pm} + \frac{\rho^2 J_\pm}{2}\left[\frac{(K-1)J_+^2}{\mathcal{D}_+} + \frac{J_-^2}{\mathcal{D}_-}\right]
+\end{align}
+where \(\mathcal{D}_\pm = \omega - \frac{D}{2} - \frac{J_\pm}{4}\) are the denominators of the URG equations.
+Setting \(J_+ = J_-\) leads to the critical fixed point at \(J_+^* = J_-^* = J_* = \frac{2}{K \rho}\). We now perturb around this fixed point by defining new variables \(j_\pm = J_\pm - J_*\). We also assume that the bandwidth is large enough so that \(\mathcal{D}_\pm \simeq \omega - \frac{D}{2} - \frac{J_*}{4} = -|\mathcal{D}_*|\). The RG equations then take the form
+\begin{widetext}
+\begin{align}
+	\frac{\Delta j_+}{|\Delta D|} &= \frac{\rho J_+}{ |\mathcal{D}_*|}\left[J_+ - \frac{\rho}{2}\left[(K-1)J_+^2 + J_-^2\right]\right] = \frac{\rho J_+}{K J_*|\mathcal{D}_*|}\left[-\left(K - 2\right)J_*j_+ - (K-1)j_+^2 - j_-^2 - 2J_* j_-\right]\\
+	\frac{\Delta j_-}{|\Delta D|} &= \frac{J_- \rho}{|\mathcal{D}_*|}\left[J_- - \frac{\rho}{2}\left[(K-1)J_+^2 + J_-^2\right]\right] = \frac{J_- \rho}{K J_*|\mathcal{D}_*|}\left[\left(K - 2\right)J_*j_-  - j_-^2 - (K-1)j_+^2 - 2(K-1)J_* j_+\right]\\
+\end{align}
+\end{widetext}
+We will first look at the special case of \(K=2\), the two channel Kondo model. The equations simplify to
+\begin{align}
+	\frac{\Delta j_\pm}{|\Delta D|} = \frac{J_\pm \rho}{K J_*|\mathcal{D}_*|}\left[- \left(j_+^2 + j_-^2\right) - 2J_* j_\mp\right]\\
+\end{align}
+For \(j_- < 0, j_+ > 0\), we have \(\Delta j_- < 0\). The coupling \(J_-\) therefore becomes irrelevant. For small \(j_+\), we have \(j_+^2 < 2J_* |j_-|\)  and \(\Delta j_+ > 0\). This means that the isotropic fixed point is repulsive under anisotropy~\cite{Noz_blandin_1980}. The coupling \(j_+\) being relevant means we have a single-channel Kondo problem. We already know the non-perturbative URG equation for the single-channel Kondo problem~\cite{kondo_urg}, and it leads to the strong coupling fixed point
+
+We now look at the general \(K\) channel case. Let us first look at the regime \(j_- < 0, j_+ > 0\). In this regime, we have \(\Delta j_- < 0\), which means \(j_-\) will flow to larger negative values until it reaches \(j_- = -J_*\) such that \(J_- = J_* + j_- = 0\). \(j_+\) is, on the other hand, relevant for small values of \(j_\pm\). It will continue to grow until the numerator of \(\Delta j_+\) vanishes. This condition is given by
+\begin{align}
+	\left(K - 2\right)J_*j_+ + (K-1)j_+^2 + j_-^2 + 2J_* j_- = 0
+\end{align}
+Substituting \(j_- = -J_*\) gives the fixed-point equation \((K-1)j_+^2 + \left(K - 2\right)J_*j_+ - J_*^2 = 0\). Solving the equation gives
+\begin{align}
+	j_{+,*} = \frac{J_*}{2(K-1)}\left[-(K-2) \pm K\right] = \frac{J_*}{K-1}
+\end{align}
+At the final step, we chose the positive solution, because \(j_+\) is relevant in this regime. The new fixed point value of \(J_+\) is therefore
+\begin{align}
+	J_{+,*} = J_* + \frac{J_*}{K-1} = \frac{\frac{2}{K \rho} K}{K - 1} = \frac{2}{(K-1)\rho}
+\end{align}
+In other words, the \(K\) channel fixed point flows to the \(K-1\) channel fixed point. This is shown numerically in fig.~\ref{K_to_K-1}.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.4\textwidth]{../numerics/K to K-1.pdf}
+	\caption{Flow of \(J_-\) to zero when \(j_< 0\) and \(J_+\) to the fixed point of the \(K-1\) channel Kondo model.}
+	\label{K_to_K-1}
+\end{figure}
+
+In the opposite regime \(j_- > 0, j_+ < 0\), \(\Delta j_+\) is negative. It has been checked numerically that \(J_+\) ultimately flows to zero in this regime (fig. \ref{irrel_Jplus}), and \(J_-\) remains relevant. Since there is no numerator fixed point in the relevant coupling \(J_-\) and because all other couplings are irrelevant, the equation for \(J_-\) is replaced by the single-channel Kondo coupling URG equation, and the low-energy physics is then of strong coupling..
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.45\textwidth]{../numerics/irr_Jp_K=3.pdf}
+	\includegraphics[width=0.45\textwidth]{../numerics/irr_Jp_K=50.pdf}
+	\caption{Flow of the couplings \(J_+\) when \(j_+ < 0\) when \(j_- > 0, j_+ < 0\), for two values of \(K\).}
+	\label{irrel_Jplus}
+\end{figure}
 
 \section{Conclusions}
 
@@ -277,8 +370,34 @@ One important consequence of the duality relationship between the two overscreen
 The authors thank P. Majumdar, A. Mitchell, S. Sen, S. Patra, M. Mahankali and R. K. Singh for several discussions and feedback. Anirban Mukherjee thanks the CSIR, Govt. of India and IISER Kolkata for funding through a research fellowship. Abhirup Mukherjee thanks IISER Kolkata for funding through a research fellowship. AM and SL thank JNCASR, Bangalore for hospitality at the inception of this work. NSV acknowledges funding from JNCASR and a SERB grant (EMR/2017/005398).
 
 \appendix
-\section{URG}
+\section{Hamiltonian RG of spin-\(S\) impurity MCK Model}
 \label{appendix_urg}
+The Hamiltonian for the channel-isotropic MCK model is given in eq.~\ref{mc_ham}. As mentioned in the same section, the Hamiltonian \(H_{(j-1)}\) of the \((j-1)^\text{th}\) RG step is obtained from the Hamiltonian \(H_{(j)}\) of the preceding RG step by applying a unitary transformation \(U_{(j)}\): \(H_{(j-1)} = U_{(j)} H_{(j)} U^\dagger_{(j)}\). The unitary transformation is obtained in terms of the fermionic operator \(\eta_{(j)}\):
+\begin{gather}
+	U_{(j)} = \frac{1}{\sqrt 2}\left(1 + \eta_{(j)} - \eta_{(j)}^\dagger\right)~, \\
+	\hat \omega_{(j)} = H_{(j-1)} - H^i_{(j)},~T_{(j)} \equiv \text{Tr}\left(H_{(j)}c_{j}\right)~,\\
+	\eta^\dagger_{(j)} = \frac{1}{\hat \omega_{(j)} - \text{Tr}\left(H_{(j)} \hat n_{j}\right) } c^\dagger_{j} T_{(j)}~.
+\end{gather}
+The operator \(\hat \omega_{(j)}\) encodes the quantum fluctuation scales arising from the interplay of the kinetic energy terms and the interaction terms of the Hamiltonian.
 
+The URG equation for the single-channel Kondo model \cite{kondo_urg} shows a stable strong-coupling fixed point. Ferromagnetic interactions are irrelevant. Strictly speaking, that RG equation already encodes, in principle, the multi-channel behaviour, through a modified \(\hat \omega\). To extract this information, we consider the strong-coupling fixed-point \(J \gg D\) as a fixed point and analyze its stability from the star graph perspective. For the exactly-screened case, the ground state is a singlet and the star graph decouples from the conduction bath, leaving behind a local Fermi liquid interaction on the first site. Similarly, for the underscreened regime, the ground state is composed of states where the impurity spin is only partially screened by the conduction channels. If a particular configuration of the bath-impurity system has the total conduction bath spin down, the impurity will have a residual up spin. The electrons from the nearest sites will hop on to the zeroth site, but they will come with spins up, because the down spin of the conduction channel is already filled. This implies that a ferromagnetic super-exchange coupling is induced, which is irrelevant under RG, so this fixed point is stable as well. 
+
+We now come to the overscreened case, where there is a residual spin on the conduction channel site. The neighbouring electrons will now hop in with spins opposite to that of the impurity, so an antiferromagnetic interaction will be induced, and such an interaction is relevant under the RG. This shows that the overscreened regime cannot have a stable strong-coupling fixed point, and we need to search for an intermediate coupling fixed point. We therefore need the generator of the unitary transformation that incorporates third order scattering scatterings explicitly. We should take account of all possible processes that render the set of states \(\left\{\ket{\hat n_{q\beta}=1},\ket{\hat n_{q\beta}=0}\right\}\) diagonal. The higher order generator itself has two scattering processes, such that the entire renormalization term \(c^\dagger_{q\beta} T \eta\) has in total three coherent processes. The way to make the state \(q\beta\) diagonal is to ensure that \(c^\dagger_{q\beta} T \eta\) does not change \(\hat n_{q\beta}\). This is done by letting exactly one of the scattering process in \(\eta\)  be \(T^\dagger c_{q\beta}\), while the other process in \(\eta\) has to be some internal scattering between the degrees of freedom other than \(q\beta\). This, however, does not fix the sequence in which the processes occur within \(\eta\). Kepeing this in mind, the complete generator upto third order can be written as
+\begin{widetext}
+\begin{equation}\begin{aligned}
+	\eta = \frac{1}{\hat \omega - H_D}T^\dagger c \simeq \frac{1}{\omega^\prime - H_D}T^\dagger c + \frac{1}{\omega^\prime - H_D}H_X \frac{1}{\omega^\prime - H_D} T^\dagger c + \frac{1}{\omega^\prime - H_D} T^\dagger c \frac{1}{\omega^\prime - H_D} H_X
+\end{aligned}\end{equation}
+where \(H_X = J \sum_{k,k^\prime < \Lambda_j, \alpha,\alpha^\prime}\vec{S_d}\cdot\vec{s}_{\alpha \alpha^\prime}c^\dagger_{k\alpha}c_{k^\prime\alpha^\prime}\) is scattering between the entangled electrons. There are two third order terms in the above equation corresponding to the two possible sequences in which the processes can occur while keeping the total renormalization \(c^\dagger_{q\beta}T \eta\) diagonal in \(q\beta\). With this change, the third order renormalization takes the form
+\begin{equation}
+	\Delta H^{(3)}_j = c^\dagger T \frac{1}{\omega^\prime - H_D} H_X \frac{1}{\omega^\prime - H_D} T^\dagger c + c^\dagger T \frac{1}{\omega^\prime - H_D} T^\dagger c \frac{1}{\omega^\prime - H_D} H_X + \left(c^\dagger \leftrightarrow c, T^\dagger \leftrightarrow T\right)
+\end{equation}
+It is easier to see the RG flow of the couplings if we write the Hamiltonian in terms of the eigenstates of \(S_d^z\). These eigenstates are defined by \(S_d^z\ket{m_d} = m_d\ket{m_d}, m_d \in \left[-S, S\right]\). In terms of these eigenstates, the Hamiltonian becomes
+\begin{equation}\begin{aligned}
+	\mathcal{H} &= \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{m=-S}^S \sum_{kl,\atop{\sigma=\uparrow,\downarrow}} J^\sigma_m \ket{m}\bra{m} c^\dagger_{k \sigma}c_{l \sigma} + \sum_{kl} \sum_{m=-S}^{S-1} J^t_{m} \left(\ket{m+1}\bra{m} s^-_{kl}  + \text{h.c.}\right)
+\end{aligned}\end{equation}
+where \(J^\sigma_m = \frac{1}{2} \sigma m J\) in the UV Hamiltonian, and \(J^t_{m} = J\frac{1}{2}\sqrt{S(S+1) - m(m+1)}\) is the coupling that connects \(\ket{m}\) and \(\ket{m+1}\).
+
+
+\end{widetext}
 \bibliography{mscript_mck}
 \end{document}

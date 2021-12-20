@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.13)  17 DEC 2021 11:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.13)  20 DEC 2021 19:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -533,19 +533,19 @@ Overfull \hbox (3.9791pt too wide) detected at line 1025
  []
 
 [29] [30]
-<../numerics/disc_mag_imp.pdf, id=842, 1010.65335pt x 627.75024pt>
+<../numerics/disc_mag_imp.pdf, id=842, 1069.99345pt x 665.49458pt>
 File: ../numerics/disc_mag_imp.pdf Graphic file (type pdf)
 <use ../numerics/disc_mag_imp.pdf>
 Package pdftex.def Info: ../numerics/disc_mag_imp.pdf  used on input line 1076.
-(pdftex.def)             Requested size: 306.00311pt x 190.06984pt.
+(pdftex.def)             Requested size: 306.00311pt x 190.31781pt.
  [31 <../numerics/disc_mag_imp.pdf>]
-<../numerics/disc_mag_bath.pdf, id=865, 988.73523pt x 627.75024pt>
+<../numerics/disc_mag_bath.pdf, id=873, 988.73523pt x 627.75024pt>
 File: ../numerics/disc_mag_bath.pdf Graphic file (type pdf)
 <use ../numerics/disc_mag_bath.pdf>
 Package pdftex.def Info: ../numerics/disc_mag_bath.pdf  used on input line 1112.
 (pdftex.def)             Requested size: 306.00311pt x 194.28447pt.
  [32 <../numerics/disc_mag_bath.pdf>]
-<../numerics/disc_mag_global.pdf, id=890, 1010.65335pt x 627.75024pt>
+<../numerics/disc_mag_global.pdf, id=897, 1010.65335pt x 627.75024pt>
 File: ../numerics/disc_mag_global.pdf Graphic file (type pdf)
 <use ../numerics/disc_mag_global.pdf>
 Package pdftex.def Info: ../numerics/disc_mag_global.pdf  used on input line 1158.
@@ -556,7 +556,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1162.
 
 [33 <../numerics/disc_mag_global.pdf>]
-<../numerics/entropy_comparison.pdf, id=925, 1033.4698pt x 769.15677pt>
+<../numerics/entropy_comparison.pdf, id=932, 1033.4698pt x 769.15677pt>
 File: ../numerics/entropy_comparison.pdf Graphic file (type pdf)
 <use ../numerics/entropy_comparison.pdf>
 Package pdftex.def Info: ../numerics/entropy_comparison.pdf  used on input line 1180.
@@ -589,10 +589,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  71i,17n,74p,2029b,572s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb>
-Output written on mck_urg.pdf (39 pages, 902159 bytes).
+Output written on mck_urg.pdf (39 pages, 816387 bytes).
 PDF statistics:
- 1230 PDF objects out of 1440 (max. 8388607)
- 1122 compressed objects within 12 object streams
+ 1237 PDF objects out of 1440 (max. 8388607)
+ 1123 compressed objects within 12 object streams
  475 named destinations out of 1000 (max. 500000)
  351 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -24,45 +24,45 @@ Warning--missing journal in santanukagome
 Warning--missing journal in kondo_urg
 Warning--missing journal in Gan_mchannel_1994
 Warning--missing journal in cox_jarrell_two_channel_rev
-You've used 39 entries,
+You've used 41 entries,
             5847 wiz_defined-function locations,
-            1908 strings with 22655 characters,
-and the built_in function-call counts, 35027 in all, are:
-= -- 2450
-> -- 752
-< -- 228
-+ -- 255
-- -- 164
-* -- 5129
-:= -- 3593
-add.period$ -- 39
-call.type$ -- 39
-change.case$ -- 156
-chr.to.int$ -- 36
-cite$ -- 43
-duplicate$ -- 3258
-empty$ -- 2641
-format.name$ -- 469
-if$ -- 6957
+            1922 strings with 23008 characters,
+and the built_in function-call counts, 36659 in all, are:
+= -- 2558
+> -- 788
+< -- 237
++ -- 267
+- -- 172
+* -- 5367
+:= -- 3767
+add.period$ -- 41
+call.type$ -- 41
+change.case$ -- 164
+chr.to.int$ -- 38
+cite$ -- 45
+duplicate$ -- 3419
+empty$ -- 2776
+format.name$ -- 489
+if$ -- 7279
 int.to.chr$ -- 4
-int.to.str$ -- 47
-missing$ -- 427
-newline$ -- 169
-num.names$ -- 117
-pop$ -- 1416
+int.to.str$ -- 49
+missing$ -- 446
+newline$ -- 175
+num.names$ -- 123
+pop$ -- 1486
 preamble$ -- 1
-purify$ -- 195
+purify$ -- 205
 quote$ -- 0
-skip$ -- 1359
+skip$ -- 1420
 stack$ -- 0
-substring$ -- 1022
-swap$ -- 2984
-text.length$ -- 80
+substring$ -- 1058
+swap$ -- 3118
+text.length$ -- 84
 text.prefix$ -- 0
 top$ -- 8
-type$ -- 510
+type$ -- 535
 warning$ -- 4
-while$ -- 114
+while$ -- 119
 width$ -- 0
-write$ -- 361
+write$ -- 376
 (There were 4 warnings)
