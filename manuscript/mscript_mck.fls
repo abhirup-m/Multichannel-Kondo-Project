@@ -710,6 +710,11 @@ INPUT ./stargraph.pdf
 INPUT ./stargraph.pdf
 INPUT ./stargraph.pdf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT ../numerics/deg_of_comp.pdf
+INPUT ../numerics/deg_of_comp.pdf
+INPUT ../numerics/deg_of_comp.pdf
+INPUT ../numerics/deg_of_comp.pdf
+INPUT ../numerics/deg_of_comp.pdf
 INPUT ../numerics/disc_mag_imp.pdf
 INPUT ../numerics/disc_mag_imp.pdf
 INPUT ../numerics/disc_mag_imp.pdf

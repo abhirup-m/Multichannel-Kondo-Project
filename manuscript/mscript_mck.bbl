@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{41}%
+\begin{thebibliography}{45}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -235,6 +235,18 @@
   10.1103/PhysRevB.95.085121} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
   Rev. B}\ }\textbf {\bibinfo {volume} {95}},\ \bibinfo {pages} {085121}
   (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Moca}\ \emph {et~al.}(2021)\citenamefont {Moca},
+  \citenamefont {Weymann}, \citenamefont {Werner},\ and\ \citenamefont
+  {Zar\'and}}]{moca_zarand_2021}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~u. u. u. u. P.
+  m.~c.}\ \bibnamefont {Moca}}, \bibinfo {author} {\bibfnamefont
+  {I.}~\bibnamefont {Weymann}}, \bibinfo {author} {\bibfnamefont {M.~A.}\
+  \bibnamefont {Werner}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Zar\'and}},\ }\href {\doibase
+  10.1103/PhysRevLett.127.186804} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {127}},\ \bibinfo {pages}
+  {186804} (\bibinfo {year} {2021})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Gan}\ \emph {et~al.}(1993)\citenamefont {Gan},
   \citenamefont {Andrei},\ and\ \citenamefont
   {Coleman}}]{Gan_Andrei_Coleman_1993}%
@@ -396,4 +408,29 @@
   {journal} {\bibinfo  {journal} {Communications Physics}\ }\textbf {\bibinfo
   {volume} {3}},\ \bibinfo {pages} {220} (\bibinfo {year} {2020})}\BibitemShut
   {NoStop}%
+\bibitem [{\citenamefont {Hewson}(1993)}]{hewson1993}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~C.}\ \bibnamefont
+  {Hewson}},\ }\href@noop {} {\emph {\bibinfo {title} {The Kondo Problem to
+  Heavy Fermions}}}\ (\bibinfo  {publisher} {Cambridge University Press},\
+  \bibinfo {year} {1993})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Varma}\ \emph {et~al.}(2002)\citenamefont {Varma},
+  \citenamefont {Nussinov},\ and\ \citenamefont
+  {Van~Saarloos}}]{varma2002singular}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Varma}}, \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Nussinov}}, \
+  and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Van~Saarloos}},\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Physics Reports}\
+  }\textbf {\bibinfo {volume} {361}},\ \bibinfo {pages} {267} (\bibinfo {year}
+  {2002})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mukherjee}\ and\ \citenamefont
+  {Lal}(2020{\natexlab{d}})}]{anirbanmott1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Mukherjee}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Lal}},\ }\href {\doibase 10.1088/1367-2630/ab8831} {\bibfield  {journal}
+  {\bibinfo  {journal} {New Journal of Physics}\ }\textbf {\bibinfo {volume}
+  {22}},\ \bibinfo {pages} {063007} (\bibinfo {year}
+  {2020}{\natexlab{d}})}\BibitemShut {NoStop}%
 \end{thebibliography}%
