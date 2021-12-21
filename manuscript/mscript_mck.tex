@@ -284,26 +284,24 @@ The most dominant contribution comes from \(k_1 = k_2 = k^\prime\):
 \end{aligned}\end{equation}
 Following~\cite{anirbanmott1}, one can follow the RG evolution of the dual coupling \(R_j = \frac{4t^2}{J_j}\) at the \(j^\text{rh}\) RG step, in the form of the URG equation
 \begin{equation}\begin{aligned}
-	\Delta R_j = \frac{R_j^2}{\omega - \epsilon_{j}/2 + R_j/8}
+	\Delta R_j =- \frac{R_j^2}{\omega - \epsilon_{j}/2 - R_j/8}
 \end{aligned}\end{equation}
-In the RG equation, \(\epsilon_{j}\) represents the energy of the \(j^\text{th}\) isoenergetic shell. It is seen from the RG equation that \(R\) is relevant in the range of \(\bar\omega = \epsilon_j -\omega\) that has been used throughout \((\omega < \epsilon_j/2)\), \textcolor{red}{leading to a fixed-point at \(R_*/8 = \bar\omega - \epsilon_*/2)\)}. The relevance of \(R\) is expected because the strong coupling \(J\) is irrelevant and \(R \sim 1/J\).
+In the RG equation, \(\epsilon_{j}\) represents the energy of the \(j^\text{th}\) isoenergetic shell. It is seen from the RG equation that \(R\) is relevant in the range of \(\omega < \frac{1}{2}\epsilon_j\) that has been used throughout, leading to a fixed-point at \(R^*/8 = \omega - \frac{1}{2}\epsilon^*)\). The relevance of \(R\) is expected because the strong coupling \(J\) is irrelevant and \(R \sim 1/J\).
 
 The renormalization in \(R\) leads to a renormalization in the single-particle self-energy~\cite{anirbanmott1}. The \(k-\)space-averaged self-energy renormalization is
 \begin{equation}\begin{aligned}
-	\Delta \Sigma_l(\omega) = \rho R_*^2\int_0^{\epsilon_*} \frac{d\epsilon}{\bar\omega - \epsilon_j/2 + R_*/8}
+	\Delta \Sigma(\omega) = \rho {R^*}^2\int_0^{\epsilon^*} \frac{d\epsilon_j}{\omega - \epsilon_j/2 + R_j/8}
 \end{aligned}\end{equation}
-leading to a \(k-\)space-averaged self-energy for each channel (eq. 33 of~\cite{anirbanmott1})
+The density of states can be approximated to be \(N^*/R^*\), where \(N^*\) is the total number of states over the interval \(R^*\). As suggested by the fixed point value of \(R_j\), we can approximate its behaviour near the fixed point by a linear dependence of the dispersion \(\epsilon_j\). If we substitute \(R_j = 0\) at the ground state \(\epsilon_j=0\), use the fixed point condition \(R^*/8 = \omega - \frac{1}{2}\epsilon^*\) and define \(\bar \omega = N^* \left(\omega - \frac{1}{2}\epsilon^*\right)\), we get
 \begin{equation}\begin{aligned}
 	\label{self_energy}
-	\Sigma_l(\omega_l) \sim \omega_l \ln |\omega_l|\\
+	\Delta \Sigma(\omega) \sim  \bar \omega \ln \frac{N^* \omega/2}{\bar \omega}
 \end{aligned}\end{equation}
-where \(\omega_l\) is the fluctuation scale for a particular channel. The self-energy also provides the quasiparticle residue for each channel\cite{anirbanmott1}:
+The self-energy also provides the quasiparticle residue for each channel\cite{anirbanmott1}:
 \begin{equation}\begin{aligned}
-	Z_l(\omega_l) = \left(2 - \ln \omega_l\right) ^{-1}
+	Z(\bar\omega) = \left(2 - \ln \frac{2\bar\omega}{N^* \omega}\right) ^{-1}
 \end{aligned}\end{equation}
-As the energy scales \(\omega_l \to 0\), the \(Z_l\) vanishes, implying that the ground state and lowest-lying excitations, in the presence of the NFL terms, are not adiabatically connected to the Fermi gas. This is the orthogonality catastrophe in the two-channel Kondo problem, and it is brought about by the presence of the terms in Eq.~\ref{mfl_large}. Such terms were absent in the similar perturbative expansion of the single-channel Kondo model, because there was no multiply-degenerate ground state manifold that allowed scattering. This line of argument shows that the extra degeneracy of the ground state subspace that comes about when one upgrades from the single-channel Kondo model to the MCK models is at the heart of the NFL behaviour, and the orthogonality catastrophe should be a general feature of all MCK models, even though we have demonstrated this only for the two-channel case.
-
-The fact that the marginal Fermi liquid term in eq.~\ref{mfl_large} involves all momenta means it is localised in real space. This can also be understood from the fact that the parent NFL term in eq.~\ref{nfl_terms} is also local. A local NFL term with a self-energy of the form in eq.~\ref{self_energy} was also obtained in the \(\sigma-\tau\) model by Coleman et al.~\cite{Coleman_tsvelik}. The common features show the universality between the two-channel Kondo and the \(\sigma-\tau\) models.
+As the energy scale \(\omega \to 0\), the \(Z\) vanishes, implying that the ground state and lowest-lying excitations, in the presence of the NFL terms, are not adiabatically connected to the Fermi gas. This is the orthogonality catastrophe in the two-channel Kondo problem, and it is brought about by the presence of the terms in Eq.~\ref{mfl_large}. Such terms were absent in the single-channel Kondo model, because there was no multiply-degenerate ground state manifold that allowed scattering. This line of argument shows that the extra degeneracy of the ground state subspace and the frustration of the singlet order that comes about when one upgrades from the single-channel Kondo model to the MCK models is at the heart of the NFL behaviour, and the orthogonality catastrophe should be a general feature of all such frustrated MCK models, even though we have demonstrated this only for the two-channel case. A local NFL term with a self-energy of the form in eq.~\ref{self_energy} was also obtained in the \(\sigma-\tau\) model by Coleman et al.~\cite{Coleman_tsvelik}. The common features show the universality between the two-channel Kondo and the \(\sigma-\tau\) models.
 \subsection{Low temperature thermodynamic behaviour}
 
 \subsection{Non-Fermi liquid signatures in momentum space}
