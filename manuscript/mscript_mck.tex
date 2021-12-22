@@ -42,17 +42,13 @@ Here, \(l\) sums over the \(K\) channels of the conduction bath, \(k,k^\prime\) 
 
 We have performed a renormalization group analysis of the Hamiltonian using the recently developed URG method \cite{anirbanmott2,anirbanmott2,anirbanurg1,anirbanurg2,siddharthacpi,santanukagome,1dhubjhep}. The RG proceeds by applying unitary transformations in order to block-diagonalize the Hamiltonian by removing number fluctuations of the high energy degrees of freedom. If the most energetic electronic state at the \(j^\text{th}\) RG step is \(\ket{j}\) defined by the energy \(D_{(j)}\), the Hamiltonian will in general not conserve the number of particles in this state: \(\left[H_{(j)}, \hat n_{j}\right] \neq 0\). The unitary transformation \(U_{(j)}\) will remove this number fluctuation at the next RG step:
 \begin{equation}\begin{aligned}
-	H_{(j-1)} = U_{(j)} H_{(j)} U^\dagger_{(j)}, \left[H_{(j-1)}, \hat n_{j}\right] =0
+	H_{(j-1)} = U_{(j)} H_{(j)} U^\dagger_{(j)}, ~\left[H_{(j-1)}, \hat n_{j}\right] =0
 \end{aligned}\end{equation}
-The unitary transformations are given in terms of a generator \(\eta_{(j)}\):
+The unitary transformations are given in terms of a fermionic generator \(\eta_{(j)}\):
 \begin{equation}\begin{aligned}
-	U_{(j)} = \frac{1}{\sqrt 2}\left(1 + \eta_{(j)} - \eta_{(j)}^\dagger\right) 
+	U_{(j)} = \frac{1}{\sqrt 2}\left(1 + \eta_{(j)} - \eta_{(j)}^\dagger\right), \quad\left\{ \eta_{(j)},\eta_{(j)}^\dagger \right\}_\pm = 1
 \end{aligned}\end{equation}
-The generator is fermionic in nature:
-\begin{equation}\begin{aligned}
-	\left\{ \eta_{(j)},\eta_{(j)}^\dagger \right\} = 1, \left[ \eta_{(j)},\eta_{(j)}^\dagger \right] = 1
-\end{aligned}\end{equation}
-and is given by the expression
+where \(\left\{A,B\right\}_\pm = AB \pm BA\). The generator itself is given by the expression
 \begin{equation}\begin{aligned}
 	\eta^\dagger_{(j)} = \frac{1}{\hat \omega_{(j)} - \text{Tr}\left(H_{(j)} \hat n_{j}\right) } c^\dagger_{j} \text{Tr}\left(H_{(j)}c_{j}\right)
 \end{aligned}\end{equation}
@@ -111,7 +107,7 @@ There are multiple reasons for working with the star graph in particular and zer
 
 Our claim is that the non-Fermi liquid arises solely from the degeneracy of the ground state manifold of the underlying zero mode Hamiltonian, and the star graph captures the degeneracy in its entirety. The RG flows of the MCK model have been show to \textit{preserve the degeneracy of the ground state}~\cite{pang_cox_1991,kroha_kolf_2007,zitko_fabrizio_2017,moca_zarand_2021}\textcolor{red}. The star graph conserves the total spin \(S^z\), and this leads to a \(K-\)fold degeneracy in the ground state of the \(K-\)channel spin-half star graph which is preserved under the RG flow. This is qualitatively different from the case of the single-channel Kondo model where the \(2-\)fold degeneracy of the local moment fixed point crosses over into a stable and unique singlet ground state. 
 
-The importance of the degeneracy can be shown in the following manner. The ground state degeneracy of the more general star graph with a spin-\(S\) impurity and \(K\) channels is given by \(g^S_K = |K - 2S|+1\). The cases of \(K=2S\), \(K<2S\) and \(K>2S\) correspond to exactly screened, under-screened and over-screened regimes respectively. The latter two cases correspond to a multiply-degenerate manifold \(g^S_K > 1\), and simultaneously have non-Fermi liquid phases~\cite{Noz_blandin_1980,Gan_Andrei_Coleman_1993,emery_kivelson,Gan_mchannel_1994,Tsvelick_Weigmann_mchannel_1984,Tsvelick_weigmann_mchannel_1985,parcollet_olivier_large_N,kimura_taro_Su_N_kondo,PhysRevB.73.224445,cox_jarrell_two_channel_rev,affleck_1991_overscreen,Coleman_tsvelik,affleck1993exact,coleman_pepin_2003,roch_nicolas_costi_2009,schiller_avraham_2008,Durganandini_2011}, while the first regime has a unique ground state \(g^S_K = 1\) and is described by a local Fermi liquid phase \cite{wilson1975,nozieres1974fermi,Noz_blandin_1980,andreiKondoreview,tsvelickKondoreview}, thereby substantiating the claim that a degeneracy greater than unity leads to non-Fermi liquid physics.
+The importance of the degeneracy can be shown in the following manner. The ground state degeneracy of the more general star graph with a spin-\(S\) impurity and \(K\) channels is given by \(g^S_K = |K - 2S|+1\). The cases of \(K=2S\), \(K<2S\) and \(K>2S\) correspond to exactly screened, under-screened and over-screened regimes respectively. The latter two cases correspond to a multiply-degenerate manifold \(g^S_K > 1\), and simultaneously have non-Fermi liquid phases~\cite{Noz_blandin_1980,Gan_Andrei_Coleman_1993,emery_kivelson,Gan_mchannel_1994,Tsvelick_Weigmann_mchannel_1984,Tsvelick_weigmann_mchannel_1985,parcollet_olivier_large_N,kimura_taro_Su_N_kondo,PhysRevB.73.224445,cox_jarrell_two_channel_rev,affleck_1991_overscreen,Coleman_tsvelik,affleck1993exact,coleman_pepin_2003,roch_nicolas_costi_2009,schiller_avraham_2008,Durganandini_2011}, while the first regime has a unique ground state \(g^S_K = 1\) and is described by a local Fermi liquid phase \cite{wilson1975,nozieres1974fermi,Noz_blandin_1980,andreiKondoreview,tsvelickKondoreview}, thereby substantiating the claim that a degeneracy greater than unity leads to non-Fermi liquid physics. The multiple ground states available to the impurity+bath system leads to a frustration of the singlet order, and we the focus of this work is to illustrate how this quantum-mechanical frustration leads to all the interesting properties of the MCK model.
 \section{Important Properties of the Star Graph}
 \subsection{Spectral and Quantum-mechanical features}
 
@@ -140,8 +136,8 @@ For a given \(K_0\), the degree of compensation is maximised for exact screening
 
 \subsection{Twist operators and Gauge theories}
 
-\subsection{Impurity magnetization and susceptibility: Signatures of quantum criticality}
-The channel isotropic MCK model is critical; any perturbation away from the perfectly symmetric model in terms of anisotropy is relevant [\textcolor{red}{NEEDS CITATION}]. This critical nature leads to several signatures that can be obtained directly from the star graph. These signatures include a discontinuity in the impurity magnetization at zero temperature in the limit of the external field going to zero, and a diverging susceptibility as temperature goes to zero.
+\subsection{Impurity magnetization and susceptibility: Quantum criticality of overscreened MCK model}
+The channel isotropic MCK model is critical; any perturbation away from the perfectly symmetric model in terms of anisotropy is relevant, as shown in section \ref{anisotropic_rg} [\textcolor{red}{NEEDS CITATION}]. This critical nature leads to several signatures that can be obtained directly from the star graph. These signatures include a discontinuity in the impurity magnetization at zero temperature in the limit of the external field going to zero, and a diverging susceptibility as temperature goes to zero.
 
 We insert a magnetic field that acts only on the impurity and then diagonalize the Hamiltonian.
 \begin{align}
@@ -189,11 +185,11 @@ At \(T \to 0\), only the most negative energy \(E_\text{min}\) survives. Assumin
 \end{aligned}\end{equation}
 In the star graph Hamiltonian with \(K-\)channels and in the presence of a field on the impurity (eq.~\ref{stargraph_field_hamiltonian}), the ground state energy will be one of the negative eigenvalues:
 \begin{equation}\begin{aligned}
-	\lambda^{M,h}_{m, -} = -J/4 - \frac{1}{2}\sqrt{J^2(M+1/2)^2 + h^2 + 2hJ(m+1/2)}
+	\lambda^{M,h}_{m, -} = - \frac{J}{4} - \frac{1}{2}\sqrt{J^2(M+1/2)^2 + h^2 + 2hJ(m+1/2)}
 \end{aligned}\end{equation}
 The minimum eigenvalue is obtained by maximizing \(h(m+1/2)\). For \(h>0\), the ground state is renormalized for the most positive value of \(m\), which is \(M-1\). On the other hand, for \(h<0\), it occurs for \(m=-M\), because that is the most negative value it can take. Among all the values of \(M\), the global ground state is at the largest value of \(M\), \(K/2\). Therefore, the minimal energy eigenvalue is
 \begin{equation}\begin{aligned}
-	E_\text{min} = -J/4 - \frac{1}{2}\sqrt{J^2(K+1)^2/4 + h^2 + |h|J(K-1)}
+	E_\text{min} = - \frac{J}{4} - \frac{1}{2}\sqrt{J^2(K+1)^2/4 + h^2 + |h|J(K-1)}
 \end{aligned}\end{equation}
 The first derivative of the free energy with respect to the field gives
 \begin{equation}\begin{aligned}
@@ -203,15 +199,14 @@ There we used the result that the derivative of \(|x|\) is \(\text{sign}(x)\). I
 \begin{equation}\begin{aligned}
 	m = F^\prime(h \to 0^\pm, T\to 0) = \mp \frac{1}{2}\frac{(K-1)}{(K+1)}
 \end{aligned}\end{equation}
-
-The magnetization is therefore discontinuous as \(h\to 0\); it goes to different values depending on the direction in which we take the limit. The only case where it is not analytic is when \(K=1\); then the derivative goes to zero from both directions. This non-analyticity has also been verified numerically.
 \begin{figure}[!htpb]
 	\centering
-	\includegraphics[width=0.45\textwidth]{../numerics/disc_mag_imp.pdf}
-	\caption{Non-analytic free energy for \(K>1\) and analytic free energy for \(K=1\).}
+	\includegraphics[width=0.45\textwidth]{../numerics/disc_mag_imp_gen.pdf}
+	\caption{Behaviour of the impurity magnetization for three values of \(\left(K, 2S\right) = \left(2, 4\right), \left( 3,3 \right), \left(4, 2\right)  \). Only the case of \(K=2S=3 \left(\delta=0\right)\) is analytic near zero. The non-analyticity of the other cases arises because of the frustration brought about by the degeneracy of the star graph ground state.}
+	\label{mag_crit}
 \end{figure}
 
-The non-analyticity for \(K>1\) occurs because the magnetic field is able to flip the ground state. For example, for \(K=2\), the states in question are \(\ket{M=1, m=-1,0}\). For \(h>0\), the ground state occurs in the subspace \(\ket{S_d^z=1/2, m=-1},\ket{S_d^z=-1/2,m=0}\). If we now flip the magnetic field, the ground state subspace flips to \(\ket{S_d^z=1/2, m=0},\ket{S_d^z=-1/2,m=1}\). Instead, if we look at the case of \(K=1\), the ground state is in the subspace of \(\ket{S_d^z=1/2,m=-1/2},\ket{S_d^z=-1/2, m=1/2}\), and since there is only this one subspace, the ground state is independent of the field. From this discussion, it is clear that the non-analyticity appears because there are multiple values of \(m \in [-M, M-1]\) in the ground state manifold, which means that it is the ground state degeneracy that causes the non-analyticity.
+The magnetization is therefore discontinuous as \(h\to 0\); it goes to different values depending on the direction in which we take the limit. The non-analyticity for \(K>1\) occurs because there is at least one pair of ground state with non-zero parity \(\pi^z\) and magnetic field is able to flip one ground state into the state of opposite parity. This available space for scattering is simply the frustration that we discussed earlier. This argument makes it clear that the non-analyticity and hence the critical nature of the fixed point arises because of the ground state degeneracy, and is therefore a feature of all over-screened and under-screened  models. Indeed, we have checked numerically that the non-analyticity exists for \(\delta \neq 0\), where \(\delta = \frac{K}{2} - S\) is the deviation from exact screening. For \(\delta=0\), the ground state is unique and un-frustrated, so the external magnetic field has no parity-inverted pair to flip across.
 
 \subsection{Impurity magnetization in terms of parity operators}
 The expectation value of the impurity magnetization along a particular direction and in specific ground states can be related to the 't Hooft operator defined under eq.~\ref{w_loop}. We will work in the state comprised of two adjacent eigenstates of \(J^z\):
@@ -393,6 +388,7 @@ There exists another set of cross-dual points in the MCK model. This was hinted 
 
 
 \section{Impurity Quantum Phase transition in the multi-channel Kondo model under channel anisotropy}
+\label{anisotropic_rg}
 The isotropic MCK mode undergoes a phase transition when the symmetry of the channel interaction strengths is destroyed. It will be shown that if, in a \(K-\)channel model, one of the couplings becomes slightly larger than the other \(K-1\) couplings, the system goes into the singlet ground state characterized by local Fermi liquid excitations. On the other hand, if one of the couplings becomes slightly smaller than the rest, the system goes over to the \(K-1\) channel Kondo model.
 
 To see the transition, we need to start with the more general anisotropic MCK model:
@@ -433,8 +429,8 @@ In other words, the \(K\) channel fixed point flows to the \(K-1\) channel fixed
 
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=0.4\textwidth]{../numerics/K to K-1.pdf}
-	\caption{Flow of \(J_-\) to zero when \(j_< 0\) and \(J_+\) to the fixed point of the \(K-1\) channel Kondo model.}
+	\includegraphics[width=0.45\textwidth]{../numerics/K to K-1.pdf}
+	\caption{Flow of \(J_\pm\) when \(j_< 0\) and \(J_+\). The smaller coupling \(J_-\) is irrelevant and switches off, while the other \(K-1\) couplings \(J_+\) flow to the \(K-1\) MCK fixed point.}
 	\label{K_to_K-1}
 \end{figure}
 
@@ -443,7 +439,7 @@ In the opposite regime \(j_- > 0, j_+ < 0\), \(\Delta j_+\) is negative. It has 
 	\centering
 	\includegraphics[width=0.45\textwidth]{../numerics/irr_Jp_K=3.pdf}
 	\includegraphics[width=0.45\textwidth]{../numerics/irr_Jp_K=50.pdf}
-	\caption{Flow of the couplings \(J_+\) when \(j_+ < 0\) when \(j_- > 0, j_+ < 0\), for two values of \(K\).}
+	\caption{Flow of the couplings \(J_+\) when \(j_+ < 0\) when \(j_- > 0, j_+ < 0\), for two values of \(K\). In both cases, the smaller coupling \(J_+\) eventually dies out, leading to only one surviving coupling \(J^-\) which is relevant, and we are left with a single-channel Kondo model.}
 	\label{irrel_Jplus}
 \end{figure}
 

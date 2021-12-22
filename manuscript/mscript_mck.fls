@@ -1,4 +1,4 @@
-PWD /home/kirito/storage/work/Multi-channel-Kondo-URG/manuscript
+PWD /home/abhirup/work/Multi-channel Kondo URG/manuscript
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT mscript_mck.tex
@@ -715,11 +715,11 @@ INPUT ../numerics/deg_of_comp.pdf
 INPUT ../numerics/deg_of_comp.pdf
 INPUT ../numerics/deg_of_comp.pdf
 INPUT ../numerics/deg_of_comp.pdf
-INPUT ../numerics/disc_mag_imp.pdf
-INPUT ../numerics/disc_mag_imp.pdf
-INPUT ../numerics/disc_mag_imp.pdf
-INPUT ../numerics/disc_mag_imp.pdf
-INPUT ../numerics/disc_mag_imp.pdf
+INPUT ../numerics/disc_mag_imp_gen.pdf
+INPUT ../numerics/disc_mag_imp_gen.pdf
+INPUT ../numerics/disc_mag_imp_gen.pdf
+INPUT ../numerics/disc_mag_imp_gen.pdf
+INPUT ../numerics/disc_mag_imp_gen.pdf
 INPUT ./duality.pdf
 INPUT ./duality.pdf
 INPUT ./duality.pdf
