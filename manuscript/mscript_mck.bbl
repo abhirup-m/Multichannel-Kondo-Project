@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{45}%
+\begin{thebibliography}{58}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -134,6 +134,59 @@
   European Physical Journal B - Condensed Matter and Complex Systems}\ }\textbf
   {\bibinfo {volume} {5}},\ \bibinfo {pages} {457} (\bibinfo {year}
   {1998})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tsvelick}\ and\ \citenamefont
+  {Wiegmann}(1984{\natexlab{a}})}]{Tsvelick_Weigmann_mchannel_1984}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont
+  {Tsvelick}}\ and\ \bibinfo {author} {\bibfnamefont {P.~B.}\ \bibnamefont
+  {Wiegmann}},\ }\href {\doibase 10.1007/BF01319184} {\bibfield  {journal}
+  {\bibinfo  {journal} {Zeitschrift f{\"u}r Physik B Condensed Matter}\
+  }\textbf {\bibinfo {volume} {54}},\ \bibinfo {pages} {201} (\bibinfo {year}
+  {1984}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Andrei}\ and\ \citenamefont
+  {Destri}(1984)}]{andrei_destri_1984}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Andrei}}\ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Destri}},\ }\href {\doibase 10.1103/PhysRevLett.52.364} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+  {volume} {52}},\ \bibinfo {pages} {364} (\bibinfo {year} {1984})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Zar\'and}\ \emph {et~al.}(2002)\citenamefont
+  {Zar\'and}, \citenamefont {Costi}, \citenamefont {Jerez},\ and\ \citenamefont
+  {Andrei}}]{zarand_costi_2002}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Zar\'and}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Costi}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Jerez}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {N.}~\bibnamefont {Andrei}},\ }\href {\doibase
+  10.1103/PhysRevB.65.134416} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {65}},\ \bibinfo {pages} {134416}
+  (\bibinfo {year} {2002})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Andrei}\ and\ \citenamefont
+  {Jerez}(1995)}]{andrei_jerez_1995}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Andrei}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Jerez}},\
+  }\href {\doibase 10.1103/PhysRevLett.74.4507} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {74}},\ \bibinfo
+  {pages} {4507} (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tsvelick}(1985)}]{Tsvelick_1985}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont
+  {Tsvelick}},\ }\href {\doibase 10.1088/0022-3719/18/1/020} {\bibfield
+  {journal} {\bibinfo  {journal} {Journal of Physics C: Solid State Physics}\
+  }\textbf {\bibinfo {volume} {18}},\ \bibinfo {pages} {159} (\bibinfo {year}
+  {1985})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tsvelick}\ and\ \citenamefont
+  {Wiegmann}(1984{\natexlab{b}})}]{Tsvelick1984}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont
+  {Tsvelick}}\ and\ \bibinfo {author} {\bibfnamefont {P.~B.}\ \bibnamefont
+  {Wiegmann}},\ }\href {\doibase 10.1007/BF01319184} {\bibfield  {journal}
+  {\bibinfo  {journal} {Zeitschrift f{\"u}r Physik B Condensed Matter}\
+  }\textbf {\bibinfo {volume} {54}},\ \bibinfo {pages} {201} (\bibinfo {year}
+  {1984}{\natexlab{b}})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Affleck}\ and\ \citenamefont
   {Ludwig}(1991)}]{affleck_1991_overscreen}%
   \BibitemOpen
@@ -143,29 +196,23 @@
   {\bibfield  {journal} {\bibinfo  {journal} {Nuclear Physics B}\ }\textbf
   {\bibinfo {volume} {360}},\ \bibinfo {pages} {641} (\bibinfo {year}
   {1991})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Tsvelick}\ and\ \citenamefont
-  {Wiegmann}(1984)}]{Tsvelick_Weigmann_mchannel_1984}%
+\bibitem [{\citenamefont {Affleck}\ and\ \citenamefont
+  {Ludwig}(1993)}]{affleck1993exact}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont
-  {Tsvelick}}\ and\ \bibinfo {author} {\bibfnamefont {P.~B.}\ \bibnamefont
-  {Wiegmann}},\ }\href {\doibase 10.1007/BF01319184} {\bibfield  {journal}
-  {\bibinfo  {journal} {Zeitschrift f{\"u}r Physik B Condensed Matter}\
-  }\textbf {\bibinfo {volume} {54}},\ \bibinfo {pages} {201} (\bibinfo {year}
-  {1984})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Gan}(1994)}]{Gan_mchannel_1994}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Affleck}}\ and\ \bibinfo {author} {\bibfnamefont {A.~W.}\ \bibnamefont
+  {Ludwig}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Physical Review B}\ }\textbf {\bibinfo {volume} {48}},\ \bibinfo {pages}
+  {7297} (\bibinfo {year} {1993})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ludwig}\ and\ \citenamefont
+  {Affleck}(1991)}]{affleck_ludwig_1991}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Gan}},\ }\href {\doibase 10.1088/0953-8984/6/24/016} {\ \textbf {\bibinfo
-  {volume} {6}},\ \bibinfo {pages} {4547} (\bibinfo {year} {1994})}\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {Pang}\ and\ \citenamefont
-  {Cox}(1991)}]{pang_cox_1991}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~B.}\ \bibnamefont
-  {Pang}}\ and\ \bibinfo {author} {\bibfnamefont {D.~L.}\ \bibnamefont {Cox}},\
-  }\href {\doibase 10.1103/PhysRevB.44.9454} {\bibfield  {journal} {\bibinfo
-  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {44}},\ \bibinfo
-  {pages} {9454} (\bibinfo {year} {1991})}\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~W.~W.}\
+  \bibnamefont {Ludwig}}\ and\ \bibinfo {author} {\bibfnamefont
+  {I.}~\bibnamefont {Affleck}},\ }\href {\doibase 10.1103/PhysRevLett.67.3160}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf
+  {\bibinfo {volume} {67}},\ \bibinfo {pages} {3160} (\bibinfo {year}
+  {1991})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Emery}\ and\ \citenamefont
   {Kivelson}(1992)}]{emery_kivelson}%
   \BibitemOpen
@@ -185,6 +232,32 @@
   {\doibase 10.1103/PhysRevLett.81.196} {\bibfield  {journal} {\bibinfo
   {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {81}},\ \bibinfo
   {pages} {196} (\bibinfo {year} {1998})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gan}(1994)}]{Gan_mchannel_1994}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Gan}},\ }\href {\doibase 10.1088/0953-8984/6/24/016} {\ \textbf {\bibinfo
+  {volume} {6}},\ \bibinfo {pages} {4547} (\bibinfo {year} {1994})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Pang}\ and\ \citenamefont
+  {Cox}(1991)}]{pang_cox_1991}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~B.}\ \bibnamefont
+  {Pang}}\ and\ \bibinfo {author} {\bibfnamefont {D.~L.}\ \bibnamefont {Cox}},\
+  }\href {\doibase 10.1103/PhysRevB.44.9454} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {44}},\ \bibinfo
+  {pages} {9454} (\bibinfo {year} {1991})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mitchell}\ \emph {et~al.}(2014)\citenamefont
+  {Mitchell}, \citenamefont {Galpin}, \citenamefont {Wilson-Fletcher},
+  \citenamefont {Logan},\ and\ \citenamefont {Bulla}}]{mitchell_bulla_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~K.}\ \bibnamefont
+  {Mitchell}}, \bibinfo {author} {\bibfnamefont {M.~R.}\ \bibnamefont
+  {Galpin}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Wilson-Fletcher}}, \bibinfo {author} {\bibfnamefont {D.~E.}\ \bibnamefont
+  {Logan}}, \ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Bulla}},\ }\href {\doibase 10.1103/PhysRevB.89.121105} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {89}},\
+  \bibinfo {pages} {121105} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Tripathi}(2018)}]{tripathi2018landau}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
@@ -313,14 +386,6 @@
   }\href {\doibase 10.1103/PhysRevB.52.6611} {\bibfield  {journal} {\bibinfo
   {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {52}},\ \bibinfo
   {pages} {6611} (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Affleck}\ and\ \citenamefont
-  {Ludwig}(1993)}]{affleck1993exact}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
-  {Affleck}}\ and\ \bibinfo {author} {\bibfnamefont {A.~W.}\ \bibnamefont
-  {Ludwig}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
-  {Physical Review B}\ }\textbf {\bibinfo {volume} {48}},\ \bibinfo {pages}
-  {7297} (\bibinfo {year} {1993})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Coleman}\ and\ \citenamefont
   {P\'epin}(2003)}]{coleman_pepin_2003}%
   \BibitemOpen
@@ -388,6 +453,24 @@
   {Wiegmann}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Adv.
   in Phys.}\ }\textbf {\bibinfo {volume} {32}},\ \bibinfo {pages} {453}
   (\bibinfo {year} {1983})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vojta}(2006)}]{vojta_2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Vojta}},\ }\href {\doibase 10.1080/14786430500070396} {\bibfield  {journal}
+  {\bibinfo  {journal} {Philosophical Magazine}\ }\textbf {\bibinfo {volume}
+  {86}},\ \bibinfo {pages} {1807} (\bibinfo {year} {2006})},\ \Eprint
+  {http://arxiv.org/abs/https://doi.org/10.1080/14786430500070396}
+  {https://doi.org/10.1080/14786430500070396} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mitchell}\ \emph {et~al.}(2011)\citenamefont
+  {Mitchell}, \citenamefont {Becker},\ and\ \citenamefont
+  {Bulla}}]{andrew_bulla_2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~K.}\ \bibnamefont
+  {Mitchell}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Becker}}, \
+  and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Bulla}},\ }\href
+  {\doibase 10.1103/PhysRevB.84.115120} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {84}},\ \bibinfo
+  {pages} {115120} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Bulla}\ \emph {et~al.}(2008)\citenamefont {Bulla},
   \citenamefont {Costi},\ and\ \citenamefont {Pruschke}}]{bullaNRGreview}%
   \BibitemOpen
@@ -433,4 +516,41 @@
   {\bibinfo  {journal} {New Journal of Physics}\ }\textbf {\bibinfo {volume}
   {22}},\ \bibinfo {pages} {063007} (\bibinfo {year}
   {2020}{\natexlab{d}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Anderson}(1967)}]{anderson_infraredcat}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~W.}\ \bibnamefont
+  {Anderson}},\ }\href {\doibase 10.1103/PhysRevLett.18.1049} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+  {volume} {18}},\ \bibinfo {pages} {1049} (\bibinfo {year}
+  {1967})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Yamada}\ and\ \citenamefont
+  {Yosida}(1978)}]{yamada_catastrophe}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Yamada}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Yosida}},\ }\href {\doibase 10.1143/PTP.59.1061} {\bibfield  {journal}
+  {\bibinfo  {journal} {Progress of Theoretical Physics}\ }\textbf {\bibinfo
+  {volume} {59}},\ \bibinfo {pages} {1061} (\bibinfo {year} {1978})},\ \Eprint
+  {http://arxiv.org/abs/https://academic.oup.com/ptp/article-pdf/59/4/1061/5315849/59-4-1061.pdf}
+  {https://academic.oup.com/ptp/article-pdf/59/4/1061/5315849/59-4-1061.pdf}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Yamada}\ and\ \citenamefont
+  {Yosida}(1979)}]{yamada1979orthogonality}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Yamada}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Yosida}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Progress of Theoretical Physics}\ }\textbf {\bibinfo {volume} {62}},\
+  \bibinfo {pages} {363} (\bibinfo {year} {1979})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fabrizio}\ \emph {et~al.}(1995)\citenamefont
+  {Fabrizio}, \citenamefont {Gogolin},\ and\ \citenamefont
+  {Nozi\`eres}}]{fabrizio_nozieres_1995}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Fabrizio}}, \bibinfo {author} {\bibfnamefont {A.~O.}\ \bibnamefont
+  {Gogolin}}, \ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Nozi\`eres}},\ }\href {\doibase 10.1103/PhysRevLett.74.4503} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+  {volume} {74}},\ \bibinfo {pages} {4503} (\bibinfo {year}
+  {1995})}\BibitemShut {NoStop}%
 \end{thebibliography}%
