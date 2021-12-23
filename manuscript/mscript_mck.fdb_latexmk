@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex mscript_mck"] 1640153497 "mscript_mck.aux" "mscript_mck.bbl" "mscript_mck" 1640153498
+["bibtex mscript_mck"] 1640266881 "mscript_mck.aux" "mscript_mck.bbl" "mscript_mck" 1640266959
   "/usr/share/texmf-dist/bibtex/bst/revtex4-1/apsrev4-1.bst" 1617738001 71515 e333383ed72bf24aa6de7e8cabb55f84 ""
-  "mscript_mck.aux" 1640153498 14728 2b7bde2e226a0bb7e9e0a44f559a64cc "pdflatex"
+  "mscript_mck.aux" 1640266959 14728 1921a80113cf9e9392fc6125b67dc33a "pdflatex"
   "mscript_mck.bib" 1640075457 277853 631cb24db59672afd4379d7457db41b7 ""
-  "mscript_mckNotes.bib" 1640153498 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "mscript_mckNotes.bib" 1640266958 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "mscript_mck.bbl"
   "mscript_mck.blg"
-["pdflatex"] 1640153497 "mscript_mck.tex" "mscript_mck.pdf" "mscript_mck" 1640153498
+["pdflatex"] 1640266958 "mscript_mck.tex" "mscript_mck.pdf" "mscript_mck" 1640266959
   "../numerics/K to K-1.pdf" 1640153103 123656 2f79f3480c09e64877f0bbcc091b5f73 ""
   "../numerics/deg_of_comp.pdf" 1640152427 122909 1b0465afa460d083970590b2ceade8e6 ""
   "../numerics/disc_mag_imp_gen.pdf" 1640152696 129220 e1bcd120693559b89abb074516fb89ca ""
@@ -136,15 +136,15 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1639377178 5065252 bcee0692f299aea3b1d13d4b7b7296ae ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1639377162 2812679 39858057e0fa650f1582b85c81c0cae8 ""
   "duality.pdf" 1639041112 13619 fbc5a21e09c0bc9731f189b16bcc540f ""
-  "mscript_mck.aux" 1640153498 14728 2b7bde2e226a0bb7e9e0a44f559a64cc "pdflatex"
-  "mscript_mck.bbl" 1640153497 24842 c285859a0c6d54a2800788c2b7492454 "bibtex mscript_mck"
-  "mscript_mck.out" 1640153498 6637 3c8cc7fbc96ce48da559865d567edd06 "pdflatex"
-  "mscript_mck.tex" 1640153496 69168 74ac8457042064de94b45fd0d2ed585f ""
+  "mscript_mck.aux" 1640266959 14728 1921a80113cf9e9392fc6125b67dc33a "pdflatex"
+  "mscript_mck.bbl" 1640266881 24842 c285859a0c6d54a2800788c2b7492454 "bibtex mscript_mck"
+  "mscript_mck.out" 1640266959 6637 3c8cc7fbc96ce48da559865d567edd06 "pdflatex"
+  "mscript_mck.tex" 1640266958 69414 c986ace94d2b98e61a52d32f39a0d789 ""
   "rg_flow.pdf" 1639973377 5786 668791f2524f3ec559b8b66069250dd4 ""
   "stargraph.pdf" 1639973377 7987 7ef16facb95d8cae02ed449bca56385b ""
   (generated)
-  "mscript_mckNotes.bib"
-  "mscript_mck.pdf"
   "mscript_mck.out"
   "mscript_mck.aux"
+  "mscript_mck.pdf"
+  "mscript_mckNotes.bib"
   "mscript_mck.log"

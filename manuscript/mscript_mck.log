@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.13)  22 DEC 2021 11:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.13)  23 DEC 2021 19:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -504,17 +504,17 @@ File: ./duality.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./duality.pdf  used on input line 376.
 (pdftex.def)             Requested size: 229.49844pt x 144.8027pt.
 [8] [9 <./duality.pdf>]
-<../numerics/K to K-1.pdf, id=409, 639.85484pt x 515.34323pt>
+<../numerics/K to K-1.pdf, id=408, 639.85484pt x 515.34323pt>
 File: ../numerics/K to K-1.pdf Graphic file (type pdf)
 <use ../numerics/K to K-1.pdf>
 Package pdftex.def Info: ../numerics/K to K-1.pdf  used on input line 432.
 (pdftex.def)             Requested size: 229.49844pt x 184.8393pt.
-<../numerics/irr_Jp_K=3.pdf, id=411, 647.93306pt x 515.34323pt>
+<../numerics/irr_Jp_K=3.pdf, id=410, 647.93306pt x 515.34323pt>
 File: ../numerics/irr_Jp_K=3.pdf Graphic file (type pdf)
 <use ../numerics/irr_Jp_K=3.pdf>
 Package pdftex.def Info: ../numerics/irr_Jp_K=3.pdf  used on input line 440.
 (pdftex.def)             Requested size: 229.49844pt x 182.5353pt.
-<../numerics/irr_Jp_K=50.pdf, id=412, 661.69162pt x 515.34323pt>
+<../numerics/irr_Jp_K=50.pdf, id=411, 661.69162pt x 515.34323pt>
 File: ../numerics/irr_Jp_K=50.pdf Graphic file (type pdf)
 <use ../numerics/irr_Jp_K=50.pdf>
 Package pdftex.def Info: ../numerics/irr_Jp_K=50.pdf  used on input line 441.
@@ -554,15 +554,15 @@ Package rerunfilecheck Info: File `mscript_mck.out' has not changed.
 (rerunfilecheck)             Checksum: 3C8CC7FBC96CE48DA559865D567EDD06;6637.
  ) 
 Here is how much of TeX's memory you used:
- 11803 strings out of 478994
- 169837 string characters out of 5864750
+ 11802 strings out of 478994
+ 169826 string characters out of 5864750
  781517 words of memory out of 5000000
- 28911 multiletter control sequences out of 15000+600000
+ 28910 multiletter control sequences out of 15000+600000
  411797 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,17n,75p,1468b,501s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb>
-Output written on mscript_mck.pdf (15 pages, 528732 bytes).
+Output written on mscript_mck.pdf (15 pages, 529281 bytes).
 PDF statistics:
  704 PDF objects out of 1000 (max. 8388607)
  632 compressed objects within 7 object streams
