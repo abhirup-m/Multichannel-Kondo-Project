@@ -63,7 +63,6 @@ The derivation of the RG equation for the over-screened regime \((2S < K)\) of t
 	\Delta J_{(j)} = -\frac{J_{(j)}^2 \mathcal{N}_{(j)}}{\omega_{(j)} - \frac{D_{(j)}}{2} + \frac{J_{(j)}}{4}}\left( 1 - \frac{1}{2}\rho J_{(j)} K \right) 
 \end{aligned}\end{equation}
 \(\mathcal{N}_{(j)}\) is the number of electronic states at the energy shell \(D_{(j)}\). We work in the low quantum fluctuation regime \(\omega_{(j)} < \frac{D_{(j)}}{2}\). There are three fixed points of the RG equation. One arises from the vanishing of the denominator, and was present in the single-channel Kondo RG equation as well \cite{kondo_urg}. As shown there, this fixed-point goes to \(J^* = \infty\) as the bare bandwidth of the conduction electrons is made large. The other trivial fixed point is the trivial one at \(J^* = 0\). The third fixed point is reached when the numerator vanishes: \(J^* = \frac{2}{K \rho}\) \cite{Kogan_2018,Kuramoto1998,Noz_blandin_1980}. Only the intermediate fixed point is found to be stable. This is consistent with results from Bethe ansatz calculations~\cite{Tsvelick_Weigmann_mchannel_1984,andrei_destri_1984,zarand_costi_2002,andrei_jerez_1995,Tsvelick_1985,Tsvelick1984}, CFT calculations~\cite{affleck_1991_overscreen,affleck1993exact,affleck_ludwig_1991}, bosonization treatments~\cite{emery_kivelson,vondelft_prl_1998} and NRG analysis~\cite{Gan_mchannel_1994,pang_cox_1991,mitchell_bulla_2014}.
-\cite{}.
 \begin{figure}[htpb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{./rg_flow.pdf}
@@ -112,8 +111,8 @@ The importance of the degeneracy can be shown in the following manner. The groun
 \section{Important Properties of the Star Graph}
 \subsection{Spectral and Quantum-mechanical features}
 
-\subsection{Degree of compensation: a measure of screening}
-One can quantify the amount of screening of the local moment at the impurity site by defining a degree of compensation \(\kappa\). It is given by the antiferromagnetic correlation existing between the impurity spin and conduction electron channels:
+\subsection{Degree of compensation: a measure of the frustration}
+One can quantify the amount of screening of the local moment at the impurity site by defining a degree of compensation \(\kappa\). Such a quantity also measures the inherent singlet frustration in the problem: the higher the degree of compensation, the better the spin can be screened into a singlet and lower is the frustration. It is given by the antiferromagnetic correlation existing between the impurity spin and conduction electron channels:
 \begin{equation}\begin{aligned}
 	\Gamma \equiv - \left< \vec{S_d}\cdot \vec{s}_\text{tot}\right>
 \end{aligned}\end{equation}
@@ -171,10 +170,10 @@ At low temperature \(\beta \to \infty\), only the highest value \(M_\text{max}\)
 \begin{align}
 	Z &\to 2 r^K_{M_\text{max}} M_\text{max} e^{\beta \frac{J}{2}(M_\text{max} + 1)}\\
 	Z^{\prime \prime} &\to r^K_{M_\text{max}}\left(\frac{\beta }{2(M_\text{max} + \frac{1}{2})}\right)^2 e^{\beta \frac{J}{2}(M_\text{max} + 1)}\Sigma_{M_\text{max}}\\
-	\chi &\to \frac{\beta\Sigma_\text{max}}{2M_\text{max}\left(2M_\text{max}+1\right)^2} = \frac{\beta(K-1)}{12(K+1)}
+	\chi &\to \frac{\beta\Sigma_\text{max}}{2M_\text{max}\left(2M_\text{max}+1\right)^2} = \frac{\beta(K-1)}{12(K+1)} \sim \frac{1}{T}
 \end{align}
 
-This non-analyticity in a response function is a signature of the critical nature of the Hamiltonian. This is in contrast to the behaviour in the non-critical exactly-screened fixed point where the ground state is unique. There, the susceptibility becomes constant at low temperatures: \(\chi(T\to 0) = \frac{W}{4 T_K}\), \(T_K\) being the single-channel Kondo temperature and \(W\) the Wilson number \cite{wilson1975renormalization,nozieres1974fermi,bullaNRGreview,kondo_urg}.
+This non-analyticity in a response function is a signature of the critical nature of the Hamiltonian. This is in contrast to the behaviour in the non-critical exactly-screened fixed point where the ground state is unique. There, the susceptibility becomes constant at low temperatures: \(\chi(T\to 0) = \frac{W}{4 T_K}\), \(T_K\) being the single-channel Kondo temperature and \(W\) the Wilson number \cite{wilson1975renormalization,nozieres1974fermi,bullaNRGreview,kondo_urg}. We have checked the case of general spin-\(S\) impurity numerically, and the general conclusion is that all exactly-screened models show a constant impurity susceptibility at \(T \to 0\), while the over-screened and under-screened cases show a diverging impurity susceptibility in the same limit. 
 
 Another non-analyticity arises when we consider the impurity free energy and the magnetization. The thermal free energy is given by
 \begin{equation}\begin{aligned}
@@ -207,7 +206,7 @@ There we used the result that the derivative of \(|x|\) is \(\text{sign}(x)\). I
 	\label{mag_crit}
 \end{figure}
 
-The magnetization is therefore discontinuous as \(h\to 0\); it goes to different values depending on the direction in which we take the limit. The non-analyticity for \(K>1\) occurs because there is at least one pair of ground state with non-zero parity \(\pi^z\) and magnetic field is able to flip one ground state into the state of opposite parity. This available space for scattering is simply the frustration that we discussed earlier. This argument makes it clear that the non-analyticity and hence the critical nature of the fixed point arises because of the ground state degeneracy, and is therefore a feature of all over-screened and under-screened  models. Indeed, we have checked numerically that the non-analyticity exists for \(\delta \neq 0\), where \(\delta = \frac{K}{2} - S\) is the deviation from exact screening. For \(\delta=0\), the ground state is unique and un-frustrated, so the external magnetic field has no parity-inverted pair to flip across.
+The magnetization is therefore discontinuous as \(h\to 0\); it goes to different values depending on the direction in which we take the limit. The non-analyticity for \(K>1\) occurs because there is at least one pair of ground state with non-zero parity \(\pi^z\) and magnetic field is able to flip one ground state into the state of opposite parity. This available space for scattering is simply the frustration that we discussed earlier. This argument, along with the diverging susceptibility for the over- and under-screened cases, makes it clear that the non-analyticity and hence the critical nature of the fixed point arise because of the ground state degeneracy, and is therefore a feature of all over-screened and under-screened  models. Indeed, we have checked numerically that the non-analyticity exists for \(\delta \neq 0\), where \(\delta = \frac{K}{2} - S\) is the deviation from exact screening. For \(\delta=0\), the ground state is unique and un-frustrated, so the external magnetic field has no parity-inverted pair to flip across.
 
 \subsection{Impurity magnetization in terms of parity operators}
 The expectation value of the impurity magnetization along a particular direction and in specific ground states can be related to the 't Hooft operator defined under eq.~\ref{w_loop}. We will work in the state comprised of two adjacent eigenstates of \(J^z\):
@@ -374,7 +373,7 @@ The excited states of the star graph can be used to define bosons \cite{kroha_ko
 The prime on \(s_\text{tot}\) indicates that it is formed by the new zero modes. This Hamiltonian is very similar to the one in eq.~\ref{strong_ham}, and that is the essence of the strong-weak duality: One can go from the over-screened strong coupling spin-\(S\) MCK model to another over-screened weak coupling spin-\((K-2S+1)\) MCK model. For the case of \(K=4S\), we have \(S^\prime = S\), and both \(S_d\) and \(\mathbb{S}_d\) describe the same spin objects (at least formally). The two models are then said to be self-dual. For example, for the case of spin-half MCK model, two-channel model is self-dual.
 \begin{figure}[!htpb]
 	\centering
-	\includegraphics[width=0.45\textwidth]{./duality.pdf}
+	\includegraphics[width=0.4\textwidth]{./duality.pdf}
 	\caption{Duality of the RG flows as seen in the star graph Hamiltonian. The red and green circles represent the impurity and zeroth site spins respectively. At large \(J\), the red circle binds with the green circles to form an effective spin \(\frac{K-1}{2}\) object (yellow) that interacts with the remaining spin of the conduction bath (blue circles).}
 	\label{duality_fig}
 \end{figure}
@@ -384,19 +383,25 @@ One important consequence of the duality relationship between the two over-scree
 	{J^\prime}^* = \frac{\gamma 4t^2}{J^*} = \frac{2}{K \rho^\prime} \implies \gamma = \frac{1}{4t^2} {J^*}^2 = \frac{1}{K^2 t^2 \rho \rho^\prime}
 \end{aligned}\end{equation}
 
-There exists another set of cross-dual points in the MCK model. This was hinted at when we looked at the degree of compassion in eq.~\ref{gamma}. Since \(\Gamma\) depends only on the magnitude of \(\delta\), both \(\pm \delta\) will give the same degree of compensation, same ground state energy and same degeneracy \(\left(g^S_K = |\delta|+1\right)\). The definition of \(\delta\)gives the duality transformation as \(K \to 2S, S \to \frac{K}{2}\). The duality therefore exists between a spin-\(S\) impurity \(K-\)channel model and a spin-\(\frac{K}{2}\) impurity \(2S-\)channel model. The exactly-screened Hamiltonian \(K=2S\) maps on to itself and is self-dual under this transformation.
+There exists another set of cross-dual points in the MCK model. This was hinted at when we looked at the degree of compassion in eq.~\ref{gamma}. Since \(\Gamma\) depends only on the magnitude of \(\delta\), both \(\pm \delta\) will give the same degree of compensation, same ground state energy and same degeneracy \(\left(g^S_K = |\delta|+1\right)\). The definition of \(\delta\)gives the duality transformation as \(K \to 2S, S \to \frac{K}{2}\). The duality therefore exists between a spin-\(S\) impurity \(K-\)channel model and a spin-\(\frac{K}{2}\) impurity \(2S-\)channel model. The exactly-screened Hamiltonian \(K=2S\) maps on to itself and is therefore self-dual under this transformation.
 
 
 
 \section{Impurity Quantum Phase transition in the multi-channel Kondo model under channel anisotropy}
 \label{anisotropic_rg}
-The isotropic MCK mode undergoes a phase transition when the symmetry of the channel interaction strengths is destroyed. It will be shown that if, in a \(K-\)channel model, one of the couplings becomes slightly larger than the other \(K-1\) couplings, the system goes into the singlet ground state characterized by local Fermi liquid excitations. On the other hand, if one of the couplings becomes slightly smaller than the rest, the system goes over to the \(K-1\) channel Kondo model.
+The isotropic MCK mode undergoes a phase transition when the symmetry of the channel interaction strengths is destroyed. We will now summarize the conclusions of this section. It will be shown analytically that if, in a \(K-\)channel model, one of the couplings becomes slightly larger than the other \(K-1\) couplings, the system goes into the singlet ground state characterized by local Fermi liquid excitations. On the other hand, if one of the couplings becomes slightly smaller than the rest, the system goes over to the \(K-1\) channel Kondo model. This shows that in the context of the general anisotropic MCK model, the symmetric model is highly unstable under slight anisotropy, and undergoes a phase transition into either the \(K-1\) channel model or into the singlet ground state.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.4\textwidth]{./iqpt.pdf}
+	\caption{Transitions from one Kondo model to another under insertion of anisotropy. The green circles represents MCK models with \(K>1\) while the black circle represents the \(K=1\) model. The red lines indicate transition from the \(K\) channel MCK model to the single-channel model when one of the exchange couplings becomes larger than the others. The black lines indicate the transition from the \(K\) channel model to the \(K-1\) channel model when one of the exchange couplings becomes smaller than the others.}
+	\label{fig:-iqpt-pdf}
+\end{figure}
 
 To see the transition, we need to start with the more general anisotropic MCK model:
 \begin{align}
-	H = \sum_{k,\alpha,l}\epsilon_{k,l} \hat n_{k\alpha,l} + \sum_{kk^\prime,\alpha,\beta,l}J_l \vec{S_d}\cdot\frac{1}{2}\vec{\sigma}_{\alpha\beta}c_{k\alpha,l}^\dagger c_{k^\prime\beta, l}~.
+	H = \sum_{k,\alpha,l}\epsilon_{k,l} \hat n_{k\alpha,l} + \sum_{kk^\prime,\atop{\alpha,\beta,l}}J_l \vec{S_d}\cdot\frac{1}{2}\vec{\sigma}_{\alpha\beta}c_{k\alpha,l}^\dagger c_{k^\prime\beta, l}~.
 \end{align}
-Let us consider the specific case where \(K-1\) channels have the same coupling \(J_1 = J_2 = ... = J_{K-1} = J_+\) and the remaining channel has a different coupling \(J_K = J_-\). The RG equations for such a model are
+We now consider the specific case where \(K-1\) channels have the same coupling \(J_1 = J_2 = ... = J_{K-1} = J_+\) and the remaining channel has a different coupling \(J_K = J_-\). The RG equations for such a model are
 \begin{align}
 	\frac{\Delta J_\pm}{|\Delta D|} = -\frac{J_\pm^2 \rho}{\mathcal{D}_\pm} + \frac{\rho^2 J_\pm}{2}\left[\frac{(K-1)J_+^2}{\mathcal{D}_+} + \frac{J_-^2}{\mathcal{D}_-}\right]
 \end{align}
@@ -410,7 +415,7 @@ Setting \(J_+ = J_-\) leads to the critical fixed point at \(J_+^* = J_-^* = J_*
 \end{widetext}
 We will first look at the special case of \(K=2\), the two channel Kondo model. The equations simplify to
 \begin{align}
-	\frac{\Delta j_\pm}{|\Delta D|} = \frac{J_\pm \rho}{K J_*|\mathcal{D}_*|}\left[- \left(j_+^2 + j_-^2\right) - 2J_* j_\mp\right]\\
+	\frac{\Delta j_\pm}{|\Delta D|} = \frac{J_\pm \rho}{K J_*|\mathcal{D}_*|}\left[- \left(j_+^2 + j_-^2\right) - 2J_* j_\mp\right]
 \end{align}
 For \(j_- < 0, j_+ > 0\), we have \(\Delta j_- < 0\). The coupling \(J_-\) therefore becomes irrelevant. For small \(j_+\), we have \(j_+^2 < 2J_* |j_-|\)  and \(\Delta j_+ > 0\). This means that the isotropic fixed point is repulsive under anisotropy~\cite{Noz_blandin_1980}. The coupling \(j_+\) being relevant means we have a single-channel Kondo problem. We already know the non-perturbative URG equation for the single-channel Kondo problem~\cite{kondo_urg}, and it leads to the strong coupling fixed point~\cite{Noz_blandin_1980,fabrizio_nozieres_1995,mitchell_bulla_2014}.
 
@@ -426,31 +431,27 @@ At the final step, we chose the positive solution, because \(j_+\) is relevant i
 \begin{align}
 	J_{+,*} = J_* + \frac{J_*}{K-1} = \frac{\frac{2}{K \rho} K}{K - 1} = \frac{2}{(K-1)\rho}
 \end{align}
-In other words, the \(K\) channel fixed point flows to the \(K-1\) channel fixed point. This is shown numerically in fig.~\ref{K_to_K-1}.
+In other words, the \(K\) channel fixed point flows to the \(K-1\) channel fixed point. This is shown numerically in the left panel of fig.~\ref{K_to_K-1}.
 
-\begin{figure}[htpb]
+\begin{figure*}[!htpb]
 	\centering
-	\includegraphics[width=0.45\textwidth]{../numerics/K to K-1.pdf}
-	\caption{Flow of \(J_\pm\) when \(j_< 0\) and \(J_+\). The smaller coupling \(J_-\) is irrelevant and switches off, while the other \(K-1\) couplings \(J_+\) flow to the \(K-1\) MCK fixed point.}
+	\includegraphics[width=0.32\textwidth]{../numerics/K to K-1.pdf}
+	\includegraphics[width=0.32\textwidth]{../numerics/irr_Jp_K=3.pdf}
+	\includegraphics[width=0.32\textwidth]{../numerics/irr_Jp_K=50.pdf}
+	\caption{left panel: Flow of \(J_\pm\) when \(j_< 0\) and \(J_+\). The smaller coupling \(J_-\) is irrelevant and switches off, while the other \(K-1\) couplings \(J_+\) flow to the \(K-1\) MCK fixed point. Middle and right panels: Flow of the couplings \(J_+\) when \(j_+ < 0\) when \(j_- > 0, j_+ < 0\), for two values of \(K\). In both cases, the smaller coupling \(J_+\) eventually dies out, leading to only one surviving coupling \(J^-\) which is relevant, and we are left with a single-channel Kondo model.}
 	\label{K_to_K-1}
-\end{figure}
+\end{figure*}
 
-In the opposite regime \(j_- > 0, j_+ < 0\), \(\Delta j_+\) is negative. It has been checked numerically that \(J_+\) ultimately flows to zero in this regime (fig. \ref{irrel_Jplus}), and \(J_-\) remains relevant. Since there is no numerator fixed point in the relevant coupling \(J_-\) and because all other couplings are irrelevant, the equation for \(J_-\) is replaced by the single-channel Kondo coupling URG equation, and the low-energy physics is then of strong coupling..
-\begin{figure}[htpb]
-	\centering
-	\includegraphics[width=0.45\textwidth]{../numerics/irr_Jp_K=3.pdf}
-	\includegraphics[width=0.45\textwidth]{../numerics/irr_Jp_K=50.pdf}
-	\caption{Flow of the couplings \(J_+\) when \(j_+ < 0\) when \(j_- > 0, j_+ < 0\), for two values of \(K\). In both cases, the smaller coupling \(J_+\) eventually dies out, leading to only one surviving coupling \(J^-\) which is relevant, and we are left with a single-channel Kondo model.}
-	\label{irrel_Jplus}
-\end{figure}
+In the opposite regime \(j_- > 0, j_+ < 0\), \(\Delta j_+\) is negative. It has been checked numerically that \(J_+\) ultimately flows to zero in this regime (middle and right panels of fig. \ref{K_to_K-1}), and \(J_-\) remains relevant. Since there is no numerator fixed point in the relevant coupling \(J_-\) and because all other couplings are irrelevant, the equation for \(J_-\) is replaced by the single-channel Kondo coupling URG equation, and the low-energy physics is then of strong coupling.
 
 \section{Conclusions}
+\lipsum[1-5]
 
 
 \acknowledgments
 The authors thank P. Majumdar, A. Mitchell, S. Sen, S. Patra, M. Mahankali and R. K. Singh for several discussions and feedback. Anirban Mukherjee thanks the CSIR, Govt. of India and IISER Kolkata for funding through a research fellowship. Abhirup Mukherjee thanks IISER Kolkata for funding through a research fellowship. AM and SL thank JNCASR, Bangalore for hospitality at the inception of this work. NSV acknowledges funding from JNCASR and a SERB grant (EMR/2017/005398).
 
-\clearpage
+% \clearpage
 \appendix
 \section{Hamiltonian RG of spin-\(S\) impurity MCK Model}
 \label{appendix_urg}
