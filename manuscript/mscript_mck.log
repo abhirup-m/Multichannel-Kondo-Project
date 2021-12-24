@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.13)  24 DEC 2021 10:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.13)  24 DEC 2021 10:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -405,12 +405,12 @@ Overfull \hbox (15.77538pt too wide) detected at line 40
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<./rg_flow.pdf, id=158, 500.09598pt x 95.4911pt>
+<./rg_flow.pdf, id=159, 500.09598pt x 95.4911pt>
 File: ./rg_flow.pdf Graphic file (type pdf)
 <use ./rg_flow.pdf>
 Package pdftex.def Info: ./rg_flow.pdf  used on input line 68.
 (pdftex.def)             Requested size: 229.49844pt x 43.82152pt.
-<./stargraph.pdf, id=163, 392.21948pt x 201.05792pt>
+<./stargraph.pdf, id=164, 392.21948pt x 201.05792pt>
 File: ./stargraph.pdf Graphic file (type pdf)
 <use ./stargraph.pdf>
 Package pdftex.def Info: ./stargraph.pdf  used on input line 90.
@@ -419,7 +419,7 @@ Package pdftex.def Info: ./stargraph.pdf  used on input line 90.
 
 pdfTeX warning: pdflatex (file ./stargraph.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<../numerics/deg_of_comp.pdf, id=217, 982.28394pt x 781.24489pt>
+<../numerics/deg_of_comp.pdf, id=219, 982.28394pt x 781.24489pt>
 File: ../numerics/deg_of_comp.pdf Graphic file (type pdf)
 <use ../numerics/deg_of_comp.pdf>
 Package pdftex.def Info: ../numerics/deg_of_comp.pdf  used on input line 131.
@@ -441,7 +441,7 @@ Overfull \hbox (4.04752pt too wide) detected at line 197
  []
 
 [4]
-<../numerics/disc_mag_imp_gen.pdf, id=292, 1030.7776pt x 760.26723pt>
+<../numerics/disc_mag_imp_gen.pdf, id=294, 1030.7776pt x 760.26723pt>
 File: ../numerics/disc_mag_imp_gen.pdf Graphic file (type pdf)
 <use ../numerics/disc_mag_imp_gen.pdf>
 Package pdftex.def Info: ../numerics/disc_mag_imp_gen.pdf  used on input line 204.
@@ -496,12 +496,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 358.
 
 [8]
-<./duality.pdf, id=415, 824.33594pt x 520.1323pt>
+<./duality.pdf, id=416, 824.33594pt x 520.1323pt>
 File: ./duality.pdf Graphic file (type pdf)
 <use ./duality.pdf>
 Package pdftex.def Info: ./duality.pdf  used on input line 376.
 (pdftex.def)             Requested size: 203.99689pt x 128.71527pt.
-<./iqpt.pdf, id=417, 499.98795pt x 141.26604pt>
+<./iqpt.pdf, id=418, 499.98795pt x 141.26604pt>
 File: ./iqpt.pdf Graphic file (type pdf)
 <use ./iqpt.pdf>
 Package pdftex.def Info: ./iqpt.pdf  used on input line 395.
@@ -510,17 +510,17 @@ Package pdftex.def Info: ./iqpt.pdf  used on input line 395.
 
 pdfTeX warning: pdflatex (file ./iqpt.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<../numerics/K to K-1.pdf, id=439, 678.60606pt x 542.01183pt>
+<../numerics/K to K-1.pdf, id=440, 678.60606pt x 542.01183pt>
 File: ../numerics/K to K-1.pdf Graphic file (type pdf)
 <use ../numerics/K to K-1.pdf>
 Package pdftex.def Info: ../numerics/K to K-1.pdf  used on input line 438.
 (pdftex.def)             Requested size: 163.20374pt x 130.35014pt.
-<../numerics/irr_Jp_K=3.pdf, id=440, 680.40454pt x 542.01183pt>
+<../numerics/irr_Jp_K=3.pdf, id=441, 680.40454pt x 542.01183pt>
 File: ../numerics/irr_Jp_K=3.pdf Graphic file (type pdf)
 <use ../numerics/irr_Jp_K=3.pdf>
 Package pdftex.def Info: ../numerics/irr_Jp_K=3.pdf  used on input line 439.
 (pdftex.def)             Requested size: 163.20374pt x 130.00279pt.
-<../numerics/irr_Jp_K=50.pdf, id=441, 711.36125pt x 542.01183pt>
+<../numerics/irr_Jp_K=50.pdf, id=442, 711.36125pt x 542.01183pt>
 File: ../numerics/irr_Jp_K=50.pdf Graphic file (type pdf)
 <use ../numerics/irr_Jp_K=50.pdf>
 Package pdftex.def Info: ../numerics/irr_Jp_K=50.pdf  used on input line 440.
@@ -546,32 +546,32 @@ Underfull \hbox (badness 1043) in paragraph at lines 270--274
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--363
+Underfull \hbox (badness 10000) in paragraph at lines 355--362
  []\OT1/cmr/m/n/9 T. Kimura and S. Ozaki, []Jour-nal of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--363
+Underfull \hbox (badness 10000) in paragraph at lines 355--362
  \OT1/cmr/m/n/9 Phys-i-cal So-ci-ety of Japan \OT1/cmr/bx/n/9 86\OT1/cmr/m/n/9 , 084703 (2017)[],
  []
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 459--466
+Underfull \hbox (badness 1210) in paragraph at lines 458--465
  []\OT1/cmr/m/n/9 M. Vo-jta, []Philo-soph-i-cal Mag-a-zine \OT1/cmr/bx/n/9 86\OT1/cmr/m/n/9 , 1807 (2006)[],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 531--538
+Underfull \hbox (badness 10000) in paragraph at lines 530--537
  []\OT1/cmr/m/n/9 K. Ya-mada and K. Yosida, []Progress
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 531--538
+Underfull \hbox (badness 10000) in paragraph at lines 530--537
  \OT1/cmr/m/n/9 of The-o-ret-i-cal Physics \OT1/cmr/bx/n/9 59\OT1/cmr/m/n/9 , 1061 (1978)[],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 531--538
+Underfull \hbox (badness 10000) in paragraph at lines 530--537
  []\OT1/cmr/m/n/9 https://academic.oup.com/ptp/article-
  []
 
@@ -582,16 +582,16 @@ Package rerunfilecheck Info: File `mscript_mck.out' has not changed.
 Here is how much of TeX's memory you used:
  11860 strings out of 478994
  171203 string characters out of 5864750
- 778602 words of memory out of 5000000
+ 777602 words of memory out of 5000000
  28955 multiletter control sequences out of 15000+600000
  411797 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,17n,75p,1468b,532s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,17n,75p,1483b,532s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb>
-Output written on mscript_mck.pdf (15 pages, 541317 bytes).
+Output written on mscript_mck.pdf (15 pages, 550075 bytes).
 PDF statistics:
- 761 PDF objects out of 1000 (max. 8388607)
- 688 compressed objects within 7 object streams
+ 762 PDF objects out of 1000 (max. 8388607)
+ 689 compressed objects within 7 object streams
  207 named destinations out of 1000 (max. 500000)
  238 words of extra memory for PDF output out of 10000 (max. 10000000)
 

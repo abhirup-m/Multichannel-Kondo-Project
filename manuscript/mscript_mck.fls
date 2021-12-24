@@ -698,6 +698,7 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT ./rg_flow.pdf
 INPUT ./rg_flow.pdf
@@ -709,7 +710,6 @@ INPUT ./stargraph.pdf
 INPUT ./stargraph.pdf
 INPUT ./stargraph.pdf
 INPUT ./stargraph.pdf
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT ../numerics/deg_of_comp.pdf
 INPUT ../numerics/deg_of_comp.pdf
 INPUT ../numerics/deg_of_comp.pdf

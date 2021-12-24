@@ -26,7 +26,7 @@ Warning--missing journal in Gan_mchannel_1994
 Warning--missing journal in cox_jarrell_two_channel_rev
 You've used 58 entries,
             5847 wiz_defined-function locations,
-            2041 strings with 26523 characters,
+            2041 strings with 26432 characters,
 and the built_in function-call counts, 52319 in all, are:
 = -- 3641
 > -- 1145

@@ -291,6 +291,17 @@
   {Wilson}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
   {Reviews of Modern Physics}\ }\textbf {\bibinfo {volume} {47}},\ \bibinfo
   {pages} {773} (\bibinfo {year} {1975}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Moca}\ \emph {et~al.}(2021)\citenamefont {Moca},
+  \citenamefont {Weymann}, \citenamefont {Werner},\ and\ \citenamefont
+  {Zar\'and}}]{moca_zarand_2021}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~P.}\ \bibnamefont
+  {Moca}}, \bibinfo {author} {\bibfnamefont {I.}~\bibnamefont {Weymann}},
+  \bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont {Werner}}, \ and\
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Zar\'and}},\ }\href
+  {\doibase 10.1103/PhysRevLett.127.186804} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {127}},\ \bibinfo
+  {pages} {186804} (\bibinfo {year} {2021})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Kolf}\ and\ \citenamefont
   {Kroha}(2007)}]{kroha_kolf_2007}%
   \BibitemOpen
@@ -308,18 +319,6 @@
   10.1103/PhysRevB.95.085121} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
   Rev. B}\ }\textbf {\bibinfo {volume} {95}},\ \bibinfo {pages} {085121}
   (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Moca}\ \emph {et~al.}(2021)\citenamefont {Moca},
-  \citenamefont {Weymann}, \citenamefont {Werner},\ and\ \citenamefont
-  {Zar\'and}}]{moca_zarand_2021}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~u. u. u. u. P.
-  m.~c.}\ \bibnamefont {Moca}}, \bibinfo {author} {\bibfnamefont
-  {I.}~\bibnamefont {Weymann}}, \bibinfo {author} {\bibfnamefont {M.~A.}\
-  \bibnamefont {Werner}}, \ and\ \bibinfo {author} {\bibfnamefont
-  {G.}~\bibnamefont {Zar\'and}},\ }\href {\doibase
-  10.1103/PhysRevLett.127.186804} {\bibfield  {journal} {\bibinfo  {journal}
-  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {127}},\ \bibinfo {pages}
-  {186804} (\bibinfo {year} {2021})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Gan}\ \emph {et~al.}(1993)\citenamefont {Gan},
   \citenamefont {Andrei},\ and\ \citenamefont
   {Coleman}}]{Gan_Andrei_Coleman_1993}%
