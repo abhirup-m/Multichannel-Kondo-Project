@@ -1,0 +1,52 @@
+\contentsline {title}{Title}{1}{section*.2}%
+\contentsline {abstract}{Abstract}{1}{section*.1}%
+\tocdepth@munge 
+\contentsline {section}{\numberline {}Contents}{1}{section*.3}%
+\tocdepth@restore 
+\contentsline {section}{\numberline {I}Introduction}{2}{section*.4}%
+\contentsline {section}{\numberline {II}Fixed point theory of over-screened MCK model}{2}{section*.5}%
+\contentsline {subsection}{\numberline {A}RG flows towards intermediate coupling}{2}{section*.6}%
+\contentsline {subsection}{\numberline {B}Star graph as the effective fixed point Hamiltonian}{2}{section*.7}%
+\contentsline {section}{\numberline {III}Important Properties of the Star Graph}{3}{section*.8}%
+\contentsline {subsection}{\numberline {A}Hamiltonian and wavefunctions}{3}{section*.9}%
+\contentsline {subsubsection}{\numberline {1}Ground state wavefunction}{4}{section*.10}%
+\contentsline {subsection}{\numberline {B}Entanglement properties}{4}{section*.11}%
+\contentsline {subsubsection}{\numberline {1}Impurity entanglement entropy}{4}{section*.12}%
+\contentsline {subsubsection}{\numberline {2}Mutual Information}{5}{section*.13}%
+\contentsline {subsubsection}{\numberline {3}Tripartite information}{6}{section*.14}%
+\contentsline {subsubsection}{\numberline {4}$I_N$ vs N}{6}{section*.15}%
+\contentsline {subsection}{\numberline {C}Correlation Studies}{6}{section*.16}%
+\contentsline {subsubsection}{\numberline {1}Quantum energy}{6}{section*.17}%
+\contentsline {subsubsection}{\numberline {2}Correlation study}{6}{section*.18}%
+\contentsline {subsubsection}{\numberline {3}Staggerred magnetization}{7}{section*.19}%
+\contentsline {subsection}{\numberline {D}Thermal entropy}{8}{section*.20}%
+\contentsline {subsection}{\numberline {E}Degree of compensation: a measure of the frustration}{8}{section*.21}%
+\contentsline {subsection}{\numberline {F}Impurity magnetization and susceptibility: Quantum criticality of overscreened MCK model}{9}{section*.22}%
+\contentsline {subsection}{\numberline {G}Impurity magnetization in terms of parity operators}{11}{section*.23}%
+\contentsline {section}{\numberline {IV}Effect of conduction bath excitations on the fixed point theory}{11}{section*.24}%
+\contentsline {subsection}{\numberline {A}Non-Fermi liquid signatures in momentum space}{11}{section*.25}%
+\contentsline {subsection}{\numberline {B}Local low-energy effective Hamiltonian}{13}{section*.26}%
+\contentsline {subsection}{\numberline {C}Studying the LEH}{14}{section*.27}%
+\contentsline {subsubsection}{\numberline {1}Self energy and Specific heat}{14}{section*.28}%
+\contentsline {subsubsection}{\numberline {2}Exact diagonalization}{14}{section*.29}%
+\contentsline {subsubsection}{\numberline {3}Momentum space structure of the NFL}{15}{section*.30}%
+\contentsline {subsection}{\numberline {D}Third order}{16}{section*.31}%
+\contentsline {subsection}{\numberline {E}Presence of a marginal Fermi liquid: Orthogonality catastrophe in two-channel MCK model}{16}{section*.32}%
+\contentsline {section}{\numberline {V}Local Mott liquid}{17}{section*.33}%
+\contentsline {subsection}{\numberline {A}Mapping with the degenerate ground state of stargraph}{18}{section*.34}%
+\contentsline {subsection}{\numberline {B}Local mott-liquid}{19}{section*.35}%
+\contentsline {subsubsection}{\numberline {1}Action on the Hamiltonian}{19}{section*.36}%
+\contentsline {section}{\numberline {VI}Topology and Gauge theory}{20}{section*.37}%
+\contentsline {subsection}{\numberline {A}In our case of stargraph model}{20}{section*.38}%
+\contentsline {subsubsection}{\numberline {1}$K=odd$}{20}{section*.39}%
+\contentsline {subsection}{\numberline {B}Main}{20}{section*.40}%
+\contentsline {section}{\numberline {VII}Duality in the MCK model}{21}{section*.41}%
+\contentsline {section}{\numberline {VIII}Impurity Quantum Phase transition in the MCK model}{22}{section*.42}%
+\contentsline {subsection}{\numberline {A}RG phase diagram under anisotropy}{22}{section*.43}%
+\contentsline {subsection}{\numberline {B}Robustness of the degeneracy in the presence of channel anisotropy}{23}{section*.44}%
+\contentsline {subsection}{\numberline {C}Berry phase}{23}{section*.45}%
+\contentsline {section}{\numberline {IX}Conclusions}{23}{section*.46}%
+\contentsline {section}{\numberline {}Acknowledgments}{23}{section*.47}%
+\appendix 
+\contentsline {section}{\numberline {A}Hamiltonian RG of spin-\(S\) impurity MCK Model}{23}{section*.48}%
+\contentsline {section}{\numberline {}References}{27}{section*.49}%

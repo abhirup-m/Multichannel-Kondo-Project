@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.24)  25 DEC 2021 20:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.24)  26 DEC 2021 20:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -392,146 +392,376 @@ LaTeX Info: Redefining \nameref on input line 5.
 Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 5.
 \openout3 = `mscript_mckNotes.bib'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (15.77538pt too wide) detected at line 40
+) (./mscript_mck.toc [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+\tf@toc=\write5
+\openout5 = `mscript_mck.toc'.
+
+
+Overfull \hbox (15.77538pt too wide) detected at line 38
 []
  []
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<./rg_flow.pdf, id=159, 500.09598pt x 95.4911pt>
+<./rg_flow.pdf, id=301, 500.09598pt x 95.4911pt>
 File: ./rg_flow.pdf Graphic file (type pdf)
 <use ./rg_flow.pdf>
-Package pdftex.def Info: ./rg_flow.pdf  used on input line 68.
+Package pdftex.def Info: ./rg_flow.pdf  used on input line 66.
 (pdftex.def)             Requested size: 229.49844pt x 43.82152pt.
-<./stargraph.pdf, id=164, 392.21948pt x 201.05792pt>
+[2 <./rg_flow.pdf>]
+<./stargraph.pdf, id=344, 392.21948pt x 201.05792pt>
 File: ./stargraph.pdf Graphic file (type pdf)
 <use ./stargraph.pdf>
-Package pdftex.def Info: ./stargraph.pdf  used on input line 90.
+Package pdftex.def Info: ./stargraph.pdf  used on input line 88.
 (pdftex.def)             Requested size: 229.49844pt x 117.64754pt.
- [2 <./rg_flow.pdf> <./stargraph.pdf
-
-pdfTeX warning: pdflatex (file ./stargraph.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<../numerics/deg_of_comp.pdf, id=219, 982.28394pt x 781.24489pt>
-File: ../numerics/deg_of_comp.pdf Graphic file (type pdf)
-<use ../numerics/deg_of_comp.pdf>
-Package pdftex.def Info: ../numerics/deg_of_comp.pdf  used on input line 131.
-(pdftex.def)             Requested size: 229.49844pt x 182.5197pt.
- [3 <../numerics/deg_of_comp.pdf>]
-
-Package amsmath Warning: Foreign command \atop;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 151.
-
-
-Overfull \hbox (12.71933pt too wide) detected at line 168
-[]
+ [3 <./stargraph.pdf>]
+Overfull \hbox (12.94528pt too wide) in alignment at lines 130--132
+ [][][] []
  []
 
 
-Overfull \hbox (4.04752pt too wide) detected at line 197
-[][][]
+Overfull \hbox (6.54399pt too wide) in alignment at lines 145--147
+ [][][] []
+ []
+
+
+Overfull \hbox (14.32912pt too wide) in alignment at lines 149--152
+ [][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+
  []
 
 [4]
-<../numerics/disc_mag_imp_gen.pdf, id=294, 1030.7776pt x 760.26723pt>
+<plt/EE_multi_channel_ANN.png, id=397, 722.7pt x 433.62pt>
+File: plt/EE_multi_channel_ANN.png Graphic file (type png)
+<use plt/EE_multi_channel_ANN.png>
+Package pdftex.def Info: plt/EE_multi_channel_ANN.png  used on input line 173.
+(pdftex.def)             Requested size: 229.49844pt x 137.69597pt.
+<plt/outer_EE_multi_channel_ANN.png, id=399, 722.7pt x 433.62pt>
+File: plt/outer_EE_multi_channel_ANN.png Graphic file (type png)
+<use plt/outer_EE_multi_channel_ANN.png>
+Package pdftex.def Info: plt/outer_EE_multi_channel_ANN.png  used on input line 174.
+(pdftex.def)             Requested size: 229.49844pt x 137.69597pt.
+<plt/I_2_vs_Nch_0_1.png, id=400, 627.34375pt x 418.56375pt>
+File: plt/I_2_vs_Nch_0_1.png Graphic file (type png)
+<use plt/I_2_vs_Nch_0_1.png>
+Package pdftex.def Info: plt/I_2_vs_Nch_0_1.png  used on input line 190.
+(pdftex.def)             Requested size: 229.49844pt x 153.12257pt.
+<plt/I_2_vs_Nch_1_2.png, id=401, 628.3475pt x 417.56pt>
+File: plt/I_2_vs_Nch_1_2.png Graphic file (type png)
+<use plt/I_2_vs_Nch_1_2.png>
+Package pdftex.def Info: plt/I_2_vs_Nch_1_2.png  used on input line 191.
+(pdftex.def)             Requested size: 229.49844pt x 152.50688pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
+
+ []
+
+[5 <./plt/EE_multi_channel_ANN.png> <./plt/outer_EE_multi_channel_ANN.png> <./plt/I_2_vs_Nch_0_1.png> <./plt/I_2_vs_Nch_1_2.png>]
+Overfull \hbox (11.51668pt too wide) in alignment at lines 203--205
+ [][][] []
+ []
+
+<plt/I_3_vs_Nch_1_2_3.png, id=417, 722.7pt x 433.62pt>
+File: plt/I_3_vs_Nch_1_2_3.png Graphic file (type png)
+<use plt/I_3_vs_Nch_1_2_3.png>
+Package pdftex.def Info: plt/I_3_vs_Nch_1_2_3.png  used on input line 209.
+(pdftex.def)             Requested size: 229.49844pt x 137.69597pt.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 216.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 216.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 216.
+
+<plt/I_N_vs_N_N9.png, id=419, 722.7pt x 433.62pt>
+File: plt/I_N_vs_N_N9.png Graphic file (type png)
+<use plt/I_N_vs_N_N9.png>
+Package pdftex.def Info: plt/I_N_vs_N_N9.png  used on input line 220.
+(pdftex.def)             Requested size: 229.49844pt x 137.69597pt.
+
+LaTeX Warning: Reference `eq:zero_mode' on page 6 undefined on input line 229.
+
+
+Overfull \hbox (17.36057pt too wide) detected at line 233
+[]
+ []
+
+<plt/Quantum_Energy_per_channel.png, id=421, 663.47874pt x 410.53375pt>
+File: plt/Quantum_Energy_per_channel.png Graphic file (type png)
+<use plt/Quantum_Energy_per_channel.png>
+Package pdftex.def Info: plt/Quantum_Energy_per_channel.png  used on input line 249.
+(pdftex.def)             Requested size: 229.49844pt x 142.00388pt.
+
+Overfull \hbox (11.26773pt too wide) in alignment at lines 262--266
+ [][][] []
+ []
+
+[6 <./plt/I_3_vs_Nch_1_2_3.png> <./plt/I_N_vs_N_N9.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 266.
+
+
+Overfull \hbox (21.026pt too wide) in alignment at lines 268--272
+ [][][] []
+ []
+
+
+Overfull \hbox (18.62648pt too wide) in alignment at lines 280--283
+ [][][] []
+ []
+
+<plt/Staggered_mag_50.png, id=440, 650.43pt x 433.62pt>
+File: plt/Staggered_mag_50.png Graphic file (type png)
+<use plt/Staggered_mag_50.png>
+Package pdftex.def Info: plt/Staggered_mag_50.png  used on input line 298.
+(pdftex.def)             Requested size: 229.49844pt x 152.99994pt.
+
+Overfull \hbox (25.1377pt too wide) in alignment at lines 312--316
+ [][][] []
+ []
+
+[7pdfTeX warning (ext4): destination with the same identifier (name{equation.3.27}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.346 \item $
+             M_s^2$ vs $N_{ch}$.pdfTeX warning (ext4): destination with the same identifier (name{equation.3.27}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.346 \item $
+             M_s^2$ vs $N_{ch}$.pdfTeX warning (ext4): destination with the same identifier (name{equation.3.32}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.346 \item $
+             M_s^2$ vs $N_{ch}$. <./plt/Quantum_Energy_per_channel.png> <./plt/Staggered_mag_50.png>]
+Overfull \hbox (4.30313pt too wide) in alignment at lines 366--369
+ [][][] []
+ []
+
+<plt/ThermalEntanglementVS_LogTemperature_.png, id=460, 650.43pt x 433.62pt>
+File: plt/ThermalEntanglementVS_LogTemperature_.png Graphic file (type png)
+<use plt/ThermalEntanglementVS_LogTemperature_.png>
+Package pdftex.def Info: plt/ThermalEntanglementVS_LogTemperature_.png  used on input line 372.
+(pdftex.def)             Requested size: 229.49844pt x 152.99994pt.
+<../numerics/deg_of_comp.pdf, id=462, 982.28394pt x 781.24489pt>
+File: ../numerics/deg_of_comp.pdf Graphic file (type pdf)
+<use ../numerics/deg_of_comp.pdf>
+Package pdftex.def Info: ../numerics/deg_of_comp.pdf  used on input line 400.
+(pdftex.def)             Requested size: 229.49844pt x 182.5197pt.
+[8 <./plt/ThermalEntanglementVS_LogTemperature_.png>]
+
+Package amsmath Warning: Foreign command \atop;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 416.
+
+
+Overfull \hbox (12.71933pt too wide) detected at line 433
+[]
+ []
+
+<plt/Central_Field_Chi_Powerlaw_.png, id=483, 650.43pt x 433.62pt>
+File: plt/Central_Field_Chi_Powerlaw_.png Graphic file (type png)
+<use plt/Central_Field_Chi_Powerlaw_.png>
+Package pdftex.def Info: plt/Central_Field_Chi_Powerlaw_.png  used on input line 443.
+(pdftex.def)             Requested size: 229.49844pt x 152.99994pt.
+<plt/Outer_Field_Chi_Powerlaw_.png, id=484, 650.43pt x 433.62pt>
+File: plt/Outer_Field_Chi_Powerlaw_.png Graphic file (type png)
+<use plt/Outer_Field_Chi_Powerlaw_.png>
+Package pdftex.def Info: plt/Outer_Field_Chi_Powerlaw_.png  used on input line 450.
+(pdftex.def)             Requested size: 229.49844pt x 152.99994pt.
+[9 <../numerics/deg_of_comp.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 456.
+
+
+Overfull \hbox (4.04752pt too wide) detected at line 476
+[][][]
+ []
+
+<../numerics/disc_mag_imp_gen.pdf, id=531, 1030.7776pt x 760.26723pt>
 File: ../numerics/disc_mag_imp_gen.pdf Graphic file (type pdf)
 <use ../numerics/disc_mag_imp_gen.pdf>
-Package pdftex.def Info: ../numerics/disc_mag_imp_gen.pdf  used on input line 204.
+Package pdftex.def Info: ../numerics/disc_mag_imp_gen.pdf  used on input line 483.
 (pdftex.def)             Requested size: 229.49844pt x 169.26622pt.
-
-Overfull \hbox (1.99266pt too wide) detected at line 233
+[10 <./plt/Central_Field_Chi_Powerlaw_.png> <./plt/Outer_Field_Chi_Powerlaw_.png> <../numerics/disc_mag_imp_gen.pdf>]
+Overfull \hbox (1.99266pt too wide) detected at line 516
 [][][]
  []
 
-[5 <../numerics/disc_mag_imp_gen.pdf>]
-Overfull \hbox (8.67918pt too wide) detected at line 269
-[][][]
- []
-
-
-Overfull \hbox (6.83939pt too wide) detected at line 274
-[][][]
- []
-
-[6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 578--579
 \OT1/cmr/m/n/10 We em-ployed the def-i-ni-tions $\OML/cmm/m/it/10 X[] \OMS/cmsy/m/n/10 ^^Q
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
+Underfull \hbox (badness 10000) in paragraph at lines 578--579
 [][] [][] [][] \OML/cmm/m/it/10 c[]c[]; X[]$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 Z[] \OMS/cmsy/m/n/10 ^^Q
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
+Underfull \hbox (badness 10000) in paragraph at lines 578--579
 [][] [] [] []$\OT1/cmr/m/n/10 . Fo-cus-
  []
 
 
-Underfull \hbox (badness 5908) in paragraph at lines 355--356
+Underfull \hbox (badness 5908) in paragraph at lines 578--579
 \OT1/cmr/m/n/10 ing on the ef-fec-tive Hamil-to-nian for $[]$, we
  []
 
 
-Underfull \hbox (badness 4291) in paragraph at lines 355--356
+Underfull \hbox (badness 4291) in paragraph at lines 578--579
 \OT1/cmr/m/n/10 see lots of non-Fermi liq-uid terms of the form
  []
 
 
-Underfull \hbox (badness 2865) in paragraph at lines 355--356
+Underfull \hbox (badness 2865) in paragraph at lines 578--579
 \OML/cmm/m/it/10 s[]X[]; s[]X[]; Z[]H[]$\OT1/cmr/m/n/10 . These arise be-cause
+ []
+
+[12]
+Overfull \hbox (22.4915pt too wide) detected at line 591
+[][][]
+ []
+
+
+Underfull \hbox (badness 3780) in paragraph at lines 591--593
+\OT1/cmr/m/n/10 Here the ba-sis we are in-ter-ested in is $\OMS/cmsy/m/n/10 fBg \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (0.61598pt too wide) in alignment at lines 593--597
+ [][][] []
+ []
+
+[13]
+<plt/FINAL_fitted_Cv_t_0p1.png, id=625, 649.116pt x 432.6345pt>
+File: plt/FINAL_fitted_Cv_t_0p1.png Graphic file (type png)
+<use plt/FINAL_fitted_Cv_t_0p1.png>
+Package pdftex.def Info: plt/FINAL_fitted_Cv_t_0p1.png  used on input line 697.
+(pdftex.def)             Requested size: 229.49844pt x 152.95587pt.
+ [14]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 711.
+
+<plt/NFL_Chi_log_0p1.png, id=644, 650.43pt x 433.62pt>
+File: plt/NFL_Chi_log_0p1.png Graphic file (type png)
+<use plt/NFL_Chi_log_0p1.png>
+Package pdftex.def Info: plt/NFL_Chi_log_0p1.png  used on input line 715.
+(pdftex.def)             Requested size: 229.49844pt x 152.99994pt.
+
+Overfull \hbox (28.81557pt too wide) in alignment at lines 745--749
+ [][][] []
+ []
+
+[15pdfTeX warning (ext4): destination with the same identifier (name{equation.4.104}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.786 \end{eqnarray}
+                     <./plt/FINAL_fitted_Cv_t_0p1.png> <./plt/NFL_Chi_log_0p1.png>]
+Overfull \hbox (28.01686pt too wide) in alignment at lines 794--801
+ [][][] []
+ []
+
+
+Overfull \hbox (8.67918pt too wide) detected at line 841
+[][][]
+ []
+
+[16pdfTeX warning (ext4): destination with the same identifier (name{equation.4.107}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.841 \end{aligned}\end{equation}
+                                 ]
+Overfull \hbox (6.83939pt too wide) detected at line 846
+[][][]
+ []
+
+
+Overfull \hbox (10.64655pt too wide) in alignment at lines 905--909
+ [][][] []
+ []
+
+[17]
+Overfull \hbox (19.5255pt too wide) in alignment at lines 932--935
+ [][][] []
+ []
+
+<plt/stargraph-to-alltoall.png, id=719, 326.68759pt x 119.84586pt>
+File: plt/stargraph-to-alltoall.png Graphic file (type png)
+<use plt/stargraph-to-alltoall.png>
+Package pdftex.def Info: plt/stargraph-to-alltoall.png  used on input line 950.
+(pdftex.def)             Requested size: 229.49844pt x 84.19507pt.
+[18 <./plt/stargraph-to-alltoall.png>] [19]
+Overfull \hbox (26.36192pt too wide) in alignment at lines 1202--1204
+ [][][] []
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 358.
+(hyperref)                removing `math shift' on input line 1214.
 
-[8]
-<./duality.pdf, id=416, 824.33594pt x 520.1323pt>
-File: ./duality.pdf Graphic file (type pdf)
-<use ./duality.pdf>
-Package pdftex.def Info: ./duality.pdf  used on input line 376.
-(pdftex.def)             Requested size: 203.99689pt x 128.71527pt.
-<./iqpt.pdf, id=418, 499.98795pt x 141.26604pt>
-File: ./iqpt.pdf Graphic file (type pdf)
-<use ./iqpt.pdf>
-Package pdftex.def Info: ./iqpt.pdf  used on input line 395.
-(pdftex.def)             Requested size: 203.99689pt x 57.63705pt.
- [9 <./duality.pdf> <./iqpt.pdf
-
-pdfTeX warning: pdflatex (file ./iqpt.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<../numerics/K to K-1.pdf, id=440, 678.60606pt x 542.01183pt>
-File: ../numerics/K to K-1.pdf Graphic file (type pdf)
-<use ../numerics/K to K-1.pdf>
-Package pdftex.def Info: ../numerics/K to K-1.pdf  used on input line 438.
-(pdftex.def)             Requested size: 163.20374pt x 130.35014pt.
-<../numerics/irr_Jp_K=3.pdf, id=441, 680.40454pt x 542.01183pt>
-File: ../numerics/irr_Jp_K=3.pdf Graphic file (type pdf)
-<use ../numerics/irr_Jp_K=3.pdf>
-Package pdftex.def Info: ../numerics/irr_Jp_K=3.pdf  used on input line 439.
-(pdftex.def)             Requested size: 163.20374pt x 130.00279pt.
-<../numerics/irr_Jp_K=50.pdf, id=442, 711.36125pt x 542.01183pt>
-File: ../numerics/irr_Jp_K=50.pdf Graphic file (type pdf)
-<use ../numerics/irr_Jp_K=50.pdf>
-Package pdftex.def Info: ../numerics/irr_Jp_K=50.pdf  used on input line 440.
-(pdftex.def)             Requested size: 163.20374pt x 124.34581pt.
- [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 456.
+(hyperref)                removing `math shift' on input line 1214.
 
-[11 <../numerics/K to K-1.pdf> <../numerics/irr_Jp_K=3.pdf> <../numerics/irr_Jp_K=50.pdf>] [12] [13]
-Overfull \hbox (6.09106pt too wide) detected at line 561
+
+Overfull \hbox (19.97725pt too wide) in alignment at lines 1237--1239
+ [][][] []
+ []
+
+[20]
+<./duality.pdf, id=770, 824.33594pt x 520.1323pt>
+File: ./duality.pdf Graphic file (type pdf)
+<use ./duality.pdf>
+Package pdftex.def Info: ./duality.pdf  used on input line 1276.
+(pdftex.def)             Requested size: 203.99689pt x 128.71527pt.
+ [21 <./duality.pdf>]
+<../numerics/K to K-1.pdf, id=794, 678.60606pt x 542.01183pt>
+File: ../numerics/K to K-1.pdf Graphic file (type pdf)
+<use ../numerics/K to K-1.pdf>
+Package pdftex.def Info: ../numerics/K to K-1.pdf  used on input line 1334.
+(pdftex.def)             Requested size: 163.20374pt x 130.35014pt.
+<../numerics/irr_Jp_K=3.pdf, id=795, 680.40454pt x 542.01183pt>
+File: ../numerics/irr_Jp_K=3.pdf Graphic file (type pdf)
+<use ../numerics/irr_Jp_K=3.pdf>
+Package pdftex.def Info: ../numerics/irr_Jp_K=3.pdf  used on input line 1335.
+(pdftex.def)             Requested size: 163.20374pt x 130.00279pt.
+<../numerics/irr_Jp_K=50.pdf, id=796, 711.36125pt x 542.01183pt>
+File: ../numerics/irr_Jp_K=50.pdf Graphic file (type pdf)
+<use ../numerics/irr_Jp_K=50.pdf>
+Package pdftex.def Info: ../numerics/irr_Jp_K=50.pdf  used on input line 1336.
+(pdftex.def)             Requested size: 163.20374pt x 124.34581pt.
+ [22]
+<./iqpt.pdf, id=814, 499.98795pt x 141.26604pt>
+File: ./iqpt.pdf Graphic file (type pdf)
+<use ./iqpt.pdf>
+Package pdftex.def Info: ./iqpt.pdf  used on input line 1345.
+(pdftex.def)             Requested size: 203.99689pt x 57.63705pt.
+<plt/Anisotropy_Channel:3.png, id=815, 850.17625pt x 502.87875pt>
+File: plt/Anisotropy_Channel:3.png Graphic file (type png)
+<use plt/Anisotropy_Channel:3.png>
+Package pdftex.def Info: plt/Anisotropy_Channel:3.png  used on input line 1395.
+(pdftex.def)             Requested size: 408.00156pt x 241.33301pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1439.
+
+[23] [24 <../numerics/K to K-1.pdf> <../numerics/irr_Jp_K=3.pdf> <../numerics/irr_Jp_K=50.pdf> <./iqpt.pdf>] [25 <./plt/Anisotropy_Channel:3.png>] [26]
+Overfull \hbox (6.09106pt too wide) detected at line 1544
 [][][]
  []
 
@@ -540,7 +770,7 @@ Underfull \hbox (badness 1127) in paragraph at lines 120--123
  []\OT1/cmr/m/n/9 A. Mukher-jee, A. Mukher-jee, N. S. Vid-hyad-hi-raja,
  []
 
-[14]
+[27]
 Underfull \hbox (badness 1043) in paragraph at lines 270--274
  []\OT1/cmr/m/n/9 E. Frad-kin, |   []
  []
@@ -575,23 +805,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 530--537
  []\OT1/cmr/m/n/9 https://academic.oup.com/ptp/article-
  []
 
-) [15] (./mscript_mck.aux)
+) [28] (./mscript_mck.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `mscript_mck.out' has not changed.
-(rerunfilecheck)             Checksum: 92A42E62730F3AB7D2FD68CF0E50C906;6670.
+(rerunfilecheck)             Checksum: A3E16FB38C9FE8F41EFDFCCFC7D1FE21;10309.
  ) 
 Here is how much of TeX's memory you used:
- 11860 strings out of 478994
- 171203 string characters out of 5864750
- 777602 words of memory out of 5000000
- 28955 multiletter control sequences out of 15000+600000
- 411797 words of font info for 60 fonts, out of 8000000 for 9000
+ 12193 strings out of 478994
+ 177401 string characters out of 5864750
+ 775869 words of memory out of 5000000
+ 29118 multiletter control sequences out of 15000+600000
+ 412105 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,17n,75p,1483b,532s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb>
-Output written on mscript_mck.pdf (15 pages, 550070 bytes).
+ 71i,17n,75p,1864b,529s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on mscript_mck.pdf (28 pages, 1123604 bytes).
 PDF statistics:
- 762 PDF objects out of 1000 (max. 8388607)
- 689 compressed objects within 7 object streams
- 207 named destinations out of 1000 (max. 500000)
- 238 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1179 PDF objects out of 1200 (max. 8388607)
+ 1056 compressed objects within 11 object streams
+ 356 named destinations out of 1000 (max. 500000)
+ 513 words of extra memory for PDF output out of 10000 (max. 10000000)
 
