@@ -1,4 +1,4 @@
-PWD /home/abhirup/work/Multi-channel Kondo URG/manuscript
+PWD /home/kirito/storage/work/Multi-channel-Kondo-URG/manuscript
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT mscript_mck.tex
