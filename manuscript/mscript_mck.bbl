@@ -120,6 +120,12 @@
   {Lal}},\ }\href@noop {} {\  (\bibinfo {year} {2021})},\ \Eprint
   {http://arxiv.org/abs/2111.10580} {arXiv:2111.10580 [cond-mat.str-el]}
   \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gan}(1994)}]{Gan_mchannel_1994}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Gan}},\ }\href {\doibase 10.1088/0953-8984/6/24/016} {\ \textbf {\bibinfo
+  {volume} {6}},\ \bibinfo {pages} {4547} (\bibinfo {year} {1994})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Kogan}(2018)}]{Kogan_2018}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
@@ -232,12 +238,6 @@
   {\doibase 10.1103/PhysRevLett.81.196} {\bibfield  {journal} {\bibinfo
   {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {81}},\ \bibinfo
   {pages} {196} (\bibinfo {year} {1998})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Gan}(1994)}]{Gan_mchannel_1994}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Gan}},\ }\href {\doibase 10.1088/0953-8984/6/24/016} {\ \textbf {\bibinfo
-  {volume} {6}},\ \bibinfo {pages} {4547} (\bibinfo {year} {1994})}\BibitemShut
-  {NoStop}%
 \bibitem [{\citenamefont {Pang}\ and\ \citenamefont
   {Cox}(1991)}]{pang_cox_1991}%
   \BibitemOpen
