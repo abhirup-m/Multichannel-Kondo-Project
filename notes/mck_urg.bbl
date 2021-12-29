@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{37}%
+\begin{thebibliography}{43}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -237,12 +237,12 @@
   }\href {\doibase 10.1103/PhysRevB.75.045129} {\bibfield  {journal} {\bibinfo
   {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {75}},\ \bibinfo
   {pages} {045129} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Wilson}(1975)}]{wilson1975}%
+\bibitem [{\citenamefont {Wilson}(1975{\natexlab{a}})}]{wilson1975}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.~G.}\ \bibnamefont
   {Wilson}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Rev.
   Mod. Phys.}\ }\textbf {\bibinfo {volume} {47}},\ \bibinfo {pages} {773}
-  (\bibinfo {year} {1975})}\BibitemShut {NoStop}%
+  (\bibinfo {year} {1975}{\natexlab{a}})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Nozieres}(1974)}]{nozieres1974fermi}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
@@ -331,6 +331,19 @@
   European Physical Journal B - Condensed Matter and Complex Systems}\ }\textbf
   {\bibinfo {volume} {5}},\ \bibinfo {pages} {457} (\bibinfo {year}
   {1998})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont
+  {Wilson}(1975{\natexlab{b}})}]{wilson1975renormalization}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.~G.}\ \bibnamefont
+  {Wilson}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Reviews of Modern Physics}\ }\textbf {\bibinfo {volume} {47}},\ \bibinfo
+  {pages} {773} (\bibinfo {year} {1975}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hewson}(1993)}]{hewson1993}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~C.}\ \bibnamefont
+  {Hewson}},\ }\href@noop {} {\emph {\bibinfo {title} {The Kondo Problem to
+  Heavy Fermions}}}\ (\bibinfo  {publisher} {Cambridge University Press},\
+  \bibinfo {year} {1993})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Varma}\ \emph {et~al.}(2002)\citenamefont {Varma},
   \citenamefont {Nussinov},\ and\ \citenamefont
   {Van~Saarloos}}]{varma2002singular}%
@@ -341,6 +354,40 @@
   }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Physics Reports}\
   }\textbf {\bibinfo {volume} {361}},\ \bibinfo {pages} {267} (\bibinfo {year}
   {2002})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Andrei}\ and\ \citenamefont
+  {Jerez}(1995)}]{andrei_jerez_1995}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Andrei}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Jerez}},\
+  }\href {\doibase 10.1103/PhysRevLett.74.4507} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {74}},\ \bibinfo
+  {pages} {4507} (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Anderson}(1967)}]{anderson_infraredcat}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~W.}\ \bibnamefont
+  {Anderson}},\ }\href {\doibase 10.1103/PhysRevLett.18.1049} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+  {volume} {18}},\ \bibinfo {pages} {1049} (\bibinfo {year}
+  {1967})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Yamada}\ and\ \citenamefont
+  {Yosida}(1978)}]{yamada_catastrophe}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Yamada}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Yosida}},\ }\href {\doibase 10.1143/PTP.59.1061} {\bibfield  {journal}
+  {\bibinfo  {journal} {Progress of Theoretical Physics}\ }\textbf {\bibinfo
+  {volume} {59}},\ \bibinfo {pages} {1061} (\bibinfo {year} {1978})},\ \Eprint
+  {http://arxiv.org/abs/https://academic.oup.com/ptp/article-pdf/59/4/1061/5315849/59-4-1061.pdf}
+  {https://academic.oup.com/ptp/article-pdf/59/4/1061/5315849/59-4-1061.pdf}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Yamada}\ and\ \citenamefont
+  {Yosida}(1979)}]{yamada1979orthogonality}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Yamada}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Yosida}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Progress of Theoretical Physics}\ }\textbf {\bibinfo {volume} {62}},\
+  \bibinfo {pages} {363} (\bibinfo {year} {1979})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Andrei}\ and\ \citenamefont
   {Destri}(1984)}]{andrei_destri_1984}%
   \BibitemOpen
