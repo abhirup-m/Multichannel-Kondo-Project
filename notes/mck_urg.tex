@@ -646,156 +646,103 @@ The hole sector gives an identical contribution to the RG equation, so that the 
 \end{aligned}\end{equation}
 
 \section{RG flow of axis anisotropy term}
-We now insert a symmetry-breaking term in the Hamiltonian and study the RG flow of this term:
+In this section, we will study the effect of an axis-symmetry-breaking term in the Hamiltonian. We start with the Hamiltonian:
 \begin{equation}\begin{aligned}
-	\mathcal{H} = \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{kl} J S_d^z s^z_{kl} + \frac{1}{2}\sum_{kl} J \left(S_d^+ s^-_{kl}  + S_d^- s^+_{kl}\right) + X \left(J^z\right)^2
+	\mathcal{H} = \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{a,l} J_a S_d^a s^a_{l}+ \sum_a X_a {J^a}^2
 \end{aligned}\end{equation}
-Here, \(s^z_{kl} = \frac{1}{2}\left(c^\dagger_{k\uparrow}c_{l \uparrow} - c^\dagger_{k\downarrow}c_{l \downarrow}\right)\), \(s^-_{kl} = c^\dagger_{k \downarrow}c_{l \uparrow}\) and \(s^+_{kl} = {s^-_{lk}}^\dagger\). Also, \(\tau = \hat n - \frac{1}{2}\). The indices \(k,l\) sum over the momentum states. \(\vec S_d\) is the impurity spin operator with \(S_d^z = \pm \frac{1}{2}\). \(X\) is the symmetry-breaking coupling, and \(J^z = S_d^z + s^z_\text{tot}\) is the total spin. Using \(\left(J^z\right)^2 = \frac{1}{4} + 2S_d^z s^z_\text{tot} + \left(s^z_\text{tot}\right)^2 \), we can rewrite the Hamiltonian as
+Here, \(s^a_l = \frac{1}{2}\sum_{k,k^\prime,\alpha\beta}\sigma^a_{\alpha\beta}c^\dagger_{k\alpha,l}c_{k^\prime\beta, l}\) and \(\tau = \hat n - \frac{1}{2}\). The indices \(k,k^\prime\) sum over the momentum states while \(l\) sums over the channels. \(\vec S_d\) is the impurity spin operator with \(S_d^z = \pm \frac{1}{2}\). \(X\) is the symmetry-breaking coupling, and \(J^a = S_d^a + s^a_\text{tot}\) is the total spin. Using \(\left(J^a\right)^2 = \frac{1}{4} + 2S_d^a s^a_\text{tot} + \left(s^a_\text{tot}\right)^2 \), we can rewrite the Hamiltonian as
 \begin{equation}\begin{aligned}
-	\mathcal{H} = \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{kl} J_\parallel S_d^z s^z_{kl} + \frac{1}{2}\sum_{kl} J_\perp \left(S_d^+ s^-_{kl}  + S_d^- s^+_{kl}\right) + X \sum_{k_1,k_2,k_1^\prime,\atop{k_2^\prime,l_1,l_2,\atop{\sigma_1,\sigma_2}}}\frac{\sigma_1\sigma_2}{4} c^\dagger_{k_1\sigma_1,l_1}c_{k_1^\prime\sigma_1,l_1}c^\dagger_{k_2\sigma_2,l_2}c_{k_2^\prime\sigma_2,l_2}
+	\mathcal{H} &= \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{a,l} J_a S_d^a s^a_{l} + \sum_a X_a \left(s^a_\text{tot}\right)^2 \\
+		    &= \sum_{k\sigma}\epsilon_{k}\tau_{k\sigma} + \sum_{a,l} J_a S_d^a s^a_{l} + \sum_{k_1,k_2,k_1^\prime,\atop{k_2^\prime,l_1,l_2,\atop{\alpha_1,\alpha_2,a}}}X_a \frac{1}{4}\sigma^a_{\alpha_1\alpha_1^\prime}\sigma^a_{\alpha_2\alpha_2^\prime} c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1}c^\dagger_{k_2\alpha_2,l_2}c_{k_2^\prime\alpha^\prime_2,l_2}
+\end{aligned}\end{equation}
+\(J_a\) has been redefined after absorbing the new \(2S_d^a s_\text{tot}^a\) piece.
+
+\subsection{Renormalisation of \(J_a\)}
+The additional set of processes that renormalise \(J_a\) are those that involve one vertex of \(X\) and one vertex of \(J\). The first such term is
+\begin{equation}\begin{aligned}
+	\frac{J_a X_b}{4} S_d^a \frac{1}{2}\sigma^a_{\beta\alpha}c^\dagger_{q\beta,l_2}c_{k\alpha,l_2}\frac{1}{\omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J_z}{4}} \left(\sigma^b_{\alpha\beta}\sigma^b_{\alpha_1\alpha_1^\prime}c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1}c^\dagger_{k\alpha,l_2}c_{q\beta,l_2} + \sigma^b_{\alpha\alpha^\prime_1}\sigma^b_{\alpha_1\beta}c^\dagger_{k\alpha,l_2}c_{k_1^\prime\alpha^\prime_1,l_2}c^\dagger_{k_1\alpha_1,l_2}c_{q\beta,l_2}\right)
+\end{aligned}\end{equation}
+All indices are summed over. Performing the sums over \(q, l_2\) and \(k\) (wherever applicable) gives
+\begin{equation}\begin{aligned}
+	&\sum\frac{J_a X_b n(D)}{8\left(\omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J_z}{4}\right)} S_d^a \sigma^a_{\beta\alpha}N(D)\left(K \sigma^b_{\alpha\beta}\sigma^b_{\alpha_1\alpha_1^\prime}c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1} + \sigma^b_{\alpha\alpha^\prime_1}\sigma^b_{\alpha_1\beta}c_{k_1^\prime\alpha^\prime_1,l_2}c^\dagger_{k_1\alpha_1,l_2}\right)\\
+	&=\sum\frac{J_a X_b n(D)}{8\left(\omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J_z}{4}\right)} S_d^a \sigma^a_{\beta\alpha} c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1}N(D)\left(K \sigma^b_{\alpha\beta}\sigma^b_{\alpha_1\alpha_1^\prime} - \sigma^b_{\alpha\alpha^\prime_1}\sigma^b_{\alpha_1\beta}\right)
+\end{aligned}\end{equation}
+Performing the sum over \(\alpha,\beta\) gives
+\begin{equation}\begin{aligned}
+	&\sum\frac{J_a X_b n(D)}{8\left(\omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J_z}{4}\right)} S_d^a c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1}N(D)\left(K 2\delta^{ab}\sigma^a_{\alpha_1\alpha_1^\prime} - \left( \sigma^b \sigma^a \sigma^b \right)_{\alpha_1\alpha_1^\prime}\right)\\
+	&=\sum\frac{J_a X_b n(D)}{8\left(\omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J_z}{4}\right)} S_d^a c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1}\sigma^a_{\alpha_1\alpha_1^\prime}N(D)\left[\left(2K- 1\right)\delta^{ab} + \delta^{a\neq b}\right]\\
+	&=\sum\frac{J_a n(D)}{8\left(\omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J_z}{4}\right)} S_d^a c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1}\sigma^a_{\alpha_1\alpha_1^\prime} N(D)\left[\left(2K - 1\right)X_a + X_{a+1} + X_{a-1}\right]\\
 \end{aligned}\end{equation}
 
-The following terms renormalize \(X\) (all indices are summed over):
-\paragraph{\(+|-|z\)}
+The second such terms are obtained by switching \(X\) and \(J\):
 \begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^+ c^\dagger_{q \downarrow, l_2}c_{k_1^\prime \uparrow, l_2}\frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\perp S_d^- c^\dagger_{k_2 \uparrow, l_3}c_{k_2^\prime \downarrow, l_3} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{-1}{2}J_\parallel S_d^z c^\dagger_{k_1 \downarrow, l_2} c_{q \downarrow, l_2} \\
-	&\longrightarrow -\frac{J_\perp^2 J_\parallel}{32} \frac{n(D)}{\left(\omega - \frac{D}{2} + \frac{J}{4}\right)^2}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime}c^\dagger_{k_2 \uparrow, l_3}c_{k_1^\prime \uparrow, l_2}c^\dagger_{k_1 \downarrow, l_2}c_{k_2^\prime \downarrow, l_3}
+	\frac{J_a X_b}{4} \left(\sigma^b_{\beta\alpha}\sigma^b_{\alpha_1\alpha_1^\prime}c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1}c^\dagger_{q\beta,l_2}c_{k\alpha,l_2} + \sigma^b_{\beta\alpha^\prime_1}\sigma^b_{\alpha_1\alpha}c^\dagger_{k_1\alpha_1,l_2}c_{k\alpha,l_2}c^\dagger_{q\beta,l_2}c_{k_1^\prime\alpha_1^\prime,l_2}\right)\frac{1}{\omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J_z}{4}} S_d^a \frac{1}{2}\sigma^a_{\alpha\beta}c^\dagger_{k\alpha,l_2}c_{q\beta,l_2}
 \end{aligned}\end{equation}
+Performing similar manipulations as above gives
 \begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^+ c^\dagger_{q \downarrow, l_2}c_{k_1^\prime \uparrow, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{-1}{2}J_\parallel S_d^z c^\dagger_{k_1 \downarrow, l_2} c_{q \downarrow, l_2} \frac{1}{-\omega + \frac{D}{2} - \frac{J}{4}}\frac{1}{2}J_\perp S_d^- c^\dagger_{k_2 \uparrow, l_3}c_{k_2^\prime \downarrow, l_3}\\
-	&\longrightarrow -\frac{J_\perp^2 J_\parallel}{32} \frac{n(D)}{\left(\omega - \frac{D}{2} + \frac{J}{4}\right)^2}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime}c^\dagger_{k_2 \uparrow, l_3}c_{k_1^\prime \uparrow, l_2}c^\dagger_{k_1 \downarrow, l_2}c_{k_2^\prime \downarrow, l_3}
+	&\sum\frac{J_a X_b n(D)}{8\left(\omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J_z}{4}\right)} S_d^a \sigma^a_{\alpha\beta}N(D)\left(K \sigma^b_{\beta\alpha}\sigma^b_{\alpha_1\alpha_1^\prime}c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1} + \sigma^b_{\beta\alpha^\prime_1}\sigma^b_{\alpha_1\alpha}c_{k_1^\prime\alpha^\prime_1,l_2}c^\dagger_{k_1\alpha_1,l_2}\right)\\
+	&=\sum\frac{J_a X_b n(D)}{8\left(\omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J_z}{4}\right)} S_d^a \sigma^a_{\alpha\beta} c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1}N(D)\left(K \sigma^b_{\beta\alpha}\sigma^b_{\alpha_1\alpha_1^\prime} - \sigma^b_{\beta\alpha^\prime_1}\sigma^b_{\alpha_1\alpha}\right)\\
+	&=\sum\frac{J_a X_b n(D)}{8\left(\omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J_z}{4}\right)} S_d^a c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1}N(D)\left(K 2\delta^{ab}\sigma^a_{\alpha_1\alpha_1^\prime} - \left( \sigma^b \sigma^a \sigma^b \right)_{\alpha_1\alpha_1^\prime}\right)\\
+	&=\sum\frac{J_a n(D)}{8\left(\omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J_z}{4}\right)} S_d^a c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1}\sigma^a_{\alpha_1\alpha_1^\prime}N(D)\left[\left(2K  - 1\right)X_a + X_{a+1} + X_{a-1}\right]\\
 \end{aligned}\end{equation}
-
-\paragraph{\(-|+|z\)}
+The addition renormalisation of \(J_a\) coming from the particle sector because of the presence of \(X_a\) is therefore
 \begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^- c^\dagger_{q \uparrow, l_2}c_{k_1^\prime \downarrow, l_2}\frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\perp S_d^+ c^\dagger_{k_2 \downarrow, l_3}c_{k_2^\prime \uparrow, l_3} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{2}J_\parallel S_d^z c^\dagger_{k_1 \uparrow, l_2} c_{q \uparrow, l_2} \\
-	&\longrightarrow -\frac{J_\perp^2 J_\parallel}{32} \frac{n(D)}{\left(\omega - \frac{D}{2} + \frac{J}{4}\right)^2}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime}c^\dagger_{k_2 \downarrow, l_3}c_{k_1^\prime \downarrow, l_2}c^\dagger_{k_1 \uparrow, l_2}c_{k_2^\prime \uparrow, l_3}
-\end{aligned}\end{equation}
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^- c^\dagger_{q \uparrow, l_2}c_{k_1^\prime \downarrow, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{2}J_\parallel S_d^z c^\dagger_{k_1 \uparrow, l_2} c_{q \uparrow, l_2}\frac{1}{-\omega + \frac{D}{2} - \frac{J}{4}}\frac{1}{2}J_\perp S_d^+ c^\dagger_{k_2 \downarrow, l_3}c_{k_2^\prime \uparrow, l_3} \\
-	&\longrightarrow -\frac{J_\perp^2 J_\parallel}{32} \frac{n(D)}{\left(\omega - \frac{D}{2} + \frac{J}{4}\right)^2}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime}c^\dagger_{k_2 \downarrow, l_3}c_{k_1^\prime \downarrow, l_2}c^\dagger_{k_1 \uparrow, l_2}c_{k_2^\prime \uparrow, l_3}
+	\Delta J_a\bigg\vert_\text{p-sector} = \frac{J_a n(D)}{4\left(\omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J_z}{4}\right)} N(D) \left[\left(2K - 1\right)X_a + X_{a+1} + X_{a-1}\right]
 \end{aligned}\end{equation}
 
-\paragraph{\(+|z|-\)}
+The renormalisation in the hole sector is identical to this, so the total renormalisation coming due to the presence of \(X\) is
 \begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^+ c^\dagger_{q \downarrow, l_2}c_{k_1^\prime \uparrow, l_2}\frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\parallel S_d^z \sum_\sigma \sigma c^\dagger_{k_2 \sigma, l_3}c_{k_2^\prime \sigma, l_3} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{2}J_\perp S_d^- c^\dagger_{k_1 \uparrow, l_2} c_{q \downarrow, l_2} \\
-	&\longrightarrow -\frac{J_\perp^2 J_\parallel}{32} \frac{n(D)}{\left(\omega - \frac{D}{2} + \frac{J}{4}\right)^2}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime,\sigma}\sigma c^\dagger_{k_2 \sigma, l_3}c_{k_2^\prime \sigma, l_3}c^\dagger_{k_1 \uparrow, l_2}c_{k_1^\prime \uparrow, l_2}
+	\Delta J_a = \frac{J_a n(D) N(D)}{2\left(\omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J_z}{4}\right)} \left[\left(2K - 1\right)X_a + X_{a+1} + X_{a-1}\right]
 \end{aligned}\end{equation}
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^+ c^\dagger_{q \downarrow, l_2}c_{k_1^\prime \uparrow, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{2}J_\perp S_d^- c^\dagger_{k_1 \uparrow, l_2} c_{q \downarrow, l_2} \frac{1}{-\omega + \frac{D}{2} - \frac{J}{4}}\frac{1}{2}J_\parallel S_d^z \sum_\sigma \sigma c^\dagger_{k_2 \sigma, l_3}c_{k_2^\prime \sigma, l_3}\\
-	&\longrightarrow -\frac{J_\perp^2 J_\parallel}{32} \frac{n(D)}{\left(\omega - \frac{D}{2} + \frac{J}{4}\right)^2}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime,\sigma}\sigma c^\dagger_{k_2 \sigma, l_3}c_{k_2^\prime \sigma, l_3}c^\dagger_{k_1 \uparrow, l_2}c_{k_1^\prime \uparrow, l_2}
-\end{aligned}\end{equation}
+This makes \(J_a\) irrelevant.
 
-\paragraph{\(-|z|+\)}
+\subsection{Renormalisation of \(X_a\)}
+The only process that renormalises \(X_a\) is that of two consecutive \(X\):
 \begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^- c^\dagger_{q \uparrow, l_2}c_{k_1^\prime \downarrow, l_2}\frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\parallel S_d^z \sum_\sigma \sigma c^\dagger_{k_2 \sigma, l_3}c_{k_2^\prime \sigma, l_3} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{2}J_\perp S_d^+ c^\dagger_{k_1 \downarrow, l_2} c_{q \uparrow, l_2} \\
-	&\longrightarrow \frac{J_\perp^2 J_\parallel}{32} \frac{n(D)}{\left(\omega - \frac{D}{2} + \frac{J}{4}\right)^2}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime,\sigma}\sigma c^\dagger_{k_2 \sigma, l_3}c_{k_2^\prime \sigma, l_3}c^\dagger_{k_1 \downarrow, l_2}c_{k_1^\prime \downarrow, l_2}
+	&c^\dagger_{q\beta,l_2}c_{k\alpha,l_2}\left(\sigma^a_{\beta\alpha}\sigma^a_{\alpha_1\alpha_1^\prime}c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1} + \sigma^a_{\beta\alpha^\prime_1}\sigma^a_{\alpha_1\alpha}c_{k_1^\prime\alpha^\prime_1,l_2}c^\dagger_{k_1\alpha_1,l_2}\right) \frac{X_a X_b}{16\left(\omega - \frac{D}{2} + \frac{X_z}{2}\right)}c^\dagger_{k\alpha,l_2}c_{q\beta,l_2}\\
+	&\quad\times\left(\sigma^b_{\alpha\beta}\sigma^b_{\alpha_2\alpha_2^\prime}c^\dagger_{k_2\alpha_2,l_3}c_{k_2^\prime\alpha^\prime_2,l_3} + \sigma^b_{\alpha\alpha^\prime_2}\sigma^b_{\alpha_2\beta}c_{k_2^\prime\alpha^\prime_2,l_2}c^\dagger_{k_2\alpha_2,l_2}\right)\\
+	&=c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1}\left(\sigma^a_{\beta\alpha}\sigma^a_{\alpha_1\alpha_1^\prime} - \delta_{l_1,l_2}\sigma^a_{\beta\alpha^\prime_1}\sigma^a_{\alpha_1\alpha}\right) \frac{X_a X_b\hat n_{q\beta,l_2}\left(1 - \hat n_{k\alpha,l_2}\right)}{16\left(\omega - \frac{D}{2} + \frac{X_z}{2}\right)}c^\dagger_{k_2\alpha_2,l_3}c_{k_2^\prime\alpha^\prime_2,l_3}\left(\sigma^b_{\alpha\beta}\sigma^b_{\alpha_2\alpha_2^\prime} - \delta_{l_2,l_3}\sigma^b_{\alpha\alpha^\prime_2}\sigma^b_{\alpha_2\beta}\right)\\
+	&=c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1}\left(K\sigma^a_{\beta\alpha}\sigma^a_{\alpha_1\alpha_1^\prime} - \sigma^a_{\beta\alpha^\prime_1}\sigma^a_{\alpha_1\alpha}\right) \frac{X_a X_b n(D) N(D)}{16\left(\omega - \frac{D}{2} + \frac{X_z}{2}\right)}c^\dagger_{k_2\alpha_2,l_3}c_{k_2^\prime\alpha^\prime_2,l_3}\left(K\sigma^b_{\alpha\beta}\sigma^b_{\alpha_2\alpha_2^\prime} - \sigma^b_{\alpha\alpha^\prime_2}\sigma^b_{\alpha_2\beta}\right)\\
+	&=\frac{X_a X_b n(D) N(D)}{16\left(\omega - \frac{D}{2} + \frac{X_z}{2}\right)}\left[2K \delta^{ab}\sigma^a_{\alpha_1\alpha_1^\prime}\sigma^b_{\alpha_2\alpha_2^\prime} - K \sigma^a_{\alpha_1\alpha_1^\prime}\left(\sigma^b \sigma^a \sigma^b\right)_{\alpha_2\alpha_2^\prime} - K \left(\sigma^a \sigma^b \sigma^a\right)_{\alpha_1\alpha_1^\prime}\sigma^b_{\alpha_2\alpha_2^\prime} + \left(\sigma^a \sigma^b\right)_{\alpha_1\alpha_2^\prime}\left(\sigma^b \sigma^a\right)_{\alpha_2\alpha_1^\prime}\right]\\
+	&\quad\times c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1}c^\dagger_{k_2\alpha_2,l_3}c_{k_2^\prime\alpha^\prime_2,l_3}\\
+	&=\frac{X_a X_b n(D) N(D)}{16\left(\omega - \frac{D}{2} + \frac{X_z}{2}\right)}\left[K \delta^{a \neq b}\sigma^a_{\alpha_1\alpha_1^\prime}\sigma^b_{\alpha_2\alpha_2^\prime} - \sigma^{a+b}_{\alpha_1\alpha_2^\prime}\sigma^{a+b}_{\alpha_2\alpha_1^\prime}\right]c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1}c^\dagger_{k_2\alpha_2,l_3}c_{k_2^\prime\alpha^\prime_2,l_3}
 \end{aligned}\end{equation}
+The \(\delta^{a \neq b}\) term does not renormalise the \(X_a\) term, but the second term does:
 \begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^- c^\dagger_{q \uparrow, l_2}c_{k_1^\prime \downarrow, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{2}J_\perp S_d^+ c^\dagger_{k_1 \downarrow, l_2} c_{q \uparrow, l_2}\frac{-1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\parallel S_d^z \sum_\sigma \sigma c^\dagger_{k_2 \sigma, l_3}c_{k_2^\prime \sigma, l_3} \\
-	&\longrightarrow \frac{J_\perp^2 J_\parallel}{32} \frac{n(D)}{\left(\omega - \frac{D}{2} + \frac{J}{4}\right)^2}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime,\sigma}\sigma c^\dagger_{k_2 \sigma, l_3}c_{k_2^\prime \sigma, l_3}c^\dagger_{k_1 \downarrow, l_2}c_{k_1^\prime \downarrow, l_2}
+	& -\sum_{k_1,k_1^\prime,k_2,k_2^\prime,l_1,l_3,\alpha_1,\alpha_1^\prime,\alpha_2,\alpha_2^\prime,a\neq b}\frac{X_a X_b n(D) N(D)}{16\left(\omega - \frac{D}{2} + \frac{X_z}{2}\right)}\sigma^{a+b}_{\alpha_1\alpha_2^\prime}\sigma^{a+b}_{\alpha_2\alpha_1^\prime}c^\dagger_{k_1\alpha_1,l_1}c_{k_1^\prime\alpha^\prime_1,l_1}c^\dagger_{k_2\alpha_2,l_3}c_{k_2^\prime\alpha^\prime_2,l_3}\\
+	&= \sum_{k_1,k_1^\prime,k_2,k_2^\prime,l_1,l_3,\alpha_1,\alpha_1^\prime,\alpha_2,\alpha_2^\prime,c}\frac{X_{c-1} X_{c+1} n(D) N(D)}{16\left(\omega - \frac{D}{2} + \frac{X_z}{2}\right)}\sigma^{c}_{\alpha_1\alpha_2^\prime}\sigma^{c}_{\alpha_2\alpha_1^\prime}c^\dagger_{k_1\alpha_1,l_1}c_{k_2^\prime\alpha^\prime_2,l_3}c^\dagger_{k_2\alpha_2,l_3}c_{k_1^\prime\alpha^\prime_1,l_1}
 \end{aligned}\end{equation}
+This gives
+\begin{equation}\begin{aligned}
+	\Delta X_c = \frac{X_{c-1} X_{c+1} n(D) N(D)}{16\left(\omega - \frac{D}{2} + \frac{X_z}{2}\right)}
+\end{aligned}\end{equation}
+which is marginal for \(X_a = \delta_{az}X_z\).
 
-\paragraph{\(z|+|-\)}
+At a higher order, the following process comes into play: \(S_d^a|S_d^b|S_d^c\).
 \begin{equation}\begin{aligned}
-	&\frac{-1}{2}J_\parallel S_d^z c^\dagger_{q \downarrow, l_2}c_{k_1^\prime \downarrow, l_2}\frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\perp S_d^+ c^\dagger_{k_2 \downarrow, l_3}c_{k_2^\prime \uparrow, l_3} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{2}J_\perp S_d^- c^\dagger_{k_1 \uparrow, l_2} c_{q \downarrow, l_2} \\
-	&\longrightarrow -\frac{J_\perp^2 J_\parallel}{32} \frac{n(D)}{\left(\omega - \frac{D}{2} + \frac{J}{4}\right)^2}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime}c^\dagger_{k_2 \downarrow, l_3}c_{k_1^\prime \downarrow, l_2}c^\dagger_{k_1 \uparrow, l_2}c_{k_2^\prime \uparrow, l_3}
+	&\frac{J_a J_b J_c}{\left( \omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J}{4} \right)^2} S_d^a S_d^b S_d^c s^a_{\beta\alpha}s^b_{\alpha_1\alpha_1^\prime}s^c_{\alpha^\prime\beta} c^\dagger_{q\beta,l_2}c_{k\alpha,l_2}c^\dagger_{k_1\alpha_1, l_1}c_{k_1^\prime\alpha_1^\prime,l_1} c^\dagger_{k^\prime\alpha^\prime, l_2}c_{q\beta,l_2}\\
+	&= -\frac{J_a J_b J_c \hat n_{q\beta, l_2}}{\left( \omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J}{4} \right)^2} S_d^a S_d^b S_d^c s^a_{\beta\alpha}s^b_{\alpha_1\alpha_1^\prime}s^c_{\alpha^\prime\beta} c^\dagger_{k_1\alpha_1, l_1}c_{k_1^\prime\alpha_1^\prime,l_1} c^\dagger_{k^\prime\alpha^\prime, l_2}c_{k\alpha,l_2}\\
+	&= -\frac{J_a J_b J_c n(D)}{\left( \omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J}{4} \right)^2} S_d^a S_d^b S_d^c s^a_{\beta\alpha}s^b_{\alpha_1\alpha_1^\prime}s^c_{\alpha^\prime\beta} c^\dagger_{k_1\alpha_1, l_1}c_{k_1^\prime\alpha_1^\prime,l_1} c^\dagger_{k^\prime\alpha^\prime, l_2}c_{k\alpha,l_2}\\
 \end{aligned}\end{equation}
+Another contribution can be obtained by switching the sequence of \(S_d^b,S_d^c\). Combining these gives
 \begin{equation}\begin{aligned}
-	&\frac{-1}{2}J_\parallel S_d^z c^\dagger_{q \downarrow, l_2}c_{k_1^\prime \downarrow, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{2}J_\perp S_d^- c^\dagger_{k_1 \uparrow, l_2} c_{q \downarrow, l_2} \frac{-1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\perp S_d^+ c^\dagger_{k_2 \downarrow, l_3}c_{k_2^\prime \uparrow, l_3} \\
-	&\longrightarrow -\frac{J_\perp^2 J_\parallel}{32} \frac{n(D)}{\left(\omega - \frac{D}{2} + \frac{J}{4}\right)^2}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime}c^\dagger_{k_2 \downarrow, l_3}c_{k_1^\prime \downarrow, l_2}c^\dagger_{k_1 \uparrow, l_2}c_{k_2^\prime \uparrow, l_3}
+	& -\frac{J_a J_b J_c n(D)}{\left( \omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J}{4} \right)^2} S_d^a \left[S_d^b, S_d^c\right] s^a_{\beta\alpha}s^b_{\alpha_1\alpha_1^\prime}s^c_{\alpha^\prime\beta} c^\dagger_{k_1\alpha_1, l_1}c_{k_1^\prime\alpha_1^\prime,l_1} c^\dagger_{k^\prime\alpha^\prime, l_2}c_{k\alpha,l_2}\\
 \end{aligned}\end{equation}
-
-\paragraph{\(z|-|+\)}
+Such a term will renormalise \(X_a\) only if \(a,b,c\) are distinct. For such combinations, we can write
 \begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\parallel S_d^z c^\dagger_{q \uparrow, l_2}c_{k_1^\prime \uparrow, l_2}\frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\perp S_d^- c^\dagger_{k_2 \uparrow, l_3}c_{k_2^\prime \downarrow, l_3} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{2}J_\perp S_d^+ c^\dagger_{k_1 \downarrow, l_2} c_{q \uparrow, l_2} \\
-	&\longrightarrow \frac{-J_\perp^2 J_\parallel}{32} \frac{n(D)}{\left(\omega - \frac{D}{2} + \frac{J}{4}\right)^2}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime}c^\dagger_{k_2 \uparrow, l_3}c_{k_1^\prime \uparrow, l_2}c^\dagger_{k_1 \downarrow, l_2}c_{k_2^\prime \downarrow, l_3}
+	S_d^a S_d^b S_d^c = S_d^e S_d^{e \pm 1} S_d^{e \mp 1} = \pm S_d^e S_d^{e+1} S_d^{e-1} = \frac{i}{8}\epsilon^{abc} \implies S_d^a \left[S_d^b, S_d^c\right] = \frac{i}{4}\epsilon^{abc}
 \end{aligned}\end{equation}
+Substituting this and summing over \(\beta\) gives
 \begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\parallel S_d^z c^\dagger_{q \uparrow, l_2}c_{k_1^\prime \uparrow, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{2}J_\perp S_d^+ c^\dagger_{k_1 \downarrow, l_2} c_{q \uparrow, l_2}\frac{-1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\perp S_d^- c^\dagger_{k_2 \uparrow, l_3}c_{k_2^\prime \downarrow, l_3} \\
-	&\longrightarrow \frac{-J_\perp^2 J_\parallel}{32} \frac{n(D)}{\left(\omega - \frac{D}{2} + \frac{J}{4}\right)^2}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime}c^\dagger_{k_2 \uparrow, l_3}c_{k_1^\prime \uparrow, l_2}c^\dagger_{k_1 \downarrow, l_2}c_{k_2^\prime \downarrow, l_3}
+	& -\frac{J_a J_b J_c n(D)}{\left( \omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J}{4} \right)^2} \frac{i}{4}\epsilon^{abc} \left(s^c s^a\right)_{\alpha^\prime\alpha}s^b_{\alpha_1\alpha_1^\prime} c^\dagger_{k_1\alpha_1, l_1}c_{k_1^\prime\alpha_1^\prime,l_1} c^\dagger_{k^\prime\alpha^\prime, l_2}c_{k\alpha,l_2}\\
+	&=  s^b_{\alpha^\prime\alpha}s^b_{\alpha_1\alpha_1^\prime} c^\dagger_{k_1\alpha_1, l_1}c_{k_1^\prime\alpha_1^\prime,l_1} c^\dagger_{k^\prime\alpha^\prime, l_2}c_{k\alpha,l_2} \sum_{a=b\pm 1, c=b \mp 1}\frac{J_a J_b J_c n(D)}{\left( \omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J}{4} \right)^2} \frac{1}{8}\\
+	&=  s^b_{\alpha^\prime\alpha}s^b_{\alpha_1\alpha_1^\prime} c^\dagger_{k_1\alpha_1, l_1}c_{k_1^\prime\alpha_1^\prime,l_1} c^\dagger_{k^\prime\alpha^\prime, l_2}c_{k\alpha,l_2} \frac{J_x J_y J_z n(D)}{4\left( \omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J}{4} \right)^2}\\
 \end{aligned}\end{equation}
-
-\paragraph{\(z|z|X\)}
+Getting identical contribution from hole sector gives
 \begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\parallel S_d^z \sum_\sigma c^\dagger_{q \sigma, l_2}c_{k \sigma, l_2}\frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\parallel S_d^z \sum_{\sigma_2} \sigma_2 c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X \sum_{\sigma_1}\sigma \sigma_1 c^\dagger_{k_1\sigma_1,l_1}c_{k_1^\prime\sigma_1,l_1}c^\dagger_{k\sigma,l_2}c_{q\sigma,l_2} \\
-	&\longrightarrow \frac{J_\parallel^2 X}{64} \frac{-\frac{1}{2}\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_1, l_3, k_1,k_1^\prime,k_2,k_2^\prime,\sigma_1,\sigma_2} \sigma_2 \sigma_1 c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3} c^\dagger_{k_1\sigma_1,l_1}c_{k_1^\prime\sigma_1,l_1}\sum_\sigma\sigma
+	\Delta X_a = \frac{J_x J_y J_z n(D)}{2\left( \omega + \frac{X_z}{2} - \frac{D}{2} + \frac{J}{4} \right)^2}
 \end{aligned}\end{equation}
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\parallel S_d^z \sum_\sigma \sigma c^\dagger_{q \sigma, l_2}c_{k \sigma, l_2}\frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\parallel S_d^z \sum_{\sigma_2} \sigma_2 c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X c^\dagger_{k\sigma,l_2}c_{k_1^\prime\sigma,l_2}c^\dagger_{k_1\sigma,l_2}c_{q\sigma,l_2} \\
-	&\longrightarrow \frac{J_\parallel^2 X}{64} \frac{\frac{1}{2}\rho n(D)}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime,\sigma,\sigma_2} \sigma_2 \sigma c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3} c^\dagger_{k_1\sigma,l_2}c_{k_1^\prime\sigma,l_2}
-\end{aligned}\end{equation}
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\parallel S_d^z \sum_\sigma c^\dagger_{q \sigma, l_2}c_{k \sigma, l_2}\frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\parallel S_d^z \sum_{\sigma_2} \sigma_2 c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X \sum_{\sigma_1}\sigma \sigma_1 c^\dagger_{k\sigma,l_2}c_{q\sigma,l_2} c^\dagger_{k_1\sigma_1,l_1}c_{k_1^\prime\sigma_1,l_1}\\
-	&\longrightarrow \frac{J_\parallel^2 X}{64} \frac{-\frac{1}{2}\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_1, l_3, k_1,k_1^\prime,k_2,k_2^\prime,\sigma_1,\sigma_2} \sigma_2 \sigma_1 c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3} c^\dagger_{k_1\sigma_1,l_1}c_{k_1^\prime\sigma_1,l_1}\sum_\sigma\sigma
-\end{aligned}\end{equation}
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\parallel S_d^z \sum_\sigma c^\dagger_{q \sigma, l_2}c_{k \sigma, l_2}\frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\parallel S_d^z \sum_{\sigma_2} \sigma_2 c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X c^\dagger_{k_1\sigma,l_2}c_{q\sigma,l_2} c^\dagger_{k\sigma,l_1}c_{k_1^\prime\sigma,l_1}\\
-	&\longrightarrow \frac{J_\parallel^2 X}{64} \frac{\frac{1}{2}\rho n(D)}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime,\sigma,\sigma_2} \sigma_2 \sigma c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3} c^\dagger_{k_1\sigma,l_2}c_{k_1^\prime\sigma,l_2}
-\end{aligned}\end{equation}
-
-\hrule
-
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\parallel S_d^z \sum_\sigma c^\dagger_{q \sigma, l_2}c_{k \sigma, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X \sum_{\sigma_1}\sigma \sigma_1 c^\dagger_{k_1\sigma_1,l_1}c_{k_1^\prime\sigma_1,l_1}c^\dagger_{k\sigma,l_2}c_{q\sigma,l_2}\frac{-1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\parallel S_d^z \sum_{\sigma_2} \sigma_2 c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3} \\
-	&\longrightarrow \frac{J_\parallel^2 X}{64} \frac{\frac{1}{2}\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_1, l_3, k_1,k_1^\prime,k_2,k_2^\prime,\sigma_1,\sigma_2} \sigma_2 \sigma_1 c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3} c^\dagger_{k_1\sigma_1,l_1}c_{k_1^\prime\sigma_1,l_1}\sum_\sigma\sigma
-\end{aligned}\end{equation}
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\parallel S_d^z \sum_\sigma \sigma c^\dagger_{q \sigma, l_2}c_{k \sigma, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X c^\dagger_{k\sigma,l_2}c_{k_1^\prime\sigma,l_2}c^\dagger_{k_1\sigma,l_2}c_{q\sigma,l_2}\frac{-1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\parallel S_d^z \sum_{\sigma_2} \sigma_2 c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3} \\
-	&\longrightarrow \frac{J_\parallel^2 X}{64} \frac{-\frac{1}{2}\rho n(D)}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime,\sigma,\sigma_2} \sigma_2 \sigma c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3} c^\dagger_{k_1\sigma,l_2}c_{k_1^\prime\sigma,l_2}
-\end{aligned}\end{equation}
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\parallel S_d^z \sum_\sigma c^\dagger_{q \sigma, l_2}c_{k \sigma, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X \sum_{\sigma_1}\sigma \sigma_1 c^\dagger_{k\sigma,l_2}c_{q\sigma,l_2} c^\dagger_{k_1\sigma_1,l_1}c_{k_1^\prime\sigma_1,l_1}\frac{-1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\parallel S_d^z \sum_{\sigma_2} \sigma_2 c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3}\\
-	&\longrightarrow \frac{J_\parallel^2 X}{64} \frac{\frac{1}{2}\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_1, l_3, k_1,k_1^\prime,k_2,k_2^\prime,\sigma_1,\sigma_2} \sigma_2 \sigma_1 c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3} c^\dagger_{k_1\sigma_1,l_1}c_{k_1^\prime\sigma_1,l_1}\sum_\sigma\sigma
-\end{aligned}\end{equation}
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\parallel S_d^z \sum_\sigma c^\dagger_{q \sigma, l_2}c_{k \sigma, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X c^\dagger_{k_1\sigma,l_2}c_{q\sigma,l_2} c^\dagger_{k\sigma,l_1}c_{k_1^\prime\sigma,l_1}\frac{-1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\parallel S_d^z \sum_{\sigma_2} \sigma_2 c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3}\\
-	&\longrightarrow \frac{J_\parallel^2 X}{64} \frac{-\frac{1}{2}\rho n(D)}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_2, l_3, k_1,k_1^\prime,k_2,k_2^\prime,\sigma,\sigma_2} \sigma_2 \sigma c^\dagger_{k_2 \sigma_2, l_3}c_{k_2^\prime \sigma_2, l_3} c^\dagger_{k_1\sigma,l_2}c_{k_1^\prime\sigma,l_2}
-\end{aligned}\end{equation}
-
-\paragraph{\(+|-|X\)}
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^+ c^\dagger_{q \downarrow, l_2}c_{k \uparrow, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\perp S_d^- c^\dagger_{k_2 \uparrow, l_3}c_{k_2^\prime \downarrow, l_3} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X \left( -1 \right) c^\dagger_{k\uparrow,l_1}c_{k_1^\prime\uparrow,l_1}c^\dagger_{k_1 \downarrow,l_2}c_{q \downarrow,l_2} \\
-	&\longrightarrow \frac{J_\perp^2 X}{32} \frac{\frac{1}{2}\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_1, l_3, k_1, k_1^\prime,k_2,k_2^\prime} c^\dagger_{k_2 \uparrow, l_3}c_{k_2^\prime \downarrow, l_3}c_{k_1^\prime\uparrow,l_1}c^\dagger_{k_1 \downarrow,l_2}
-\end{aligned}\end{equation}
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^+ c^\dagger_{q \downarrow, l_2}c_{k \uparrow, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\perp S_d^- c^\dagger_{k_2 \uparrow, l_3}c_{k_2^\prime \downarrow, l_3} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X \left( -1 \right) c^\dagger_{k_1 \downarrow,l_2}c_{q \downarrow,l_2} c^\dagger_{k\uparrow,l_1}c_{k_1^\prime\uparrow,l_1} \\
-	&\longrightarrow \frac{J_\perp^2 X}{32} \frac{\frac{1}{2}\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_1, l_3, k_1, k_1^\prime,k_2,k_2^\prime} c^\dagger_{k_2 \uparrow, l_3}c_{k_2^\prime \downarrow, l_3}c_{k_1^\prime\uparrow,l_1}c^\dagger_{k_1 \downarrow,l_2}
-\end{aligned}\end{equation}
-
-\hrule
-
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^+ c^\dagger_{q \downarrow, l_2}c_{k \uparrow, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X \left( -1 \right) c^\dagger_{k\uparrow,l_1}c_{k_1^\prime\uparrow,l_1}c^\dagger_{k_1 \downarrow,l_2}c_{q \downarrow,l_2} \frac{-1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\perp S_d^- c^\dagger_{k_2 \uparrow, l_3}c_{k_2^\prime \downarrow, l_3} \\
-	&\longrightarrow \frac{J_\perp^2 X}{32} \frac{-\frac{1}{2}\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_1, l_3, k_1, k_1^\prime,k_2,k_2^\prime} c^\dagger_{k_2 \uparrow, l_3}c_{k_2^\prime \downarrow, l_3}c_{k_1^\prime\uparrow,l_1}c^\dagger_{k_1 \downarrow,l_2}
-\end{aligned}\end{equation}
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^+ c^\dagger_{q \downarrow, l_2}c_{k \uparrow, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X \left( -1 \right) c^\dagger_{k_1 \downarrow,l_2}c_{q \downarrow,l_2} c^\dagger_{k\uparrow,l_1}c_{k_1^\prime\uparrow,l_1} \frac{-1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\perp S_d^- c^\dagger_{k_2 \uparrow, l_3}c_{k_2^\prime \downarrow, l_3} \\
-	&\longrightarrow \frac{J_\perp^2 X}{32} \frac{-\frac{1}{2}\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_1, l_3, k_1, k_1^\prime,k_2,k_2^\prime} c^\dagger_{k_2 \uparrow, l_3}c_{k_2^\prime \downarrow, l_3}c_{k_1^\prime\uparrow,l_1}c^\dagger_{k_1 \downarrow,l_2}
-\end{aligned}\end{equation}
-
-
-\paragraph{\(-|+|X\)}
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^- c^\dagger_{q \uparrow, l_2}c_{k \downarrow, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\perp S_d^+ c^\dagger_{k_2 \downarrow, l_3}c_{k_2^\prime \uparrow, l_3} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X \left( -1 \right) c^\dagger_{k \downarrow,l_1}c_{k_1^\prime\downarrow,l_1}c^\dagger_{k_1 \uparrow,l_2}c_{q \uparrow,l_2} \\
-	&\longrightarrow \frac{J_\perp^2 X}{32} \frac{\frac{1}{2}\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_1, l_3, k_1, k_1^\prime,k_2,k_2^\prime} c^\dagger_{k_2 \downarrow, l_3}c_{k_2^\prime \uparrow, l_3}c_{k_1^\prime\downarrow,l_1}c^\dagger_{k_1 \uparrow,l_2}
-\end{aligned}\end{equation}
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^- c^\dagger_{q \uparrow, l_2}c_{k \downarrow, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\perp S_d^+ c^\dagger_{k_2 \downarrow, l_3}c_{k_2^\prime \uparrow, l_3} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X \left( -1 \right) c^\dagger_{k_1 \uparrow,l_2}c_{q \uparrow,l_2} c^\dagger_{k \downarrow,l_1}c_{k_1^\prime\downarrow,l_1} \\
-	&\longrightarrow \frac{J_\perp^2 X}{32} \frac{\frac{1}{2}\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_1, l_3, k_1, k_1^\prime,k_2,k_2^\prime} c^\dagger_{k_2 \downarrow, l_3}c_{k_2^\prime \uparrow, l_3}c_{k_1^\prime\downarrow,l_1}c^\dagger_{k_1 \uparrow,l_2}
-\end{aligned}\end{equation}
-
-\hrule
-
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^- c^\dagger_{q \uparrow, l_2}c_{k \downarrow, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X \left( -1 \right) c^\dagger_{k \downarrow,l_1}c_{k_1^\prime\downarrow,l_1}c^\dagger_{k_1 \uparrow,l_2}c_{q \uparrow,l_2} \frac{-1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\perp S_d^+ c^\dagger_{k_2 \downarrow, l_3}c_{k_2^\prime \uparrow, l_3} \\
-	&\longrightarrow \frac{J_\perp^2 X}{32} \frac{-\frac{1}{2}\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_1, l_3, k_1, k_1^\prime,k_2,k_2^\prime} c^\dagger_{k_2 \downarrow, l_3}c_{k_2^\prime \uparrow, l_3}c_{k_1^\prime\downarrow,l_1}c^\dagger_{k_1 \uparrow,l_2}
-\end{aligned}\end{equation}
-\begin{equation}\begin{aligned}
-	&\frac{1}{2}J_\perp S_d^- c^\dagger_{q \uparrow, l_2}c_{k \downarrow, l_2} \frac{1}{\omega - \frac{D}{2} + \frac{J}{4}} \frac{1}{4}X \left( -1 \right) c^\dagger_{k_1 \uparrow,l_2}c_{q \uparrow,l_2} c^\dagger_{k \downarrow,l_1}c_{k_1^\prime\downarrow,l_1} \frac{-1}{\omega - \frac{D}{2} + \frac{J}{4}}\frac{1}{2}J_\perp S_d^+ c^\dagger_{k_2 \downarrow, l_3}c_{k_2^\prime \uparrow, l_3} \\
-	&\longrightarrow \frac{J_\perp^2 X}{32} \frac{-\frac{1}{2}\rho n(D) K}{\omega - \frac{D}{2} + \frac{J}{4}}\sum_{l_1, l_3, k_1, k_1^\prime,k_2,k_2^\prime} c^\dagger_{k_2 \downarrow, l_3}c_{k_2^\prime \uparrow, l_3}c_{k_1^\prime\downarrow,l_1}c^\dagger_{k_1 \uparrow,l_2}
-\end{aligned}\end{equation}
-
+This is relevant for \(X_a = \delta^{az}X_z\).
 
 \section{Duality in the MCK model}
 We start from a strong coupling \((J \to \infty)\) spin-\(S\) impurity MCK Hamiltonian in the over-screened regime \(\left( K > 2S \right) \),
