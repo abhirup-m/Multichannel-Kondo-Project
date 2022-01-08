@@ -62,7 +62,7 @@ The derivation of the RG equation for the over-screened regime \((2S < K)\) of t
 \(\mathcal{N}_{(j)}\) is the number of electronic states at the energy shell \(D_{(j)}\). We work in the low quantum fluctuation regime \(\omega_{(j)} < \frac{D_{(j)}}{2}\). There are three fixed points of the RG equation. One arises from the vanishing of the denominator, and was present in the single-channel Kondo RG equation as well \cite{kondo_urg}. As shown there, this fixed-point goes to \(J^* = \infty\) as the bare bandwidth of the conduction electrons is made large. The other trivial fixed point is the trivial one at \(J^* = 0\). The third fixed point is reached when the numerator vanishes: \(J^* = \frac{2}{K \rho}\) \cite{Gan_mchannel_1994,Kogan_2018,Kuramoto1998,Noz_blandin_1980}. Only the intermediate fixed point is found to be stable. This is consistent with results from Bethe ansatz calculations~\cite{Tsvelick_Weigmann_mchannel_1984,andrei_destri_1984,zarand_costi_2002,andrei_jerez_1995,Tsvelick_1985,Tsvelick1984}, CFT calculations~\cite{affleck_1991_overscreen,affleck1993exact,affleck_ludwig_1991}, bosonization treatments~\cite{emery_kivelson,vondelft_prl_1998} and NRG analysis~\cite{pang_cox_1991,mitchell_bulla_2014}.
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=0.45\textwidth]{./rg_flow.pdf}
+	\includegraphics[width=0.45\textwidth]{./figures/rg_flow.pdf}
 	\caption{The three fixed points of the over-screened RG equation. Only the intermediate one is stable.}
 	\label{rg_flow}
 \end{figure}
@@ -84,7 +84,7 @@ To study the low energy physics and universality of the problem, we will mostly 
 At the last step, we defined the local spin operator \(\vec{s}_l = \frac{1}{2}\sigma_l = \frac{1}{2}\sum_{kk^\prime}^*\sum_{\alpha\beta}\vec{\sigma}_{\alpha\alpha^\prime}c_{k\alpha,l}^\dagger c_{k^\prime\alpha^\prime, l}\) of each conduction channel.
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=0.45\textwidth]{./stargraph.pdf}
+	\includegraphics[width=0.45\textwidth]{./figures/stargraph.pdf}
 	\caption{Zero bandwidth limit of the fixed point Hamiltonian. The central yellow node is the impurity spin, which is talking withe the local spins of the channels represented as green nodes.}
 	\label{fig:-stargraph-pdf}
 \end{figure}
@@ -125,7 +125,7 @@ where \(\vec s_\text{tot} = \sum_l \vec s_l\). The expectation value is calculat
 \textit{For a given \(K_0\), the degree of compensation is maximised for exact screening \(\delta=0\), and is reduced for \(\delta \neq 0\). This shows the inability of the system to form a unique singlet ground state and reveals the quantum-mechanical frustration inherent in the zero mode Hamiltonian and therefore in the entire problem.} The degree of compensation is symmetric under the Hamiltonian transformation \(\delta \to -\delta\), and this represents a duality transformation between over-screened and under-screened MCK models. This topic will be discussed in more detail later.
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=0.45\textwidth]{../numerics/deg_of_comp.pdf}
+	\includegraphics[width=0.45\textwidth]{./figures/deg_of_comp.pdf}
 	\caption{Variation of the degree of compensation as we tune the system from under-screening to over-screening. The maximum spin compensation occurs at exact-screening \(\delta=0\).}
 \end{figure}
 
@@ -198,7 +198,7 @@ There we used the result that the derivative of \(|x|\) is \(\text{sign}(x)\). I
 \end{aligned}\end{equation}
 \begin{figure}[!htpb]
 	\centering
-	\includegraphics[width=0.45\textwidth]{../numerics/disc_mag_imp_gen.pdf}
+	\includegraphics[width=0.45\textwidth]{./figures/disc_mag_imp_gen.pdf}
 	\caption{Behaviour of the impurity magnetization for three values of \(\left(K, 2S\right) = \left(2, 4\right), \left( 3,3 \right), \left(4, 2\right)  \). Only the case of \(K=2S=3 \left(\delta=0\right)\) is analytic near zero. The non-analyticity of the other cases arises because of the frustration brought about by the degeneracy of the star graph ground state.}
 	\label{mag_crit}
 \end{figure}
@@ -374,7 +374,7 @@ The excited states of the star graph can be used to define bosons \cite{kroha_ko
 The prime on \(s_\text{tot}\) indicates that it is formed by the new zero modes. This Hamiltonian is very similar to the one in eq.~\ref{strong_ham}, and that is the essence of the strong-weak duality: One can go from the over-screened strong coupling spin-\(S\) MCK model to another over-screened weak coupling spin-\((K-2S+1)\) MCK model. For the case of \(K=4S\), we have \(S^\prime = S\), and both \(S_d\) and \(\mathbb{S}_d\) describe the same spin objects (at least formally). The two models are then said to be self-dual. For example, for the case of spin-half MCK model, two-channel model is self-dual.
 \begin{figure}[!htpb]
 	\centering
-	\includegraphics[width=0.4\textwidth]{./duality.pdf}
+	\includegraphics[width=0.4\textwidth]{./figures/duality.pdf}
 	\caption{Duality of the RG flows as seen in the star graph Hamiltonian. The red and green circles represent the impurity and zeroth site spins respectively. At large \(J\), the red circle binds with the green circles to form an effective spin \(\frac{K-1}{2}\) object (yellow) that interacts with the remaining spin of the conduction bath (blue circles).}
 	\label{duality_fig}
 \end{figure}
@@ -389,7 +389,7 @@ There exists another set of dual points in the MCK model. This was hinted at whe
 For \(K \neq 2S\), we transform an over-screened model into an under-screened model and vice versa. This duality relationship allows us to infer the RG scaling behaviour of one of the models if we know that of the other. If we know that for a certain pair of values \(K\) and \(S\), the \(K-\)channel MCK model with spin-\(S\) impurity has an intermediate fixed point, we can immediately conclude that the \(2S\)-channel spin-\(\frac{K}{2}\) model has a strong coupling fixed point.
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=0.45\textwidth]{./duality2.pdf}
+	\includegraphics[width=0.45\textwidth]{./figures/duality2.pdf}
 	\caption{./duality2.pdf}
 	\label{fig:-duality2-pdf}
 \end{figure}
@@ -401,7 +401,7 @@ For \(K \neq 2S\), we transform an over-screened model into an under-screened mo
 The isotropic MCK mode undergoes a phase transition when the symmetry of the channel interaction strengths is destroyed. We will now summarize the conclusions of this section. It will be shown analytically that if, in a \(K-\)channel model, one of the couplings becomes slightly larger than the other \(K-1\) couplings, the system goes into the singlet ground state characterized by local Fermi liquid excitations. On the other hand, if one of the couplings becomes slightly smaller than the rest, the system goes over to the \(K-1\) channel Kondo model. \textit{This shows that in the context of the general anisotropic MCK model, the symmetric model is highly unstable under slight anisotropy, and undergoes a phase transition into either the \(K-1\) channel NFL phase or into the single channel LFL phase.}
 \begin{figure}[!htpb]
 	\centering
-	\includegraphics[width=0.4\textwidth]{./iqpt.pdf}
+	\includegraphics[width=0.4\textwidth]{./figures/iqpt.pdf}
 	\caption{Transitions from one Kondo model to another under insertion of anisotropy. The green circles represents MCK models with \(K>1\) while the black circle represents the \(K=1\) model. The red lines indicate transition from the \(K\) channel MCK model to the single-channel model when one of the exchange couplings becomes larger than the others. The black lines indicate the transition from the \(K\) channel model to the \(K-1\) channel model when one of the exchange couplings becomes smaller than the others.}
 	\label{fig:-iqpt-pdf}
 \end{figure}
@@ -444,9 +444,9 @@ In other words, the \(K\) channel fixed point flows to the \(K-1\) channel fixed
 
 \begin{figure*}[!htpb]
 	\centering
-	\includegraphics[width=0.32\textwidth]{../numerics/K to K-1.pdf}
-	\includegraphics[width=0.32\textwidth]{../numerics/irr_Jp_K=3.pdf}
-	\includegraphics[width=0.32\textwidth]{../numerics/irr_Jp_K=50.pdf}
+	\includegraphics[width=0.32\textwidth]{./figures/K to K-1.pdf}
+	\includegraphics[width=0.32\textwidth]{./figures/irr_Jp_K=3.pdf}
+	\includegraphics[width=0.32\textwidth]{./figures/irr_Jp_K=50.pdf}
 	\caption{left panel: Flow of \(J_\pm\) when \(j_< 0\) and \(J_+\). The smaller coupling \(J_-\) is irrelevant and switches off, while the other \(K-1\) couplings \(J_+\) flow to the \(K-1\) MCK fixed point. Middle and right panels: Flow of the couplings \(J_+\) when \(j_+ < 0\) when \(j_- > 0, j_+ < 0\), for two values of \(K\). In both cases, the smaller coupling \(J_+\) eventually dies out, leading to only one surviving coupling \(J^-\) which is relevant, and we are left with a single-channel Kondo model.}
 	\label{K_to_K-1}
 \end{figure*}
