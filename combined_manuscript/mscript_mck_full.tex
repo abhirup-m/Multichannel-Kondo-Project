@@ -1,7 +1,7 @@
-\documentclass[reprint,prb,superscriptaddress]{revtex4-1}
-\usepackage{braket,amsmath,amssymb,graphicx,float,hyperref,color,ulem,soul,lipsum}
-% \allowdisplaybreaks
-%\bibliographystyle{apsrev4-1}
+\documentclass[reprint,prb,superscriptaddress]{revtex4-2}
+\usepackage{braket,amsmath,amssymb,graphicx,float,color,ulem,soul,lipsum}
+% \usepackage[hidelinks]{hyperref}
+\bibliographystyle{apsrev4-1}
 \begin{document}
 
 \title{Title}
@@ -24,21 +24,36 @@
 \begin{abstract}
 	\lipsum[1-2]
 \end{abstract}
+
 \maketitle
 
-\tableofcontents
-
 \section{Introduction}
-%\lipsum[1-10]
+{\color{blue}
+Local antiferromagnetic exchange interaction between a spin-\(\frac{1}{2}\) impurity and a metal gives rise to the well-understood phenomenon of Kondo effect~\cite{hewson1993} where the impurity local moment gets screened by the conduction electrons at temperatures below a certain scale called the Kondo temperature~\cite{anderson1969exact,anderson1970exact,anderson1970,wilson1975,andreiKondoreview,tsvelickKondoreview,affleck1993exact,affleck1995conformal}, leading to a spin singlet ground state and local Fermi liquid excitations above that ground state~\cite{nozieres1974fermi,hewsonp}.
+The screening manifests as an increase in the resistivity of the metal~\cite{Kondo,Zhang2013}, and in the saturation of the impurity contribution to the magnetic susceptibility~\cite{wilson1975,andreiKondoreview,tsvelickKondoreview}, both at low temperatures.
+More general models are obtained by taking impurities of higher spin~\cite{hewson1993,Noz_blandin_1980,affleck1993exact}, adding interactions between them~\cite{affleck_1992,affleck_ludwig_jones_1992,georges_1999,zarand_chung_2006,mitchell_logan_2011,mitchell_sela_2012,konig_coleman_2021}, by promoting to a Kondo lattice of impurities~\cite{coleman_1987,millis_lee_1987,auerbach_1986,rice_ueda_1986,stewart_1984} or by considering a correlated metal~\cite{granath_1998}.
+More important to the topic at hand, one can construct multi-channel Kondo (MCK) models by allowing \(K\) channels \( \left(K > 1\right) \) to interact with a spin-\(\frac{1}{2}\) impurity~\cite{Noz_blandin_1980,zawadowski_1980,cox_zawadowski_1998} via a common exchange coupling \(\mathcal{J}\).
+Using conformal field theory~\cite{affleck_1991_overscreen,affleck_ludwig_1991,affleck_pang_cox_1992,affleck1993exact,parcollet_olivier_large_N,affleck_2005}, bosonization~\cite{emery_kivelson,clarke_giamarchi_1993,zarand_2000,vondelft_prl_1998,schofield_1997}, numerical renormalization group~\cite{bullaNRGreview,affleck_pang_cox_1992,pang_cox_1991}, Bethe ansatz~\cite{andrei_destri_1984,Tsvelick1984,Tsvelick_1985,andrei_jerez_1995,zarand_costi_2002} and other methods~\cite{sengupta_1994,fabrizio_nozieres_1995,Coleman_tsvelik,fabrizio_gogolin_1995}, it has been shown that for the overscreened systems \(\left(K > 2S_d\right)\), the low energy physics is of the non-Fermi liquid type, displaying anomalous thermodynamic properties near \(T=0\) and a fractional zero temperature entropy in the thermodynamic limit (ensuring that temperature is taken to zero before the system size is taken to infinity~\cite{rozhkov_1998,vondelft_prl_1998}).
+This diverging behaviour is actually a signature of the fact that the system with a single channel-symmetric exchange coupling is quantum critical: it is susceptible to perturbations that introduce channel isotropy in the exchange couplings~\cite{Noz_blandin_1980,andrei_jerez_1995,affleck_pang_cox_1992,zarand_2000,zheng_2021}, rendering the realisation of such states in experiments quite a challenge.
+Nevertheless, several features of the two-channel Kondo model have been reproduced using structural two-level systems~\cite{zawadowski_1980,vladar_1983} interacting with a conduction bath~\cite{cichorek_2005,ralph_buhrman_1992,ralph_ludwig_1994,Iftikhar2015,Zhu2016}.
+More recently, it has become possible to tune a two-channel quantum dot system across the quantum phase transition~\cite{Potok2007,Keller2015}, revealing the fractionalisation of the low-energy degrees of freedom the Majorana fermions~\cite{emery1995,Coleman_tsvelik,mebrahtu_2013}.
 
-Understanding the nature of the low energy physics of multi-channel Kondo and the breakdown of screening remained a challenge. This work uses the recently developed unitary renormalization group (URG) technique to get the low energy effective Hamiltonian of this multi channel Kondo problem. We have already used this URG method to get the low energy effective Hamiltonian of the single-channel Kondo problem. This method has also been applied in many other strongly correlated problems [CITE]. We start with the multi-channel Kondo bare Hamiltonian; using this URG, we decouple electrons of higher energy from the rest to get the low energy effective Hamiltonian. Iteratively applying this URG method, we stop at a fixed point with a low energy fixed point Hamiltonian (LEH) with an intermediate Kondo coupling strength. We focus on the zero bandwidth limit where the problem reduces to a stargraph problem where one impurity spin $S_d$ is talking to multiple spin 1/2s. We have shown that most of the important properties of the multi-channel problem, like ground state degeneracy and breakdown of screening, can be understood by studying this stargraph problem. We find an exact duality between the over-screened and under-screened problems. In the exactly screened case, the impurity spin susceptibility at low temperature is independent of $T$ saturating at a finite non-zero value against the power-law divergence ($1/T$) for over and under-screened cases showing a clear distinction between them.
+The role of ground state degeneracy and quantum-mechanical frustration in the problem has not received sufficient attention, even though they play crucial role in determining the non-Fermi liquid physics and the quantum criticality of the system.
+This is, at least partially, due to the lack of an intermediate-coupling effective Hamiltonian that describes the low-energy physics of the MCK and reveals the channel-non diagonal nature of the excitations.
+The frustration in this context is the inability of the impurity spin to bind with a single conduction channel and form a maximally-entangled singlet.
+The absence of such frustration in the single-channel model means that drastic differences should exist compared to the multi-channel models at inexact screening \((K \neq 2S_d)\).
+Indeed, we show later that the orthogonality catastrophe in the MCK models is one such difference and that it is directly related to the degenerate ground state manifold.
+Another place where the effects of the non-diagonal low energy excitations are expected to show up is many particle entanglement, but the lack an intermediate coupling Hamiltonian has prevented the study of entanglement as a function of the RG flow~\cite{alkurtass_affleck_2016,kim_shim_2021}. Our effective Hamiltonian as well as the specific method enables the calculation and comparison of such measures of entanglement (for eg., the inter-channel mutual information) along the RG flow and as functions of the excitation energies, providing insight into the nature of the fixed point theory.
+}
 
-\par Apart from understanding this zero bandwidth model, we have also studied the role of excitations and derived the low energy effective Hamiltonian. We show the absence of local Fermi liquid in the overscreened multi-channel problem due to the degenerate ground-state manifold, in contrast to the exactly screened single-channel problem. The non-Fermi liquid structure of the LEH is purely coming out of a degenerate ground state manifold. We have studied different thermodynamic quantities of this effective Hamiltonian like specific heat, Susceptibility presented in the supplementary material. For the two-channel case, these measures obey logarithmic scaling with temperature as known in the literature. Along with various thermodynamics we have also studied different entanglement features of the ground state manifold of both the zero bandwidth star graph model and the multi-channel Kondo model. Though there is no direct inter-channel coupling in the Hamiltonian the strong inter-channel mutual information shows the presence of correlation among them in the degenerate ground state of the stargraph. Various entanglement measures show adiabatic continuity upon the addition of excitation for a single-channel case in contrast to the violation of it in the multi-channel case. This discontinuity shows a clear signature of orthogonality catastrophe in the multi-channel Kondo problem supporting the presence of local non-Fermi liquids independently. The ground state degeneracy of the zero-bandwidth multi-channel Kondo model is robust against anisotropy in the impurity-channel coupling strength. The degeneracy remains unchanged until some couplings vanish or diverge. Under URG we have verified that under channel anisotropy one gets to an effective multi-channel problem with a lower number of channels via a impurity quantum phase transition. The above two studies show that until the RG reaches the fixed point the degeneracy does not change. Below we present the summary of main results and the structure of the manuscript. The structure of the manuscript and the main results are presented below.
+This work uses the recently developed unitary renormalization group (URG) technique to get the low energy effective Hamiltonian of this MCK problem. We have already used this URG method to get the low energy effective Hamiltonian of the single-channel Kondo problem. This method has also been applied in many other strongly correlated problems [CITE]. We start with the MCK bare Hamiltonian; using this URG, we decouple electrons of higher energy from the rest to get the low energy effective Hamiltonian. Iteratively applying this URG method, we stop at a fixed point with a low energy fixed point Hamiltonian (LEH) with an intermediate Kondo coupling strength. We focus on the zero bandwidth limit where the problem reduces to a stargraph problem where one impurity spin $S_d$ is talking to multiple spin 1/2s. We have shown that most of the important properties of the MCK problem, like ground state degeneracy and breakdown of screening, can be understood by studying this stargraph problem. We find an exact duality between the over-screened and under-screened problems. In the exactly screened case, the impurity spin susceptibility at low temperature is independent of $T$ saturating at a finite non-zero value against the power-law divergence ($1/T$) for over and under-screened cases showing a clear distinction between them.
 
-\subsection{Summary of Main Results:} 
-First in \ref{rg_flow_section} we show the intermediate coupling RG fixed point and its effective Hamiltonian using the URG formalism. Then in \ref{sec:stargraph}, we focus on the zero bandwidth limit of the multichannel Kondo problem, which is a stargraph problem. Here we describe various properties of this stargraph Hamiltonian, like the ground state degeneracy for exact, over, and under-screened cases. In \ref{sec:deg_of_comp} we show the level of screening in all the three exact, over and under-screened cases via measuring the expectation of the stargraph Hamiltonian in the ground state called degree of compensation. This degree of compensation is maximum for the exactly screened case and decreases in the over and under-screened case. Later in \ref{sec:imp_suscept} our computation of low temperature impurity field susceptibility shows divergence following a power law $(1/T)$ for over, and under-screened cases against the saturation for exactly screened case shows the breakdown of screening in the former. Following impurity magnetization study also supports the above result. In \ref{sec:topo_ground_state} we recreate the degenerate groundstate manifold using non-local twist and translation operators. Next in \ref{sec:loc_mott_liquid} we decouple the impurity spin from all ($K$) baths and get the low energy effective all-to-all Hamiltonian, which is a local Mott liquid phase.
+\par Apart from understanding this zero bandwidth model, we have also studied the role of excitations and derived the low energy effective Hamiltonian. We show the absence of local Fermi liquid in the overscreened multi-channel problem due to the degenerate ground-state manifold, in contrast to the exactly screened single-channel problem. The non-Fermi liquid structure of the LEH is purely coming out of a degenerate ground state manifold. We have studied different thermodynamic quantities of this effective Hamiltonian like specific heat, Susceptibility presented in the supplementary material. For the two-channel case, these measures obey logarithmic scaling with temperature as known in the literature. Along with various thermodynamics we have also studied different entanglement features of the ground state manifold of both the zero bandwidth star graph model and the MCK model. Though there is no direct inter-channel coupling in the Hamiltonian the strong inter-channel mutual information shows the presence of correlation among them in the degenerate ground state of the stargraph. Various entanglement measures show adiabatic continuity upon the addition of excitation for a single-channel case in contrast to the violation of it in the multi-channel case. This discontinuity shows a clear signature of orthogonality catastrophe in the MCK problem supporting the presence of local non-Fermi liquids independently. The ground state degeneracy of the zero-bandwidth MCK model is robust against anisotropy in the impurity-channel coupling strength. The degeneracy remains unchanged until some couplings vanish or diverge. Under URG we have verified that under channel anisotropy one gets to an effective multi-channel problem with a lower number of channels via a impurity quantum phase transition. The above two studies show that until the RG reaches the fixed point the degeneracy does not change. Below we present the summary of main results and the structure of the manuscript. The structure of the manuscript and the main results are presented below.
 
-\par In the following part of the paper, we are interested in the physics of excitations added upon the zero bandwidth stargraph problem. Doing a degenerate perturbation theory in \ref{sec:eff_ham_2ch} we get low energy effective Hamiltonian (LEH) of the two-channel Kondo problem. Here we show the complete absence of local Ferm liquid due to the ground state degeneracy of the multichannel problem and the emergence of a local non-Fermi liquid phase. In \ref{sec:MFL} we show the presence of Marginal Ferm liquid signaling orthogonality catastrophe in the two-channel Kondo problem. Next in \ref{sec:ent_prop} we study various entanglement signatures of the low energy fixed-point ground state of the multichannel Kondo problem. First, in \ref{sec:EE_Stargraph} we study various entanglement properties like von-Neumann entanglement entropy of the impurity with the rest, mutual information, and multi-partite information scaling of the zero bandwidth (stargraph) model. Later, in \ref{sec:EE_excitation} we show the variation of various entanglement measures (impurity entanglement entropy, mutual information, Bures distance) as you increase the excitation via increasing the realspace hopping strength. In \ref{sec:duality} we show various dualities residing in the MCK problem. First, we present the strong-weak coupling duality of the MCK, and later, we discuss the over-under screened duality of the zero bandwidth model (stargraph). In \ref{anisotropic_rg} we show the robustness of the stargraph ground state degeneracy against the impurity-channel coupling anisotropy, followed by the RG treatment of the channel anisotropy on the full MCK problem.
+\subsection*{Summary of Main Results} 
+First in \ref{rg_flow_section} we show the intermediate coupling RG fixed point and its effective Hamiltonian using the URG formalism. Then in \ref{sec:stargraph}, we focus on the zero bandwidth limit of the MCK problem, which is a stargraph problem. Here we describe various properties of this stargraph Hamiltonian, like the ground state degeneracy for exact, over, and under-screened cases. In \ref{sec:deg_of_comp} we show the level of screening in all the three exact, over and under-screened cases via measuring the expectation of the stargraph Hamiltonian in the ground state called degree of compensation. This degree of compensation is maximum for the exactly screened case and decreases in the over and under-screened case. Later in \ref{sec:imp_suscept} our computation of low temperature impurity field susceptibility shows divergence following a power law $(1/T)$ for over, and under-screened cases against the saturation for exactly screened case shows the breakdown of screening in the former. Following impurity magnetization study also supports the above result. In \ref{sec:topo_ground_state} we recreate the degenerate groundstate manifold using non-local twist and translation operators. Next in \ref{sec:loc_mott_liquid} we decouple the impurity spin from all ($K$) baths and get the low energy effective all-to-all Hamiltonian, which is a local Mott liquid phase.
+
+\par In the following part of the paper, we are interested in the physics of excitations added upon the zero bandwidth stargraph problem. Doing a degenerate perturbation theory in \ref{sec:eff_ham_2ch} we get low energy effective Hamiltonian (LEH) of the two-channel Kondo problem. Here we show the complete absence of local Ferm liquid due to the ground state degeneracy of the multichannel problem and the emergence of a local non-Fermi liquid phase. In \ref{sec:MFL} we show the presence of Marginal Ferm liquid signaling orthogonality catastrophe in the two-channel Kondo problem. Next in \ref{sec:ent_prop} we study various entanglement signatures of the low energy fixed-point ground state of the MCK problem. First, in \ref{sec:EE_Stargraph} we study various entanglement properties like von-Neumann entanglement entropy of the impurity with the rest, mutual information, and multi-partite information scaling of the zero bandwidth (stargraph) model. Later, in \ref{sec:EE_excitation} we show the variation of various entanglement measures (impurity entanglement entropy, mutual information, Bures distance) as you increase the excitation via increasing the realspace hopping strength. In \ref{sec:duality} we show various dualities residing in the MCK problem. First, we present the strong-weak coupling duality of the MCK, and later, we discuss the over-under screened duality of the zero bandwidth model (stargraph). In \ref{anisotropic_rg} we show the robustness of the stargraph ground state degeneracy against the impurity-channel coupling anisotropy, followed by the RG treatment of the channel anisotropy on the full MCK problem.
 
 
 \section{Fixed point theory of over-screened MCK model}
@@ -46,11 +61,6 @@ First in \ref{rg_flow_section} we show the intermediate coupling RG fixed point 
 \subsection{RG flows towards intermediate coupling}
 \label{rg_flow_section}
 We start with the usual \(K\)-channel Kondo model Hamiltonian with isotropic couplings \cite{Noz_blandin_1980}:
-%\begin{gather}
-%	\label{mc_ham}
-%	H_l = \sum_{k}\sum_{\alpha=\uparrow,\downarrow}\epsilon_{k,l} \hat n_{k\alpha,l} + \mathcal{J}\sum_{kk^\prime} \sum_{\alpha,\beta= \uparrow,\downarrow}\vec{S_d}\cdot\frac{1}{2}\vec{\sigma}_{\alpha\alpha^\prime}c_{k\alpha,l}^\dagger c_{k^\prime\alpha^\prime, l}~,\nonumber\\
-%	H = \sum_{l=1}^K H_l~.
-%\end{gather}
 \begin{gather}
 	\label{mc_ham}
 	H = \sum_l\bigg[\sum_{\substack{k\\\alpha=\uparrow,\downarrow}}\epsilon_{k,l} \hat n_{k\alpha,l} + \frac{\mathcal{J}}{2}\sum_{\substack{kk^\prime\\\alpha,\beta= \uparrow,\downarrow}} \vec{S_d}\cdot\vec{\sigma}_{\alpha\alpha^\prime}c_{k\alpha,l}^\dagger c_{k^\prime\alpha^\prime, l}\bigg]~.~~
@@ -75,7 +85,7 @@ The operator \(\hat \omega_{(j)}\) encodes the quantum fluctuation scales arisin
 \end{aligned}\end{equation}
 \(H^i_{(j)}\) is that part of \(H_{(j)}\) that commutes with \(\hat n_j\) but does not commute with at least one \(\hat n_l\) for \(l < j\). The RG continues up to energy \(D^*\) where a fixed point is reached from the vanishing of either the numerator or the denominator.
 
-\textcolor{blue}{The derivation of the RG equation for the over-screened regime \((2S < K)\) of the spin-\(S\)-impurity \(K\)-channel Kondo problem is shown in the supplementary materials.}
+The derivation of the RG equation for the over-screened regime \((2S < K)\) of the spin-\(S\)-impurity \(K\)-channel Kondo problem is shown in detail in the supplementary materials.
 On decoupling circular isoenergetic shells at energies \(D_{(j)}\), the change in the Kondo coupling at the \(j^\text{th}\) RG step, \(\Delta {\mathcal{J}}_{(j)}\), is given by
 \begin{equation}\begin{aligned}
 	\Delta {\mathcal{J}}_{(j)} = -\frac{{\mathcal{J}}_{(j)}^2 \mathcal{N}_{(j)}}{\omega_{(j)} - \frac{D_{(j)}}{2} + \frac{{\mathcal{J}}_{(j)}}{4}}\left( 1 - \frac{1}{2}\rho {\mathcal{J}}_{(j)} K \right) 
@@ -107,7 +117,7 @@ At the last step, we defined the total bath local spin operator \(S = \sum_l \ve
 \begin{figure}[htpb]
 	\centering
 	\includegraphics[width=0.30\textwidth]{plt/stargraph.pdf}
-	\caption{\textbf{[COUPLING $\mathcal{J}$]} Zero bandwidth limit of the fixed point Hamiltonian. The central yellow node is the impurity spin, which is talking withe \(K\) green outer nodes that represent the local spins of the channels.}
+	\caption{Zero bandwidth limit of the fixed point Hamiltonian. The central yellow node is the impurity spin, which is talking withe \(K\) green outer nodes that represent the local spins of the channels.}
 	\label{fig:stargraph}
 \end{figure}
 The star graph commutes with several operators, including the total spin operator \(J^z = S_d^z + S^z\) along \(z\), the total bath local spin operator \(S^2\) and the string operators 
@@ -130,33 +140,9 @@ The utility of the star graph is due to the fact that {the non-Fermi liquid aris
 As we will see in a subsequent section, the lowest excitations of the intermediate fixed point is described a non-Fermi liquid phase induced by nearest-neighbour hopping terms between the zeroth sites and the first sites of the conduction channels. The importance of the degeneracy can be shown in the following manner. As mentioned previously, the ground state degeneracy of the more general star graph with a spin-\({S_d}\) impurity and \(K\) channels is given by \(g^{S_d}_K = |K - 2{S_d}|+1\). The cases of \(K=2{S_d}\), \(K<2{S_d}\) and \(K>2{S_d}\) correspond to exactly screened, under-screened and over-screened regimes respectively. {The latter two cases correspond to a multiply-degenerate manifold \(g^S_K > 1\), and simultaneously have non-Fermi liquid phases~\cite{Noz_blandin_1980,Gan_Andrei_Coleman_1993,emery_kivelson,Gan_mchannel_1994,Tsvelick_Weigmann_mchannel_1984,Tsvelick_weigmann_mchannel_1985,parcollet_olivier_large_N,kimura_taro_Su_N_kondo,PhysRevB.73.224445,cox_jarrell_two_channel_rev,affleck_1991_overscreen,Coleman_tsvelik,affleck1993exact,coleman_pepin_2003,roch_nicolas_costi_2009,schiller_avraham_2008,Durganandini_2011}, while the first regime has a unique ground state \(g^S_K = 1\) and is described by a local Fermi liquid (LFL) phase \cite{wilson1975,nozieres1974fermi,Noz_blandin_1980,andreiKondoreview,tsvelickKondoreview}, thereby substantiating the claim that a degeneracy greater than unity leads to non-Fermi liquid physics.} In the following sections, we will show how the inherent quantum-mechanical frustration of singlet order that is present in the Hamiltonian leads to the degenerate ground state manifold and the non-trivial physics of the fixed points in terms of non-Fermi liquid phase, diverging thermodynamic quantities, quantum criticality as well as emergent gauge theories.
 \section{Important Properties of the Star Graph}
 
-%\textcolor{red}{\subsection{Hamiltonian and wavefunctions}
-%\noindent As shown in the previous section, at the heart of multi channel Kondo there is a star graph problem which is the zero mode of the low energy fixed point Hamiltonian of the Multi channel Kondo.In this section our focus will be on the star graph problem itself.
-%As shown in the Fig.\ref{fig:stargraph} above one central spin ($\vec{S}_d$) is connected with $K$ spins forming a $K$ channel star graph problem corresponding to the $K$-channel Kondo problem. The Hamiltonian of this above model is given as 
-%\begin{eqnarray}
-%H &=& {\mathcal{J}} \vec{S}_d.\sum_{i=1}^{K}\vec{S}_i={\mathcal{J}} \vec{S}_d.\vec{S} \nonumber\\
-%&=& \frac{{\mathcal{J}}}{2} (\vec{J}^2-\vec{S}^2-\vec{S}_d^2)~,~~{\mathcal{J}} >0.
-%\label{eq:stargraph_hamiltonian}
-%\end{eqnarray}
-%where $\vec{J}=\vec{S}+\vec{S}_d$ and $\vec{S}=\sum_{i=1}^{K} \vec{S}_i$. One can see that the large spin $S$ can take many possible values as this is made out of $K$ spin 1/2s. We can see $[H,J]=0=[H,J^i]$ for  $i=x,y,z$, $[J^i,J^j]\neq 0$ for $i\neq j$. In our model we find two string operators $\hat{\mathbb{Z}}=\sigma_d^z\Pi_{i=1}^{K} \sigma_i^z$ and $\hat{\mathbb{X}}=\sigma_d^x\Pi_{i=1}^{K} \sigma_i^x$, where $K$ is the number of channels. These two operators commutes with the Hamiltonian $H$ of this star graph.
-%\begin{eqnarray}
-%[H,\hat{\mathbb{Z}}] &=& 0 = [H,\hat{\mathbb{X}}]
-%\end{eqnarray}
-%We can rewrite the operators in the form of a twist operator as, $\mathbb{Z}=e^{i\pi [J^z-(\frac{K+1}{2})]}$ and $\mathbb{X}=e^{i\pi [J^x-(\frac{K+1}{2})]}$
-%The commutation between these two operators are given as
-%\begin{eqnarray}
-%[\mathbb{Z},\mathbb{X}] &=& \prod_{i=d,1}^{K} \sigma^z_{i} \prod_{i=d,1}^{K} \sigma^x_{i} \bigg[1-(-1)^{K+1}\bigg]
-%\end{eqnarray}
-%\textbf{MERGE THIS WITH EARLIER SUBSECTION.}
-%Thus we can see that for case where number of channels is odd that means $K+1$ is even, these two string operators commutes with each other forming a CSCO ($H,\hat{\mathbb{Z}},\hat{\mathbb{X}}$). On the other hand in the case where number of channels $K$ is even, these two operators does not commute with each other. Thus we can form the CSCO with $H,J,J^z,S,S_d$. For a particular value $S$, $J$ can take two values $S\pm S_d$ with the energies $-{\mathcal{J}} S_d(S_d+1\mp J)$ respectively. $S_d$ is fixed thus the energy values only depends on the corresponding $J$ value of the state. As the energy does not depends on the $J^z$, all $2J+1$ $J^z$ states labeled by $|S_d,S;J,J^z\rangle$ are degenerate. It is easy to see that the ground state has energy $E=-{\mathcal{J}} S_d(S_d+1+J)$ with  $J=S-S_d$, thus $E_g=-{\mathcal{J}} S_d(S_{max}+1)$ with $S$ taking the maximum possible value $S_{max}=K/2$.
-% }
-
 \subsection{Degree of compensation: a measure of the frustration}
 \label{sec:deg_of_comp}
 One can quantify the amount of screening of the local moment at the impurity site by defining a degree of compensation \(\kappa\). Such a quantity also measures the inherent singlet frustration in the problem: the higher the degree of compensation, the better the spin can be screened into a singlet and lower is the frustration. It is given by the antiferromagnetic correlation existing between the impurity spin and conduction electron channels: $\Gamma \equiv - \left< \vec{S_d}\cdot \vec{S}\right>$.
-%\begin{equation}\begin{aligned}
-%	\Gamma \equiv - \left< \vec{S_d}\cdot \vec{S}\right>
-%\end{aligned}\end{equation}
 The expectation value is calculated in the ground state. Since the inner product is simply the ground state energy of a spin-\(S\) impurity \(K-\)channel MCK model in units of the exchange coupling \(J\), we have
 \begin{equation}\begin{aligned}
 	\Gamma = \frac{1}{2} \left[ l_\text{imp}^2 + l_c^2 - g^S_K\left( g^S_K - 1 \right)\right]
@@ -201,15 +187,6 @@ where the \(\prime\) indicates derivative with respect to \(h\). For brevity, we
 	\chi &\to \frac{\beta\Sigma_\text{max}}{2M_\text{max}\left(2M_\text{max}+1\right)^2} = \frac{\beta(K-1)}{12(K+1)} \sim \frac{1}{T}
 \end{align}
 
-%\begin{figure}[!htpb]
-%\centering
-%\includegraphics[width=0.49\textwidth]{plt/CentralFieldChiPowerlaw}
-%%\includegraphics[width=0.49\textwidth]{plt/Central_Field_Chi_Powerlaw_}
-%\caption{Dependence of impurity susceptibility as a function of temperature. The function $f(T)=a T^{b}$ perfectly fits the above susceptibility data. For single channel $a=0.5$ and $b=0$, whereas for all other channels $K=2,3,4,5$ the exponent $b=-1$ and $a=0.0285,0.0424,0.0508,0.0564$ respectively.}
-%\label{fig:suseptibility_impurity}
-%\end{figure}
-
-
 \begin{figure}[!htpb]
 \centering
 \includegraphics[width=0.49\textwidth]{plt/CentralFieldChiPowerlaw.pdf}
@@ -246,15 +223,6 @@ There we used the result that the derivative of \(|x|\) is \(\text{sign}(x)\). I
 	\label{mag_crit}
 \end{figure}
 The magnetization is therefore discontinuous as \(h\to 0\); it goes to different values depending on the direction in which we take the limit. The non-analyticity for \(K>1\) occurs because there is at least one pair of ground state with non-zero parity \(\pi^z\) and magnetic field is able to flip one ground state into the state of opposite parity. This available space for scattering is simply the frustration that we discussed earlier. This argument, along with the diverging susceptibility for the over- and under-screened cases, makes it clear that {the non-analyticity and hence the critical nature of the fixed point arise because of the ground state degeneracy, and is therefore a feature of all over-screened and under-screened  models}. Indeed, we have checked numerically (see fig.~\ref{mag_crit}) that the non-analyticity exists for \(\delta \neq 0\), where \(\delta = \frac{K}{2} - S\) is the deviation from exact screening. For \(\delta=0\), the ground state is unique and unfrustrated, so the external magnetic field has no parity-inverted pair to flip across. Similar study can be done by putting an uniform field on all outer spins and calculating the susceptibility. Here also for all channles $K\geq 2$ the exponent is $-1$ supporting the existence of universality and criticality.
-
-%% \begin{figure}[!htpb]
-%% \centering
-%% \includegraphics[width=0.49\textwidth]{plt/Outer_Field_Chi_Powerlaw_}
-%% \caption{Outer susseptibility vs temperature.}
-%% \label{fig:suseptibility_outer}
-%% \end{figure}
-%This susceptibility clearly shown the breakdown of screening in the multichannel cases with degenerate ground states in contrast to the single channel susceptibility which saturates at a finite value at low temperature.}
-
 
 \subsection{Topological properties of ground state manifold}
 \label{sec:topo_ground_state}
@@ -339,37 +307,8 @@ H(\Phi) &=& -\frac{|\beta_{\uparrow}({\mathcal{J}},\omega_{\uparrow})|}{2} S^2  
 One can thus explore different $S^z$ ground states via such flux tuning mechanism.
 
 
-%\subsubsection{Mapping with the degenerate ground state of stargraph}
 \textbf{SHORTEN AND MERGE WITH THE EARLIER SUBSECTION}
 For a $K$ channel stargraph problem the ground state is $K$ fold degenerate associated with different $J^z$ values $\{-(K-1)/2,-(K-3)/2,\cdots  ,(K-1)/2 \}$. After removing the quantum fluctuations between the impurity spin and the outer spins we get all-to-all model Eq.\eqref{eq:flux_spectral} as an effective Hamltonian. The eigen states of this all-to-all Hamiltonian can be labeled by $S^z$ eigenvalues, there are $K+1$ such states made out of only the outer spins. The total state including the impurity spin can be written as $|J^z\rangle = |S_d^z\rangle \otimes |S^z\rangle$ labeled by $J^z=S_d^z+S^z$. As the all-to-all model has the $Z_2$ symmetry in impurity sector, there are $2(K+1)$ number of total states possible. For $S_d^z=1/2$, $ \{J^z\}=\{ -(K-1)/2, \cdots, (K-1)/2, (K+1)/2 \}$ and for $S_d^z=-1/2$, $\{J^z\}=\{-(K+1)/2, -(K-1)/2, \cdots,  (K-1)/2  \}$. We can see that in both the cases all $K$ states of the stargraph ground state manifold is present in all-to-all model, this time any one those is ground state. Using the twist operator we can go from one ground state to other.
-%
-%
-%\begin{widetext}
-%\begin{eqnarray}
-%S_d^z &=& +1/2~,~ \{J^z\}=\{ \textcolor{blue}{-(K-1)/2, -(K-3)/2, \cdots, (K-1)/2}, (K+1)/2\} \nonumber\\
-%S_d^z &=& -1/2~,~ \{J^z\}=\{-(K+1)/2,\textcolor{blue}{ -(K-1)/2, \cdots, (K-3)/2, (K-1)/2 } \}
-%\label{eq:all_to_all_states}
-%\end{eqnarray}
-%\end{widetext}
-%
-%
-%\par Now we shift our focus to the low energy Hamiltonian with flux shown in the eq.\eqref{eq:flux_spectral}. We can see that there is a unique ground state labeled by the $S^z$ eigenvalues. By tuning the flux ($\Phi/\Phi_0$) one can go from one ground state to another ground state or change the ground state. We can see that ground state energy is independent of the configuration of the impurity spin ($S_d^z=\pm 1/2$). Thus for each of those two possibilities we get two set of ground states labeled by the $S^z$ and the $J^z=S^z+S^z_d$. Similar to the star graph case here also the ground state corresponds to the largest $S$ sector, $S=K/2$. Thus total number of $S^z$ eigenvalues are $2S+1=K+1$ taking values $\{ -K/2, -(K-2)/2, \cdots, (K-2)/2, K/2 \}$.
-%\begin{widetext}
-%\begin{eqnarray}
-%S_d^z &=& +1/2~,~ \{J^z\}=\{ \textcolor{blue}{-(K-1)/2, -(K-3)/2, \cdots, (K-1)/2}, (K+1)/2\} \nonumber\\
-%S_d^z &=& -1/2~,~ \{J^z\}=\{-(K+1)/2,\textcolor{blue}{ -(K-1)/2, \cdots, (K-3)/2, (K-1)/2 } \}
-%\label{eq:all_to_all_states}
-%\end{eqnarray}
-%\end{widetext}
-%
-%\begin{figure}[!htpb]
-%\centering
-%\includegraphics[width=0.49\textwidth]{plt/stargraph-to-alltoall}
-%\caption{This figure shows the comparison and mapping between the star graph degenerate ground states and the states of the quantum fluctuation resolved all to all model.}
-%\label{fig:stargraph-to-alltoall}
-%\end{figure}
-%Thus one can see that the ground state degeneracy of the star graph model with different $J^z$ values gets lifted in the quantum fluctuation resolved all-to-all model. Depending on the value of the flux there is an unique ground state labeled by the $J^z$ value. Tuning the flux one can go from one ground state to the other. This shows how one can explore different degenerate ground states of the parent star graph model via the insertion of flux in the corresponding quantum fluctuation resolved all-to-all effective Hamiltonian.
-
 
 \section{Local non-Fermi liquid excitations of the 2-channel Kondo}
 \subsection{Effective Hamiltonian}
@@ -382,29 +321,6 @@ H^{(2)}&=& {\mathcal{J}} \vec{S}_{imp}.(\vec{S}_1+\vec{S}_2)~~,~~\vec{S}_i =  \f
 \label{eq:channel-2-spin}
 \end{eqnarray}
 Here $\vec{S}_i=1,2$ represents the spin degree of freedom present in the origin of the $i^{th}$ channel. This two channel Hamiltonian has $2^3=8$ states in the eigenspectrum \textbf{CITE{SLAL}}. There are two degnerate ground states labeled by $|J^z=+1/2\rangle, |J^z=-1/2\rangle$ with energy $-\mathcal{J}$ and $6$ excited states.
-% One can rewrite the Eq.\eqref{eq:channel-2-spin} in terms of the electronic degree of freedom as,
-%\begin{eqnarray}
-%&&\mathcal{H}_0= H_{0_1}+H_{0_2} \nonumber\\
-%&=&\sum_{i=\{1,2\}}\bigg[ {\mathcal{J}} S^z_{imp}. (n_{i,\uparrow}-n_{i,\downarrow})/2 + \frac{1}{2}  ( S_{imp}^{+} c^{\dagger}_{i,\downarrow} c_{i,\uparrow} + \textrm{h.c.}  )\nonumber \bigg]
-%\end{eqnarray}
-%Here the basis we are interested in is $\{\mathcal{B}\}=\{|S^z_{imp},n_{1,\uparrow},n_{1,\downarrow},n_{2,\uparrow},n_{2,\downarrow}\rangle \}$. In this basis we write down all $2^3=8$ states of the spin Hamiltonian eq.\eqref{eq:channel-2-spin}
-%First the two degenerate ground states with energy $-{\mathcal{J}}= E_{\alpha_0}= E_{\alpha_1}$ is given as,
-%\begin{eqnarray}
-%|\alpha_0\rangle &=& \frac{1}{\sqrt{6}} \bigg[2|\Downarrow,1,0,1,0\rangle-|\Uparrow,0,1,1,0\rangle-|\Uparrow,1,0,0,1\rangle\bigg] \nonumber\\
-%|\alpha_1\rangle &=& \frac{1}{\sqrt{6}} \bigg[2|\Uparrow,0,1,0,1\rangle-|\Downarrow,1,0,0,1\rangle-|\Downarrow,0,1,1,0\rangle\bigg] \nonumber
-%\end{eqnarray}
-%The doubly degenerate lowest-lying excited state has energy $E_{\beta_1}=E_{\beta_2}=0$.
-%\begin{eqnarray}
-%|\beta_0\rangle &=& \frac{1}{\sqrt{2}}\bigg[|\Downarrow,1,0,0,1\rangle-|\Downarrow,0,1,1,0\rangle \bigg] \nonumber\\
-%|\beta_1\rangle &=& \frac{1}{\sqrt{2}} \bigg[ |\Uparrow,1,0,0,1\rangle-|\Uparrow,0,1,1,0\rangle \bigg]
-%\end{eqnarray}
-%Above these two excited states there are another degenerate excited state manifold with energy $ E_{\gamma_0}=E_{\gamma_1}=E_{\gamma_2}=E_{\gamma_3}=\frac{{\mathcal{J}}}{2}$.
-%\begin{eqnarray}
-%|\gamma_{0}\rangle &=&\frac{1}{\sqrt{3}} \bigg[|\Uparrow,0,1,0,1\rangle+|\Downarrow,1,0,0,1\rangle+|\Downarrow,0,1,1,0\rangle \bigg] \nonumber\\
-%|\gamma_{1}\rangle &=& \frac{1}{\sqrt{3}}\bigg[ |\Uparrow,1,0,0,1\rangle+|\Uparrow,0,1,1,0\rangle+|\Downarrow,1,0,1,0\rangle \bigg] \nonumber\\
-%|\gamma_{2}\rangle &=& |\Uparrow,1,0,1,0\rangle~,~~|\gamma_{3}\rangle = |\Downarrow,0,1,0,1\rangle 
-%\end{eqnarray}
-%Note this spin Hamiltonian has total $8$ states, where ground state is double degenerate with energy $-{\mathcal{J}}$ and the lowest excited state with energy $0$ is also double degenerate and the second excited state with energy ${\mathcal{J}}/2$ is 4-fold degenerate. 
 On top of the zero mode spin-channel interactions we want to consider the effect of the momentum space kinetic energy term $\sum_{k}\epsilon_k (n_{1,k}+n_{2,k})$ assuming identical dispersion for both the channels. Our zero mode spin Hamiltonian is written in the real space, thus it will be easier to do the perturbation theory in the real space. The Fourier transformation of the momentum space kinetic energy  term leads to real space hopping term. For simplicity we will be considering only nearest neighbor hopping between sites within each channels. The real space hopping contribution to the Hamiltonian $H_X$ with the hooping strength is 
 \begin{eqnarray}
 H_{X} &=& -t \displaystyle\sum_{\substack{<1,l_1> \\ <2,l_2>}} (c^{\dagger}_{1,\sigma}c_{l_1,\sigma}+c^{\dagger}_{2,\sigma}c_{l_2,\sigma}+ ~\textrm{h.c.})
@@ -457,7 +373,6 @@ H_{NFL}&=&H^{(2)}_{off} = \sum_{i\neq j} \sum_l |\alpha_i\rangle \frac{\langle \
 This LEH is purely a non-Fermi liquid. The emergence of non-Fermi liquid is primarily coming due to the degenerate ground state manifold. Using this low energy effective Hamiltonian we have calculated different thermodynamic quatitites like susceptibility and specific heat. Both these measures shows logarithmic behavior at low temperature which is in agreement with known result in literature. These results are shown in the Supplementary material. In a similar way, we have calculated the LEH for the three channel Kondo. We find the absence of Fermi liquid in $2^{nd}$ order and the presence of non-Fermi liquid in the off-diagonal low energy effective Hamiltonian shown in the supplementary material.
 
 \textbf{MENTION THAT WE HAVE COMPUTED VARIOUS THERMODYNAMIC QUANTITIES THAT ARE IN FAIR AGREEMENT WITH THE LITERATURE. AND THAT THESE ARE SHOWN IN THE SUPPLEMENTARY MATERIALS. ALSO MENTION THAT WE HAVE ALSO DERIVED AN EFFECTIVE HAMILTONIAN FOR THE THREE CHANNEL CASE, ALSO SHOWN IN SUPPLEMENTARY MATERIALS.}
-
 
 \subsection{Local Marginal Fermi liquid and Orthogonality catastrophe}
 \label{sec:MFL}
@@ -515,7 +430,7 @@ The self-energy also provides the quasiparticle residue for each channel\cite{an
 \begin{equation}\begin{aligned}
 	Z(\bar\omega) = \left(2 - \ln \frac{2\bar\omega}{N^* \omega}\right) ^{-1}
 \end{aligned}\end{equation}
-{As the energy scale \(\omega \to 0\), the \(Z\) vanishes, implying that the ground state and lowest-lying excitations, in the presence of the NFL terms, are not adiabatically connected to the Fermi gas. This is the orthogonality catastrophe~\cite{varma2002singular,anderson_infraredcat,yamada_catastrophe,yamada1979orthogonality} in the two-channel Kondo problem, and it is brought about by the presence of the terms in Eq.~\ref{mfl_large}}. Such terms were absent in the single-channel Kondo model, because there was no multiply-degenerate ground state manifold that allowed scattering. This line of argument shows that the extra degeneracy of the ground state subspace and the frustration of the singlet order that comes about when one upgrades from the single-channel Kondo model to the MCK models is at the heart of the NFL behaviour, and the orthogonality catastrophe should be a general feature of all such frustrated MCK models. A local NFL term was also obtained by Coleman, et al.~\cite{Coleman_tsvelik} in terms of Majorana fermions at the zeroth site and the first site of the \(\sigma-\tau\) version of the two-channel Kondo model. There, they computed a self-energy of the form in eq.~\ref{self_energy}. The common features show the universality between the two-channel Kondo and the \(\sigma-\tau\) models. 
+As \(\omega \to 0\), the \(Z\) vanishes, implying that the ground state and lowest-lying excitations, in the presence of the NFL terms, are not adiabatically connected to the Fermi gas. This is the orthogonality catastrophe~\cite{varma2002singular,anderson_infraredcat,yamada_catastrophe,yamada1979orthogonality} in the two-channel Kondo problem, and it is brought about by the presence of the terms in Eq.~\ref{mfl_large}. Such terms were absent in the single-channel Kondo model, because there was no multiply-degenerate ground state manifold that allowed scattering. This line of argument shows that the extra degeneracy of the ground state subspace and the frustration of the singlet order that comes about when one upgrades from the single-channel Kondo model to the MCK models is at the heart of the NFL behaviour, and the orthogonality catastrophe should be a general feature of all such frustrated MCK models. A local NFL term and a similar self-energy was also obtained by Coleman, et al.~\cite{Coleman_tsvelik} in terms of Majorana fermions at the strong-coupling fixed point of the \(\sigma-\tau\) model, which they claimed was equivalent to the intermediate-coupling fixed point of the two-channel Kondo model. Along with the work by The common features show the universality between the two-channel Kondo and the \(\sigma-\tau\) models. 
 ,
 \section{Entanglement properties}
 \label{sec:ent_prop}
@@ -595,7 +510,7 @@ I^{N}_{\{\mathcal{A}_N\}} &=& \bigg[\displaystyle\sum_{m=1}^{N} (-1)^{m-1} \disp
 
 
 
-\subsection{Entanglement properties of the multichannel Kondo fixed point}
+\subsection{Entanglement properties of the MCK fixed point}
 \label{sec:EE_excitation}
 \begin{figure}[!htpb]
 \includegraphics[width=0.49\textwidth]{plt/hopping_fock_states}
@@ -604,7 +519,7 @@ I^{N}_{\{\mathcal{A}_N\}} &=& \bigg[\displaystyle\sum_{m=1}^{N} (-1)^{m-1} \disp
 \end{figure}
 
 
-\noindent Apart from the entanglement study of the stargraph model, here we are interested in the entanglement entropy of the multi-channel Kondo by introducing excitations in the stargraph model. We start with the Hamiltonian Eq.\eqref{eq:excitation_hamiltonian} where we are only taking the nearest neighbor real space hopping (t) where $t=0$ case is the zero mode Hamiltonian of the multichannel Kondo as shown in the Fig.\ref{fig:schematic_hopping}. In the single channel case the impurity ($S_d$) is talking to the spin degree of freedom at the real space origin ($\{1_{\uparrow},1_{\downarrow}\}$) of the unique conduction bath via a Heisenberg coupling. For $2$ channel case the impurity is talking to $2$ different origins of different conduction channels ($\{1_{\uparrow},1_{\downarrow}\}$ and $\{2_{\uparrow},2_{\downarrow}\}$) and hopping connects to their nearest neighbor sites, for example $\{1_{\uparrow},1_{\downarrow}\}$ connects to $\{l_{1\uparrow},l_{1\downarrow}\}$. Thus, for $K$ channel case we are solving a problem with one spin 1/2 degree of freedom and $2K$ electronic sites. As we increase the hopping strength $t$ from zero to non-zero, the sites of the zero mode Hamiltonian starts to scatter with their respective nearest neighbor sites.
+\noindent Apart from the entanglement study of the stargraph model, here we are interested in the entanglement entropy of the MCK by introducing excitations in the stargraph model. We start with the Hamiltonian Eq.\eqref{eq:excitation_hamiltonian} where we are only taking the nearest neighbor real space hopping (t) where $t=0$ case is the zero mode Hamiltonian of the MCK as shown in the Fig.\ref{fig:schematic_hopping}. In the single channel case the impurity ($S_d$) is talking to the spin degree of freedom at the real space origin ($\{1_{\uparrow},1_{\downarrow}\}$) of the unique conduction bath via a Heisenberg coupling. For $2$ channel case the impurity is talking to $2$ different origins of different conduction channels ($\{1_{\uparrow},1_{\downarrow}\}$ and $\{2_{\uparrow},2_{\downarrow}\}$) and hopping connects to their nearest neighbor sites, for example $\{1_{\uparrow},1_{\downarrow}\}$ connects to $\{l_{1\uparrow},l_{1\downarrow}\}$. Thus, for $K$ channel case we are solving a problem with one spin 1/2 degree of freedom and $2K$ electronic sites. As we increase the hopping strength $t$ from zero to non-zero, the sites of the zero mode Hamiltonian starts to scatter with their respective nearest neighbor sites.
 \begin{figure}[!htpb]
 \centering
 \includegraphics[width=0.49\textwidth]{plt/A_I1_ch123_['d']}
@@ -619,7 +534,6 @@ I^{N}_{\{\mathcal{A}_N\}} &=& \bigg[\displaystyle\sum_{m=1}^{N} (-1)^{m-1} \disp
 
 \begin{figure}[!htpb]
 \includegraphics[width=0.49\textwidth]{plt/A_I2_ch12_['d','1_up']}
-%\includegraphics[width=0.49\textwidth]{plt/errorbar_A_I2_ch12_['d','1_up']}
 \caption{This figure show the variation of mutual information between the impurity spin and $1_{\uparrow}$ state with respect to the variation of the hopping strength $t$. For more details please refer to the text. The errorbar $\sigma_2$ of the two channel data at low hopping strength $\sigma_2\approx 0.002$.}
 \label{fig:MI_imp_1_vs_t_K}
 \end{figure}
@@ -637,7 +551,6 @@ S_{d}=S_{1_{\uparrow}}=S_{d,1_{\uparrow}}=\log 2~,~MI(d,1_{\uparrow})=\log 2
 This $\log 2$ value shows the stability of the zero mode of single channel and perfect screening. Next we focus to the two channel case where the mutual information is $MI(d,1_{\uparrow})=0.2401$ which is less than the single channel case showing the breakdown of screening. Note, unlike the single channel case there is a discontinuity in $MI(d,1_{\uparrow})$ at $t=0^+$.
 \begin{figure}[!htpb]
 \includegraphics[width=0.49\textwidth]{plt/A_I2_ch12_['1_up','1_down']}
-%\includegraphics[width=0.49\textwidth]{plt/errorbar_A_I2_ch12_['1_up','1_down']}
 \caption{This figure shows the variation of mutual information ($i^2(1_{\uparrow},1_{\downarrow})$) among the two fock states present on the realspace origin ($1$) of a conduction channel with the hopping strength $t$. The errorbar $\sigma_2$ for the two channel at low hopping strength is $\sigma_2\approx 0.013$.}
 \label{fig:MI_1_2_vs_t_K}
 \end{figure}
@@ -656,36 +569,13 @@ This $\log 2$ value shows the stability of the zero mode of single channel and p
 \label{fig:MI_l_l1}
 \end{figure}
 \par \textit{Case 4:} Another complementary study can be made by measuring the mutual information between conduction channel realspace origin and it's nearest neighbor site to check their mutual entanglement. As shown in the Fig.\ref{fig:MI_l_l1}, we find that at low hopping strength the single channel mutual information vanishes showing the decoupling of those two states. On the other hand in the two channel case there is a nonzero mutual information which verifies the presence of active scattering between the local Mott liquid and the local non-Fermi liquid phases. Similar discontinuity in the mutual information was observed at $t=0^+$.
-\begin{figure}[!h]
+\begin{figure}[!htpb]
 \centering
 \includegraphics[width=0.48\textwidth]{plt/I3_I2_A_I.png}
 \caption{Red: This is the Mutual information $I^2(1_{\uparrow},2_{\uparrow})$ and the Blue is the tripartite infrmation $I^3(1_{\uparrow},l_{1\uparrow},l_{1\downarrow})$. The errorbar ($\sigma$) for the $I^3$ and $I^2$ near the low hopping strength are $0.002$ and $0.003$ respectively.}
 \label{fig:I3_I2_two_channel}
 \end{figure}
 Apart form the above mutual information studies we have computed the intra-channel tripartite information $I^3(1_{\uparrow},l_{1\uparrow},l_{1\downarrow})$ of the two-channel ground state which measuring the correlation present among those three Fock states (Fig.\ref{fig:I3_I2_two_channel}(blue)) which show that there is a discontinuity in the triparite information at $t=0^+$ and at low hopping strength the tripartite information is independent of $t$ with a value $0.084$. This non-zero value of tripartie information supports the presence of non-Fermi liquid with more than two-particle correlation within. We have also studied inter-channel mutual informaition $I^2(1_{\uparrow},2_{\uparrow})$ for this two channel case as shown in the (Fig.\ref{fig:I3_I2_two_channel}(red)). This suggest the presence of correlation and quantum entanglement between these two channels supporting the presence of all-to-all local mott liquid.
-
-
-%\subsubsection{Intra-channel tripartite information}
-%
-%%\begin{figure}
-%%\includegraphics[width=0.49\textwidth]{plt/A_I3_ch2_[1,5,6]}
-%%%\includegraphics[width=0.49\textwidth]{plt/errorbar_A_I3_ch2_[1,5,6]}
-%%\caption{Tripartite information TPI 156}
-%%\label{fig:TPI_1_5_6}
-%%\end{figure}
-%As shown in the result above Fig.\ref{fig:TPI_1_5_6} the tripartite information has a discontinuity at $t=0^+$. For small $t$ values the presnece of non-zero tripartite information signals the presence of tripartie correltaion in the ground state which agrees with presence of Marginal Fermi liquid phase shown by the effective Hamiltonian study.
-%
-%
-%\subsubsection{Inter-channel Mutual information}
-%Apart from the intra-channel mutual information, here we study the mutual information between two channels to calculate the entanglement content within the local Mott liquid phase.
-%%\begin{figure}
-%%\includegraphics[width=0.49\textwidth]{plt/A_I2_ch2_[1,3]}
-%%%\includegraphics[width=0.49\textwidth]{plt/errorbar_A_I2_ch2_[1,3]}
-%%\caption{$MI(1_{\sigma},2_{\sigma'})$}
-%%\label{fig:MI_1_2}
-%%\end{figure}
-%In the Fig.\ref{fig:MI_1_2} above we study the mutual information $MI(1_{\sigma},1_{\sigma'})$ between two Fock states $1_{\sigma},1_{\sigma'}$ as shown in the Fig.\ref{fig:schematic_hopping} for the two channel case. This shows that at low hopping strength there is a non-zero mutual information. This confirms the presence of correlation among channels. Apart from mutual information we have also computed the tripartite information across channels for this two channel case in the presence of non-zero hopping.
-
 
 \subsubsection{Bures distance and orthogonality catathrope}
 \begin{figure}[!htpb]
@@ -705,7 +595,7 @@ We have shown the variation of the Bures distance as a function of the hopping s
 
 \par All the above  entanglement studies suggest that for two channel problem there is a discontinuity in the ground state at $t=0^{+}$, whereas for the single channel case it is a smooth function. Thus for single channel case the $t=0$ and $t\neq 0$ cases can be adiabtically connected, which is not the case for any other channel cases. 
 
-\section{Dualities of the multichannel Kondo model}
+\section{Dualities of the MCK model}
 \label{sec:duality}
 
 We start from a strong coupling \((J \to \infty)\) spin-\(S\) impurity MCK Hamiltonian in the over-screened regime \(\left( K > 2S \right) \),
@@ -713,38 +603,38 @@ We start from a strong coupling \((J \to \infty)\) spin-\(S\) impurity MCK Hamil
 	\label{strong_ham}
 	H(J) = \sum_{k,\sigma,l}\epsilon_{k,l} \hat n_{k\sigma,l} + J \vec{S_d}\cdot\vec{S}~.
 \end{aligned}\end{equation}
-Here, \(\vec S\) is the total spin \(\sum_l \sum_{kk^\prime \alpha\beta} \vec \sigma_{\alpha\beta}c^\dagger_{k\alpha,l}c_{k^\prime\beta,l}\) of all the zero modes. At strong coupling, the ground states of the star graph eq.~\ref{stargraph} act as a good starting point for a perturbative expansion. As argued previously, there are \(K-2S+1\) ground states, labeled by the \(K\) values \textbf{of the total spin angular momentum \(S^z = S_d^z + S^z = -\frac{K}{2} + S, -\frac{K}{2} + S + 1, \ldots, \frac{K}{2} - S\). To leverage the large coupling}, one can define a new spin impurity \(\mathbb{S}\) out of this ground state manifold. Since the degeneracy of a spin is given by its multiplicity \(2S^\prime + 1\), we have \(2S^\prime + 1 = K-2S+1 \implies S^\prime = \frac{K}{2} - S\). That is, the spin-\(S\) impurity has a dual described by a spin-\((K-2S+1)\) impurity. The states of this new spin are defined by
+Here, \(\vec S\) is the total spin \(\sum_l \sum_{kk^\prime \alpha\beta} \vec \sigma_{\alpha\beta}c^\dagger_{k\alpha,l}c_{k^\prime\beta,l}\) of all the zero modes. At strong coupling, the ground states of the star graph eq.~\ref{stargraph} act as a good starting point for a perturbative expansion. As argued previously, there are \(K-2S_d+1\) ground states, labeled by the \(K\) values of the total spin angular momentum \(J^z = S_d^z + S^z = -\frac{K}{2} + S_d, -\frac{K}{2} + S_d + 1, \ldots, \frac{K}{2} - S_d\). Since a general spin-\(s\) object is simply a \(2s+1\) level system, the \(K-\)fold degenerate ground state manifold can be used to define a new impurity spin \(\mathbb{S}_d\) of multiplicity \(2\mathbb{S}_d + 1 = K-2S_d+1\) which implies that we need \(\mathbb{S}_d = \frac{K}{2} - S_d\). That is, the spin-\(S_d\) impurity has a dual described by a spin-\((K-2S_d+1)\) impurity. The states of this new spin are defined by
 \begin{gather}
-	\mathbb{S}_d^z \ket{S^z} = S^z \ket{S^z},\nonumber\\
-	\mathbb{S}_d^\pm \ket{S^z} = \sqrt{S^\prime\left( S^\prime + 1 \right) - S^z\left( S^z \pm 1\right)} \ket{S^z \pm 1}
+	\hat{\mathbb{S}_d^z} \ket{S^z} = S^z \ket{S^z},\nonumber\\
+	\hat{\mathbb{S}_d^\pm} \ket{S^z} = \sqrt{\mathbb{S}_d\left( \mathbb{S}_d + 1 \right) - S^z\left( S^z \pm 1\right)} \ket{S^z \pm 1}
 \end{gather}
-The excited states of the star graph can be used to define bosons \cite{kroha_kolf_2007}, and the hopping into the lattice can then be re-written using these Bosons. One can then remove the single-particle hoping between the zero modes and the first sites using a Schrieffer-Wolff transformation in the small coupling \(J^\prime = \gamma \frac{4t^2}{J}\), and generate an exchange-coupling between the new impurity \(\vec {\mathbb{S}}_d\) and the new zero modes formed out of the remaining sites in the lattice \cite{kroha_kolf_2007} (by remaining, we mean those real space sites that have not been consumed into forming the new spin). The new Hamiltonian, characterized by the small super-exchange  coupling \(J^\prime\), has the form
+While the ground state subspace gives rise to the new central spin object, the excited states of the star graph can be used to define bosonic operators that mediate interactions between the central spin and the next-nearest neighbour lattice sites~\cite{kroha_kolf_2007}. In terms of the zero-bandwidth spectrum, the bosonic operators represent scattering between the ground state subspace and the excited subspaces. Through a Schrieffer-Wolff transformation in the small coupling \(\frac{t^2}{J}\), one can then remove this interaction and generate an exchange-coupling between the new impurity \(\vec {\mathbb{S}}_d\) and the new zero modes formed out of the remaining sites in the lattice \cite{kroha_kolf_2007} (by remaining, we mean those real space sites that have not been consumed into forming the new spin). The new Hamiltonian, characterized by the small super-exchange  coupling \(\mathbb{J}\) of the general form \(\gamma t^2/J\), has the form
 \begin{equation}\begin{aligned}
-	H^\prime(J^\prime) = \sum_{k,\sigma,l}\epsilon_{k,l} \hat n_{k\sigma,l} + J^\prime \vec{\mathbb{S}_d}\cdot\vec{S^\prime}
+	H^\prime(\mathbb{J}) = \sum_{k,\sigma,l}\epsilon_{k,l} \hat n_{k\sigma,l} + \mathbb{J} \vec{\mathbb{S}_d}\cdot\vec{\mathbb{S}}
 \end{aligned}\end{equation}
-The prime on \(S\) indicates that it is formed by the new zero modes. This Hamiltonian is very similar to the one in eq.~\ref{strong_ham}, and that is the essence of the strong-weak duality: One can go from the over-screened strong coupling spin-\(S\) MCK model to another over-screened weak coupling spin-\((K-2S+1)\) MCK model. For the case of \(K=4S\), we have \(S^\prime = S\), and both \(S_d\) and \(\mathbb{S}_d\) describe the same spin objects (at least formally). The two models are then said to be self-dual. For example, for the case of spin-half MCK model, two-channel model is self-dual.
-\begin{figure}[!htpb]
-	\centering
-	\includegraphics[width=0.3\textwidth]{plt/duality.pdf}
-	\caption{Duality of the RG flows as seen in the star graph Hamiltonian. The red and green circles represent the impurity and zeroth site spins respectively. At large \(J\), the red circle binds with the green circles to form an effective spin \(\frac{K-1}{2}\) object (yellow) that interacts with the remaining spin of the conduction bath (blue circles).}
-	\label{duality_fig}
-\end{figure}
+$\vec{\mathbb{S}}$ is the local bath spin formed by the new zero modes. This Hamiltonian is very similar to the one in eq.~\ref{strong_ham}, and that is the essence of the strong-weak duality: One can go from the over-screened strong coupling spin-\(S\) MCK model to another over-screened weak coupling spin-\((K-2S+1)\) MCK model. For the case of \(K=4S\), we have \(\mathbb{S}_d = S_d\), and both \(S_d\) and \(\mathbb{S}_d\) describe the same spin objects (at least formally). The two models are then said to be self-dual. For example, for the case of spin-half MCK model, two-channel model is self-dual.
+% \begin{figure}[!htpb]
+% 	\centering
+% 	\includegraphics[width=0.3\textwidth]{plt/duality.pdf}
+% 	\caption{Duality of the RG flows as seen in the star graph Hamiltonian. The red and green circles represent the impurity and zeroth site spins respectively. At large \(J\), the red circle binds with the green circles to form an effective spin \(\frac{K-1}{2}\) object (yellow) that interacts with the remaining spin of the conduction bath (blue circles).}
+% 	\label{duality_fig}
+% \end{figure}
 
-One important consequence of the duality relationship between the two over-screened models is that the RG equations are also dual; while the strong coupling model has an irrelevant coupling \(J\) that flows down to the intermediate fixed point \({\mathcal{J}^*}\), the weak coupling model has a relevant coupling \(J^\prime\) that flows up to the same fixed point \({J^\prime}^* = {\mathcal{J}^*}\). From the RG equation for the general spin-\(S\) MCK model, we know that \({J^\prime}^* = \frac{2}{K \rho^\prime}\), where \(\rho^\prime\) is the DOS for the bath of the weak coupling Hamiltonian. This constrains the form of the scaling factor \(\gamma\):
+One important consequence of the duality relationship between the two over-screened models is that the RG equations are also dual; while the strong coupling model has an irrelevant coupling \(\mathcal{J}\) that flows down to the intermediate fixed point \({\mathcal{J}^*}\), the weak coupling model has a relevant coupling \(\mathbb{J}\) that flows up to the same fixed point \({\mathbb{J}}^* = {\mathcal{J}^*}\). From the RG equation for the general spin-\(S\) MCK model, we know that \({\mathbb{J}}^* = \frac{2}{K \rho^\prime}\), where \(\rho^\prime\) is the DOS for the bath of the weak coupling Hamiltonian. This constrains the form of the scaling factor \(\gamma\):
 \begin{equation}\begin{aligned}
-	{J^\prime}^* = \frac{\gamma 4t^2}{{\mathcal{J}^*}} = \frac{2}{K \rho^\prime} \implies \gamma = \frac{1}{4t^2} {{\mathcal{J}^*}}^2 = \frac{1}{K^2 t^2 \rho \rho^\prime}
+	{\mathbb{J}}^* = \frac{\gamma 4t^2}{{\mathcal{J}^*}} = \frac{2}{K \rho^\prime} \implies \gamma = \frac{1}{4t^2} {{\mathcal{J}^*}}^2 = \frac{1}{K^2 t^2 \rho \rho^\prime}
 \end{aligned}\end{equation}
 
-There exists another set of dual points in the MCK model. This was hinted at when we looked at the degree of compassion in eq.~\ref{gamma}. Since \(\Gamma\) depends only on the magnitude of \(\delta\), both \(\pm \delta\) will give the same degree of compensation, same ground state energy and same ground state degeneracy \(\left(g^S_K = |\delta|+1\right)\). The definition of \(\delta\) gives the duality transformation as \(K \to 2S, S \to \frac{K}{2}\). That is, we transform from a \(K-\)channel MCK model with spin-\(S\) impurity, to a \(2S\)-channel MCK with a spin-\(\frac{K}{2}\) impurity. The exactly-screened model \(K=2S\) maps on to itself and is therefore self-dual under this transformation.
+There exists another set of dual points in the MCK model. This was hinted at when we looked at the degree of compassion in eq.~\ref{gamma}. Since \(\Gamma\) depends only on the magnitude of \(\delta\), both \(\pm \delta\) will give the same degree of compensation, same ground state energy and same ground state degeneracy \(\left(g^{S_d}_K = |\delta|+1\right)\). The definition of \(\delta\) gives the duality transformation as \(K \to 2S_d, S_d \to \frac{K}{2}\). That is, we transform from a \(K-\)channel MCK model with spin-\(S_d\) impurity, to a \(2S_d\)-channel MCK with a spin-\(\frac{K}{2}\) impurity. The exactly-screened model \(K=2S_d\) maps on to itself and is therefore self-dual under this transformation.
 
-For \(K \neq 2S\), we transform an over-screened model into an under-screened model and vice versa. This duality relationship allows us to infer the RG scaling behaviour of one of the models if we know that of the other. If we know that for a certain pair of values \(K\) and \(S\), the \(K-\)channel MCK model with spin-\(S\) impurity has an intermediate fixed point, we can immediately conclude that the \(2S\)-channel spin-\(\frac{K}{2}\) model has a strong coupling fixed point.
+For \(K \neq 2S_d\), we transform an over-screened model into an under-screened model and vice versa. This duality relationship allows us to infer the RG scaling behaviour of one of the models if we know that of the other. If we know that for a certain pair of values \(K\) and \(S_d\), the \(K-\)channel MCK model with spin-\(S_d\) impurity has an intermediate fixed point, we can immediately conclude that the \(2S_d\)-channel spin-\(\frac{K}{2}\) model has a strong coupling fixed point.
 % \begin{figure}[htpb]
 % 	\centering
 % 	\includegraphics[width=0.3\textwidth]{plt/duality2.pdf}
 % 	\caption{Duality between underscreened and overscreened MCK models}
 % \end{figure}
 
-\section{Impurity Quantum Phase transition in the multichannel Kondo model under channel anisotropy}
+\section{Quantum Phase transition in the MCK model under channel anisotropy}
 \label{anisotropic_rg}
 \textbf{RADICALLY SHORTEN AND RESTRUCTURE THIS SECTION. SHOW THE NUMERICS FIRST, THEN SHOW THE RG 
 EQUATION AND QUICKLY DISCUSS ITS CONSEQUENCES.}
@@ -763,7 +653,7 @@ where $ \vec{{\mathcal{J}}} \equiv ({\mathcal{J}}_1,\cdots,{\mathcal{J}}_K)$. Fo
 \caption{\textit{Left:} Shows the variation of the ground state degeneracy with the variation of the coupling $J_3$ keeping other two couplings $J_1=J_2=1$ fixed. \textit{Right:} Variation of ground state degeneracy with the variation of the couplings $J_1=J_2$ keeping the$J_3=$ fixed. Both these show the robustness of the ground state degeneracy against the channel anisotropy.}
 \label{fig:channel-anisotropy-}
 \end{figure}
-%In the case when one coupling of $K$ channel anisotropic star graph model vanishes, the effective model becomes a $K-1$ channel anisotropic star graph model with $K-1$ fold degenerate ground states. On the other hand, if one of the $K$ couplings becomes infinite then with respect to that coupling other couplings becomes zero thus giving rise to an effective single channel star graph model. For example, for ${\mathcal{J}}_K\rightarrow 0$, the Hamiltonian becomes $H_{K}(\vec{{\mathcal{J}}})\rightarrow H_{K-1}({\mathcal{J}}_1,\cdots,{\mathcal{J}}_{K-1})$ and for ${\mathcal{J}}_K\rightarrow \infty$ we get $H_{K}(\vec{{\mathcal{J}}}) \rightarrow H_{1}({\mathcal{J}}_K)$. 
+
 We have demonstrated this numerically for a three channel anisotropic star graph model. As shown in the Fig.\ref{fig:channel-anisotropy-}(a) where two couplings are same (${\mathcal{J}}_1={\mathcal{J}}_2=1$) and we are varying the third coupling ${\mathcal{J}}_3$ from finite to zero. The degeneracy is always $3$ except when ${\mathcal{J}}_3=0$, then the degeneracy becomes $2$ becoming an effective two channel problem. On the other hand in Fig.\ref{fig:channel-anisotropy-}(b) we keep the first coupling ${\mathcal{J}}_3$ fixed to $1$ and vary the common coupling ${\mathcal{J}}_1={\mathcal{J}}_2$ from non-zero to zero, this is equivalent to keeping ${\mathcal{J}}_1={\mathcal{J}}_2=1$ fixed and taking ${\mathcal{J}}_1$ to infinity from finite. In this case we find when the coupling ${\mathcal{J}}_1=\lambda_2=0$ the degeneracy becomes one showing the effective single channel nature.
 
 The above demonstration makes it clear that the ground state degeneracy can change only when at least one of the Kondo couplings vanish. This can be realised under RG flow if one considers the anisotropic MCK model.
@@ -772,29 +662,27 @@ The above demonstration makes it clear that the ground state degeneracy can chan
 \end{align}
 We consider the specific case where \(K-1\) channels have the same coupling \({\mathcal{J}}_1 = {\mathcal{J}}_2 = ... = {\mathcal{J}}_{K-1} = {\mathcal{J}}_+\) and the remaining channel has a different coupling \({\mathcal{J}}_K = {\mathcal{J}}_-\). The RG equations for such a model are
 \begin{align}
-	\frac{\Delta {\mathcal{J}}_\pm}{|\Delta D|} = -\frac{{\mathcal{J}}_\pm^2 \rho}{\mathcal{D}_\pm} + \frac{\rho^2 {\mathcal{J}}_\pm}{2}\left[\frac{(K-1){\mathcal{J}}_+^2}{\mathcal{D}_+} + \frac{{\mathcal{J}}_-^2}{\mathcal{D}_-}\right]
+	\frac{\Delta {\mathcal{J}}_\pm}{|\Delta D|} = -\frac{{\mathcal{J}}_\pm^2 \rho}{\mathcal{D}_\pm} + \frac{\rho^2 {\mathcal{J}}_\pm}{2}\left[\frac{(K-1){\mathcal{J}}_+^2}{\mathcal{D}_+} + \frac{{\mathcal{J}}_-^2}{\mathcal{D}_-}\right]~,
 \end{align}
 where \(\mathcal{D}_\pm = \omega - \frac{D}{2} - \frac{{\mathcal{J}}_\pm}{4}\) are the denominators of the URG equations.
 Setting \({\mathcal{J}}_+ = {\mathcal{J}}_-\) leads to the critical fixed point at \({\mathcal{J}}_+^* = {\mathcal{J}}_-^* = {\mathcal{J}}_* = \frac{2}{K \rho}\). We now perturb around this fixed point by defining new variables \(j_\pm = {\mathcal{J}}_\pm - {\mathcal{J}}_*\). We also assume that the bandwidth is large enough so that \(\mathcal{D}_\pm \simeq \omega - \frac{D}{2} - \frac{{\mathcal{J}}_*}{4} = -|\mathcal{D}_*|\). Performing a linear stability analysis about \(j_\pm=0\) then reveals the following two possibilities:
-%\begin{itemize}
-%	\item If \(j_-<0,j_+>0\), the deviation \(j_-\) is relevant and \(\mathcal{J}_-\) flows to zero. The flow of \(j_+\) are constrained such that the remaining couplings \(\mathcal{J}_+\) flow to the stable intermediate fixed point of the \(K-1\) channel MCK model: \(J_{+,*} = \frac{2}{(K-1)\rho}\).
-%	\item If \(j_\to 0, j_+<0\), the couplings \(\mathcal{J}_+\) are irrelevant, and this leads to a single channel Kondo model described by the coupling \(\mathcal{J}_-\) which flows to strong coupling.
-%\end{itemize}
+
 \par\textit{(a)} If \(j_-<0,j_+>0\), the deviation \(j_-\) is relevant and \(\mathcal{J}_-\) flows to zero. The flow of \(j_+\) are constrained such that the remaining couplings \(\mathcal{J}_+\) flow to the stable intermediate fixed point of the \(K-1\) channel MCK model: \(J_{+,*} = \frac{2}{(K-1)\rho}\).
-\par\textit{(b)} If \(j_\to 0, j_+<0\), the couplings \(\mathcal{J}_+\) are irrelevant, and this leads to a single channel Kondo model described by the coupling \(\mathcal{J}_-\) which flows to strong coupling.
+\par\textit{(b)} If \(j_- > 0, j_+<0\), the couplings \(\mathcal{J}_+\) are irrelevant, and this leads to a single channel Kondo model described by the coupling \(\mathcal{J}_-\) which flows to strong coupling.
 
-These conclusions show that the \(K\) channel intermediate fixed point is unstable under anisotropy in \(\mathcal{J}_i\). If one of the couplings becomes smaller than the rest, then that coupling flows to zero while the other \(K-1\) couplings flow to the \(K-1\) channel fixed point. On the other hand, if \(K-1\) couplings are smaller than a single coupling, then the smaller couplings vanish while the remaining coupling flows to strong-coupling.
+These conclusions show that the \(K\) channel intermediate fixed point is unstable under channel anisotropy~\cite{Noz_blandin_1980,andrei_jerez_1995,affleck_pang_cox_1992,zarand_2000}. If one of the couplings becomes smaller than the rest, then that coupling flows to zero while the other \(K-1\) couplings flow to the \(K-1\) channel fixed point. On the other hand, if \(K-1\) couplings are smaller than a single coupling, then the smaller couplings vanish while the remaining coupling flows to strong-coupling.
 
-%\pagebreak
 
 \section{Conclusions}
 [First few lines] 
-\par Using the unitary renormalization group technique we get the zero-temperature phase diagram of the multi-channel Kondo problem with an intermediate coupling fixed point. We obtain the low energy intermediate coupling fixed point Hamiltonian (LEH).  At the heart of this fixed point Hamiltonian, there is a zero bandwidth problem, which is essentially a quantum mechanical stargarph problem. Many important properties of the multi-channel Kondo problem like ground state degeneracy, break down of screening can be understood by studying this zero-bandwidth stargraph problem. Impurity-field susceptibility calculations of this stargraph model show the power-law divergence at low temperatures. Thus the critical nature of the multi-channel Kondo can be understood by studying the zero-bandwidth model. Unlike the unique ground state of the single-channel problem, the presence of ground state degeneracy in the multi-channel problem allows the presence of non-local twist operators and fractional excitations in the ground state manifold. By removing the quantum fluctuations between the impurity and the rest we get to the low energy effective Hamiltonian. The all-to-all nature of this low-energy effective Hamiltonian creates inter-channel quantum scattering in terms of electron-hole pairs creating a local Mott-liquid phase among channels. Unlike the single-channel case, this presence of local Mott-liquid is unique to the multi-channel Kondo problem.
+{\color{blue} In summary, we have explored the low-energy behaviour of the multi-channel Kondo models using the unitary renormalization group (URG) method and obtained a better understanding of the role of ground state degeneracy and quantum-mechanical frustration in shaping the non-Fermi liquid physics and criticality.}
+
+\par Using the unitary renormalization group technique we get the zero-temperature phase diagram of the MCK problem with an intermediate coupling fixed point. We obtain the low energy intermediate coupling fixed point Hamiltonian (LEH).  At the heart of this fixed point Hamiltonian, there is a zero bandwidth problem, which is essentially a quantum mechanical stargarph problem. Many important properties of the MCK problem like ground state degeneracy, break down of screening can be understood by studying this zero-bandwidth stargraph problem. Impurity-field susceptibility calculations of this stargraph model show the power-law divergence at low temperatures. Thus the critical nature of the MCK can be understood by studying the zero-bandwidth model. Unlike the unique ground state of the single-channel problem, the presence of ground state degeneracy in the multi-channel problem allows the presence of non-local twist operators and fractional excitations in the ground state manifold. By removing the quantum fluctuations between the impurity and the rest we get to the low energy effective Hamiltonian. The all-to-all nature of this low-energy effective Hamiltonian creates inter-channel quantum scattering in terms of electron-hole pairs creating a local Mott-liquid phase among channels. Unlike the single-channel case, this presence of local Mott-liquid is unique to the MCK problem.
 
 \par To understand the nature of local liquid phases we add excitations on top of the zero-bandwidth stargraph model and derive the low energy effective Hamiltonian (LEH). The LEH of the 2-channel Kondo shows the absence of the Fermi liquid phase due to the exact cancellation of terms associated with two degenerate ground states. The non-Fermi liquid nature of the LEH shows the presence of strong inter-channel quantum fluctuation and the presence of the Marginal Fermi Liquid. Our study shows that ground state degeneracy is the sole reason for the presence of such non-Fermi liquid phases, which is absent in the single-channel case due to its unique ground state. Studies of various thermodynamic properties of this 2-channel Kondo LEH (presented in the supplementary material), like specific heat and susceptibility, show logarithmic dependence at low temperature which is in agreement with the literature.
 A similar absence of Fermi-liquid and the presence of non-Fermi liquids was observed in the three-channel Kondo problem. The above studies show the central role of ground state degeneracy in the MCK problem which makes it very different from the single-channel Kondo problem. Also, the presence of Marginal Fermi liquid shows the orthogonality catastrophe in the two-channel MCK problem, which is distinctly different from the single-channel Kondo cloud.
 
-\par Various von-Neumann entanglement studies of the zero-bandwidth stargraph model show that the entanglement content is different for different degenerate ground states labeled by $J^z$. Impurity and outer-spin entanglement entropy with the rest at large channel limit saturate at $\log 2$ in the low $J^z$ state opposite to the $J^z_{max}$ state where the entanglement entropy decreases with the increase of channel number. This shows the presence of quantum fluctuations of different levels in different ground states, decreases with the increase of the $J^z$ value. Though there was no inter-channel coupling in the multi-channel Kondo, the strong signature of inter-channel mutual information in the stargraph ground state shows the presence of inter-channel correlation in the multi-channel ground state. The power-law dependence of multi-partite information among the outer spins of the stargraph model captures the power-law behavior of the all-to-all local Mott-liquid ground state. The study of such entanglement and mutual information studies upon the addition of excitations on top of the stargraph model by tuning the real-space nearest neighbor intra-channel hopping ($t$) shows a discontinuity at $t=0^+$. In contrast to the smooth behavior of various entanglement measures as a function of the hopping strength $t$, this discontinuity in multi-channel case signals the presence of degenerate ground state manifold and the non-Fermi liquids leading to the orthogonality catastrophe. Higher discontinuity for a higher number of channels was observed in a Bures distance study.
+\par Various von-Neumann entanglement studies of the zero-bandwidth stargraph model show that the entanglement content is different for different degenerate ground states labeled by $J^z$. Impurity and outer-spin entanglement entropy with the rest at large channel limit saturate at $\log 2$ in the low $J^z$ state opposite to the $J^z_{max}$ state where the entanglement entropy decreases with the increase of channel number. This shows the presence of quantum fluctuations of different levels in different ground states, decreases with the increase of the $J^z$ value. Though there was no inter-channel coupling in the MCK, the strong signature of inter-channel mutual information in the stargraph ground state shows the presence of inter-channel correlation in the multi-channel ground state. The power-law dependence of multi-partite information among the outer spins of the stargraph model captures the power-law behavior of the all-to-all local Mott-liquid ground state. The study of such entanglement and mutual information studies upon the addition of excitations on top of the stargraph model by tuning the real-space nearest neighbor intra-channel hopping ($t$) shows a discontinuity at $t=0^+$. In contrast to the smooth behavior of various entanglement measures as a function of the hopping strength $t$, this discontinuity in multi-channel case signals the presence of degenerate ground state manifold and the non-Fermi liquids leading to the orthogonality catastrophe. Higher discontinuity for a higher number of channels was observed in a Bures distance study.
 
 \par Intermediate coupling fixed point under the URG study along with the strong-weak duality shows the unstable nature of the couplings away from the intermediate fixed points in both the low and high coupling strength. Under the URG study, we show that in the presence of channel anisotropy some couplings become irrelevant and vanishes at the low energy fixed point. On the other hand, the study of the stargraph ground state degeneracy against channel anisotropy shows that the degeneracy only changes if one or more couplings vanishes or becomes singular. The above two studies together show that in the presence of channel anisotropy the degeneracy of the MCK does not change until the RG reaches the fixed point.
 
