@@ -75,7 +75,7 @@ The strong-weak duality relates an MCK at strong-coupling to another at weak-cou
 The other duality transformation is between underscreened and overscreened models, and it implies that if the strong-coupling fixed point is unstable in the overscreened model, it is bound to be stable in the underscreened model.
 In \ref{anisotropic_rg} we show the robustness of the star graph ground state degeneracy against the impurity-channel coupling anisotropy, and follow it up with a URG treatment of the channel anisotropic MCK; the isotropic fixed point is found to be unstable to asymmetry, leading to impurity phase transitions driven by channel anisotropy.
 
-\section{Fixed point theory of over-screened MCK model}
+\section{Fixed point theory of over-screened multi-channel Kondo model}
 \label{rg_section}
 \subsection{RG flows towards intermediate coupling}
 \label{rg_flow_section}
@@ -199,10 +199,6 @@ In order to obtain the magnetic susceptibility, We insert a magnetic field that 
 	H(h) = {\mathcal{J}^*} \vec{S_d}\cdot\vec{S} + h S_d^z
 \end{align}
 The Hamiltonian commutes with \(S\), so it is already block-diagonal in terms of the eigenvalues \(M\) of \(S\). \(M\) takes values in the range \(\left[M_\text{min}, M_\text{max}\right]\), where \(M_\text{max} = K/2\) for a \(K-\)channel Kondo model, and \(M_\text{min} = 0\)  if \(K\) is even, otherwise \(\frac{1}{2}\). Defining \(\alpha = \frac{1}{2}\left({\mathcal{J}}m + h\right) + \frac{{\mathcal{J}}}{4}\) and \(x^M_m = M(M+1) - m(m+1)\), the partition function can be written as
-%\begin{align}
-%	Z(h) =\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta \frac{{\mathcal{J}}}{4}}\cosh \beta\sqrt{{\mathcal{J}}^2x^M_m/4 + \alpha^2} \right.\nonumber\\
-%\left.+ 2e^{-\beta {\mathcal{J}}M/2}\cosh \beta h/2\right]
-%\end{align}
 \begin{eqnarray}
 Z(h) &=&\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\bigg[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta \frac{{\mathcal{J}}}{4}}\cosh \beta\sqrt{{\mathcal{J}}^2x^M_m/4 + \alpha^2} \nonumber\\
 &&\hspace{2cm}+ 2e^{-\beta {\mathcal{J}}M/2}\cosh \beta h/2\bigg]
@@ -222,7 +218,6 @@ where the \(\prime\) indicates derivative with respect to \(h\). For brevity, we
 \begin{figure}[!htpb]
 \centering
 \includegraphics[width=0.49\textwidth]{plt/CentralFieldChiPowerlaw.pdf}
-%\includegraphics[width=0.49\textwidth]{plt/Central_Field_Chi_Powerlaw_}
 \caption{Variation of impurity susceptibility against temperature. The exactly screened case ($\delta=0$) saturates to a constant value at low temperatures, indicating complete screening. The cases of inexact screening show a divergence of the susceptibility, which means there is a remnant local spin at the impurity. Since the axes are in log scale, the behaviour is $\log T \sim -\log \chi$ which translates to $\chi \sim 1/T$.  }
 \label{fig:suseptibility_impurity}
 \end{figure}
@@ -313,15 +308,10 @@ The total bath spin operator \(S^z\) is not a good quantum number for the zero m
 Thus we get the effective Hamiltonian is 
 \begin{eqnarray}
 H_{eff} 
-%\frac{{\mathcal{J}}^2 \Gamma_{\uparrow}}{2} (S^2-S^{z2})(\tau^2_{d}-\tau^z_d)  \nonumber\\
-%&=& \beta_{\uparrow}(\alpha,\omega_{\uparrow})(S^2-S^{z2})(\tau^2_{d}-\tau^z_d)\\
-%~,~~~\frac{\alpha^2 \Gamma_{\uparrow}}{2} =\beta_{\uparrow}(\alpha,\omega_{\uparrow}) \nonumber\\
-%&=& \frac{\beta_{\uparrow}(\alpha,\omega_{\uparrow})}{2} (S^2-S^{z2})  \nonumber\\
  =\frac{\beta_{\uparrow}({\mathcal{J}},\omega_{\uparrow})}{4} (S^+S^-+S^-S^+)   
 \end{eqnarray}
 In terms of the electronics degree of freedom this looks 
 \begin{eqnarray}
-%&&H_{eff}(\omega,\alpha)  \nonumber\\
 && \frac{ \beta_{\uparrow}({\mathcal{J}},\omega_{\uparrow}) }{4}   \displaystyle\sum_{\substack{i\neq j \\ \alpha_i,\beta_i\in \{\uparrow,\downarrow\}\\ \alpha_j,\beta_j\in \{\uparrow,\downarrow\}}}\vec{\sigma}_{\alpha_i\beta_i}\vec{\sigma}_{\alpha_j\beta_j}  c_{0\alpha_i}^{(i)\dagger}  c_{0\beta_i}^{(i)}    c_{0\alpha_j}^{(j)\dagger}  c_{0\beta_j}^{(j)} +\textrm{h.c.}   \nonumber
 \label{eq:all-to-all_1}
 \end{eqnarray}
@@ -336,8 +326,6 @@ H(\Phi) &=& -\frac{|\beta_{\uparrow}({\mathcal{J}},\omega_{\uparrow})|}{2} S^2  
 \end{eqnarray}
 One can thus explore different $S^z$ ground states via such flux tuning mechanism.
 
-
-\textbf{SHORTEN AND MERGE WITH THE EARLIER SUBSECTION}
 For a $K$ channel star graph problem the ground state is $K$ fold degenerate associated with different $J^z$ values $\{-(K-1)/2,-(K-3)/2,\cdots  ,(K-1)/2 \}$. After removing the quantum fluctuations between the impurity spin and the outer spins, we get an all-to-all model (eq.\eqref{eq:flux_spectral}) as the effective Hamltonian. The eigenstates of this all-to-all Hamiltonian can be labeled by the eigenvalues of $S^z$. There are $K+1$ such states made out of only the outer spins. The total state including the impurity spin can be written as $|J^z\rangle = |S_d^z\rangle \otimes |S^z\rangle$ labeled by $J^z=S_d^z+S^z$. As the all-to-all model has $Z_2$ symmetry in impurity sector, there are $2(K+1)$ total states. For $S_d^z=1/2$, $ \{J^z\}=\{ -(K-1)/2, \cdots, (K-1)/2, (K+1)/2 \}$ and for $S_d^z=-1/2$, $\{J^z\}=\{-(K+1)/2, -(K-1)/2, \cdots,  (K-1)/2  \}$. We can see that in both the cases, all $K$ states of the star graph ground state manifold are present in spectrum of the all-to-all model, one of them being the ground state. Using the twist operator, we can cycle between the various states.
 
 \section{Local non-Fermi liquid excitations of the 2CK model}
@@ -345,7 +333,6 @@ For a $K$ channel star graph problem the ground state is $K$ fold degenerate ass
 \subsection{Effective Hamiltonian}
 
 \label{sec:eff_ham_2ch}
-\textbf{RADICALLY SHORTEN!}
 \noindent Here we start with the star graph Hamiltonian, which is the zero bandwidth model for the two-channel Kondo as obtained from the URG.
 \begin{eqnarray}
 H^{(2)}&=& {\mathcal{J}} \vec{S}_d.(\vec{S}_1+\vec{S}_2)~~,~~\vec{S}_i =  \frac{1}{2}~ c_{i,\alpha}^{\dagger}~ \vec{\sigma}_{\alpha,\beta}~ c_{i,\beta}~~
@@ -380,13 +367,8 @@ Here, $|\alpha_i\rangle$ represents the ground states with energy $E_0$ and $\mu
 Total diagonal contribution is coming from the two states $|\tilde{\alpha}_0\rangle$ and $|\tilde{\alpha}_1\rangle$, individually fiven as $H^{(2)}_{diag} (1/2)$,$H^{(2)}_{diag} (-1/2)$ respectively.
 \begin{eqnarray}
 H^{(2)}_{diag} (1/2) &=& \frac{2t^2}{E_0} \hat{I} - \Omega_l~,~ H^{(2)}_{diag} (-1/2) = \frac{2t^2}{E_0} \hat{I} + \Omega_l ~.~~~~
-%= \frac{2t^2}{E_0} \hat{I} + \frac{4t^2}{3E_0} \bigg[S_{l_1}^z+S_{l_2}^z\bigg]
 \end{eqnarray}
 where $S_{l_i}^z=(n_{l_i\uparrow}-n_{l_i\downarrow})/2$ and $\Omega_l=\frac{2t^2}{3E_0} ( S_{l_1}^z + S_{l_2}^z)$.  Thus the total contribution to the diagonal effective Hamiltonian is $H^{(2)}_{diag} = -4t^2 \hat{I}$, shows the absence of local Fermi liquid due to the exact cancellation of the field term.
-%But the total contribution shows the trivial nature of the diagonal part in the LEH. This clearly shown that there is no Fermi liquid terms present in low energy in the 2-channel Kondo problem. Here, $\hat{I}$ is the identity operator made out of all $2^4=16$ possible number operator combinations as shown below
-%\begin{eqnarray}
-%\hat{I} &=& \sum_{\hat{o}=\hat{n},(1-\hat{n})} \hat{o}_{l_1,\uparrow}\hat{o}_{l_1,\downarrow} \hat{o}_{l_2,\uparrow}\hat{o}_{l_2,\downarrow}
-%\end{eqnarray}
 The off-diagonal contributio to the second order effective Hamiltonian is 
 \begin{eqnarray}
 H_{NFL}&=&H^{(2)}_{off} = \sum_{i\neq j} \sum_l |\alpha_i\rangle \frac{\langle \alpha_i  | V| \mu_l \rangle \langle \mu_l  | V| \alpha_j \rangle}{E_0-E_{l}}\langle \alpha_j | \nonumber\\
@@ -396,9 +378,7 @@ H_{NFL}&=&H^{(2)}_{off} = \sum_{i\neq j} \sum_l |\alpha_i\rangle \frac{\langle \
 \end{eqnarray}
 The LEH is purely a non-Fermi liquid, arising due to the degenerate ground state manifold. Using this low energy effective Hamiltonian we have calculated different thermodynamic quatitites like susceptibility and specific heat. Both these measures shows logarithmic behavior at low temperature which is in agreement with known result in literature. These results are shown in the Supplementary material. In a similar way, we have calculated the LEH for the three channel Kondo. We find the absence of Fermi liquid in $2^{nd}$ order and the presence of non-Fermi liquid in the off-diagonal low energy effective Hamiltonian shown in the supplementary material.
 
-\textbf{MENTION THAT WE HAVE COMPUTED VARIOUS THERMODYNAMIC QUANTITIES THAT ARE IN FAIR AGREEMENT WITH THE LITERATURE. AND THAT THESE ARE SHOWN IN THE SUPPLEMENTARY MATERIALS. ALSO MENTION THAT WE HAVE ALSO DERIVED AN EFFECTIVE HAMILTONIAN FOR THE THREE CHANNEL CASE, ALSO SHOWN IN SUPPLEMENTARY MATERIALS.}
-
-\subsection{Local Marginal Fermi liquid and Orthogonality catastrophe}
+\subsection{Local marginal Fermi liquid and orthogonality catastrophe}
 \label{sec:MFL}
 
 The real space local low energy Hamiltonian that takes into account the excitations above the ground state is given by eq.~\ref{eq:hamiltonian_NFL} and can be written as
@@ -436,9 +416,6 @@ A non-local version of this effective Hamiltonian was found to describe the norm
 \begin{equation}\begin{aligned}
 	\Delta R_j =- \frac{R_j^2}{\omega - \epsilon_{j}/2 - R_j/8}
 \end{aligned}\end{equation}
-%\begin{equation}\begin{aligned}
-%	\Delta R_j =- {R_j^2}/({\omega - \epsilon_{j}/2 - R_j/8})
-%\end{aligned}\end{equation}
 In the RG equation, \(\epsilon_{j}\) represents the energy of the \(j^\text{th}\) isoenergetic shell. It is seen from 
 the RG equation that \(R\) is relevant in the range of \(\omega < \frac{1}{2}\epsilon_j\) that has been used throughout, leading to a fixed-point at \(R^*/8 = \omega - \frac{1}{2}\epsilon^*)\). The relevance of \(R\) is expected because the strong coupling \(J\) is irrelevant and \(R \sim 1/J\).
 
@@ -458,109 +435,110 @@ The self-energy also provides the quasiparticle residue for each channel\cite{an
 As \(\omega \to 0\), the \(Z\) vanishes, implying that the ground state is not adiabatically connected to the Fermi gas in the presence of the NFL terms.
 This is the orthogonality catastrophe~\cite{varma2002singular,anderson_infraredcat,yamada_catastrophe,yamada1979orthogonality} in the two-channel Kondo problem, and it is brought about by the presence of the channel-non diagonal terms in Eq.~\ref{mfl_large}.
 Such terms were absent in the single-channel Kondo model, because there was no multiply-degenerate ground state manifold that allowed scattering.
-This line of argument shows that the extra degeneracy of the ground state subspace and the frustration of the singlet order that comes about when one upgrades from the single-channel Kondo model to the MCK models is at the heart of the NFL behaviour, and the orthogonality catastrophe should be a general feature of all such frustrated MCK models.
+This line of argument shows that the extra degeneracy of the ground state subspace and the frustration of the singlet order that comes about when one upgrades from the single-channel Kondo model to the MCK models is at the heart of the NFL behaviour, and the orthogonality catastrophe is expected to be a general feature of all such frustrated MCK models.
 A local NFL term and a similar self-energy was also obtained by Coleman, et al.~\cite{Coleman_tsvelik} in terms of Majorana fermions at the strong-coupling fixed point of the \(\sigma-\tau\) model, which they claimed was equivalent to the intermediate-coupling fixed point of the two-channel Kondo model.
 Along with the work by Schofield~\cite{schofield_1997}, this demonstration shows the universality between the two-channel Kondo and the \(\sigma-\tau\) models. 
-,
+
 \section{Entanglement properties}
 \label{sec:ent_prop}
-\textbf{MINIMISE THE WORDS RADICALLY!}
+
 \subsection{Entanglement properties of the star graph}
 \label{sec:EE_star graph}
 
-\noindent For a $K$ channel star graph model we compute various entanglement measures in each of the $K$ degenerate ground states labeled by the $J^z$ eigenvalues as $|J^z\rangle$.
-\subsubsection{Impurity entanglement entropy}
+\noindent We will now show the results of our study of various entanglement measures in each of the $K$ degenerate ground states $|J^z\rangle$ of a $K$ channel star graph, labeled by the eigenvalues of $J^z$.
+\subsubsection{Entanglement entropy between impurity and the rest}
+\noindent In a single-channel Kondo model, the ground state is the unique singlet: $|J=0,J_z=0 \rangle = \frac{1}{\sqrt{2}} \left(\ket{\uparrow_{d},\downarrow_0} - \ket{\downarrow_d, \uparrow_0}\right)$, and the impurity entanglement entropy ($EE_d$) is at the  maximum possible value of $\log 2$.
+We will now calculate the same quantify for the ground states $|J^z\rangle \equiv |S_d=1/2,S=K/2;(S-1/2),J^z\rangle$ of the $K$ channel model.
+
+In order to compute \(EE_d\) for a particular state \(\ket{J^z}\), we calculate the von-Neumann entropy of the reduced density matrix \(\rho_d\) obtained by partially tracing the associated density matrix $\rho=|J^z\rangle\langle J^z|$ over the impurity states: 
+\begin{eqnarray}
+\rho_{d}&=& \textrm{Tr}_{d} \rho=\sum_{S_d^z} \langle S_d^z| \rho | S^z_d\rangle ~,~~EE_d = -\rho_{d} \log \rho_{d}~~~
+\end{eqnarray}
+
 \begin{figure}[!htpb]
 \centering
 \includegraphics[width=0.49\textwidth]{plt/EE_multi_channel_ANN.png}
 \caption{Variation of impurity entanglement entropy ($EE_d$) with the rest for different channels $(K)$. The maximum entropy in the large $K$ limit is $\log 2$.}
 \label{fig:EE_d}
 \end{figure}
-\noindent Here we are interested in finding the entanglement of the central impurity spin with the rest. For single channel case the ground state is unique which is $|J=0,J_z=0 \rangle = \frac{1}{\sqrt{2}} (|\uparrow_{d}\downarrow_0\rangle -|\downarrow_d \uparrow_0\rangle)$. Thus the impurity entanglement enotropy is maximum $\log 2$. In the $K$ cahnnel case we compute the impurity entanglement entropy ($EE_d$) in all the $K$ degenerate ground states. The $EE_d$ in the states $|\pm J^z\rangle$ is same. The state $|J^z\rangle \equiv |S_d=1/2,S=K/2;(S-1/2),J^z\rangle$ has the density matrix $\rho=|J^z\rangle\langle J^z|$ from which we can calculate the reduced density matrix by partial tracing the impurity degree of freedom 
-%$\rho_{d}=\textrm{Tr}_{d} \rho=\sum_{S_d^z} \langle S_d^z| \rho | S^z_d\rangle$. 
-\begin{eqnarray}
-\rho_{d}&=& \textrm{Tr}_{d} \rho=\sum_{S_d^z} \langle S_d^z| \rho | S^z_d\rangle ~,~~EE_d = -\rho_{d} \log \rho_{d}~~~
-\end{eqnarray}
-\noindent The eigenvalues of this reduced density matrix given by $\lambda_i$ is called entanglement spectrum. We compute such impurity entanglement entropy for various channels as shown in the Fig.\ref{fig:EE_d}. The minimum entanglement entropy (associated with the $|J^z=J\rangle$ state) decreases with the increase of channel number. On the other hand the maximum entanglement entropy (associated with $|J^z_{min}\rangle$ state) is saturating at $\log 2$. 
+The \(EE_d\) for states of various \(J^z\) is shown as a function of the number of channels \(K\) in fig.~\ref{fig:EE_d}. At a particular value of \(K\) on the \(x-\)axis, all the points parallel to the \(y-\)axis represent values of \(EE_d\) for various values of \(J^z\) in the ground state manifold of that particular value of \(K\). The minimum entanglement entropy occurs in the maximum \(J^z\) state $\left(|J^z=J\rangle\right)$, and this minimum value decreases with increase in \(K\). On the other hand, the maximum entanglement entropy is attained in the state with minimum \(J^z\). This maximum value of the entanglement entopy is always \(\ln 2\) for odd values of \(K\); for even values of \(K\), the value asymptotically reaches $\log 2$ at large \(K\). 
+
+A very similar computation gives the entanglent entropy between one outer spin and the rest of the spins, and it is shown in Fig.~\ref{fig:EE_outer}.
+We again find that the minimum entanglement entropy is associated with the state $|J^z=J\rangle$ and it falls with increasing \(K\), approaching zero asymptotically; the maximum entanglement entropy is, as before, associated with the state $|\left(J^z\right)_\mathrm{min}\rangle$ and it rises to $\log 2$ in the limit $K\gg 1$.
 \begin{figure}[!htpb]
 \centering
 \includegraphics[width=0.49\textwidth]{plt/outer_EE_multi_channel_ANN.png}
 \caption{Variation of the entanglement entropy of an outer spin ($EE_o$) with the rest for different channels $(K)$. The maximum entanglement entropy in the large $K$ limit is $\log 2$.}
 \label{fig:EE_outer}
 \end{figure}
-Similar study has been done to calculate entanglent entropy of outer spin with the rest called $EE_o$ shown in the Fig.\ref{fig:EE_outer}.
-%
-%
-%In a $K$ channel system all the outer spins are equivalent (has $Z_N$ symmetry), thus studying the entanglement of any one outer spin with the rest is enough. Here we do a similar entanglement entropy study where we get the reduced density matrix ($\rho_o$) by partial tracing out any one outer spin say the $l^{th}$ ($1\leq l \leq K$) one $S^z_{l}$. 
-%\begin{eqnarray}
-%\rho_{o} &=& \textrm{Tr}_{l} \rho =\displaystyle\sum_{S^z_{l}} \langle S^z_l | \rho | S^z_{l} \rangle~,~EE_o=-\rho_{o}\log \rho_{o}
-%\end{eqnarray}
-We find a similar result where, the minimum entanglement entropy is associated with the state $|J^z=J\rangle$ and approaching zero in the limit $K\gg 1$. On the otherhand maximum entanglement entropy associated with the state $|J^z_{min}\rangle$ is saturating at a value $\log 2$ in the limit $K\gg 1$. Above entanglement study shows that, in the $|J^z_{min}\rangle$ state impurity and any outer spin is maximally entangled with the rest for the odd channel or in general for the large channel case. Both the impurity and outer-spin entanglement entropy with the rest is same in both the states $|\pm J^z\rangle$, which shows that interms of these entanglement entropy there is a parity symmetry between the states $|J^z\rangle$ and $\pi^{x} |J^z\rangle$. In the odd channel cases there is a unique $|J^z=0\rangle$ state with a maxium entanglement entropy. 
+
+Two interesting features emerge from the study:
+\begin{itemize}
+	\item For the odd \(K\) models, the impurity is maximally entangled with the other spins in the minimum \(J^z\), $|J^z=0\rangle$, member of the ground state manifold.
+	At large \(K\), the even \(K\) models also acquire this property, the minimum \(J^z\) there being \(\pm \frac{1}{2}\).
+	\item 
+	Both \(EE_d\) and \(EE_0\) are individually equal for the states $|\pm J^z\rangle$, which shows that both types of entanglement entropy are invariant under the transformation \(\ket{J^z} \to \pi \ket{J^z}\). This reflects a parity symmetry in the state space in terms of entanglement.
+\end{itemize}
 
 \subsubsection{Mutual Information}
 
 \begin{figure}[!htpb]
 \includegraphics[width=0.49\textwidth]{plt/NEW31Dec_I_2_vs_Nch_[0,1]}
-\caption{Variation of mutual information ($I^2(d:o)$) with the rest for different channels $(K)$. The maximum mutual informaiton is saturating at $0.37$.}
+\caption{Variation of mutual information ($I^2(d:o)$) with the rest for different channels $K$. The maximum mutual informaiton is saturating at $0.37$.}
 \label{fig:MI_d_o}
 \end{figure}
 
-\noindent  Mutual information is a measure which captures the correlations present between two subsystems (A,B) in a particular state defined as
+Mutual information is a measure which captures the correlations present between two subsystems (A,B), in a particular state. It is defined as
 \begin{eqnarray}
-I^2(A:B)=S_A+S_B-S_{A\cup B}
+I^2(A:B)=S_A+S_B-S_{A\cup B}~,
 \end{eqnarray}
-where $S_{A}$ is the von-Neumann entanglement entropy of the subsystem $A$ with the rest. Here we are interested in computing two types of mutual information first, study the mutual information between the impurity-spin (Fig.\ref{fig:MI_d_o}) and second any one outer spin $I^2(d:o)$ and mutual information between two outer spins $I^2(o:o)$ (Fig.\ref{fig:MI_o_o}) for various channels. In both cases we find that maximum and minimum mutual information is associated with the $|J^z_{min}\rangle$ and $|J^z=J\rangle$ state. We also find that mutual information in the states $|J^z\rangle$ and $\pi^x|J^z\rangle$ are same showing the parity symmetry in the mutual information measure.
+where $S_{A(B)}$ is the von-Neumann entanglement entropy of the subsystem $A(B)$ with the rest, and \(S_{A\cup B}\) is the von-Neumann entanglement entropy of \(A\) and \(B\) with the rest.
+We are interested in two types of mutual information: firstly, the mutual information $I^2(d:o)$ between the impurity and one of the other spins, and secondly, the mutual information $I^2(o:o)$ between any two of the outer spins.
+Both of these have been computed for various channel numbers \(K\), and plotted in Figs.~\ref{fig:MI_d_o} and ~\ref{fig:MI_o_o}.
+
 \begin{figure}[!htpb]
 \includegraphics[width=0.49\textwidth]{plt/NEW31Dec_I_2_vs_Nch_[1,2]}
 \caption{Variation of mutual information ($I^2(o:o)$) with the rest for different channels $(K)$. The minimum mutual inforamtion is vanishing in the large $K$ limit.}
 \label{fig:MI_o_o}
 \end{figure}
-%
-%
-% Because all the outer spins are symmetric, the mutual information between impurity-spin with any one outer spin is same and can capture the correlation between two $A$ and $B$. We have done a scaling study of this mutual information for different channel numbers $K$. As shown in the Fig.\ref{fig:MI_d_o} in the large $K$ limit the maximum of the mutual information associated with the state $J^z_{min}$ is saturating at $0.3748$ and the Mutual information associated with the state $J^z=J$ is decreasing showing the classical limit.
-%Next, we have done a similar study by calculating the mutual information between two outer spin $I^2(o:o)$. In this also we find that the maximum mutual information between any outer spins saturates at the value $0.3759$ very close to the $I^2(d:o)$ case.
-\noindent In the large channel limit ($K\gg 1$) the maximum mutual information is saturating to a same value ($0.375$) for both impurity-outer and outer-outer pairs showing their equivalance. Though the difference can be seen in the state $J^z=J$ where the mutual information between two outer spins vanishes in the large $K$ limit faster than the mutual information between the impurity and any one outer spin. 
+
+In both cases we find that the maximum and minimum mutual information are associated with the $|\left(J^z\right)_\mathrm{min}\rangle$ and $|J^z=J\rangle$ states respectively.
+We also find that the  mutual information is the same in the states $|J^z\rangle$ and $\pi^x|J^z\rangle$, indicating the parity symmetry in the mutual information measure.
+In the large channel limit ($K\gg 1$), the maximum \(I^2(d:o)\) and \(I^2(o:o)\) saturate to the common value of $0.375$.
 
 
 \subsubsection{Multipartite information}
-\noindent Similar to the mutual information one can calculate any higher order multipartite information to find the nature of the correlations present in different ground states. We define the tripartite information among three subsystems $A,B,C$ as $I^3_{ABC} = (S_A+S_B+S_C)-(S_{AB}+S_{BC}+S_{CA})+S_{ABC}~$. This tripartite information scaling with the number of channels $K$ also shown behavior similar to the mutual information case, the highest tripartite information is associated with the $J^z_{min}$ state and saturating in the limit of $K\gg 1$. One can measure $N-$partite information for a collection of subsystems (CSS) $\{\mathcal{A}_N\}\equiv\{A_1,A_2,\cdots,A_N\}$. To define the $N-$partite information, we first define the power set of the CSS $\{\mathcal{A}_N\}$ as $\mathcal{P}(\{\mathcal{A}_{N}\})$, and the collection of all subsets of $\mathcal{P}(\{\mathcal{A}_{N}\})$ with $m$ subsystems in it as $\mathcal{B}_m(\{\mathcal{A}_N\})\equiv \{ Q~| ~Q\subset \mathcal{P}(\{\mathcal{A}_{N}\}), |Q|=m \}$. We also define the union and intersection of all the subsystems present in $Q$ as ${V}_{\cup}({Q})\equiv \bigcup_{A\in Q} A$ and ${V}_{\cap}({Q})\equiv \bigcap_{A\in Q} A$ respectively. Finally, the von Neumann entanglement entropy of the subsystem $A$ is given by $S_{A} $. Then the $N-$partite information that we are interested in is defined as
+\noindent Similar to mutual information, one can calculate higher order multipartite information to study the nature of correlations present in different ground states. We define the tripartite information among three subsystems $A,B,C$ as $I^3_{ABC} = (S_A+S_B+S_C)-(S_{AB}+S_{BC}+S_{CA})+S_{ABC}~$. \(I^3\) shows behavior similar to the mutual information - the highest \(I^2\) value is associated with the $\left(J^z\right)_\mathrm{min}$ state and it saturates in the limit of $K\gg 1$. One can measure $N-$partite information for a collection of subsystems (CSS) $\{\mathcal{A}_N\}\equiv\{A_1,A_2,\cdots,A_N\}$. To define the $N-$partite information, we first define the power set of the CSS $\{\mathcal{A}_N\}$ as $\mathcal{P}(\{\mathcal{A}_{N}\})$, and the collection of all subsets of $\mathcal{P}(\{\mathcal{A}_{N}\})$ with $m$ subsystems in it as $\mathcal{B}_m(\{\mathcal{A}_N\})\equiv \{ Q~| ~Q\subset \mathcal{P}(\{\mathcal{A}_{N}\}), |Q|=m \}$. We also define the union and intersection of all the subsystems present in $Q$ as ${V}_{\cup}({Q})\equiv \bigcup_{A\in Q} A$ and ${V}_{\cap}({Q})\equiv \bigcap_{A\in Q} A$ respectively. Finally, the von Neumann entanglement entropy of the subsystem $A$ is given by $S_{A} $. Then the $N-$partite information that we are interested in is defined as
 \begin{eqnarray}
 I^{N}_{\{\mathcal{A}_N\}} &=& \bigg[\displaystyle\sum_{m=1}^{N} (-1)^{m-1} \displaystyle\sum_{Q \in \mathcal{B}_m(\{\mathcal{A}\})} S_{V_{\cup}({Q})} \bigg]- S_{V_{\cap}(\mathcal{A}_N)}~.~~~~
 \label{eq:I_N_definition}
 \end{eqnarray}
 \begin{figure}
 \includegraphics[width=0.49\textwidth]{plt/2022_IN_vs_N_K8.png}
-%I_N_vs_N_N9.png}
 \caption{Variation of multi-partite information $I^N$ among the outer spins as a function of $N$ for the multi channel case with $K=8$. The inset shows the variation of the similar $I^N$ vs $N$ for an all-to-all model. Both show power law behavior.}
 \label{fig:Im_vs_m}
 \end{figure}
-\noindent Studying these multipartite information one can understand the nature of the multiparty correlations present among the outer spins. Our study of this multi-partite information presented in the above Fig.\eqref{fig:Im_vs_m} shows that the higher order multi partite information ($I^N$) decreases as you increase the order ($N$) following a power law. In the inset of the Fig.\ref{fig:Im_vs_m} we have shown the similar $I^N$ vs $N$ behavior observed in the ground state of the all-to-all effective Hamiltonian (Eq.\ref{eq:flux_spectral}). This similar power law behavior shows that one can capture the similar entanglement properties either from the star graph or from the corresponding all-to-all model.
+\noindent Studying these multipartite information one can understand the nature of the multiparty correlations present among the outer spins. Our study of this multi-partite information presented in the above Fig.~\eqref{fig:Im_vs_m} shows that the higher order multi partite information ($I^N$) decreases as you increase the order ($N$) following a power law. In the inset of the Fig.~\ref{fig:Im_vs_m} we have shown the similar $I^N$ vs $N$ behavior observed in the ground state of the all-to-all effective Hamiltonian (Eq.\ref{eq:flux_spectral}). This similar power law behavior shows that one can capture the similar entanglement properties either from the star graph or from the corresponding all-to-all model.
 
-
-
-
-
-\subsection{Entanglement properties of the MCK fixed point}
+\subsection{Entanglement properties of the multi-channel Kondo fixed point}
 \label{sec:EE_excitation}
+
 \begin{figure}[!htpb]
 \includegraphics[width=0.49\textwidth]{plt/hopping_fock_states}
 \caption{This is a schematic diagram of (a) single channel and (b) two channel problem. $S_d$ is the impurity spin. For more details refer to the text.}
 \label{fig:schematic_hopping}
 \end{figure}
 
-
-\noindent Apart from the entanglement study of the star graph model, here we are interested in the entanglement entropy of the MCK by introducing excitations in the star graph model. We start with the Hamiltonian Eq.\eqref{eq:excitation_hamiltonian} where we are only taking the nearest neighbor real space hopping (t) where $t=0$ case is the zero mode Hamiltonian of the MCK as shown in the Fig.\ref{fig:schematic_hopping}. In the single channel case the impurity ($S_d$) is talking to the spin degree of freedom at the real space origin ($\{1_{\uparrow},1_{\downarrow}\}$) of the unique conduction bath via a Heisenberg coupling. For $2$ channel case the impurity is talking to $2$ different origins of different conduction channels ($\{1_{\uparrow},1_{\downarrow}\}$ and $\{2_{\uparrow},2_{\downarrow}\}$) and hopping connects to their nearest neighbor sites, for example $\{1_{\uparrow},1_{\downarrow}\}$ connects to $\{l_{1\uparrow},l_{1\downarrow}\}$. Thus, for $K$ channel case we are solving a problem with one spin 1/2 degree of freedom and $2K$ electronic sites. As we increase the hopping strength $t$ from zero to non-zero, the sites of the zero mode Hamiltonian starts to scatter with their respective nearest neighbor sites.
+To understand the correlations present in the ground state of the MCK fixed point, we introduce excitations into the star graph ground state. We will work with the Hamiltonian Eq.\eqref{eq:excitation_hamiltonian} where we consider nearest-neighbor real space hopping \(t\) from the zeroth site into the lattice (Fig.~\ref{fig:schematic_hopping}). Setting $t=0$ recovers the zero bandwidth version of the MCK. In the \(K=1\) single channel case, the impurity ($S_d$) is talking to the spin degree of freedom at the real space origin ($\{1_{\uparrow},1_{\downarrow}\}$) of the single conduction bath via a Heisenberg spin-exchange coupling. For $K=2$, the impurity is interacting with $2$ distinct local spins $\{1_{\uparrow},1_{\downarrow}\}$ and $\{2_{\uparrow},2_{\downarrow}\}$ belonging to zeroth sites of different conduction channels, and the real space hopping connects these zeroth sites to their nearest neighbor sites. For example, $\{1_{\uparrow},1_{\downarrow}\}$ gets linked to $\{l_{1\uparrow},l_{1\downarrow}\}$. This amounts to saying that for a $K$ channel model, we are solving a problem with one spin 1/2 degree of freedom and $2K$ lattice sites. As we increase the hopping strength $t$ from zero to non-zero, the zeroth sites start interacting with their respective nearest neighbor sites.
 \begin{figure}[!htpb]
 \centering
 \includegraphics[width=0.49\textwidth]{plt/A_I1_ch123_['d']}
-%\includegraphics[width=0.49\textwidth]{plt/errorbar_A_I1_ch123_['d']}
-%\includegraphics[width=0.49\textwidth]{plt/EE_imp_vs_t_K=12}
 \caption{This Figures shown the variation of impurity entanglement entropy $EE_{imp}$ with the variation of the hopping strangth $t$ for three different channel cases, $K=1,2,3$. }
 \label{fig:EE_imp_vs_t_K}
 \end{figure}
 
 \subsubsection{Impurity entanglement entropy}
-\noindent  First, we are interested in the impurity entanglement entropy $EE_d(t)$  as a function of $t$ in the ground state, shown in the Fig.\ref{fig:EE_imp_vs_t_K} for all the three channel cases. At low hopping strength ($0<t\ll 1$) the $EE_{d}$ is independent of $t$ takes a constant value, higher the channel number lower this value. On the other hand this order of $EE_{d}$ changes at high $t$ strength, where higher the channel number higher the impurity entanglement entropy. Though the impurity entanglement entropy at low hopping strength is very close to each other for different channels, the single channel impurity entanglement entropy varies smoothly with the increase of $t$ from zero to nonzero value without any discontinuity. On the other hand for higher channels like $K=2$ and $K=3$ there is a discontinuity in the impurity entanglement entropy at $t=0^+$.
+The impurity entanglement entropy $EE_d(t)$ in the ground state is shown as a function of $t$ in Fig.~\ref{fig:EE_imp_vs_t_K} for three values of channel number \(K\). At low hopping strength ($0<t\ll 1$), $EE_{d}$ is independent of $t$ and achieves a constant value. This value decreases with increasing \(K\). On the other hand this order of $EE_{d}$ changes at high $t$ strength, where higher the channel number higher the impurity entanglement entropy. Though the impurity entanglement entropy at low hopping strength is very close to each other for different channels, the single channel impurity entanglement entropy varies smoothly with the increase of $t$ from zero to nonzero value without any discontinuity. On the other hand for higher channels like $K=2$ and $K=3$ there is a discontinuity in the impurity entanglement entropy at $t=0^+$.
 
 \begin{figure}[!htpb]
 \includegraphics[width=0.49\textwidth]{plt/A_I2_ch12_['d','1_up']}
@@ -570,11 +548,8 @@ I^{N}_{\{\mathcal{A}_N\}} &=& \bigg[\displaystyle\sum_{m=1}^{N} (-1)^{m-1} \disp
 
 \subsubsection{Intra-channel Mutual information}
 \noindent Here we are interested in calculating Mutual information between two Fock states in the ground state wavefunction as a function of the hopping strength $t$ varying from $0$ to non zero values. 
-%Mutual information between two sub-systems $A,B$ is defined as $MI(A:B)=S(A)+S(B)-S(A\cup B)$, where $S(A)$ is the von-Neumann entanglement entropy of the sub-system $A$ with the rest of the system. 
-%
-%\noindent To find out the entanglement present between two Fock states within a single channel, we calulate the intra-channel mutual information.
 
-\par \textit{Case 1:} First, we study the mutual information between the impurity spin $S_d$ and $1_\uparrow$ Fock state (Fig.\ref{fig:schematic_hopping}) represented as $MI(d,1\uparrow)$, where $1$ is realspace origin of the $1^{st}$ conduction channel. For single channel case this $1_{\uparrow}$ site can be chosen uniquely but for $K$ channel cases there are $K$ possible choices, due to the symmetry any one choice will show similar mutual information signature. Similarly due to the $SU(2)$ spin rotation symmetry the mutual information between the impurity spin and $1_{\downarrow}$ state will not be any different. We have numerically computed the variation of mutual information with respect to the hopping strength $t$ and presented in the Fig.\ref{fig:MI_imp_1_vs_t_K}.  As shown in the inset of the Fig.\ref{fig:MI_imp_1_vs_t_K} at low hopping strength the mutual information for both the single channel and twochannel cases is saturating at different values. In the single channel case the Mutual information for $t=0$ is $MI(d,1_{\uparrow})=\log 2$ and changes smoothly to nozero $t$ values, similar to the previous impurity entanglement entropy study ($EE_{imp}$).
+\par \textit{Case 1:} First, we study the mutual information between the impurity spin $S_d$ and $1_\uparrow$ Fock state (Fig.~\ref{fig:schematic_hopping}) represented as $MI(d,1\uparrow)$, where $1$ is realspace origin of the $1^{st}$ conduction channel. For single channel case this $1_{\uparrow}$ site can be chosen uniquely but for $K$ channel cases there are $K$ possible choices, due to the symmetry any one choice will show similar mutual information signature. Similarly due to the $SU(2)$ spin rotation symmetry the mutual information between the impurity spin and $1_{\downarrow}$ state will not be any different. We have numerically computed the variation of mutual information with respect to the hopping strength $t$ and presented in the Fig.~\ref{fig:MI_imp_1_vs_t_K}.  As shown in the inset of the Fig.~\ref{fig:MI_imp_1_vs_t_K} at low hopping strength the mutual information for both the single channel and twochannel cases is saturating at different values. In the single channel case the Mutual information for $t=0$ is $MI(d,1_{\uparrow})=\log 2$ and changes smoothly to nozero $t$ values, similar to the previous impurity entanglement entropy study ($EE_{imp}$).
 \begin{eqnarray}
 S_{d}=S_{1_{\uparrow}}=S_{d,1_{\uparrow}}=\log 2~,~MI(d,1_{\uparrow})=\log 2
 \end{eqnarray}
@@ -584,33 +559,30 @@ This $\log 2$ value shows the stability of the zero mode of single channel and p
 \caption{This figure shows the variation of mutual information ($i^2(1_{\uparrow},1_{\downarrow})$) among the two fock states present on the realspace origin ($1$) of a conduction channel with the hopping strength $t$. The errorbar $\sigma_2$ for the two channel at low hopping strength is $\sigma_2\approx 0.013$.}
 \label{fig:MI_1_2_vs_t_K}
 \end{figure}
-\par\textit{Case 2:} Similarly we have computed the mutual information $MI(1_{\uparrow},1_{\downarrow})$ (Fig.\ref{fig:MI_1_2_vs_t_K}) which measures intra channel  mutual information beteen two fock states $1_{\uparrow},1_{\downarrow}$ present at realspace origin. We find that the Mutual information is a smooth function of $t$ for single channel and for two channel there is a discontinuity at $t=0^{+}$. Note, $MI(1_{\uparrow},1_{\downarrow})>MI(d,1_{\uparrow})$ for all $t$ values show the presence of stronger intra-site correlation.
+\par\textit{Case 2:} Similarly we have computed the mutual information $MI(1_{\uparrow},1_{\downarrow})$ (Fig.~\ref{fig:MI_1_2_vs_t_K}) which measures intra channel  mutual information beteen two fock states $1_{\uparrow},1_{\downarrow}$ present at realspace origin. We find that the Mutual information is a smooth function of $t$ for single channel and for two channel there is a discontinuity at $t=0^{+}$. Note, $MI(1_{\uparrow},1_{\downarrow})>MI(d,1_{\uparrow})$ for all $t$ values show the presence of stronger intra-site correlation.
 \begin{figure}
 \includegraphics[width=0.49\textwidth]{plt/A_I2_ch12_['d','l1_up']}
-%\includegraphics[width=0.49\textwidth]{plt/errorbar_A_I2_ch12_['d','l1_up']}
 \caption{Variation of the mutual information $MI(d,l_{1\uparrow})$ between the impurity spin and the $l_{1\uparrow}$ Fock state as a function of hopping strength $t$. The errorbar $\sigma_2$ for the two channel case is $\sigma_2\approx 0.001$.}
 \label{fig:MI_d_l1}
 \end{figure}
-\par \textit{Case 3:} Here we measure mutual information between the impurity and the Fock state of the nearest neighbor site to the realspace origin (Fig.\ref{fig:schematic_hopping}) of the conduction channel, $MI(d,l_{1\uparrow})$ as shown in the Fig.\ref{fig:MI_d_l1}. Vanishing mutual information for the single channel case shows the perfect screening of the impurity spin. On the other had we expect the breakdown of screening in two channel case, which is confirmed by the non-zero value of mutual information at small $t$ values. Here also we find a dicontinuity inthe mutual information at $t=0^+$.
+\par \textit{Case 3:} Here we measure mutual information between the impurity and the Fock state of the nearest neighbor site to the realspace origin (Fig.~\ref{fig:schematic_hopping}) of the conduction channel, $MI(d,l_{1\uparrow})$ as shown in the Fig.~\ref{fig:MI_d_l1}. Vanishing mutual information for the single channel case shows the perfect screening of the impurity spin. On the other had we expect the breakdown of screening in two channel case, which is confirmed by the non-zero value of mutual information at small $t$ values. Here also we find a dicontinuity inthe mutual information at $t=0^+$.
 \begin{figure}[!htpb]
 \includegraphics[width=0.49\textwidth]{plt/A_I2_ch12_['1','l1']}
-%\includegraphics[width=0.49\textwidth]{plt/errorbar_A_I2_ch12_['1','l1']}
 \caption{Variation of the mutual information $MI(1_{\sigma},l_{1\sigma})$ between two nearest neighbor sites as function of the hopping strength. The errorbar for the two channel case is $\sigma_2\approx 0.005$.}
 \label{fig:MI_l_l1}
 \end{figure}
-\par \textit{Case 4:} Another complementary study can be made by measuring the mutual information between conduction channel realspace origin and it's nearest neighbor site to check their mutual entanglement. As shown in the Fig.\ref{fig:MI_l_l1}, we find that at low hopping strength the single channel mutual information vanishes showing the decoupling of those two states. On the other hand in the two channel case there is a nonzero mutual information which verifies the presence of active scattering between the local Mott liquid and the local non-Fermi liquid phases. Similar discontinuity in the mutual information was observed at $t=0^+$.
+\par \textit{Case 4:} Another complementary study can be made by measuring the mutual information between conduction channel realspace origin and it's nearest neighbor site to check their mutual entanglement. As shown in the Fig.~\ref{fig:MI_l_l1}, we find that at low hopping strength the single channel mutual information vanishes showing the decoupling of those two states. On the other hand in the two channel case there is a nonzero mutual information which verifies the presence of active scattering between the local Mott liquid and the local non-Fermi liquid phases. Similar discontinuity in the mutual information was observed at $t=0^+$.
 \begin{figure}[!htpb]
 \centering
 \includegraphics[width=0.48\textwidth]{plt/I3_I2_A_I.png}
 \caption{Red: This is the Mutual information $I^2(1_{\uparrow},2_{\uparrow})$ and the Blue is the tripartite infrmation $I^3(1_{\uparrow},l_{1\uparrow},l_{1\downarrow})$. The errorbar ($\sigma$) for the $I^3$ and $I^2$ near the low hopping strength are $0.002$ and $0.003$ respectively.}
 \label{fig:I3_I2_two_channel}
 \end{figure}
-Apart form the above mutual information studies we have computed the intra-channel tripartite information $I^3(1_{\uparrow},l_{1\uparrow},l_{1\downarrow})$ of the two-channel ground state which measuring the correlation present among those three Fock states (Fig.\ref{fig:I3_I2_two_channel}(blue)) which show that there is a discontinuity in the triparite information at $t=0^+$ and at low hopping strength the tripartite information is independent of $t$ with a value $0.084$. This non-zero value of tripartie information supports the presence of non-Fermi liquid with more than two-particle correlation within. We have also studied inter-channel mutual informaition $I^2(1_{\uparrow},2_{\uparrow})$ for this two channel case as shown in the (Fig.\ref{fig:I3_I2_two_channel}(red)). This suggest the presence of correlation and quantum entanglement between these two channels supporting the presence of all-to-all local mott liquid.
+Apart form the above mutual information studies we have computed the intra-channel tripartite information $I^3(1_{\uparrow},l_{1\uparrow},l_{1\downarrow})$ of the two-channel ground state which measuring the correlation present among those three Fock states (Fig.~\ref{fig:I3_I2_two_channel}(blue)) which show that there is a discontinuity in the triparite information at $t=0^+$ and at low hopping strength the tripartite information is independent of $t$ with a value $0.084$. This non-zero value of tripartie information supports the presence of non-Fermi liquid with more than two-particle correlation within. We have also studied inter-channel mutual informaition $I^2(1_{\uparrow},2_{\uparrow})$ for this two channel case as shown in the (Fig.~\ref{fig:I3_I2_two_channel}(red)). This suggest the presence of correlation and quantum entanglement between these two channels supporting the presence of all-to-all local mott liquid.
 
 \subsubsection{Bures distance and orthogonality catathrope}
 \begin{figure}[!htpb]
 \includegraphics[width=0.49\textwidth]{plt/error_Bures_Distance_Ch123_10001}
-%\includegraphics[width=0.49\textwidth]{plt/errorbar_Bures_Distance_Ch123_10001}
 \caption{Variation of Bures distance between the reduced denisty matrix of star graph at $t=0$ and $t\neq 0$ with the variation of hopping  strength $t$. The errorbar ($\sigma$) of the two channel and three channel data are $0.14$ and $0.08$ respectively, and near $t\approx 1$ the $\sigma$ is $0.04$ and $0.07$ respectively.}
 \label{fig:bures_distance}
 \end{figure}
@@ -621,11 +593,11 @@ d_{Bures}(\rho_1,\rho_2) &=& \sqrt{2} \bigg[1- \textrm{Tr}\bigg\{ \bigg(\rho_1^{
 One can see from the above defination that, the maximum and minimum distance it can have is $\sqrt{2}$ and $0$ respectively. This measure represents the distance between two states in a Hilbert space. 
 \par We get the ground state wavefunction of the problem by solving the Hamiltonian Eq.\eqref{eq:excitation_hamiltonian} $|\psi(t)\rangle$ which is a function of $t$ and $\rho(t)= |\psi(t)\rangle \langle \psi(t)|$. We are interested in the reduced density matrix of the star graph sites, to get that we partial trace out all other nearest neighbor sites, $\rho_{sg}(t)=\textrm{Tr}_{NN}(\rho(t))$. Then the Bures distance between the reduced denisty matrices $\rho_{sg}(t=0)$ and $\rho_{sg}(t)$, denoted as $d_{Bures}(\rho_{sg}(t=0),\rho_{sg}(t))$ are computed for single, two and three channel cases.
 
-We have shown the variation of the Bures distance as a function of the hopping strength in the Fig.\ref{fig:bures_distance} above. For all three cases the Bures distance is zero at $t=0$, whic is obvious. But as you turn on $t$ slightly there is a discontinuity in the distance for two and theree channel cases against the single channel where the distance varies smoothly. This discontinuity in the higher channel case against the single channel is similar to all the above entanglement studies. The smooth variation of the distance in the single channel case shows the adiabatic continuation of the reduced stargarph density matrix from the $t=0$ case to $t\neq 0$ case. On the other had the abrupt jump in the Bures distance for higher-channel cases at $t=0^+$ shows the breakdown of adiabatic continuity siganling an orthogonality catastrophe. Three channel case show higher amoount of discontinuity than the two channel case saturating at higher value for $t=1$. Due to finite size system we cannot see the exact orthogonality by getting the $d_{Bures}=\sqrt{2}$, but higher channel cases with higher discontinuity suggests so.
+We have shown the variation of the Bures distance as a function of the hopping strength in the Fig.~\ref{fig:bures_distance} above. For all three cases the Bures distance is zero at $t=0$, whic is obvious. But as you turn on $t$ slightly there is a discontinuity in the distance for two and theree channel cases against the single channel where the distance varies smoothly. This discontinuity in the higher channel case against the single channel is similar to all the above entanglement studies. The smooth variation of the distance in the single channel case shows the adiabatic continuation of the reduced stargarph density matrix from the $t=0$ case to $t\neq 0$ case. On the other had the abrupt jump in the Bures distance for higher-channel cases at $t=0^+$ shows the breakdown of adiabatic continuity siganling an orthogonality catastrophe. Three channel case show higher amoount of discontinuity than the two channel case saturating at higher value for $t=1$. Due to finite size system we cannot see the exact orthogonality by getting the $d_{Bures}=\sqrt{2}$, but higher channel cases with higher discontinuity suggests so.
 
 \par All the above  entanglement studies suggest that for two channel problem there is a discontinuity in the ground state at $t=0^{+}$, whereas for the single channel case it is a smooth function. Thus for single channel case the $t=0$ and $t\neq 0$ cases can be adiabtically connected, which is not the case for any other channel cases. 
 
-\section{Dualities of the MCK model}
+\section{Dualities of the multi-channel Kondo model}
 \label{sec:duality}
 
 We start from a strong coupling \((J \to \infty)\) spin-\(S\) impurity MCK Hamiltonian in the over-screened regime \(\left( K > 2S \right) \),
@@ -643,12 +615,6 @@ While the ground state subspace gives rise to the new central spin object, the e
 	H^\prime(\mathbb{J}) = \sum_{k,\sigma,l}\epsilon_{k,l} \hat n_{k\sigma,l} + \mathbb{J} \vec{\mathbb{S}_d}\cdot\vec{\mathbb{S}}
 \end{aligned}\end{equation}
 $\vec{\mathbb{S}}$ is the local bath spin formed by the new zero modes. This Hamiltonian is very similar to the one in eq.~\ref{strong_ham}, and that is the essence of the strong-weak duality: One can go from the over-screened strong coupling spin-\(S\) MCK model to another over-screened weak coupling spin-\((K-2S+1)\) MCK model. For the case of \(K=4S\), we have \(\mathbb{S}_d = S_d\), and both \(S_d\) and \(\mathbb{S}_d\) describe the same spin objects (at least formally). The two models are then said to be self-dual. For example, for the case of spin-half MCK model, two-channel model is self-dual.
-% \begin{figure}[!htpb]
-% 	\centering
-% 	\includegraphics[width=0.3\textwidth]{plt/duality.pdf}
-% 	\caption{Duality of the RG flows as seen in the star graph Hamiltonian. The red and green circles represent the impurity and zeroth site spins respectively. At large \(J\), the red circle binds with the green circles to form an effective spin \(\frac{K-1}{2}\) object (yellow) that interacts with the remaining spin of the conduction bath (blue circles).}
-% 	\label{duality_fig}
-% \end{figure}
 
 One important consequence of the duality relationship between the two over-screened models is that the RG equations are also dual; while the strong coupling model has an irrelevant coupling \(\mathcal{J}\) that flows down to the intermediate fixed point \({\mathcal{J}^*}\), the weak coupling model has a relevant coupling \(\mathbb{J}\) that flows up to the same fixed point \({\mathbb{J}}^* = {\mathcal{J}^*}\). From the RG equation for the general spin-\(S\) MCK model, we know that \({\mathbb{J}}^* = \frac{2}{K \rho^\prime}\), where \(\rho^\prime\) is the DOS for the bath of the weak coupling Hamiltonian. This constrains the form of the scaling factor \(\gamma\):
 \begin{equation}\begin{aligned}
@@ -658,25 +624,16 @@ One important consequence of the duality relationship between the two over-scree
 There exists another set of dual points in the MCK model. This was hinted at when we looked at the degree of compassion in eq.~\ref{gamma}. Since \(\Gamma\) depends only on the magnitude of \(\delta\), both \(\pm \delta\) will give the same degree of compensation, same ground state energy and same ground state degeneracy \(\left(g^{S_d}_K = |\delta|+1\right)\). The definition of \(\delta\) gives the duality transformation as \(K \to 2S_d, S_d \to \frac{K}{2}\). That is, we transform from a \(K-\)channel MCK model with spin-\(S_d\) impurity, to a \(2S_d\)-channel MCK with a spin-\(\frac{K}{2}\) impurity. The exactly-screened model \(K=2S_d\) maps on to itself and is therefore self-dual under this transformation.
 
 For \(K \neq 2S_d\), we transform an over-screened model into an under-screened model and vice versa. This duality relationship allows us to infer the RG scaling behaviour of one of the models if we know that of the other. If we know that for a certain pair of values \(K\) and \(S_d\), the \(K-\)channel MCK model with spin-\(S_d\) impurity has an intermediate fixed point, we can immediately conclude that the \(2S_d\)-channel spin-\(\frac{K}{2}\) model has a strong coupling fixed point.
-% \begin{figure}[htpb]
-% 	\centering
-% 	\includegraphics[width=0.3\textwidth]{plt/duality2.pdf}
-% 	\caption{Duality between underscreened and overscreened MCK models}
-% \end{figure}
 
-\section{Quantum Phase transition in the MCK model under channel anisotropy}
+\section{Quantum Phase transition in the multi-channel Kondo model under channel anisotropy}
 \label{anisotropic_rg}
-\textbf{RADICALLY SHORTEN AND RESTRUCTURE THIS SECTION. SHOW THE NUMERICS FIRST, THEN SHOW THE RG 
-EQUATION AND QUICKLY DISCUSS ITS CONSEQUENCES.}
 
-
-
-Here we start with a general model where the interaction strength of the impurity spin with the $i^{th}$ outer spin is $\mathcal{J}_i$, in general $0<\mathcal{J}_i\neq \mathcal{J}$. We start with the general coupling Hamiltonian written as 
+For a channel anisotropic MCK model with \(K\) Kondo couplings \(\mathcal{J}_i\) for each fo the \(K\) conduction channels, the zero bandwidth model is 
 \begin{eqnarray}
 H_K (\vec{{\mathcal{J}}}) &=& \sum_{i=1}^{K} {\mathcal{J}}_i\vec{S}_d.\vec{S}_i
 \label{eq:anisotropy}
 \end{eqnarray}
-where $ \vec{{\mathcal{J}}} \equiv ({\mathcal{J}}_1,\cdots,{\mathcal{J}}_K)$. For the special case $\mathcal{J}_i=\mathcal{J}, \forall i$ we get the star graph model. For the case of spin-1/2 impurity, the Hamiltonian with any value of $\mathcal{J}_i>0$ has $K$ fold ground state degeneracy. This shows the robustness of the ground state degeneracy of the star graph model against the coupling anisotropy. The ground state degeneracy only changes when at least one coupling vanishes or becomes infinite. 
+For the special case $\mathcal{J}_i=\mathcal{J}, \forall i$ we get the usual isotropic star graph model. For the case of spin-1/2 impurity, we find that the Hamiltonian with any value of $\mathcal{J}_i>0$ has $K$ fold ground state degeneracy. This shows that the ground state degeneracy of the star graph model is extremely robust against the channel anisotropy; the ground state degeneracy does not change until at least one \(\mathcal{J}_i\) vanishes.
 \begin{figure}
 \centering
 \includegraphics[width=0.48\textwidth]{plt/Anisotropy_Channel_3.png}
@@ -684,7 +641,12 @@ where $ \vec{{\mathcal{J}}} \equiv ({\mathcal{J}}_1,\cdots,{\mathcal{J}}_K)$. Fo
 \label{fig:channel-anisotropy-}
 \end{figure}
 
-We have demonstrated this numerically for a three channel anisotropic star graph model. As shown in the Fig.\ref{fig:channel-anisotropy-}(a) where two couplings are same (${\mathcal{J}}_1={\mathcal{J}}_2=1$) and we are varying the third coupling ${\mathcal{J}}_3$ from finite to zero. The degeneracy is always $3$ except when ${\mathcal{J}}_3=0$, then the degeneracy becomes $2$ becoming an effective two channel problem. On the other hand in Fig.\ref{fig:channel-anisotropy-}(b) we keep the first coupling ${\mathcal{J}}_3$ fixed to $1$ and vary the common coupling ${\mathcal{J}}_1={\mathcal{J}}_2$ from non-zero to zero, this is equivalent to keeping ${\mathcal{J}}_1={\mathcal{J}}_2=1$ fixed and taking ${\mathcal{J}}_1$ to infinity from finite. In this case we find when the coupling ${\mathcal{J}}_1=\lambda_2=0$ the degeneracy becomes one showing the effective single channel nature.
+We have demonstrated this numerically for a three channel anisotropic star graph model.
+In Fig.~\ref{fig:channel-anisotropy-}(a), we show that if two couplings are kept fixed to be equal (${\mathcal{J}}_1={\mathcal{J}}_2=1$) and the third coupling ${\mathcal{J}}_3$ is tuned from some finite value to zero, the degeneracy does not change from 3 to 2 until \(\mathcal{J}_3\) becomes zero.
+At that point, the model becomes a two channel Kondo problem.
+{\color{red}We also show in Fig.~\ref{fig:channel-anisotropy-}(b) that we keep the first coupling ${\mathcal{J}}_3$ fixed to $1$ and vary the common coupling ${\mathcal{J}}_1={\mathcal{J}}_2$ from non-zero to zero, this is equivalent to keeping ${\mathcal{J}}_1={\mathcal{J}}_2=1$ fixed and taking ${\mathcal{J}}_1$ to infinity from finite.
+In this case we find when the coupling ${\mathcal{J}}_1=\lambda_2=0$ the degeneracy becomes one showing the effective single channel nature.
+}
 
 The above demonstration makes it clear that the ground state degeneracy can change only when at least one of the Kondo couplings vanish. This can be realised under RG flow if one considers the anisotropic MCK model.
 \begin{align}
@@ -704,24 +666,40 @@ These conclusions show that the \(K\) channel intermediate fixed point is unstab
 
 
 \section{Conclusions}
-[First few lines] 
-{\color{blue} In summary, we have explored the low-energy behaviour of the multi-channel Kondo models using the unitary renormalization group (URG) method and obtained a better understanding of the role of ground state degeneracy and quantum-mechanical frustration in shaping the non-Fermi liquid physics and criticality.}
+\par
+In summary, we have explored the low-energy behaviour of the multi-channel Kondo models using the unitary renormalization group (URG) method and obtained a better understanding of the role of ground state degeneracy and quantum-mechanical frustration in shaping the non-Fermi liquid physics and criticality.
+Using the unitary renormalization group technique, we have obtained the zero-temperature phase diagram of the MCK problem and an effective Hamiltonian with a simple zero bandwidth limit - the star graph, and it determines the ground state energy, wavefunction and degeneracy of the MCK models.
+This star graph is found to explain much of the physics of overscreening and criticality, including the singularities in the susceptibility and magnetisation, as well as a reduction in the degree to which the impurity spin is compensated.
+The overarching message there was that the ground state degeneracy of the star graph (which is unity for single-channel and greater for the overscreened models) was the key ingredient in leading to the qualitative and quantitative differences from the single-channel model
+The presence of ground state degeneracy also allows the construction of non-local twist operators and fractional excitations in the ground state manifold.
+Integrating out the quantum fluctuations of the impurity leads to an all-to-all effective Hamiltonian for the local bath spins, and the Hamiltonian is foudn to contain inter-channel quantum scattering in terms of electron-hole pairs, theryby creating a local Mott-liquid phase at the origin of the lattice.
 
-\par Using the unitary renormalization group technique we get the zero-temperature phase diagram of the MCK problem with an intermediate coupling fixed point. We obtain the low energy intermediate coupling fixed point Hamiltonian (LEH).  At the heart of this fixed point Hamiltonian, there is a zero bandwidth problem, which is essentially a quantum mechanical stargarph problem. Many important properties of the MCK problem like ground state degeneracy, break down of screening can be understood by studying this zero-bandwidth star graph problem. Impurity-field susceptibility calculations of this star graph model show the power-law divergence at low temperatures. Thus the critical nature of the MCK can be understood by studying the zero-bandwidth model. Unlike the unique ground state of the single-channel problem, the presence of ground state degeneracy in the multi-channel problem allows the presence of non-local twist operators and fractional excitations in the ground state manifold. By removing the quantum fluctuations between the impurity and the rest we get to the low energy effective Hamiltonian. The all-to-all nature of this low-energy effective Hamiltonian creates inter-channel quantum scattering in terms of electron-hole pairs creating a local Mott-liquid phase among channels. Unlike the single-channel case, this presence of local Mott-liquid is unique to the MCK problem.
+\par The low energy effective Hamiltonian (LEH) for the excitations is then obtain by considering fluctuations of the conduction bath on top of the ground state. The LEH for the 2-channel Kondo confirms absence of any Fermi liquid phase due to an exact cancellation across the ground state manifold, and the presence of inter-channel off-diagonal non-Fermi liquid terms. Our analysis reinforces the idea that the ground state degeneracy is crucial to the non-Fermi liquid physics and to the presence of such off-diagonal terms in the LEH.
+The existence of a marginal Fermi liquid within the effective Hamiltonian clearly displays the orthogonality catastrophe in the form of singularities that are absent at exact screening.
+Studies of various thermodynamic properties (presented in the supplementary material) from this 2-channel Kondo LEH like specific heat and susceptibility show logarithmic dependence at low temperature, in agreement with the literature~\cite{affleck_1991_overscreen,affleck_ludwig_1991,affleck_pang_cox_1992,affleck1993exact,parcollet_olivier_large_N,affleck_2005,emery_kivelson,andrei_destri_1984,Tsvelick1984,Tsvelick_1985,andrei_jerez_1995,zarand_costi_2002}.
 
-\par To understand the nature of local liquid phases we add excitations on top of the zero-bandwidth star graph model and derive the low energy effective Hamiltonian (LEH). The LEH of the 2-channel Kondo shows the absence of the Fermi liquid phase due to the exact cancellation of terms associated with two degenerate ground states. The non-Fermi liquid nature of the LEH shows the presence of strong inter-channel quantum fluctuation and the presence of the Marginal Fermi Liquid. Our study shows that ground state degeneracy is the sole reason for the presence of such non-Fermi liquid phases, which is absent in the single-channel case due to its unique ground state. Studies of various thermodynamic properties of this 2-channel Kondo LEH (presented in the supplementary material), like specific heat and susceptibility, show logarithmic dependence at low temperature which is in agreement with the literature.
-A similar absence of Fermi-liquid and the presence of non-Fermi liquids was observed in the three-channel Kondo problem. The above studies show the central role of ground state degeneracy in the MCK problem which makes it very different from the single-channel Kondo problem. Also, the presence of Marginal Fermi liquid shows the orthogonality catastrophe in the two-channel MCK problem, which is distinctly different from the single-channel Kondo cloud.
+\par 
+The non-diagonal nature of the LEH is further investigated through the several measures of entanglement.
+The entanglement entropy, calculated from the minimum \(J^z\) states, between the impurity and the outer spins, as well as between an outer spin and the rest saturate to \(\ln 2\) in the large channel limit saturate. The opposite behaviour happens in the maximum $J^z$ state, where the entanglement entropy decreases with the increase of channel number.
+The large values of inter-channel mutual information indicate high inter-channel correlation in the MCK ground state.
+The power-law dependence of the multi-partite information among the outer spins of the star graph model is similar to the power-law behavior of the all-to-all local Mott-liquid ground state.
+The presence of a discontinuity in the non-Fermi liquid ground state multi-channel entanglement as compared to the smooth behaviour in the single-channel counterpart again points to the orthogonality catastrophe in the low-energy phase of the multi-channel models.
+Higher discontinuity for a higher number of channels was observed in the Bures distance study.
 
-\par Various von-Neumann entanglement studies of the zero-bandwidth star graph model show that the entanglement content is different for different degenerate ground states labeled by $J^z$. Impurity and outer-spin entanglement entropy with the rest at large channel limit saturate at $\log 2$ in the low $J^z$ state opposite to the $J^z_{max}$ state where the entanglement entropy decreases with the increase of channel number. This shows the presence of quantum fluctuations of different levels in different ground states, decreases with the increase of the $J^z$ value. Though there was no inter-channel coupling in the MCK, the strong signature of inter-channel mutual information in the star graph ground state shows the presence of inter-channel correlation in the multi-channel ground state. The power-law dependence of multi-partite information among the outer spins of the star graph model captures the power-law behavior of the all-to-all local Mott-liquid ground state. The study of such entanglement and mutual information studies upon the addition of excitations on top of the star graph model by tuning the real-space nearest neighbor intra-channel hopping ($t$) shows a discontinuity at $t=0^+$. In contrast to the smooth behavior of various entanglement measures as a function of the hopping strength $t$, this discontinuity in multi-channel case signals the presence of degenerate ground state manifold and the non-Fermi liquids leading to the orthogonality catastrophe. Higher discontinuity for a higher number of channels was observed in a Bures distance study.
+\par The URG study of the channel anisotropic MCK shows the critical and unstable nature of the isotropic fixed point; under any anisotropic perturbations, the RG flows go towards either the single-channel model or the symmetric MCK with one less channel coupled to the impurity.
+This is complemented by the study of the star graph ground state degeneracy which shows that the degeneracy changes only if one or more couplings vanishes.
+When combined, we can conclude that in the presence of channel anisotropy, the degeneracy of the MCK ground state does not change until the RG reaches the stable fixed point.
 
-\par Intermediate coupling fixed point under the URG study along with the strong-weak duality shows the unstable nature of the couplings away from the intermediate fixed points in both the low and high coupling strength. Under the URG study, we show that in the presence of channel anisotropy some couplings become irrelevant and vanishes at the low energy fixed point. On the other hand, the study of the star graph ground state degeneracy against channel anisotropy shows that the degeneracy only changes if one or more couplings vanishes or becomes singular. The above two studies together show that in the presence of channel anisotropy the degeneracy of the MCK does not change until the RG reaches the fixed point.
-
-\par The study of the zero-bandwidth problem and systematic addition of excitation creates a template for the study of other quantum impurity systems. One can study similar multi-channel problems in the presence of interactions in the bath. 
-
-
+\par This method serves as a template for studying of other quantum impurity systems.
+We have already seen that the degeneracy of the star graph is robust under anisotropy; one can perform similar studies in the presence of a superconducting gap that cuts off the ground state manifold from the excitations, hence providing the degeneracy a topological protection.
+The duality transformations then allow us to view the topologically protected ground state as a larger quantum spin which is essentially isolated.
+This holds immense potential for applications in quantum information and quantum computation.
+More fine-tuned behaviour can be obtained by studying the MCK model with an easy-axis anisotropy term \(\left(J^i\right)^2\) along one of the axes.
+Such a term would, if it is able to survive the RG flows towards low energy, lift the degeneracy of the ground state and make it possible to achieve perfect screening even with \(K > 2S_d\).
+One can also study the multi-channel lattice models~\cite{Piguet1997,shaw_1998} to better understand the role played by singlet frustration and ground state degeneracy in the competition between the local moment versus the heavy fermion sea.
 
 \acknowledgments
-The authors thank P. Majumdar, A. Mitchell, S. Sen, S. Patra, M. Mahankali and R. K. Singh for several discussions and feedback. Anirban Mukherjee thanks the CSIR, Govt. of India and IISER Kolkata for funding through a research fellowship. Abhirup Mukherjee thanks IISER Kolkata for funding through a research fellowship. AM and SL thank JNCASR, Bangalore for hospitality at the inception of this work. NSV acknowledges funding from JNCASR and a SERB grant (EMR/2017/005398).
+\textcolor{red}{Anirban Mukherjee and SL thanks the CSIR, Govt. of India and IISER Kolkata for funding through a research fellowship. Abhirup Mukherjee thanks IISER Kolkata for funding through a research fellowship.}
 
 \bibliography{mscript_mck_full}
 \end{document}
