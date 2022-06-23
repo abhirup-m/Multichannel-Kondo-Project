@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{geometry}
+\usepackage{color}
+\usepackage{xcolor}
+\geometry{legalpaper, portrait, margin=1in}
+\DeclareUnicodeCharacter{2212}{-}
+\DeclareUnicodeCharacter{03B8}{+}
+\newcommand{\shat}{\hat{\mathbf{s}}}
+\newcommand{\pin}{\par\noindent}
+\usepackage{multicol}
+% \usepackage{natbib}
+
+\author{Siddhartha Patra, Abhirup Mukherjee, Anirban Mukherjee, N. S. Vidhyadhiraja, A. Taraphder, S Lal}
+
+\title{Referee response to BS14324 Patra}
+\begin{document}
+\maketitle
+
+We thank the three referees for comments, questions and suggestions. Indeed, these have helped substantially in improving the overall presentation of the manuscript. Below, we present our responses (in blue) to the points raised by the three referees in turn.
+
+\section{First referee}
+
+\paragraph{Point 1.}
+In general, the paper is comprehensive and well-organized, though I would encourage the authors to go over the manuscript in the next revision and correct several typos and inconsistencies in notation, few of which I list below.
+{\color{blue}\paragraph{Response:} We thank the referee for the comment. We have corrected the typos and inconsistencies in the notation everywhere in the manuscript.} 
+
+\paragraph{Point 2.}
+Examples of minor issues:
+{\color{blue}\paragraph{Response:} We thank the referee for pointing out these typographic errors.} 
+\begin{itemize}
+	\item Eq.(3), are both the commutator and anticommutator of the $\eta$
+operators equal to 1, or just the anticommutator?\\
+{\color{blue}{\bf Response:} We thank the referee the referre for pointing out these typographic errors. Indeed, only the anticommutator is unity, while the commutator is actually equal to $2\hat n_j - 1$~\cite{anirbanurg1}. We have updated the manuscript with this correction.}
+	\item In several equations, the sum is over $\alpha$ and $\beta,$ but the operators have $\alpha$ and $\alpha^\prime$ indices.\\
+{\color{blue}{\bf Response:} We have gone through the entire manuscript and made sure that the notation is now consistent.}
+	\item Some notations, like $\theta_M$ above Eq. 16 is introduced and never
+	used.\\
+{\color{blue}{\bf Response:} We have removed redundant notation here and elsewhere in the manuscript, wherever we could find.}
+\end{itemize}
+
+\paragraph{Point 3:}
+Can this technique of using the star graph together with effective Hamiltonian for low energy excitations be also used to obtain dynamical properties such as conductance? As this is often one of the most important experimental probes used to study Kondo problems, I would be interested to learn if URG can provide additional insight.
+
+{\color{blue}\paragraph{Response:} We are grateful to the referee for this question. Indeed, we have used the URG method in the past to compute certain dynamic quantities like the impurity Greens function and spectral functions, both at zero and finite temperatures, for the single-channel Kondo model in an earlier work~\cite{kondo_urg}. This was done by working with the fixed point Hamiltonian, without taking the zero bandwidth limit. The spectral function revealed the expected Abrikosov-Suhl resonance at zero frequency, and satisfied the Friedel sum rule. We believe a similar  computation can also be performed to obtain other dynamical quantities like the conductance or the resistance. {\color{red}Should we mention gen-siam-3-peak,etc as an unpublished work here?}}
+
+\paragraph{Point 4.}
+In several places, the authors mention performing numerical calculations to verify the obtained results (for example paragraph above Eq 19 about impurity susceptibility). What method was used to perform the calculations? Is it just evaluation of for example Eq 15 for the Heisenberg Hamiltonian of the star graph or is the numerical calculation itself performing the renormalization treatment?
+
+{\color{blue}\paragraph{Response:} In the example cited in the question, we used numerical calculations in the sense of solving the star graph Hamiltonian using exact diagonalisation and then using Eq.(19) to obtain the susceptibility. In order to obtain the contribution to the susceptibility coming from the non-Fermi liquid, however, we did indeed solve the renormalization group equations numerically to obtain the fixed point Hamiltonian.}
+
+\paragraph{Point 5.}
+Expanding on the previous point, can unitary renormalization group approach give rise to some new numerical technique akin to numerical renormalization group?
+
+{\color{blue}\paragraph{Response:} While the RG formalism can be put into a numerical setup by abstracting the RG equations, we believe there is greater utility in sticking to the analytical form because it allows applying the method to a wide variety of systems and multiple geomteries, as can be seen in the references mentioned in the work. Moreover, the analytical approach makes it much more easier to obtain fixed point Hamiltonians. For these reasons, we have refrained from taking the numerical route.}
+
+\section{Second referee}
+
+\paragraph{Point 1.}
+This block in the Introduction is a bit hard to understand and maybe could be rewritten: "the ground state is susceptible to perturbations that introduce channel isotropy in the exchange couplings [14, 32, 37, 45, 52]. This makes the experimental realisation of such states quite challenging." Do the authors mean channel anisotropy instead of channel isotropy?
+
+{\color{blue}\paragraph{Response:} Indeed, we meant "anisotropy" instead of isotropy. We thank the referee for pointing this out.}
+
+\paragraph{Point 2.} 
+After Eq. (7), implicit summation over the spin indices $\alpha,\beta$ should be $\alpha,\alpha^\prime$.
+
+{\color{blue}\paragraph{Response:} We have rectified this in the manuscript.}
+
+\paragraph{Point 3.} 
+In Eq. (8) and the text after Eq. (8), why are there two sums in the
+k-expansion of S, over $k$ and $k^\prime$, as opposed to only one sum over k? Also, there
+is an issue with $\alpha^\prime$ and $\beta$ variables (similar to point 2.)
+
+{\color{blue}\paragraph{Response:} We have rectified the issue with the spin label \(\alpha^\prime\). With regards to the two momentum summations \(k,k^\prime\) in the expressions of \(\vec S\) in and below Eq.(8), both the summations are required. This expression for the spin operator can be found in several textbooks like ~\cite{coleman2015,hewson1993}, and can be obtained by Fourier transforming the perfectly local bath spin operator \(\sum_{\alpha\alpha^\prime}\sigma_{\alpha\beta}c^\dagger_{\alpha}c_{\alpha^\prime}\) formed by the electrons \(c_{\alpha},c_{\alpha^\prime}\) at the origin.}
+
+\paragraph{4.}
+In Fig. 3, legend, one of the triangles should be a circle.
+
+{\color{blue}\paragraph{Response:} We have updated the plot with the correct legend. We are grateful to the referee for pointing this out.}
+
+\paragraph{5.}
+After Eq. (18), the authors attribute a 1/T contribution to the
+susceptibility as a signature of the critical nature of the Hamiltonian. This 1/T (Curie)-behavior is present for the susceptibility of a single magnetic moment in a magnetic field. I don't see critical behavior in this. The log corrections to 1/T would be a signature of criticality.
+
+\paragraph{6.}
+Also, in Eq. (8), why does it vanish only for $K=1$, and not when $K=2S_{d}$, in general?
+
+\paragraph{7.}
+In Section IV A, the authors classify the terms as Fermi liquid or non-Fermi liquid. Is there a simple way to understand this classification? A possible way is by characterizing the effects of each term, but my question is if there is an immediate way of knowing if the term is FL or NFL.
+
+\bibliographystyle{unsrt}
+\bibliography{./Manuscript27April2022/mscript_mck_full.bib}
+\end{document}
