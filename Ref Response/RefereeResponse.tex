@@ -1,0 +1,180 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,braket}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{geometry}
+\usepackage{color}
+\usepackage{xcolor}
+\geometry{legalpaper, portrait, margin=1in}
+\DeclareUnicodeCharacter{2212}{-}
+\DeclareUnicodeCharacter{03B8}{+}
+\newcommand{\shat}{\hat{\mathbf{s}}}
+\newcommand{\pin}{\par\noindent}
+\newcommand{\response}[1]{{\color{blue}\subsection*{Response:}{#1}}}
+\renewcommand{\thesubsection}{Point \arabic{subsection}.}
+\newcommand{\point}[1]{\subsection{}{#1}}
+\usepackage{multicol}
+% \usepackage{natbib}
+
+\author{Siddhartha Patra, Abhirup Mukherjee, Anirban Mukherjee, N. S. Vidhyadhiraja,\\ A. Taraphder, S Lal}
+
+\title{Referee response to BS14324 Patra}
+\begin{document}
+\maketitle
+
+We thank the three referees for comments, questions and suggestions. These have helped substantially in improving the overall presentation of the manuscript. Below, we present our responses (in blue) to the points raised by the three referees in turn.
+
+\section{First referee}
+
+\point{In general, the paper is comprehensive and well-organized, though I would encourage the authors to go over the manuscript in the next revision and correct several typos and inconsistencies in notation, few of which I list below.}
+\response{We thank the referee for the comment. We have corrected the typographic errors and notational inconsistencies in the manuscript.} 
+
+\point{
+Examples of minor issues:
+\response{ We thank the referee for pointing out these typographic errors.} 
+\begin{itemize}
+	\item Eq.(3), are both the commutator and anticommutator of the $\eta$
+operators equal to 1, or just the anticommutator?\\
+{\color{blue}{\bf Response:} We thank the referee for pointing out these typographic errors. Indeed, only the anticommutator is unity, while the commutator is actually equal to $2\hat n_j - 1$~\cite{anirbanurg1}. We have updated the manuscript with this correction.}
+	\item In several equations, the sum is over $\alpha$ and $\beta,$ but the operators have $\alpha$ and $\alpha^\prime$ indices.\\
+{\color{blue}{\bf Response:} We have gone through the entire manuscript and made sure that the notation is now consistent.}
+	\item Some notations, like $\theta_M$ above Eq. 16 is introduced and never
+	used.\\
+{\color{blue}{\bf Response:} We have removed redundant notation here and elsewhere in the manuscript, wherever we could find.}
+\end{itemize}
+}
+
+\point{
+Can this technique of using the star graph together with effective Hamiltonian for low energy excitations be also used to obtain dynamical properties such as conductance? As this is often one of the most important experimental probes used to study Kondo problems, I would be interested to learn if URG can provide additional insight.}
+
+\response{ We are grateful to the referee for this question. Indeed, we have used the URG method in the past to compute certain dynamic quantities like the impurity Greens function and spectral functions, both at zero and finite temperatures, for the single-channel Kondo model in an earlier work~\cite{kondo_urg}. This was done by working with the fixed point Hamiltonian, without taking the zero bandwidth limit. The spectral function revealed the expected Abrikosov-Suhl resonance at zero frequency, and satisfied the Friedel sum rule. We believe a similar  computation can also be performed to obtain other dynamical quantities like the conductance or the resistance. {\color{red}Should we mention gen-siam-3-peak,etc as an unpublished work here?}}
+
+\point{
+In several places, the authors mention performing numerical calculations to verify the obtained results (for example paragraph above Eq 19 about impurity susceptibility). What method was used to perform the calculations? Is it just evaluation of for example Eq 15 for the Heisenberg Hamiltonian of the star graph or is the numerical calculation itself performing the renormalization treatment?}
+
+\response{ In the example cited in the question, we used numerical calculations in the sense of solving the star graph Hamiltonian using exact diagonalisation and then using Eq.(19) to obtain the susceptibility. In order to obtain the contribution to the susceptibility coming from the non-Fermi liquid, however, we did indeed solve the renormalization group equations numerically to obtain the fixed point Hamiltonian.}
+
+\point{
+Expanding on the previous point, can unitary renormalization group approach give rise to some new numerical technique akin to numerical renormalization group?}
+
+\response{While the RG formalism can be put into a numerical setup by abstracting the RG equations, we believe there is greater utility in sticking to the analytical form because it allows applying the method to a wide variety of systems and multiple geomteries, as can be seen in the references mentioned in the work. Moreover, the analytical approach makes it much more easier to obtain fixed point Hamiltonians.}
+
+\section{Second referee}
+
+\point{
+My main comments concern Section II-A, in which the authors define the RG procedure. Since the results of the other Sections follow from the results of this Section, I would suggest the authors expand it. Also, some of the results that come later using this technique are familiar to the experts in the field of heavy fermions, but the RG procedure may not be.}
+
+\response{We have now tried to address this in the manuscript by elaborating on the specific questions that the referee has brought up in the two points immediately following this. A more extensive description of the method will take up more space in this already sizable manuscript. We would like to point out that a complete derivation of the formalism and details on the various parts of the method and their implications can be found in Refs.~\cite{anirbanurg1,anirbanurg2} mentioned in the manuscript.}
+
+
+\point{
+It would benefit the reader of this article to get some intuition about the generators, Eqs. (3) and (4). Is there a simple way to understand this choice?}
+
+\response{
+	{\it The unitary operator \(U\) mentioned in Eq.(3) can be thought of as a special case of the most general form \(U = e^\mathcal{S}\) of a unitary operator defined by an anti-Hermitian generator \(\mathcal{S}\).} For our case, the generator turns out to be \(\mathcal{S} = \frac{\pi}{4}\left( \eta^\dagger - \eta \right) \), such that the unitary operator is \(U = e^{\frac{\pi}{4}\left(\eta^\dagger - \eta\right) }\). If one then uses the anticommutation and commutation properties of \(\eta,\eta^\dagger\), the exponential can be expanded in its Taylor series and then resummed into the form mentioned in the manuscript.
+
+	{\it With regards to the fermionic operators \(\eta_{(j)},\eta^\dagger_{(j)}\) of Eq.(4), they can be thought of as the many-particle analogue of the single-particle field operators \(c_j,c^\dagger_j\) that change the occupation number of the single-particle Fock space, \(\ket{n_j}\)}. The extra prefactors are required to ensure that the decoupling of the specific fock state happens through a unitary modification of the spectrum of the remnant degrees of freedom. Since the \(j^\text{th}\) degree of freedom is coupled with the others, a rotation of the basis of \(j\) also involves a rotation of the many-particle basis of the remaining degrees of freedom in the Hamiltonian \(H_{(j)}\), and this is the reason for the \(\text{Tr}\left(H_(j) c_j\right) \) part. The Greens function in front accounts for the dynamical cost of this rotation in terms of the quantum fluctuations \(\hat \omega\) and the kinetic and self energies \(\text{Tr}\left( H_{(j)}\hat n_j \right) \).
+
+	{\it We have updated the manuscript with these explanations. We are thankful to the referee for these questions.}
+}
+
+\point{Other RG proposals come from applying a set of successive unitary transformations (such as the Wegner RG, as discussed in detail in ``The Flow Equation Approach to Many-Particle Systems" by Stefan Kehrein). How does this approach differ from those?}
+
+\response{
+There are atleast two specific distinctions between the continuous unitary transformations (CUT) RG as envisaged by Wegner (and others before him) and the URG of the present work.
+\begin{itemize}
+	\item While most RG methods that apply successive unitary transformations rely on a gradual decrease in the off-diagonal content of the Hamiltonian, the URG proceeds by decoupling each discrete Fock space node at a time. In other words, in the URG, at least one term in the Hamiltonian vanishes at each RG step, while in the CUT RG, there is a gradual decay of the off-diagonal terms in order to make it more band diagonal.
+	\item The CUT RG, specifically, has to be applied by choosing a truncation scheme that allows closing the RG equations. The URG, on the other hand, is able to ``resum" the coupling expansion series through the denominator structure and the quantum fluctuation operator.  
+\end{itemize}
+We have improved the manuscript by adding these comparisons. Comparisons of the URG with other methods like the functional RG or the spectrum bifurcation RG can also be found in Refs.~\cite{anirbanmott1,anirbanurg1}.
+}
+
+\point{Also, in Section II, the authors denote by $\ket{j}$ the highest energy electronic state. In this problem, assuming a quadratic dispersion to the electrons in 3 dimensions, the Fermi surface would generally be a sphere. Would $\ket{j}$ be the set of states with $k=k_{F}$?}
+
+\response{We thank the referee for the question. The symbol \(\ket{j}\) is used to label the most energetic state {\it at a particular RG step} of the entire process. In more conventional language, it is simply the collection of states at the running cutoff \(\Lambda\) (bandwidth) of the field theory. As the RG proceeds, this bandwidth shrinks, so \(\ket{j}\) flows to lower and lower energies, until it hits the Fermi surface (assuming the RG has not reached a fixed point by then).
+}
+
+\point{
+This block in the Introduction is a bit hard to understand and maybe could be rewritten: ``the ground state is susceptible to perturbations that introduce channel isotropy in the exchange couplings [14, 32, 37, 45, 52]. This makes the experimental realisation of such states quite challenging." Do the authors mean channel anisotropy instead of channel isotropy?}
+
+\response{ Indeed, we meant ``anisotropy" instead of isotropy. We thank the referee for pointing this out.}
+
+\point{ 
+After Eq. (7), implicit summation over the spin indices $\alpha,\beta$ should be $\alpha,\alpha^\prime$.}
+
+\response{ We have rectified this in the manuscript.}
+
+\point{ 
+In Eq. (8) and the text after Eq. (8), why are there two sums in the
+k-expansion of S, over $k$ and $k^\prime$, as opposed to only one sum over k? Also, there is an issue with $\alpha^\prime$ and $\beta$ variables (similar to point 2.)}
+
+\response{We have rectified the issue with the spin label \(\alpha^\prime\). With regards to the two momentum summations \(k,k^\prime\) in the expressions of \(\vec S\) in and below Eq.(8), both the summations are required. This expression for the spin operator can be found in several textbooks like ~\cite{coleman2015,hewson1993}, and can be obtained by Fourier transforming the local spin operator \(\sum_{\alpha\alpha^\prime}\vec \sigma_{\alpha\alpha^\prime}c^\dagger_{\alpha}c_{\alpha^\prime}\) formed by the conduction electrons \(c_{\alpha},c_{\alpha^\prime}\) at the origin.}
+
+\point{
+In Fig. 3, legend, one of the triangles should be a circle.}
+
+\response{ We have updated the plot with the correct legend. We are grateful to the referee for pointing this out.}
+
+\point{
+After Eq. (18), the authors attribute a 1/T contribution to the
+susceptibility as a signature of the critical nature of the Hamiltonian. This 1/T (Curie)-behavior is present for the susceptibility of a single magnetic moment in a magnetic field. I don't see critical behavior in this. The log corrections to 1/T would be a signature of criticality.}
+
+\response{We had used the term critical to reflect the fact that the \(1/T\) divergence was a result of the remnant degeneracy of the system at the fixed point. In order to avoid confusion, we have removed the usage of critical in this context from the manuscript.}
+
+\point{
+Also, in Eq. (8), why does it vanish only for $K=1$, and not when $K=2S_{d}$, in general?}
+
+\response{We believe the referee is referring to Eq.(18) here, not Eq.(8). The expression in Eq.(18) was derived for the specific case of $S_d = 1/2$ (spin-half impurity), hence it only vanishes at $K=2S_d=1$. The more general case of spin-\(S_d\) impurity was checked numerically, and reported in Fig.(4). We have now included the more general analytical expression for the susceptibility in the manuscript, and this expression does indeed vanish at $K = 2S_d$.}
+
+\point{
+In Section IV A, the authors classify the terms as Fermi liquid or non-Fermi liquid. Is there a simple way to understand this classification? A possible way is by characterizing the effects of each term, but my question is if there is an immediate way of knowing if the term is FL or NFL.}
+
+\response{ We thank the referee for allowing us to clarify this. We used the term “non-Fermi liquid” to reflect the fact that, in the RG sense, the low energy $k−$space Hamiltonian was not purely of an $F_{kk^\prime} n_k n_{k^\prime}$ density-density type interaction term.} 
+
+\section{Third referee}
+
+\point{
+Perhaps the most interesting part is the “star graph” analysis which
+are done rigorously as far as I can judge. However, I am not convinced
+(especially not by the authors) that the strong coupling teaches
+anything useful for the infrared physics. If there is a clear physics
+lesson here, it is lost in the myriad of technicalities in the paper.
+}
+
+\response{
+}
+
+\point{
+Regarding computation of the perturbative RG flow, the perturbative
+calculation of the beta function doesn’t really need any new
+technology (like URD) and it has been done by drawing Feynman diagrams
+in all those papers that are cited. Derivation of the effective fixed
+point Hamiltonian, cannot be trusted since there is no argument that
+subsequent steps are going to make smaller changes (as opposed to
+Wilson’s NRG).
+}
+
+\response{
+The URG is able to ``resum" all orders of couplings through the non-perturbative denominator structure of the RG equation and the quantum fluctuation scale \(\omega\). This ensures that the fixed point Hamiltonians obtained from URG indeed account for the effects of the UV on the IR and are stable in the RG sense.
+}
+
+\point{
+It’s highly
+technical and I believe it does not add anything to what we know and
+furthermore, some steps and arguments are, in my opinion, not really
+correct.
+}
+
+\response{
+We believe that the following are new and interesting additions to the knowledge of multichannel Kondo physics that are obtained from our work:
+\begin{itemize}
+	\item importance of the role of degeneracy and quantum-mechanical frustration in shaping the infrared physics of the MCK, specifically in the non-Fermi liquid behaviour, the thermodynamic properties, the orthogonality catastrophe, the breakdown of screening and in the strong-weak duality,
+	\item derivation of a marginal Fermi liquid effective Hamiltonian for the non-Fermi liquid fixed point, hence revealing the microscopic source of the non-Fermi liquid behaviour in the overscreened regime,
+	\item the presence of a spin Mott liquid in the effective interactions among the conduction electrons,
+	\item demonstration of the orthogonality catastrophe in the ground state through entanglement measures.
+\end{itemize}
+The observation of the Mott liquid is particularly significant because it highlights a common theme that pervades much of fermionic quantum matter - the role of zero modes in determining the infrared physics. This can be seen in the emergence of a Mott liquid from the 2D Hubbard model as seen from a URG analysis~\cite{anirbanmott1,anirbanmott2,mukherjeeMERG2022}, the emergence of a cooper pair insulator from the reduced BCS Hamiltonian~\cite{siddharthacpi} and the emergence of an effective Heisenberg model in the 1D Hubbard model~\cite{1dhubjhep}.
+}
+
+\bibliographystyle{unsrt}
+\bibliography{../Manuscript27April2022/mscript_mck_full.bib}
+\end{document}
