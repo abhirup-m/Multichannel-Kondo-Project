@@ -1,10 +1,8 @@
 \documentclass{article}
 \usepackage{amsmath,amssymb,braket}
-\usepackage[margin=0.5in]{geometry}
-\usepackage{geometry}
 \usepackage{color}
 \usepackage{xcolor}
-\geometry{legalpaper, portrait, margin=1in}
+\usepackage[legalpaper, portrait]{geometry}
 \DeclareUnicodeCharacter{2212}{-}
 \DeclareUnicodeCharacter{03B8}{+}
 \newcommand{\shat}{\hat{\mathbf{s}}}
@@ -12,7 +10,6 @@
 \newcommand{\response}[1]{{\color{blue}\subsection*{Response:}{#1}}}
 \renewcommand{\thesubsection}{Point \arabic{subsection}.}
 \newcommand{\point}[1]{\subsection{}{#1}}
-\usepackage{multicol}
 
 \author{Siddhartha Patra, Abhirup Mukherjee, Anirban Mukherjee, N. S. Vidhyadhiraja,\\ A. Taraphder, S Lal}
 
@@ -45,17 +42,20 @@ operators equal to 1, or just the anticommutator?\\
 \point{
 Can this technique of using the star graph together with effective Hamiltonian for low energy excitations be also used to obtain dynamical properties such as conductance? As this is often one of the most important experimental probes used to study Kondo problems, I would be interested to learn if URG can provide additional insight.}
 
-\response{ We are grateful to the referee for this question. Indeed, we have used the URG method in the past to compute certain dynamic quantities like the impurity Greens function and spectral functions, both at zero and finite temperatures, for the single-channel Kondo model in an earlier work~\cite{kondo_urg}. This was done by working with the fixed point Hamiltonian, without taking the zero bandwidth limit. The spectral function revealed the expected Abrikosov-Suhl resonance at zero frequency, and satisfied the Friedel sum rule. We believe a similar  computation can also be performed to obtain other dynamical quantities like the conductance or the resistance. {\color{red}Should we mention gen-siam-3-peak,etc as an unpublished work here?}}
+\response{ We are grateful to the referee for this question. Indeed, we have used the URG method in the past to compute certain dynamic quantities like the impurity Greens function and spectral functions, both at zero and finite temperatures, for the single-channel Kondo model in an earlier work~\cite{kondo_urg}. This was done by working with the fixed point Hamiltonian, without taking the zero bandwidth limit. The spectral function revealed the expected Abrikosov-Suhl resonance at zero frequency, and satisfied the Friedel sum rule. We believe a similar  computation can also be performed to obtain other dynamical quantities like the conductance or the resistance.}
 
 \point{
 In several places, the authors mention performing numerical calculations to verify the obtained results (for example paragraph above Eq 19 about impurity susceptibility). What method was used to perform the calculations? Is it just evaluation of for example Eq 15 for the Heisenberg Hamiltonian of the star graph or is the numerical calculation itself performing the renormalization treatment?}
 
-\response{ In the example cited in the question, we used numerical calculations in the sense of solving the star graph Hamiltonian using exact diagonalisation and then using Eq.(19) to obtain the susceptibility. In order to obtain the contribution to the susceptibility coming from the non-Fermi liquid, however, we did indeed solve the renormalization group equations numerically to obtain the fixed point Hamiltonian.}
+\response{ In the example cited in the question, we used numerical calculations in the sense of solving the star graph Hamiltonian using exact diagonalisation and then using Eq.(19) to obtain the susceptibility. In the Supplementary Material~\cite{SM}, in order to obtain the contribution to the susceptibility coming from the non-Fermi liquid, we numerically diagonalise the Hamiltonian formed of the star graph and the single-particle excitations into the conduction bath.}
 
 \point{
 Expanding on the previous point, can unitary renormalization group approach give rise to some new numerical technique akin to numerical renormalization group?}
 
-\response{While the RG formalism can be put into a numerical setup by abstracting the RG equations, we believe there is greater utility in sticking to the analytical form because it allows applying the method to a wide variety of systems and multiple geomteries, as can be seen in the references mentioned in the work. Moreover, the analytical approach makes it much more easier to obtain fixed point Hamiltonians.}
+\response{
+NEED TO UPADATE THIS 
+
+While the RG formalism can be put into a numerical setup by abstracting the RG equations, we believe there is greater utility in sticking to the analytical form because it allows applying the method to a wide variety of systems and multiple geomteries, as can be seen in the references mentioned in the work. Moreover, the analytical approach makes it much more easier to obtain fixed point Hamiltonians.}
 
 \section{Second referee}
 
@@ -122,12 +122,12 @@ susceptibility as a signature of the critical nature of the Hamiltonian. This 1/
 \point{
 Also, in Eq. (8), why does it vanish only for $K=1$, and not when $K=2S_{d}$, in general?}
 
-\response{We believe the referee is referring to Eq.(18) here, not Eq.(8). The expression in Eq.(18) was derived for the specific case of $S_d = 1/2$ (spin-half impurity), hence it only vanishes at $K=2S_d=1$. The more general case of spin-\(S_d\) impurity was checked numerically, and reported in Fig.(4). We have now included the more general analytical expression for the susceptibility in the manuscript, and this expression does indeed vanish at $K = 2S_d$.}
+\response{We believe the referee is referring to Eq.(18) here, not Eq.(8). The expression in Eq.(18) was derived for the specific case of $S_d = 1/2$ (spin-half impurity), hence it only vanishes at $K=2S_d=1$. The more general case of spin-\(S_d\) impurity was checked numerically, and reported in Fig.(4).}
 
 \point{
 In Section IV A, the authors classify the terms as Fermi liquid or non-Fermi liquid. Is there a simple way to understand this classification? A possible way is by characterizing the effects of each term, but my question is if there is an immediate way of knowing if the term is FL or NFL.}
 
-\response{ We thank the referee for allowing us to clarify this. We used the term “non-Fermi liquid” to reflect the fact that, in the RG sense, the low energy $k−$space Hamiltonian was not purely of an $F_{kk^\prime} n_k n_{k^\prime}$ density-density type interaction term.} 
+\response{ We thank the referee for allowing us to clarify this. We used the term “non-Fermi liquid” to reflect the fact that, in the RG sense, the low energy $k−$space Hamiltonian was not purely of an $F_{kk^\prime} n_k n_{k^\prime}$ density-density type interaction term (which is characteristic of a Fermi liquid).} 
 
 \section{Third referee}
 
@@ -173,6 +173,13 @@ We believe that the following are new and interesting additions to the knowledge
 \end{itemize}
 The observation of the Mott liquid is particularly significant because it highlights a common theme that pervades much of fermionic quantum matter - the role of zero modes in determining the infrared physics. This can be seen in the emergence of a Mott liquid from the 2D Hubbard model as seen from a URG analysis~\cite{anirbanmott1,anirbanmott2,mukherjeeMERG2022}, the emergence of a cooper pair insulator from the reduced BCS Hamiltonian~\cite{siddharthacpi} and the emergence of an effective Heisenberg model in the 1D Hubbard model~\cite{1dhubjhep}.
 }
+
+\section{Some additional changes in the manuscript}
+We made the following additional changes in the manuscript, apart from those arising from the suggestions made by the referees (as mentioned above).
+\begin{itemize}
+	\item Updated an arxiv preprint reference to journal
+	\item Modified acknowledgments
+\end{itemize}
 
 \bibliographystyle{unsrt}
 \bibliography{../manuscript/mscript_mck_full.bib}
