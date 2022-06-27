@@ -60,7 +60,7 @@ We then proceed to studying the low energy effective Hamiltonian for the non-Fer
 We start in section \ref{rg_section} by describing the URG flows for the MCK, the intermediate coupling URG fixed point Hamiltonian and the features of the zero bandwidth (star graph) limit of the effective Hamiltonian.
 In section \ref{sec:props_star}, we explore some properties of the zero bandwidth model: namely, the degree of compensation, impurity magnetisation and impurity susceptibility.
 The degree of compensation is simply the average correlation between the impurity spin and the conduction channel local spins; it is found to be maximum at exact screening, and decreases for both over- and under-screening.
-The magnetisation and susceptibility of the star graph model show {\color{red}critical behaviour in the form} a discontinuity and a \(T^{-1}\) divergence.
+The magnetisation and susceptibility of the star graph model show {\color{red}critical behaviour in the form} a discontinuity and a \(T^{-1}\) divergence respectively.
 We also explore the topological properties of the degenerate ground state manifold of the star graph model using non-local twist and translation operators.
 On decoupling the impurity spin from the conduction spin degrees of freedom within the star graph, we obtain an all-to-all Hamiltonian that represents a local Mott liquid phase.
 In section \ref{sec:excitations}, we obtain the low energy effective Hamiltonian for the low-lying excitations by including a dispersion into the conduction bath.
@@ -99,25 +99,26 @@ The unitary transformations are given in terms of a fermionic generator \(\eta_{
 	\label{unitary}
 	U_{(j)} = \frac{1}{\sqrt 2}\left(1 + \eta_{(j)} - \eta_{(j)}^\dagger\right)~,~ \quad\left\{ \eta_{(j)},\eta_{(j)}^\dagger \right\} = 1~,
 \end{aligned}\end{equation}
-where \(\left\{\cdot\right\}\) is the anticommutator. {\color{blue}The unitary operator \(U_{(j)}\) mentioned in Eq.~\eqref{unitary} can be thought of as a special case of the most general form \(U = e^\mathcal{S}\) of a unitary operator defined by an anti-Hermitian generator \(\mathcal{S}\). For our case, the generator turns out to be \(\mathcal{S} = \frac{\pi}{4}\left( \eta^\dagger_{(j)} - \eta_{(j)} \right) \), such that the unitary operator is \(U_{(j)} = e^{\frac{\pi}{4}\left(\eta^\dagger_{(j)} - \eta_{(j)}\right) }\). If one then uses the anti-commutation and commutation properties of \(\eta_{(j)},\eta^\dagger_{(j)}\)~\cite{anirbanurg1,anirbanurg2}, the exponential can be expanded in its Taylor series and then "resummed" into the form in Eq.~\eqref{unitary}.}
+where \(\left\{\cdot\right\}\) is the anticommutator. {\color{blue} Further, $\left[ \eta_{(j)},\eta_{(j)}^\dagger \right] = 2\hat n_{j}-1$. The unitary operator \(U_{(j)}\) mentioned in Eq.~\eqref{unitary} can be thought of as a special case of the most general form \(U = e^\mathcal{S}\) of a unitary operator defined by an anti-Hermitian generator \(\mathcal{S}\). For our case, the generator turns out to be \(\mathcal{S} = \frac{\pi}{4}\left( \eta^\dagger_{(j)} - \eta_{(j)} \right) \), such that the unitary operator is \(U_{(j)} = e^{\frac{\pi}{4}\left(\eta^\dagger_{(j)} - \eta_{(j)}\right) }\)~\cite{anirbanurg1}. If one then uses the anti-commutation and commutation properties of \(\eta_{(j)},\eta^\dagger_{(j)}\)~\cite{anirbanurg1,anirbanurg2}, the exponential can be expanded in its Taylor series and then "resummed" into the form in Eq.~\eqref{unitary}.}
 
 The generator itself is given by the expression~\cite{anirbanurg1,anirbanurg2}
 \begin{equation}\begin{aligned}
 	\eta^\dagger_{(j)} = \frac{1}{\hat \omega_{(j)} - \text{Tr}\left(H_{(j)} \hat n_{j}\right) } c^\dagger_{j} \text{Tr}\left(H_{(j)}c_{j}\right)~.
 \end{aligned}\end{equation}
-{\color{blue}The operators \(\eta_{(j)},\eta^\dagger_{(j)}\) can be thought of as the many-particle analogue of the single-particle field operators \(c_j,c^\dagger_j\) that change the occupation number of the single-particle Fock space, \(\ket{n_j}\). The extra prefactors are required to ensure that the decoupling of the specific Fock state happens through a unitary modification of the spectrum of the remnant degrees of freedom. Since the \(j^\text{th}\) degree of freedom is coupled with the others, a rotation of the basis of \(j\) also involves a rotation of the many-particle basis of the remaining degrees of freedom in the Hamiltonian \(H_{(j)}\), and this is the reason for the \(\text{Tr}\left(H_(j) c_j\right) \) part.}
+{\color{blue}The operators \(\eta_{(j)},\eta^\dagger_{(j)}\) can be thought of as the many-particle analogue of the single-particle field operators \(c_j,c^\dagger_j\) that change the occupation number of the single-particle Fock space, \(\ket{n_j}\). The presence of the operators in $\eta_{(j)}$ other than $c_j$ are required to ensure that the decoupling of the specific Fock state under consideration is carried out through a unitary modification of the spectrum of the remnant degrees of freedom. Since the \(j^\text{th}\) degree of freedom is coupled with many others, a rotation of the basis of \(j\) also involves a rotation of the many-particle basis of the remaining degrees of freedom in the Hamiltonian \(H_{(j)}\); this is encoded within the \(\text{Tr}\left(H_{(j)} c_j\right) \) term.}
 The operator \(\hat \omega_{(j)}\) encodes the quantum fluctuation scales arising from the interplay of the kinetic energy terms and the interaction terms in the Hamiltonian:
 \begin{equation}\begin{aligned}
 	\hat \omega_{(j)} = H_{(j-1)} - H^i_{(j)}~.
 \end{aligned}\end{equation}
 \(H^i_{(j)}\) is that part of \(H_{(j)}\) that commutes with \(\hat n_j\) but does not commute with at least one \(\hat n_l\) for \(l < j\). The RG flow continues till a fixed point is reached at an energy \(D^*\).
-{\color{blue}The Greens function in front accounts for the dynamical cost of this rotation in terms of the quantum fluctuations \(\hat \omega\) and the kinetic and self energies \(\text{Tr}\left( H_{(j)}\hat n_j \right) \).}
+{\color{blue} The Greens function in front of $c_j$ accounts for the dynamical cost of this rotation in terms of an operator for quantum fluctuations (\(\hat \omega\)), as well as the kinetic and self-energies \(\text{Tr}\left( H_{(j)}\hat n_j \right) \).}
 
-{\color{blue}There exist other renormalisation group schemes that depend on canonical transformations, like the continuous unitary transformations (CUT) RG as envisaged by Wegner (and others before him). There are at least two specific distinctions between the CUT RG and the URG of the present work.
+{\color{blue}There exist other renormalisation group schemes that depend on canonical transformations, such as Wegner's continuous unitary transformations (CUT) RG (PUT IN REFERENCE) and the similarity RG method by Glaszek and Wilson (PUT IN REFERENCE). There are at least two specific distinctions between the CUT RG and the URG method adopted in the present work.
 \begin{itemize}
-	\item While most RG methods that apply successive unitary transformations rely on a gradual decrease in the off-diagonal content of the Hamiltonian, the URG proceeds by decoupling each discrete Fock space node at a time. In other words, in the URG, at least one term in the Hamiltonian vanishes at each RG step, while in the CUT RG, there is a gradual decay of the off-diagonal terms in order to make it more band diagonal.
-	\item The CUT RG, specifically, has to be applied by choosing a truncation scheme that allows closing the RG equations. The URG, on the other hand, is able to ``resum" the coupling expansion series through the denominator structure and the quantum fluctuation operator.  
+	\item While most RG methods that apply successive unitary transformations rely on a gradual decrease in the off-diagonal content of the Hamiltonian, the URG proceeds by decoupling each discrete Fock space node at a time. In other words, the URG achieves a block-diagonalisation of the Hamiltonian at each RG step, while the CUT RG involves a gradual decay of the off-diagonal terms of the Hamiltonian in order to make it more band diagonal.
+	\item The CUT RG involves choosing a truncation scheme that allows closing the RG equations. The URG, on the other hand, is able to resum the coupling expansion series through the denominator structure and the quantum fluctuation operator.  
 \end{itemize}
+Detailed comparisons of the URG with other methods (e.g., the functional RG, spectrum bifurcation RG etc.) can be found in Refs.~\cite{anirbanmott1,anirbanurg1}.
 }
 
 The derivation of the RG equation for the over-screened regime \((2S < K)\) of the spin-\(S\)-impurity \(K\)-channel Kondo problem is shown in detail in the Supplementary Materials~\cite{SM}.
@@ -254,7 +255,7 @@ The \(\chi\) is seen to diverge as \(T^{-1}\) at low temperatures.
 {\color{red}Such a non-analyticity in a response function is a signature of the critical nature of the Hamiltonian.
 This is in contrast to the behaviour in the non-critical exactly-screened fixed point where the ground state is unique.
 There, the susceptibility becomes constant at low temperatures: \(\chi(T\to 0) = \frac{W}{4 T_K}\), \(T_K\) being the single-channel Kondo temperature and \(W\) the Wilson number \cite{wilson1975renormalization,nozieres1974fermi,bullaNRGreview,kondo_urg}.}
-We have checked the case of general spin-\(S_{d}\) impurity (fig.~\ref{fig:suseptibility_impurity}) by {\color{blue}numerically diagonalising the star graph}, and the general conclusion is that all exactly-screened models show a constant impurity susceptibility at \(T \to 0\), while the over-screened and under-screened cases show a diverging impurity susceptibility in the same limit.
+We have checked the case of general spin-\(S_{d}\) impurity (fig.~\ref{fig:suseptibility_impurity}) by {\color{blue}numerically diagonalising the star graph Hamiltonian}, and the general conclusion is that all exactly-screened models show a constant impurity susceptibility at \(T \to 0\), while the over-screened and under-screened cases show a diverging impurity susceptibility in the same limit.
 A similar divergence is also seen in the susceptibility of the outer spins, calculated by inserting a magnetic field purely on the outer spins.
 
 A second non-analyticity arises when we consider the impurity free energy and the magnetization. The thermal free energy is given by
@@ -280,7 +281,7 @@ There we used the result that the derivative of \(|x|\) is \(\text{sign}(x)\). I
 	\label{mag_crit}
 \end{figure}
 
-The magnetization is therefore discontinuous as \(h\to 0\). The non-analyticity for \(K>1\) occurs because there is at least one pair of ground state with non-zero parity \(\pi^z\) and magnetic field is able to flip one ground state into the state of opposite parity. This available space for scattering is simply the frustration that we discussed earlier. Indeed, we have checked (see fig.~\ref{mag_crit}) {\color{blue} by diagonalising the star graph numerically} that the non-analyticity exists for all \(\delta \neq 0\), where \(\delta = \frac{K}{2} - S_{d}\) is the deviation from exact screening. 
+The magnetization is therefore discontinuous as \(h\to 0\). The non-analyticity for \(K>1\) occurs because there is at least one pair of ground state with non-zero parity \(\pi^z\) and magnetic field is able to flip one ground state into the state of opposite parity. This available space for scattering is simply the frustration that we discussed earlier. Indeed, we have checked (see fig.~\ref{mag_crit}) {\color{blue} by diagonalising numerically the star graph Hamiltonian} that the non-analyticity exists for all \(\delta \neq 0\), where \(\delta = \frac{K}{2} - S_{d}\) is the deviation from exact screening. 
 Some additional results are presented in the Supplementary Materials~\cite{SM}.
 \subsection{Topological properties of ground state manifold}
 \label{sec:topo_ground_state}
