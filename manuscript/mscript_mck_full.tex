@@ -113,7 +113,7 @@ The operator \(\hat \omega_{(j)}\) encodes the quantum fluctuation scales arisin
 \(H^i_{(j)}\) is that part of \(H_{(j)}\) that commutes with \(\hat n_j\) but does not commute with at least one \(\hat n_l\) for \(l < j\). The RG flow continues till a fixed point is reached at an energy \(D^*\).
 {\color{blue} The Greens function in front of $c_j$ accounts for the dynamical cost of this rotation in terms of an operator for quantum fluctuations (\(\hat \omega\)), as well as the kinetic and self-energies \(\text{Tr}\left( H_{(j)}\hat n_j \right) \).}
 
-{\color{blue}There exist other renormalisation group schemes that depend on canonical transformations, such as Wegner's continuous unitary transformations (CUT) RG (PUT IN REFERENCE) and the similarity RG method by Glaszek and Wilson (PUT IN REFERENCE). There are at least two specific distinctions between the CUT RG and the URG method adopted in the present work.
+{\color{blue}There exist other renormalisation group schemes that depend on canonical transformations, such as Wegner's continuous unitary transformations (CUT) RG~\cite{wegner1994flow} and the similarity RG method by Glazek and Wilson~\cite{glazek1993renormalization}. There are at least two specific distinctions between the CUT RG and the URG method adopted in the present work.
 \begin{itemize}
 	\item While most RG methods that apply successive unitary transformations rely on a gradual decrease in the off-diagonal content of the Hamiltonian, the URG proceeds by decoupling each discrete Fock space node at a time. In other words, the URG achieves a block-diagonalisation of the Hamiltonian at each RG step, while the CUT RG involves a gradual decay of the off-diagonal terms of the Hamiltonian in order to make it more band diagonal.
 	\item The CUT RG involves choosing a truncation scheme that allows closing the RG equations. The URG, on the other hand, is able to resum the coupling expansion series through the denominator structure and the quantum fluctuation operator.  
@@ -252,9 +252,8 @@ such that the susceptibility is
 \end{figure}
 
 The \(\chi\) is seen to diverge as \(T^{-1}\) at low temperatures.
-{\color{red}Such a non-analyticity in a response function is a signature of the critical nature of the Hamiltonian.
-This is in contrast to the behaviour in the non-critical exactly-screened fixed point where the ground state is unique.
-There, the susceptibility becomes constant at low temperatures: \(\chi(T\to 0) = \frac{W}{4 T_K}\), \(T_K\) being the single-channel Kondo temperature and \(W\) the Wilson number \cite{wilson1975renormalization,nozieres1974fermi,bullaNRGreview,kondo_urg}.}
+Such a non-analyticity in a response function is {\color{red}a signature of the critical nature of the Hamiltonian. This is} in contrast to the behaviour in the {\color{red}non-critical} exactly-screened fixed point where the ground state is unique.
+There, the susceptibility becomes constant at low temperatures: \(\chi(T\to 0) = \frac{W}{4 T_K}\), \(T_K\) being the single-channel Kondo temperature and \(W\) the Wilson number \cite{wilson1975renormalization,nozieres1974fermi,bullaNRGreview,kondo_urg}.
 We have checked the case of general spin-\(S_{d}\) impurity (fig.~\ref{fig:suseptibility_impurity}) by {\color{blue}numerically diagonalising the star graph Hamiltonian}, and the general conclusion is that all exactly-screened models show a constant impurity susceptibility at \(T \to 0\), while the over-screened and under-screened cases show a diverging impurity susceptibility in the same limit.
 A similar divergence is also seen in the susceptibility of the outer spins, calculated by inserting a magnetic field purely on the outer spins.
 
