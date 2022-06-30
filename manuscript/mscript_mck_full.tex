@@ -99,10 +99,11 @@ The unitary transformations are given in terms of a fermionic generator \(\eta_{
 	\label{unitary}
 	U_{(j)} = \frac{1}{\sqrt 2}\left(1 + \eta_{(j)} - \eta_{(j)}^\dagger\right)~,~ \quad\left\{ \eta_{(j)},\eta_{(j)}^\dagger \right\} = 1~,
 \end{aligned}\end{equation}
-where \(\left\{\cdot\right\}\) is the anticommutator. {\color{blue} Further, $\left[ \eta_{(j)},\eta_{(j)}^\dagger \right] = 2\hat n_{j}-1$. The unitary operator \(U_{(j)}\) mentioned in Eq.~\eqref{unitary} can be thought of as a special case of the most general form \(U = e^\mathcal{S}\) of a unitary operator defined by an anti-Hermitian generator \(\mathcal{S}\). For our case, the generator turns out to be \(\mathcal{S} = \frac{\pi}{4}\left( \eta^\dagger_{(j)} - \eta_{(j)} \right) \), such that the unitary operator is \(U_{(j)} = e^{\frac{\pi}{4}\left(\eta^\dagger_{(j)} - \eta_{(j)}\right) }\)~\cite{anirbanurg1}. If one then uses the anti-commutation and commutation properties of \(\eta_{(j)},\eta^\dagger_{(j)}\)~\cite{anirbanurg1,anirbanurg2}, the exponential can be expanded in its Taylor series and then "resummed" into the form in Eq.~\eqref{unitary}.}
+where \(\left\{\cdot\right\}\) is the anticommutator. {\color{blue} Further, $\left[ \eta_{(j)},\eta_{(j)}^\dagger \right] = 2\hat n_{j}-1$. The unitary operator \(U_{(j)}\) mentioned in Eq.~\eqref{unitary} can be thought of as a special case of the most general form \(U = e^\mathcal{S}\) of a unitary operator defined by an anti-Hermitian generator \(\mathcal{S}\). For our case, the generator turns out to be \(\mathcal{S} = \frac{\pi}{4}\left( \eta^\dagger_{(j)} - \eta_{(j)} \right) \), such that the unitary operator is \(U_{(j)} = e^{\frac{\pi}{4}\left(\eta^\dagger_{(j)} - \eta_{(j)}\right) }\)~\cite{anirbanurg1}. If one then uses the anti-commutation and commutation properties of \(\eta_{(j)},\eta^\dagger_{(j)}\)~\cite{anirbanurg1,anirbanurg2}, the exponential can be expanded in its Taylor series and then resummed into the form in Eq.~\eqref{unitary}.}
 
 The generator itself is given by the expression~\cite{anirbanurg1,anirbanurg2}
 \begin{equation}\begin{aligned}
+	\label{eta_dag}
 	\eta^\dagger_{(j)} = \frac{1}{\hat \omega_{(j)} - \text{Tr}\left(H_{(j)} \hat n_{j}\right) } c^\dagger_{j} \text{Tr}\left(H_{(j)}c_{j}\right)~.
 \end{aligned}\end{equation}
 {\color{blue}The operators \(\eta_{(j)},\eta^\dagger_{(j)}\) can be thought of as the many-particle analogue of the single-particle field operators \(c_j,c^\dagger_j\) that change the occupation number of the single-particle Fock space, \(\ket{n_j}\). The presence of the operators in $\eta_{(j)}$ other than $c_j$ are required to ensure that the decoupling of the specific Fock state under consideration is carried out through a unitary modification of the spectrum of the remnant degrees of freedom. Since the \(j^\text{th}\) degree of freedom is coupled with many others, a rotation of the basis of \(j\) also involves a rotation of the many-particle basis of the remaining degrees of freedom in the Hamiltonian \(H_{(j)}\); this is encoded within the \(\text{Tr}\left(H_{(j)} c_j\right) \) term.}
@@ -111,7 +112,7 @@ The operator \(\hat \omega_{(j)}\) encodes the quantum fluctuation scales arisin
 	\hat \omega_{(j)} = H_{(j-1)} - H^i_{(j)}~.
 \end{aligned}\end{equation}
 \(H^i_{(j)}\) is that part of \(H_{(j)}\) that commutes with \(\hat n_j\) but does not commute with at least one \(\hat n_l\) for \(l < j\). The RG flow continues till a fixed point is reached at an energy \(D^*\).
-{\color{blue} The Greens function in front of $c_j$ accounts for the dynamical cost of this rotation in terms of an operator for quantum fluctuations (\(\hat \omega\)), as well as the kinetic and self-energies \(\text{Tr}\left( H_{(j)}\hat n_j \right) \).}
+{\color{blue} The Greens function in front of $c_j$ (in Eq.~\ref{eta_dag}) accounts for the dynamical cost of this rotation in terms of an operator for quantum fluctuations (\(\hat \omega\)), as well as the kinetic and self-energies \(\text{Tr}\left( H_{(j)}\hat n_j \right) \).}
 
 {\color{blue}There exist other renormalisation group schemes that depend on canonical transformations, such as Wegner's continuous unitary transformations (CUT) RG~\cite{wegner1994flow} and the similarity RG method by Glazek and Wilson~\cite{glazek1993renormalization}. There are at least two specific distinctions between the CUT RG and the URG method adopted in the present work.
 \begin{itemize}
@@ -254,7 +255,7 @@ such that the susceptibility is
 The \(\chi\) is seen to diverge as \(T^{-1}\) at low temperatures.
 Such a non-analyticity in a response function is {\color{red}a signature of the critical nature of the Hamiltonian. This is} in contrast to the behaviour in the {\color{red}non-critical} exactly-screened fixed point where the ground state is unique.
 There, the susceptibility becomes constant at low temperatures: \(\chi(T\to 0) = \frac{W}{4 T_K}\), \(T_K\) being the single-channel Kondo temperature and \(W\) the Wilson number \cite{wilson1975renormalization,nozieres1974fermi,bullaNRGreview,kondo_urg}.
-We have checked the case of general spin-\(S_{d}\) impurity (fig.~\ref{fig:suseptibility_impurity}) by {\color{blue}numerically diagonalising the star graph Hamiltonian}, and the general conclusion is that all exactly-screened models show a constant impurity susceptibility at \(T \to 0\), while the over-screened and under-screened cases show a diverging impurity susceptibility in the same limit.
+We have checked the case of general spin-\(S_{d}\) impurity (fig.~\ref{fig:suseptibility_impurity}) by {\color{blue}diagonalising the star graph Hamiltonian numerically}, and the general conclusion is that all exactly-screened models show a constant impurity susceptibility at \(T \to 0\), while the over-screened and under-screened cases show a diverging impurity susceptibility in the same limit.
 A similar divergence is also seen in the susceptibility of the outer spins, calculated by inserting a magnetic field purely on the outer spins.
 
 A second non-analyticity arises when we consider the impurity free energy and the magnetization. The thermal free energy is given by
