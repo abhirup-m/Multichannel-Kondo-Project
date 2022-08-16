@@ -26,7 +26,7 @@
 \affiliation{Department of Physical Sciences, Indian Institute of Science Education and Research-Kolkata, W.B. 741246, India}
 \date{\today}
 \begin{abstract}
-	We study the overscreened multi-channel Kondo (MCK) model using the recently developed unitary renormalization group (URG) technique. Our results display the importance of ground state degeneracy in explaining various important properties like the breakdown of screening and the presence of local non-Fermi liquids. The impurity susceptibility of the intermediate coupling fixed point Hamiltonian in the zero-bandwidth (or star graph) limit shows a power-law divergence at low temperature{\color{red}, signalling its critical nature}. Despite the absence of inter-channel coupling in the MCK fixed point Hamiltonian, the study of mutual information between any two channels shows non-zero correlation between them. A spectral flow analysis of the star graph reveals that the degenerate ground state manifold possesses topological quantum numbers. Upon disentangling the impurity spin from its partners in the star graph, we find the presence of a local Mott liquid arising from inter-channel scattering processes. The low energy effective Hamiltonian obtained upon adding a finite non-zero conduction bath dispersion to the star graph Hamiltonian for both the two and three-channel cases displays the presence of local non-Fermi liquids arising from inter-channel quantum fluctuations. Specifically, we confirm the presence of a local marginal Fermi liquid in the two channel case, whose properties show logarithmic scaling at low temperature as expected.
+	We study the overscreened multi-channel Kondo (MCK) model using the recently developed unitary renormalization group (URG) technique. Our results display the importance of ground state degeneracy in explaining various important properties like the breakdown of screening and the presence of local non-Fermi liquids. The impurity susceptibility of the intermediate coupling fixed point Hamiltonian in the zero-bandwidth (or star graph) limit shows a power-law divergence at low temperature. Despite the absence of inter-channel coupling in the MCK fixed point Hamiltonian, the study of mutual information between any two channels shows non-zero correlation between them. A spectral flow analysis of the star graph reveals that the degenerate ground state manifold possesses topological quantum numbers. Upon disentangling the impurity spin from its partners in the star graph, we find the presence of a local Mott liquid arising from inter-channel scattering processes. The low energy effective Hamiltonian obtained upon adding a finite non-zero conduction bath dispersion to the star graph Hamiltonian for both the two and three-channel cases displays the presence of local non-Fermi liquids arising from inter-channel quantum fluctuations. Specifically, we confirm the presence of a local marginal Fermi liquid in the two channel case, whose properties show logarithmic scaling at low temperature as expected.
 Discontinuous behaviour is observed in several measures of ground state entanglement, signalling
 the underlying orthogonality catastrophe associated with the degenerate ground state manifold. 
 We extend our results to underscreened and perfectly screened MCK models through duality arguments.
@@ -39,7 +39,7 @@ A study of channel anisotropy under renormalisation flow reveals a series of qua
 %\tableofcontents
 
 \section{Introduction}
-%{\color{blue}
+
 A local antiferromagnetic exchange interaction between a spin-\(\frac{1}{2}\) impurity and its host metal gives rise to the well-understood phenomenon of the Kondo effect (\cite{kondo1964resistance}, see ~\cite{hewson1993} for an extensive discussion). Here, the impurity local moment is screened by the conduction electrons at temperatures below a certain scale called the Kondo temperature~\cite{anderson1969exact,anderson1970exact,anderson1970,wilson1975,andreiKondoreview,
 tsvelickKondoreview,affleck1993exact,affleck1995conformal}, leading to a spin singlet ground state and local Fermi liquid excitations above that ground state~\cite{nozieres1974fermi,hewsonp}. The screening manifests as an initial increase at temperatures below the Kondo temperature, followed by a saturation of the resistivity of the metal~\cite{kondo1964resistance,Zhang2013}, and in the saturation of the impurity contribution to the magnetic susceptibility at low temperatures~\cite{wilson1975,andreiKondoreview,tsvelickKondoreview}.
 Generalisations of this model are obtained by taking impurities of higher spin~\cite{hewson1993,Noz_blandin_1980,affleck1993exact}, adding interactions between them~\cite{affleck_1992,affleck_ludwig_jones_1992,georges_1999,zarand_chung_2006,
@@ -60,7 +60,7 @@ We then proceed to studying the low energy effective Hamiltonian for the non-Fer
 We start in section \ref{rg_section} by describing the URG flows for the MCK, the intermediate coupling URG fixed point Hamiltonian and the features of the zero bandwidth (star graph) limit of the effective Hamiltonian.
 In section \ref{sec:props_star}, we explore some properties of the zero bandwidth model: namely, the degree of compensation, impurity magnetisation and impurity susceptibility.
 The degree of compensation is simply the average correlation between the impurity spin and the conduction channel local spins; it is found to be maximum at exact screening, and decreases for both over- and under-screening.
-The magnetisation and susceptibility of the star graph model show {\color{red}critical behaviour in the form} a discontinuity and a \(T^{-1}\) divergence respectively.
+The magnetisation and susceptibility of the star graph model show a discontinuity and a \(T^{-1}\) divergence respectively.
 We also explore the topological properties of the degenerate ground state manifold of the star graph model using non-local twist and translation operators.
 On decoupling the impurity spin from the conduction spin degrees of freedom within the star graph, we obtain an all-to-all Hamiltonian that represents a local Mott liquid phase.
 In section \ref{sec:excitations}, we obtain the low energy effective Hamiltonian for the low-lying excitations by including a dispersion into the conduction bath.
@@ -99,28 +99,27 @@ The unitary transformations are given in terms of a fermionic generator \(\eta_{
 	\label{unitary}
 	U_{(j)} = \frac{1}{\sqrt 2}\left(1 + \eta_{(j)} - \eta_{(j)}^\dagger\right)~,~ \quad\left\{ \eta_{(j)},\eta_{(j)}^\dagger \right\} = 1~,
 \end{aligned}\end{equation}
-where \(\left\{\cdot\right\}\) is the anticommutator. {\color{blue} Further, $\left[ \eta_{(j)},\eta_{(j)}^\dagger \right] = 2\hat n_{j}-1$. The unitary operator \(U_{(j)}\) mentioned in Eq.~\eqref{unitary} can be thought of as a special case of the most general form \(U = e^\mathcal{S}\) of a unitary operator defined by an anti-Hermitian generator \(\mathcal{S}\). For our case, the generator turns out to be \(\mathcal{S} = \frac{\pi}{4}\left( \eta^\dagger_{(j)} - \eta_{(j)} \right) \), such that the unitary operator is \(U_{(j)} = e^{\frac{\pi}{4}\left(\eta^\dagger_{(j)} - \eta_{(j)}\right) }\)~\cite{anirbanurg1}. If one then uses the anti-commutation and commutation properties of \(\eta_{(j)},\eta^\dagger_{(j)}\)~\cite{anirbanurg1,anirbanurg2}, the exponential can be expanded in its Taylor series and then resummed into the form in Eq.~\eqref{unitary}.}
+where \(\left\{\cdot\right\}\) is the anticommutator. Further, $\left[ \eta_{(j)},\eta_{(j)}^\dagger \right] = 2\hat n_{j}-1$. The unitary operator \(U_{(j)}\) mentioned in Eq.~\eqref{unitary} can be thought of as a special case of the most general form \(U = e^\mathcal{S}\) of a unitary operator defined by an anti-Hermitian generator \(\mathcal{S}\). For our case, the generator turns out to be \(\mathcal{S} = \frac{\pi}{4}\left( \eta^\dagger_{(j)} - \eta_{(j)} \right) \), such that the unitary operator is \(U_{(j)} = e^{\frac{\pi}{4}\left(\eta^\dagger_{(j)} - \eta_{(j)}\right) }\)~\cite{anirbanurg1}. If one then uses the anti-commutation and commutation properties of \(\eta_{(j)},\eta^\dagger_{(j)}\)~\cite{anirbanurg1,anirbanurg2}, the exponential can be expanded in its Taylor series and then resummed into the form in Eq.~\eqref{unitary}.
 
 The generator itself is given by the expression~\cite{anirbanurg1,anirbanurg2}
 \begin{equation}\begin{aligned}
 	\label{eta_dag}
 	\eta^\dagger_{(j)} = \frac{1}{\hat \omega_{(j)} - \text{Tr}\left(H_{(j)} \hat n_{j}\right) } c^\dagger_{j} \text{Tr}\left(H_{(j)}c_{j}\right)~.
 \end{aligned}\end{equation}
-{\color{blue}The operators \(\eta_{(j)},\eta^\dagger_{(j)}\) can be thought of as the many-particle analogue of the single-particle field operators \(c_j,c^\dagger_j\) that change the occupation number of the single-particle Fock space, \(\ket{n_j}\). The presence of the operators in $\eta_{(j)}$ other than $c_j$ are required to ensure that the decoupling of the specific Fock state under consideration is carried out through a unitary modification of the spectrum of the remnant degrees of freedom. Since the \(j^\text{th}\) degree of freedom is coupled with many others, a rotation of the basis of \(j\) also involves a rotation of the many-particle basis of the remaining degrees of freedom in the Hamiltonian \(H_{(j)}\); this is encoded within the \(\text{Tr}\left(H_{(j)} c_j\right) \) term.}
+The operators \(\eta_{(j)},\eta^\dagger_{(j)}\) can be thought of as the many-particle analogue of the single-particle field operators \(c_j,c^\dagger_j\) that change the occupation number of the single-particle Fock space, \(\ket{n_j}\). The presence of the operators in $\eta_{(j)}$ other than $c_j$ are required to ensure that the decoupling of the specific Fock state under consideration is carried out through a unitary modification of the spectrum of the remnant degrees of freedom. Since the \(j^\text{th}\) degree of freedom is coupled with many others, a rotation of the basis of \(j\) also involves a rotation of the many-particle basis of the remaining degrees of freedom in the Hamiltonian \(H_{(j)}\); this is encoded within the \(\text{Tr}\left(H_{(j)} c_j\right) \) term.
 The operator \(\hat \omega_{(j)}\) encodes the quantum fluctuation scales arising from the interplay of the kinetic energy terms and the interaction terms in the Hamiltonian:
 \begin{equation}\begin{aligned}
 	\hat \omega_{(j)} = H_{(j-1)} - H^i_{(j)}~.
 \end{aligned}\end{equation}
-\(H^i_{(j)}\) is that part of \(H_{(j)}\) that commutes with \(\hat n_j\) but does not commute with at least one \(\hat n_l\) for \(l < j\). The RG flow continues till a fixed point is reached at an energy \(D^*\).
-{\color{blue} The Greens function in front of $c_j$ (in Eq.~\ref{eta_dag}) accounts for the dynamical cost of this rotation in terms of an operator for quantum fluctuations (\(\hat \omega\)), as well as the kinetic and self-energies \(\text{Tr}\left( H_{(j)}\hat n_j \right) \).}
+\(H^i_{(j)}\) is that part of \(H_{(j)}\) that commutes with \(\hat n_j\) but does not commute with at least one \(\hat n_l\) for \(l < j\). The RG flow continues till a fixed point is reached at an energy \(D^*\). The Greens function in front of $c_j$ (in Eq.~\ref{eta_dag}) accounts for the dynamical cost of this rotation in terms of an operator for quantum fluctuations (\(\hat \omega\)), as well as the kinetic and self-energies \(\text{Tr}\left( H_{(j)}\hat n_j \right) \).
 
-{\color{blue}There exist other renormalisation group schemes that depend on canonical transformations, such as Wegner's continuous unitary transformations (CUT) RG~\cite{wegner1994flow} and the similarity RG method by Glazek and Wilson~\cite{glazek1993renormalization}. There are at least two specific distinctions between the CUT RG and the URG method adopted in the present work.
+There exist other renormalisation group schemes that depend on canonical transformations, such as Wegner's continuous unitary transformations (CUT) RG~\cite{wegner1994flow} and the similarity RG method by Glazek and Wilson~\cite{glazek1993renormalization}. There are at least two specific distinctions between the CUT RG and the URG method adopted in the present work.
 \begin{itemize}
 	\item While most RG methods that apply successive unitary transformations rely on a gradual decrease in the off-diagonal content of the Hamiltonian, the URG proceeds by decoupling each discrete Fock space node at a time. In other words, the URG achieves a block-diagonalisation of the Hamiltonian at each RG step, while the CUT RG involves a gradual decay of the off-diagonal terms of the Hamiltonian in order to make it more band diagonal.
 	\item The CUT RG involves choosing a truncation scheme that allows closing the RG equations. The URG, on the other hand, is able to resum the coupling expansion series through the denominator structure and the quantum fluctuation operator.  
 \end{itemize}
 Detailed comparisons of the URG with other methods (e.g., the functional RG, spectrum bifurcation RG etc.) can be found in Refs.~\cite{anirbanmott1,anirbanurg1}.
-}
+
 
 The derivation of the RG equation for the over-screened regime \((2S < K)\) of the spin-\(S\)-impurity \(K\)-channel Kondo problem is shown in detail in the Supplementary Materials~\cite{SM}.
 On decoupling circular isoenergetic shells at energies \(D_{(j)}\), the change in the Kondo coupling at the \(j^\text{th}\) RG step, \(\Delta {\mathcal{J}}_{(j)}\), is given by
@@ -198,7 +197,13 @@ Durganandini_2011}, while the first regime has a unique ground state with \(g^S_
 described by a local Fermi liquid (LFL) phase ~\cite{wilson1975,nozieres1974fermi,Noz_blandin_1980,andreiKondoreview,tsvelickKondoreview}, thereby substantiating the claim that a degeneracy greater than unity is closely tied to non-Fermi liquid physics.
 
 
-In the following sections, we will show how the inherent quantum-mechanical frustration of singlet order that is present in the Hamiltonian leads to the non-trivial physics of the fixed points in terms of non-Fermi liquid phase, diverging thermodynamic quantities, quantum criticality as well as emergent gauge theories.
+{\color{blue}
+We now comment on the validity of our study of the zero-bandwidth  model at the intermediate coupling fixed point (ICFP) of the MCK  problem.
+Nozieres and Blandin indeed present an argument for why the  zero-bandwidth model at the strong coupling fixed point ($J =\infty$)  is unstable due to the existence of non-trivial RG relevant quantum  fluctuations~\cite{Noz_blandin_1980}.
+The resulting RG flow of the Kondo coupling $J$ to  the ICFP resolves these quantum fluctuations.
+The RG stability of the  Kondo coupling $J$ at the ICFP then allows for a renormalised perturbation  theory approach to studying the fixed point Hamiltonian.
+Specifically, the  zero-bandwidth model can be safely extracted (in the RG sense) as the zeroth  approximation of a renormalised perturbation theory in the ratio of  the conduction bath hopping amplitude ($t$) to $J$.
+A study of the  zero-bandwidth model at the ICFP offers, in turn, new perspectives  into the problem, e.g., the ground state degeneracy and it's relation  to the breakdown of exact screening etc., as described in the two preceding paragraphs. It also informs us on the ground state manifold about which to carry out a systematic renormalised perturbative expansion to obtain the low-lying excitations (see Sec.\ref{sec:excitations} below, and Sec.III of the supplementary materials). Moreover, in} the following sections, we will show how the inherent quantum-mechanical frustration of singlet order that is present in the Hamiltonian leads to the non-trivial physics of the fixed points in terms of non-Fermi liquid phase, diverging thermodynamic quantities, quantum criticality as well as emergent gauge theories.
 \section{Important Properties of the Star Graph}
 \label{sec:props_star}
 
@@ -253,9 +258,9 @@ such that the susceptibility is
 \end{figure}
 
 The \(\chi\) is seen to diverge as \(T^{-1}\) at low temperatures.
-Such a non-analyticity in a response function is {\color{red}a signature of the critical nature of the Hamiltonian. This is} in contrast to the behaviour in the {\color{red}non-critical} exactly-screened fixed point where the ground state is unique.
+Such a non-analyticity in a response function is in contrast to the behaviour in the exactly-screened fixed point where the ground state is unique.
 There, the susceptibility becomes constant at low temperatures: \(\chi(T\to 0) = \frac{W}{4 T_K}\), \(T_K\) being the single-channel Kondo temperature and \(W\) the Wilson number \cite{wilson1975renormalization,nozieres1974fermi,bullaNRGreview,kondo_urg}.
-We have checked the case of general spin-\(S_{d}\) impurity (fig.~\ref{fig:suseptibility_impurity}) by {\color{blue}diagonalising the star graph Hamiltonian numerically}, and the general conclusion is that all exactly-screened models show a constant impurity susceptibility at \(T \to 0\), while the over-screened and under-screened cases show a diverging impurity susceptibility in the same limit.
+In Fig.~\ref{fig:suseptibility_impurity}, we have checked the case of general spin-\(S_{d}\) impurity by diagonalising the star graph Hamiltonian numerically, and the general conclusion is that all exactly-screened models show a constant impurity susceptibility at \(T \to 0\), while the over-screened and under-screened cases show a diverging impurity susceptibility in the same limit.
 A similar divergence is also seen in the susceptibility of the outer spins, calculated by inserting a magnetic field purely on the outer spins.
 
 A second non-analyticity arises when we consider the impurity free energy and the magnetization. The thermal free energy is given by
@@ -281,7 +286,7 @@ There we used the result that the derivative of \(|x|\) is \(\text{sign}(x)\). I
 	\label{mag_crit}
 \end{figure}
 
-The magnetization is therefore discontinuous as \(h\to 0\). The non-analyticity for \(K>1\) occurs because there is at least one pair of ground state with non-zero parity \(\pi^z\) and magnetic field is able to flip one ground state into the state of opposite parity. This available space for scattering is simply the frustration that we discussed earlier. Indeed, we have checked (see fig.~\ref{mag_crit}) {\color{blue} by diagonalising numerically the star graph Hamiltonian} that the non-analyticity exists for all \(\delta \neq 0\), where \(\delta = \frac{K}{2} - S_{d}\) is the deviation from exact screening. 
+The magnetization is therefore discontinuous as \(h\to 0\). The non-analyticity for \(K>1\) occurs because there is at least one pair of ground state with non-zero parity \(\pi^z\) and magnetic field is able to flip one ground state into the state of opposite parity. This available space for scattering is simply the frustration that we discussed earlier. Indeed, we have checked (see Fig.~\ref{mag_crit}) by diagonalising numerically the star graph Hamiltonian that the non-analyticity exists for all \(\delta \neq 0\), where \(\delta = \frac{K}{2} - S_{d}\) is the deviation from exact screening. 
 Some additional results are presented in the Supplementary Materials~\cite{SM}.
 \subsection{Topological properties of ground state manifold}
 \label{sec:topo_ground_state}
@@ -705,11 +710,8 @@ For the special case $\mathcal{J}_i=\mathcal{J} \forall i$, we get the usual iso
 \end{figure}
 
 We have demonstrated this numerically for a three channel anisotropic star graph model.
-In Fig.~\ref{fig:channel-anisotropy-}(a), we show that if two couplings are kept constant and equal to one another (${\mathcal{J}}_1={\mathcal{J}}_2=1$) and the third coupling ${\mathcal{J}}_3$ is tuned from some finite value to zero, the degeneracy does not change from 3 to 2 until \(\mathcal{J}_3\) becomes zero.
-At that point, the model becomes a two channel Kondo problem.
-%{\color{red}
-We also show in Fig.~\ref{fig:channel-anisotropy-}(b) that taking the coupling ${\mathcal{J}}_3$ fixed to $1$ and varying the common coupling ${\mathcal{J}}_1={\mathcal{J}}_2$ from non-zero to zero is equivalent to keeping ${\mathcal{J}}_1={\mathcal{J}}_2=1$ fixed and taking ${\mathcal{J}}_3$ to infinity. In this case, when the coupling ${\mathcal{J}}_1={\mathcal{J}}_2=0$, the degeneracy becomes one and reveals the single channel nature of the problem.
-%}
+In Fig.~\ref{fig:channel-anisotropy-}(a), we show that if two couplings are kept constant and equal to one another (${\mathcal{J}}_1={\mathcal{J}}_2=1$) and the third coupling ${\mathcal{J}}_3$ is tuned from some finite value to zero, the degeneracy does not change from 3 to 2 until \(\mathcal{J}_3\) becomes zero. At that point, the model becomes a two channel Kondo problem. We also show in Fig.~\ref{fig:channel-anisotropy-}(b) that taking the coupling ${\mathcal{J}}_3$ fixed to $1$ and varying the common coupling ${\mathcal{J}}_1={\mathcal{J}}_2$ from non-zero to zero is equivalent to keeping ${\mathcal{J}}_1={\mathcal{J}}_2=1$ fixed and taking ${\mathcal{J}}_3$ to infinity. In this case, when the coupling ${\mathcal{J}}_1={\mathcal{J}}_2=0$, the degeneracy becomes one and reveals the single channel nature of the problem.
+
 
 The above demonstration makes it clear that the ground state degeneracy can change only when at least one of the Kondo couplings vanish. This can be realised under RG flow if one considers the anisotropic MCK model.
 \begin{align}
