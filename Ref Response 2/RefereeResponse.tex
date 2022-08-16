@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,braket}
+\usepackage[hidelinks]{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[legalpaper, portrait]{geometry}
+\DeclareUnicodeCharacter{2212}{-}
+\DeclareUnicodeCharacter{03B8}{+}
+\newcommand{\shat}{\hat{\mathbf{s}}}
+\newcommand{\pin}{\par\noindent}
+\newcommand{\response}[1]{{\color{blue}\subsection*{Response:}{#1}}}
+\renewcommand{\thesubsection}{Point \arabic{subsection}.}
+\newcommand{\point}[1]{\subsection{}{#1}}
+
+\author{Siddhartha Patra, Abhirup Mukherjee, Anirban Mukherjee, N. S. Vidhyadhiraja,\\ A. Taraphder, S Lal}
+
+\title{Referee response to BS14324 Patra}
+\begin{document}
+\maketitle
+
+We thank the referee for their comments and questions. We present our responses below (in blue).
+
+\point{While the work seems carefully done and is quite thorough, what was really achieved in the end is nothing really new or non-trivial.}
+
+\response{We believe that the following results are new and interesting additions to the knowledge of multichannel Kondo physics that are obtained from our work:
+\begin{itemize}
+	\item importance of the role of degeneracy and quantum-mechanical frustration in shaping the infrared physics of the MCK, specifically in the absence of any Fermi liquid component and the emergence of non-Fermi liquid behaviour, the thermodynamic properties, the orthogonality catastrophe, the breakdown of screening and in the strong-weak duality,
+	\item derivation of a marginal Fermi liquid effective Hamiltonian for the non-Fermi liquid fixed point, hence revealing the microscopic source of the non-Fermi liquid behaviour in the overscreened regime,
+	\item the presence of a spin Mott liquid in the effective interactions among the conduction electrons,
+	\item demonstration of the orthogonality catastrophe in the ground state through entanglement measures.
+\end{itemize}
+The observation of the Mott liquid is particularly significant because it highlights a common theme that pervades much of fermionic quantum matter - the role of zero modes in determining the infrared physics. This can be seen, for instance, in the emergence of a Mott liquid from the 2D Hubbard model as seen from a URG analysis~\cite{anirbanmott1,anirbanmott2,mukherjeeMERG2022} and a Cooper pair insulator from the reduced 2D BCS Hamiltonian~\cite{siddharthacpi}. Importantly, we have also corroborated several of our analytic and numerical results with those that exist in the literature.
+}
+
+\point{Despite the motivation from a complex RG scheme, the authors simply investigate in the end the zero bandwidth 2-channel Kondo model (2CKM),  which is the simple problem of a spin coupled to two fermions. This is already contained in the seminal paper of Nozières and Blandin in 1981. The authors claim this gives perspectives on the 2CKM fixed point, but on the contrary, the argument of Nozières and Blandin is to show that this zero-bandwidth fixed point is unstable, hence a non-trivial interacting state should arise.
+}
+
+\response{First, we point out that we have studied much more than simply the zero-bandwidth model for the 2CKM. We have already stated in response to  Point 1 above the important questions that we have answered for the MCK problem and which are beyond the purview of a zero-bandwidth model.
+
+Second, we comment on the validity of our study of the zero-bandwidth  model at the \textbf{intermediate coupling fixed point (ICFP)} of the MCK  problem. Nozieres and Blandin indeed present an argument for why the  zero-bandwidth model at the \textbf{strong coupling fixed point ($J=\infty$)}  is unstable due to the existence of non-trivial RG relevant quantum  fluctuations. The resulting RG flow of the Kondo coupling $J$ to  the ICFP resolves these quantum fluctuations. The RG stability of the  Kondo coupling $J$ at the ICFP then allows for a renormalised perturbation  theory approach to studying the fixed point Hamiltonian. Specifically, the  zero-bandwidth model can be safely extracted (in the RG sense) as the zeroth  approximation of a renormalised perturbation theory in the ratio of  the conduction bath hopping amplitude ($t$) to $J$. A study of the  zero-bandwidth model at the ICFP offers, in turn, new perspectives  into the problem, e.g., the ground state degeneracy and it's relation  to the breakdown of exact screening etc. In response to the next point, we  comment below on our ability to capture the critical corrections to this zeroth  approximation.
+}
+
+\point{While this study could have some pedagogical value per se, it is  often unnecessarily technical, and some statements are clearly incorrect. For instance, the authors failed to see that the 1/T susceptibility is a trivial feature of the zero-bandwidth toy-model, while the true 2CKM fixed point has critical corrections. I don't think these can be so easily captured by the expansion they propose.}
+
+\response{As has been shown in considerable detail in Section IV A of the  main manuscript and Section III of the supplementary materials, we have  extracted analytically the effective theory for the low-lying excitations  above the degenerate ground states of the zero-bandwidth model by carrying  out a careful renormalised pertubation theory in $t/J$ for both the 2CK and  3CK problems. We have demonstrated the non-Fermi liquid nature of these  excitations, and also confirmed their critical nature by the computation of  some thermodynamic quantities in Section IIIB for the 2CK. Indeed, we have  obtained the well-known logarithmic dependence of the specific heat and  susceptibility on temperature from our calculations. Again, this further  validates our approach.}
+
+
+\section{Some additional changes in the manuscript}
+We made the following additional changes in the manuscript, apart from those arising from the suggestions made by the referees (as mentioned above).
+\begin{itemize}
+	\item Included two new references on the CUT and similarity RG methods (Refs.75 and 76 respectively),
+	\item Updated Ref.106 (Ref.104 of the previous manuscript) from the arxiv preprint reference to the published journal reference,
+	\item Modified the acknowledgments to thank all three referees for their helpful comments.
+\end{itemize}
+
+\bibliographystyle{unsrt}
+\bibliography{../manuscript/mscript_mck_full.bib}
+\end{document}
