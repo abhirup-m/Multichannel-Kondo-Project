@@ -1,0 +1,56 @@
+\documentclass{revtex4-2}
+\usepackage{braket,amsmath,amssymb}
+\allowdisplaybreaks
+\begin{document}
+\title{Impurity entanglement entropy of 2-channel fixed point}
+\maketitle
+The zero-mode Hamiltonian at the renormalisation group fixed point is a star graph with the impurity as the central node and the zeroth sites of the two conduction channels as the outer nodes: \(H_0 = J^*\vec{S}_d\cdot\sum_{l} \vec{S}_{0,(\alpha)}\), where \(\alpha\) (and Greek letters in genral) denote the channel index. The ground-states of this \(2-\)channel star graph are
+\begin{equation}\begin{aligned}
+	\ket{\sigma/2} = \frac{\sigma}{\sqrt 6}\left( 2\ket{\sigma \bar\sigma \sigma} - \ket{\bar\sigma \sigma \sigma} - \ket{\sigma \sigma \bar\sigma}\right), \sigma=\pm 1
+\end{aligned}\end{equation}
+where three confifurations inside the ket are those of the impurity spin, the \(\alpha=1\) channel zeroth site and the \(\alpha=2\) channel zeroth site respectively.
+In the full Hamiltonian, there is also the hopping term: \(H_\text{int} = -\frac{t}{N}\sum_{k,\alpha}\left( c^\dagger_{0\sigma,(\alpha)}c_{k\sigma,(\alpha)} + \text{h.c.}\right) \). Introducing the \(k-\)space states into \(H_0\) leads to the following ground-states, classified by \(S_\text{tot}^z = S_d^z + \sum_l S_{0,l}^z + \sum_k \sum_l S_{k,l}^z\) and the filling \(\nu\) of \(k-\)space electrons:
+\begin{gather}
+	S_\text{tot}^z = 0: \begin{cases}
+	\nu=1: \ket{\sigma/2}\ket{h_{\sigma, (\alpha)}},\\
+	\nu=3: \ket{\sigma/2}\ket{e_{\bar\sigma, (\alpha)}},\\
+	\end{cases} \sigma=\pm 1, \alpha=1,2\\
+	S_\text{tot}^z = \frac{\sigma}{2}: \nu=2: \ket{\sigma/2}\ket{\phi}, \sigma=\pm 1\\
+	S_\text{tot}^z = \sigma: \begin{cases}
+	\nu=3: \ket{\sigma/2}\ket{e_{\sigma, (\alpha)}},\\
+	\nu=1: \ket{\sigma/2}\ket{h_{\bar\sigma, (\alpha)}},
+	\end{cases}  \sigma=\pm 1, \alpha=1,2
+\end{gather}
+where \(\ket{\phi}\) is the filled Fermi sea, and \(\ket{e_{\sigma, (\alpha)}}\) and \(\ket{\sigma, (\alpha)}\) are gapless particle and hole excitations: \(\ket{e_{\sigma, (\alpha)}} = \sum_{k \in FS} c^\dagger_{k\sigma,(\alpha)}\ket{\phi}, \ket{h_{\sigma, (\alpha)}} = \sum_{k \in FS} c_{k\sigma,(\alpha)}\ket{\phi}\). The filling \(\nu_1\) and \(\nu_2\) in \(\ket{\phi}\) were set to unity, so that the filling \(\nu\) of the \(\ket{e}\) and \(\ket{h}\) states are 3 and 1 respectively.
+
+In order to obtain the impurity entanglement entropy, we will use the result that the impurity reduced density matrix can be written in terms of the impurity magnetisation (\(m_d^z\)):
+\begin{equation}\begin{aligned}
+	\rho_\text{imp} = \frac{1}{2}\mathcal{I} + m_d^z \sigma^z 
+\end{aligned}\end{equation}
+where \(\sigma^z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \) is the Pauli matrix along \(z\). The problem then boils down to calculating the magnetisation \(m_d^z\). For that, we will first obtain the new ground-states in the presence of \(H_\text{int}\). After that, we will insert a global magnetic field into the new ground-state subspace, which will favour the states with the most positive \(S_\text{tot}^z\). The expectation value of \(S_d^z\) in these favoured ground-states, in the presence of a vanishing field, will be the impurity magnetisation. The fact that the subspace with highest \(S_\text{tot}^z\) will be favoured means we only need to solve \(H_\text{int}\) in the subspace of \(S_\text{tot}^z = +1\). This is because the full Hamiltonian and \(H_\text{int}\) conserve \(S_\text{tot}^z\). The pertinent ground-states are
+\begin{equation}\begin{aligned}
+	S_\text{tot}^z = 1: \begin{cases}
+	\nu=3: \begin{cases}
+		\nu_{(1)}=2: \ket{1/2}\ket{e_{\uparrow, (1)}}\\
+		\nu_{(2)}=2: \ket{1/2}\ket{e_{\uparrow, (2)}}\\
+	\end{cases}\\
+	\nu=1: \begin{cases}
+		\nu_{(1)}=0: \ket{1/2}\ket{h_{\downarrow, (1)}}\\
+		\nu_{(2)}=0: \ket{1/2}\ket{h_{\downarrow, (2)}}
+	\end{cases}
+	\end{cases} 
+\end{aligned}\end{equation}
+Since \(H_\text{int}\) conserves the filling \(\nu_{(\alpha)}\) of each channel individually, these four states are not mixed by the perturbation \(H_\text{int}\), at any order. The impurity magnetisation then reduces to
+\begin{equation}\begin{aligned}
+	m_d^z = \braket{1/2 | S_d^z | 1/2 } = \frac{1}{6}\left(4\times\frac{1}{2} - \frac{1}{2} + \frac{1}{2}\right) = \frac{1}{3}
+\end{aligned}\end{equation}
+The impurity entanglement entropy can then be obtained from \(\rho_\text{imp}\):
+\begin{equation}\begin{aligned}
+	S_\text{EE}(d) = -\left( \frac{1}{2} + m_d^z \right) \ln\left( \frac{1}{2} + m_d^z \right) - \left( \frac{1}{2} - m_d^z \right) \ln\left( \frac{1}{2} - m_d^z \right) \simeq 0.65\ln 2
+\end{aligned}\end{equation}
+
+
+
+
+
+\end{document}
