@@ -29,6 +29,59 @@
 
 \section{Additional Properties of the Star Graph}
 
+\subsection{Partition function of the zero-mode fixed-point Hamiltonian, in the presence of a magnetic field}
+The zero-mode approximation of the fixed-point Hamiltonian is a star graph Hamiltonian:
+\begin{equation}\begin{aligned}
+	H = J^* \vec{S_d}\cdot\vec{s}_\text{tot}
+\end{aligned}\end{equation}
+where \(\vec s_\text{tot} = \sum_l \vec s_l\) is the total spin operator for all the channels. We insert a magnetic field that acts only on the impurity and then attempt to diagonalize the Hamiltonian.
+\begin{equation}\begin{aligned}
+	\label{stargraph_field_hamiltonian}
+	H(h) = J^* \vec{S_d}\cdot\vec{s}_\text{tot} + h S_d^z
+\end{aligned}\end{equation}
+The Hamiltonian commutes with \(s_\text{tot}^2\):
+\begin{equation}\begin{aligned}
+\left[s_\text{tot}^2, H(h)\right] = \left[\sum_{i=x,y,z}{s^i_\text{tot}}^2, J^* \sum_{i=x,y,z} S_d^i s^i_\text{tot}\right] = \sum_{i,j}J^* S_d^i \left\{s_\text{tot}^i, \left[s_\text{tot}^i,s_\text{tot}^j\right]\right\} = \sum_{i,j}J^* S_d^i \left\{s_\text{tot}^i, i \epsilon^{ijk}s^k_\text{tot}\right\} = 0
+\end{aligned}\end{equation}
+This means the Hamiltonian is already block-diagonal in the quantum number \(s_\text{tot}\). Let us represent the quantum number of \(s_\text{tot}^z\) by \(m\). For a particular \(s_\text{tot}\), \(m\) can take values from the set \(\left[-s_\text{tot}, s_\text{tot}\right] \). The spin \(S_d^z\) can also take values \(\pm \frac{1}{2}\). From now on, we will assume we are in the subspace of a particular \(s_\text{tot} = M\), so we will ignore that quantum number and write the kets simply as \(\ket{S_d^z, m}\). So, the notation \(\ket{\uparrow,-1}\) means the state with \(S_d^z = \frac{1}{2}\) and \(m = -1\). We will now show that even inside the block of \(2\times s_\text{tot}\) (or \(2\times s_\text{tot} + 1\), depending on where it is odd or even) defined by a particular value of \(s_\text{tot}\), the Hamiltonian actually separates into decoupled \(2\times 2\) blocks. To see why, first note that the terminal states \(\ket{\downarrow, -M}\) and \(\ket{\uparrow, M}\) are already eigenstates, because they cannot scatter (the impurity can only flip down, and this would require the bath to flip up, but \(s^z_\text{tot}\) is already at its maximum value \(M\)). The other \(2M - 2\) states can be organized into \(2\times 2\) blocks formed by the states \(\ket{\uparrow, m}\) and \(\ket{\downarrow, m+1}\) for \(m \in \left[-M, M-1\right] \). The fact that this block does not interact with the other blocks can be observation: if there was some other state which when acted upon by the Hamiltonian gave a non-zero projection on \(\ket{\uparrow, m}\), it would have to come from \(S_d^z = \downarrow\), and this would mean the bath spin would have had to flip down. This means the bath spin in that state would have to be \(m+1\), and that is precisely the other state in the block. 
+
+Defining \(\epsilon^h_m = \frac{1}{2}\left(Jm + h\right) \) and \(x^M_m = M(M+1) - m(m+1)\), the \(2\times 2\) blocks can be written as
+\begin{equation}\begin{aligned}
+	H_m = \begin{pmatrix} \epsilon^h_m & \frac{J}{2}\sqrt{x^M_m} \\ \frac{J}{2}\sqrt{x^M_m} & -\left( \epsilon^h_m + J/2 \right)   \end{pmatrix} 
+\end{aligned}\end{equation}
+The eigenvalues are 
+\begin{equation}\begin{aligned}
+	\label{eigenvalue}
+	\lambda_{m, \pm}^{M, h} = \frac{1}{2}\left[-J/2 \pm \sqrt{J^2/4 + J^2 x_m^M + 4\epsilon^h_m\left(\epsilon^h_m + J/2\right) }\right] = -J/4 \pm \sqrt{J^2x^M_m/4 + \alpha^2}
+\end{aligned}\end{equation}
+where \(\alpha = \epsilon^h_m + J/4\).
+The eigenvalues of the terminal states are \(\pm\epsilon^h_{\pm M}\). For \(h = 0\), the ground state subspace is \(K-\)fold degenerate and is formed by the negative solutions of eq.~\ref{eigenvalue}. This common \(K-\)fold degenerate eigenvalue is \(-J(M+1)/2\).
+The full list of energy eigenvalues at a particular value of \(M\) is
+\begin{equation}\begin{aligned}
+\label{stargraph_spectrum}
+&		JM/2 - h/2, &&\ket{\downarrow, M, -M}, && m = -M\\
+&-J/4 \pm \sqrt{J^2x^M_m/4 + \alpha^2}, &&\left\{\ket{\uparrow, M, m}, \ket{\downarrow, M, m+1}\right\}, &&m=-M,\ldots,M-1\\
+&JM/2 + h/2, &&\ket{\uparrow, M, M},&& m = M\\
+\end{aligned}\end{equation}
+The eigenstates for each value of \(M,m\) are given by
+\begin{equation}\begin{aligned}
+	\left(\pm\frac{1}{2}\sqrt{J^2 {x_m^M}^2 + 4\alpha^2} - \frac{J}{2}\sqrt{x_m^M}\right)\ket{\uparrow, M, m} + \left(\frac{J}{2}(m+\frac{1}{2}) + \frac{h}{2}\right) \ket{\downarrow, M, m+1}
+\end{aligned}\end{equation}
+
+The partition function is
+\begin{equation}\begin{aligned}
+	Z(h) &= \sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\left(e^{-\beta \lambda_{m, +}^{M, h}} + e^{-\beta \lambda_{m, -}^{M, h}}\right) + e^{-\beta \epsilon^h_{M}} + e^{\beta \epsilon^h_{- M}}\right] \\
+	&=\sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + 2e^{-\beta JM/2}\cosh \beta h/2\right]
+\end{aligned}\end{equation}
+where \(M_\text{max} = K/2\) for a \(K-\)channel Kondo model, and \(M_\text{min} = 0\)  if \(K\) is even, otherwise \(1/2\). This is yet not the complete partition function, because we have not accounted for the possibility that there multiple subspaces of \(M\). For example, the \(K=3\) case states can be obtained by adding the third spin-half onto the states \(S=0,1\). \(S=0\) gives \(s_\text{tot}=1/2\) and \(S=1\) gives \(s_\text{tot} = 1/2, 3/2\). So, \(s_\text{tot} = 1/2\) appears twice. These two subspaces are actually orthogonal, because the quantum numbers for the individual channels are different. We need to count the number of instances of a particular subspace \(s_\text{tot}=M\). It turns out that this number is given by
+\begin{equation}\begin{aligned}
+	r^K_M = {}^{K-1}C_{K/2 - M}
+\end{aligned}\end{equation}
+which means the correct partition function is
+\begin{equation}\begin{aligned}
+	Z(h) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + 2e^{-\beta JM/2}\cosh \beta h/2\right]
+\end{aligned}\end{equation}
+
 \subsection{Energy lowering due to quantum fluctuations}
 The star graph Hamiltonian that sits at the heart of the RG fixed point Hamiltonian of the multichannel Kondo model contains a classical Ising term and a quantum fluctuation term:
 \begin{equation}\begin{aligned}
@@ -298,7 +351,7 @@ We also calculated the Wilson ratio $C_{imp}/T\chi$, and we find that taking up 
 parcollet_olivier_large_N,affleck_2005,emery_kivelson,clarke_giamarchi_1993,zarand_2000,
 vondelft_prl_1998,schofield_1997,bullaNRGreview,affleck_pang_cox_1992,pang_cox_1991,
 andrei_destri_1984,Tsvelick1984,Tsvelick_1985,andrei_jerez_1995,zarand_costi_2002,
-sengupta_1994,fabrizio_nozieres_1995,Coleman_tsvelik,fabrizio_gogolin_1995}. We find that taking less number of sites leads to a lower value of \(W\), which shows that taking more number of sites will lead to a value of \(W\) that is lower than \(8.3\) and closer to \(8/3\). 
+sengupta_1994,fabrizio_nozieres_1995,Coleman_tsvelik,fabrizio_gogolin_1995}. We find that taking less number of sites leads to a {\color{blue} yet higher} value of \(W\), which shows that taking more number of sites will lead to a value of \(W\) that is lower than \(8.3\) and closer to \(8/3\). 
 
 \subsection{Three channel LEH}
 Similar to the two channel case, we here calculate the low energy effective Hamiltonian for three channel Kondo problem by introducing the real space hopping on top of the zero mode three-channel star graph model. This zero mode three channel star graph model has three fold degenerate ground states with total $2^4=16$ states in the eigenspectrum. The three degenerate ground states are given as 
