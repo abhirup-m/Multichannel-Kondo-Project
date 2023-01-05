@@ -1,4 +1,4 @@
-\documentclass[reprint,prb,superscriptaddress]{revtex4-2}
+\documentclass[superscriptaddress]{revtex4-2}
 \usepackage{braket,amsmath,amssymb,graphicx,float,color,ulem,soul,lipsum}
 \usepackage[hidelinks]{hyperref}
 \bibliographystyle{apsrev4-2}
@@ -218,12 +218,12 @@ The expectation value is calculated in the ground state. Since the inner product
 
 \subsection{Impurity magnetization and susceptibility}
 \label{sec:imp_suscept}
-In order to obtain the magnetic susceptibility, we insert a magnetic field that acts only on the impurity and then diagonalize the Hamiltonian
+The impurity magnetic susceptibility can be obtained by diagonalising the zero-mode Hamiltonian \(H(h)\) in the presence of a local magnetic field \(h\) on the impurity:
 \begin{align}
 	\label{star graph_field_hamiltonian}
 	H(h) = {\mathcal{J}^*} \vec{S_d}\cdot\vec{S} + h S_d^z~.
 \end{align}
-The Hamiltonian commutes with \(S\), so it is already block-diagonal in terms of the eigenvalues \(M\) of \(S\). \(M\) takes values in the range \(\left[M_\text{min}, M_\text{max}\right]\), where \(M_\text{max} = K/2\) for a \(K-\)channel Kondo model, and \(M_\text{min} = 0\)  if \(K\) is even, otherwise \(\frac{1}{2}\). Defining \(\alpha = \frac{1}{2}\left({\mathcal{J}}m + h\right) + \frac{{\mathcal{J}}}{4}\) and \(x^M_m = M(M+1) - m(m+1)\), the partition function can be written as
+The Hamiltonian commutes with \(\vec S\), so it is already block-diagonal in terms of the eigenvalues \(M\) of \(S\). \(M\) takes values in the range \(\left[M_\text{min}, M_\text{max}\right]\), where \(M_\text{max} = K/2\) for a \(K-\)channel Kondo model, and \(M_\text{min} = 0\)  if \(K\) is even, otherwise \(\frac{1}{2}\). The diagonalisation of the Hamiltonian is shown in the Supplementary Materials~\cite{SM}. Defining \(\alpha = \frac{1}{2}\left({\mathcal{J}}m + h\right) + \frac{{\mathcal{J}}}{4}\) and \(x^M_m = M(M+1) - m(m+1)\), the partition function can be written as
 \begin{eqnarray}
 Z(h) &=&\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\bigg[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta \frac{{\mathcal{J}}}{4}}\cosh \beta\sqrt{{\mathcal{J}}^2x^M_m/4 + \alpha^2} \nonumber\\
 &&\hspace{2cm}+ 2e^{-\beta {\mathcal{J}}M/2}\cosh \beta h/2\bigg]~.
@@ -233,12 +233,7 @@ To calculate the impurity magnetic susceptibility, we will use the expression
 \begin{align}
 	\chi = \frac{1}{\beta}\lim_{h \to 0}\left[\frac{Z^{\prime\prime}(h)}{Z(h)} - \left(\frac{Z^{\prime}(h)}{Z(h)}\right)^2 \right] ~,
 \end{align}
-where the \(\prime\) indicates derivative with respect to \(h\). At low temperatures, the derivatives are 
-\begin{align}
-	Z &\to 2 r^K_{M_\text{max}} M_\text{max} e^{\beta \frac{J}{2}(M_\text{max} + 1)}~,\\
-	Z^{\prime \prime} &\to r^K_{M_\text{max}}\left(\frac{\beta }{2(M_\text{max} + \frac{1}{2})}\right)^2 e^{\beta \frac{J}{2}(M_\text{max} + 1)}\Sigma_{M_\text{max}}~,
-\end{align}
-such that the susceptibility is
+where the \(\prime\) indicates derivative with respect to \(h\). At low temperatures, the susceptibility takes the form
 \begin{equation}
 	\chi \to \frac{\beta\Sigma_\text{max}}{2M_\text{max}\left(2M_\text{max}+1\right)^2} = \frac{\beta(K-1)}{12(K+1)} \sim \frac{1}{T}~.
 \end{equation}
@@ -254,24 +249,17 @@ The \(\chi\) is seen to diverge as \(T^{-1}\) at low temperatures.
 Such a non-analyticity in a response function is in contrast to the behaviour in the exactly-screened fixed point where the ground state is unique.
 There, the susceptibility becomes constant at low temperatures: \(\chi(T\to 0) = \frac{W}{4 T_K}\), \(T_K\) being the single-channel Kondo temperature and \(W\) the Wilson number \cite{wilson1975renormalization,nozieres1974fermi,bullaNRGreview,kondo_urg}.
 In Fig.~\ref{fig:suseptibility_impurity}, we have checked the case of general spin-\(S_{d}\) impurity by diagonalising the star graph Hamiltonian numerically, and the general conclusion is that all exactly-screened models show a constant impurity susceptibility at \(T \to 0\), while the over-screened and under-screened cases show a diverging impurity susceptibility in the same limit.
-A similar divergence is also seen in the susceptibility of the outer spins, calculated by inserting a magnetic field purely on the outer spins.
+A similar divergence is also seen in the susceptibility of the outer spins, calculated by inserting a magnetic field purely on the outer spins. Some additional results regarding susceptibility are presented in the Supplementary Materials~\cite{SM}.
 
-A second non-analyticity arises when we consider the impurity free energy and the magnetization. The thermal free energy is given by
+Departure from single-channel behaviour is most apparent in the presence of the highly polarised states \(\ket{J^z=\pm \frac{K-1}{2}}\) in the ground-state spectrum,
 \begin{equation}\begin{aligned}
-	F(h) = -\frac{1}{\beta}\ln Z(h) = -\frac{1}{\beta}\ln\sum_{E_n}e^{-\beta E_n}~.
+	\ket{J^z=\sigma \frac{K-1}{2}} = \frac{1}{\sqrt{1 + K}} \ket{\sigma}_d\otimes\ket{S^z=\sigma(\frac{K}{2}-1)} - \frac{\sqrt K}{\sqrt{1 + K}}\ket{\bar\sigma}_d\otimes\ket{S^z=\sigma\frac{K}{2}}~, ~ ~ \sigma=\pm 1~,
 \end{aligned}\end{equation}
-At \(T \to 0\), only the most negative energy \(E_\text{min}\) survives. The minimal energy eigenvalue is
+where \(\ket{\sigma}_d\) represents the up and down configurations of the impurity spin and \(\ket{S^z}\) represents the configuration of the bath spins. These states lead to large unquenched magnetisation at zero temperatures. These states lead to singular behaviour of the impurity magnetisation in vanishing field, \(m(h=0^\pm)\). In the presence of a field, the ground-state becomes unique: \(\ket{\psi}_\text{gs}(h) = \theta(h)\ket{J^z=\frac{K-1}{2}} + \theta(-h)\ket{J^z=-\frac{K-1}{2}}\), and the impurity magnetisation can be calculated from the state:
 \begin{equation}\begin{aligned}
-	E_\text{min} = - \frac{J}{4} - \frac{1}{2}\sqrt{J^2(K+1)^2/4 + h^2 + |h|J(K-1)}~.
+	m(h=0^\pm) = \theta(h)\bra{J^z=\frac{K-1}{2}} S_d^z \ket{J^z=\frac{K-1}{2}} + \theta(-h)\bra{J^z=-\frac{K-1}{2}}S_d^z\ket{J^z=-\frac{K-1}{2}} = \pm  \frac{1}{2} \frac{1-K}{1 + K}
 \end{aligned}\end{equation}
-The first derivative of the free energy with respect to the field gives
-\begin{equation}\begin{aligned}
-	F^\prime(h\neq 0, T\to 0) =- \frac{2h + J(K-1)\text{sign}(h)}{4\sqrt{\frac{J^2}{4}(K+1)^2 + h^2 + |h|J(K-1)}}~.
-\end{aligned}\end{equation}
-There we used the result that the derivative of \(|x|\) is \(\text{sign}(x)\). If we now take \(h\) to zero from both directions, we get the magnetization of the impurity
-\begin{equation}\begin{aligned}
-	m = F^\prime(h \to 0^\pm, T\to 0) = \mp \frac{1}{2}\frac{(K-1)}{(K+1)}~.
-\end{aligned}\end{equation}
+
 \begin{figure}[!htpb]
 	\centering
 	\includegraphics[width=0.49\textwidth]{discmagimpgen.pdf}
@@ -279,8 +267,14 @@ There we used the result that the derivative of \(|x|\) is \(\text{sign}(x)\). I
 	\label{mag_crit}
 \end{figure}
 
-The magnetization is therefore discontinuous as \(h\to 0\). The non-analyticity for \(K>1\) occurs because there is at least one pair of ground state with non-zero parity \(\pi^z\) and magnetic field is able to flip one ground state into the state of opposite parity. This available space for scattering is simply the frustration that we discussed earlier. Indeed, we have checked (see Fig.~\ref{mag_crit}) by diagonalising numerically the star graph Hamiltonian that the non-analyticity exists for all \(\delta \neq 0\), where \(\delta = \frac{K}{2} - S_{d}\) is the deviation from exact screening. 
-Some additional results are presented in the Supplementary Materials~\cite{SM}.
+The magnetization is therefore discontinuous as \(h\to 0\) when \(K>1\). The non-analyticity occurs because the magnetic field is able to flip the \(J^z=\pm (K-1)/2\) state into the state of the opposite magnetisation. This available space for scattering is simply the frustration that we discussed earlier. Indeed, we have checked (see Fig.~\ref{mag_crit}) by diagonalising numerically the star graph Hamiltonian that the non-analyticity exists for all \(\delta \neq 0\), where \(\delta = \frac{K}{2} - S_{d}\) is the deviation from exact screening. 
+
+These polarised states can also be used to obtain the scattering phase shift suffered by the conduction channels at the Fermi surface. As shown in the Supplementary Materials~\cite{SM}, the impurity-bath hybdridisation in the polarised states contribute an excess charge of \(n_\text{exc}^{(l)} = 1/K\) to each conduction channel. Following Friedel's sum rule, this leads to a total scattering phase shift of \(\pi/K\) for each channel:
+\begin{equation}\begin{aligned}
+	\delta^{(l)} = \pi n_\text{exc}^{(l)} = \frac{\pi}{K}, ~ ~ l \in \left[1, K\right] 
+\end{aligned}\end{equation}
+In later parts of the work, we will show that this phase shift are linked to the critical non-Fermi liquid exponents of thermodynamic quantities at the fixed point.
+
 \subsection{Topological properties of ground state manifold}
 \label{sec:topo_ground_state}
 We now present the non-local twist and translation operators which can be used to explore the degenerate ground state manifold of the star graph model.

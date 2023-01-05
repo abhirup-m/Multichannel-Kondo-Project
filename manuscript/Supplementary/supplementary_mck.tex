@@ -56,22 +56,20 @@ The eigenvalues are
 \end{aligned}\end{equation}
 where \(\alpha = \epsilon^h_m + J/4\).
 The eigenvalues of the terminal states are \(\pm\epsilon^h_{\pm M}\). For \(h = 0\), the ground state subspace is \(K-\)fold degenerate and is formed by the negative solutions of eq.~\ref{eigenvalue}. This common \(K-\)fold degenerate eigenvalue is \(-J(M+1)/2\).
-The full list of energy eigenvalues at a particular value of \(M\) is
+The full list of energy eigenvalues at a particular value of \(M\) (characterised by the total spin operator \(J^z = S_d^z + s_\text{tot}^z\)) is
 \begin{equation}\begin{aligned}
 \label{stargraph_spectrum}
-&		JM/2 - h/2, &&\ket{\downarrow, M, -M}, && m = -M\\
-&-J/4 \pm \sqrt{J^2x^M_m/4 + \alpha^2}, &&\left\{\ket{\uparrow, M, m}, \ket{\downarrow, M, m+1}\right\}, &&m=-M,\ldots,M-1\\
-&JM/2 + h/2, &&\ket{\uparrow, M, M},&& m = M\\
+&		JM/2 - h/2, &&\ket{J=M+\frac{1}{2},J^z=-M-\frac{1}{2},s_\text{tot}=M}, && m = -M\\
+&-J/4 \pm \sqrt{J^2x^M_m/4 + \alpha^2}, &&\ket{J=M-\frac{1}{2},J^z=m+\frac{1}{2},s_\text{tot}=M}, &&m=-M,\ldots,M-1\\
+&JM/2 + h/2, &&\ket{J=M+\frac{1}{2},J^z=M+\frac{1}{2},s_\text{tot}=M},&& m = M\\
 \end{aligned}\end{equation}
-The eigenstates for each value of \(M,m\) are given by
+The eigenstates for each value of \(M,m\) in the \(J=M-\frac{1}{2}\) sector are given by
 \begin{equation}\begin{aligned}
-	\left(\pm\frac{1}{2}\sqrt{J^2 {x_m^M}^2 + 4\alpha^2} - \frac{J}{2}\sqrt{x_m^M}\right)\ket{\uparrow, M, m} + \left(\frac{J}{2}(m+\frac{1}{2}) + \frac{h}{2}\right) \ket{\downarrow, M, m+1}
+	\ket{M-\frac{1}{2},m+\frac{1}{2},M} =\mathcal{C}_\pm \ket{\uparrow, M, m} \pm \sqrt{1 - \mathcal{C}_\pm^2} \ket{\downarrow, M, m+1}, ~ ~ \mathcal{C}_\pm = \frac{J\sqrt{x_m^M}/2}{\sqrt{J^2 x_m^M/4 + \left(\alpha \mp \sqrt{\alpha^2 + J^2 x_m^M/4}\right)^2 }}
 \end{aligned}\end{equation}
-
-The partition function is
+The partition function is given by
 \begin{equation}\begin{aligned}
-	Z(h) &= \sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}\left(e^{-\beta \lambda_{m, +}^{M, h}} + e^{-\beta \lambda_{m, -}^{M, h}}\right) + e^{-\beta \epsilon^h_{M}} + e^{\beta \epsilon^h_{- M}}\right] \\
-	&=\sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + 2e^{-\beta JM/2}\cosh \beta h/2\right]
+	Z(h) = \sum_{M=M_\text{min}}^{M_\text{max}}\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + 2e^{-\beta JM/2}\cosh \beta h/2\right]
 \end{aligned}\end{equation}
 where \(M_\text{max} = K/2\) for a \(K-\)channel Kondo model, and \(M_\text{min} = 0\)  if \(K\) is even, otherwise \(1/2\). This is yet not the complete partition function, because we have not accounted for the possibility that there multiple subspaces of \(M\). For example, the \(K=3\) case states can be obtained by adding the third spin-half onto the states \(S=0,1\). \(S=0\) gives \(s_\text{tot}=1/2\) and \(S=1\) gives \(s_\text{tot} = 1/2, 3/2\). So, \(s_\text{tot} = 1/2\) appears twice. These two subspaces are actually orthogonal, because the quantum numbers for the individual channels are different. We need to count the number of instances of a particular subspace \(s_\text{tot}=M\). It turns out that this number is given by
 \begin{equation}\begin{aligned}
@@ -81,6 +79,28 @@ which means the correct partition function is
 \begin{equation}\begin{aligned}
 	Z(h) &=\sum_{M=M_\text{min}}^{M_\text{max}}r^K_M\left[\sum_{m=-M, \atop{m\in \mathbb{Z}}}^{M-1}2e^{\beta J/4}\cosh \beta\sqrt{J^2x^M_m/4 + \alpha^2} + 2e^{-\beta JM/2}\cosh \beta h/2\right]
 \end{aligned}\end{equation}
+
+\subsection{Features of the polarised ground-states}
+Of particular importance within the ground-state subspace are the zero-field maximally-polarised states, obtained by choosing \(M = \frac{K}{2}, m + \frac{1}{2}= \pm \left( M - \frac{1}{2} \right) =\pm \frac{1}{2}\left(K-1\right)\):
+\begin{equation}\begin{aligned}
+	\ket{J=\frac{K-1}{2},J^z= \frac{\sigma}{2}\left(K-1\right),s_\text{tot}=\frac{K}{2}} = \frac{1}{\sqrt{1 + K}} \ket{\sigma}_d\otimes\ket{s_\text{tot}^z=\sigma(\frac{K}{2}-1)} - \frac{\sqrt K}{\sqrt{1 + K}}\ket{\bar\sigma}_d\otimes\ket{s_\text{tot}^z=\sigma\frac{K}{2}},
+\end{aligned}\end{equation}
+where \(\sigma\) can take values \(\pm 1\) and \(\ket{\sigma}_d\) represents the up and down configurations of the impurity spin. The state \(\ket{s_\text{tot}^z=\frac{\sigma K}{2}}\) has all the bath spins pointing in the \(\sigma-\)direction: \(\ket{s_\text{tot}^z=\frac{\sigma K}{2}} = \ket{\sigma,\sigma,\ldots,\sigma} (\sigma=\uparrow \text{ or }\downarrow)\), where the notation is such that a particular symbol (say \(\uparrow\)) at the \(i^\text{th}\) position indicates the configuration of the \(i^\text{th}\) channel. The other state \(\ket{s_\text{tot}^z=\sigma(\frac{K}{2} - 1)}\) can be obtained by flipping any one out of the \(K\) spins in the previous state \(\ket{s_\text{tot}^z=\frac{\sigma K}{2}}\), leading to the normalised state \(\ket{s_\text{tot}^z=\sigma(\frac{K}{2} - 1)} = \frac{1}{\sqrt K}\ket{\bar\sigma,\sigma,\ldots,\sigma} + \frac{1}{\sqrt K}\ket{\sigma,\bar\sigma,\ldots,\sigma} + \ldots + \frac{1}{\sqrt K}\ket{\sigma,\sigma\ldots,\bar\sigma}\), a linear combination of all possible states with the spin of one channel in \(\bar\sigma(=-\sigma)\) direction and all other channels remaining in the \(\sigma\) direction. With these in mind, the polarised state can be cast in the more explicit form
+\begin{equation}\begin{aligned}
+	\hspace*{-15pt}\ket{J^z= \frac{\sigma}{2}\left(K-1\right)} = \frac{1}{\sqrt{K(1 + K)}} \left[\ket{\sigma}_d\otimes\left(\ket{\bar\sigma,\sigma,\ldots,\sigma} + \ket{\sigma,\bar\sigma,\ldots,\sigma} + \ldots + \ket{\sigma,\sigma\ldots,\bar\sigma}\right) - K\ket{\bar\sigma}_d\otimes \ket{\sigma,\sigma,\ldots,\sigma}\right].\label{polarised-state}
+\end{aligned}\end{equation}
+
+In order to make the frustration faced by the impurity manifest, we now rewrite these polarised states in the form of superpositions of zero magnetisation singlet states. Let us define the singlet state \(\ket{\text{SS}_{d,l}} = \frac{1}{\sqrt 2}\left(\ket{\uparrow}_d\ket{\downarrow}_l - \ket{\downarrow}_d\ket{\uparrow}_l\right),l\in[1,K]\), between the impurity spin and the \(l^\text{th}\) channel, where \(\ket{\cdot}_l\) represents the configuration of the spin in the \(l^\text{th}\) channel. The polarised states can then be written as
+\begin{equation}\begin{aligned}
+	\ket{J^z= \frac{\sigma}{2}\left(K-1\right)} = \frac{1}{\sqrt{K(1 + K)}} \sum_{l=1}^K\ket{\sigma}_d\otimes\left[\ket{\bar\sigma}_l - \ket{\sigma}_l\right] \otimes\ket{\sigma,\ldots,\sigma}_{l^\prime} = \frac{\sqrt 2}{\sqrt{K(1 + K)}} \sum_{l=1}^K \ket{\text{SS}_{d,l}}\otimes\ket{\sigma,\ldots,\sigma}_{l^\prime}.\label{singlet-chain}
+\end{aligned}\end{equation}
+This form of the state shows that the impurity is trying to participate, simultaneously, in forming \(K\) number of singlets. Put differently, the presence of \(K\) singlets shows that all \(K\) channels are trying to screen the impurity simultaneously. However, the presence of an overall non-zero magnetisation in the states means that the screening is only partial.
+
+From these polarised states, one can now calculate the ``excess charge" supplied by the impurity site to the conduction bath in the form of gapless excitations. For this, we first note that the form Eq.~\ref{singlet-chain} of the polarised state shows that all the individual terms in the more explicit form of Eq.~\ref{polarised-state} involve the impurity hybridising with the bath. In Eq.~\ref{polarised-state}, each term of the form \(\ket{\sigma}_d\otimes\ket{\bar\sigma}_l\otimes\ket{\sigma,\ldots,\sigma}_{l^\prime}\) participates in exactly one singlet \(\ket{\text{SS}_{d,l}}\) and therefore involves hybridisation between the impurity and only the \(l^\text{th}\) channel. Each such term therefore contributes an excess charge \(n_\text{exc}^{(l)}\) of unity to the \(l^\text{th}\) conduction channel and none to the other channels: \(n_\text{exc}^{(l)} = 1 = 1 - n_\text{exc}^{(l^\prime)}\). The final term \(\ket{\bar\sigma}_d\otimes \ket{\sigma,\sigma,\ldots,\sigma}\) in Eq.~\ref{polarised-state} participates in all \(K\) singlets, and therefore involves hybridisation with all the channels. This term therefore contributes the entire excess charge of unity across all the channels, which results in an excess charge contribution of \(n_\text{exc}^{(l)}=1/K\) to each channel. With these in mind, the total excess charge contributed to each channel from the state in Eq.~\ref{polarised-state} is
+\begin{equation}\begin{aligned}
+	n_\text{exc}^{(l)} = \frac{1}{K(1+K)}\left[1 + K^2 \times \frac{1}{K}\right] = \frac{1}{K}
+\end{aligned}\end{equation}
+
 
 \subsection{Energy lowering due to quantum fluctuations}
 The star graph Hamiltonian that sits at the heart of the RG fixed point Hamiltonian of the multichannel Kondo model contains a classical Ising term and a quantum fluctuation term:
