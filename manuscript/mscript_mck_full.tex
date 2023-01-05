@@ -1,7 +1,7 @@
 \documentclass[superscriptaddress]{revtex4-2}
 \usepackage{braket,amsmath,amssymb,graphicx,float,color,ulem,soul,lipsum}
 \usepackage[hidelinks]{hyperref}
-\bibliographystyle{apsrev4-2}
+\bibliographystyle{apsrev4-1}
 \begin{document}
 
 \title{Frustration shapes multi-channel Kondo physics: a star graph perspective}
@@ -257,7 +257,7 @@ Departure from single-channel behaviour is most apparent in the presence of the 
 \end{aligned}\end{equation}
 where \(\ket{\sigma}_d\) represents the up and down configurations of the impurity spin and \(\ket{S^z}\) represents the configuration of the bath spins. These states lead to large unquenched magnetisation at zero temperatures. These states lead to singular behaviour of the impurity magnetisation in vanishing field, \(m(h=0^\pm)\). In the presence of a field, the ground-state becomes unique: \(\ket{\psi}_\text{gs}(h) = \theta(h)\ket{J^z=\frac{K-1}{2}} + \theta(-h)\ket{J^z=-\frac{K-1}{2}}\), and the impurity magnetisation can be calculated from the state:
 \begin{equation}\begin{aligned}
-	m(h=0^\pm) = \theta(h)\bra{J^z=\frac{K-1}{2}} S_d^z \ket{J^z=\frac{K-1}{2}} + \theta(-h)\bra{J^z=-\frac{K-1}{2}}S_d^z\ket{J^z=-\frac{K-1}{2}} = \pm  \frac{1}{2} \frac{1-K}{1 + K}
+	m(h=0^\pm) = \theta(h)\bra{J^z=\frac{K-1}{2}} S_d^z \ket{J^z=\frac{K-1}{2}} + \theta(-h)\bra{J^z=-\frac{K-1}{2}}S_d^z\ket{J^z=-\frac{K-1}{2}} = \pm  \frac{1}{2} \frac{1-K}{1 + K}\label{imp-magnetisation}~.
 \end{aligned}\end{equation}
 
 \begin{figure}[!htpb]
@@ -273,7 +273,12 @@ These polarised states can also be used to obtain the scattering phase shift suf
 \begin{equation}\begin{aligned}
 	\delta^{(l)} = \pi n_\text{exc}^{(l)} = \frac{\pi}{K}, ~ ~ l \in \left[1, K\right] 
 \end{aligned}\end{equation}
-In later parts of the work, we will show that this phase shift are linked to the critical non-Fermi liquid exponents of thermodynamic quantities at the fixed point.
+For \(K > 1\), each channel therefore experiences an unrenormalised phase shift of value between \(0\) and \(\pi\) that, as we will show in a later section, is responsible for the non-Fermi liquid behaviour. For example, we will show that this phase shift are linked to the critical non-Fermi liquid exponents of thermodynamic quantities at the fixed point. Right now, some evidence of this role of the phase shift can be provided through its relation to the vanishing field impurity magnetisation \(m\) obtained in eq.~\ref{imp-magnetisation}:
+\begin{equation}\begin{aligned}
+	m(h=0^\pm) = \pm \frac{1}{2} \frac{\delta^{(l)} - \pi}{\delta^{(l)} + \pi}~.
+\end{aligned}\end{equation}
+When the phase shift \(\delta^{(l)}\) acquires a fractional value (in units of \(\pi\)), the impurity magnetisation also becomes fractional (in units of \(\frac{1}{2}\)). This shows that the unrenormalised phase shift value \(0 < \delta^{(l)} < \pi\) is at the heart of the quantum frustration present in the star graph (and therefore the MCK problem) that neither allows the impurity to be screened, nor allows it to decouple from the conduction channels. The decoupling only happens in the limit of extreme screening \((K \to \infty)\), and the impurity spin then becomes a local moment.
+
 
 \subsection{Topological properties of ground state manifold}
 \label{sec:topo_ground_state}
