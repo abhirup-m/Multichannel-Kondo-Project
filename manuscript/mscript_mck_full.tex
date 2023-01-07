@@ -1,6 +1,7 @@
 \documentclass{iopart}
 \usepackage{iopams}  
-\usepackage{braket,graphicx,amsmath,hyperref}
+\usepackage{braket,graphicx,amsmath}
+\usepackage[hidelinks]{hyperref}
 \bibliographystyle{unsrt}
 \begin{document}
 
@@ -25,8 +26,6 @@ A study of channel anisotropy under renormalisation flow reveals a series of qua
 
 \end{abstract}
 
-% \maketitle
-
 \ioptwocol
 
 \section{Introduction}
@@ -41,7 +40,6 @@ More recently, it has become possible to tune a two-channel quantum dot system a
 
 The importance of ground state degeneracy and quantum-mechanical \textit{frustration} in the MCK problem has not received sufficient attention, even though they play crucial roles in determining the quantum criticality and associated non-Fermi liquid physics of the system. This is, at least partially, due to the lack of an intermediate-coupling effective Hamiltonian that describes the low-energy physics of the MCK (i.e., reveals the nature of the excitations). Frustration in this context refers to the inability of the impurity spin to bind with the conduction channels, and be screened completely by forming a maximally-entangled singlet ground state. The absence of such frustration in the single-channel spin-1/2 Kondo model (and more generally, the exact screening variant of the MCK) means that imperfect screening \((K \neq 2S_d)\) leads to dramatic differences in the multi-channel models. Indeed, we demonstrate that there exists an orthogonality catastrophe in the imperfectly screened MCK models that leads to the non-Fermi liquid behaviour of its low-energy excitations, and that this is directly related to the existence of a degenerate ground state manifold. The effects of these non-Fermi liquid low energy excitations are expected to appear in measures of many-particle entanglement; the lack of an intermediate coupling Hamiltonian has, however, prevented the study of the renormalisation group (RG) evolution of such measures~\cite{alkurtass_affleck_2016,kim_shim_2021}. 
 Importantly, our approach enables a comparison of, for instance, the inter-channel mutual information along the RG flow and as functions of the excitation energies, providing insight into the nature of the fixed point theory.
-%}
 
 To obtain the RG flow of the MCK model, we have employed the unitary renormalization group (URG) technique developed recently by  some of us~\cite{anirbanurg1,anirbanurg2}. The method has been applied on several fermionic and spin problems like the single-channel Kondo model~\cite{kondo_urg}, the kagome antiferromagnet~\cite{santanukagome}, the 1D~\cite{1dhubjhep} and 2D Hubbard models~\cite{anirbanmott1,anirbanmott2,mukherjeeMERG2022}, the reduced-BCS model~\cite{siddharthacpi} as well as other generalised models of interacting electrons with and without translation invariance~\cite{anirbanurg2}.
 The URG proceeds by resolving the number fluctuations in the electronic Fock states at high energies by the iterative application of many-particle unitary transformations, leading to their successive decoupling from the states lying at lower energies. Applying this URG method to the channel-isotropic MCK model leads to a low-energy fixed point Hamiltonian at the intermediate (Kondo) coupling fixed point of Ref.\cite{Noz_blandin_1980}. In further analysing the effective Hamiltonian, we focus initially on the zero bandwidth limit of this Hamiltonian (which corresponds to a frustrated quantum spin model on a star graph). We show thereby that several important properties of the MCK problem, such as the ground state degeneracy and breakdown of screening, can be understood from the zero bandwidth problem.
@@ -71,16 +69,14 @@ For the sake of brevity, some supporting evidence and details of certain lengthy
 We start with the \(K\)- conduction channel Kondo model Hamiltonian with isotropic couplings \cite{Noz_blandin_1980}:
 \begin{eqnarray}
 	\label{mc_ham}
-	H = \sum_l\bigg[\sum_{\substack{k\\\alpha=\uparrow,\downarrow}}\epsilon_{k,l} \hat n_{k\alpha,l} + \frac{\mathcal{J}}{2}\sum_{\substack{kk^\prime\\\alpha,\alpha^\prime= \uparrow,\downarrow}} \vec{S_d}\cdot\vec{\sigma}_{\alpha\alpha^\prime}c_{k\alpha,l}^\dagger c_{k^\prime\alpha^\prime, l}\bigg]~,~~
+	\hspace*{-5pt}H = \sum_{\substack{l,k\\\alpha=\uparrow,\downarrow}}\epsilon_{k,l} \hat n_{k\alpha,l} + \frac{\mathcal{J}}{2}\sum_{\substack{l,kk^\prime\\\alpha,\alpha^\prime= \uparrow,\downarrow}} \vec{S_d}\cdot\vec{\sigma}_{\alpha\alpha^\prime}c_{k\alpha,l}^\dagger c_{k^\prime\alpha^\prime, l}~,
 \end{eqnarray}
 where \(\mathcal{J}\) is the Kondo spin-exchange coupling, \(c_{k\alpha,l}\) is the fermionic field operator at momentum \(k\), spin \(\alpha\) and channel \(l\), \(\epsilon_{k,l}\) represents the dispersion of the \(l^\mathrm{th}\) conduction channel, \(\vec \sigma\) is the vector of Pauli matrices and \(\vec S_d = \frac{1}{2}\vec \sigma_d\) is the impurity spin operator. Here, \(l\) sums over the \(K\) channels of the conduction bath, \(k,k^\prime\) sum over all the momentum states of the bath and \(\alpha,\alpha^\prime\) sum over the two spin indices of a single electron.
 
 We now perform a renormalisation group analysis of the MCK Hamiltonian using the recently developed URG method \cite{anirbanmott1,anirbanmott2,anirbanurg1,anirbanurg2,siddharthacpi,santanukagome,1dhubjhep}.
 The RG proceeds {by applying unitary transformations in order to block-diagonalize the Hamiltonian by removing number fluctuations of the high energy degrees of freedom}.
 At the $j^{th}$ RG step, we focus on decoupling the highest energy electronic state denoted by $\ket{j}$.
-%Given the most energetic electronic state at the \(j^\mathrm{th}\) RG step is \(\ket{j}\) and defined by the energy \(D_{(j)}\), 
 The Hamiltonian will in general not conserve the number of particles in this state: \(\left[H_{(j)}, \hat n_{j}\right] \neq 0\), and the unitary transformation \(U_{(j)}\) causes this number fluctuation to vanish
-%at the next RG step
 ~\cite{anirbanurg1,anirbanurg2}:
 \begin{eqnarray}
 	H_{(j-1)} = U_{(j)} H_{(j)} U^\dagger_{(j)}~, ~\left[H_{(j-1)}, \hat n_{j}\right] =0~.
@@ -143,7 +139,7 @@ We will first study the zero bandwidth limit of the fixed point Hamiltonian, obt
 At the last step, we defined the total bath local spin operator \(S = \sum_l \vec{S}_l = \frac{1}{2}\sigma_l = \frac{1}{2}\sum_{kk^\prime}^*\sum_{\alpha\alpha^\prime}\vec{\sigma}_{\alpha\alpha^\prime}c_{k\alpha,l}^\dagger c_{k^\prime\alpha^\prime, l}\).
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=0.30\textwidth]{stargraph.pdf}
+	\includegraphics[width=0.35\textwidth]{stargraph.pdf}
 	\caption{Zero bandwidth limit of the fixed point Hamiltonian. The central yellow node is the impurity; it is interacting with the \(K\) green outer nodes that represent the local spins of the channels.}
 	\label{fig:star graph}
 \end{figure}
@@ -188,7 +184,7 @@ Durganandini_2011}, while the first regime has a unique ground state with \(g^S_
 described by a local Fermi liquid (LFL) phase ~\cite{wilson1975,nozieres1974fermi,Noz_blandin_1980,andreiKondoreview,tsvelickKondoreview}, thereby substantiating the claim that a degeneracy greater than unity is closely tied to non-Fermi liquid physics.
 
 We now comment on the validity of our study of the zero-bandwidth  model at the intermediate coupling fixed point (ICFP) of the MCK  problem. Nozieres and Blandin indeed present an argument for why the  zero-bandwidth model at the strong coupling fixed point ($J =\infty$)  is unstable due to the existence of non-trivial RG relevant quantum  fluctuations~\cite{Noz_blandin_1980}. The resulting RG flow of the Kondo coupling $J$ to  the ICFP resolves these quantum fluctuations. The RG stability of the  Kondo coupling $J$ at the ICFP then allows for a renormalised perturbation  theory approach to studying the fixed point Hamiltonian. Specifically, the  zero-bandwidth model can be safely extracted (in the RG sense) as the zeroth  approximation of a renormalised perturbation theory in the ratio of  the conduction bath hopping amplitude ($t$) to $J$. A study of the  zero-bandwidth model at the ICFP offers, in turn, new perspectives  into the problem, e.g., the ground state degeneracy and it's relation  to the breakdown of exact screening etc., as described in the two preceding paragraphs. It also informs us on the ground state manifold about which to carry out a systematic renormalised perturbative expansion to obtain the low-lying excitations (see Sec.\ref{sec:excitations} below, and Sec.III of the supplementary materials). Moreover, in the following sections, we will show how the inherent quantum-mechanical frustration of singlet order that is present in the Hamiltonian leads to the non-trivial physics of the fixed points in terms of non-Fermi liquid phase, diverging thermodynamic quantities, quantum criticality as well as emergent gauge theories.
-\section{Important Properties of the Star Graph}
+\section{Important properties of the star graph}
 \label{sec:props_star}
 
 \subsection{Degree of compensation: a measure of the frustration}
@@ -225,9 +221,9 @@ To calculate the impurity magnetic susceptibility, we will use the expression
 	\chi = \frac{1}{\beta}\lim_{h \to 0}\left[\frac{Z^{\prime\prime}(h)}{Z(h)} - \left(\frac{Z^{\prime}(h)}{Z(h)}\right)^2 \right] ~,
 \end{eqnarray}
 where the \(\prime\) indicates derivative with respect to \(h\). At low temperatures, the susceptibility takes the form
-\begin{equation}
+\begin{eqnarray}
 	\chi \to \frac{\beta\Sigma_\mathrm{max}}{2M_\mathrm{max}\left(2M_\mathrm{max}+1\right)^2} = \frac{\beta(K-1)}{12(K+1)} \sim \frac{1}{T}~.
-\end{equation}
+\end{eqnarray}
 
 \begin{figure}[!htpb]
 \centering
@@ -261,7 +257,7 @@ where \(\sigma=\pm 1\) and \(\ket{\sigma}_d\) represents the up and down configu
 	\label{mag_crit}
 \end{figure}
 
-The magnetization is therefore discontinuous as \(h\to 0\) when \(K>1\). The non-analyticity occurs because the magnetic field is able to flip the \(J^z=\pm (K-1)/2\) state into the state of the opposite magnetisation. This available space for scattering is simply the frustration that we discussed earlier. Indeed, we have checked (see Fig.~\ref{mag_crit}) by diagonalising numerically the star graph Hamiltonian that the non-analyticity exists for all \(\delta \neq 0\), where \(\delta = \frac{K}{2} - S_{d}\) is the deviation from exact screening. 
+The magnetization is therefore discontinuous as \(h\to 0\) for \(K>1\). The non-analyticity occurs because the magnetic field is able to flip the \(J^z=\pm (K-1)/2\) state into the state of the opposite magnetisation. This available space for scattering is simply the frustration that we discussed earlier. Indeed, we have checked (see Fig.~\ref{mag_crit}) by diagonalising numerically the star graph Hamiltonian that the non-analyticity exists for all \(\delta \neq 0\), where \(\delta = \frac{K}{2} - S_{d}\) is the deviation from exact screening. 
 
 These polarised states can also be used to obtain the scattering phase shift suffered by the conduction channels at the Fermi surface. As shown in the Supplementary Materials~\cite{SM}, the impurity-bath hybdridisation in the polarised states contribute an excess charge of \(n_\mathrm{exc}^{(l)} = 1/K\) to each conduction channel. Following Friedel's sum rule, this leads to a total scattering phase shift of \(\pi/K\) for each channel:
 \begin{eqnarray}
@@ -279,13 +275,11 @@ When the phase shift \(\delta^{(l)}\) acquires a fractional value (in units of \
 We now present the non-local twist and translation operators which can be used to explore the degenerate ground state manifold of the star graph model.
 We begin by defining two operators $\hat{T}$ and $\hat{O}$, which we will call the translation and twist operators respectively: 
 \begin{eqnarray}
-\hat{T} &=& e^{i\frac{2\pi}{K} \hat{\Sigma}} ~,~\hat{O} = e^{i\hat{\phi}}~,~~\hat{\Sigma}=[\hat{J}^z-(K-1)/2]~.
+\hat{T} = e^{i\frac{2\pi}{K} \hat{\Sigma}} ~,~\hat{O} = e^{i\hat{\phi}}~,~~\hat{\Sigma}=[\hat{J}^z-(K-1)/2]~.
 \end{eqnarray}
 One can see that the generators of thee above operators commute with the Hamiltonian: $[H,J^x]=[H,J^z]=[H,J^z]=0$. In the large \(K\) limit, we can perform a semi-classical approximation. 
-%As $J^x$ and $J^y$ both commute with the Hamiltonian $H$, we can write $[H,J^y{(J^{x})}^{-1}]=0$, and any non-singular function of these operators must also commute with the Hamiltonian, such that
 Thus, we define
 \begin{eqnarray}
-%\hat{\phi}=\tan^{-1}(\hat{J}^y(\hat{J}^x)^{-1})~.
 e^{i\hat{\phi}} = \frac{J_{x}}{\sqrt{J^{2} - J_{z}^{2}}} + i\frac{J_{y}}{\sqrt{J^{2} - J_{z}^{2}}}~,
 \end{eqnarray}
 such $[e^{i\hat{\phi}},\hat{H}]=0$. We can label the ground states by the eigenvalues of the translation operator $\hat{T}$. We can also use the ground states labeled by the eigenvalues of $J^z$ (say $M$). The ground states are now written as 
@@ -293,21 +287,19 @@ such $[e^{i\hat{\phi}},\hat{H}]=0$. We can label the ground states by the eigenv
 |M_1\rangle,|M_2\rangle,|M_2\rangle,\cdots ,|M_K\rangle~.
 \end{eqnarray}
 The operations of the translation operators on these states are then given by
-\begin{equation}
+\begin{eqnarray}
 \hat{T}|M_i\rangle = e^{i\frac{2\pi}{K} [M_i-(K-1)/2]} |M_i\rangle = e^{i2\pi\frac{p_i}{K} } |M_i\rangle~,~p_i\in[K]~.
-\end{equation}
+\end{eqnarray}
 The braiding rule between the twist and the translation operators is
 \begin{eqnarray}
-\hat{T}\hat{O}\hat{T}^{\dagger}\hat{O}^{\dagger} &=& e^{\frac{2\pi }{K}[i\hat{\Sigma},i\hat{\phi}]}=e^{i\frac{2\pi }{K}} ~,\nonumber\\
-\hat{T}\hat{O}^m\hat{T}^{\dagger}\hat{O}^{\dagger m} &=& e^{\frac{2\pi }{K}[i\hat{\Sigma},im\hat{\phi}]}=e^{i2\pi \frac{m}{K}}~.
+\hat{T}\hat{O}\hat{T}^{\dagger}\hat{O}^{\dagger} = e^{\frac{2\pi }{K}[i\hat{\Sigma},i\hat{\phi}]}=e^{i\frac{2\pi }{K}} ~,\nonumber\\
+\hat{T}\hat{O}^m\hat{T}^{\dagger}\hat{O}^{\dagger m} = e^{\frac{2\pi }{K}[i\hat{\Sigma},im\hat{\phi}]}=e^{i2\pi \frac{m}{K}}~.
 \end{eqnarray}
-%Next, we shown that the states $\hat{O}^m |M_i\rangle$ are orthogonal to each other and with the state $|M_i\rangle$.
 The states $\hat{O}^m |M_i\rangle$ (with distinct $m$) are labelled by different eigenvalues of the translation operations, and are thus orthogonal to each other
 \begin{eqnarray}
 \hat{T} \hat{O}^m |M_i\rangle = \hat{O}^m \hat{T} e^{i2\pi \frac{m}{K}} |M_i\rangle =\hat{O}^m e^{i \frac{2\pi(m+p_i)}{K} } |M_i\rangle \\
 \hat{T} \bigg(\hat{O}^m |M_i\rangle \bigg) = e^{i \frac{2\pi(m+p_i)}{K} } \bigg( \hat{O}^m |M_i\rangle \bigg)~.
 \end{eqnarray}
-%Different states $\hat{O}^m |M_i\rangle$ for different $m$ are therefore labeled by different eigenvalues of the translation operations, and are thus orthogonal to each other. 
 As the twist operator $\hat{O}$ commutes with the Hamiltonian, we can write
 \begin{eqnarray}
 \langle M_i| \hat{O}^{m \dagger}  H \hat{O}^m |M_i\rangle =\langle M_i|  H |M_i\rangle ~.
@@ -316,7 +308,6 @@ Thus, the energy eigenvalues of all the orthogonal states are equal, and they fo
 
 \subsection{Local Mott liquid}
 \label{sec:loc_mott_liquid}
-%By applying the unitary renormalization group method on the zero mode star graph Hamiltonian, we decouple the impurity spin from the zero-modes of the $K$ channels: 
 In order to obtain the effective theory for the K zero modes, we will now use the URG method to decouple the impurity site from the star graph. The starting point is the star graph Hamiltonian
 \begin{eqnarray}
 H = {\mathcal{J}} \vec{S}_d.\displaystyle\sum_i \vec{S}_i ={\mathcal{J}} S_d^zS^z + \frac{{\mathcal{J}}}{2} (S_d^+S^-+ S_d^-S^+) ~,\nonumber\\
@@ -324,31 +315,32 @@ H_D = {\mathcal{J}} S^z_d S^z~,~~ H_X = \frac{{\mathcal{J}}}{2} (S_d^+S^-+ S_d^-
 \end{eqnarray}
 In order to remove the quantum fluctuations between the impurity spin and the rest, we perform one step of URG:
 \begin{eqnarray}
-\Delta H &=& H_X ({\hat{\omega}-H_D})^{-1} H_X 
+\Delta H = H_X ({\hat{\omega}-H_D})^{-1} H_X 
 \end{eqnarray}
 The total bath spin operator \(S^z\) is not a good quantum number for the zero mode ground state, and because there is no net $S^z$ field, the ground state manifold has a vanishing expectation value of $S^z$, $\langle S^z \rangle=0$. We use this expectation value to replace the denominator of the above RG equation.
-\begin{equation}
+\begin{eqnarray}
 \beta_{\uparrow} ({\mathcal{J}},\omega_{\uparrow}) = ({\mathcal{J}}^2 \Gamma_{\uparrow})/2 ~,~~\Gamma_{\uparrow}=(\omega_{\uparrow}-{\mathcal{J}}(S_d^z-1))^{-1}~.
-\end{equation}
+\end{eqnarray}
 The effective Hamiltonian is therefore
 \begin{eqnarray}
 H_{eff} 
  =\frac{\beta_{\uparrow}({\mathcal{J}},\omega_{\uparrow})}{4} (S^+S^-+S^-S^+)   ~.
 \end{eqnarray}
 In terms of the electronics degree of freedom, this can be written as
-\begin{equation}
-\frac{ \beta_{\uparrow}({\mathcal{J}},\omega_{\uparrow}) }{4}  \sum_{\substack{i\neq j \\ \alpha_i,\beta_i\in \{\uparrow,\downarrow\}\\ \alpha_j,\beta_j\in \{\uparrow,\downarrow\}}}\left(\vec{\sigma}_{\alpha_i\beta_i}\vec{\sigma}_{\alpha_j\beta_j}  c_{0\alpha_i}^{(i)\dagger}  c_{0\beta_i}^{(i)}    c_{0\alpha_j}^{(j)\dagger}  c_{0\beta_j}^{(j)} +\textrm{h.c.}\right) ~.
+\begin{eqnarray}
+	\frac{ \beta_{\uparrow}({\mathcal{J}},\omega_{\uparrow}) }{4}  \sum_{i\neq j}\sum_{\alpha_i,\beta_i}\sum_{\alpha_j,\beta_j}&\left(\vec{\sigma}_{\alpha_i\beta_i}\vec{\sigma}_{\alpha_j\beta_j}  c_{0\alpha_i}^{(i)\dagger}  c_{0\beta_i}^{(i)} c_{0\alpha_j}^{(j)\dagger}  c_{0\beta_j}^{(j)} \right.\nonumber\\
+																   &\left. +\textrm{h.c.}\right) ~.
 \label{eq:all-to-all_1}
-\end{equation}
+\end{eqnarray}
 The case $\frac{\beta_{\uparrow}({\mathcal{J}},\omega_{\uparrow})}{2} <0$ leads to a ferromagnetic effective Hamiltonian. In this case, the ground state is realised for $S$ being maximum and $S^z$ being minimum. The effective Hamiltonian can be rewritten in this case as
 \begin{eqnarray}
 H_{eff}   =-|\beta_{\uparrow}({\mathcal{J}},\omega_{\uparrow})| \times(S^+S^{-}+ S^-S^{+}) /4   ~.
 \end{eqnarray}
 The complete set of commuting observables for this Hamiltonian contains $H,S,S^z$. In the ground state, $S$ is maximum, and  therefore $S=K/2$, and $S^z$ can take $2S+1=K+1$ values. Defining the dual operator \(\hat \phi\) with the algebra \([\hat{\phi,S^z}]=i\), we get the twist operator $\hat{Q}=\exp(i\hat{\phi}\Phi/\Phi_0)$. Applying this operator, we get the twisted Hamiltonian 
-\begin{equation}
-H(\Phi) = -\frac{|\beta_{\uparrow}({\mathcal{J}},\omega_{\uparrow})|}{2} S^2   +\frac{|\beta_{\uparrow}({\mathcal{J}},\omega_{\uparrow})|}{2} \bigg(S^{z}-\frac{\Phi}{\Phi_0} \bigg)^2 ~.
+\begin{eqnarray}
+	H(\Phi) = -\frac{|\beta_{\uparrow}({\mathcal{J}},\omega_{\uparrow})|}{2} \left[S^2 - \left(S^{z}-\frac{\Phi}{\Phi_0} \right)^2\right] ~.
 \label{eq:flux_spectral}
-\end{equation}
+\end{eqnarray}
 One can thus explore different $S^z$ ground states via this spectral flow (flux insertion) argument.
 
 For a $K$ channel star graph problem the ground state is $K$ fold degenerate associated with different $J^z$ values $\{-(K-1)/2,-(K-3)/2,\cdots  ,(K-1)/2 \}$. After removing the quantum fluctuations between the impurity spin and the outer spins, we get an all-to-all model (eq.\eqref{eq:flux_spectral}) as the effective Hamiltonian. The eigenstates of this all-to-all Hamiltonian can be labeled by the eigenvalues of $S^z$. There are $K+1$ such states made out of only the outer spins. The total state including the impurity spin can be written as $|J^z\rangle = |S_d^z\rangle \otimes |S^z\rangle$ labeled by $J^z=S_d^z+S^z$. As the all-to-all model has $Z_2$ symmetry in impurity sector, there are $2(K+1)$ total states. For $S_d^z=1/2$, $ \{J^z\}=\{ -(K-1)/2, \cdots, (K-1)/2, (K+1)/2 \}$ and for $S_d^z=-1/2$, $\{J^z\}=\{-(K+1)/2, -(K-1)/2, \cdots,  (K-1)/2  \}$. We can see that in both the cases, all $K$ states of the star graph ground state manifold are present in the spectrum of the all-to-all model, one of them being the ground state. Using the twist operator, we can cycle between the various states. Some additional topological features of the Mott liquid are presented in the Supplementary Materials~\cite{SM}.
@@ -361,49 +353,48 @@ For a $K$ channel star graph problem the ground state is $K$ fold degenerate ass
 
 We will now proceed to extract the nature of the low-energy excitations of the two-channel Kondo problem. This will be done by treating real-space hopping as a perturbation to the zero-bandwidth Hamiltonian, as it accounts for the lowest-energy electronic quantum fluctuations in the conduction bath~\cite{nozieres1974fermi}. The zero-bandwidth Hamiltonian obtained from the URG of the two-channel Kondo problem then acts as the zeroth-level Hamiltonian
 \begin{eqnarray}
-H^{(0)}_{2CK}&=& {\mathcal{J}} \vec{S}_d.(\vec{S}_1+\vec{S}_2)~~,~~\vec{S}_i =  \frac{1}{2}~ c_{i,\alpha}^{\dagger}~ \vec{\sigma}_{\alpha,\beta}~ c_{i,\beta}~.
+H^{(0)}_{2CK}= {\mathcal{J}} \vec{S}_d.(\vec{S}_1+\vec{S}_2)~~,~~\vec{S}_i =  \frac{1}{2}~ c_{i,\alpha}^{\dagger}~ \vec{\sigma}_{\alpha,\beta}~ c_{i,\beta}~.
 \label{eq:channel-2-spin}
 \end{eqnarray}
 Here, $\vec{S}_i=1,2$ represents the spin degree of freedom present at the origin of the $i^{th}$ channel. This zeroth-level Hamiltonian has two degenerate ground states labeled by $\ket{J^z=\pm 1/2}$ with energy $-\mathcal{J}$ and $6$ excited states~\cite{kunj_slal_1999}.
 The perturbation Hamiltonian is the real-space hopping:
 \begin{eqnarray}
-H_{X} &=& -t \displaystyle\sum_{\substack{<1,l_1> \\ <2,l_2>}} (c^{\dagger}_{1,\sigma}c_{l_1,\sigma}+c^{\dagger}_{2,\sigma}c_{l_2,\sigma}+ ~\textrm{h.c.})~,
+H_{X} = -t \displaystyle\sum_{<1,l_1>}\sum_{<2,l_2>} (c^{\dagger}_{1,\sigma}c_{l_1,\sigma}+c^{\dagger}_{2,\sigma}c_{l_2,\sigma}+ ~\textrm{h.c.}),
 \end{eqnarray}
 and its effects will now be accounted for using degenerate perturbation theory. Here $l_i$ represents the nearest site to the origin of the $i^{th}$ channel.
 
 Since the perturbation is a single-particle hopping that transfers electrons, we need to rewrite the spin operators in the zeroth Hamiltonian in terms of fermionic operators:
 \begin{eqnarray}
-\mathcal{H} &=& \frac{{\mathcal{J}}\hbar}{2}~ \vec{S}_d. \displaystyle\sum_{i=\{1,2\}} \displaystyle\sum_{\alpha,\beta\in\{\uparrow,\downarrow\}}c_{i\alpha}^{\dagger} \vec{\sigma}_{\alpha\beta} c_{i\beta} + H_X~.
+\mathcal{H} = \frac{{\mathcal{J}}\hbar}{2}~ \vec{S}_d. \displaystyle\sum_{i=\{1,2\}} \displaystyle\sum_{\alpha,\beta\in\{\uparrow,\downarrow\}}c_{i\alpha}^{\dagger} \vec{\sigma}_{\alpha\beta} c_{i\beta} + H_X~.
 \label{eq:excitation_hamiltonian}
 \end{eqnarray}
 In this expanded basis, there are $32$ degenerate ground states:
-\begin{equation}
+\begin{eqnarray}
 \label{gstate-set}
 \left\{ \ket{\alpha_i} \right\} = \left\{ \ket{J^z}\otimes\ket{n_{l_1,\uparrow},n_{l_1,\downarrow},n_{l_2,\uparrow},n_{l_2,\downarrow}} \right\}~.
-\end{equation}
+\end{eqnarray}
 The \(32-\)fold degeneracy arises from the two-fold degeneracy of \(J^z\) (\(J^z = \pm 1/2\)) multiplying the \(16-\)fold degeneracy of the rest of the sites \(n_{l_i,\sigma}\) (each of the four \(n_{l_i,\sigma}\) can be 0 or 1, leading to a \(2^4\)-fold degeneracy).
 
 The first and the second order corrections to the low energy effective Hamiltonian are
 \begin{eqnarray}
-H^{(1)} &=& \sum_{ij} |\alpha_i\rangle \langle \alpha_i  | V| \alpha_j \rangle \langle \alpha_j |~.\nonumber\\
-H^{(2)} &=& \sum_{ij} \sum_l |\alpha_i\rangle \frac{\langle \alpha_i  | V| \mu_l \rangle \langle \mu_l  | V| \alpha_j \rangle}{E_0-E_{l}}\langle \alpha_j |~.
+H^{(1)} = \sum_{ij} |\alpha_i\rangle \langle \alpha_i  | V| \alpha_j \rangle \langle \alpha_j |~.\nonumber\\
+H^{(2)} = \sum_{ij} \sum_l |\alpha_i\rangle \frac{\langle \alpha_i  | V| \mu_l \rangle \langle \mu_l  | V| \alpha_j \rangle}{E_0-E_{l}}\langle \alpha_j |~.
 \end{eqnarray}
 Here, $|\alpha_i\rangle$ represents the ground states with energy $E_0$ and is the set of states defined in eq.~\ref{gstate-set}, and $\mu_l$ represents the excited states with energy $E_l$. It is easy to see that the diagonal contribution at any odd order is zero - the final state is never equal to the initial state. The off-diagonal part at first order is also zero. At second order we get both diagonal and off-diagonal contributions to the effective Hamiltonian. 
 
 \subsubsection{Diagonal renormalisation}
 We first calculate the diagonal renormalisation at second order coming from each of the states \(\ket{\tilde \alpha_0} = \ket{J^z = \frac{1}{2}}\otimes\ket{\psi_\mathrm{rest}}, \ket{\tilde \alpha_1} = \ket{J^z = -\frac{1}{2}}\otimes\ket{\psi_\mathrm{rest}}\), where \(\ket{\psi_\mathrm{rest}}\) refers to the configuration of the remaining sites apart from the two that form the zeroth Hamiltonian. These second order corrections are given by
-\begin{equation}
+\begin{eqnarray}
 H^{(2)}_\mathrm{diag}\left(\tilde \alpha_0\right)  = \frac{2t^2}{E_0} \hat{I} - \Omega_l, ~ ~ H^{(2)}_\mathrm{diag}\left(\tilde \alpha_1\right) = \frac{2t^2}{E_0} \hat{I} + \Omega_l ~,
-\end{equation}
+\end{eqnarray}
 where $S_{l_i}^z=(n_{l_i\uparrow}-n_{l_i\downarrow})/2$ and $\Omega_l=\frac{2t^2}{3E_0} ( S_{l_1}^z + S_{l_2}^z)$.  The total diagonal second-order contribution to the effective Hamiltonian is obtained by adding these two contributions, and the result is a trivial shift: $H^{(2)}_\mathrm{diag} = H^{(2)}_\mathrm{diag}\left(\tilde \alpha_0\right) + H^{(2)}_\mathrm{diag}\left(\tilde \alpha_1\right) = -4t^2 \hat{I}$. The fact there is no non-trivial diagonal renormalisation to the low-energy excitations shows the absence of (local) Fermi liquid terms.
-%, the exact cancellation of the field terms \(\pm \Omega_l\).
 
 \subsubsection{Off-diagonal renormalisation}
-The off-diagonal contribution to the second order effective Hamiltonian is 
+The off-diagonal contribution to the second order effective Hamiltonian is obtained purely from \(H^{(2)}_{od}\):
 \begin{eqnarray}
-H_{NFL}&=&H^{(2)}_{od} = \sum_{i\neq j} \sum_l |\alpha_i\rangle \frac{\langle \alpha_i  | V| \mu_l \rangle \langle \mu_l  | V| \alpha_j \rangle}{E_0-E_{l}}\langle \alpha_j | \nonumber\\
-&=& -\frac{8t^2}{3} [ (S_1^z)^2 c_{2\uparrow}^{\dagger}c_{2\downarrow}  (  c_{l_1\uparrow}c_{l_1\downarrow}^{\dagger} +  c_{l_2\uparrow}c_{l_2\downarrow}^{\dagger}  ) \nonumber\\
-&+& (S_2^z)^2 c_{1\uparrow}^{\dagger}c_{1\downarrow}  (  c_{l_1\uparrow}c_{l_1\downarrow}^{\dagger} +  c_{l_2\uparrow}c_{l_2\downarrow}^{\dagger}  ) ] + \textrm{h.c.} ~.
+	H_{NFL} &= \sum_{i\neq j} \sum_l |\alpha_i\rangle \frac{\langle \alpha_i  | V| \mu_l \rangle \langle \mu_l  | V| \alpha_j \rangle}{E_0-E_{l}}\langle \alpha_j | \nonumber\\
+			       &= -\frac{8t^2}{3} [ (S_1^z)^2 c_{2\uparrow}^{\dagger}c_{2\downarrow}  (  c_{l_1\uparrow}c_{l_1\downarrow}^{\dagger} +  c_{l_2\uparrow}c_{l_2\downarrow}^{\dagger}  ) \nonumber\\
+&+ (S_2^z)^2 c_{1\uparrow}^{\dagger}c_{1\downarrow}  (  c_{l_1\uparrow}c_{l_1\downarrow}^{\dagger} +  c_{l_2\uparrow}c_{l_2\downarrow}^{\dagger}  ) ] + \textrm{h.c.} ~.
 \label{eq:hamiltonian_NFL}
 \end{eqnarray}
 This effective Hamiltonian is purely of the non-Fermi liquid kind, arising due to the degeneracy of the ground state manifold. Using this low energy effective Hamiltonian, we have calculated different thermodynamic quantities like susceptibility, specific heat and the Wilson ratio. The first two measures show logarithmic behavior at low temperatures, in agreement with known results in the literature~\cite{Noz_blandin_1980,Gan_Andrei_Coleman_1993,emery_kivelson,Gan_mchannel_1994,
@@ -420,7 +411,7 @@ Following this method, we have also calculated the effective Hamiltonian for the
 The real space local low energy Hamiltonian that takes into account the excitations above the ground state is given by eq.~\ref{eq:hamiltonian_NFL} and can be written as
 \begin{eqnarray}
 	\label{nfl_terms}
-	V_\mathrm{eff} = \frac{2t^2}{{\mathcal{J}^*}}\left[\left(\sigma^z_{0,1}\right)^2 s^+_{0,2} + \left(\sigma^z_{0,2}\right)^2 s^+_{0,1}\right] \left(s^-_{1,1} + s^-_{1,2}\right) + \mathrm{h.c.}~;
+	\hspace*{-5pt}V_\mathrm{eff} = \frac{2t^2}{{\mathcal{J}^*}}\left[\left(\sigma^z_{0,1}\right)^2 s^+_{0,2} + \left(\sigma^z_{0,2}\right)^2 s^+_{0,1}\right] \left(s^-_{1,1} + s^-_{1,2}\right) + \mathrm{h.c.};\nonumber\\
 \end{eqnarray}
 here, \(\sigma^z_{0,l} = \hat n_{0\uparrow,l} - \hat n_{0\downarrow,l}, s^+ = c^\dagger_{0 \uparrow,l}c_{0 \downarrow,l}\) and \(s^- = \left(s^+\right)^\dagger\). The notation \(0\sigma,l\) has the site index \(i=0,1,2,\ldots\) as the first label, the spin index \(\sigma=\uparrow,\downarrow\) as the second label and the channel index \(l=1,2\) as the third label.
 Such non-Fermi liquid (NFL) terms in the effective Hamiltonian and the absence of any Fermi-liquid term at the same order should be contrasted with the local Fermi liquid excitations induced by the singlet ground state of the single-channel Kondo model~\cite{nozieres1974fermi,wilson1975renormalization,hewson1993}.
@@ -436,17 +427,18 @@ The diagonal part of eq.~\ref{nfl_terms} is
 where \(\bar l = 3 - l\) is the channel index complementary to \(l\). We will Fourier transform this effective Hamiltonian into \(k-\)space. The NFL part becomes
 \begin{eqnarray}
 	\label{k_space_od}
-	\sum_{\sigma, \left\{k_i,k_i^\prime\right\},l} \frac{2t^2}{J}e^{i\left(k_1 - k_1^\prime\right)a}c^\dagger_{k\sigma,l}c_{k^\prime\sigma,l}c^\dagger_{k_2 \uparrow, \bar l}c_{k_2^\prime \downarrow,\bar l}c^\dagger_{k_1 \downarrow,\bar l}c_{k_1^\prime \uparrow, \bar l} + \mathrm{h.c.} ~.\qquad
+	\frac{2t^2}{J}\sum_{\left\{k_i,k_i^\prime\right\}}\sum_{\sigma, l} &\left(e^{i\left(k_1 - k_1^\prime\right)a}c^\dagger_{k\sigma,l}c_{k^\prime\sigma,l}c^\dagger_{k_2 \uparrow, \bar l}c_{k_2^\prime \downarrow,\bar l}c^\dagger_{k_1 \downarrow,\bar l}c_{k_1^\prime \uparrow, \bar l}\right.\nonumber\\
+									   &\left. + \mathrm{h.c.}\right) ~.\qquad
 \end{eqnarray}
 Such a three particle interaction term was also obtained for the NFL phase of the 2D Hubbard model from a URG treatment (see Appendix B of Ref.\cite{anirbanmott1}). The channel indices in Eq.~\ref{k_space_od} can be mapped to the normal directions in~\cite{anirbanmott1}. The 2 particle-1 hole interaction in Eq.~\ref{k_space_od} has a diagonal component which can be obtained by setting \(k=k^\prime, k_1 = k_2^\prime\) and \(k_2 = k_1^\prime\):
 \begin{eqnarray}
-	H_\mathrm{eff,MFL} &= \sum_{k, k_1, \atop{k_2,\sigma,  l}} \frac{2t^2e^{i\left(k_1 - k_2\right)a}}{J} \hat n_{k\sigma,l} \hat n_{k_2 \uparrow, \bar l}\left(1 - \hat n_{k_1 \downarrow,\bar l}\right) + \mathrm{h.c.}\nonumber\\
+	H_\mathrm{MFL} &= \sum_{k, k_1, \atop{k_2,\sigma,  l}} \frac{2t^2e^{i\left(k_1 - k_2\right)a}}{J} \hat n_{k\sigma,l} \hat n_{k_2 \uparrow, \bar l}\left(1 - \hat n_{k_1 \downarrow,\bar l}\right) + \mathrm{h.c.}\nonumber\\
 	&= \sum_{k, k_1, \atop{k_2,\sigma,  l}} \frac{4t^2}{J} \cos a\left(k_1 - k_2\right)  \hat n_{k\sigma,l} \hat n_{k_2 \uparrow, \bar l}\left(1 - \hat n_{k_1 \downarrow,\bar l}\right).\qquad 
 \end{eqnarray}
 The most dominant contribution comes from \(k_1 = k_2 = k^\prime\), revealing the non-Fermi liquid metal~\cite{cox_jarrell_two_channel_rev,andrei_jerez_1995}:
 \begin{eqnarray}
 	\label{mfl_large}
-	H^*_\mathrm{eff,MFL} = \frac{4t^2}{J} \sum_{\sigma, k, k^\prime, l} \hat n_{k\sigma,l} \hat n_{k^\prime \uparrow, \bar l}\left(1 - \hat n_{k^\prime \downarrow,\bar l}\right)~.
+	H^*_\mathrm{MFL} = \frac{4t^2}{J} \sum_{\sigma, k, k^\prime, l} \hat n_{k\sigma,l} \hat n_{k^\prime \uparrow, \bar l}\left(1 - \hat n_{k^\prime \downarrow,\bar l}\right)~.
 \end{eqnarray}
 A non-local version of this effective Hamiltonian was found to describe the normal phase of the Mott insulator of the 2D Hubbard model, as seen from a URG analysis~\cite{anirbanmott1,anirbanmott2}. Following~\cite{anirbanmott1}, one can track the RG evolution of the dual coupling \(R_j = \frac{4t^2}{J_j}\) at the \(j^\mathrm{th}\) RG step, in the form of the URG equation
 \begin{eqnarray}
@@ -492,7 +484,7 @@ of the $K$ channel model.
 
 In order to compute \(EE_d\) for a particular state \(\ket{J^z}\), we calculate the von-Neumann entropy of the reduced density matrix \(\rho_d\) obtained by partially tracing the density matrix $\rho=|J^z\rangle\langle J^z|$ associated with the state \(\ket{J^z}\) over the impurity states \(\ket{S_d^z = \pm \frac{1}{2}}\): 
 \begin{eqnarray}
-\rho_{d}&=& \textrm{Tr}_{d} \rho=\sum_{S_d^z} \langle S_d^z| \rho | S^z_d\rangle ~,~~EE_d = -\rho_{d} \log \rho_{d}~.
+\rho_{d}= \textrm{Tr}_{d} \rho=\sum_{S_d^z} \langle S_d^z| \rho | S^z_d\rangle ~,~~EE_d = -\rho_{d} \log \rho_{d}~.
 \end{eqnarray}
 
 \begin{figure}[!htpb]
@@ -550,16 +542,11 @@ In the large channel limit ($K\gg 1$), the maximum \(I^2(d:o)\) and \(I^2(o:o)\)
 \subsubsection{Multipartite information}
 Similar to mutual information, one can calculate higher order multipartite information to study the nature of correlations present in different ground states. We define the tripartite information among three subsystems $A,B,C$ as $I^3_{ABC} = (S_A+S_B+S_C)-(S_{AB}+S_{BC}+S_{CA})+S_{ABC}~$. \(I^3\) shows behavior similar to the mutual information - the highest \(I^2\) value is associated with the $\left(J^z\right)_\mathrm{min}$ state and it saturates in the limit of $K\gg 1$. The $N-$partite information for a collection of subsystems (CSS) $\{\mathcal{A}_N\}\equiv\{A_1,A_2,\cdots,A_N\}$ can also be defined 
 as~\cite{siddharthatee} 
-\begin{equation}
+\begin{eqnarray}
 I^{N}_{\{\mathcal{A}_N\}} = \bigg[\displaystyle\sum_{m=1}^{N} (-1)^{m-1} \displaystyle\sum_{Q \in \mathcal{B}_m(\{\mathcal{A}\})} S_{V_{\cup}({Q})} \bigg]- S_{V_{\cap}(\mathcal{A}_N)}~.
 \label{eq:I_N_definition}
-\end{equation}
+\end{eqnarray}
 where  $\mathcal{B}_m(\{\mathcal{A}_N\})\equiv \{ Q~| ~Q\subset \mathcal{P}(\{\mathcal{A}_{N}\}), |Q|=m \}$, and $\mathcal{P}(\{\mathcal{A}_{N}\})$ is the powerset of $\{\mathcal{A}_N\}$. For simplicity, we also define the union and intersection of all the subsystems present in $Q$ as ${V}_{\cup}({Q})\equiv \bigcup_{A\in Q} A$ and ${V}_{\cap}({Q})\equiv \bigcap_{A\in Q} A$ respectively.
-%One can measure $N-$partite information for a collection of subsystems (CSS) $\{\mathcal{A}_N\}\equiv\{A_1,A_2,\cdots,A_N\}$. To define the $N-$partite information, we first define the power set of the CSS $\{\mathcal{A}_N\}$ as $\mathcal{P}(\{\mathcal{A}_{N}\})$, and the collection of all subsets of $\mathcal{P}(\{\mathcal{A}_{N}\})$ with $m$ subsystems in it as $\mathcal{B}_m(\{\mathcal{A}_N\})\equiv \{ Q~| ~Q\subset \mathcal{P}(\{\mathcal{A}_{N}\}), |Q|=m \}$. We also define the union and intersection of all the subsystems present in $Q$ as ${V}_{\cup}({Q})\equiv \bigcup_{A\in Q} A$ and ${V}_{\cap}({Q})\equiv \bigcap_{A\in Q} A$ respectively. Then, the $N-$partite information that we are interested in is defined as
-%\begin{equation}
-%I^{N}_{\{\mathcal{A}_N\}} = \bigg[\displaystyle\sum_{m=1}^{N} (-1)^{m-1} \displaystyle\sum_{Q \in \mathcal{B}_m(\{\mathcal{A}\})} S_{V_{\cup}({Q})} \bigg]- S_{V_{\cap}(\mathcal{A}_N)}~.
-%\label{eq:I_N_definition}
-%\end{equation}
 \begin{figure}
 \includegraphics[width=0.49\textwidth]{2022INvsNK8.png}
 \caption{Variation of multipartite information $I^N$ among \(N\) outer spins as a function of $N$, for $K=8$. The inset shows $I^N$ vs $N$ for an all-to-all model. Both show power law behavior.}
@@ -581,7 +568,6 @@ To study the nature of correlations at the MCK fixed point, we introduce excitat
 
 \subsubsection{Impurity entanglement entropy}
 The impurity entanglement entropy $EE_d(t)$ in the ground state is shown as a function of $t$ in Fig.~\ref{fig:EE_imp_vs_t_K} for three values of channel number \(K\). At low hopping strength ($0<t\ll 1$), $EE_{d}$ is independent of $t$ and achieves a constant value. We also find that in this range of \(t\), \(EE_d\) decreases with increasing \(K\). This behaviour is reversed at high $t$, and \(EE_d\) is seen to increase with increasing \(K\). Though the values of the impurity entanglement entropy for various values of \(K\) are quite similar at low hopping strength, 
-%there is a difference in the behaviour as a function of \(t\): 
 as the single channel \(EE_d\) varies smoothly at \(t \to 0^+\), whereas the \(EE_d\) for \(K > 1\) show a discontinuity at $t \to 0^+$.
 
 \begin{figure}[!htpb]
@@ -642,15 +628,15 @@ Apart from these, we have also computed an intra-channel tripartite information 
 \label{fig:bures_distance}
 \end{figure}
 In addition to these entanglement measures, we have also calculated the Bures distance between the states at \(t=0\) and \(t>0\). The Bures distance~\cite{uhlmann1976transition,bures1969extension,hubner1992explicit,hubner1993computation,dittmann1994some,marian2003bures} between two density matrices \(\rho_1,\rho_2\) is defined as 
-\begin{equation}
+\begin{eqnarray}
 d_{Bures}(\rho_1,\rho_2) = \sqrt{2} \bigg[1- \textrm{Tr}\bigg\{ \bigg(\rho_1^{1/2}  \rho_2 \rho_{1}^{1/2}\bigg)^{1/2} \bigg\}\bigg]~,
-\end{equation}
+\end{eqnarray}
 and is a measure of the distance, in the Hilbert space, between the states forming the density matrices. One can see from the above definition that the maximum and minimum possible distances are $\sqrt{2}$ and $0$ respectively.
 \par We get the ground state $|\psi(t)\rangle$ of the problem by solving the Hamiltonian in Eq.~\eqref{eq:excitation_hamiltonian}. This ground state $|\psi(t)\rangle(t)$ and the associated density matrix $\rho(t)= |\psi(t)\rangle \langle \psi(t)|$ are functions of the hopping strength \(t\). We are interested in the reduced density matrix $\rho_{sg}(t)$ of only the sites that form the star graph (impurity site and the zeroth sites of the conduction channels), so we trace out all the nearest neighbor sites from the full density matrix:, $\rho_{sg}(t)=\textrm{Tr}_{n-n}(\rho(t))$. The Bures distance $d_{Bures}(\rho_{sg}(0),\rho_{sg}(t))$ is then calculated between the reduced density matrices at \(t=0\) and \(t > 0\), for \(K=1\), \(K=2\) and \(K=3\).
 
 We have shown the variation of the Bures distance as a function of the hopping strength \(t\) in Fig.~\ref{fig:bures_distance}. Although the Bures distance is \(0\) (by definition) at \(t=0\) for all \(K\), a difference arises as \(t\) is made slightly non-zero: there is a discontinuity in the Bures distance for the two and three channel models, while the single channel Bures distance is continuous. The smooth variation of the Bures distance in the single channel case shows the adiabatic continuity of the reduced star graph density matrix from the $t=0$ case to $t\neq 0$ case. On the other hand, the abrupt jump in the Bures distance for higher-channel cases at $t=0^+$ shows the breakdown of adiabatic continuity between the \(t=0\) and \(t = 0^+\) Hamiltonians and signals an {\it orthogonality catastrophe} between these two ground states. The discontinuity increases as \(K\) is increased, indicating that considering the case of more channels will lead to the maximum Bures distance of $d_{Bures}=\sqrt{2}$ and hence an exact orthogonality.
 
-\section{Dualities of the MCK model}
+\section{Duality properties of the MCK model}
 \label{sec:duality}
 
 We start from a strong coupling \((J \to \infty)\) spin-\(S_{d}\) impurity MCK Hamiltonian in the over-screened regime \(\left( K > 2S_{d} \right) \),
@@ -683,7 +669,7 @@ For \(K \neq 2S_d\), we transform an over-screened model into an under-screened 
 
 For a channel-anisotropic MCK model with \(K\) Kondo couplings \(\left\{\mathcal{J}_i\right\}\) for each of the \(K\) conduction channels, the zero bandwidth model is 
 \begin{eqnarray}
-H_K (\vec{{\mathcal{J}}}) &=& \sum_{i=1}^{K} {\mathcal{J}}_i\vec{S}_d.\vec{S}_i~.
+H_K (\vec{{\mathcal{J}}}) = \sum_{i=1}^{K} {\mathcal{J}}_i\vec{S}_d.\vec{S}_i~.
 \label{eq:anisotropy}
 \end{eqnarray}
 For the special case $\mathcal{J}_i=\mathcal{J} \forall i$, we get the usual isotropic star graph model. For the case of spin-1/2 impurity, we find that the Hamiltonian with any value of $\mathcal{J}_i>0$ has $K$ fold ground state degeneracy. This shows that the ground state degeneracy of the star graph model is extremely robust against the channel anisotropy; the ground state degeneracy does not change until at least one \(\mathcal{J}_i\) vanishes.
@@ -708,9 +694,10 @@ We consider the specific case where \(K-1\) channels have the same coupling \({\
 \end{eqnarray}
 where \(\mathcal{D}_\pm = \omega - \frac{D}{2} - \frac{{\mathcal{J}}_\pm}{4}\) are the denominators of the URG equations.
 Setting \({\mathcal{J}}_+ = {\mathcal{J}}_-\) leads to the critical fixed point at \({\mathcal{J}}_+^* = {\mathcal{J}}_-^* = {\mathcal{J}}_* = \frac{2}{K \rho}\). We now perturb around this fixed point by defining new variables \(j_\pm = {\mathcal{J}}_\pm - {\mathcal{J}}_*\). We also assume that the bandwidth is large enough so that \(\mathcal{D}_\pm \simeq \omega - \frac{D}{2} - \frac{{\mathcal{J}}_*}{4} = -|\mathcal{D}_*|\). Performing a linear stability analysis about \(j_\pm=0\) then reveals the following two possibilities:
-
-\par\textit{(a)} If \(j_-<0\) and \(j_+>0\), the deviation \(j_-\) is relevant and \(\mathcal{J}_-\) flows to zero. The flow of \(j_+\) are constrained such that the remaining couplings \(\mathcal{J}_+\) flow to the stable intermediate fixed point of the \(K-1\) channel MCK model: \(J_{+,*} = \frac{2}{(K-1)\rho}\).
-\par\textit{(b)} If \(j_- > 0\) and \(j_+<0\), the couplings \(\mathcal{J}_+\) are irrelevant, and this leads to a single channel Kondo model described by the coupling \(\mathcal{J}_-\) which flows to strong coupling.
+\begin{itemize}
+	\item[(a)] If \(j_-<0\) and \(j_+>0\), the deviation \(j_-\) is relevant and \(\mathcal{J}_-\) flows to zero. The flow of \(j_+\) are constrained such that the remaining couplings \(\mathcal{J}_+\) flow to the stable intermediate fixed point of the \(K-1\) channel MCK model: \(J_{+,*} = \frac{2}{(K-1)\rho}\).
+	\item[(b)] If \(j_- > 0\) and \(j_+<0\), the couplings \(\mathcal{J}_+\) are irrelevant, and this leads to a single channel Kondo model described by the coupling \(\mathcal{J}_-\) which flows to strong coupling.
+\end{itemize}
 
 These conclusions show that the \(K\) channel intermediate fixed point is unstable under channel anisotropy~\cite{Noz_blandin_1980,andrei_jerez_1995,affleck_pang_cox_1992,zarand_2000}. If one of the couplings becomes smaller than the rest, then that coupling flows to zero while the other \(K-1\) couplings flow to the \(K-1\) channel fixed point. On the other hand, if \(K-1\) couplings are smaller than a single coupling, then the smaller couplings vanish while the remaining coupling flows to strong-coupling.
 
@@ -727,17 +714,16 @@ Indeed, the power-law dependence of the multi-partite information among the oute
 Taken together, we conclude that in the presence of channel anisotropy, the degeneracy of the MCK ground state does not change until the RG reaches the stable fixed point with one (or more channels) completely disconnected.
 \par 
 We end by discussing some open directions. 
-%Our approach serves as a template for the study of other quantum impurity systems. 
 Our work presents a template for the study of how a degenerate ground state manifold arising from symmetry and duality properties in a multichannel quantum impurity model can lead to novel multicritical phases at intermediate coupling. Employed within an auxiliary model framework (such as dynamical mean-field theory), such quantum impurity models will likely unveil novel quantum critical points (or phases) in bulk lattice models of strongly correlated electrons and spins that arise from the competition of various quantum (or symmetry broken) orders. Since the degeneracy of the star graph is observed to be robust under anisotropy, 
-%Similar studies can be conducted for the case of superconducting leads, i.e., conduction baths with a superconducting gap. Thus, 
 it appears relevant to study the case of the MCK with superconducting leads, i.e., conduction baths with a superconducting gap. Specifically, it will be interesting to see whether the gap can separate the ground state manifold of the star graph from any low-energy excitations, providing thereby a protection for the topological quantum numbers associated with the degenerate ground state manifold. The duality transformations then allow us to view the protected ground state as that belonging to an isolated larger quantum spin. This holds potential for applications in quantum information and quantum computation (see \cite{lopes2020} for an alternate proposal based on an MCK model). Interesting behaviour may also be obtained by studying the MCK model with an easy-axis anisotropy term \(\left(J^i\right)^2\) along one of the axes ($i$).
 Such a term would, if it is able to survive the RG flows towards low energy, lift the degeneracy of the ground state and make it possible to achieve perfect screening even with \(K > 2S_d\). Further, understanding the nature of the multicriticality in the MCK model displayed upon introducing channel anisotropy is in itself an important problem (see \cite{zheng2021} for a recent work).
 One can also study the multi-channel lattice models~\cite{Piguet1997,shaw_1998} to better understand the role played by singlet frustration and ground state degeneracy in the competition between the local moment versus the heavy fermion sea. Finally, we note that experimental realisations of the star graph have been studied recently with regards to aspects of NMR-based quantum information processing such as algorithmic cooling and information scrambling (see \cite{mahesh2021} for a review). It will be interesting to see whether some of the results obtained by us for the spin-1/2 Heisenberg star graph can be tested experimentally in a similar manner. Finally, it is tempting to speculate whether a similar study can be conducted for a MCK system of 1D Tomonaga-Luttinger liquid conduction leads~\cite{lalbosonMCK2010}.
 
 \ack
 
-S. Patra and Anirban Mukherjee thank the CSIR, Govt. of India and IISER Kolkata for funding through a research fellowship. Abhirup Mukherjee thanks IISER Kolkata for funding through a research fellowship. S. Lal thanks the SERB, Govt. of India for funding through MATRICS grant MTR/2021/000141 and Core Research Grant CRG/2021/000852. We thank three anonymous referees for their valuable questions and comments that greatly helped improve the presentation of the work.
+S. Patra and Anirban Mukherjee thank the CSIR, Govt. of India and IISER Kolkata for funding through a research fellowship. Abhirup Mukherjee thanks IISER Kolkata for funding through a junior and a senior research fellowship. S. Lal thanks the SERB, Govt. of India for funding through MATRICS grant MTR/2021/000141 and Core Research Grant CRG/2021/000852. We thank three anonymous referees for their valuable questions and comments that greatly helped improve the presentation of the work.
 
+\section*{References}
 
 \bibliography{mscript_mck_full}
 
