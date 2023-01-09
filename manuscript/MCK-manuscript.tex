@@ -260,11 +260,11 @@ where \(\sigma=\pm 1\) and \(\ket{\sigma}_d\) represents the up and down configu
 The magnetization is therefore discontinuous as \(h\to 0\) for \(K>1\). The non-analyticity occurs because the magnetic field is able to flip the \(J^z=\pm (K-1)/2\) state into the state of the opposite magnetisation. This available space for scattering is simply the frustration that we discussed earlier. Indeed, we have checked (see Fig.~\ref{mag_crit}) by diagonalising numerically the star graph Hamiltonian that the non-analyticity exists for all \(\delta \neq 0\), where \(\delta = \frac{K}{2} - S_{d}\) is the deviation from exact screening. 
 
 These polarised states can also be used to obtain the scattering phase shift suffered by the conduction channels at the Fermi surface. As shown in the Supplementary Materials~\cite{SM}, the impurity-bath hybdridisation in the polarised states contribute an excess charge of \(n_\mathrm{exc}^{(l)} = 1/K\) to each conduction channel. Following Friedel's sum rule, this leads to a total scattering phase shift of \(\pi/K\) for each channel:
-\begin{eqnarray}
+\begin{eqnarray}\label{phase-stargraph}
 	\delta^{(l)} = \pi n_\mathrm{exc}^{(l)} = \frac{\pi}{K}, ~ ~ l \in \left[1, K\right] 
 \end{eqnarray}
 For \(K > 1\), each channel therefore experiences an unrenormalised phase shift of value between \(0\) and \(\pi\) that, as we will show in a later section, is responsible for the non-Fermi liquid behaviour. For example, we will show that this phase shift are linked to the critical non-Fermi liquid exponents of thermodynamic quantities at the fixed point. Right now, some evidence of this role of the phase shift can be provided through its relation to the vanishing field impurity magnetisation \(m\) obtained in eq.~\ref{imp-magnetisation}:
-\begin{eqnarray}
+\begin{eqnarray}\label{magnetisation-phase}
 	m(h=0^\pm) = \pm \frac{1}{2} \frac{\delta^{(l)} - \pi}{\delta^{(l)} + \pi}~.
 \end{eqnarray}
 When the phase shift \(\delta^{(l)}\) acquires a fractional value (in units of \(\pi\)), the impurity magnetisation also becomes fractional (in units of \(\frac{1}{2}\)). This shows that the "unrenormalised" phase shift value \(0 < \delta^{(l)} < \pi\)~\cite{anderson_1990} is at the heart of the quantum frustration present in the MCK problem, and leads, as we will see later, to a dramatic change in the ground-state wavefunction of the remaining degrees of freedom as the impurity is introduced, producing the well-known orthogonality catastrophe~\cite{anderson1967infrared,varma2002singular}.
@@ -475,7 +475,17 @@ where \(\ket{\chi_{\frac{\sigma}{2}}} = \frac{1}{\sqrt 6}\left( \ket{\sigma,\sig
 \begin{equation}
 	Z = |\braket{\psi_+^{(l)}| e^\dagger_{\uparrow,(l)} e_{\downarrow,(l)} | \psi_-^{(l)}}|^2 = \left|\bra{\psi_+^{(l)}}\left(\ket{\chi_{\frac{1}{2}}}\ket{e_\uparrow^{(l)}}\right)\right|^2 = 0
 \end{equation}
-This shows that the single-particle excitations are no longer long-lived, signaling the orthogonality catastrophe.}
+This shows that the single-particle excitations are no longer long-lived, signaling the orthogonality catastrophe.
+
+The orthogonality catastrophe in the infrared wavefunction points towards an ``unrenormalised" scattering phase shift in the conduction electrons at the fixed point. We have already seen from the zero mode approximation of the fixed point Hamiltonian that each channel suffers a phase shift of \(\delta^{(l)} = \pi/K\) (eq.~\ref{phase-stargraph}), which is non-zero but less than the unitarity limit. In this section, we will see how the phase shift guides the renormalisation group flow of the Kondo coupling \(J\). Following refs.~\cite{si_kotliar_1993,giamarchi_varma_1993,giamarchi_book}, the URG equation for \(J\) can be cast in the form
+\begin{equation}\begin{aligned}
+	\Delta {\mathcal{J}}_{(j)} = -\frac{{\mathcal{J}}_{(j)}^2 \mathcal{N}_{(j)}}{\omega_{(j)} - \frac{D_{(j)}}{2} + \frac{{\mathcal{J}}_{(j)}}{4}}\left( 1 - \frac{\rho {\mathcal{J}}_{(j)}}{2\delta^{(l)}/\pi} \right)~, 
+\end{aligned}\end{equation}
+The Kondo coupling continues to flow until the phase shift acquires the appropriate value: \(2\delta^{(l)}/\pi = \rho \mathcal{J}^* = 2/K\). Following eq.~\ref{magnetisation-phase}, this also leads to the fractional value of \(1/4\) for the impurity magnetisation \(m(0^+)\) in the spin-half two-channel Kondo model. The incommensurate values of both \(\delta^{(l)}\) and \(m(0^+)\) point to the frustrated nature of the problem and the absence of complete screening. These phase shifts also affect thermodynamic properties in the form of critical exponents in power-law behaviour. The impurity contributions to the specific heat linear coefficient \(\gamma = C_v/T\), the magnetic susceptibility \(\chi\) and the thermal entropy \(S\) take the forms~\cite{andrei_destri_1984,Tsvelick_Weigmann_mchannel_1984,affleck1993exact}
+\begin{eqnarray}
+	\gamma,\chi \sim \left( T/T_K \right)^\frac{1 - 2\delta^{(l)}/\pi}{1 + 2\delta^{(l)}/\pi}, ~ S \sim \ln \left[2\cos \frac{\delta^{(l)}}{1 + 2\delta^{(l)}/\pi}\right] 
+\end{eqnarray}
+}
 
 \section{Entanglement properties}
 \label{sec:ent_prop}
