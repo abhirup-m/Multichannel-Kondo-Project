@@ -1,4 +1,4 @@
-\documentclass[10pt]{iopart}
+\documentclass[12pt]{iopart}
 \usepackage{iopams}  
 \usepackage{braket,graphicx,amsmath}
 \usepackage[hidelinks]{hyperref}
@@ -358,13 +358,37 @@ vondelft_prl_1998,schofield_1997,bullaNRGreview,affleck_pang_cox_1992,pang_cox_1
 andrei_destri_1984,Tsvelick1984,Tsvelick_1985,andrei_jerez_1995,zarand_costi_2002,
 sengupta_1994,fabrizio_nozieres_1995,Coleman_tsvelik,fabrizio_gogolin_1995}. We find that taking less number of sites leads to a yet higher value of \(W\), which shows that taking more number of sites will lead to a value of \(W\) that is lower than \(8.3\) and closer to \(8/3\). 
 
-\subsection{Orthogonality catastrophe in the gapless excitations}
+\subsection{Orthogonality catastrophe in the gapless excitations of the 2CK}
+By combining the ground-states of the star graph and the effect of hopping into the remaining lattice, it is possible to demonstrate an orthogonality catastrophe~\cite{anderson1967infrared,varma2002singular} in the new modified ground-state. The full Hilbert space consists of the star graph (formed by the impurity site and the zeroth sites of all channels) and the {\it reduced} conduction bath (formed by sites 1 and beyond in all channels). All terms in the Hamiltonian conserve the total spin \(S_\text{tot}^z = S_d^z + S_0^z + s^z\) composed of the impurity spin \(S_d^z\), the zeroth site spin \(S_0^z = \sum_l S_{0,(l)}^z\) and the spin of the reduced bath \(s^z\). We will work in the \(S_\text{tot}^z = 0\) sector. To construct the non-magnetic ground-states, we will assume the presence of gapless excitations vanishingly close to the Fermi surface in the reduced conduction bath. If \(\ket{\phi}\) represents the filled Fermi volume configuration of all the channels, these excitations can be written as \(\ket{e_\sigma^{(l)}} \equiv e^\dagger_{\sigma,(l)} \ket{\phi} = \sum_{k \in \text{FS}}c^\dagger_{k\sigma,(l)} \ket{\phi}\), where \(l \in \left\{1,2\right\} \) is the channel index. Apart from these states, we have the star graph ground-states at \(S_\text{sg}^z \equiv S_d^z + S_0^z = \pm \frac{1}{2}\): \(\ket{S_\text{sg}^z = \frac{\sigma}{2}} = \frac{1}{\sqrt 6}\left( \ket{\sigma,\sigma,\bar\sigma} + \ket{\sigma,\bar\sigma,\sigma} -2\ket{\bar\sigma,\sigma,\sigma} \right),~ \sigma=\pm 1 \). Within each ket, the three symbols indicate the configuration of the impurity spin, the zeroth site of the first channel and that of the second channel respectively. In the absence of any hopping between the star graph and the reduced conduction bath, the full non-magnetic ground states are then of the form:
+\begin{equation}\begin{aligned}
+	\ket{l,\sigma} = \ket{S^z_\text{sg}=\frac{-\sigma}{2}}\otimes\ket{e_{\sigma}^{(l)}},~l\in\left\{ 1,2 \right\},~\sigma=\pm 1~.
+\end{aligned}\end{equation}
+We now introduce the hopping \(H_\text{int}\) between the star graph and the reduced conduction bath,
+\begin{equation}\begin{aligned}
+	H_\text{int} = -t\frac{1}{\sqrt N}\sum_{k,\sigma,l}\left( c^\dagger_{k\sigma,(l)}c_{0\sigma,(l)} + \text{h.c.} \right)~,
+\end{aligned}\end{equation}
+and treat it under degenerate perturbation theory. Since all terms in the Hamiltonian conserve the number of particles in each channel, the states with different \(l\) do not mix. For each value of \(l\), the \(2\times 2\) matrix of \(H_\text{int}\) takes the form
+\begin{equation}\begin{aligned}
+	H_\text{int} = \frac{4t^2}{J^*}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} ~.
+\end{aligned}\end{equation}
+The non-zero off-diagonal terms arise because of second-order scattering processes.
+Diagonalising this gives the modified new ground-states:
+\begin{equation}\begin{aligned}
+	\ket{\psi_\pm^{(l)}} = \frac{1}{\sqrt 2}\left(\ket{l,\uparrow} \pm \ket{l,\downarrow}\right), E_\pm = -4t^2/J^*~.
+\end{aligned}\end{equation}
+We can now calculate the residue for scattering processes of the kind \(e^\dagger_{\sigma,(l)} e_{\bar\sigma,(l)}\), in the new ground-state and excited state, and they are found to vanish:
+\begin{equation}\begin{aligned}
+	Z = |\braket{\psi_+^{(l)}| e^\dagger_{\uparrow,(l)} e_{\downarrow,(l)} | \psi_-^{(l)}}|^2 = \left|\bra{\psi_+^{(l)}}\left(\ket{S_\text{sg}^z=\frac{1}{2}}\ket{e_\uparrow^{(l)}}\right)\right|^2 = 0
+\end{aligned}\end{equation}
+This shows that the single-particle excitations are no longer long-lived, signaling the orthogonality catastrophe.
+
+
 
 \subsection{Three channel LEH}
 Similar to the two channel case, we here calculate the low energy effective Hamiltonian for three channel Kondo problem by introducing the real space hopping on top of the zero mode three-channel star graph model. This zero mode three channel star graph model has three fold degenerate ground states with total $2^4=16$ states in the eigenspectrum. The three degenerate ground states are given as 
 \begin{eqnarray}
-|\alpha_{-1}\rangle = c|1000 \rangle-b (|0100 \rangle + |0010 \rangle+ | 0001 \rangle), ~ ~ |\alpha_{+1}\rangle = b(|1110 \rangle+ | 1101 \rangle + | 1011 \rangle)-c | 0111 \rangle,\nonumber\\
-|\alpha_0\rangle = -a(|1100 \rangle + |1010\rangle +|1001 \rangle) + a(|0110 \rangle+| 0101 \rangle +| 0011\rangle)~,
+\fl |\alpha_{-1}\rangle = c|1000 \rangle-b (|0100 \rangle + |0010 \rangle+ | 0001 \rangle), ~ ~ |\alpha_{+1}\rangle = b(|1110 \rangle+ | 1101 \rangle + | 1011 \rangle)-c | 0111 \rangle,\nonumber\\
+\fl |\alpha_0\rangle = -a(|1100 \rangle + |1010\rangle +|1001 \rangle) + a(|0110 \rangle+| 0101 \rangle +| 0011\rangle)~,
 \end{eqnarray}
 where $a=0.408$, $b=0.289$, $c=0.866$. Here the state is represented by $|n_{d},n_1,n_2,n_3\rangle$, where $n_i=1/0$ represents the spin configuration $S_i^z=\pm 1/2$ respectively. Next we use degenerate perturbation theory to get the LEH which contains diagonal and off-diagonal terms. In this case we get non-zero contribution from all the three ground states $|J^z=-1\rangle$, $|J^z=0\rangle$ and $|J^z=1\rangle$. We get the diagonal contribution to the LEH in the second order to be
 \begin{eqnarray}
@@ -593,5 +617,5 @@ The total renormalisation in \(J\) after combining all orders is
 
 \section*{References}
 
-\bibliography{../mscript_mck_full}
+\bibliography{../MCK-manuscript}
 \end{document}

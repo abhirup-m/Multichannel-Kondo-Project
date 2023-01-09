@@ -1,6 +1,6 @@
 \documentclass{iopart}
 \usepackage{iopams}  
-\usepackage{braket,graphicx,amsmath}
+\usepackage{braket,graphicx,amsmath,color}
 \usepackage[hidelinks]{hyperref}
 \bibliographystyle{unsrt}
 \begin{document}
@@ -267,7 +267,7 @@ For \(K > 1\), each channel therefore experiences an unrenormalised phase shift 
 \begin{eqnarray}
 	m(h=0^\pm) = \pm \frac{1}{2} \frac{\delta^{(l)} - \pi}{\delta^{(l)} + \pi}~.
 \end{eqnarray}
-When the phase shift \(\delta^{(l)}\) acquires a fractional value (in units of \(\pi\)), the impurity magnetisation also becomes fractional (in units of \(\frac{1}{2}\)). This shows that the unrenormalised phase shift value \(0 < \delta^{(l)} < \pi\) is at the heart of the quantum frustration present in the star graph (and therefore the MCK problem) that neither allows the impurity to be screened, nor allows it to decouple from the conduction channels. The decoupling only happens in the limit of extreme screening \((K \to \infty)\), and the impurity spin then becomes a local moment.
+When the phase shift \(\delta^{(l)}\) acquires a fractional value (in units of \(\pi\)), the impurity magnetisation also becomes fractional (in units of \(\frac{1}{2}\)). This shows that the "unrenormalised" phase shift value \(0 < \delta^{(l)} < \pi\)~\cite{anderson_1990} is at the heart of the quantum frustration present in the MCK problem, and leads, as we will see later, to a dramatic change in the ground-state wavefunction of the remaining degrees of freedom as the impurity is introduced, producing the well-known orthogonality catastrophe~\cite{anderson1967infrared,varma2002singular}.
 
 
 \subsection{Topological properties of ground state manifold}
@@ -466,6 +466,16 @@ Such terms were absent in the single-channel Kondo model, because there was no m
 This line of argument shows that the extra degeneracy of the ground state subspace and the frustration of the singlet order that comes about when one upgrades from the single-channel Kondo model to the MCK models is at the heart of the NFL behaviour, and the orthogonality catastrophe is expected to be a general feature of all such frustrated MCK models.
 A local NFL term and a similar self-energy was also obtained by Coleman, et al.~\cite{Coleman_tsvelik} in terms of Majorana fermions at the strong-coupling fixed point of the \(\sigma-\tau\) model, which they claimed was equivalent to the intermediate-coupling fixed point of the two-channel Kondo model.
 Indeed, along with Ref.\cite{schofield_1997}, this demonstration shows the universality between the two-channel Kondo and the \(\sigma-\tau\) models. 
+
+{\color{blue}We show in the Supplementary Materials~\cite{SM} that this orthogonality catastrophe can also be understood as a drastic change in the wavefunction and its quantum numbers. Upon taking account of the hopping between the star graph and the \(k-\)states of the conduction bath, the full ground-state \(\ket{\psi_-^{(l)}}\) and low-lying excited states \(\ket{\psi_+^{(l)}}\), in the \(l^\text{th}\) channel, take the form:
+\begin{equation}\begin{aligned}
+\ket{\psi_\pm^{(l)}} = \frac{1}{\sqrt 2}\left(\ket{\chi_{\frac{-1}{2}}}\otimes\ket{e_\uparrow^{(l)}} \pm \ket{\chi_{\frac{1}{2}}}\otimes\ket{e_\downarrow^{(l)}}\right)~,
+\end{aligned}\end{equation}
+where \(\ket{\chi_{\frac{\sigma}{2}}} = \frac{1}{\sqrt 6}\left( \ket{\sigma,\sigma,\bar\sigma} + \ket{\sigma,\bar\sigma,\sigma} -2\ket{\bar\sigma,\sigma,\sigma} \right),~ \sigma=\pm 1\) are the ground-states of the two-channel star graph, and \(\ket{e_\sigma^{(l)}} \equiv e^\dagger_{\sigma,(l)}\ket{\phi} = \sum_{k\in\text{FS}}c^\dagger_{k\sigma,(l)}\ket{\phi}\) are gapless excitations close to the Fermi surface (FS) \(\ket{\phi}\). We can now calculate the residue for scattering processes of the form \(e^\dagger_{\sigma,(l)} e_{\bar\sigma,(l)}\), in the new ground-state and excited state, and they are found to vanish:
+\begin{equation}
+	Z = |\braket{\psi_+^{(l)}| e^\dagger_{\uparrow,(l)} e_{\downarrow,(l)} | \psi_-^{(l)}}|^2 = \left|\bra{\psi_+^{(l)}}\left(\ket{\chi_{\frac{1}{2}}}\ket{e_\uparrow^{(l)}}\right)\right|^2 = 0
+\end{equation}
+This shows that the single-particle excitations are no longer long-lived, signaling the orthogonality catastrophe.}
 
 \section{Entanglement properties}
 \label{sec:ent_prop}
@@ -725,6 +735,6 @@ S. Patra and Anirban Mukherjee thank the CSIR, Govt. of India and IISER Kolkata 
 
 \section*{References}
 
-\bibliography{mscript_mck_full}
+\bibliography{MCK-manuscript}
 
 \end{document}
