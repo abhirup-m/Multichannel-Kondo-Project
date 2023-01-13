@@ -1,7 +1,7 @@
 \documentclass{iopart}
 \usepackage{iopams}  
-\usepackage{braket,graphicx,amsmath,color}
-\usepackage[hidelinks]{hyperref}
+\usepackage{braket,graphicx,amsmath,cite}
+\usepackage[colorlinks,linkcolor={blue},citecolor={blue}]{hyperref}
 \bibliographystyle{unsrt}
 \begin{document}
 
@@ -163,7 +163,7 @@ E_g = \frac{1}{2}\mathcal{J}\left[J(J+1) - S_d(S_d+1) - S(S+1)\right] \\
 The \(\pi^z\) acts on the eigenstates \(\ket{J^z}\) and reveals the odd-even parity of the eigenvalue \(J^z\), and is hence a parity operator. Interestingly, {the string operator \(\pi^z\) is a Wilson loop operator~\cite{fradkin2013field} that wraps around all the nodes of the star graph}:
 \begin{eqnarray}
 	\label{w_loop}
-	\pi^z = \exp\left[i \frac{\pi}{2} \left(\sigma_d^z + \sum_{l=1}^K \sigma^z_l - K\right)\right] = e^{i \pi \left(J^z - \frac{1}{2}K\right)}~.
+	\pi^z = \exp\left[i \frac{\pi}{2} \left(\sigma_d^z + \sum_{l=1}^K \sigma^z_l - K\right)\right] = e^{i \pi \left(J^z - \frac{1}{2}K\right)}~.\qquad
 \end{eqnarray}
 \(\pi^x\) and \(\pi^y\) are 't Hooft operators~\cite{fradkin2013field} and mix states of opposite parity. For example, it can be shown that \(\pi^x \ket{J^z} = -\ket{J^z}\).
 
@@ -263,7 +263,7 @@ The magnetization is therefore discontinuous as \(h\to 0\pm\) for \(K>1\). The n
 
 These polarised states can also be used to obtain the scattering phase shift suffered by the conduction channels at the Fermi surface. As shown in the Supplementary Materials~\cite{SM}, the impurity-bath hybdridisation in the polarised states contribute an excess charge of \(n_\mathrm{exc}^{(l)} = 1/K\) to each conduction channel. Following Friedel's sum rule, this leads to a total scattering phase shift of \(\pi/K\) for each channel:
 \begin{eqnarray}\label{phase-stargraph}
-	\delta^{(l)} = \pi n_\mathrm{exc}^{(l)} = \frac{\pi}{K}, ~ ~ l \in \left[1, K\right] 
+	\delta^{(l)} = \pi n_\mathrm{exc}^{(l)} = \frac{\pi}{K}, ~ ~ l \in \left[1, K\right] ~.
 \end{eqnarray}
 For \(K > 1\), each channel therefore experiences an unrenormalised phase shift of value between \(0\) and \(\pi\) that, as we will show in a later section, is responsible for the non-Fermi liquid behaviour observed at the ICFP. For example, we will show that these phase shifts are linked to the critical non-Fermi liquid exponents of various thermodynamic quantities at the fixed point. That this phase shift is tied to the frustration that leads to incomplete Kondo screening at the ICFP can be evidenced 
 %of this role of the phase shift can be provided 
@@ -321,11 +321,11 @@ H_D = {\mathcal{J}} S^z_d S^z~,~~ H_X = \frac{{\mathcal{J}}}{2} (S_d^+S^-+ S_d^-
 \end{eqnarray}
 In order to remove the quantum fluctuations between the impurity spin and the rest, we perform one step of URG:
 \begin{eqnarray}
-\Delta H = H_X ({\hat{\omega}-H_D})^{-1} H_X 
+\Delta H = H_X ({\hat{\omega}-H_D})^{-1} H_X ~.
 \end{eqnarray}
 The total bath spin operator \(S^z\) is not a good quantum number for the zero mode ground state, and because there is no net $S^z$ field, the ground state manifold has a vanishing expectation value of $S^z$, $\langle S^z \rangle=0$. We use this expectation value to replace the denominator of the above RG equation.
 \begin{eqnarray}
-\beta_{\uparrow} ({\mathcal{J}},\omega_{\uparrow}) = ({\mathcal{J}}^2 \Gamma_{\uparrow})/2 ~,~~\Gamma_{\uparrow}=(\omega_{\uparrow}-{\mathcal{J}}(S_d^z-1))^{-1}~.
+\beta_{\uparrow} ({\mathcal{J}},\omega_{\uparrow}) = ({\mathcal{J}}^2 \Gamma_{\uparrow})/2 ~,~~\Gamma_{\uparrow}=(\omega_{\uparrow}-{\mathcal{J}}(S_d^z-1))^{-1}~.\qquad
 \end{eqnarray}
 The effective Hamiltonian is therefore
 \begin{eqnarray}
@@ -383,7 +383,7 @@ The \(32-\)fold degeneracy arises from the two-fold degeneracy of \(J^z\) (\(J^z
 
 The first and the second order corrections to the low energy effective Hamiltonian are
 \begin{eqnarray}
-H^{(1)} = \sum_{ij} |\alpha_i\rangle \langle \alpha_i  | V| \alpha_j \rangle \langle \alpha_j |~.\nonumber\\
+H^{(1)} = \sum_{ij} |\alpha_i\rangle \langle \alpha_i  | V| \alpha_j \rangle \langle \alpha_j |~,\nonumber\\
 H^{(2)} = \sum_{ij} \sum_l |\alpha_i\rangle \frac{\langle \alpha_i  | V| \mu_l \rangle \langle \mu_l  | V| \alpha_j \rangle}{E_0-E_{l}}\langle \alpha_j |~.
 \end{eqnarray}
 Here, $|\alpha_i\rangle$ represents the ground states with energy $E_0$ and is the set of states defined in eq.~\ref{gstate-set}, and $\mu_l$ represents the excited states with energy $E_l$. It is easy to see that the diagonal contribution at any odd order is zero - the final state is never equal to the initial state. The off-diagonal part at first order is also zero. At second order we get both diagonal and off-diagonal contributions to the effective Hamiltonian. 
@@ -417,7 +417,8 @@ Following this method, we have also calculated the effective Hamiltonian for the
 The real space local low energy Hamiltonian that takes into account the excitations above the ground state is given by eq.~\ref{eq:hamiltonian_NFL} and can be written as
 \begin{eqnarray}
 	\label{nfl_terms}
-	\hspace*{-5pt}V_\mathrm{eff} = \frac{2t^2}{{\mathcal{J}^*}}\left[\left(\sigma^z_{0,1}\right)^2 s^+_{0,2} + \left(\sigma^z_{0,2}\right)^2 s^+_{0,1}\right] \left(s^-_{1,1} + s^-_{1,2}\right) + \mathrm{h.c.};\nonumber\\
+	V_\mathrm{eff} =& \frac{2t^2}{{\mathcal{J}^*}}\left[\left(\sigma^z_{0,1}\right)^2 s^+_{0,2} + \left(\sigma^z_{0,2}\right)^2 s^+_{0,1}\right] \left(s^-_{1,1} + s^-_{1,2}\right) \nonumber\\
+			&+ \mathrm{h.c.};
 \end{eqnarray}
 here, \(\sigma^z_{0,l} = \hat n_{0\uparrow,l} - \hat n_{0\downarrow,l}, s^+ = c^\dagger_{0 \uparrow,l}c_{0 \downarrow,l}\) and \(s^- = \left(s^+\right)^\dagger\). The notation \(0\sigma,l\) has the site index \(i=0,1,2,\ldots\) as the first label, the spin index \(\sigma=\uparrow,\downarrow\) as the second label and the channel index \(l=1,2\) as the third label.
 Such non-Fermi liquid (NFL) terms in the effective Hamiltonian and the absence of any Fermi-liquid term at the same order should be contrasted with the local Fermi liquid excitations induced by the singlet ground state of the single-channel Kondo model~\cite{nozieres1974fermi,wilson1975renormalization,hewson1993}.
@@ -489,9 +490,9 @@ The orthogonality catastrophe in the infrared wavefunction arises from an unreno
 \end{aligned}\label{scattphaseRG}\end{equation}
 The Kondo coupling $J$ continues to flow under RG until it obtains a value dictated by the phase shift of the star graph: \(\rho \mathcal{J}^* = 2\delta^{(l)}/\pi = 2/K\). Following eq.~\ref{magnetisation-phase}, this also leads to the fractional value of \(1/4\) for the impurity magnetisation \(m(0^+)\) in the spin-half two-channel Kondo model. Indeed, the values of both \(\delta^{(l)}\) and \(m(0^+)\) point to the frustrated nature of the MCK problem and the absence of complete screening of the impurity moment at the ICFP. Importantly, the phase shifts \(\delta^{(l)}\) also affect the critical exponents of well-known algebraic behaviour of several thermodynamic properties at the ICFP. The impurity contributions to the specific heat linear coefficient \(\gamma = C_v/T\), the magnetic susceptibility \(\chi\) and the thermal entropy \(S\) take the forms~\cite{andrei_destri_1984,Tsvelick_Weigmann_mchannel_1984,affleck1993exact}
 \begin{eqnarray}
-	\gamma &\sim & \left( T/T_K \right)^\frac{1 - 2\delta^{(l)}/\pi}{1 + 2\delta^{(l)}/\pi} = \left( T/T_K \right)^\frac{K-2}{K+2}\sim \chi~,\nonumber\\ 
-	S &\sim & \ln \left[2|\cos \left(\frac{\delta^{(l)}}{1 + 2\delta^{(l)}/\pi}\right)|\right]
-	 = \ln \left[2|\cos \left(\frac{\pi}{K + 2}\right)|\right]~. \label{powerlawquants}
+	\gamma &\sim  \left( T/T_K \right)^\frac{1 - 2\delta^{(l)}/\pi}{1 + 2\delta^{(l)}/\pi} = \left( T/T_K \right)^\frac{K-2}{K+2}\sim \chi~,\nonumber\\ 
+	S &\sim  \ln \left[2|\cos \left(\frac{\delta^{(l)}}{1 + 2\delta^{(l)}/\pi}\right)|\right] \nonumber \\
+	  &= \ln \left[2|\cos \left(\frac{\pi}{K + 2}\right)|\right]~. \label{powerlawquants}
 \end{eqnarray}
 
 \section{Entanglement properties}
@@ -505,7 +506,7 @@ We will now present the results of our study of various entanglement measures in
 In a 1-channel Kondo model, the ground state is unique and a singlet~\cite{wilson1975renormalization}: \(\ket{J,J_z=0,0} = \frac{1}{\sqrt{2}} \left(\ket{\uparrow_{d},\downarrow_0} - \ket{\downarrow_d, \uparrow_0}\right)\), and the impurity entanglement entropy ($EE_d$) is at the  maximum possible value of $\log 2$.
 We will now calculate the same quantity for the ground states 
 \begin{eqnarray}
-\ket{J^z} \equiv \ket{S_d=1/2,S=K/2;J=(S-1/2),J^z}
+\ket{J^z} \equiv \ket{S_d=1/2,S=K/2;J=(S-1/2),J^z}~,
 \end{eqnarray}
 of the $K$ channel model.
 
@@ -570,7 +571,8 @@ In the large channel limit ($K\gg 1$), the maximum \(I^2(d:o)\) and \(I^2(o:o)\)
 Similar to mutual information, one can calculate higher order multipartite information to study the nature of correlations present in different ground states. We define the tripartite information among three subsystems $A,B,C$ as $I^3_{ABC} = (S_A+S_B+S_C)-(S_{AB}+S_{BC}+S_{CA})+S_{ABC}~$. \(I^3\) shows behavior similar to the mutual information - the highest \(I^2\) value is associated with the $\left(J^z\right)_\mathrm{min}$ state and it saturates in the limit of $K\gg 1$. The $N-$partite information for a collection of subsystems (CSS) $\{\mathcal{A}_N\}\equiv\{A_1,A_2,\cdots,A_N\}$ can also be defined 
 as~\cite{siddharthatee} 
 \begin{eqnarray}
-I^{N}_{\{\mathcal{A}_N\}} = \bigg[\displaystyle\sum_{m=1}^{N} (-1)^{m-1} \displaystyle\sum_{Q \in \mathcal{B}_m(\{\mathcal{A}\})} S_{V_{\cup}({Q})} \bigg]- S_{V_{\cap}(\mathcal{A}_N)}~.
+	I^{N}_{\{\mathcal{A}_N\}} = &\bigg[\displaystyle\sum_{m=1}^{N} (-1)^{m-1} \displaystyle\sum_{Q \in \mathcal{B}_m(\{\mathcal{A}\})} S_{V_{\cup}({Q})} \bigg] \nonumber\\
+				    &- S_{V_{\cap}(\mathcal{A}_N)}~.
 \label{eq:I_N_definition}
 \end{eqnarray}
 where  $\mathcal{B}_m(\{\mathcal{A}_N\})\equiv \{ Q~| ~Q\subset \mathcal{P}(\{\mathcal{A}_{N}\}), |Q|=m \}$, and $\mathcal{P}(\{\mathcal{A}_{N}\})$ is the powerset of $\{\mathcal{A}_N\}$. For simplicity, we also define the union and intersection of all the subsystems present in $Q$ as ${V}_{\cup}({Q})\equiv \bigcup_{A\in Q} A$ and ${V}_{\cap}({Q})\equiv \bigcap_{A\in Q} A$ respectively.
