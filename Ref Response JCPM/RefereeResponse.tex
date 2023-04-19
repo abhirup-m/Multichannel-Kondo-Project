@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,braket}
+\usepackage[hidelinks]{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[legalpaper,portrait,margin=2cm]{geometry}
+\DeclareUnicodeCharacter{2212}{-}
+\DeclareUnicodeCharacter{03B8}{+}
+\newcommand{\shat}{\hat{\mathbf{s}}}
+\newcommand{\pin}{\par\noindent}
+\newcommand{\response}[1]{{\color{blue}\subsection*{Response:}{#1}}}
+\renewcommand{\thesubsection}{Feedback from the referee:}
+\newcommand{\point}[1]{\subsection{}{#1}}
+
+\title{Referee response to JPCM-121631}
+\author{Siddhartha Patra, Abhirup Mukherjee, Anirban Mukherjee, N. S. Vidhyadhiraja,\\ A. Taraphder, Siddhartha Lal}
+
+\begin{document}
+\maketitle
+
+\flushleft
+We present our responses below (in blue).
+
+\section*{Response to the first referee}
+{\color{blue}We thank the referee for their comments and feedback.}
+
+\section*{Response to the second referee}
+\point{
+However, it is to be noted that this system has been studied in great details in many earlier works. So it would be nice if the authors can provide a list of results that they obtain from their analysis which has not been obtained earlier. To me, this was not clear from their introduction.}
+
+\response{We thank the referee for their comments and suggestion. To address this, we have improved the `{\bf Summary of results}' subsection in the introduction and stated very precisely what new results have been obtained by us.
+For the convenience of the referee, we are providing a copy of the same:
+
+{\it \flushleft Summary of main results}
+	\begin{itemize}
+	\item We elucidate, within the the context of the multichannel Kondo problem, the importance of the zero bandwidth limit of the RG fixed point Hamiltonian. We show that this zero bandwidth Hamiltonian directly leads to several properties of the MCK problem, like the ground-state magnetisation, scattering phase shift, Wilson loop and 't Hooft operators and degree of compensation.
+	\item The ground-state degeneracy of the zero bandwidth Hamiltonian is found to be topological in nature: the orthogonal states can be explored by the application of twist operators. Integrating out the impurity from the conduction bath states leads to the emergence of a topologically degenerate local Mott liquid.
+	\item We also demonstrate that the effective Hamiltonian for the gapless excitations of the fixed point Hamiltonian is of the non-Fermi liquid kind, involving scattering process that connect multiple conduction channels and leading to an orthogonality catastrophe in the ground-state. In momentum space, the self-energy resembles that of a marginal Fermi liquid localised near the impurity spin. 
+	\item We link the non-Fermi liquid behaviour and orthogonality catastrophe with an ``unrenormalised" scattering phase shift that can be obtained from the zero bandwidth problem; we show that this phase shift also leads to the well-known anomalous behaviour of quantities like the specific heat, magnetic susceptibility and thermal entropy.
+	\item Various entanglement measures, e.g., impurity entanglement entropy and impurity-bath mutual information, for the overscreened case show discontinuous behaviour as the conduction bath states beyond the zero-bandwidth problem are re-introduced via single-electron hopping. These discontinuities do not exist in the single-channel problem, and arise from the orthogonality catastrophe present in the overscreened ground-state.
+	\item By combining the strong-weak duality of the MCK Hamiltonian with that of the RG equations, we show that the strong-coupling theory is constrained to take a simple form. We also discuss an additional duality transformation connecting underscreened and overscreened models that involves exchanging the number of channels and impurity spin: this allows us to infer the infrared scaling behaviour of one  class of models from a knowledge of the other.
+	\end{itemize}
+}
+
+\section*{Some additional changes in the manuscript}
+We made the following change(s) in the manuscript:
+\begin{itemize}
+	\item We have added a paragraph just above the `Summary of main results' subsection in the introduction, describing the layout of the work.
+	\item For the sake of completion, we have also added a subsection at the end of the Supplementary Materials recalling the argument of Nozieres and Blandin regarding the contrasting stability of the strong-coupling fixed point in the case of overscreened and underscreened MCK models.
+\end{itemize}
+
+Both these changes, as well as the improved {\bf Summary of results} subsection, have been {\it marked in blue colour} in the tracked pdf that is titled 'Complete Document for Review (PDF Only)'.
+
+\bibliographystyle{unsrt}
+\bibliography{../manuscript/mscript_mck_full.bib}
+\end{document}
